@@ -1,6 +1,5 @@
-lyx?=/Applications/LyX.app/Contents/MacOS/lyx
-
-DEPDIR?=.deps
+#lyx?=/Applications/LyX.app/Contents/MacOS/lyx
+lyx?=lyx
 
 lyx_subdirs?=
 lyx_files?=
@@ -24,14 +23,6 @@ clean:: lyxclean
 lyxmake: $(lyx_generated_pdf)
 lyxtex: $(lyx_generated_tex)
 
-# $(DEPDIR)/%.lyx.d: %.lyx
-# 	@echo "Creating dependencies file $@"
-# 	@mkdir -p $(DEPDIR)
-# 	@/bin/echo -n "$*.tex: $*.lyx " > $@
-# 	@lyx-deps $< >> $@
-# 	@# note >> after
-# 	@/bin/echo -n "$(DEPDIR)/$*.lyx.d: $*.lyx " >> $@
-# 	@lyx-deps $< >> $@
 
 %.lyx.d: %.lyx
 	@echo "Creating dependencies file $@"
