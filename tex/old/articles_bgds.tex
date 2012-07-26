@@ -1,0 +1,245 @@
+%:section:articles/bgds: BGDS report
+%:def:chap:bgds
+
+\newcommand{\bgds}{\myacronym{bgds}} % Bilinear gradient dynamics system
+%:sort:bgds
+%:def:def:bgds
+
+\newcommand{\BGDS}{\bgds} 
+%:nomenc-exclude:
+
+
+
+\newcommand{\bgCmd}{\cmd} % commands
+\newcommand{\bgCmdH}{\cmd^\bgTime} % commands history
+\newcommand{\bgCmdSp}{\cmdSp} % commands space
+%:nomenc-exclude:
+
+\newcommand{\bgWorld}{\mathsf{W}} % World
+\newcommand{\bgWorldSp}{\aset{W}} % World space
+%:example: $\bgWorld \in \bgRSSp(\bgTime, \bgCmdSp, \bgObsSp)$
+\newcommand{\bgAgent}{\mathsf{agent}} % Agent
+\newcommand{\bgAgentEx}{\mathsf{learn}} % Agent exploration
+\newcommand{\bgAgentAc}{\mathsf{act}} % Agent action
+\newcommand{\bgAgentRep}{\boldsymbol{r}} % Agent representation
+\newcommand{\bgAgentRepSp}{\aset{R}} % Agent representation space
+\newcommand{\bgAgentSp}{\mathsf{Agents}} % Agent action
+
+\newcommand{\bgCmdTr}{\boldsymbol{g}} % Transformation of the commands
+\newcommand{\bgCmdTrSp}{\agroup{G}^{\bgCmdSp}} % 
+\newcommand{\bgObsTr}{\boldsymbol{h}} % Transformation of the observations
+\newcommand{\bgObsTrSp}{\agroup{G}^{\bgObsSp}} %
+
+\newcommand{\bgSamplingGroup}{\mathsf{Sampling}} % Groups of sampling operations
+\newcommand{\bgCalibration}{\mathsf{Calib}} % Calibration operation
+
+\newcommand{\bgBDSagent}{A_\mathsf{BDS}} % The BDS agent
+
+\newcommand{\bgBGDSagent}{A_\mathsf{BGDS}} % The BGDS agent
+
+\newcommand{\bgPopCode}{\mathsf{pop}} % Popoulation code
+%:sort:pop
+
+\newcommand{\bgRankCode}{\mathsf{rankcode}} % Rank code
+
+\newcommand{\bgRangeFamily}{\mathsf{RF}} % Family of range-finders models
+%:deprecated:
+%:nomenc-exclude:
+
+% \newcommand{\bgFields}{{\mathsf{C}} }
+%:deprecated:
+%:nomenc-exclude:
+
+\newcommand{\bgCmdConstraints}{{\Omega}_{\cmd}}
+%:deprecated:
+%:nomenc-exclude:
+
+\newcommand{\bgPopK}{\psi}
+%:deprecated:
+%:nomenc-exclude:
+
+%:section:articles/bgds/old: BGDS report
+
+%% Rigid body motion
+ 
+
+\newcommand{\state}{\boldsymbol{x}} % Generic underlying state.
+%:nomenc-exclude:
+\newcommand{\detecte}{d} % Detector
+%:nomenc-exclude:
+
+
+
+%% Generic
+
+\newcommand{\submean}[1]{{#1}^{*}} % Quantity with mean normalized.
+%:todo:bad
+
+%% Sensing
+\newcommand{\dist}{\sigma} % Distance to obstacle
+%:sort:s
+\newcommand{\distn}{\submean{\dist}} % Distance to obstacle, mean normalized.
+%:sort:s
+\newcommand{\rfnl}{\beta} % Nonlinear function in range-finder tensors.
+%:sort:b
+\newcommand{\near}{\mu} % Nearness
+%:sort:m
+\newcommand{\lum}{y} % Luminance
+%:nomenc-exclude:
+\newcommand{\lumn}{\submean{\lum}} % Luminance, mean normalized
+%:nomenc-exclude:
+
+%%% Off-axis 
+\newcommand{\sptran}{\boldsymbol{\ell}} % Sensor pose (translation)
+\newcommand{\sprot}{\ell_{\theta}} % Sensor pose (rotation)
+
+\newcommand{\slvel}{\boldsymbol{v^s}} % Sensor linear velocity (when off axis)
+\newcommand{\savel}{\boldsymbol{\omega^s}} % Sensor angular velocity (when off axis)
+
+
+\newcommand{\TX}{\T{X}} % Generic metric
+%:sort:X
+%:nomenc-exclude:
+\newcommand{\TXe}{\Tel{X}} % Generic metric
+%:sort:X
+%:nomenc-exclude:
+
+\newcommand{\OS}{\mathrm{S}} % $S = s\times \nabla$
+%:deprecated:
+\newcommand{\convf}{f_\ast} % Indicates the convolution with a kernel $f$.
+%:deprecated:
+
+\newcommand{\my}{m}   % Metric on the tangent space of $y(s)$.
+
+
+%%% Miscellaneous
+
+
+\newcommand{\ip}[1]{\langle\!\langle #1\rangle\!\rangle}
+
+
+
+\newcommand{\bgBGDSfamily}{\mathsf{BGDS}} % Family of BGDS sensors
+%:nomenc-exclude:
+
+
+\newcommand{\BGDSsk}{\bgBGDSfamily(\obsps;k)}
+%:def:def:bgds
+%:sort:BGDSSk
+
+
+\newcommand{\focal}{F} % Pinhole camera focal length.
+%:deprecated:
+%:nomenc-exclude:
+
+\newcommand{\traindist}{p_\text{T}} % Training distribution.
+%:def:def:training-distribution
+%:todo:
+%:sort:p_T
+
+\newcommand{\trainsym}{{\functionsym{}(\traindist)}} % Symmetry group of $\traindist$.
+%:deprecated:
+%:def:def:training-symmetries
+%:todo:
+%:sort:Sym(traindist)
+
+
+
+%:section:articles/bgds/logical: Gradient dynamics
+%:def:sec:bgds-logical
+
+\newcommand{\obslsp}{\mathscr{Z}} % Observation logical space
+%:sort:Z
+\newcommand{\obsl}{\boldsymbol{z}} % Observations in logical space
+%:sort:z
+\newcommand{\obsle}{z} % Observation logical space element
+%:sort:z
+
+\newcommand{\xtos}{\varphi} % Mapping between $\obsps$ and $\obslsp$.
+%:sort:phi
+\newcommand{\jac}{\T{J}} % Jacobian of $\xtos$
+%:sort:J
+\newcommand{\jace}{\Tel{J}} % An element of the Jacobian of $\xtos$.
+%:sort:J
+
+\newcommand{\mz}{\mu} % Metric on the tangent space of $z(x)$.
+\newcommand{\mmu}{M} % Metric for the commands $u$. 
+
+%:section:articles/bgds/logical/grads: Gradient dynamics
+%:nomenc-exclude:
+%:def:sec:bgds-logical
+
+\newcommand{\Tzgd}{\T{L}} % $\obsl$  gradient dynamics
+%:sort:L
+\newcommand{\Tzgde}{\Tel{L}} % $\obsl$  gradient dynamics (element)
+%:sort:L
+\newcommand{\Tzgl}{\T{M}} % $\obsl$  gradient  learned tensor 
+%:sort:M
+\newcommand{\Tzgle}{\Tel{M}} % $\obsl$  gradient  learned tensor (element)
+%:sort:M
+\newcommand{\Tzgcov}{\T{S}} % $\obsl$  gradient  covariance
+%:sort:S
+\newcommand{\Tzgcove}{\Tel{S}} % $\obsl$  gradient  covariance (element)
+%:sort:S
+\newcommand{\Tzad}{\T{E}} % Affine part of dynamics.
+%:sort:E
+\newcommand{\Tzade}{\Tel{E}} % Affine part of dynamics (element)
+%:sort:E
+\newcommand{\Tzal}{\T{F}} % Learned affine part of dynamics.
+%:sort:F
+\newcommand{\Tzale}{\Tel{F}} % Learned affine part of dynamics (element)
+%:sort:F
+
+
+%:section:articles/bgds/tensors: BGDS report
+\newcommand{\Tygd}{\T{G}} % $\obs$ gradient dynamics
+%:sort:G
+\newcommand{\Tygde}{\Tel{G}} % $\obs$ gradient dynamics (element)
+%:nomenc-exclude:
+%:sort:G
+\newcommand{\Tygl}{\T{H}} % $\obs$ gradient learned tensor 
+%:sort:H
+\newcommand{\Tygle}{\Tel{H}} % $\obs$ gradient learned tensor (element)
+%:nomenc-exclude:
+%:sort:H
+\newcommand{\Tygcov}{\T{R}} % $\obs$ gradient covariance
+%:sort:R
+\newcommand{\Tygcove}{\Tel{R}} % $\obs$ gradient covariance (element)
+%:nomenc-exclude:
+%:sort:R
+\newcommand{\Tyad}{\T{B}} % Affine part of dynamics.
+%:sort:B
+\newcommand{\Tyade}{\Tel{B}} % Affine part of dynamics (element)
+%:nomenc-exclude:
+%:sort:B
+\newcommand{\Tyal}{\T{C}} % Learned affine part of dynamics.
+%:sort:C
+\newcommand{\Tyale}{\Tel{C}} % Learned affine part of dynamics (element)
+%:nomenc-exclude:
+%:sort:C
+
+
+
+%:section:articles/bgds/models/deprecated: Definition of random models
+%:deprecated:
+%:nomenc-exclude:
+
+\newcommand{\bgTime}{\mathbb{T}} % Time axis
+\newcommand{\bgRS}{\bbD} % Random model
+\newcommand{\bgRSSp}{\bbSp} % All models
+\newcommand{\bgRSinput}{\boldsymbol{a}} % Input signal
+\newcommand{\bgRSinputSp}{\aset{A}} % 
+\newcommand{\bgRSinputH}{\boldsymbol{a}^{\bgTime}} % History of input signal
+\newcommand{\bgRSoutput}{\boldsymbol{b}} %
+\newcommand{\bgRSoutputH}{\boldsymbol{b}^{\bgTime}} % History of output signal
+\newcommand{\bgRSoutputSp}{\aset{B}} % 
+\newcommand{\bgRSinputTr}{\boldsymbol{g}} % 
+\newcommand{\bgRSinputTrSp}{\agroup{G}^\bgRSinputSp} % 
+\newcommand{\bgRSoutputTr}{\boldsymbol{h}} % 
+\newcommand{\bgRSoutputTrSp}{\agroup{G}^\bgRSoutputSp} %
+
+\newcommand{\bgObs}{\obs} % observations
+\newcommand{\bgObsH}{\obs^\bgTime} % observations history
+\newcommand{\bgObsSp}{\obsSp} % observation space
+%:nomenc-exclude:
+

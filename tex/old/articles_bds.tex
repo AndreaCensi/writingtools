@@ -1,0 +1,82 @@
+%:section:articles/bds: BDS report
+%:def:chap:bds
+
+\newcommand{\BDSnk}{\bgBDSfamily(n;k)}
+%:def:def:bds
+%:sort:BDS(n;k)
+
+\newcommand{\bgBDSfamily}{\mathsf{BDS}} % Family of BDS sensors
+%:nomenc-exclude:
+%:sort:BDS
+
+
+\newcommand{\bds}{\myacronym{bds}} % Bilinear dynamics system
+%:nomenc-exclude:
+%:sort:bds
+%:def:def:bds
+
+\newcommand{\BDS}{\bds} 
+%:nomenc-exclude:
+%:sort:bds
+
+
+\newcommand{\omsum}[1]{{\color{gray}\sum_{#1}}\ } % omitted sum
+%:todo:color sum
+
+%%% Bilinear models
+
+\newcommand{\TT}{\T{T}} % Learned tensor
+%:nomenc:\TT\ \TTe^{isv}: Learned statistics for a \bds agent.
+%:sort:T
+\newcommand{\TTe}{\Tel{T}} % ?
+%:nomenc-exclude:
+%:sort:T
+
+\newcommand{\TP}{\T{P}} 
+%:deprecated:
+\newcommand{\TPe}{\Tel{P}} 
+%:deprecated:
+
+\newcommand{\TU}{\T{U}} % Learned tensor
+%:nomenc:\TU\ \TUe^{svi}: Learned statistics for a \bds agent.
+%:sort:T
+\newcommand{\TUe}{\Tel{U}} % Learned tensor
+%:nomenc-exclude:
+%:sort:U
+
+\newcommand{\TM}{\T{M}} % Bilinear tensor in \bds dynamics
+%:nomenc:\TM\ \TMe^{s}_{vi}: Bilinear tensor in \bds dynamics
+%:sort:M
+\newcommand{\TMe}{\Tel{M}} % Bilinear tensor in \bds dynamics
+%:nomenc-exclude:
+%:sort:M
+
+
+\newcommand{\TN}{\T{N}} % Bilinear tensor in \bds dynamics
+%:nomenc:\TN\ \TNe^{s}_{i}: Bilinear tensor in \bds dynamics
+%:sort:N
+\newcommand{\TNe}{\Tel{N}} % Bilinear tensor in \bds dynamics
+%:nomenc-exclude:
+%:sort:N
+
+\newcommand{\Tcov}{\T{P}} % Covariance of $\obs$.
+%:sort:P
+%:nomenc:\Tcov\ \Tcove^{sv}: Covariance tensor of $\obs$ (\bds models).
+\newcommand{\Tcove}{\Tel{P}} % Covariance of $\obs$.
+%:nomenc-exclude:
+%:sort:P
+
+\newcommand{\Tucov}{\T{Q}} % Covariance of $\obs$.
+%:sort:Q
+%:nomenc:\Tucov\ \Tucove^{ij}: Covariance tensor of $\cmd$ (\bds models).
+\newcommand{\Tucove}{\Tel{Q}} % Covariance of $\obs$.
+%:sort:Q
+%:nomenc-exclude:
+
+\newcommand{\discInt}{T} % Discretization interval
+%:sort:T
+
+\newcommand{\nearavg}{\overline{\near}} % Average nearness
+%:sort:m
+
+

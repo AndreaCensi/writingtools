@@ -1,0 +1,133 @@
+%:section:common/boot: Bootstrapping symbols
+
+%:section:common/boot/obscmd: Observations and commands
+\newcommand{\world}{\boldsymbol{w}}  % The "world", an element of $\bbSpYU$.
+%:sort:w
+
+\newcommand{\obs}{\boldsymbol{y}} % Observations.
+%:sort:y
+
+\newcommand{\obse}{y} % Observations (element) -- also called ``sensel''
+%:sort:y
+
+\newcommand{\cmd}{\boldsymbol{u}} % Commands, in general.
+%:sort:u
+\newcommand{\cmde}{u} % Commands (element) -- also called ``?''.
+%:nomenc:\cmde^i:One entries of the commands
+%:sort:u
+
+
+% Changed to superscript for ICDL 2011-04-11
+
+
+\newcommand{\nobs}{{n_{\obs}}} % Number of sensels
+%:sort:n-y
+
+\newcommand{\ncmd}{{n_{\cmd}}} % Number of actuators
+%:sort:n-u
+
+\newcommand{\obsSp}{\aset{Y}} % Observation space 
+%:sort:Y
+
+\newcommand{\cmdSp}{\aset{U}} % Commands space
+%:sort:U
+
+\newcommand{\cmdSph}{\overline{\aset{U}}} % Domain of a single actuator $\cmdSp=\cmdSph^\ncmd$.
+%:sort:U-
+
+\newcommand{\obsSph}{\overline{\aset{Y}}} % Domain of a single sensel $\obsSp=\obsSph^\nobs$.
+%:sort:Y-
+
+\newcommand{\obsSphd}{\metricon{\obsSph}} % Metric on $\obsSphd$
+%:sort:dS
+
+\newcommand{\obsSpd}{\metricon{\obsSp}} % Metric on $\obsSpd$
+%:sort:dY
+
+
+%:section:common/boot/spatialsensors: Spatial sensors
+
+\newcommand{\obssp}{\obsps} % Observation physical space.
+%:sort:S
+%:nomenc-exclude:
+%:deprecated:
+
+\newcommand{\obsps}{\CMcal{S}} % Observation physical space.
+%:sort:S
+
+\newcommand{\genimages}{\vmath{Images}} % Images on physical space $\obsps$.
+%:sort:Images
+%:nomenc-exclude:
+
+\newcommand{\imps}{\genimages(\obsps)} % Images on physical space $\obsps$.
+%:sort:Images
+
+
+%:section:common/boot/servo: Servoing
+
+\newcommand{\obsg}{\check{\obs}} % Goal observations.
+%:sort:y*
+%:todo:
+
+\newcommand{\obsge}{\check{\obse}} % Goal observations (element).
+%:sort:y*
+%:todo:
+
+\newcommand{\obsgl}{\check{\obsl}} % Goal observations (element).
+%:sort:z*
+
+\newcommand{\obsgle}{\check{\obsle}} % Goal observations (element).
+%:sort:z*
+
+
+
+%:section:common/boot/abbreviations: Abbreviations
+
+\newcommand{\bbSpYU}{\bbSp(\obsSp;\cmdSp)}  % \towrite
+%:sort:D-YU
+%:nomenc-exclude:
+
+\newcommand{\bbSpUY}{\bbSp(\cmdSp;\obsSp)}  % \towrite
+%:sort:D-UY
+%:nomenc-exclude:
+
+\newcommand{\bbSpInvY}{\bbSpInv(\obsSp)} % Representation nuisances on commands
+%:sort:D*-Y
+%:def:def:invertible-systems
+
+\newcommand{\bbSpInvU}{\bbSpInv(\cmdSp)} % Representation nuisances on observations
+%:sort:D*-U
+%:def:def:invertible-systems
+
+\newcommand{\bbSpInvYU}{\bbSpInv(\obsSp;\cmdSp)} % Representation nuisances
+%:sort:D*-YU
+%:def:def:representation-nuisances
+
+\newcommand{\bbSpInvUY}{\bbSpInv(\cmdSp;\obsSp)} 
+%:sort:D*-UY
+%:def:def:representation-nuisances
+%:nomenc-exclude:
+
+\newcommand{\bbSpCoreYU}{\bbSpCore(\obsSp;\cmdSp)} % Systems up to representation
+%:def:def:systems-upto-representations
+%:sort:D0-YU
+
+
+%:section:common/vehicles: The Vehicles universe
+
+\newcommand{\veEnvironments}{\mathsf{Environments}} % All Vehicles environments 
+\newcommand{\veSensors}{\mathsf{Sensors}} % all Vehicles sensors
+\newcommand{\veDynamics}{\mathsf{Dynamics}} % all Vehicles dynamics
+\newcommand{\veVehicles}{\mathsf{Vehicles}} % all Vehicles dynamics
+
+
+\newcommand{\veSce}{\mathsf{S}}
+\newcommand{\veVeh}{\mathsf{V}}
+\newcommand{\veMov}{\mathsf{M}}
+\newcommand{\veAdd}{\mathsf{A}}
+\newcommand{\veJoi}{\mathsf{J}}
+\newcommand{\vePar}{\mathsf{P}} % Parallel composition of sensors
+\newcommand{\veNcmd}{\mathsf{U}}
+\newcommand{\veNobs}{\mathsf{Y}}
+
+

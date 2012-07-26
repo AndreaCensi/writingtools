@@ -1,0 +1,36 @@
+\ProvidesFile{numeric-urls.bbx}
+[]
+
+\RequireBibliographyStyle{numeric}
+
+\newtoggle{bbx:file}
+
+\DeclareBibliographyOption{file}[true]{%
+  \settoggle{bbx:file}{#1}}
+\ExecuteBibliographyOptions{file}
+
+
+%   doi = doi
+%   eprint = slides
+%   file =  http link to  pdf
+%   url  =  link to additional material
+\renewbibmacro*{doi+eprint+url}{%
+  \iftoggle{bbx:doi}{\iffieldundef{doi}{\notpresent{doi}}{
+      \hspace{1pt}%
+     \href{http://dx.doi.org/\thefield{doi}}{\textsc{doi}:\thefield{doi}}%
+  }}{}%
+  \iftoggle{bbx:file}{\iffieldundef{file}{\notpresent{file}}{%
+      \hspace{1pt}%
+      \biburl{\thefield{file}}%
+  }}{}%
+  \iftoggle{bbx:eprint}{\iffieldundef{eprint}{\notpresent{eprint}}{%
+      \hspace{1pt}%
+      \slidesurl{\thefield{eprint}}%
+  }}{}%
+  \iftoggle{bbx:url}{\iffieldundef{url}{\notpresent{url}}{%
+      \hspace{1pt}%
+      \weburl{\thefield{url}}%
+  }}{}%
+}
+
+\endinput

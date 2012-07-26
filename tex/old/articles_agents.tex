@@ -1,0 +1,84 @@
+%:section:bootstrapping/agents:Agents and tasks
+
+\newcommand{\agSp}{\mathsf{Agents}} % 
+%:sort:Agents
+%:nomenc:\agSp(\bgCmdSp;\bgObsSp): All agents with 
+%  observations in \bgObsSp and commands in \bgCmdSp.
+%:def:def:bootstrapping-agent
+
+\newcommand{\agSpYU}{\mathsf{Agents}(\obsSp;\cmdSp)} % All agents with given formats.
+%:sort:Agents(Y;U)
+
+\newcommand{\agA}{\mathcal{A}} % An agent
+%:sort:A
+%:def:def:bootstrapping-agent
+
+\newcommand{\agExp}{\mathsf{expl}} % Agent's exploration phase
+%:sort:exp
+%:def:def:bootstrapping-agent
+
+\newcommand{\agAct}{\mathsf{act}} % Agent's action phase
+%:sort:act
+%:def:def:bootstrapping-agent
+
+
+\newcommand{\agAexp}{\agExp_{\agA}} % Exploration phase for agent $\agA$.
+%:sort:exp
+%:nomenc-exclude:
+
+\newcommand{\agAact}{\agAct_{\agA}} %  Action phase for agent $\agA$.
+%:sort:act
+%:nomenc-exclude:
+
+\newcommand{\agAwtor}{\vmath{WtoR}_{\agA}} % Map from the world to the result for the agent $\agA$.
+%:def:def:wtor
+%:sort:wtor
+
+\newcommand{\agAwtob}{\vmath{WtoB}_{\agA}} % 
+%:def:def:wtob
+%:sort:wtob
+
+\newcommand{\agAintermediate}{\vmath{intermediate}_{\agA}}
+%:todo:Make it better
+
+\newcommand{\agSucAG}{\vmath{success}^{\agGoal}_{\agA}} % Success set for the agent $\agA$ and goal $\agGoal$.
+%:sort:success
+%:def:def:success-set
+
+\newcommand{\agRep}{\boldsymbol{m}} % Agent representation
+%:sort:m
+%:def:def:bg-agent
+
+\newcommand{\agRepSp}{\aset{M}} % Agent's model space
+%:sort:M
+%:def:def:bg-agent
+
+\newcommand{\agNuis}{\grG_\agA} 
+%:sort:G-A
+%:def:def:invariance-properties-agent
+
+\newcommand{\agNuisComp}{\agNuis^{\perp}} % Complement of $\agNuis$.
+%:sort:G-perp
+%:deprecated:
+
+\newcommand{\agNuisObs}{\agNuis^{\obsSp}} 
+%:sort:G-Y
+%:def:def:invariance-properties-agent
+
+\newcommand{\agNuisCmd}{\agNuis^{\cmdSp}} 
+%:sort:G-U
+%:def:def:invariance-properties-agent
+
+\newcommand{\agbbClass}{C_{\agA}} 
+%:sort:C-A
+%:def:def:invariance-properties-agent
+
+
+\newcommand{\agbbClCore}{C_{\agA}^{0}} 
+%:sort:C-A-0
+
+\newcommand{\agGoal}{\mathcal{G}} % The agent's goal (a subset of $\processes(\obsSp\times\cmdSp))$
+%:sort:G
+%:def:def:bootstrapping-goal
+
+

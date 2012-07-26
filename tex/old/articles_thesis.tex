@@ -1,0 +1,130 @@
+%:section:articles/thesis:Special symbols for thesis
+
+% XXX
+\newcommand{\labelrefinement}{\text{ref}} % Indicates a refinement
+
+
+\newcommand{\pchomeoR}{\vmath{PieceHomeo}(\reals)}
+%:sort:PieceHomeo
+%:nomenc:\pchomeoR:Piece-wise continuous invertible functions on $\reals$.
+
+\newcommand{\dianode}[1]{\text{\parbox{3cm}{\centering #1}}} % used in properties1.dot
+%:nomenc-exclude:
+
+%\newcommand{\dianodem}[1]{\text{\parbox{2cm}{\centering $#1$}}} 
+\newcommand{\dianodem}[1]{#1}
+%:nomenc-exclude:
+
+%\newcommand{\bitZ}{\blacksquare}
+\newcommand{\bitZ}{\square}
+%:nomenc:\bitZ,\bitO:Uninterpreted bits values
+%:todo:make smaller
+\newcommand{\bitO}{\boxdot}
+%:nomenc-exclude:
+
+\newcommand{\infbinstrings}{{\{\square,\boxdot\}^\mathbb{N}}} % Set of infinite binary strings
+%:todo:cannot used double \markfirstrecursively
+%:def:def:infbinstrings
+
+\newcommand{\chineseClose}{\raisebox{-.3em}{\includegraphics[width=1.1em]{figures/misc/chineseclose2.pdf}}} % The Chinese character corresponding to ``close'' or ``near''. 
+%:nosummary:
+%:def:sec:intro-chineseClose
+
+\newcommand{\twosignals}{y^i,y^j}
+%:nomenc-exclude:
+\newcommand{\twosignalsa}{y^i}
+%:nomenc-exclude:
+\newcommand{\twosignalsb}{y^j}
+%:nomenc-exclude:
+\newcommand{\twosignalscolon}{y^i;y^j}
+%:nomenc-exclude:
+
+\newcommand{\semrelorder}{m} % Order of a generic semantic relations
+%:sort:m
+
+\newcommand{\infinit}{d} % Infinitesimal
+%:sort:d
+
+\newcommand{\genericsemrel}{\mathcal{R}} % A generic semantic relation.
+%:sort:R
+%:todo:Ning?
+
+\newcommand{\gensemrelsym}{\functionsym{}(\genericsemrel)} % Symmetries of the semantic relation
+%:sort:Sym(R)
+
+\newcommand{\genericsimilarity}{R} % A generic similarity measure.
+%:sort:R
+
+
+\newcommand{\obsecdf}{{c}} % CDF of one sensel
+%:sort:c
+
+\newcommand{\cmdreverse}{\rho} % The map from a command to its reverse.
+%:def:sub:SystemIsReversible
+%:sort:rho
+
+\newcommand{\cmdopt}{\cmd^\star} % The optimal command
+%:sort:u
+
+\newcommand{\cmdnop}{\cmd^{\vmath{nop}}} % Command corresponding to ``resting''.
+%:def:sem:SomeCommandDoesNothing
+%:sort:u
+
+
+\newcommand{\rew}{R} % Reward function
+%:todo:
+%:sort:R
+
+\newcommand{\placeneig}{\vmath{Neighbors}}
+%:todo:
+%:sort:Neighbors
+%:nomenc-exclude:
+
+\newcommand{\genericrel}{\sim}  % Generic relation
+\newcommand{\notgenericrel}{\not{\sim}}
+%:nomenc-exclude:
+
+%:section:articles/thesis/longexample:Long example
+%:def:chap:compositional
+
+% \newcommand{\CalibA}{\ensuremath{\vmath{CalibA}}}
+% \newcommand{\CalibB}{\ensuremath{\vmath{CalibB}}}
+\newcommand{\CalibA}{\textsf{{CalibA}}}
+%:sort:CalibA
+%:todo:
+\newcommand{\CalibB}{\textsf{{CalibB}}}
+%:sort:CalibB
+%:todo:
+\newcommand{\Smoothkernel}{k}
+%:sort:k
+
+\newcommand{\Smooth}{\textsf{{Smooth}}_{\Smoothkernel}}
+%:sort:Smooth
+%:todo:
+
+\newcommand{\BGDSAg}{\textsf{{BGDSagent}}}
+%:sort:BGDSagent
+%:todo:
+
+\newcommand{\BGDSAgS}{\textsf{{BGDSagentS}}}
+%:todo:
+%:sort:BGDSagentS
+
+\newcommand{\DImagesU}{\bbSp(\imps;\cmdSp)}
+%:nomenc-exclude:
+\newcommand{\DImagesR}{\bbSp(\imps;\reals^\ncmd)}
+%:nomenc-exclude:
+\newcommand{\ABehavior}{\textit{behavior}}
+%:nomenc-exclude:
+\newcommand{\DImagesSphU}{\bbSp(\genimages(\Stwo);\cmdSp)}
+%:nomenc-exclude:
+
+% \newcommand{\openSets}{\vmath{open}} 
+% topology definition
+\newcommand{\hobs}{\boldsymbol{x}}
+%:sort:x
+\newcommand{\hobse}{x}
+%:sort:x
+\newcommand{\bound}{M}
+%:sort:M
+

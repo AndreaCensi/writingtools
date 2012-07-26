@@ -1,0 +1,54 @@
+%:section:typography:Basic typography
+
+\newcommand{\myacronym}[1]{\textsc{#1}\xspace} % All acronyms; good for text as well as math mode. Use lower case.
+
+%:section:typography/tensors:Tensors and tensor elements
+\newcommand{\T}[1]{\boldsymbol{{\mathsf{#1}}}} % Tensor
+%:nomenc:\T{A},\T{B},\T{C},\dots: Symbols denoting tensors
+%:sort:---40a
+
+\newcommand{\Tel}[1]{{\mathsf{#1}}} % Tensor element
+%:nomenc:\Tel{A}_{ijk},\Tel{B}_{ijk},\Tel{C}_{ijk},\dots: Symbols denoting tensors elements
+%:sort:---40b
+
+\newcommand{\Te}[1]{\Tel{#1}}
+%:deprecated:
+
+
+%:section:typography/matrices:Matrices and matrix elements
+\newcommand{\M}[1]{\mathbf{#1}} %  A matrix
+%:nomenc:\M{A},\M{B},\M{C},\dots: Symbols denoting matrices
+%:sort:---30a
+
+\newcommand{\Mel}[1]{\mathrm{#1}} % The elements of a matrix
+%:nomenc:\Mel{A},\Mel{B},\Mel{C},\dots: Symbols denoting matrix elements
+%:sort:---30b
+
+%:section:typography/sets:Sets
+\newcommand{\aset}[1]{\mathscr{#1}} % A set
+%:nomenc:\setA,\setB,\setC,\dots,\setM,\setX,\setY,\setZ:Symbols denoting sets.
+%:sort:---10
+
+\newcommand{\agroup}[1]{\mathrm{#1}} % Fonts for a set which is a group.
+%:example: A set $\aset{X}$, a group $\agroup{X}$, $\agroup{G}$, \dots
+%:nomenc:\grG,\grH,\grK,\grN,\dots:Symbols denoting groups.
+%:sort:---50
+
+\newcommand{\aseq}[1]{\boldsymbol{#1}} % Formatting for sequences
+%:nomenc:\sqa,\sqb,\sqc,\dots:Symbols used for denoting sequences.
+%:sort:---20a
+
+\newcommand{\aseqe}[1]{#1} % Formatting for one element in a sequence
+%:nomenc:\sqae_k,\sqbe_k,\sqce_k,\dots:Symbols denoting the elements of sequences
+%:sort:---20b
+
+\newcommand{\dummyIndices}{}
+%:nomenc:i,j,k,s,v,\dots:Symbols usually used as indices.
+
+
+%:section:typography/misc:Everything else
+\newcommand{\aword}[1]{\mathsf{#1}} % How words should look like in formulas.
+%:example: Consider the operator $\aword{scale}$, \dots
+
+\newcommand{\vmath}[1]{\aword{#1}} % How words should appear in math mode.
+

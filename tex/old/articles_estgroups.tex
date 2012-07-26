@@ -1,0 +1,60 @@
+%:section:articles/estgroups: Estimation with symmetries
+
+%
+%:section:articles/estgroups/state: State
+%
+\newcommand{\esSt}{\boldsymbol{x}} % State
+\newcommand{\esStDim}{n} % Dimension of state space
+\newcommand{\esStSp}{\aset{X}} % State space
+\newcommand{\esStDist}{\mu^{\esStSp}_{\esSt}} % Prior for state
+
+
+%
+%:section:articles/estgroups/observations: Observations
+%
+\newcommand{\esObs}{\boldsymbol{y}} % Observations
+\newcommand{\esObsDim}{m} % Observations dimensions
+\newcommand{\esObsSp}{\aset{Y}} % Observations space
+\newcommand{\esObsMap}{h} % Observation map
+%:example: $\esObs = \esNuis \esObsMap(\esSt)$
+
+%
+%:section:articles/estgroups/nuisances: Nuisances
+%
+
+\newcommand{\esNuis}{\boldsymbol{n}} % Nuisance
+\newcommand{\esNuisSp}{\agroup{N}} % Nuisance group
+\newcommand{\esNuisDist}{\mu^{\esNuisSp}_{\esNuis}} % Nuisance distribution
+
+%
+%:section:articles/estgroups/estimators: Estimators, risks and performances
+%
+
+\newcommand{\esEst}{m} % Estimator
+\newcommand{\esEstSp}{\aset{M}} % Estimator set
+\newcommand{\esEstSpOpt}{\esEstSp^\star} % Optimal subset of estimators
+
+\newcommand{\esRisk}{e} % Risk function
+\newcommand{\esRiskSp}{\aset{E}} % Risk space
+\newcommand{\esRiskDist}[1]{\mu^{\esRiskSp}_{#1}} % Risk distribution for given estimator
+\newcommand{\esRiskDistPO}{\preceq} % Partial order defining preference on distributions.
+
+\newcommand{\esProb}{\mathcal{P}} % Estimation problem
+
+
+%
+%:section:articles/estgroups/symmetries: Symmetries in the problem
+%
+
+\newcommand{\esStAb}{\boldsymbol{\alpha}} % Abstract state
+\newcommand{\esStAbSp}{\aset{A}} % Abstract space
+\newcommand{\esRep}{\varphi} % Representation
+%:example: $\esRep: \esSt \mapsto \esStAb$.
+
+\newcommand{\esStSym}{\agroup{A}} % Group of symmetries of the state
+\newcommand{\esObsSym}{\agroup{B}} % Group of symmetries of the observation
+\newcommand{\esRiskSym}{\agroup{C}} % Group of symmetries of the risk function
+\newcommand{\esPOSym}{\agroup{D}} % Group of symmetries acting on the partial order
+\newcommand{\esProbSym}{\mathcal{S}} % Tuple of symmetries
+
+

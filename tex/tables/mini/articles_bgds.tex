@@ -1,0 +1,140 @@
+\begin{longtable}{cl}
+\multicolumn{2}{l}{Used in recent papers}\\ 
+ \hline
+\hline
+\multicolumn{2}{l}{BGDS report}\\ 
+ \hline
+\multicolumn{2}{l}{Definition of random models}\\ 
+ \hline
+$\bgTime$ &  Time axis\\ 
+ $\bgRS$ &  Random model\\ 
+ $\bgRSSp$ &  All models\\ 
+ $\bgRSinput$ &  Input signal\\ 
+ $\bgRSinputSp$ &  \\ 
+ $\bgRSinputH$ &  History of input signal\\ 
+ $\bgRSoutput$ & \\ 
+ $\bgRSoutputH$ &  History of output signal\\ 
+ $\bgRSoutputSp$ &  \\ 
+ $\bgRSinputTr$ &  \\ 
+ $\bgRSinputTrSp$ &  \\ 
+ $\bgRSoutputTr$ &  \\ 
+ $\bgRSoutputTrSp$ & \\ 
+ $\bgObs$ &  observations\\ 
+ $\bgObsH$ &  observations history\\ 
+ $\bgObsSp$ &  observation space\\ 
+ $\bgCmd$ &  commands\\ 
+ $\bgCmdH$ &  commands history\\ 
+ $\bgCmdSp$ &  commands space\\ 
+ $\bgWorld$ &  World\\ 
+ $\bgWorldSp$ &  World space\\ 
+ $\bgAgent$ &  Agent\\ 
+ $\bgAgentEx$ &  Agent exploration\\ 
+ $\bgAgentAc$ &  Agent action\\ 
+ $\bgAgentRep$ &  Agent representation\\ 
+ $\bgAgentRepSp$ &  Agent representation space\\ 
+ $\bgAgentSp$ &  Agent action\\ 
+ $\bgCmdTr$ &  Transformation of the commands\\ 
+ $\bgCmdTrSp$ &  \\ 
+ $\bgObsTr$ &  Transformation of the observations\\ 
+ $\bgObsTrSp$ & \\ 
+ $\bgBGDSfamily$ &  Family of BGDS sensors\\ 
+ $\bgBDSfamily$ &  Family of BDS sensors\\ 
+ $\bgSamplingGroup$ &  Groups of sampling operations\\ 
+ $\bgCalibration$ &  Calibration operation\\ 
+ $\bgBDSagent$ &  The BDS agent\\ 
+ $\bgBGDSagent$ &  The BGDS agent\\ 
+ $\bgPopCode$ &  Popoulation code\\ 
+ $\bgRankCode$ &  Rank code\\ 
+ $\bgRangeFamily$ &  Family of range-finders models\\ 
+ $\bgFields$ & \\ 
+ $\bgCmdConstraints$ & \\ 
+ $\bgPopK$ & \\ 
+ \multicolumn{2}{l}{BGDS report}\\ 
+ \hline
+$\obs$ &  Observations.\\ 
+ $\obse$ &  Observations (element) -- also called ``sensel''\\ 
+ $\obsg$ &  Goal observations.\\ 
+ $\obsge$ &  Goal observations (element).\\ 
+ $\obssp$ &  Observation physical space.\\ 
+ $\obsip$ &  Inner product bilinear form.\\ 
+ $\obsosp$ &  Observation output space.\\ 
+ $\state$ &  Generic underlying state.\\ 
+ $\cmd$ &  Commands, in general.\\ 
+ $\cmde$ &  Commands (element) -- also called ``?''.\\ 
+ $\detecte$ &  Detector\\ 
+ $\pose$ &  Robot pose $\pose = (\pos, \rotm) \in \posesp \subset \sethree$.\\ 
+ $\posesp$ &  Pose space, subgroup of $\sethree$.\\ 
+ $\pos$ &  Position in the world frame.\\ 
+ $\rotm$ &  Rotation matrix representing orientation in the world frame.\\ 
+ $\lvel$ &  Linear velocity\\ 
+ $\lvele$ &  Linear velocity (element)\\ 
+ $\avel$ &  Angular velocity\\ 
+ $\avels$ &  Angular velocity in 2D (scalar)\\ 
+ $\world$ &  World $\world = (\wshape,\wpose)$.\\ 
+ $\wshape$ &  World shape.\\ 
+ $\wpose$ &  World pose.\\ 
+ $\worldsp$ &  World set $\worldsp = (\wshapesp, \sethree)$.\\ 
+ $\wshapesp$ &  Shape space.\\ 
+ $\dist$ &  Distance to obstacle\\ 
+ $\distn$ &  Distance to obstacle, mean normalized.\\ 
+ $\rfnl$ &  Nonlinear function in range-finder tensors.\\ 
+ $\near$ &  Nearness\\ 
+ $\lum$ &  Luminance\\ 
+ $\lumn$ &  Luminance, mean normalized\\ 
+ $\sptran$ &  Sensor pose (translation)\\ 
+ $\sprot$ &  Sensor pose (rotation)\\ 
+ $\slvel$ &  Sensor linear velocity (when off axis)\\ 
+ $\savel$ &  Sensor angular velocity (when off axis)\\ 
+ $\field$ &  Field sampled by the field sensor.\\ 
+ $\fieldpos$ &  Generic position in the world.\\ 
+ $\TT$ &  Learned tensor\\ 
+ $\TTe$ &  ?\\ 
+ $\TM$ &  Bilinear tensor in \bds dynamics\\ 
+ $\TMe$ &  Bilinear tensor in \bds dynamics\\ 
+ $\Tcov$ &  Covariance of $\obs$.\\ 
+ $\Tcove$ &  Covariance of $\obs$.\\ 
+ $\Tucov$ &  Covariance of $\obs$.\\ 
+ $\Tucove$ &  Covariance of $\obs$.\\ 
+ $\TX$ &  Generic metric\\ 
+ $\TXe$ &  Generic metric\\ 
+ $\OS$ &  $S = s\times \nabla$\\ 
+ $\convf$ &  Indicates the convolution with a kernel $f$.\\ 
+ $\sothree$ &  Special orthogonal group (rotation matrices)\\ 
+ $\sethree$ &  Special Euclidean group \\ 
+ $\setwo$ &  Special Euclidean group \\ 
+ $\stwo$ &  Unit sphere\\ 
+ $\cov$ &  covariance\\ 
+ $\obslsp$ &  Observation logical space\\ 
+ $\obsl$ &  Observation logical space\\ 
+ $\obsle$ &  Observation logical space element\\ 
+ $\xtos$ &  Mapping between $s$ and $x$.\\ 
+ $\jac$ &  derivative of $\xtos$\\ 
+ $\jace$ &  derivative of $\xtos$ (element)\\ 
+ $\my$ &  Metric on the tangent space of $y(s)$.\\ 
+ $\mz$ &  Metric on the tangent space of $z(x)$.\\ 
+ $\mmu$ &  Metric for the commands $u$. \\ 
+ $\Tygd$ &  y gradient dynamics\\ 
+ $\Tygde$ &  y gradient dynamics (element)\\ 
+ $\Tygl$ &  y gradient learned tensor \\ 
+ $\Tygle$ &  y gradient learned tensor (element)\\ 
+ $\Tygcov$ &  y gradient covariance\\ 
+ $\Tygcove$ &  y gradient covariance (element)\\ 
+ $\Tyad$ &  Affine part of dynamics.\\ 
+ $\Tyade$ &  Affine part of dynamics (element)\\ 
+ $\Tyal$ &  Learned affine part of dynamics.\\ 
+ $\Tyale$ &  Learned affine part of dynamics (element)\\ 
+ $\Tzgd$ &  z gradient dynamics\\ 
+ $\Tzgde$ &  z gradient dynamics (element)\\ 
+ $\Tzgl$ &  z gradient learned tensor \\ 
+ $\Tzgle$ &  z gradient learned tensor (element)\\ 
+ $\Tzgcov$ &  z gradient covariance\\ 
+ $\Tzgcove$ &  z gradient covariance (element)\\ 
+ $\Tzad$ &  Affine part of dynamics.\\ 
+ $\Tzade$ &  Affine part of dynamics (element)\\ 
+ $\Tzal$ &  Learned affine part of dynamics.\\ 
+ $\Tzale$ &  Learned affine part of dynamics (element)\\ 
+ $\focal$ &  Pinhole camera focal length.\\ 
+ $\traindist$ &  Training distribution.\\ 
+ $\trainsym$ &  Symmetry group of $\traindist$.\\ 
+ $\boh$ &  incomplete\\ 
+ \end{longtable}

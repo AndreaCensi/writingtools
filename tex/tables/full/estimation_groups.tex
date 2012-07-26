@@ -1,0 +1,62 @@
+\begin{longtable}{lll}
+ &  & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{estgroups}} & \multicolumn{2}{l}{\emph{Estimation with symmetries}}\\ 
+ \hline
+\hline
+ &  & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{estgroups/state}} & \multicolumn{2}{l}{\emph{State}}\\ 
+ \hline
+{\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esSt}} & $\esSt$ &  State\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esStDim}} & $\esStDim$ &  Dimension of state space\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esStSp}} & $\esStSp$ &  State space\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esStDist}} & $\esStDist$ &  Prior for state\\ 
+  &  & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{estgroups/observations}} & \multicolumn{2}{l}{\emph{Observations}}\\ 
+ \hline
+{\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esObs}} & $\esObs$ &  Observations\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esObsDim}} & $\esObsDim$ &  Observations dimensions\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esObsSp}} & $\esObsSp$ &  Observations space\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esObsMap}} & $\esObsMap$ &  Observation map\\ 
+  &  & \fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+$\esObs = \esNuis \esObsMap(\esSt)$
+
+{\small{\texttt{\$\textbackslash esObs = \textbackslash esNuis \textbackslash esObsMap(\textbackslash esSt)\$}}}\end{minipage}
+}%
+\\ 
+  &  & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{estgroups/nuisances}} & \multicolumn{2}{l}{\emph{Nuisances}}\\ 
+ \hline
+{\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esNuis}} & $\esNuis$ &  Nuisance\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esNuisSp}} & $\esNuisSp$ &  Nuisance group\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esNuisDist}} & $\esNuisDist$ &  Nuisance distribution\\ 
+  &  & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{estgroups/estimators}} & \multicolumn{2}{l}{\emph{Estimators, risks and performances}}\\ 
+ \hline
+{\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esEst}} & $\esEst$ &  Estimator\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esEstSp}} & $\esEstSp$ &  Estimator set\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esEstSpOpt}} & $\esEstSpOpt$ &  Optimal subset of estimators\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esRisk}} & $\esRisk$ &  Risk function\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esRiskSp}} & $\esRiskSp$ &  Risk space\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esRiskDist\{...\}}} &  &  Risk distribution for given estimator\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esRiskDistPO}} & $\esRiskDistPO$ &  Partial order defining preference on distributions.\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esProb}} & $\esProb$ &  Estimation problem\\ 
+  &  & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{estgroups/symmetries}} & \multicolumn{2}{l}{\emph{Symmetries in the problem}}\\ 
+ \hline
+{\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esStAb}} & $\esStAb$ &  Abstract state\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esStAbSp}} & $\esStAbSp$ &  Abstract space\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esRep}} & $\esRep$ &  Representation\\ 
+  &  & \fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+$\esRep: \esSt \mapsto \esStAb$.
+
+{\small{\texttt{\$\textbackslash esRep: \textbackslash esSt \textbackslash mapsto \textbackslash esStAb\$.}}}\end{minipage}
+}%
+\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esStSym}} & $\esStSym$ &  Group of symmetries of the state\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esObsSym}} & $\esObsSym$ &  Group of symmetries of the observation\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esRiskSym}} & $\esRiskSym$ &  Group of symmetries of the risk function\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esPOSym}} & $\esPOSym$ &  Group of symmetries acting on the partial order\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esProbSym}} & $\esProbSym$ &  Tuple of symmetries\\ 
+ \end{longtable}

@@ -1,0 +1,11 @@
+\newcommand{\iconintext}[1]{{\setlength\fboxsep{0pt}%
+\raisebox{-0.5ex}{%
+    %\fbox{%
+    \includegraphics[height=2ex]{#1}}%
+    %}%
+    }%
+}
+
+\newcommand{\biburl}[1]{\href{#1}{\iconintext{pdf_icon}}}
+\newcommand{\weburl}[1]{\href{#1}{\iconintext{web_icon}}}
+\newcommand{\slidesurl}[1]{\href{#1}{\iconintext{slides_icon}}}

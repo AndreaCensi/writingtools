@@ -1,0 +1,95 @@
+%:section:common/groups: Group theory
+
+% \newcommand{\action}{\vmath{action}} % Group action
+% %:example: $\action(\agroup{G},\aset{X})$ means there is an action of $\agroup{G}$ on $\aset{X}$
+
+
+
+\newcommand{\gIdentity}{e} % Identity of a group
+%:sort:e
+%:def:def:group
+
+
+\newcommand{\tgroup}{\vmath{group}} % Group set with operations
+%:example: $\tgroup(\agroup{G},\cdot)$ means $\agroup{G}$ is a group under $\cdot$.
+
+\newcommand{\haar}{\vmath{haar}} % Haar measure
+%:example: The Haar measure on $\aset{X}$ is ${\haar}^{X}$.
+
+%:section:common/groups/famous: Famous groups
+
+\newcommand{\idGroup}{\vmath{Id}} % The trivial group with identity only.
+%:sort:Id
+%:def:def:identity-group
+
+\newcommand{\permutations}{\vmath{Perm}} % Set of permutation
+%:nomenc:\permutations(n): Permutations of a set of $n$ elements.
+%:def:def:permutations
+%:sort:Perm
+
+
+\newcommand{\stab}[1]{\vmath{stab}^{#1}} % Stabilizer of a set
+%:nomenc:\stab{G}(\setS):Stabilizer of a set $\setS$ with respect to the group~$G$.
+%:sort:stab
+%:def:def:stabilizer
+
+\newcommand{\functionsym}[1]{\vmath{Sym}^{#1}} % Symmetries of a function
+%:nomenc:\functionsym{G}(\setS):Symmetries of a set $\setS$ with respect to the group~$G$.
+%:def:def:functionsym
+%:sort:Sym
+
+\newcommand{\allsubgroups}{\vmath{AllSubgroups}} 
+%:nomenc:\allsubgroups(G):All subgroups of a group G.
+%:def:def:allsubgroups
+%:sort:allsubgroups
+
+\newcommand{\comgroup}[1]{\vmath{Com}_{#1}} % Commutator sub group
+%:nomenc:\comgroup{\M{A}}:Subgroup of $\GL(n)$ commuting with $\M{A}$.
+%:sort:Com
+%:def:def:commuting-subgroup
+
+\newcommand{\groupJoin}{\boldsymbol{\vee}} % Group join
+%:nomenc:G\groupJoin H: Group join.
+%:def:def:group-join
+
+
+\newcommand{\groupconj}[1]{\vmath{conj}_{#1}} % Conjugation
+%:nomenc:\groupconj{x}:Conjugation by the element $x$.
+%:def:def:conjugation
+%:sort:conj
+
+\newcommand{\groupquotient}{\mathrel{/}} % Group quotient
+%:nomenc:G \groupquotient H:Group quotient
+%:def:def:quotient-group
+
+\newcommand{\groupsemidir}{\mathrel{\rtimes}} % Semidirect product.
+%:nomenc:G\rtimes H:Semidirect product of $G$ and $H$.
+%:def:def:semidirect-product
+
+\newcommand{\groupisom}{\mathrel{\cong}} % Isomorphism
+%:nomenc:G\groupisom H: Isomorphism relation
+%:def:def:group-isomorphism
+
+% some "dummy" definitions, to appear in the nomenclature
+% TODO: add dummy definitions somewhere
+\newcommand{\issubgroup}{\mathrel{\leq}} % Subgroup relation.
+%:nomenc:G\issubgroup H: Subgroup relation
+%:def:def:subgroup
+
+\newcommand{\normalsub}{\mathrel{\triangleleft}}% Normal subgroup relation
+%:nomenc:G\normalsub H: Normal subgroup relation
+%:def:def:normal-subgroup
+
+
+\newcommand{\actionsymbol}{\mathrel{\cdot}} % Group action.
+%:nomenc:g\cdot x: Action of a group.
+%:def:def:group-action
+
+\newcommand{\companionFuncs}[1]{\vmath{comp}^{#1}} % Companions functions
+%:nomenc:\companionFuncs{G}(\setY;\setX):All companion functions of $G$ acting on $\setX$ with codomain $\setY$.
+%:sort:companions
+
+\newcommand{\transversalFuncs}[1]{\vmath{tran}^{#1}} % Transversal functions
+%:nomenc:\transversalFuncs{G}(\setY;\setX):All $G$-transversal functions for acting on $\setX$ with codomain $\setY$.
+%:sort:transversal
+

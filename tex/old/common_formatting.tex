@@ -1,0 +1,70 @@
+%:section:common/expressions: Miscellaneous expressions
+%:nomenc-exclude:
+
+\newcommand{\etal}{\textit{et.\,al.}\xspace}
+\newcommand{\eg}{\textit{e.g.},\xspace}
+\newcommand{\etc}{\textit{etc.}\xspace}
+\newcommand{\ie}{\textit{i.e.},\xspace}
+\newcommand{\ala}{\textit{\`a\,la}\xspace}
+\newcommand{\viceversa}{\textit{vice versa}\xspace}
+\newcommand{\vs}{\textit{vs}\xspace} % Versus
+\newcommand{\adhoc}{\textit{ad\,hoc}\xspace}
+\newcommand{\apriori}{\textit{a\,priori}\xspace}
+
+%:section:common/goodformulas: Better formulas annotations
+%:nomenc-exclude:
+% TODO: add custom color
+\newcommand{\expl}[1]{{ \quad (#1)}\nonumber} % Explanation in formulas
+%\newcommand{\expl}[1]{{ \circledcirc\quad\small \color{blue} #1}} % Explanation in formulas
+
+\newcommand{\highA}[1]{{\color[rgb]{0,0,0.5}#1}} % Highlight something in formulas (observations)
+\newcommand{\highB}[1]{{\color[rgb]{0,0.5,0}#1}} % Highlight something in formulas (commands)
+\newcommand{\highC}[1]{{\color[rgb]{0,0.5,0.5}#1}} % both observations and commands
+
+
+%:section:common/yesorno: Miscellaneous functions for document formatting
+%:nomenc-exclude:
+
+\newcommand{\ns}{\normalsize}
+\newcommand{\tickYes}{\checkmark}
+\newcommand{\tickNo}{\hspace{1pt}\ding{55}}
+\newcommand{\NA}{n/a\xspace}
+\newcommand{\coltickNo}{{\color[rgb]{0.3,0,0}\tickNo}}
+\newcommand{\yes}{{\color[rgb]{0,0.3,0}\tickYes}}
+\newcommand{\no}{\coltickNo}
+
+\newcommand{\onehalf}{\frac{1}{2}} % small one half
+%:todo:
+%\newcommand{\onehalf}{\nicefrac{1}{2}} % small one half
+% \newcommand{\onehalf}{\mbox{\textonehalf}} % small one half
+%:package:textcomp
+%:nomenc-exclude:
+
+\newcommand{\smPO}{+1} % Small plus one 
+\newcommand{\smMO}{-1} % Small minus one (e.g. in smallmatrix)
+
+%:section:common/incomplete: Incomplete symbols
+%:notfinal:
+%:nomenc-exclude:
+
+\newcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}} % Marker for sections to write
+\newcommand{\ac}[1]{\AC{#1}}
+\newcommand{\towrite}{\textbf{to write}\xspace} % Marker for sections to write
+\newcommand{\placeholder}[2]{{\color[rgb]{1,0.9,0.7}PLACEHOLDER\rule{#1}{#2}}} % A placeholder 
+\newcommand{\tocite}[1]{{\color{red}[#1]}\xspace}
+\newcommand{\citeboh}{{\color{red}[xxx]}\xspace} 
+\newcommand{\xxx}{\boh}
+\newcommand{\notsure}{\textbf{\color{red}(Not sure...)}}
+\newcommand{\dontlike}{\textbf{\color{red}(Don't like this)}}
+\newcommand{\notformal}{\textbf{\color{red}(not formal)}}
+\newcommand{\betterword}[1]{\textbf{\color{red}#1}}
+\newcommand{\boh}{{\color{red}\textit{???}}\xspace} % incomplete
+\newcommand{\bn}{\color{red}} % bad notation, this should change later
+\newcommand{\checkbadformat}{} % incomplete
+\newcommand{\prooftowritesomeday}{}
+
+\newcommand{\myrule}[2]{  {\color[rgb]{0.9,0.9,0.8} \rule{#1}{#2}}}
+
+\newcommand{\unitInverval}{\unitInterval}
+%:nomenc-exclude:
+

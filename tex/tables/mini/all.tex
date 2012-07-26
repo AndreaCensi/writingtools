@@ -1,0 +1,690 @@
+\begin{longtable}{cl}
+\multicolumn{2}{l}{}\\ 
+ \hline
+\hline
+\multicolumn{2}{l}{Agents and tasks}\\ 
+ \hline
+$\agSp$ &  \\ 
+ $\agSpYU$ &  All agents with given formats.\\ 
+ $\agA$ &  An agent\\ 
+ $\agExp$ &  Agent's exploration phase\\ 
+ $\agAct$ &  Agent's action phase\\ 
+ $\agAexp$ &  Exploration phase for agent $\agA$.\\ 
+ $\agAact$ &   Action phase for agent $\agA$.\\ 
+ $\agAwtor$ &  Map from the world to the result for the agent $\agA$.\\ 
+ $\agAwtob$ &  \\ 
+ $\agAintermediate$ & \\ 
+ $\agSucAG$ &  Success set for the agent $\agA$ and goal $\agGoal$.\\ 
+ $\agRep$ &  Agent representation\\ 
+ $\agRepSp$ &  Agent's model space\\ 
+ $\agNuis$ & \\ 
+ $\agNuisComp$ &  Complement of $\agNuis$.\\ 
+ $\agNuisObs$ & \\ 
+ $\agNuisCmd$ & \\ 
+ $\agbbClass$ & \\ 
+ $\agbbClCore$ & \\ 
+ $\agGoal$ &  The agent's goal (a subset of $\processes(\obsSp\times\cmdSp))$\\ 
+ \multicolumn{2}{l}{}\\ 
+ \hline
+\hline
+\multicolumn{2}{l}{BDS report}\\ 
+ \hline
+$\BDSnk$ & \\ 
+ $\bgBDSfamily$ &  Family of BDS sensors\\ 
+ $\bds$ &  Bilinear dynamics system\\ 
+ $\BDS$ & \\ 
+ $\TT$ &  Learned tensor\\ 
+ $\TTe$ &  ?\\ 
+ $\TU$ &  Learned tensor\\ 
+ $\TUe$ &  Learned tensor\\ 
+ $\TM$ &  Bilinear tensor in \bds dynamics\\ 
+ $\TMe$ &  Bilinear tensor in \bds dynamics\\ 
+ $\TN$ &  Bilinear tensor in \bds dynamics\\ 
+ $\TNe$ &  Bilinear tensor in \bds dynamics\\ 
+ $\Tcov$ &  Covariance of $\obs$.\\ 
+ $\Tcove$ &  Covariance of $\obs$.\\ 
+ $\Tucov$ &  Covariance of $\obs$.\\ 
+ $\Tucove$ &  Covariance of $\obs$.\\ 
+ $\discInt$ &  Discretization interval\\ 
+ $\nearavg$ &  Average nearness\\ 
+ \multicolumn{2}{l}{BGDS report}\\ 
+ \hline
+$\bgds$ &  Bilinear gradient dynamics system\\ 
+ $\BGDS$ & \\ 
+ $\bgCmd$ &  commands\\ 
+ $\bgCmdH$ &  commands history\\ 
+ $\bgCmdSp$ &  commands space\\ 
+ $\bgWorld$ &  World\\ 
+ $\bgWorldSp$ &  World space\\ 
+ $\bgAgent$ &  Agent\\ 
+ $\bgAgentEx$ &  Agent exploration\\ 
+ $\bgAgentAc$ &  Agent action\\ 
+ $\bgAgentRep$ &  Agent representation\\ 
+ $\bgAgentRepSp$ &  Agent representation space\\ 
+ $\bgAgentSp$ &  Agent action\\ 
+ $\bgCmdTr$ &  Transformation of the commands\\ 
+ $\bgCmdTrSp$ &  \\ 
+ $\bgObsTr$ &  Transformation of the observations\\ 
+ $\bgObsTrSp$ & \\ 
+ $\bgSamplingGroup$ &  Groups of sampling operations\\ 
+ $\bgCalibration$ &  Calibration operation\\ 
+ $\bgBDSagent$ &  The BDS agent\\ 
+ $\bgBGDSagent$ &  The BGDS agent\\ 
+ $\bgPopCode$ &  Popoulation code\\ 
+ $\bgRankCode$ &  Rank code\\ 
+ $\bgRangeFamily$ &  Family of range-finders models\\ 
+ $\bgCmdConstraints$ & \\ 
+ $\bgPopK$ & \\ 
+ \multicolumn{2}{l}{BGDS report}\\ 
+ \hline
+$\state$ &  Generic underlying state.\\ 
+ $\detecte$ &  Detector\\ 
+ $\dist$ &  Distance to obstacle\\ 
+ $\distn$ &  Distance to obstacle, mean normalized.\\ 
+ $\rfnl$ &  Nonlinear function in range-finder tensors.\\ 
+ $\near$ &  Nearness\\ 
+ $\lum$ &  Luminance\\ 
+ $\lumn$ &  Luminance, mean normalized\\ 
+ $\sptran$ &  Sensor pose (translation)\\ 
+ $\sprot$ &  Sensor pose (rotation)\\ 
+ $\slvel$ &  Sensor linear velocity (when off axis)\\ 
+ $\savel$ &  Sensor angular velocity (when off axis)\\ 
+ $\TX$ &  Generic metric\\ 
+ $\TXe$ &  Generic metric\\ 
+ $\OS$ &  $S = s\times \nabla$\\ 
+ $\convf$ &  Indicates the convolution with a kernel $f$.\\ 
+ $\my$ &  Metric on the tangent space of $y(s)$.\\ 
+ $\bgBGDSfamily$ &  Family of BGDS sensors\\ 
+ $\BGDSsk$ & \\ 
+ $\focal$ &  Pinhole camera focal length.\\ 
+ $\traindist$ &  Training distribution.\\ 
+ $\trainsym$ &  Symmetry group of $\traindist$.\\ 
+ \multicolumn{2}{l}{Gradient dynamics}\\ 
+ \hline
+$\obslsp$ &  Observation logical space\\ 
+ $\obsl$ &  Observations in logical space\\ 
+ $\obsle$ &  Observation logical space element\\ 
+ $\xtos$ &  Mapping between $\obsps$ and $\obslsp$.\\ 
+ $\jac$ &  Jacobian of $\xtos$\\ 
+ $\jace$ &  An element of the Jacobian of $\xtos$.\\ 
+ $\mz$ &  Metric on the tangent space of $z(x)$.\\ 
+ $\mmu$ &  Metric for the commands $u$. \\ 
+ \multicolumn{2}{l}{Gradient dynamics}\\ 
+ \hline
+$\Tzgd$ &  $\obsl$  gradient dynamics\\ 
+ $\Tzgde$ &  $\obsl$  gradient dynamics (element)\\ 
+ $\Tzgl$ &  $\obsl$  gradient  learned tensor \\ 
+ $\Tzgle$ &  $\obsl$  gradient  learned tensor (element)\\ 
+ $\Tzgcov$ &  $\obsl$  gradient  covariance\\ 
+ $\Tzgcove$ &  $\obsl$  gradient  covariance (element)\\ 
+ $\Tzad$ &  Affine part of dynamics.\\ 
+ $\Tzade$ &  Affine part of dynamics (element)\\ 
+ $\Tzal$ &  Learned affine part of dynamics.\\ 
+ $\Tzale$ &  Learned affine part of dynamics (element)\\ 
+ \multicolumn{2}{l}{BGDS report}\\ 
+ \hline
+$\Tygd$ &  $\obs$ gradient dynamics\\ 
+ $\Tygde$ &  $\obs$ gradient dynamics (element)\\ 
+ $\Tygl$ &  $\obs$ gradient learned tensor \\ 
+ $\Tygle$ &  $\obs$ gradient learned tensor (element)\\ 
+ $\Tygcov$ &  $\obs$ gradient covariance\\ 
+ $\Tygcove$ &  $\obs$ gradient covariance (element)\\ 
+ $\Tyad$ &  Affine part of dynamics.\\ 
+ $\Tyade$ &  Affine part of dynamics (element)\\ 
+ $\Tyal$ &  Learned affine part of dynamics.\\ 
+ $\Tyale$ &  Learned affine part of dynamics (element)\\ 
+ \multicolumn{2}{l}{Definition of random models}\\ 
+ \hline
+$\bgTime$ &  Time axis\\ 
+ $\bgRS$ &  Random model\\ 
+ $\bgRSSp$ &  All models\\ 
+ $\bgRSinput$ &  Input signal\\ 
+ $\bgRSinputSp$ &  \\ 
+ $\bgRSinputH$ &  History of input signal\\ 
+ $\bgRSoutput$ & \\ 
+ $\bgRSoutputH$ &  History of output signal\\ 
+ $\bgRSoutputSp$ &  \\ 
+ $\bgRSinputTr$ &  \\ 
+ $\bgRSinputTrSp$ &  \\ 
+ $\bgRSoutputTr$ &  \\ 
+ $\bgRSoutputTrSp$ & \\ 
+ $\bgObs$ &  observations\\ 
+ $\bgObsH$ &  observations history\\ 
+ $\bgObsSp$ &  observation space\\ 
+ \multicolumn{2}{l}{Camera paper}\\ 
+ \hline
+$\rank$ & \\ 
+ $\place$ & \\ 
+ $\ff$ &  Distance to similarity function\\ 
+ $\Sany$ &  Generic hypersphere\\ 
+ $\targetSp$ &  Target manifold\\ 
+ $\Ssubset$ &  A subset of $\Sany$  XXX\\ 
+ $\infr$ &  Informative radius\\ 
+ $\ffr$ &  Informative radius of $\ff$\\ 
+ $\distradius$ &  Radius of a distribution\\ 
+ $\distdiam$ &  Diameter of a distribution\\ 
+ $\hausdorff$ &  Hausdorff distance\\ 
+ $\kimberley$ &  Kimberley value\\ 
+ $\errproc$ &  Procrustes score\\ 
+ $\isoError$ & \\ 
+ $\symError$ & \\ 
+ $\relError$ & \\ 
+ $\scaledRelError$ & \\ 
+ $\angcorr$ & \\ 
+ $\spearperf$ &  Spearman performance measure\\ 
+ $\spearperfn$ &  Normalized Spearman performance measure\\ 
+ $\dirset$ &  Set of directions\\ 
+ $\dirmat$ &  Directions stacked in a matrix\\ 
+ $\matX$ & \\ 
+ $\matI$ & \\ 
+ $\arot$ & \\ 
+ $\cosmat$ & \\ 
+ $\cosmatij$ & \\ 
+ $\distmat$ & \\ 
+ $\distmatij$ & \\ 
+ $\simmat$ &  Similarity matrix\\ 
+ $\simmatij$ & \\ 
+ $\simmatii$ & \\ 
+ $\simmatkl$ & \\ 
+ $\algorparam$ & \\ 
+ $\shannon$ & \\ 
+ $\fov$ &  field of view\\ 
+ $\SKalgo$ &  Shepard-Kruscall algorithm\\ 
+ $\SBSEw$ &  An extension to the \SKalgo algorithm\\ 
+ $\SBSE$ &  An extension to the \SKalgo algorithm (without warping)\\ 
+ \multicolumn{2}{l}{DDS report}\\ 
+ \hline
+$\ddsres$ &  Resolution of the sensor in a \dds.\\ 
+ $\ddsarea$ &  Area of the manifold $\obsps$.\\ 
+ $\ddsbound$ &  Bound on the maximum diffeomorphism in a \dds.\\ 
+ $\DDS$ & \\ 
+ $\dds$ & \\ 
+ $\ddsl$ & \\ 
+ $\DDSsu$ & \\ 
+ $\DDSLsvu$ & \\ 
+ $\bgDDSfamily$ & \\ 
+ $\bgDDSLfamily$ & \\ 
+ $\diffeoURL$ &  Model \\ 
+ $\cmdAlphabet$ & \\ 
+ $\ncmdwords$ &  Number of commands words.\\ 
+ $\obsspD$ &  Metric on $\obsps$.\\ 
+ $\diffId$ &  Identity diffeomorphisms.\\ 
+ $\diffU$ &  Uncertainty of estimated diffeomorphism.\\ 
+ $\diffDist$ &  Distance between two diffeomorphism.\\ 
+ $\cmdDist$ &  Distance between two commands.\\ 
+ $\cmdADist$ &  Anti-distance between two commands.\\ 
+ $\images$ & \\ 
+ $\ddsfov$ &  Field of view for DDS\\ 
+ \multicolumn{2}{l}{Estimation with symmetries}\\ 
+ \hline
+\multicolumn{2}{l}{State}\\ 
+ \hline
+$\esSt$ &  State\\ 
+ $\esStDim$ &  Dimension of state space\\ 
+ $\esStSp$ &  State space\\ 
+ $\esStDist$ &  Prior for state\\ 
+ \multicolumn{2}{l}{Observations}\\ 
+ \hline
+$\esObs$ &  Observations\\ 
+ $\esObsDim$ &  Observations dimensions\\ 
+ $\esObsSp$ &  Observations space\\ 
+ $\esObsMap$ &  Observation map\\ 
+ \multicolumn{2}{l}{Nuisances}\\ 
+ \hline
+$\esNuis$ &  Nuisance\\ 
+ $\esNuisSp$ &  Nuisance group\\ 
+ $\esNuisDist$ &  Nuisance distribution\\ 
+ \multicolumn{2}{l}{Estimators, risks and performances}\\ 
+ \hline
+$\esEst$ &  Estimator\\ 
+ $\esEstSp$ &  Estimator set\\ 
+ $\esEstSpOpt$ &  Optimal subset of estimators\\ 
+ $\esRisk$ &  Risk function\\ 
+ $\esRiskSp$ &  Risk space\\ 
+ $\esRiskDistPO$ &  Partial order defining preference on distributions.\\ 
+ $\esProb$ &  Estimation problem\\ 
+ \multicolumn{2}{l}{Symmetries in the problem}\\ 
+ \hline
+$\esStAb$ &  Abstract state\\ 
+ $\esStAbSp$ &  Abstract space\\ 
+ $\esRep$ &  Representation\\ 
+ $\esStSym$ &  Group of symmetries of the state\\ 
+ $\esObsSym$ &  Group of symmetries of the observation\\ 
+ $\esRiskSym$ &  Group of symmetries of the risk function\\ 
+ $\esPOSym$ &  Group of symmetries acting on the partial order\\ 
+ $\esProbSym$ &  Tuple of symmetries\\ 
+ \multicolumn{2}{l}{Group spectral properties}\\ 
+ \hline
+$\gsHom$ &  Induced homomorphisms.\\ 
+ $\gsImage$ &  \\ 
+ $\gsEqs$ &  Fixed points of a function.\\ 
+ $\gsGA$ &  If the function is the action of a group.\\ 
+ $\gsGAsym$ &  Used to specify that a function can be expressed as a group action.\\ 
+ $\gsSym$ &  Set of symmetries\\ 
+ $\gsStrongCan$ &  Strong canonization operator\\ 
+ $\gsWeakCan$ &  Weak canonization operator\\ 
+ $\gsEquiCan$ &  Bold canonization operator\\ 
+ $\gsEndoCan$ &  Mild canonization operator\\ 
+ $\gsUnCan$ &  Unstructured canonization operator\\ 
+ $\gsNuis$ &  \\ 
+ $\regular$ & \\ 
+ $\unstr$ &  Unstructured symbol.\\ 
+ $\jokFunc$ &  Joker function\\ 
+ $\zerFunc$ &  Zero function\\ 
+ \multicolumn{2}{l}{Group spectral properties}\\ 
+ \hline
+$\gsdContravariant$ &  Contravariance\\ 
+ $\gsdInvariant$ &  Invariance\\ 
+ $\gsdEquivariant$ &  Equivariance\\ 
+ $\gsdIntroduces$ &  Nuisance introduced\\ 
+ $\gsdUnstructured$ &  Unstructured result\\ 
+ \multicolumn{2}{l}{Invariances}\\ 
+ \hline
+\multicolumn{2}{l}{Symbols used by Soatto}\\ 
+ \hline
+$\scene$ &  scene\\ 
+ $\representation$ &  representation\\ 
+ $\minrep$ &  minimal representation\\ 
+ $\feature$ &  feature\\ 
+ $\maxinv$ &  maximal invariant feature\\ 
+ $\suffstat$ &  maximal invariant feature\\ 
+ $\image$ &  image\\ 
+ $\addnoise$ &  additive noise\\ 
+ $\imageform$ &  image formation function\\ 
+ $\groupnuis$ &  nuisance which have the structure of a group\\ 
+ $\othernuis$ &  other non-invertible nuisance\\ 
+ $\lightfield$ &  all possible images generated by a scene\\ 
+ $\complex$ &  Complexity measure\\ 
+ $\actinfo$ &  Actionable information\\ 
+ $\covdet$ &  Covariant detector\\ 
+ \multicolumn{2}{l}{Special symbols for thesis}\\ 
+ \hline
+$\labelrefinement$ &  Indicates a refinement\\ 
+ $\pchomeoR$ & \\ 
+ $\bitZ$ & \\ 
+ $\bitO$ & \\ 
+ $\infbinstrings$ &  Set of infinite binary strings\\ 
+ $\chineseClose$ &  The Chinese character corresponding to ``close'' or ``near''. \\ 
+ $\twosignals$ & \\ 
+ $\twosignalsa$ & \\ 
+ $\twosignalsb$ & \\ 
+ $\twosignalscolon$ & \\ 
+ $\semrelorder$ &  Order of a generic semantic relations\\ 
+ $\infinit$ &  Infinitesimal\\ 
+ $\genericsemrel$ &  A generic semantic relation.\\ 
+ $\gensemrelsym$ &  Symmetries of the semantic relation\\ 
+ $\genericsimilarity$ &  A generic similarity measure.\\ 
+ $\obsecdf$ &  CDF of one sensel\\ 
+ $\cmdreverse$ &  The map from a command to its reverse.\\ 
+ $\cmdopt$ &  The optimal command\\ 
+ $\cmdnop$ &  Command corresponding to ``resting''.\\ 
+ $\rew$ &  Reward function\\ 
+ $\placeneig$ & \\ 
+ $\genericrel$ &  Generic relation\\ 
+ $\notgenericrel$ & \\ 
+ \multicolumn{2}{l}{Long example}\\ 
+ \hline
+$\CalibA$ & \\ 
+ $\CalibB$ & \\ 
+ $\Smoothkernel$ & \\ 
+ $\Smooth$ & \\ 
+ $\BGDSAg$ & \\ 
+ $\BGDSAgS$ & \\ 
+ $\DImagesU$ & \\ 
+ $\DImagesR$ & \\ 
+ $\ABehavior$ & \\ 
+ $\DImagesSphU$ & \\ 
+ $\hobs$ & \\ 
+ $\hobse$ & \\ 
+ $\bound$ & \\ 
+ \multicolumn{2}{l}{Common symbols to all papers}\\ 
+ \hline
+\hline
+\multicolumn{2}{l}{Other abbrevations}\\ 
+ \hline
+$\setA$ & \\ 
+ $\setB$ & \\ 
+ $\setC$ & \\ 
+ $\setU$ & \\ 
+ $\setM$ & \\ 
+ $\setY$ & \\ 
+ $\setX$ & \\ 
+ $\setZ$ & \\ 
+ $\setS$ & \\ 
+ $\grG$ & \\ 
+ $\grH$ & \\ 
+ $\grK$ & \\ 
+ $\grN$ & \\ 
+ \multicolumn{2}{l}{}\\ 
+ \hline
+$\sqa$ & \\ 
+ $\sqae$ & \\ 
+ $\sqb$ & \\ 
+ $\sqbe$ & \\ 
+ $\sqc$ & \\ 
+ $\sqce$ & \\ 
+ \multicolumn{2}{l}{Acronyms}\\ 
+ \hline
+\multicolumn{2}{l}{Algebra}\\ 
+ \hline
+$\ones$ & \\ 
+ $\idMat$ &  Identity matrix\\ 
+ $\matTrace$ &  Trace of a matrix.\\ 
+ $\angleFun$ &  Angle function\\ 
+ $\flatten$ &  Matrix-to-vector rearrangement.\\ 
+ \multicolumn{2}{l}{Basic stuff}\\ 
+ \hline
+$\setfun$ &  Symbol for set functions (one-to-many)\\ 
+ $\algfield$ &  Field.\\ 
+ $\wellorder$ &  A well ordered set.\\ 
+ $\orderedfield$ &  A well ordered field.\\ 
+ $\powerset$ &  Power set of a space\\ 
+ $\supp$ &  Support of a set\\ 
+ $\idFunc$ &  The identity function\\ 
+ $\invFunc$ &  Inverse function \\ 
+ $\funcComp$ &  Function composition\\ 
+ $\emptysequence$ &  Empty sequence\\ 
+ $\allFuncs$ &  All maps from a space to the other\\ 
+ $\D$ &  Used for integrals\\ 
+ $\sign$ &  Sign function\\ 
+ \multicolumn{2}{l}{Sequences}\\ 
+ \hline
+$\sequences$ &  Set of sequences\\ 
+ $\contsequences$ &  Set of continuous sequences\\ 
+ $\Aut$ &  Automorphism group\\ 
+ $\contFuncs$ &  Continuous functions on some metric space \\ 
+ $\differFuncs$ &  Differentiable functions\\ 
+ $\partitions$ & \\ 
+ $\mExp$ &  Matrix exponential\\ 
+ $\bigO$ &  Big-O notation\\ 
+ $\smallo$ & \\ 
+ $\definedas$ & \\ 
+ $\crossprod$ &  cross-product\\ 
+ $\gsDom$ &  \\ 
+ $\gsCod$ &  \\ 
+ $\unitInterval$ & \\ 
+ \multicolumn{2}{l}{Logic}\\ 
+ \hline
+$\logicAnd$ &  Logic "and"\\ 
+ $\logicOr$ &  Logic "or"\\ 
+ $\logicNot$ &  Logic "not"\\ 
+ \multicolumn{2}{l}{Simple sets}\\ 
+ \hline
+$\reals$ &  Real numbers\\ 
+ $\natnumbers$ &  Natural numbers\\ 
+ $\ratnumbers$ &  Rational numbers\\ 
+ $\hreals$ &  Hyper-real numbers\\ 
+ $\nonNegReals$ &  Non negative reals \\ 
+ $\posReals$ &  Strictly positive reals\\ 
+ $\nzReals$ &  Non zero reals\\ 
+ \multicolumn{2}{l}{Black boxes}\\ 
+ \hline
+$\bbD$ & \\ 
+ $\alloutcomes$ & \\ 
+ $\alloutputs$ &  All outputs of a given system\\ 
+ $\bbDelay$ &  The one-step delay system.\\ 
+ $\vertblock$ & \\ 
+ $\bbAccum$ &  Accumulator system\\ 
+ $\inLoop$ &  Closes the loop around a system\\ 
+ $\idSys$ &  The identity system\\ 
+ $\bbSp$ &  Set of black boxes\\ 
+ $\bbFM$ &  Systems with finite memory\\ 
+ $\bbSpInv$ &  Set of invertible systems\\ 
+ $\bbFMinv$ &  Systems with finite memory and invertible\\ 
+ $\bbSpIns$ &  Set of instantaneous systems\\ 
+ $\bbSpDet$ &  Deterministic systems\\ 
+ $\bbSpInvIns$ &  Set of invertible and instantaneous systems.\\ 
+ $\bbSpCore$ &  Systems up to representation\\ 
+ \multicolumn{2}{l}{}\\ 
+ \hline
+$\bbDinv$ & \\ 
+ $\bbDri$ & \\ 
+ $\bbDli$ & \\ 
+ $\bbE$ & \\ 
+ $\bbF$ & \\ 
+ $\bbG$ & \\ 
+ $\bbSpBA$ &  \towrite\\ 
+ $\bbSpAB$ &  \towrite\\ 
+ \multicolumn{2}{l}{Deprecated}\\ 
+ \hline
+$\bbOp$ &  Composition operation\\ 
+ $\inSeries$ &  Series of two systems\\ 
+ \multicolumn{2}{l}{Bootstrapping symbols}\\ 
+ \hline
+\multicolumn{2}{l}{Observations and commands}\\ 
+ \hline
+$\world$ &  The "world", an element of $\bbSpYU$.\\ 
+ $\obs$ &  Observations.\\ 
+ $\obse$ &  Observations (element) -- also called ``sensel''\\ 
+ $\cmd$ &  Commands, in general.\\ 
+ $\cmde$ &  Commands (element) -- also called ``?''.\\ 
+ $\nobs$ &  Number of sensels\\ 
+ $\ncmd$ &  Number of actuators\\ 
+ $\obsSp$ &  Observation space \\ 
+ $\cmdSp$ &  Commands space\\ 
+ $\cmdSph$ &  Domain of a single actuator $\cmdSp=\cmdSph^\ncmd$.\\ 
+ $\obsSph$ &  Domain of a single sensel $\obsSp=\obsSph^\nobs$.\\ 
+ $\obsSphd$ &  Metric on $\obsSphd$\\ 
+ $\obsSpd$ &  Metric on $\obsSpd$\\ 
+ \multicolumn{2}{l}{Spatial sensors}\\ 
+ \hline
+$\obssp$ &  Observation physical space.\\ 
+ $\obsps$ &  Observation physical space.\\ 
+ $\genimages$ &  Images on physical space $\obsps$.\\ 
+ $\imps$ &  Images on physical space $\obsps$.\\ 
+ \multicolumn{2}{l}{Servoing}\\ 
+ \hline
+$\obsg$ &  Goal observations.\\ 
+ $\obsge$ &  Goal observations (element).\\ 
+ $\obsgl$ &  Goal observations (element).\\ 
+ $\obsgle$ &  Goal observations (element).\\ 
+ \multicolumn{2}{l}{Abbreviations}\\ 
+ \hline
+$\bbSpYU$ &  \towrite\\ 
+ $\bbSpUY$ &  \towrite\\ 
+ $\bbSpInvY$ &  Representation nuisances on commands\\ 
+ $\bbSpInvU$ &  Representation nuisances on observations\\ 
+ $\bbSpInvYU$ &  Representation nuisances\\ 
+ $\bbSpInvUY$ & \\ 
+ $\bbSpCoreYU$ &  Systems up to representation\\ 
+ \multicolumn{2}{l}{Miscellaneous expressions}\\ 
+ \hline
+$\etal$ & \\ 
+ $\eg$ & \\ 
+ $\etc$ & \\ 
+ $\ie$ & \\ 
+ $\ala$ & \\ 
+ $\viceversa$ & \\ 
+ $\vs$ &  Versus\\ 
+ $\adhoc$ & \\ 
+ $\apriori$ & \\ 
+ \multicolumn{2}{l}{Better formulas annotations}\\ 
+ \hline
+\multicolumn{2}{l}{Miscellaneous functions for document formatting}\\ 
+ \hline
+$\ns$ & \\ 
+ $\tickYes$ & \\ 
+ $\tickNo$ & \\ 
+ $\NA$ & \\ 
+ $\coltickNo$ & \\ 
+ $\yes$ & \\ 
+ $\no$ & \\ 
+ $\onehalf$ &  small one half\\ 
+ $\smPO$ &  Small plus one \\ 
+ $\smMO$ &  Small minus one (e.g. in smallmatrix)\\ 
+ \multicolumn{2}{l}{Incomplete symbols}\\ 
+ \hline
+$\towrite$ &  Marker for sections to write\\ 
+ $\citeboh$ & \\ 
+ $\xxx$ & \\ 
+ $\notsure$ & \\ 
+ $\dontlike$ & \\ 
+ $\notformal$ & \\ 
+ $\boh$ &  incomplete\\ 
+ $\bn$ &  bad notation, this should change later\\ 
+ $\checkbadformat$ &  incomplete\\ 
+ $\prooftowritesomeday$ & \\ 
+ $\unitInverval$ & \\ 
+ \multicolumn{2}{l}{Differential geometry}\\ 
+ \hline
+$\diff$ &  Diffeomorphism\\ 
+ $\diffPos$ &  Orientation-preserving diffeomorphism.\\ 
+ $\homeoPos$ &  Orientation-preserving homeomorphisms (of the real line)\\ 
+ $\diffVol$ & \\ 
+ $\homeo$ &  Set of all homeomorphisms\\ 
+ $\isometries$ &  Isometries group\\ 
+ $\conformalFuncs$ &  Conformal transformations\\ 
+ \multicolumn{2}{l}{Manifolds}\\ 
+ \hline
+$\Sone$ &  Unit circle.\\ 
+ $\Stwo$ &  Unit sphere.\\ 
+ $\stwo$ &  Unit sphere\\ 
+ $\hypsp$ & \\ 
+ $\hypspn$ & \\ 
+ \multicolumn{2}{l}{Group theory}\\ 
+ \hline
+$\gIdentity$ &  Identity of a group\\ 
+ $\tgroup$ &  Group set with operations\\ 
+ $\haar$ &  Haar measure\\ 
+ \multicolumn{2}{l}{Famous groups}\\ 
+ \hline
+$\idGroup$ &  The trivial group with identity only.\\ 
+ $\permutations$ &  Set of permutation\\ 
+ $\allsubgroups$ & \\ 
+ $\groupJoin$ &  Group join\\ 
+ $\groupquotient$ &  Group quotient\\ 
+ $\groupsemidir$ &  Semidirect product.\\ 
+ $\groupisom$ &  Isomorphism\\ 
+ $\issubgroup$ &  Subgroup relation.\\ 
+ $\normalsub$ &  Normal subgroup relation\\ 
+ $\actionsymbol$ &  Group action.\\ 
+ \multicolumn{2}{l}{Matrix groups}\\ 
+ \hline
+$\orthogroup$ &  Orthogonal group.\\ 
+ $\trangroup$ &   Translation group\\ 
+ $\segroup$ &  Special Euclidean group.\\ 
+ $\Egroup$ &   Euclidean group.\\ 
+ $\SLgroup$ &   Special linear group\\ 
+ $\Diaggroup$ &   Diagonal matrices with non-zero elements.\\ 
+ $\PMgroup$ &   Diagonal matrices with $\pm 1$ on the diagonal.\\ 
+ $\Scalegroup$ &   Multiples of the identity\\ 
+ $\sogroup$ &  Special orthogonal group.\\ 
+ $\soneggroup$ & \\ 
+ $\affgroup$ &  Affine group \\ 
+ $\affgrouppos$ &  Affine group \\ 
+ $\GL$ &  General linear group\\ 
+ $\GLpos$ &  \\ 
+ $\se$ &  Special Euclidean algebra\\ 
+ $\soalgebra$ & \\ 
+ $\sealgebra$ &  Special Euclidean algebra\\ 
+ $\sothree$ &  Special orthogonal group (rotation matrices)\\ 
+ $\sethree$ &  Special Euclidean group \\ 
+ $\setwo$ &  Special Euclidean group \\ 
+ \multicolumn{2}{l}{Very simple groups}\\ 
+ \hline
+$\mgroup$ &  Multiplication group\\ 
+ $\mposgroup$ &  Positive multiplication group\\ 
+ $\mpmgroup$ &  +1/-1 multiplication group\\ 
+ $\addgroup$ &  Addition group\\ 
+ \multicolumn{2}{l}{Abbreviations}\\ 
+ \hline
+$\addgroupn$ &  Addition group on $\reals^n$\\ 
+ $\affone$ &  Affine group 1D\\ 
+ $\affonepos$ &  Affine group 1D\\ 
+ $\affn$ &  Affine group in $n$ dimensions.\\ 
+ $\affnpos$ &  Affine transformations preserving orientations.\\ 
+ \multicolumn{2}{l}{Probability}\\ 
+ \hline
+$\uniformdist$ &  Uniform distribution\\ 
+ $\measuresupport$ &  Support of a probability measure\\ 
+ $\processes$ &  Set of stochastic processes\\ 
+ $\conditional$ &  Conditional distribution\\ 
+ $\finaldist$ &  Stationary distribution of a stochastic process.\\ 
+ $\measureSp$ &  Measure space.\\ 
+ $\probSp$ &  Probability space.\\ 
+ $\measures$ &  Set of probability measures on a set.\\ 
+ $\dirac$ & \\ 
+ \multicolumn{2}{l}{Robotics}\\ 
+ \hline
+$\obsip$ &  Inner product bilinear form.\\ 
+ $\obsosp$ &  Observation output space.\\ 
+ $\dummySensel$ & \\ 
+ $\pose$ &  Robot pose $\pose = (\pos, \rotm) \in \posesp \subset \sethree$.\\ 
+ $\posesp$ &  Pose space, subgroup of $\sethree$.\\ 
+ $\confspace$ &  Robot configuration space\\ 
+ $\pos$ &  Position in the world frame.\\ 
+ $\rotm$ &  Rotation matrix representing orientation in the world frame.\\ 
+ $\lvel$ &  Linear velocity\\ 
+ $\lvele$ &  Linear velocity (element)\\ 
+ $\avel$ &  Angular velocity (as vector)\\ 
+ $\avels$ &  Angular velocity in 2D (scalar)\\ 
+ $\avelse$ &  Angular velocity (as skew-symmetric matrix)\\ 
+ $\njoints$ &  Number of joints in a robot\\ 
+ $\attitude$ & \\ 
+ $\position$ & \\ 
+ \multicolumn{2}{l}{Field samplers}\\ 
+ \hline
+$\field$ &  Field sampled by the field sensor.\\ 
+ $\fieldpos$ &  Generic position in the world.\\ 
+ \multicolumn{2}{l}{Deprecated}\\ 
+ \hline
+$\wshape$ & \\ 
+ $\wpose$ & \\ 
+ $\worldsp$ & \\ 
+ $\wshapesp$ & \\ 
+ \multicolumn{2}{l}{New stuff}\\ 
+ \hline
+$\mshape$ &  Map shape.\\ 
+ $\mpose$ &  Map pose.\\ 
+ $\mshapesp$ &  Shape space.\\ 
+ $\mapsp$ &  Maps set $\mapsp = \mshapesp \times \sethree$.\\ 
+ \multicolumn{2}{l}{Misc statistics}\\ 
+ \hline
+$\stddev$ &  Standard deviation\\ 
+ $\var$ &  Variance\\ 
+ $\ex$ &  Expected value\\ 
+ $\corr$ & \\ 
+ $\cov$ &  covariance\\ 
+ $\spearcorr$ &  Spearman correlation between two variables\\ 
+ $\mutualinf$ &  Mutual information\\ 
+ $\entr$ &  Entropy\\ 
+ $\varinf$ &  Variation of information\\ 
+ $\varinfn$ &  Normalized variation of information\\ 
+ $\distributedAs$ &  Distributed as\\ 
+ \multicolumn{2}{l}{Sorting vectors}\\ 
+ \hline
+$\order$ &  Order (or rank) of the elements of a vector.\\ 
+ $\sorted$ &  Sorted version of a vector\\ 
+ $\differ$ & \\ 
+ $\sortedSeq$ & \\ 
+ $\weaksortedSeq$ & \\ 
+ \multicolumn{2}{l}{Dynamical systems}\\ 
+ \hline
+$\CTI$ &  Continuous-time time-invariant systems.\\ 
+ $\DTI$ &  Discrete-time time-invariant systems.\\ 
+ $\DDTI$ &  Deterministic discrete-time time-invariant systems.\\ 
+ $\DCTI$ &  Deterministic continuous-time time-invariant systems.\\ 
+ $\DFSTI$ &  Discrete-time finite-state-space time-invariant systems.\\ 
+ $\CFSTI$ &  Continuous-time finite-state-space time-invariant systems.\\ 
+ $\DFSTIGO$ &  Discrete-time finite-state-space time-invariant systems with Gaussian noise on the observations.\\ 
+ $\CLTI$ &  Continuous-time linear time-invariant systems\\ 
+ $\CLTIG$ &  Continuous-time linear time-invariant systems with Gaussian noise.\\ 
+ $\DLTI$ &  Discrete-time linear time-invariant systems\\ 
+ $\DSMPLTI$ &  Discrete-time stable minimum-phase linear time-invariant systems\\ 
+ $\DLTIG$ &  Discrete-time linear time-invariant systems with Gaussian noise.\\ 
+ $\laptrans$ &  Laplace transform\\ 
+ $\impulseresp$ &  Impulse response of a system\\ 
+ $\transferfunc$ &  Transfer function\\ 
+ \multicolumn{2}{l}{Basic typography}\\ 
+ \hline
+\hline
+\multicolumn{2}{l}{Tensors and tensor elements}\\ 
+ \hline
+\multicolumn{2}{l}{Matrices and matrix elements}\\ 
+ \hline
+\multicolumn{2}{l}{Sets}\\ 
+ \hline
+$\dummyIndices$ & \\ 
+ \multicolumn{2}{l}{Everything else}\\ 
+ \hline
+\end{longtable}

@@ -1,0 +1,110 @@
+%:section:common/blackboxes: Black boxes
+
+\newcommand{\abb}[1]{\boldsymbol{#1}} % A black box
+
+\newcommand{\bbD}{\abb{D}}
+%:nomenc:\bbD,\bbE,\bbF,\dots:Names for dynamical systems.
+%:sort:---9
+
+
+\newcommand{\bbinv}[1]{{#1}^{-1}} % Inverse of a black box
+%:nomenc:\bbinv{\bbD}: Inverse of $\bbD$.
+%:sort:D-1
+
+\newcommand{\bbli}[1]{{#1}^{L}} % left inverse of a black box
+%:nomenc:\bbli{\bbD}: Left inverse of $\bbD$.
+%:sort:D-L
+
+\newcommand{\bbri}[1]{{#1}^{R}} % right inverse of a black box
+%:nomenc:\bbri{\bbD}: Right inverse of $\bbD$.
+%:sort:D-R
+
+\newcommand{\alloutcomes}{\vmath{AllOutcomes}}
+%:nomenc:\alloutcomes(\bbD): All sequences that can be produced by the $\inLoop(\bbF\bbD)$ for any system $\bbF$.
+%:sort:AllOutcomes
+
+
+\newcommand{\alloutputs}{\vmath{AllOutputs}} % All outputs of a given system
+%:nomenc:\alloutputs(\bbD): All sequences that can be produced by the system $\bbD$.
+%:sort:alloutputs
+%:def:def:AllOutputs
+
+
+\newcommand{\bbDelay}{\Delta} % The one-step delay system.
+%:sort:delta
+%:def:def:delay-system
+ 
+
+\newcommand{\vertblock}{\protect\rule{0.05em}{0pt}\protect\rule{0.15em}{0.7em}\protect\rule{0.05em}{0pt}}
+%:nomenc-exclude:
+
+\newcommand{\bbAccum}{{\color{gray}\vertblock\vertblock\vertblock}} % Accumulator system
+%:def:def:accumulator
+
+\newcommand{\inLoop}{\aword{Loop}} % Closes the loop around a system
+%:sort:loop
+%:def:def:closing-the-loop
+
+\newcommand{\idSys}{\aword{IdSys}} % The identity system
+%:nomenc:\idSys_\setA:The identity system on $\setA$.
+%:sort:IdSys
+%:def:def:identity-system
+
+
+\newcommand{\bbSp}{\aset{D}} % Set of black boxes
+%:nomenc:\bbSp(\setB;\setA): Set of all black box systems
+%          with input in $\setA$ and output in $\setB$.
+%:example: $\bbSp(\setX;\setY)$ are all the black boxes 
+%          from $\setX$ to $\setY$.
+%:sort:D
+
+\newcommand{\bbFM}{\bbSp_{\vmath{fm}}} % Systems with finite memory
+%:def:def:bbFM 
+%:sort:D-fm
+%:nomenc:\bbFM(\setB;\setA): Systems with finite memory
+
+\newcommand{\bbSpInv}{\bbSp^\star} % Set of invertible systems
+%:nomenc-exclude:
+%:def:def:group-invertible-systems
+%:sort:D-*
+
+
+\newcommand{\bbFMinv}{\bbFM^{\star}} % Systems with finite memory and invertible
+%:sort:D-*-fm
+%:def:def:bbFMinv
+%:nomenc:\bbFMinv(\setA):Systems with finite memory and invertible
+
+\newcommand{\bbSpIns}{\bbSp_\text{inst}} % Set of instantaneous systems
+%:nomenc:\bbSpIns(\setB;\setA): Set of instantaneous systems.
+%:sort:D-ins
+
+
+\newcommand{\bbSpDet}{\bbSp_\text{det}} % Deterministic systems
+%:nomenc:\bbSpDet(\setB;\setA): Deterministic systems
+%:def:def:deterministic-system
+%:sort:D-det
+
+\newcommand{\bbSpInvIns}{\bbSp^\star_\text{inst}} % Set of invertible and instantaneous systems.
+%:nomenc:\bbSpInvIns(\setA):Invertible and instantaneous systems.
+%:def:def:instantaneous-invertible-systems
+%:example: $\bbSpInv(\setA)$ is a subset of ${\bbSp(\setA;\setA)}$
+%:sort:D-*-ins
+
+\newcommand{\bbSpCore}{\bbSp^\circ} % Systems up to representation
+%:nomenc-exclude:
+
+%:section:common/blackboxes/abbreviations:
+%:nomenc-exclude:
+\newcommand{\bbDinv}{\bbinv{\bbD}}
+\newcommand{\bbDri}{\bbri{\bbD}}
+\newcommand{\bbDli}{\bbli{\bbD}}
+\newcommand{\bbE}{\abb{E}}
+\newcommand{\bbF}{\abb{F}}
+\newcommand{\bbG}{\abb{G}}
+\newcommand{\bbSpBA}{\bbSp(\setB;\setA)}  % \towrite
+\newcommand{\bbSpAB}{\bbSp(\setA;\setB)}  % \towrite
+
+%:section:common/blackboxes/deprecated: Deprecated
+%:deprecated:
+\newcommand{\bbOp}{\oplus} % Composition operation
+\newcommand{\inSeries}{\aword{Series}} % Series of two systems

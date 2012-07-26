@@ -1,0 +1,161 @@
+%:section:common/basic: Basic stuff
+
+\newcommand{\setfun}{\rightrightarrows} % Symbol for set functions (one-to-many)
+%:def:def:one-to-many
+
+\newcommand{\algfield}{\vmath{field}} % Field.
+%:example: $\algfield(\aset{X},+,\times)$ is an algebraic field.
+
+\newcommand{\wellorder}{\vmath{wellorder}} % A well ordered set.
+%:example: $\wellorder(\aset{X},\leq)$ is a well-ordered set.
+
+\newcommand{\orderedfield}{\vmath{orderedfield}} % A well ordered field.
+%:example: $\orderedfield(\aset{X},+,\times,\leq)$ is a well-ordered field.
+
+
+\newcommand{\powerset}{\vmath{powerset}} % Power set of a space
+%:nomenc:\powerset(\setX): Power set of a set $\setX$.
+%:sort:P
+%:def:def:power-set
+
+\newcommand{\supp}{\mathsf{supp}} % Support of a set
+%:sort:supp
+%:def:def:support
+
+\newcommand{\idFunc}{\aword{Id}} % The identity function
+%:nomenc:\idFunc_\setX:The identity function on the set $\setX$.
+%:sort:Id
+%:def:def:identity-function
+
+\newcommand{\invFunc}{\cdot^{-1}} % Inverse function 
+%:sort:-1
+%:def:def:right-inverse
+
+\newcommand{\funcComp}{\circ} % Function composition
+%:nomenc:f \funcComp g: Function composition
+
+%%%:def:def:function-composition
+
+\newcommand{\emptysequence}{\bn \emptyset} % Empty sequence
+%:def:def:sequences
+
+
+\newcommand{\allFuncs}{\vmath{Functions}} % All maps from a space to the other
+%:nomenc:\allFuncs(\setB;\setA):All maps from a space $\setA$ to $\setB$.
+%:sort:Functions
+
+
+\newcommand{\D}{\,\textrm{d}} % Used for integrals
+%:nomenc:\D x:integration measure
+%:nomenc-exclude:
+%:sort:d
+
+
+\newcommand{\sign}{\mathsf{sgn}} % Sign function
+%:sort:sgn
+
+%:section:common/sequences: Sequences
+
+\newcommand{\sequences}{\aword{Sequences}} % Set of sequences
+%:nomenc:\sequences(\setX):Sequences on the space $\setX$.
+%:sort:Sequences
+%:def:def:sequences
+
+\newcommand{\contsequences}{\aword{ContSequences}} % Set of continuous sequences
+%:nomenc:\contsequences(\setX):Sequences on the space $\setX$.
+%:sort:ContSequences
+%:def:def:contsequences
+
+
+\newcommand{\Aut}{\mathsf{Aut}} % Automorphism group
+%:nomenc:\Aut(\setX):Automorphisms of the set $\setX$.
+%:def:def:set-automorphism
+%:sort:Aut
+
+
+\newcommand{\contFuncs}{\vmath{Continuous}} % Continuous functions on some metric space 
+%:example: $\contFuncs(\setA)$ are all continuous functions on $\setA$.
+%:nomenc:\contFuncs(\setB;\setA): Continuous functions from $\setA$ to $\setB$.
+%:sort:Continuous
+
+\newcommand{\differFuncs}{\vmath{Differentiable}} % Differentiable functions
+%:nomenc:\differFuncs(\setB;\setA): Differentiable functions from $\setA$ to $\setB$.
+%:sort:differ
+
+\newcommand{\partitions}{\mathsf{partitions}}
+%:sort:partitions
+%:def:def:partitions
+
+\newcommand{\mExp}{\vmath{mexp}} % Matrix exponential
+%:def:def:matrix-exponential
+%:sort:mexp
+
+\newcommand{\bigO}{\mathcal{O}}% Big-O notation
+%:sort:O
+
+\newcommand{\smallo}{o} 
+%:todo:
+%:nomenc-exclude:
+
+\newcommand{\metricon}[1]{d^{#1}}
+
+\newcommand{\definedas}{\mathrel{\triangleq}}
+%:nomenc-exclude:
+
+\newcommand{\crossprod}{\mathrel{\times}} % cross-product
+%:def:def:cross-product
+%:nomenc:\boldsymbol{a}\crossprod\boldsymbol{b}:Cross product
+
+\newcommand{\gsDom}{\text{Domain}} % 
+%:nomenc:\gsDom(f):Domain of a function $f$.
+%:def:def:domain
+%:sort:domain
+
+\newcommand{\gsCod}{\text{Codomain}} % 
+%:nomenc:\gsCod(f):Co-domain of a function $f$.
+%:def:def:codomain
+%:sort:codomain
+
+\newcommand{\interCC}[2]{[#1,#2]} 
+%:nomenc: \interCC{a}{b} : Closed interval $\{x \mid a \leq x \leq b\}$
+\newcommand{\interCO}[2]{[#1,#2)}
+%:nomenc: \interCO{a}{b} : $\{x \mid a \leq x < b\}$
+\newcommand{\interOC}[2]{(#1,#2]}
+%:nomenc: \interOC{a}{b} : $\{x \mid a < x \leq b\}$
+\newcommand{\interOO}[2]{(#1,#2)}
+%:nomenc: \interOO{a}{b} : Open interval  $\{x \mid a < x < b\}$
+
+\newcommand{\unitInterval}{\interCC{0}{1}}
+%:nomenc-exclude:
+
+%:section:common/basic/logic: Logic
+%:def:sec:logic-and-sets
+\newcommand{\logicAnd}{\wedge} % Logic "and"
+\newcommand{\logicOr}{\vee} % Logic "or"
+\newcommand{\logicNot}{\neg} % Logic "not"
+
+
+
+%:section:common/simplesets: Simple sets
+%:def:sec:logic-and-sets
+
+\newcommand{\reals}{\mathbb{R}} % Real numbers
+%:sort:R
+
+\newcommand{\natnumbers}{\mathbb{N}} % Natural numbers
+%:sort:N
+
+\newcommand{\ratnumbers}{\mathbb{Q}} % Rational numbers
+%:sort:Q
+
+\newcommand{\hreals}{\ast\mathbb{R}} % Hyper-real numbers
+%:sort:R
+
+\newcommand{\nonNegReals}{\reals^{+}_{\bullet}} % Non negative reals 
+%:sort:Rp
+
+\newcommand{\posReals}{\reals^{+}_{\circ}} % Strictly positive reals
+%:sort:R0p
+
+\newcommand{\nzReals}{\reals_{\circ}} % Non zero reals
+%:sort:R0

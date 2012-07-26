@@ -1,0 +1,69 @@
+%:section:common/robotics:Robotics
+%:def:chap:Robot-sensors
+
+\newcommand{\obsip}{m} % Inner product bilinear form.
+%:sort:m
+
+\newcommand{\obsosp}{\mathscr{O}} % Observation output space.
+%:sort:O
+
+\newcommand{\dummySensel}{s}
+%:nomenc:s\in\obsps:Spatial index for the sensels.
+%:sort:s
+
+\newcommand{\pose}{\boldsymbol{q}} % Robot pose $\pose = (\pos, \rotm) \in \posesp \subset \sethree$.
+%:sort:q
+\newcommand{\posesp}{\mathscr{Q}} % Pose space, subgroup of $\sethree$.
+%:sort:Q
+\newcommand{\confspace}{\posesp} % Robot configuration space
+%:deprecated:
+\newcommand{\pos}{\boldsymbol{t}} % Position in the world frame.
+%:sort:t
+\newcommand{\rotm}{\M{R}} % Rotation matrix representing orientation in the world frame.
+%:sort:R
+\newcommand{\lvel}{\boldsymbol{v}} % Linear velocity
+%:sort:v
+\newcommand{\lvele}{v} % Linear velocity (element)
+%:sort:v
+\newcommand{\avel}{\boldsymbol{\omega}} % Angular velocity (as vector)
+%:sort:w
+\newcommand{\avels}{\omega} % Angular velocity in 2D (scalar)
+%:sort:w
+\newcommand{\avelse}{\hat{\avel}} % Angular velocity (as skew-symmetric matrix)
+%:sort:w
+
+\newcommand{\njoints}{n_{j}} % Number of joints in a robot
+%:todo:
+
+
+\newcommand{\attitude}{\rotm}
+%:nomenc-exclude:
+\newcommand{\position}{\pos}
+%:nomenc-exclude:
+
+%:section:common/robotics/fieldsmapler: Field samplers
+\newcommand{\field}{\mathcal{F}} % Field sampled by the field sensor.
+%:sort:F
+\newcommand{\fieldpos}{\boldsymbol{z}} % Generic position in the world.
+%:nomenc-exclude:
+
+
+%% maps
+%:section:common/robotics/old: Deprecated
+%:deprecated:
+%:nomenc-exclude:
+\newcommand{\wshape}{\mshape} 
+\newcommand{\wpose}{\mpose} 
+\newcommand{\worldsp}{\mapsp} 
+\newcommand{\wshapesp}{\mshapesp} 
+
+%:section:common/robotics/maps: New stuff
+\newcommand{\mshape}{\boldsymbol{s}} % Map shape.
+%:sort:s
+\newcommand{\mpose}{\boldsymbol{p}} % Map pose.
+%:sort:p
+\newcommand{\mshapesp}{\vmath{Shapes}} % Shape space.
+%:sort:Shapes
+\newcommand{\mapsp}{\vmath{Maps}} % Maps set $\mapsp = \mshapesp \times \sethree$.
+%:sort:Maps
+

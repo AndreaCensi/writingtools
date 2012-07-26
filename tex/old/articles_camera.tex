@@ -1,0 +1,125 @@
+%:section:articles/camera: Camera paper
+%:def:chap:sensorgeometry
+
+\newcommand{\rank}{\mathsf{order}}
+%:nomenc-exclude:
+%:deprecated:
+
+\newcommand{\place}{\mathsf{place}}
+
+\newcommand{\ff}{f} % Distance to similarity function
+%:sort:f
+
+
+\newcommand{\Sany}{\targetSp} % Generic hypersphere
+%:nomenc-exclude:
+
+\newcommand{\targetSp}{\aset{M}} % Target manifold
+%:sort:M
+
+\newcommand{\Ssubset}{M} % A subset of $\Sany$  XXX
+%:sort:M
+
+\newcommand{\infr}{\mathsf{infr}} % Informative radius
+%:sort:infr
+%:def:def:infr
+%:nomenc-exclude:
+
+\newcommand{\ffr}{\infr(\ff)} % Informative radius of $\ff$
+%:sort:infr
+%:def:def:infr
+
+\newcommand{\distradius}{\mathsf{rad}} % Radius of a distribution
+%:sort:rad
+
+\newcommand{\distdiam}{\mathsf{diam}} % Diameter of a distribution
+%:sort:diam
+
+\newcommand{\hausdorff}{\mathsf{hausdorff}} % Hausdorff distance
+%:sort:hausdorff
+\newcommand{\kimberley}{\mathsf{kim}} % Kimberley value
+
+\newcommand{\errproc}{e_{\textrm{pr}}} % Procrustes score
+%:sort:e_pr
+
+\newcommand{\isoError}{e_{\textsf{iso}}} 
+%:sort:e_iso
+
+\newcommand{\symError}{e_{\textsf{sym}}}  
+%:sort:e_sym
+
+\newcommand{\relError}{e_{\textsf{r}}} 
+%:sort:e_r
+
+\newcommand{\scaledRelError}{e_{\textsf{sr}}} 
+%:sort:e_r
+
+\newcommand{\angcorr}{\rho_{\theta}} 
+
+\newcommand{\spearperf}{\rho_{\textrm{sp}}} % Spearman performance measure
+%:sort:rho_sp
+
+\newcommand{\spearperfn}{\rho^{\ast}_{\textrm{sp}}}  % Normalized Spearman performance measure
+%:sort:rho_sp
+
+
+\newcommand{\dirset}{\aset{S}} % Set of directions
+%:sort:S
+\newcommand{\dirmat}{\M{S}} % Directions stacked in a matrix
+%:sort:S
+
+\newcommand{\matX}{\M{X}}
+%:nomenc-exclude:
+
+\newcommand{\matI}{\M{I}}
+%:nomenc-exclude:
+
+\newcommand{\arot}{\M{X}}
+%:nomenc-exclude:
+
+\newcommand{\cosmat}{\M{C}}
+%:sort:C
+%:nomenc:\cosmat\ \cosmatij: Cosine matrix
+\newcommand{\cosmatij}{\Mel{C}_{ij}}
+%:sort:C_ij
+%:nomenc-exclude:
+
+\newcommand{\distmat}{\M{D}}
+%:sort:D
+%:nomenc:\distmat\ \distmatij: Distance matrix
+
+\newcommand{\distmatij}{\Mel{D}_{ij}}
+%:sort:D_ij
+%:nomenc-exclude:
+\newcommand{\simmat}{\M{Y}} % Similarity matrix
+%:sort:Y
+%:nomenc:\simmat\ \simmatij: Similarity matrix
+\newcommand{\simmatij}{\Mel{Y}_{ij}}
+%:sort:Y_ij
+%:nomenc-exclude:
+\newcommand{\simmatii}{\Mel{Y}_{ii}}
+%:nomenc-exclude:
+\newcommand{\simmatkl}{\Mel{Y}_{kl}}
+%:nomenc-exclude:
+
+\newcommand{\algorparam}{\gamma}
+
+\newcommand{\shannon}{\mathrm{H}}
+%:deprecated:
+
+\newcommand{\fov}{\myacronym{fov}} % field of view
+%:deprecated:
+%:sort:Fov
+
+\newcommand{\SKalgo}{SK\xspace} % Shepard-Kruscall algorithm
+%:sort:SK
+
+\newcommand{\SBSEw}{SKv+w\xspace} % An extension to the \SKalgo algorithm
+%:sort:SKvw
+%:def:alg:SBSEw
+
+\newcommand{\SBSE}{SKv\xspace} % An extension to the \SKalgo algorithm (without warping)
+%:sort:SKv
+
+
+
