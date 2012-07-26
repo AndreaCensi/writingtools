@@ -1,0 +1,22 @@
+Installation instructions for writingtools
+==========================================
+
+There are some installation steps to install our style files
+to the system TeX.
+
+Prerequisites
+-------------
+
+For Ubuntu:
+    
+    sudo apt-get install biblatex
+
+
+Bibliography style files
+------------------------
+
+Installation of bibliography style files:
+
+    sudo make -C bib/biblatex 
+
+This will install the styles in the TeX directory.

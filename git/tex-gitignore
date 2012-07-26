@@ -1,0 +1,15 @@
+#*
+\#*
+.deps
+*-blx.bib
+*.idx
+*.ilg
+*.ind
+*.nlo
+*.nls
+*.stderr
+*.run.xml
+*.*.d
+*.bcf
+*.auxlock
+*.missing-*.txt
