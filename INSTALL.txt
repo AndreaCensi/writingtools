@@ -20,3 +20,22 @@ Installation of bibliography style files:
     sudo make -C bib/biblatex 
 
 This will install the styles in the TeX directory.
+
+
+Error/solutions
+---------------
+
+- Complains about numeric-url-doi.bbx not found when compiling 
+  => need to install style files according to above.
+
+- Strange LaTeX error: in general, it is better to use the Tex Live 2012
+  distribution.
+
+
+Errors that can be ignored
+--------------------------
+
+- "lyx-deps-all: not found": ignore.
+
+- "chflags: not found": only available for Mac. Can ignore.
+

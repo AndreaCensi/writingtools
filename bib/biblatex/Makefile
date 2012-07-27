@@ -1,6 +1,5 @@
 
 TEXMFLOCAL=`kpsewhich  -var-value TEXMFLOCAL`
-
 dir=$(TEXMFLOCAL)/tex/latex/biblatex-contrib/
 
 install:

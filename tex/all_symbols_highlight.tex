@@ -230,6 +230,20 @@
 %  ?
 
 
+\ifdefined\TP%
+  \renewcommand{\TP}{{\color{green} \T{P}}}%
+\else%
+  \newcommand{\TP}{{\color{green} \T{P}}}%
+\fi
+
+\ifdefined\TPe%
+  \renewcommand{\TPe}{{\color{green} \Tel{P}}}%
+\else%
+  \newcommand{\TPe}{{\color{green} \Tel{P}}}%
+\fi
+
+
+
 \ifdefined\TU%
   \renewcommand{\TU}{{\color{green} \T{U}}}%
 \else%
@@ -3314,6 +3328,92 @@
   \newcommand{\bbSpCoreYU}{{\color{green} \bbSpCore(\obsSp;\cmdSp)}}%
 \fi
 %  Systems up to representation
+
+
+
+
+
+
+\ifdefined\veEnvironments%
+  \renewcommand{\veEnvironments}{{\color{green} \mathsf{Environments}}}%
+\else%
+  \newcommand{\veEnvironments}{{\color{green} \mathsf{Environments}}}%
+\fi
+%  All Vehicles environments 
+\ifdefined\veSensors%
+  \renewcommand{\veSensors}{{\color{green} \mathsf{Sensors}}}%
+\else%
+  \newcommand{\veSensors}{{\color{green} \mathsf{Sensors}}}%
+\fi
+%  all Vehicles sensors
+\ifdefined\veDynamics%
+  \renewcommand{\veDynamics}{{\color{green} \mathsf{Dynamics}}}%
+\else%
+  \newcommand{\veDynamics}{{\color{green} \mathsf{Dynamics}}}%
+\fi
+%  all Vehicles dynamics
+\ifdefined\veVehicles%
+  \renewcommand{\veVehicles}{{\color{green} \mathsf{Vehicles}}}%
+\else%
+  \newcommand{\veVehicles}{{\color{green} \mathsf{Vehicles}}}%
+\fi
+%  all Vehicles dynamics
+
+
+
+
+\ifdefined\veSce%
+  \renewcommand{\veSce}{{\color{green} \mathsf{S}}}%
+\else%
+  \newcommand{\veSce}{{\color{green} \mathsf{S}}}%
+\fi
+
+\ifdefined\veVeh%
+  \renewcommand{\veVeh}{{\color{green} \mathsf{V}}}%
+\else%
+  \newcommand{\veVeh}{{\color{green} \mathsf{V}}}%
+\fi
+
+\ifdefined\veMov%
+  \renewcommand{\veMov}{{\color{green} \mathsf{M}}}%
+\else%
+  \newcommand{\veMov}{{\color{green} \mathsf{M}}}%
+\fi
+
+\ifdefined\veAdd%
+  \renewcommand{\veAdd}{{\color{green} \mathsf{A}}}%
+\else%
+  \newcommand{\veAdd}{{\color{green} \mathsf{A}}}%
+\fi
+
+\ifdefined\veJoi%
+  \renewcommand{\veJoi}{{\color{green} \mathsf{J}}}%
+\else%
+  \newcommand{\veJoi}{{\color{green} \mathsf{J}}}%
+\fi
+
+\ifdefined\vePar%
+  \renewcommand{\vePar}{{\color{green} \mathsf{P}}}%
+\else%
+  \newcommand{\vePar}{{\color{green} \mathsf{P}}}%
+\fi
+%  Parallel composition of sensors
+\ifdefined\veNcmd%
+  \renewcommand{\veNcmd}{{\color{green} \mathsf{U}}}%
+\else%
+  \newcommand{\veNcmd}{{\color{green} \mathsf{U}}}%
+\fi
+
+\ifdefined\veNobs%
+  \renewcommand{\veNobs}{{\color{green} \mathsf{Y}}}%
+\else%
+  \newcommand{\veNobs}{{\color{green} \mathsf{Y}}}%
+\fi
+
+
+
+
+
 
 
 \ifdefined\etal%

@@ -258,6 +258,22 @@
 %  ?
 
 
+\newbool{usedTP}\setbool{usedTP}{false}
+\ifdefined\TP%
+  \renewcommand{\TP}{\markfirst{TP}{usedTP}{\T{P}}}%
+\else%
+  \newcommand{\TP}{\markfirst{TP}{usedTP}{\T{P}}}%
+\fi
+
+\newbool{usedTPe}\setbool{usedTPe}{false}
+\ifdefined\TPe%
+  \renewcommand{\TPe}{\markfirst{TPe}{usedTPe}{\Tel{P}}}%
+\else%
+  \newcommand{\TPe}{\markfirst{TPe}{usedTPe}{\Tel{P}}}%
+\fi
+
+
+
 \newbool{usedTU}\setbool{usedTU}{false}
 \ifdefined\TU%
   \renewcommand{\TU}{\markfirst{TU}{usedTU}{\T{U}}}%
@@ -3719,6 +3735,104 @@
   \newcommand{\bbSpCoreYU}{\markfirst{bbSpCoreYU}{usedbbSpCoreYU}{\bbSpCore(\obsSp;\cmdSp)}}%
 \fi
 %  Systems up to representation
+
+
+
+
+
+
+\newbool{usedveEnvironments}\setbool{usedveEnvironments}{false}
+\ifdefined\veEnvironments%
+  \renewcommand{\veEnvironments}{\markfirst{veEnvironments}{usedveEnvironments}{\mathsf{Environments}}}%
+\else%
+  \newcommand{\veEnvironments}{\markfirst{veEnvironments}{usedveEnvironments}{\mathsf{Environments}}}%
+\fi
+%  All Vehicles environments 
+\newbool{usedveSensors}\setbool{usedveSensors}{false}
+\ifdefined\veSensors%
+  \renewcommand{\veSensors}{\markfirst{veSensors}{usedveSensors}{\mathsf{Sensors}}}%
+\else%
+  \newcommand{\veSensors}{\markfirst{veSensors}{usedveSensors}{\mathsf{Sensors}}}%
+\fi
+%  all Vehicles sensors
+\newbool{usedveDynamics}\setbool{usedveDynamics}{false}
+\ifdefined\veDynamics%
+  \renewcommand{\veDynamics}{\markfirst{veDynamics}{usedveDynamics}{\mathsf{Dynamics}}}%
+\else%
+  \newcommand{\veDynamics}{\markfirst{veDynamics}{usedveDynamics}{\mathsf{Dynamics}}}%
+\fi
+%  all Vehicles dynamics
+\newbool{usedveVehicles}\setbool{usedveVehicles}{false}
+\ifdefined\veVehicles%
+  \renewcommand{\veVehicles}{\markfirst{veVehicles}{usedveVehicles}{\mathsf{Vehicles}}}%
+\else%
+  \newcommand{\veVehicles}{\markfirst{veVehicles}{usedveVehicles}{\mathsf{Vehicles}}}%
+\fi
+%  all Vehicles dynamics
+
+
+
+
+\newbool{usedveSce}\setbool{usedveSce}{false}
+\ifdefined\veSce%
+  \renewcommand{\veSce}{\markfirst{veSce}{usedveSce}{\mathsf{S}}}%
+\else%
+  \newcommand{\veSce}{\markfirst{veSce}{usedveSce}{\mathsf{S}}}%
+\fi
+
+\newbool{usedveVeh}\setbool{usedveVeh}{false}
+\ifdefined\veVeh%
+  \renewcommand{\veVeh}{\markfirst{veVeh}{usedveVeh}{\mathsf{V}}}%
+\else%
+  \newcommand{\veVeh}{\markfirst{veVeh}{usedveVeh}{\mathsf{V}}}%
+\fi
+
+\newbool{usedveMov}\setbool{usedveMov}{false}
+\ifdefined\veMov%
+  \renewcommand{\veMov}{\markfirst{veMov}{usedveMov}{\mathsf{M}}}%
+\else%
+  \newcommand{\veMov}{\markfirst{veMov}{usedveMov}{\mathsf{M}}}%
+\fi
+
+\newbool{usedveAdd}\setbool{usedveAdd}{false}
+\ifdefined\veAdd%
+  \renewcommand{\veAdd}{\markfirst{veAdd}{usedveAdd}{\mathsf{A}}}%
+\else%
+  \newcommand{\veAdd}{\markfirst{veAdd}{usedveAdd}{\mathsf{A}}}%
+\fi
+
+\newbool{usedveJoi}\setbool{usedveJoi}{false}
+\ifdefined\veJoi%
+  \renewcommand{\veJoi}{\markfirst{veJoi}{usedveJoi}{\mathsf{J}}}%
+\else%
+  \newcommand{\veJoi}{\markfirst{veJoi}{usedveJoi}{\mathsf{J}}}%
+\fi
+
+\newbool{usedvePar}\setbool{usedvePar}{false}
+\ifdefined\vePar%
+  \renewcommand{\vePar}{\markfirst{vePar}{usedvePar}{\mathsf{P}}}%
+\else%
+  \newcommand{\vePar}{\markfirst{vePar}{usedvePar}{\mathsf{P}}}%
+\fi
+%  Parallel composition of sensors
+\newbool{usedveNcmd}\setbool{usedveNcmd}{false}
+\ifdefined\veNcmd%
+  \renewcommand{\veNcmd}{\markfirst{veNcmd}{usedveNcmd}{\mathsf{U}}}%
+\else%
+  \newcommand{\veNcmd}{\markfirst{veNcmd}{usedveNcmd}{\mathsf{U}}}%
+\fi
+
+\newbool{usedveNobs}\setbool{usedveNobs}{false}
+\ifdefined\veNobs%
+  \renewcommand{\veNobs}{\markfirst{veNobs}{usedveNobs}{\mathsf{Y}}}%
+\else%
+  \newcommand{\veNobs}{\markfirst{veNobs}{usedveNobs}{\mathsf{Y}}}%
+\fi
+
+
+
+
+
 
 
 \newbool{usedetal}\setbool{usedetal}{false}
