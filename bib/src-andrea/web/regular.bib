@@ -3,60 +3,47 @@
 @string{ bib_postscript.icon = "my_own_ps.gif" }
 
 
-@MISC{censi12cameracalib_preprint,
-  author = {Andrea Censi and Davide Scaramuzza},
-  title = {Calibration by correlation using metric embedding from non-metric similarities},
-  kind = {preprint},
-  url = {http://purl.org/censi/2012/camera_calibration}, 
-  year = {2012},
-}
-
-@MISC{censi12joint_preprint,
-  author = {Andrea Censi and Antonio Franchi and Luca Marchionni and Giuseppe Oriolo},
-  title = {Simultaneous calibration of odometry and sensor parameters for mobile robots},
-  note = {(journal version of ICRA paper)},
-  kind = {preprint},
-  url = {http://purl.org/censi/2012/joint_calibration},
+@inproceedings{delapuente12dense,
+  author = {Paloma de la Puente and Andrea Censi},
+  title = {Dense map inference with user-defined priors: 
+           from priorlets to scan eigenvariations},
+  booktitle = {Spatial Cognition},
+  address = {Kloster Seeon, Bavaria, Germany},
   year = {2012},
 }
 
 
-@MISC{censi12fault_preprint,
-  author = {Andrea Censi and  Magnus H\r{a}kansson and Richard M. Murray},
-  title = {Fault detection and isolation from uninterpreted data in robotic sensorimotor cascades},
-  year = {2012},
-  kind = {preprint},
-  pdf = {http://purl.org/censi/research/2011-fault/2011-fault.pdf},
-  url = {http://purl.org/censi/research/2011-fault/}
-}
-
-@MISC{censi12diffeo_preprint,
+@inproceedings{censi12diffeo,
   author = {Andrea Censi and Richard M. Murray},
   title = {Learning diffeomorphism models of robotic sensorimotor cascades},
-  booktitle = ICRA,
-  kind = {preprint},
+  booktitle = {Proceedings of the {IEEE} International Conference 
+                 on Robotics and Automation ({ICRA})},
   year = {2012},
-  pdf = {http://purl.org/censi/research/2011-diffeo/2011-diffeo.pdf},
-  url = {http://purl.org/censi/research/2011-diffeo/}
-}
-
-@inproceedings{carlone12linear_preprint,
-  author = {Luca Carlone and Andrea Censi},
-  title = {Linear estimation on {SO(2)} for graph-based simultaneous localization and mapping},
-  year = {2012},
-  kind = {preprint},
-  pdf = {http://purl.org/censi/research/2011-linearSO2-draft.pdf}
+  address = {Saint Paul, MN},
+  month = {5},
+  timestamp = {2011.09.13},
+  url = {http://purl.org/censi/2011/diffeo}
 }
 
 
+@INPROCEEDINGS{censi12fault,
+  author = {Andrea Censi and Magnus Hakansson and Richard M. Murray},
+  title = {Fault detection and isolation from uninterpreted data in robotic
+  sensorimotor cascades},
+  booktitle = {Proceedings of the {IEEE} International Conference 
+                 on Robotics and Automation ({ICRA})},
+  year = {2012},
+  address = {Saint Paul, MN},
+  month = {5},
+  timestamp = {2011.09.16},
+  url = {http://purl.org/censi/2011/fault}
+}
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 @inproceedings{censi11semantics,
   author = {Andrea Censi and Richard M. Murray},
-  title = {Uncertain semantics, representation nuisances, and necessary invariance properties of bootstrapping agents},
+  title = {Uncertain semantics, representation nuisances, 
+          and necessary invariance properties of bootstrapping agents},
   booktitle = {Joint IEEE International Conference on Development and Learning
     and Epigenetic Robotics},
   year = {2011},
@@ -67,8 +54,10 @@
 
 @inproceedings{scaramuzza11visodo,
   author = {Davide Scaramuzza and Andrea Censi and Kostas Daniilidis},
-  title = {Exploiting motion priors in visual odometry for vehicle-mounted cameras with non-holonomic constraints},
-  booktitle = {{IEEE/RSJ} International Conference on Intelligent Robots and Systems (IROS)},
+  title = {Exploiting motion priors in visual odometry for vehicle-mounted 
+            cameras with non-holonomic constraints},
+  booktitle = {{IEEE/RSJ} International Conference on Intelligent 
+                Robots and Systems (IROS)},
   year = {2011},
   month = {Sep},
   pdf = {http://purl.org/censi/research/2011-iros-scaRansac.pdf},
@@ -78,7 +67,8 @@
 @inproceedings{censi11bgds,
   author = {Andrea Censi and Richard M. Murray},
   title = {Bootstrapping sensorimotor cascades: a group-theoretic perspective},
-  booktitle = {{IEEE/RSJ} International Conference on Intelligent Robots and Systems (IROS)},
+  booktitle = {{IEEE/RSJ} International Conference on Intelligent 
+                Robots and Systems (IROS)},
   year = {2011},
   month = {Sep},
   pdf = {http://purl.org/censi/research/2011-iros-bgds.pdf},
@@ -86,15 +76,6 @@
  }
 
 
-@TECHREPORT{delapuente11dense,
-  author = {Paloma de la Puente and Andrea Censi},
-  title = {Dense map inference with user-defined priors: from priorlets to scan eigenvariations},
-  institution = {California Institute of Technology},
-  number = {CaltechCDSTR:2011.002},
-  year = {2011},
-  pdf = {http://resolver.caltech.edu/CaltechCDSTR:2011.002},
-  kind = {unref}
-}
 
 @inproceedings{censi11bds,
   author = {Andrea Censi and Richard M. Murray},
@@ -112,7 +93,9 @@
 @article{censi11kf, 
 author={Censi, Andrea}, 
 journal={IEEE Transactions on Automatic Control}, 
-title={Kalman filtering with intermittent observations: convergence for semi-Markov chains and an intrinsic performance measure}, 
+title={Kalman filtering with intermittent observations: 
+       convergence for semi-Markov chains 
+      and an intrinsic performance measure}, 
 year={2011}, 
 month={February},
 doi={10.1109/TAC.2010.2097350}, 
@@ -126,13 +109,25 @@ pdf={http://purl.org/censi/research/2011-tac-kf-geometry.pdf}
 
 
 @inproceedings{han10pose, 
-author={Shuo Han and Andrea Censi and Andrew D. Straw and Richard M. Murray}, 
-booktitle={{IEEE/RSJ} International Conference on Intelligent Robots and Systems (IROS)}, 
+  author={Shuo Han and Andrea Censi and Andrew D. Straw and Richard M. Murray}, 
+booktitle={{IEEE/RSJ} International Conference 
+           on Intelligent Robots and Systems (IROS)}, 
 title={A bio-plausible design for visual pose stabilization}, 
 year={2010},  
 pages={5679--5686}, 
-abstract={We consider the problem of purely visual pose stabilization (also known as servoing) of a second-order rigid-body system with six degrees of freedom: how to choose forces and torques, based on the current view and a memorized goal image, to steer the pose towards a desired one. Emphasis has been given to the bio-plausibility of the computation, in the sense that the control laws could be in principle implemented on the neural substrate of simple insects. We show that stabilizing laws can be realized by bilinear/quadratic operations on the visual input. This particular computational structure has several numerically favorable characteristics (sparse, local, and parallel), and thus permits an efficient engineering implementation. We show results of the control law tested on an indoor helicopter platform.}, 
-keywords={bilinear operation;quadratic operation;second-order rigid-body system;visual pose stabilization;visual servoing;bilinear systems;biophysics;control system synthesis;mobile robots;path planning;pose estimation;stability;visual servoing;}, 
+
+abstract={We consider the problem of purely visual pose stabilization (also
+known as servoing) of a second-order rigid-body system with six degrees of
+freedom: how to choose forces and torques, based on the current view and a
+memorized goal image, to steer the pose towards a desired one. Emphasis has been
+given to the bio-plausibility of the computation, in the sense that the control
+laws could be in principle implemented on the neural substrate of simple
+insects. We show that stabilizing laws can be realized by bilinear/quadratic
+operations on the visual input. This particular computational structure has
+several numerically favorable characteristics (sparse, local, and parallel), and
+thus permits an efficient engineering implementation. We show results of the
+control law tested on an indoor helicopter platform.},
+
 doi={10.1109/IROS.2010.5652857}, 
 video = {http://purl.org/hanshuo/2010/pd_pose_stabilization},
 slides={http://purl.org/censi/research/2009-cdc-bio-attitude-slides.pdf}
@@ -143,20 +138,35 @@ slides={http://purl.org/censi/research/2009-cdc-bio-attitude-slides.pdf}
 % otherlink = {http://www.youtube.com/watch?v=H9zORGbfTK4#t=00m20s$ How we spent one month of our lives},
 
 @incollection{scrapper09,
-   author = {Scrapper, C. and Madhavan, R. and Lakaemper, R. and Censi, A. and Godil, A. and Wagan, A. and Jacoff, A.},
+   author = {Scrapper, C. and Madhavan, R. and Lakaemper, R.
+    and Censi, A. and Godil, A. and Wagan, A. and Jacoff, A.},
    affiliation = {The MITRE Corporation, 22102 McLean, VA USA},
    title = {Quantitative Assessment of Robot-Generated Maps},
    booktitle = {Performance Evaluation and Benchmarking of Intelligent Systems},
    editor = {Madhavan, Raj and Tunstel, Edward and Messina, Elena},
    publisher = {Springer US},
    isbn = {978-1-4419-0492-8},
-   keyword = {Computer Science},
    pages = {221-248},
    pdf = {http://dx.doi.org/10.1007/978-1-4419-0492-8_10},
    note = {10.1007/978-1-4419-0492-8_10},
-   abstract = {Mobile robotic mapping is now considered to be a sufficiently mature field with demonstrated successes in various domains. While much progress has been made in the development of computationally efficient and consistent mapping schemes, it is still murky, at best, on how these maps can be evaluated. We are motivated by the absence of an accepted standard for quantitatively measuring the performance of robotic mapping systems against user-defined requirements. It is our belief that the development of standardized methods for quantitatively evaluating existing robotic technologies will improve the utility of mobile robots in already established application areas, such as vacuum cleaning, robot surveillance, and bomb disposal. This approach will also enable the proliferation and acceptance of such technologies in emerging markets. This chapter summarizes our preliminary efforts by bringing together the research community towards addressing this important problem which has ramifications not only from researchers’ perspective but also from consumers’, robot manufacturers’, and developers’ viewpoints.},
-   year = {2009},
-   kind = {unref}
+
+   abstract = {Mobile robotic mapping is now considered to be a sufficiently
+mature field with demonstrated successes in various domains. While much progress
+has been made in the development of computationally efficient and consistent
+mapping schemes, it is still murky, at best, on how these maps can be evaluated.
+We are motivated by the absence of an accepted standard for quantitatively
+measuring the performance of robotic mapping systems against user-defined
+requirements. It is our belief that the development of standardized methods for
+quantitatively evaluating existing robotic technologies will improve the utility
+of mobile robots in already established application areas, such as vacuum
+cleaning, robot surveillance, and bomb disposal. This approach will also enable
+the proliferation and acceptance of such technologies in emerging markets. This
+chapter summarizes our preliminary efforts by bringing together the research
+community towards addressing this important problem which has ramifications not
+only from researchers’ perspective but also from consumers’, robot
+manufacturers’, and developers’ viewpoints.},
+
+year = {2009},    kind = {unref} 
 }
 
 @inproceedings{censi09attitude, 
@@ -164,7 +174,6 @@ author={ Andrea Censi and Shuo Han and Sawyer B. Fuller and Richard M. Murray},
 booktitle={Proceedings of the 48th IEEE Conference on Decision and Control}, 
 title={A bio-plausible design for visual attitude stabilization}, 
 year={2009}, 
-keywords={PD controller;Reichardt correlators;bilinear computation;bioplausible design;current visual input;delayed visual input;lobula plate tangential cells;neural networks algorithms;visual attitude stabilization;visual information processing;visual sensory input;PD control;biocontrol;delays;image processing;neurocontrollers;}, 
 doi={10.1109/CDC.2009.5400408}, 
 pdf={http://purl.org/censi/research/2009-cdc-bio-attitude.pdf},
 slides={http://purl.org/censi/research/2009-cdc-bio-attitude-slides.pdf}
@@ -173,20 +182,21 @@ slides={http://purl.org/censi/research/2009-cdc-bio-attitude-slides.pdf}
 
 @inproceedings{censi09fractals,
   author = {Andrea Censi},
-  title = {On the performance of {K}alman filtering with intermittent observations: a geometric approach with fractals},
+  title = {On the performance of {K}alman filtering with intermittent 
+          observations: a geometric approach with fractals},
   booktitle = {Proceedings of the American Control Conference (ACC)},
   year = {2009},
   url = {http://purl.org/censi/2008/fractals},
   pdf = {http://purl.org/censi/research/2009-acc-fractals.pdf},
   slides = {http://purl.org/censi/research/2009-acc-fractals-slides.pdf},
   abstract = {
-		This paper describes the stationary distribution of the a-posteriori 
-		covariance matrix of a Kalman filter when the availability of measurements 
-		is subject to random phenomena such as lossy network links. 
-		If a certain non-overlapping condition is satisfied, the cdf has a fractal nature, 
-		and there exists a closed-form expression for it. If the condition 
-		is not satisfied, deciding whether the cdf is singular or not, even 
-		in the scalar case, is at least as hard as some open problems in measure and number theory. 
+This paper describes the stationary distribution of the a-posteriori 
+covariance matrix of a Kalman filter when the availability of measurements 
+is subject to random phenomena such as lossy network links. 
+If a certain non-overlapping condition is satisfied, the cdf has a fractal nature, 
+and there exists a closed-form expression for it. If the condition 
+is not satisfied, deciding whether the cdf is singular or not, even 
+in the scalar case, is at least as hard as some open problems in measure and number theory. 
 	}
 }
 
@@ -200,31 +210,31 @@ slides={http://purl.org/censi/research/2009-cdc-bio-attitude-slides.pdf}
   pdf = {http://purl.org/censi/research/2009-icra-posetracking.pdf},
   slides = {http://purl.org/censi/research/2009-icra-posetracking-slides.pdf},
   abstract = {
-		 This paper presents Cramer-Rao bound-like inequalities for
-		pose tracking, which is defined as the problem of
-		recovering the robot displacement given two successive
-		readings of a relative sensor. Computing the exact Fisher
-		Information Matrix (FIM) for pose tracking is hard, because
-		the state comprises the map, which is infinite-dimensional
-		and unknown. This paper shows that the FIM for pose
-		tracking can be bounded by a function of the FIM for
-		localization on a known map, thereby reducing the analysis
-		to a finite-dimensional problem. The resulting bounds are
-		independent of the map prior and representation. The
-		results are valid for any relative sensor; the experimental
-		verification is done for the particular case of pose
-		tracking using range-finders (scan matching).
+  This paper presents Cramer-Rao bound-like inequalities for
+  pose tracking, which is defined as the problem of
+  recovering the robot displacement given two successive
+  readings of a relative sensor. Computing the exact Fisher
+  Information Matrix (FIM) for pose tracking is hard, because
+  the state comprises the map, which is infinite-dimensional
+  and unknown. This paper shows that the FIM for pose
+  tracking can be bounded by a function of the FIM for
+  localization on a known map, thereby reducing the analysis
+  to a finite-dimensional problem. The resulting bounds are
+  independent of the map prior and representation. The
+  results are valid for any relative sensor; the experimental
+  verification is done for the particular case of pose
+  tracking using range-finders (scan matching).
 	}
 }
 
 
 @inproceedings{carpin09hsm3d, 
 author={Carpin, Stefano and Censi, Andrea}, 
-booktitle={Proceedings of the {IEEE/RSJ} International Conference on Intelligent Robots and Systems (IROS)}, 
+booktitle={Proceedings of the {IEEE/RSJ} International Conference 
+            on Intelligent Robots and Systems (IROS)}, 
 title={An experimental assessment of the HSM3D algorithm for sparse and colored data}, 
 year={2009}, 
 pages={3595-3600}, 
-keywords={HSM3D algorithm;mobile robots;point cloud matching;six dimensional scan-matching problem;stereo cameras;cameras;image color analysis;image matching;mobile robots;stereo image processing;}, 
 doi={10.1109/IROS.2009.5354618}, 
 }
 
@@ -282,7 +292,8 @@ doi={10.1109/IROS.2009.5354618},
 @inproceedings{calisi08openrdk,
   author = {Daniele Calisi and Andrea Censi and Luca Iocchi and Daniele Nardi},
   title = {{OpenRDK}: A Modular Framework for Robotic Software Development },
-  booktitle = {Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  booktitle = {Proceedings of the IEEE/RSJ International Conference 
+               on Intelligent Robots and Systems (IROS)},
   year = {2008},
   month = {September},
   address = {Nice, France},
@@ -536,9 +547,11 @@ in the analyzed cases the method still provides a good estimate of the
 }
 
 @misc{BaCa04,
-  author = {Bahadori, S. and Calisi, D. and Censi, A. and Farinelli, A. and Grisetti, G. and Iocchi, L. and Nardi, D.},
+  author = {Bahadori, S. and Calisi, D. and Censi, A. and Farinelli, A.
+           and Grisetti, G. and Iocchi, L. and Nardi, D.},
   title = {Intelligent Systems for Search and Rescue},
-  howpublished = {Proc. of IROS Workshop ``Urban Search and Rescue: from RoboCup to real world applications'' (IROS), Sendai, Japan},
+  howpublished = {Proc. of IROS Workshop ``Urban Search and Rescue: 
+   from RoboCup to real world applications'' (IROS), Sendai, Japan},
   year = {2004},
   pdf = {http://www.dis.uniroma1.it/~calisi/papers/iros04rescue.pdf},
   kind = {unref}
