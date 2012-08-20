@@ -2257,6 +2257,64 @@
 %  Covariant detector
 
 
+
+
+
+
+\ifdefined\nuddisc%
+  \renewcommand{\nuddisc}[1]{\mathsf{Sample}_{#1}}%
+\else%
+  \newcommand{\nuddisc}[1]{\mathsf{Sample}_{#1}}%
+\fi
+%  Domain sampling operator (subset)
+\ifdefined\nusample%
+  \renewcommand{\nusample}[1]{\mathsf{Sample}_{#1}}%
+\else%
+  \newcommand{\nusample}[1]{\mathsf{Sample}_{#1}}%
+\fi
+%  Domain sampling operator (subset)
+\ifdefined\nuvdisc%
+  \renewcommand{\nuvdisc}[1]{\mathsf{Disc}_{#1}}%
+\else%
+  \newcommand{\nuvdisc}[1]{\mathsf{Disc}_{#1}}%
+\fi
+%  Value Discretization operator (subset)
+\ifdefined\nusmooth%
+  \renewcommand{\nusmooth}[1]{\mathsf{Smooth}_{#1}}%
+\else%
+  \newcommand{\nusmooth}[1]{\mathsf{Smooth}_{#1}}%
+\fi
+%  Smoothing operator (kernel)
+\ifdefined\nucens%
+  \renewcommand{\nucens}[1]{\mathsf{Cens}_{#1}}%
+\else%
+  \newcommand{\nucens}[1]{\mathsf{Cens}_{#1}}%
+\fi
+%  Censoring operator (field of view)
+\ifdefined\nuoccl%
+  \renewcommand{\nuoccl}[1]{\mathsf{Occl}_{#1}}%
+\else%
+  \newcommand{\nuoccl}[1]{\mathsf{Occl}_{#1}}%
+\fi
+%  Occlsions
+\newbool{usedimform}\setbool{usedimform}{false}
+\ifdefined\imform%
+  \renewcommand{\imform}{\markfirst{imform}{usedimform}{I}}%
+\else%
+  \newcommand{\imform}{\markfirst{imform}{usedimform}{I}}%
+\fi
+
+\newbool{usedcontrast}\setbool{usedcontrast}{false}
+\ifdefined\contrast%
+  \renewcommand{\contrast}{\markfirst{contrast}{usedcontrast}{f}}%
+\else%
+  \newcommand{\contrast}{\markfirst{contrast}{usedcontrast}{f}}%
+\fi
+
+
+
+
+
 % XXX
 
 \newbool{usedlabelrefinement}\setbool{usedlabelrefinement}{false}

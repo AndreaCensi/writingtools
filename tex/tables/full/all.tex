@@ -64,11 +64,13 @@
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bgCmdSp}} & $\bgCmdSp$ &  commands space\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bgWorld}} & $\bgWorld$ &  World\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bgWorldSp}} & $\bgWorldSp$ &  World space\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 $\bgWorld \in \bgRSSp(\bgTime, \bgCmdSp, \bgObsSp)$
 
-{\small{\texttt{\$\textbackslash bgWorld \textbackslash in \textbackslash bgRSSp(\textbackslash bgTime, \textbackslash bgCmdSp, \textbackslash bgObsSp)\$}}}\end{minipage}
+{\small{\texttt{\$\textbackslash bgWorld \textbackslash in \textbackslash bgRSSp(\textbackslash bgTime, \textbackslash bgCmdSp, \textbackslash bgObsSp)\$}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bgAgent}} & $\bgAgent$ &  Agent\\ 
@@ -256,11 +258,13 @@ $\bgWorld \in \bgRSSp(\bgTime, \bgCmdSp, \bgObsSp)$
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esObsDim}} & $\esObsDim$ &  Observations dimensions\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esObsSp}} & $\esObsSp$ &  Observations space\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esObsMap}} & $\esObsMap$ &  Observation map\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 $\esObs = \esNuis \esObsMap(\esSt)$
 
-{\small{\texttt{\$\textbackslash esObs = \textbackslash esNuis \textbackslash esObsMap(\textbackslash esSt)\$}}}\end{minipage}
+{\small{\texttt{\$\textbackslash esObs = \textbackslash esNuis \textbackslash esObsMap(\textbackslash esSt)\$}}}\end{minipage}%
+}%
 }%
 \\ 
   &  & \\ 
@@ -286,11 +290,13 @@ $\esObs = \esNuis \esObsMap(\esSt)$
 {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esStAb}} & $\esStAb$ &  Abstract state\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esStAbSp}} & $\esStAbSp$ &  Abstract space\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esRep}} & $\esRep$ &  Representation\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 $\esRep: \esSt \mapsto \esStAb$.
 
-{\small{\texttt{\$\textbackslash esRep: \textbackslash esSt \textbackslash mapsto \textbackslash esStAb\$.}}}\end{minipage}
+{\small{\texttt{\$\textbackslash esRep: \textbackslash esSt \textbackslash mapsto \textbackslash esStAb\$.}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esStSym}} & $\esStSym$ &  Group of symmetries of the state\\ 
@@ -347,6 +353,17 @@ $\esRep: \esSt \mapsto \esStAb$.
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash complex}} & $\complex$ &  Complexity measure\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash actinfo}} & $\actinfo$ &  Actionable information\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash covdet}} & $\covdet$ &  Covariant detector\\ 
+  &  & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{articles/soattotheory/mseerep}} & \multicolumn{2}{l}{\emph{msee report}}\\ 
+ \hline
+{\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash nuddisc\{...\}}} &  &  Domain sampling operator (subset)\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash nusample\{...\}}} &  &  Domain sampling operator (subset)\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash nuvdisc\{...\}}} &  &  Value Discretization operator (subset)\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash nusmooth\{...\}}} &  &  Smoothing operator (kernel)\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash nucens\{...\}}} &  &  Censoring operator (field of view)\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash nuoccl\{...\}}} &  &  Occlsions\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash imform}} & $\imform$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash contrast}} & $\contrast$ & \\ 
   &  & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{articles/thesis}} & \multicolumn{2}{l}{\emph{Special symbols for thesis}}\\ 
  \hline
@@ -436,27 +453,33 @@ $\esRep: \esSt \mapsto \esStAb$.
  \hline
 {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash setfun}} & $\setfun$ &  Symbol for set functions (one-to-many)\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash algfield}} & $\algfield$ &  Field.\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 $\algfield(\aset{X},+,\times)$ is an algebraic field.
 
-{\small{\texttt{\$\textbackslash algfield(\textbackslash aset\{X\},+,\textbackslash times)\$ is an algebraic field.}}}\end{minipage}
+{\small{\texttt{\$\textbackslash algfield(\textbackslash aset\{X\},+,\textbackslash times)\$ is an algebraic field.}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash wellorder}} & $\wellorder$ &  A well ordered set.\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 $\wellorder(\aset{X},\leq)$ is a well-ordered set.
 
-{\small{\texttt{\$\textbackslash wellorder(\textbackslash aset\{X\},\textbackslash leq)\$ is a well-ordered set.}}}\end{minipage}
+{\small{\texttt{\$\textbackslash wellorder(\textbackslash aset\{X\},\textbackslash leq)\$ is a well-ordered set.}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash orderedfield}} & $\orderedfield$ &  A well ordered field.\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 $\orderedfield(\aset{X},+,\times,\leq)$ is a well-ordered field.
 
-{\small{\texttt{\$\textbackslash orderedfield(\textbackslash aset\{X\},+,\textbackslash times,\textbackslash leq)\$ is a well-ordered field.}}}\end{minipage}
+{\small{\texttt{\$\textbackslash orderedfield(\textbackslash aset\{X\},+,\textbackslash times,\textbackslash leq)\$ is a well-ordered field.}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash powerset}} & $\powerset$ &  Power set of a space\\ 
@@ -475,11 +498,13 @@ $\orderedfield(\aset{X},+,\times,\leq)$ is a well-ordered field.
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash contsequences}} & $\contsequences$ &  Set of continuous sequences\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash Aut}} & $\Aut$ &  Automorphism group\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash contFuncs}} & $\contFuncs$ &  Continuous functions on some metric space \\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 $\contFuncs(\setA)$ are all continuous functions on $\setA$.
 
-{\small{\texttt{\$\textbackslash contFuncs(\textbackslash setA)\$ are all continuous functions on \$\textbackslash setA\$.}}}\end{minipage}
+{\small{\texttt{\$\textbackslash contFuncs(\textbackslash setA)\$ are all continuous functions on \$\textbackslash setA\$.}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash differFuncs}} & $\differFuncs$ &  Differentiable functions\\ 
@@ -529,11 +554,13 @@ $\contFuncs(\setA)$ are all continuous functions on $\setA$.
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash inLoop}} & $\inLoop$ &  Closes the loop around a system\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash idSys}} & $\idSys$ &  The identity system\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bbSp}} & $\bbSp$ &  Set of black boxes\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 $\bbSp(\setX;\setY)$ are all the black boxes from $\setX$ to $\setY$.
 
-{\small{\texttt{\$\textbackslash bbSp(\textbackslash setX;\textbackslash setY)\$ are all the black boxes from \$\textbackslash setX\$ to \$\textbackslash setY\$.}}}\end{minipage}
+{\small{\texttt{\$\textbackslash bbSp(\textbackslash setX;\textbackslash setY)\$ are all the black boxes from \$\textbackslash setX\$ to \$\textbackslash setY\$.}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bbFM}} & $\bbFM$ &  Systems with finite memory\\ 
@@ -542,11 +569,13 @@ $\bbSp(\setX;\setY)$ are all the black boxes from $\setX$ to $\setY$.
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bbSpIns}} & $\bbSpIns$ &  Set of instantaneous systems\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bbSpDet}} & $\bbSpDet$ &  Deterministic systems\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bbSpInvIns}} & $\bbSpInvIns$ &  Set of invertible and instantaneous systems.\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 $\bbSpInv(\setA)$ is a subset of ${\bbSp(\setA;\setA)}$
 
-{\small{\texttt{\$\textbackslash bbSpInv(\textbackslash setA)\$ is a subset of \$\{\textbackslash bbSp(\textbackslash setA;\textbackslash setA)\}\$}}}\end{minipage}
+{\small{\texttt{\$\textbackslash bbSpInv(\textbackslash setA)\$ is a subset of \$\{\textbackslash bbSp(\textbackslash setA;\textbackslash setA)\}\$}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bbSpCore}} & $\bbSpCore$ &  Systems up to representation\\ 
@@ -680,11 +709,13 @@ $\bbSpInv(\setA)$ is a subset of ${\bbSp(\setA;\setA)}$
  {\color[rgb]{0.5,0.5,0.5}\texttt{common/geometry}} & \multicolumn{2}{l}{\emph{Differential geometry}}\\ 
  \hline
 {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash diff}} & $\diff$ &  Diffeomorphism\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 $\diff(\aset{M})$ are the diffeomeorphisms from $\aset{M}$ to itself.
 
-{\small{\texttt{\$\textbackslash diff(\textbackslash aset\{M\})\$ are the diffeomeorphisms from \$\textbackslash aset\{M\}\$ to itself.}}}\end{minipage}
+{\small{\texttt{\$\textbackslash diff(\textbackslash aset\{M\})\$ are the diffeomeorphisms from \$\textbackslash aset\{M\}\$ to itself.}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash diffPos}} & $\diffPos$ &  Orientation-preserving diffeomorphism.\\ 
@@ -693,11 +724,13 @@ $\diff(\aset{M})$ are the diffeomeorphisms from $\aset{M}$ to itself.
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash diffVol}} & $\diffVol$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash homeo}} & $\homeo$ &  Set of all homeomorphisms\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash isometries}} & $\isometries$ &  Isometries group\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 $\isometries(\aset{M})$ are all the isometries of $\aset{M}$.
 
-{\small{\texttt{\$\textbackslash isometries(\textbackslash aset\{M\})\$ are all the isometries of \$\textbackslash aset\{M\}\$.}}}\end{minipage}
+{\small{\texttt{\$\textbackslash isometries(\textbackslash aset\{M\})\$ are all the isometries of \$\textbackslash aset\{M\}\$.}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash diffFix\{...\}}} &  &  Diffeomorphisms that fix a point\\ 
@@ -715,19 +748,23 @@ $\isometries(\aset{M})$ are all the isometries of $\aset{M}$.
  \hline
 {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash gIdentity}} & $\gIdentity$ &  Identity of a group\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash tgroup}} & $\tgroup$ &  Group set with operations\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 $\tgroup(\agroup{G},\cdot)$ means $\agroup{G}$ is a group under $\cdot$.
 
-{\small{\texttt{\$\textbackslash tgroup(\textbackslash agroup\{G\},\textbackslash cdot)\$ means \$\textbackslash agroup\{G\}\$ is a group under \$\textbackslash cdot\$.}}}\end{minipage}
+{\small{\texttt{\$\textbackslash tgroup(\textbackslash agroup\{G\},\textbackslash cdot)\$ means \$\textbackslash agroup\{G\}\$ is a group under \$\textbackslash cdot\$.}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash haar}} & $\haar$ &  Haar measure\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 The Haar measure on $\aset{X}$ is ${\haar}^{X}$.
 
-{\small{\texttt{The Haar measure on \$\textbackslash aset\{X\}\$ is \$\{\textbackslash haar\}\^\{X\}\$.}}}\end{minipage}
+{\small{\texttt{The Haar measure on \$\textbackslash aset\{X\}\$ is \$\{\textbackslash haar\}\^\{X\}\$.}}}\end{minipage}%
+}%
 }%
 \\ 
   &  & \\ 
@@ -794,36 +831,44 @@ The Haar measure on $\aset{X}$ is ${\haar}^{X}$.
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash measuresupport}} & $\measuresupport$ &  Support of a probability measure\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash processes}} & $\processes$ &  Set of stochastic processes\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash conditional}} & $\conditional$ &  Conditional distribution\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 $\conditional(\setB;\setA)$ is the set of conditional distributions
 
-{\small{\texttt{\$\textbackslash conditional(\textbackslash setB;\textbackslash setA)\$ is the set of conditional distributions}}}\end{minipage}
+{\small{\texttt{\$\textbackslash conditional(\textbackslash setB;\textbackslash setA)\$ is the set of conditional distributions}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash finaldist}} & $\finaldist$ &  Stationary distribution of a stochastic process.\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash measureSp}} & $\measureSp$ &  Measure space.\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 $\measureSp(\aset{X},\Sigma,\mu)$ is a measure space.
 
-{\small{\texttt{\$\textbackslash measureSp(\textbackslash aset\{X\},\textbackslash Sigma,\textbackslash mu)\$ is a measure space.}}}\end{minipage}
+{\small{\texttt{\$\textbackslash measureSp(\textbackslash aset\{X\},\textbackslash Sigma,\textbackslash mu)\$ is a measure space.}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash probSp}} & $\probSp$ &  Probability space.\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 $\probSp(\aset{X},\Sigma,\mu)$ is a probability space.
 
-{\small{\texttt{\$\textbackslash probSp(\textbackslash aset\{X\},\textbackslash Sigma,\textbackslash mu)\$ is a probability space.}}}\end{minipage}
+{\small{\texttt{\$\textbackslash probSp(\textbackslash aset\{X\},\textbackslash Sigma,\textbackslash mu)\$ is a probability space.}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash measures}} & $\measures$ &  Set of probability measures on a set.\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 Try $\mu^{\aset{X}} \in \measures(\aset{X})$
 
-{\small{\texttt{Try \$\textbackslash mu\^\{\textbackslash aset\{X\}\} \textbackslash in \textbackslash measures(\textbackslash aset\{X\})\$}}}\end{minipage}
+{\small{\texttt{Try \$\textbackslash mu\^\{\textbackslash aset\{X\}\} \textbackslash in \textbackslash measures(\textbackslash aset\{X\})\$}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash dirac}} & $\dirac$ & \\ 
@@ -927,11 +972,13 @@ Try $\mu^{\aset{X}} \in \measures(\aset{X})$
  \hline
 {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash aset\{...\}}} &  &  A set\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash agroup\{...\}}} &  &  Fonts for a set which is a group.\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 A set $\aset{X}$, a group $\agroup{X}$, $\agroup{G}$, \dots
 
-{\small{\texttt{A set \$\textbackslash aset\{X\}\$, a group \$\textbackslash agroup\{X\}\$, \$\textbackslash agroup\{G\}\$, \textbackslash dots}}}\end{minipage}
+{\small{\texttt{A set \$\textbackslash aset\{X\}\$, a group \$\textbackslash agroup\{X\}\$, \$\textbackslash agroup\{G\}\$, \textbackslash dots}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash aseq\{...\}}} &  &  Formatting for sequences\\ 
@@ -941,11 +988,13 @@ A set $\aset{X}$, a group $\agroup{X}$, $\agroup{G}$, \dots
  {\color[rgb]{0.5,0.5,0.5}\texttt{typography/misc}} & \multicolumn{2}{l}{\emph{Everything else}}\\ 
  \hline
 {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash aword\{...\}}} &  &  How words should look like in formulas.\\ 
-  &  & \fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}
+  &  & {\setlength\fboxsep{1pt}%
+\fbox{%
+\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
 Consider the operator $\aword{scale}$, \dots
 
-{\small{\texttt{Consider the operator \$\textbackslash aword\{scale\}\$, \textbackslash dots}}}\end{minipage}
+{\small{\texttt{Consider the operator \$\textbackslash aword\{scale\}\$, \textbackslash dots}}}\end{minipage}%
+}%
 }%
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash vmath\{...\}}} &  &  How words should appear in math mode.\\ 
