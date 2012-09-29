@@ -1508,6 +1508,498 @@
 
 
 
+
+
+\ifdefined\SetImages%
+  \renewcommand{\SetImages}{\vmath{Im}}%
+\else%
+  \newcommand{\SetImages}{\vmath{Im}}%
+\fi
+
+\ifdefined\SetUImages%
+  \renewcommand{\SetUImages}{\vmath{UIm}}%
+\else%
+  \newcommand{\SetUImages}{\vmath{UIm}}%
+\fi
+
+\ifdefined\genericdist%
+  \renewcommand{\genericdist}[2]{d^{#1}_{#2}}%
+\else%
+  \newcommand{\genericdist}[2]{d^{#1}_{#2}}%
+\fi
+
+\ifdefined\genericudist%
+  \renewcommand{\genericudist}[2]{\overline{d}^{#1}_{#2}}%
+\else%
+  \newcommand{\genericudist}[2]{\overline{d}^{#1}_{#2}}%
+\fi
+
+
+
+\ifdefined\obsstart%
+  \renewcommand{\obsstart}{\obs_{\text{start}}}%
+\else%
+  \newcommand{\obsstart}{\obs_{\text{start}}}%
+\fi
+
+\ifdefined\obsgoal%
+  \renewcommand{\obsgoal}{\obs_{\text{goal}}}%
+\else%
+  \newcommand{\obsgoal}{\obs_{\text{goal}}}%
+\fi
+
+
+
+\ifdefined\SetPlans%
+  \renewcommand{\SetPlans}{\vmath{Plans}}%
+\else%
+  \newcommand{\SetPlans}{\vmath{Plans}}%
+\fi
+
+\ifdefined\planSp%
+  \renewcommand{\planSp}{\SetPlans}%
+\else%
+  \newcommand{\planSp}{\SetPlans}%
+\fi
+
+\ifdefined\redplans%
+  \renewcommand{\redplans}{\vmath{RedPlans}}%
+\else%
+  \newcommand{\redplans}{\vmath{RedPlans}}%
+\fi
+%  reduced plans
+\ifdefined\plan%
+  \renewcommand{\plan}{p}%
+\else%
+  \newcommand{\plan}{p}%
+\fi
+%  a generic plan
+\ifdefined\plang%
+  \renewcommand{\plang}{p_{\circ}}%
+\else%
+  \newcommand{\plang}{p_{\circ}}%
+\fi
+%  true plan
+\ifdefined\planf%
+  \renewcommand{\planf}{p^\star}%
+\else%
+  \newcommand{\planf}{p^\star}%
+\fi
+%  The solution found 
+\ifdefined\zeroplan%
+  \renewcommand{\zeroplan}{\emptyset}%
+\else%
+  \newcommand{\zeroplan}{\emptyset}%
+\fi
+
+
+
+\ifdefined\obsu%
+  \renewcommand{\obsu}{\boldsymbol{z}}%
+\else%
+  \newcommand{\obsu}{\boldsymbol{z}}%
+\fi
+%  Scalar uncertainty
+\ifdefined\obsue%
+  \renewcommand{\obsue}{z}%
+\else%
+  \newcommand{\obsue}{z}%
+\fi
+%  Scalar uncertainty
+\ifdefined\sarea%
+  \renewcommand{\sarea}{A}%
+\else%
+  \newcommand{\sarea}{A}%
+\fi
+%  area around pixel s
+
+
+\ifdefined\dd%
+  \renewcommand{\dd}{\boldsymbol{\dde}}%
+\else%
+  \newcommand{\dd}{\boldsymbol{\dde}}%
+\fi
+%  Generic diffeomorphisms
+\ifdefined\dde%
+  \renewcommand{\dde}{\varphi}%
+\else%
+  \newcommand{\dde}{\varphi}%
+\fi
+%  Generic diffeomorphisms
+\ifdefined\ddu%
+  \renewcommand{\ddu}{\boldsymbol{\ddue}}%
+\else%
+  \newcommand{\ddu}{\boldsymbol{\ddue}}%
+\fi
+%  its uncertaint
+\ifdefined\ddue%
+  \renewcommand{\ddue}{\gamma}%
+\else%
+  \newcommand{\ddue}{\gamma}%
+\fi
+%  its uncertaint
+
+
+\ifdefined\udiffSp%
+  \renewcommand{\udiffSp}{\vmath{UDiff}}%
+\else%
+  \newcommand{\udiffSp}{\vmath{UDiff}}%
+\fi
+
+
+
+
+
+\ifdefined\dscommute%
+  \renewcommand{\dscommute}{\vmath{commute}}%
+\else%
+  \newcommand{\dscommute}{\vmath{commute}}%
+\fi
+
+\ifdefined\dsinverse%
+  \renewcommand{\dsinverse}{\vmath{inverse}}%
+\else%
+  \newcommand{\dsinverse}{\vmath{inverse}}%
+\fi
+
+\ifdefined\dssame%
+  \renewcommand{\dssame}{\vmath{same}}%
+\else%
+  \newcommand{\dssame}{\vmath{same}}%
+\fi
+
+\ifdefined\dsvoid%
+  \renewcommand{\dsvoid}{\vmath{void}}%
+\else%
+  \newcommand{\dsvoid}{\vmath{void}}%
+\fi
+
+\ifdefined\SOtwo%
+  \renewcommand{\SOtwo}{\mathrm{SO}(2)}%
+\else%
+  \newcommand{\SOtwo}{\mathrm{SO}(2)}%
+\fi
+
+\ifdefined\plantodiff%
+  \renewcommand{\plantodiff}{\vmath{p\_to\_d}}%
+\else%
+  \newcommand{\plantodiff}{\vmath{p\_to\_d}}%
+\fi
+
+\ifdefined\ptod%
+  \renewcommand{\ptod}{\plantodiff}%
+\else%
+  \newcommand{\ptod}{\plantodiff}%
+\fi
+
+\ifdefined\pd%
+  \renewcommand{\pd}{\plantodiff}%
+\else%
+  \newcommand{\pd}{\plantodiff}%
+\fi
+
+\ifdefined\planreduce%
+  \renewcommand{\planreduce}{\vmath{PlanReduce}}%
+\else%
+  \newcommand{\planreduce}{\vmath{PlanReduce}}%
+\fi
+
+\ifdefined\noutoforder%
+  \renewcommand{\noutoforder}{\vmath{noutoforder}}%
+\else%
+  \newcommand{\noutoforder}{\vmath{noutoforder}}%
+\fi
+%  TODO
+\ifdefined\dDiffLone%
+  \renewcommand{\dDiffLone}{\genericdist{\diff(\obsps)}{L_{1}}}%
+\else%
+  \newcommand{\dDiffLone}{\genericdist{\diff(\obsps)}{L_{1}}}%
+\fi
+
+\ifdefined\dUDiffLone%
+  \renewcommand{\dUDiffLone}{\genericudist{\udiffSp(\obsps)}{L_{1}}}%
+\else%
+  \newcommand{\dUDiffLone}{\genericudist{\udiffSp(\obsps)}{L_{1}}}%
+\fi
+
+
+
+\ifdefined\dobsps%
+  \renewcommand{\dobsps}{\genericdist{\obsps}{}}%
+\else%
+  \newcommand{\dobsps}{\genericdist{\obsps}{}}%
+\fi
+
+\ifdefined\dImL%
+  \renewcommand{\dImL}[1]{\genericdist{\SetImages}{L_{#1}}}%
+\else%
+  \newcommand{\dImL}[1]{\genericdist{\SetImages}{L_{#1}}}%
+\fi
+
+\ifdefined\dImLone%
+  \renewcommand{\dImLone}{\dImL{1}}%
+\else%
+  \newcommand{\dImLone}{\dImL{1}}%
+\fi
+
+\ifdefined\dImLtwo%
+  \renewcommand{\dImLtwo}{\dImL{2}}%
+\else%
+  \newcommand{\dImLtwo}{\dImL{2}}%
+\fi
+
+\ifdefined\dImN%
+  \renewcommand{\dImN}[1]{\genericdist{\SetImages}{N_{#1}}}%
+\else%
+  \newcommand{\dImN}[1]{\genericdist{\SetImages}{N_{#1}}}%
+\fi
+
+\ifdefined\dImD%
+  \renewcommand{\dImD}[1]{\genericdist{\SetImages}{D_{#1}}}%
+\else%
+  \newcommand{\dImD}[1]{\genericdist{\SetImages}{D_{#1}}}%
+\fi
+
+
+
+
+
+\ifdefined\cmdOrd%
+  \renewcommand{\cmdOrd}{\prec}%
+\else%
+  \newcommand{\cmdOrd}{\prec}%
+\fi
+
+
+
+\ifdefined\algoname%
+  \renewcommand{\algoname}[1]{\text{#1}}%
+\else%
+  \newcommand{\algoname}[1]{\text{#1}}%
+\fi
+
+\ifdefined\gnbc%
+  \renewcommand{\gnbc}{\algoname{GNB}\xspace}%
+\else%
+  \newcommand{\gnbc}{\algoname{GNB}\xspace}%
+\fi
+
+\ifdefined\bnbc%
+  \renewcommand{\bnbc}{\algoname{BNB}\xspace}%
+\else%
+  \newcommand{\bnbc}{\algoname{BNB}\xspace}%
+\fi
+
+\ifdefined\bngc%
+  \renewcommand{\bngc}{\algoname{BNG}\xspace}%
+\else%
+  \newcommand{\bngc}{\algoname{BNG}\xspace}%
+\fi
+
+\ifdefined\bntc%
+  \renewcommand{\bntc}{\algoname{BNT}\xspace}%
+\else%
+  \newcommand{\bntc}{\algoname{BNT}\xspace}%
+\fi
+
+\ifdefined\gebc%
+  \renewcommand{\gebc}{\algoname{GEB}\xspace}%
+\else%
+  \newcommand{\gebc}{\algoname{GEB}\xspace}%
+\fi
+
+\ifdefined\bebc%
+  \renewcommand{\bebc}{\algoname{BEB}\xspace}%
+\else%
+  \newcommand{\bebc}{\algoname{BEB}\xspace}%
+\fi
+
+\ifdefined\begc%
+  \renewcommand{\begc}{\algoname{BEG}\xspace}%
+\else%
+  \newcommand{\begc}{\algoname{BEG}\xspace}%
+\fi
+
+\ifdefined\betc%
+  \renewcommand{\betc}{\algoname{BET}\xspace}%
+\else%
+  \newcommand{\betc}{\algoname{BET}\xspace}%
+\fi
+
+\ifdefined\betcb%
+  \renewcommand{\betcb}{\algoname{BETc}\xspace}%
+\else%
+  \newcommand{\betcb}{\algoname{BETc}\xspace}%
+\fi
+
+
+
+
+
+\ifdefined\plansarea%
+  \renewcommand{\plansarea}{P_{\text{near}}}%
+\else%
+  \newcommand{\plansarea}{P_{\text{near}}}%
+\fi
+
+
+
+\ifdefined\algocover%
+  \renewcommand{\algocover}{\textsf{cover}}%
+\else%
+  \newcommand{\algocover}{\textsf{cover}}%
+\fi
+
+\ifdefined\algoplanreduce%
+  \renewcommand{\algoplanreduce}{\textsf{planreduce}}%
+\else%
+  \newcommand{\algoplanreduce}{\textsf{planreduce}}%
+\fi
+
+\ifdefined\algobidirectional%
+  \renewcommand{\algobidirectional}{\textsf{bidirectional-search}}%
+\else%
+  \newcommand{\algobidirectional}{\textsf{bidirectional-search}}%
+\fi
+
+
+
+% Move away!
+
+% \newcommand{\thsuccess}{success}
+
+% \newcommand{\thmeanplen}{mean $|\planf|$}
+
+% \newcommand{\thtime}{time (s)}
+
+% \newcommand{\thneval}{\# nodes}
+
+% \newcommand{\thmeantime}{mean time (s)}
+
+% \newcommand{\thmeanneval}{mean \# nodes}
+
+
+
+\ifdefined\dubinsys%
+  \renewcommand{\dubinsys}{Dubin's car\xspace}%
+\else%
+  \newcommand{\dubinsys}{Dubin's car\xspace}%
+\fi
+
+\ifdefined\orbitsys%
+  \renewcommand{\orbitsys}{Orbit camera\xspace}%
+\else%
+  \newcommand{\orbitsys}{Orbit camera\xspace}%
+\fi
+
+\ifdefined\markit%
+  \renewcommand{\markit}[1]{{\color{gray}#1}}%
+\else%
+  \newcommand{\markit}[1]{{\color{gray}#1}}%
+\fi
+
+\ifdefined\markA%
+  \renewcommand{\markA}{\markit{\dag}}%
+\else%
+  \newcommand{\markA}{\markit{\dag}}%
+\fi
+
+\ifdefined\markB%
+  \renewcommand{\markB}{\markit{\ddag}}%
+\else%
+  \newcommand{\markB}{\markit{\ddag}}%
+\fi
+
+\ifdefined\markC%
+  \renewcommand{\markC}{\markit{\S}}%
+\else%
+  \newcommand{\markC}{\markit{\S}}%
+\fi
+
+
+
+\ifdefined\distthres%
+  \renewcommand{\distthres}{c}%
+\else%
+  \newcommand{\distthres}{c}%
+\fi
+
+\ifdefined\btrue%
+  \renewcommand{\btrue}{\text{true}}%
+\else%
+  \newcommand{\btrue}{\text{true}}%
+\fi
+
+\ifdefined\bfalse%
+  \renewcommand{\bfalse}{\text{false}}%
+\else%
+  \newcommand{\bfalse}{\text{false}}%
+\fi
+
+\ifdefined\botherwise%
+  \renewcommand{\botherwise}{\text{otherwise}}%
+\else%
+  \newcommand{\botherwise}{\text{otherwise}}%
+\fi
+
+\ifdefined\cmdleft%
+  \renewcommand{\cmdleft}{\cmd_{left}}%
+\else%
+  \newcommand{\cmdleft}{\cmd_{left}}%
+\fi
+
+\ifdefined\cmdright%
+  \renewcommand{\cmdright}{\cmd_{right}}%
+\else%
+  \newcommand{\cmdright}{\cmd_{right}}%
+\fi
+
+\ifdefined\cmdup%
+  \renewcommand{\cmdup}{\cmd_{top}}%
+\else%
+  \newcommand{\cmdup}{\cmd_{top}}%
+\fi
+
+\ifdefined\cmddown%
+  \renewcommand{\cmddown}{\cmd_{down}}%
+\else%
+  \newcommand{\cmddown}{\cmd_{down}}%
+\fi
+
+\ifdefined\imvis%
+  \renewcommand{\imvis}{\vmath{vis}}%
+\else%
+  \newcommand{\imvis}{\vmath{vis}}%
+\fi
+%  Visibility
+\ifdefined\minvis%
+  \renewcommand{\minvis}{v_0}%
+\else%
+  \newcommand{\minvis}{v_0}%
+\fi
+
+\ifdefined\maxdis%
+  \renewcommand{\maxdis}{d_g}%
+\else%
+  \newcommand{\maxdis}{d_g}%
+\fi
+%  goal threshold
+\ifdefined\impred%
+  \renewcommand{\impred}{\vmath{pred}}%
+\else%
+  \newcommand{\impred}{\vmath{pred}}%
+\fi
+%  Image prediction
+
+
+\ifdefined\plA%
+  \renewcommand{\plA}{RLrl}\newcommand{\plB}{rlRL}%
+\else%
+  \newcommand{\plA}{RLrl}\newcommand{\plB}{rlRL}%
+\fi
+
+
+
 %
 
 \ifdefined\esSt%

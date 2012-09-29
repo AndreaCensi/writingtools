@@ -1702,6 +1702,564 @@
 
 
 
+
+
+\newbool{usedSetImages}\setbool{usedSetImages}{false}
+\ifdefined\SetImages%
+  \renewcommand{\SetImages}{\markfirst{SetImages}{usedSetImages}{\vmath{Im}}}%
+\else%
+  \newcommand{\SetImages}{\markfirst{SetImages}{usedSetImages}{\vmath{Im}}}%
+\fi
+
+\newbool{usedSetUImages}\setbool{usedSetUImages}{false}
+\ifdefined\SetUImages%
+  \renewcommand{\SetUImages}{\markfirst{SetUImages}{usedSetUImages}{\vmath{UIm}}}%
+\else%
+  \newcommand{\SetUImages}{\markfirst{SetUImages}{usedSetUImages}{\vmath{UIm}}}%
+\fi
+
+\ifdefined\genericdist%
+  \renewcommand{\genericdist}[2]{d^{#1}_{#2}}%
+\else%
+  \newcommand{\genericdist}[2]{d^{#1}_{#2}}%
+\fi
+
+\ifdefined\genericudist%
+  \renewcommand{\genericudist}[2]{\overline{d}^{#1}_{#2}}%
+\else%
+  \newcommand{\genericudist}[2]{\overline{d}^{#1}_{#2}}%
+\fi
+
+
+
+\newbool{usedobsstart}\setbool{usedobsstart}{false}
+\ifdefined\obsstart%
+  \renewcommand{\obsstart}{\markfirst{obsstart}{usedobsstart}{\obs_{\text{start}}}}%
+\else%
+  \newcommand{\obsstart}{\markfirst{obsstart}{usedobsstart}{\obs_{\text{start}}}}%
+\fi
+
+\newbool{usedobsgoal}\setbool{usedobsgoal}{false}
+\ifdefined\obsgoal%
+  \renewcommand{\obsgoal}{\markfirst{obsgoal}{usedobsgoal}{\obs_{\text{goal}}}}%
+\else%
+  \newcommand{\obsgoal}{\markfirst{obsgoal}{usedobsgoal}{\obs_{\text{goal}}}}%
+\fi
+
+
+
+\newbool{usedSetPlans}\setbool{usedSetPlans}{false}
+\ifdefined\SetPlans%
+  \renewcommand{\SetPlans}{\markfirst{SetPlans}{usedSetPlans}{\vmath{Plans}}}%
+\else%
+  \newcommand{\SetPlans}{\markfirst{SetPlans}{usedSetPlans}{\vmath{Plans}}}%
+\fi
+
+\newbool{usedplanSp}\setbool{usedplanSp}{false}
+\ifdefined\planSp%
+  \renewcommand{\planSp}{\markfirst{planSp}{usedplanSp}{\SetPlans}}%
+\else%
+  \newcommand{\planSp}{\markfirst{planSp}{usedplanSp}{\SetPlans}}%
+\fi
+
+\newbool{usedredplans}\setbool{usedredplans}{false}
+\ifdefined\redplans%
+  \renewcommand{\redplans}{\markfirst{redplans}{usedredplans}{\vmath{RedPlans}}}%
+\else%
+  \newcommand{\redplans}{\markfirst{redplans}{usedredplans}{\vmath{RedPlans}}}%
+\fi
+%  reduced plans
+\newbool{usedplan}\setbool{usedplan}{false}
+\ifdefined\plan%
+  \renewcommand{\plan}{\markfirst{plan}{usedplan}{p}}%
+\else%
+  \newcommand{\plan}{\markfirst{plan}{usedplan}{p}}%
+\fi
+%  a generic plan
+\newbool{usedplang}\setbool{usedplang}{false}
+\ifdefined\plang%
+  \renewcommand{\plang}{\markfirst{plang}{usedplang}{p_{\circ}}}%
+\else%
+  \newcommand{\plang}{\markfirst{plang}{usedplang}{p_{\circ}}}%
+\fi
+%  true plan
+\newbool{usedplanf}\setbool{usedplanf}{false}
+\ifdefined\planf%
+  \renewcommand{\planf}{\markfirst{planf}{usedplanf}{p^\star}}%
+\else%
+  \newcommand{\planf}{\markfirst{planf}{usedplanf}{p^\star}}%
+\fi
+%  The solution found 
+\newbool{usedzeroplan}\setbool{usedzeroplan}{false}
+\ifdefined\zeroplan%
+  \renewcommand{\zeroplan}{\markfirst{zeroplan}{usedzeroplan}{\emptyset}}%
+\else%
+  \newcommand{\zeroplan}{\markfirst{zeroplan}{usedzeroplan}{\emptyset}}%
+\fi
+
+
+
+\newbool{usedobsu}\setbool{usedobsu}{false}
+\ifdefined\obsu%
+  \renewcommand{\obsu}{\markfirst{obsu}{usedobsu}{\boldsymbol{z}}}%
+\else%
+  \newcommand{\obsu}{\markfirst{obsu}{usedobsu}{\boldsymbol{z}}}%
+\fi
+%  Scalar uncertainty
+\newbool{usedobsue}\setbool{usedobsue}{false}
+\ifdefined\obsue%
+  \renewcommand{\obsue}{\markfirst{obsue}{usedobsue}{z}}%
+\else%
+  \newcommand{\obsue}{\markfirst{obsue}{usedobsue}{z}}%
+\fi
+%  Scalar uncertainty
+\newbool{usedsarea}\setbool{usedsarea}{false}
+\ifdefined\sarea%
+  \renewcommand{\sarea}{\markfirst{sarea}{usedsarea}{A}}%
+\else%
+  \newcommand{\sarea}{\markfirst{sarea}{usedsarea}{A}}%
+\fi
+%  area around pixel s
+
+
+\newbool{useddd}\setbool{useddd}{false}
+\ifdefined\dd%
+  \renewcommand{\dd}{\markfirst{dd}{useddd}{\boldsymbol{\dde}}}%
+\else%
+  \newcommand{\dd}{\markfirst{dd}{useddd}{\boldsymbol{\dde}}}%
+\fi
+%  Generic diffeomorphisms
+\newbool{useddde}\setbool{useddde}{false}
+\ifdefined\dde%
+  \renewcommand{\dde}{\markfirst{dde}{useddde}{\varphi}}%
+\else%
+  \newcommand{\dde}{\markfirst{dde}{useddde}{\varphi}}%
+\fi
+%  Generic diffeomorphisms
+\newbool{usedddu}\setbool{usedddu}{false}
+\ifdefined\ddu%
+  \renewcommand{\ddu}{\markfirst{ddu}{usedddu}{\boldsymbol{\ddue}}}%
+\else%
+  \newcommand{\ddu}{\markfirst{ddu}{usedddu}{\boldsymbol{\ddue}}}%
+\fi
+%  its uncertaint
+\newbool{usedddue}\setbool{usedddue}{false}
+\ifdefined\ddue%
+  \renewcommand{\ddue}{\markfirst{ddue}{usedddue}{\gamma}}%
+\else%
+  \newcommand{\ddue}{\markfirst{ddue}{usedddue}{\gamma}}%
+\fi
+%  its uncertaint
+
+
+\newbool{usedudiffSp}\setbool{usedudiffSp}{false}
+\ifdefined\udiffSp%
+  \renewcommand{\udiffSp}{\markfirst{udiffSp}{usedudiffSp}{\vmath{UDiff}}}%
+\else%
+  \newcommand{\udiffSp}{\markfirst{udiffSp}{usedudiffSp}{\vmath{UDiff}}}%
+\fi
+
+
+
+
+
+\newbool{useddscommute}\setbool{useddscommute}{false}
+\ifdefined\dscommute%
+  \renewcommand{\dscommute}{\markfirst{dscommute}{useddscommute}{\vmath{commute}}}%
+\else%
+  \newcommand{\dscommute}{\markfirst{dscommute}{useddscommute}{\vmath{commute}}}%
+\fi
+
+\newbool{useddsinverse}\setbool{useddsinverse}{false}
+\ifdefined\dsinverse%
+  \renewcommand{\dsinverse}{\markfirst{dsinverse}{useddsinverse}{\vmath{inverse}}}%
+\else%
+  \newcommand{\dsinverse}{\markfirst{dsinverse}{useddsinverse}{\vmath{inverse}}}%
+\fi
+
+\newbool{useddssame}\setbool{useddssame}{false}
+\ifdefined\dssame%
+  \renewcommand{\dssame}{\markfirst{dssame}{useddssame}{\vmath{same}}}%
+\else%
+  \newcommand{\dssame}{\markfirst{dssame}{useddssame}{\vmath{same}}}%
+\fi
+
+\newbool{useddsvoid}\setbool{useddsvoid}{false}
+\ifdefined\dsvoid%
+  \renewcommand{\dsvoid}{\markfirst{dsvoid}{useddsvoid}{\vmath{void}}}%
+\else%
+  \newcommand{\dsvoid}{\markfirst{dsvoid}{useddsvoid}{\vmath{void}}}%
+\fi
+
+\newbool{usedSOtwo}\setbool{usedSOtwo}{false}
+\ifdefined\SOtwo%
+  \renewcommand{\SOtwo}{\markfirst{SOtwo}{usedSOtwo}{\mathrm{SO}(2)}}%
+\else%
+  \newcommand{\SOtwo}{\markfirst{SOtwo}{usedSOtwo}{\mathrm{SO}(2)}}%
+\fi
+
+\newbool{usedplantodiff}\setbool{usedplantodiff}{false}
+\ifdefined\plantodiff%
+  \renewcommand{\plantodiff}{\markfirst{plantodiff}{usedplantodiff}{\vmath{p\_to\_d}}}%
+\else%
+  \newcommand{\plantodiff}{\markfirst{plantodiff}{usedplantodiff}{\vmath{p\_to\_d}}}%
+\fi
+
+\newbool{usedptod}\setbool{usedptod}{false}
+\ifdefined\ptod%
+  \renewcommand{\ptod}{\markfirst{ptod}{usedptod}{\plantodiff}}%
+\else%
+  \newcommand{\ptod}{\markfirst{ptod}{usedptod}{\plantodiff}}%
+\fi
+
+\newbool{usedpd}\setbool{usedpd}{false}
+\ifdefined\pd%
+  \renewcommand{\pd}{\markfirst{pd}{usedpd}{\plantodiff}}%
+\else%
+  \newcommand{\pd}{\markfirst{pd}{usedpd}{\plantodiff}}%
+\fi
+
+\newbool{usedplanreduce}\setbool{usedplanreduce}{false}
+\ifdefined\planreduce%
+  \renewcommand{\planreduce}{\markfirst{planreduce}{usedplanreduce}{\vmath{PlanReduce}}}%
+\else%
+  \newcommand{\planreduce}{\markfirst{planreduce}{usedplanreduce}{\vmath{PlanReduce}}}%
+\fi
+
+\newbool{usednoutoforder}\setbool{usednoutoforder}{false}
+\ifdefined\noutoforder%
+  \renewcommand{\noutoforder}{\markfirst{noutoforder}{usednoutoforder}{\vmath{noutoforder}}}%
+\else%
+  \newcommand{\noutoforder}{\markfirst{noutoforder}{usednoutoforder}{\vmath{noutoforder}}}%
+\fi
+%  TODO
+\newbool{useddDiffLone}\setbool{useddDiffLone}{false}
+\ifdefined\dDiffLone%
+  \renewcommand{\dDiffLone}{\markfirst{dDiffLone}{useddDiffLone}{\genericdist{\diff(\obsps)}{L_{1}}}}%
+\else%
+  \newcommand{\dDiffLone}{\markfirst{dDiffLone}{useddDiffLone}{\genericdist{\diff(\obsps)}{L_{1}}}}%
+\fi
+
+\newbool{useddUDiffLone}\setbool{useddUDiffLone}{false}
+\ifdefined\dUDiffLone%
+  \renewcommand{\dUDiffLone}{\markfirst{dUDiffLone}{useddUDiffLone}{\genericudist{\udiffSp(\obsps)}{L_{1}}}}%
+\else%
+  \newcommand{\dUDiffLone}{\markfirst{dUDiffLone}{useddUDiffLone}{\genericudist{\udiffSp(\obsps)}{L_{1}}}}%
+\fi
+
+
+
+\newbool{useddobsps}\setbool{useddobsps}{false}
+\ifdefined\dobsps%
+  \renewcommand{\dobsps}{\markfirst{dobsps}{useddobsps}{\genericdist{\obsps}{}}}%
+\else%
+  \newcommand{\dobsps}{\markfirst{dobsps}{useddobsps}{\genericdist{\obsps}{}}}%
+\fi
+
+\ifdefined\dImL%
+  \renewcommand{\dImL}[1]{\genericdist{\SetImages}{L_{#1}}}%
+\else%
+  \newcommand{\dImL}[1]{\genericdist{\SetImages}{L_{#1}}}%
+\fi
+
+\newbool{useddImLone}\setbool{useddImLone}{false}
+\ifdefined\dImLone%
+  \renewcommand{\dImLone}{\markfirst{dImLone}{useddImLone}{\dImL{1}}}%
+\else%
+  \newcommand{\dImLone}{\markfirst{dImLone}{useddImLone}{\dImL{1}}}%
+\fi
+
+\newbool{useddImLtwo}\setbool{useddImLtwo}{false}
+\ifdefined\dImLtwo%
+  \renewcommand{\dImLtwo}{\markfirst{dImLtwo}{useddImLtwo}{\dImL{2}}}%
+\else%
+  \newcommand{\dImLtwo}{\markfirst{dImLtwo}{useddImLtwo}{\dImL{2}}}%
+\fi
+
+\ifdefined\dImN%
+  \renewcommand{\dImN}[1]{\genericdist{\SetImages}{N_{#1}}}%
+\else%
+  \newcommand{\dImN}[1]{\genericdist{\SetImages}{N_{#1}}}%
+\fi
+
+\ifdefined\dImD%
+  \renewcommand{\dImD}[1]{\genericdist{\SetImages}{D_{#1}}}%
+\else%
+  \newcommand{\dImD}[1]{\genericdist{\SetImages}{D_{#1}}}%
+\fi
+
+
+
+
+
+\newbool{usedcmdOrd}\setbool{usedcmdOrd}{false}
+\ifdefined\cmdOrd%
+  \renewcommand{\cmdOrd}{\markfirst{cmdOrd}{usedcmdOrd}{\prec}}%
+\else%
+  \newcommand{\cmdOrd}{\markfirst{cmdOrd}{usedcmdOrd}{\prec}}%
+\fi
+
+
+
+\ifdefined\algoname%
+  \renewcommand{\algoname}[1]{\text{#1}}%
+\else%
+  \newcommand{\algoname}[1]{\text{#1}}%
+\fi
+
+\newbool{usedgnbc}\setbool{usedgnbc}{false}
+\ifdefined\gnbc%
+  \renewcommand{\gnbc}{\markfirst{gnbc}{usedgnbc}{\algoname{GNB}\xspace}}%
+\else%
+  \newcommand{\gnbc}{\markfirst{gnbc}{usedgnbc}{\algoname{GNB}\xspace}}%
+\fi
+
+\newbool{usedbnbc}\setbool{usedbnbc}{false}
+\ifdefined\bnbc%
+  \renewcommand{\bnbc}{\markfirst{bnbc}{usedbnbc}{\algoname{BNB}\xspace}}%
+\else%
+  \newcommand{\bnbc}{\markfirst{bnbc}{usedbnbc}{\algoname{BNB}\xspace}}%
+\fi
+
+\newbool{usedbngc}\setbool{usedbngc}{false}
+\ifdefined\bngc%
+  \renewcommand{\bngc}{\markfirst{bngc}{usedbngc}{\algoname{BNG}\xspace}}%
+\else%
+  \newcommand{\bngc}{\markfirst{bngc}{usedbngc}{\algoname{BNG}\xspace}}%
+\fi
+
+\newbool{usedbntc}\setbool{usedbntc}{false}
+\ifdefined\bntc%
+  \renewcommand{\bntc}{\markfirst{bntc}{usedbntc}{\algoname{BNT}\xspace}}%
+\else%
+  \newcommand{\bntc}{\markfirst{bntc}{usedbntc}{\algoname{BNT}\xspace}}%
+\fi
+
+\newbool{usedgebc}\setbool{usedgebc}{false}
+\ifdefined\gebc%
+  \renewcommand{\gebc}{\markfirst{gebc}{usedgebc}{\algoname{GEB}\xspace}}%
+\else%
+  \newcommand{\gebc}{\markfirst{gebc}{usedgebc}{\algoname{GEB}\xspace}}%
+\fi
+
+\newbool{usedbebc}\setbool{usedbebc}{false}
+\ifdefined\bebc%
+  \renewcommand{\bebc}{\markfirst{bebc}{usedbebc}{\algoname{BEB}\xspace}}%
+\else%
+  \newcommand{\bebc}{\markfirst{bebc}{usedbebc}{\algoname{BEB}\xspace}}%
+\fi
+
+\newbool{usedbegc}\setbool{usedbegc}{false}
+\ifdefined\begc%
+  \renewcommand{\begc}{\markfirst{begc}{usedbegc}{\algoname{BEG}\xspace}}%
+\else%
+  \newcommand{\begc}{\markfirst{begc}{usedbegc}{\algoname{BEG}\xspace}}%
+\fi
+
+\newbool{usedbetc}\setbool{usedbetc}{false}
+\ifdefined\betc%
+  \renewcommand{\betc}{\markfirst{betc}{usedbetc}{\algoname{BET}\xspace}}%
+\else%
+  \newcommand{\betc}{\markfirst{betc}{usedbetc}{\algoname{BET}\xspace}}%
+\fi
+
+\newbool{usedbetcb}\setbool{usedbetcb}{false}
+\ifdefined\betcb%
+  \renewcommand{\betcb}{\markfirst{betcb}{usedbetcb}{\algoname{BETc}\xspace}}%
+\else%
+  \newcommand{\betcb}{\markfirst{betcb}{usedbetcb}{\algoname{BETc}\xspace}}%
+\fi
+
+
+
+
+
+\newbool{usedplansarea}\setbool{usedplansarea}{false}
+\ifdefined\plansarea%
+  \renewcommand{\plansarea}{\markfirst{plansarea}{usedplansarea}{P_{\text{near}}}}%
+\else%
+  \newcommand{\plansarea}{\markfirst{plansarea}{usedplansarea}{P_{\text{near}}}}%
+\fi
+
+
+
+\newbool{usedalgocover}\setbool{usedalgocover}{false}
+\ifdefined\algocover%
+  \renewcommand{\algocover}{\markfirst{algocover}{usedalgocover}{\textsf{cover}}}%
+\else%
+  \newcommand{\algocover}{\markfirst{algocover}{usedalgocover}{\textsf{cover}}}%
+\fi
+
+\newbool{usedalgoplanreduce}\setbool{usedalgoplanreduce}{false}
+\ifdefined\algoplanreduce%
+  \renewcommand{\algoplanreduce}{\markfirst{algoplanreduce}{usedalgoplanreduce}{\textsf{planreduce}}}%
+\else%
+  \newcommand{\algoplanreduce}{\markfirst{algoplanreduce}{usedalgoplanreduce}{\textsf{planreduce}}}%
+\fi
+
+\newbool{usedalgobidirectional}\setbool{usedalgobidirectional}{false}
+\ifdefined\algobidirectional%
+  \renewcommand{\algobidirectional}{\markfirst{algobidirectional}{usedalgobidirectional}{\textsf{bidirectional-search}}}%
+\else%
+  \newcommand{\algobidirectional}{\markfirst{algobidirectional}{usedalgobidirectional}{\textsf{bidirectional-search}}}%
+\fi
+
+
+
+% Move away!
+
+% \newcommand{\thsuccess}{success}
+
+% \newcommand{\thmeanplen}{mean $|\planf|$}
+
+% \newcommand{\thtime}{time (s)}
+
+% \newcommand{\thneval}{\# nodes}
+
+% \newcommand{\thmeantime}{mean time (s)}
+
+% \newcommand{\thmeanneval}{mean \# nodes}
+
+
+
+\newbool{useddubinsys}\setbool{useddubinsys}{false}
+\ifdefined\dubinsys%
+  \renewcommand{\dubinsys}{\markfirst{dubinsys}{useddubinsys}{Dubin's car\xspace}}%
+\else%
+  \newcommand{\dubinsys}{\markfirst{dubinsys}{useddubinsys}{Dubin's car\xspace}}%
+\fi
+
+\newbool{usedorbitsys}\setbool{usedorbitsys}{false}
+\ifdefined\orbitsys%
+  \renewcommand{\orbitsys}{\markfirst{orbitsys}{usedorbitsys}{Orbit camera\xspace}}%
+\else%
+  \newcommand{\orbitsys}{\markfirst{orbitsys}{usedorbitsys}{Orbit camera\xspace}}%
+\fi
+
+\ifdefined\markit%
+  \renewcommand{\markit}[1]{{\color{gray}#1}}%
+\else%
+  \newcommand{\markit}[1]{{\color{gray}#1}}%
+\fi
+
+\newbool{usedmarkA}\setbool{usedmarkA}{false}
+\ifdefined\markA%
+  \renewcommand{\markA}{\markfirst{markA}{usedmarkA}{\markit{\dag}}}%
+\else%
+  \newcommand{\markA}{\markfirst{markA}{usedmarkA}{\markit{\dag}}}%
+\fi
+
+\newbool{usedmarkB}\setbool{usedmarkB}{false}
+\ifdefined\markB%
+  \renewcommand{\markB}{\markfirst{markB}{usedmarkB}{\markit{\ddag}}}%
+\else%
+  \newcommand{\markB}{\markfirst{markB}{usedmarkB}{\markit{\ddag}}}%
+\fi
+
+\newbool{usedmarkC}\setbool{usedmarkC}{false}
+\ifdefined\markC%
+  \renewcommand{\markC}{\markfirst{markC}{usedmarkC}{\markit{\S}}}%
+\else%
+  \newcommand{\markC}{\markfirst{markC}{usedmarkC}{\markit{\S}}}%
+\fi
+
+
+
+\newbool{useddistthres}\setbool{useddistthres}{false}
+\ifdefined\distthres%
+  \renewcommand{\distthres}{\markfirst{distthres}{useddistthres}{c}}%
+\else%
+  \newcommand{\distthres}{\markfirst{distthres}{useddistthres}{c}}%
+\fi
+
+\newbool{usedbtrue}\setbool{usedbtrue}{false}
+\ifdefined\btrue%
+  \renewcommand{\btrue}{\markfirst{btrue}{usedbtrue}{\text{true}}}%
+\else%
+  \newcommand{\btrue}{\markfirst{btrue}{usedbtrue}{\text{true}}}%
+\fi
+
+\newbool{usedbfalse}\setbool{usedbfalse}{false}
+\ifdefined\bfalse%
+  \renewcommand{\bfalse}{\markfirst{bfalse}{usedbfalse}{\text{false}}}%
+\else%
+  \newcommand{\bfalse}{\markfirst{bfalse}{usedbfalse}{\text{false}}}%
+\fi
+
+\newbool{usedbotherwise}\setbool{usedbotherwise}{false}
+\ifdefined\botherwise%
+  \renewcommand{\botherwise}{\markfirst{botherwise}{usedbotherwise}{\text{otherwise}}}%
+\else%
+  \newcommand{\botherwise}{\markfirst{botherwise}{usedbotherwise}{\text{otherwise}}}%
+\fi
+
+\newbool{usedcmdleft}\setbool{usedcmdleft}{false}
+\ifdefined\cmdleft%
+  \renewcommand{\cmdleft}{\markfirst{cmdleft}{usedcmdleft}{\cmd_{left}}}%
+\else%
+  \newcommand{\cmdleft}{\markfirst{cmdleft}{usedcmdleft}{\cmd_{left}}}%
+\fi
+
+\newbool{usedcmdright}\setbool{usedcmdright}{false}
+\ifdefined\cmdright%
+  \renewcommand{\cmdright}{\markfirst{cmdright}{usedcmdright}{\cmd_{right}}}%
+\else%
+  \newcommand{\cmdright}{\markfirst{cmdright}{usedcmdright}{\cmd_{right}}}%
+\fi
+
+\newbool{usedcmdup}\setbool{usedcmdup}{false}
+\ifdefined\cmdup%
+  \renewcommand{\cmdup}{\markfirst{cmdup}{usedcmdup}{\cmd_{top}}}%
+\else%
+  \newcommand{\cmdup}{\markfirst{cmdup}{usedcmdup}{\cmd_{top}}}%
+\fi
+
+\newbool{usedcmddown}\setbool{usedcmddown}{false}
+\ifdefined\cmddown%
+  \renewcommand{\cmddown}{\markfirst{cmddown}{usedcmddown}{\cmd_{down}}}%
+\else%
+  \newcommand{\cmddown}{\markfirst{cmddown}{usedcmddown}{\cmd_{down}}}%
+\fi
+
+\newbool{usedimvis}\setbool{usedimvis}{false}
+\ifdefined\imvis%
+  \renewcommand{\imvis}{\markfirst{imvis}{usedimvis}{\vmath{vis}}}%
+\else%
+  \newcommand{\imvis}{\markfirst{imvis}{usedimvis}{\vmath{vis}}}%
+\fi
+%  Visibility
+\newbool{usedminvis}\setbool{usedminvis}{false}
+\ifdefined\minvis%
+  \renewcommand{\minvis}{\markfirst{minvis}{usedminvis}{v_0}}%
+\else%
+  \newcommand{\minvis}{\markfirst{minvis}{usedminvis}{v_0}}%
+\fi
+
+\newbool{usedmaxdis}\setbool{usedmaxdis}{false}
+\ifdefined\maxdis%
+  \renewcommand{\maxdis}{\markfirst{maxdis}{usedmaxdis}{d_g}}%
+\else%
+  \newcommand{\maxdis}{\markfirst{maxdis}{usedmaxdis}{d_g}}%
+\fi
+%  goal threshold
+\newbool{usedimpred}\setbool{usedimpred}{false}
+\ifdefined\impred%
+  \renewcommand{\impred}{\markfirst{impred}{usedimpred}{\vmath{pred}}}%
+\else%
+  \newcommand{\impred}{\markfirst{impred}{usedimpred}{\vmath{pred}}}%
+\fi
+%  Image prediction
+
+
+\newbool{usedplA}\setbool{usedplA}{false}
+\ifdefined\plA%
+  \renewcommand{\plA}{\markfirst{plA}{usedplA}{RLrl}\newcommand{\plB}{rlRL}}%
+\else%
+  \newcommand{\plA}{\markfirst{plA}{usedplA}{RLrl}\newcommand{\plB}{rlRL}}%
+\fi
+
+
+
 %
 
 \newbool{usedesSt}\setbool{usedesSt}{false}

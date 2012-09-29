@@ -21,6 +21,8 @@ clean:: lyxclean
 
 
 lyxmake: $(lyx_generated_pdf)
+	@echo Making $(lyx_generated_pdf)
+
 lyxtex: $(lyx_generated_tex)
 
 
@@ -36,6 +38,7 @@ lyxtex: $(lyx_generated_tex)
 # Note we delete the .tex. otherwise lyx does not update the time
 # and make always remake the file.
 %.tex: %.lyx
+	echo Redoing $@
 	@-rm -f $@
 	$(lyx) -e pdflatex -f all $<
 

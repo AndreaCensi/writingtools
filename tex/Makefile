@@ -1,9 +1,9 @@
 sources=$(wildcard old/*.tex)
 
-all: summary.pdf  \
-	all_symbols.tex \
-	all_symbols_highlight.tex \
-	all_symbols_markfirst.tex 
+targets = summary.pdf  all_symbols.tex all_symbols_highlight.tex all_symbols_markfirst.tex 
+
+
+all: $(targets)
 
 	# tables/full/estimation_groups.tex \
 	# tables/mini/estimation_groups.tex \
@@ -18,6 +18,8 @@ all: summary.pdf  \
 	# tables/full/soattotheory.tex \
 	# tables/mini/soattotheory.tex 
 
+clean: 
+	rm -f $(targets)
 
 summary.pdf: all_symbols.tex tables/full/all.tex tables/mini/all.tex highlight_deprecated.tex
 

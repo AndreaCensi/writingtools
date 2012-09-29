@@ -1,0 +1,105 @@
+%:section:articles/dptr1: Technical report for diffeoplanning
+
+%:section:articles/dptr1/spaces: spaces
+
+\newcommand{\SetImages}{\vmath{Im}}
+\newcommand{\SetUImages}{\vmath{UIm}}
+\newcommand{\genericdist}[2]{d^{#1}_{#2}}
+\newcommand{\genericudist}[2]{\overline{d}^{#1}_{#2}}
+
+\newcommand{\obsstart}{\obs_{\text{start}}}
+\newcommand{\obsgoal}{\obs_{\text{goal}}}
+
+\newcommand{\SetPlans}{\vmath{Plans}}
+\newcommand{\planSp}{\SetPlans}
+\newcommand{\redplans}{\vmath{RedPlans}} % reduced plans
+\newcommand{\plan}{p} % a generic plan
+\newcommand{\plang}{p_{\circ}} % true plan
+\newcommand{\planf}{p^\star} % The solution found 
+\newcommand{\zeroplan}{\emptyset}
+
+\newcommand{\obsu}{\boldsymbol{z}} % Scalar uncertainty
+\newcommand{\obsue}{z} % Scalar uncertainty
+\newcommand{\sarea}{A} % area around pixel s
+
+\newcommand{\dd}{\boldsymbol{\dde}} % Generic diffeomorphisms
+\newcommand{\dde}{\varphi} % Generic diffeomorphisms
+\newcommand{\ddu}{\boldsymbol{\ddue}} % its uncertaint
+\newcommand{\ddue}{\gamma} % its uncertaint
+
+\newcommand{\udiffSp}{\vmath{UDiff}}
+
+%:section:articles/dptr1/structure: Diffeo structure
+
+\newcommand{\dscommute}{\vmath{commute}}
+\newcommand{\dsinverse}{\vmath{inverse}}
+\newcommand{\dssame}{\vmath{same}}
+\newcommand{\dsvoid}{\vmath{void}}
+\newcommand{\SOtwo}{\mathrm{SO}(2)}
+%:section:articles/dptr1/simplification: plan reduce
+\newcommand{\plantodiff}{\vmath{p\_to\_d}}
+\newcommand{\ptod}{\plantodiff}
+\newcommand{\pd}{\plantodiff}
+\newcommand{\planreduce}{\vmath{PlanReduce}}
+\newcommand{\noutoforder}{\vmath{noutoforder}} % TODO
+%:section:articles/dptr1/distances: Distances
+\newcommand{\dDiffLone}{\genericdist{\diff(\obsps)}{L_{1}}}
+\newcommand{\dUDiffLone}{\genericudist{\udiffSp(\obsps)}{L_{1}}}
+
+\newcommand{\dobsps}{\genericdist{\obsps}{}}
+\newcommand{\dImL}[1]{\genericdist{\SetImages}{L_{#1}}}
+\newcommand{\dImLone}{\dImL{1}}
+\newcommand{\dImLtwo}{\dImL{2}}
+\newcommand{\dImN}[1]{\genericdist{\SetImages}{N_{#1}}}
+\newcommand{\dImD}[1]{\genericdist{\SetImages}{D_{#1}}}
+
+
+\newcommand{\cmdOrd}{\prec}
+
+\newcommand{\algoname}[1]{\text{#1}}
+\newcommand{\gnbc}{\algoname{GNB}\xspace}
+\newcommand{\bnbc}{\algoname{BNB}\xspace}
+\newcommand{\bngc}{\algoname{BNG}\xspace}
+\newcommand{\bntc}{\algoname{BNT}\xspace}
+\newcommand{\gebc}{\algoname{GEB}\xspace}
+\newcommand{\bebc}{\algoname{BEB}\xspace}
+\newcommand{\begc}{\algoname{BEG}\xspace}
+\newcommand{\betc}{\algoname{BET}\xspace}
+\newcommand{\betcb}{\algoname{BETc}\xspace}
+
+
+\newcommand{\plansarea}{P_{\text{near}}}
+
+\newcommand{\algocover}{\textsf{cover}}
+\newcommand{\algoplanreduce}{\textsf{planreduce}}
+\newcommand{\algobidirectional}{\textsf{bidirectional-search}}
+
+% Move away!
+% \newcommand{\thsuccess}{success}
+% \newcommand{\thmeanplen}{mean $|\planf|$}
+% \newcommand{\thtime}{time (s)}
+% \newcommand{\thneval}{\# nodes}
+% \newcommand{\thmeantime}{mean time (s)}
+% \newcommand{\thmeanneval}{mean \# nodes}
+
+\newcommand{\dubinsys}{Dubin's car\xspace}
+\newcommand{\orbitsys}{Orbit camera\xspace}
+\newcommand{\markit}[1]{{\color{gray}#1}}
+\newcommand{\markA}{\markit{\dag}}
+\newcommand{\markB}{\markit{\ddag}}
+\newcommand{\markC}{\markit{\S}}
+
+\newcommand{\distthres}{c}
+\newcommand{\btrue}{\text{true}}
+\newcommand{\bfalse}{\text{false}}
+\newcommand{\botherwise}{\text{otherwise}}
+\newcommand{\cmdleft}{\cmd_{left}}
+\newcommand{\cmdright}{\cmd_{right}}
+\newcommand{\cmdup}{\cmd_{top}}
+\newcommand{\cmddown}{\cmd_{down}}
+\newcommand{\imvis}{\vmath{vis}} % Visibility
+\newcommand{\minvis}{v_0}
+\newcommand{\maxdis}{d_g} % goal threshold
+\newcommand{\impred}{\vmath{pred}} % Image prediction
+
+\newcommand{\plA}{RLrl}\newcommand{\plB}{rlRL}
