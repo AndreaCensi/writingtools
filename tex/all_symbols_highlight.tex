@@ -2853,8 +2853,6 @@
 
 
 
-
-
 \ifdefined\setA%
   \renewcommand{\setA}{{\color{green} \aset{A}}}%
 \else%
@@ -3393,7 +3391,7 @@
 \else%
   \newcommand{\nzReals}{{\color{green} \reals_{\circ}}}%
 \fi
-%  Non zero reals
+%  Nonzero reals
 
 
 \ifdefined\abb%
@@ -3647,7 +3645,7 @@
 \else%
   \newcommand{\obs}{{\color{green} \boldsymbol{y}}}%
 \fi
-%  Observations.
+%  Observations vector.
 
 
 \ifdefined\obse%
@@ -3655,7 +3653,7 @@
 \else%
   \newcommand{\obse}{{\color{green} y}}%
 \fi
-%  Observations (element) -- also called ``sensel''
+%  Observations element.
 
 
 \ifdefined\cmd%
@@ -3663,13 +3661,13 @@
 \else%
   \newcommand{\cmd}{{\color{green} \boldsymbol{u}}}%
 \fi
-%  Commands, in general.
+%  Commands vector.
 \ifdefined\cmde%
   \renewcommand{\cmde}{{\color{green} u}}%
 \else%
   \newcommand{\cmde}{{\color{green} u}}%
 \fi
-%  Commands (element) -- also called ``?''.
+%  Commands element.
 
 
 
@@ -3964,59 +3962,77 @@
 
 
 
+% \newcommand{\etal}{\textit{et.\,al.}\xspace}
+
+% \newcommand{\eg}{\textit{e.g.},\xspace}
+
+% \newcommand{\etc}{\textit{etc.}\xspace}
+
+% \newcommand{\ie}{\textit{i.e.},\xspace}
+
+% \newcommand{\ala}{\textit{\`a\,la}\xspace}
+
+% \newcommand{\viceversa}{\textit{vice versa}\xspace}
+
+% \newcommand{\vs}{\textit{vs}\xspace} % Versus
+
+% \newcommand{\adhoc}{\textit{ad\,hoc}\xspace}
+
+% \newcommand{\apriori}{\textit{a\,priori}\xspace}
+
+
+
 \ifdefined\etal%
-  \renewcommand{\etal}{{\color{green} \textit{et.\,al.}\xspace}}%
+  \renewcommand{\etal}{{\color{green} {et\,al.}\xspace}}%
 \else%
-  \newcommand{\etal}{{\color{green} \textit{et.\,al.}\xspace}}%
+  \newcommand{\etal}{{\color{green} {et\,al.}\xspace}}%
 \fi
 
 \ifdefined\eg%
-  \renewcommand{\eg}{{\color{green} \textit{e.g.},\xspace}}%
+  \renewcommand{\eg}{{\color{green} {e.g.},\xspace}}%
 \else%
-  \newcommand{\eg}{{\color{green} \textit{e.g.},\xspace}}%
+  \newcommand{\eg}{{\color{green} {e.g.},\xspace}}%
 \fi
 
 \ifdefined\etc%
-  \renewcommand{\etc}{{\color{green} \textit{etc.}\xspace}}%
+  \renewcommand{\etc}{{\color{green} {etc.}\xspace}}%
 \else%
-  \newcommand{\etc}{{\color{green} \textit{etc.}\xspace}}%
+  \newcommand{\etc}{{\color{green} {etc.}\xspace}}%
 \fi
 
 \ifdefined\ie%
-  \renewcommand{\ie}{{\color{green} \textit{i.e.},\xspace}}%
+  \renewcommand{\ie}{{\color{green} {i.e.},\xspace}}%
 \else%
-  \newcommand{\ie}{{\color{green} \textit{i.e.},\xspace}}%
-\fi
-
-\ifdefined\ala%
-  \renewcommand{\ala}{{\color{green} \textit{\`a\,la}\xspace}}%
-\else%
-  \newcommand{\ala}{{\color{green} \textit{\`a\,la}\xspace}}%
+  \newcommand{\ie}{{\color{green} {i.e.},\xspace}}%
 \fi
 
 \ifdefined\viceversa%
-  \renewcommand{\viceversa}{{\color{green} \textit{vice versa}\xspace}}%
+  \renewcommand{\viceversa}{{\color{green} {vice versa}\xspace}}%
 \else%
-  \newcommand{\viceversa}{{\color{green} \textit{vice versa}\xspace}}%
+  \newcommand{\viceversa}{{\color{green} {vice versa}\xspace}}%
 \fi
 
 \ifdefined\vs%
-  \renewcommand{\vs}{{\color{green} \textit{vs}\xspace}}%
+  \renewcommand{\vs}{{\color{green} {vs}\xspace}}%
 \else%
-  \newcommand{\vs}{{\color{green} \textit{vs}\xspace}}%
+  \newcommand{\vs}{{\color{green} {vs}\xspace}}%
 \fi
 %  Versus
 \ifdefined\adhoc%
-  \renewcommand{\adhoc}{{\color{green} \textit{ad\,hoc}\xspace}}%
+  \renewcommand{\adhoc}{{\color{green} {ad\,hoc}\xspace}}%
 \else%
-  \newcommand{\adhoc}{{\color{green} \textit{ad\,hoc}\xspace}}%
+  \newcommand{\adhoc}{{\color{green} {ad\,hoc}\xspace}}%
 \fi
 
 \ifdefined\apriori%
-  \renewcommand{\apriori}{{\color{green} \textit{a\,priori}\xspace}}%
+  \renewcommand{\apriori}{{\color{green} {a\,priori}\xspace}}%
 \else%
-  \newcommand{\apriori}{{\color{green} \textit{a\,priori}\xspace}}%
+  \newcommand{\apriori}{{\color{green} {a\,priori}\xspace}}%
 \fi
+
+
+
+
 
 
 
