@@ -44,10 +44,11 @@ $(DEPDIR)/%.tex.d: %.tex
 pdflatex=pdflatex -shell-escape
 
 %.pdf: %.tex
-	$(pdflatex) $(latex_args) $*
-	- bibtex $*
-	$(pdflatex) $(latex_args) $*
-	$(pdflatex) $(latex_args) $*
+	latexmk -pdf $*.tex
+	# $(pdflatex) $(latex_args) $*
+	# - bibtex $*
+	# $(pdflatex) $(latex_args) $*
+	# $(pdflatex) $(latex_args) $*
 	# do not delete aux,blg,bbl for cross-references
 	# Hide temporary files
 	$(MAKE) texhide

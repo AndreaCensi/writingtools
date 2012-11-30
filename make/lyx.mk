@@ -14,6 +14,9 @@ lyx_base=$(subst .lyx,, $(lyx_files))
 # actually include all .lyx in the directory, not just the ones specified
 # by lyx_files
 all_lyx_base=$(subst .lyx,, $(wildcard *.lyx))
+
+# FIXME
+tmp_exts?=
 lyx_tmp_files:=$(foreach base, $(all_lyx_base), $(foreach ext,$(tmp_exts), $(base)$(ext)))
 
 all:: lyxmake lyxhide
