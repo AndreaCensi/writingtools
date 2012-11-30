@@ -2,8 +2,9 @@
 \declaretheorem[shaded={bgcolor=Melon!10,
 textwidth=\linewidth},sibling=thm,title=Example]{shadedexample}
 
-\renewenvironment{example}
-{\shadedexample}
-{\endshadedexample}
- 
-
+% Renew environment (if defined)
+\ifcsmacro{example}{
+    \renewenvironment{example}
+    {\shadedexample}
+    {\endshadedexample}
+}{}

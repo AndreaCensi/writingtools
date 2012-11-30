@@ -19,7 +19,8 @@ redo:
 	# then used-symbols.yaml
 	$(MAKE) -C tex  -B
 	-pdflatex $(main)
-	$(MAKE) pysnip
+	# XXX: readd pysnip
+	# $(MAKE) pysnip
 	bibtex $(main)
 	$(MAKE) redo-index
 	-pdflatex $(main)

@@ -3213,8 +3213,6 @@
 
 
 
-
-
 \newbool{usedsetA}\setbool{usedsetA}{false}
 \ifdefined\setA%
   \renewcommand{\setA}{\markfirst{setA}{usedsetA}{\aset{A}}}%
@@ -3814,7 +3812,7 @@
 \else%
   \newcommand{\nzReals}{\markfirst{nzReals}{usednzReals}{\reals_{\circ}}}%
 \fi
-%  Non zero reals
+%  Nonzero reals
 
 
 \ifdefined\abb%
@@ -4096,7 +4094,7 @@
 \else%
   \newcommand{\obs}{\markfirst{obs}{usedobs}{\boldsymbol{y}}}%
 \fi
-%  Observations.
+%  Observations vector.
 
 
 \newbool{usedobse}\setbool{usedobse}{false}
@@ -4105,7 +4103,7 @@
 \else%
   \newcommand{\obse}{\markfirst{obse}{usedobse}{y}}%
 \fi
-%  Observations (element) -- also called ``sensel''
+%  Observations element.
 
 
 \newbool{usedcmd}\setbool{usedcmd}{false}
@@ -4114,14 +4112,14 @@
 \else%
   \newcommand{\cmd}{\markfirst{cmd}{usedcmd}{\boldsymbol{u}}}%
 \fi
-%  Commands, in general.
+%  Commands vector.
 \newbool{usedcmde}\setbool{usedcmde}{false}
 \ifdefined\cmde%
   \renewcommand{\cmde}{\markfirst{cmde}{usedcmde}{u}}%
 \else%
   \newcommand{\cmde}{\markfirst{cmde}{usedcmde}{u}}%
 \fi
-%  Commands (element) -- also called ``?''.
+%  Commands element.
 
 
 
@@ -4451,68 +4449,85 @@
 
 
 
+% \newcommand{\etal}{\textit{et.\,al.}\xspace}
+
+% \newcommand{\eg}{\textit{e.g.},\xspace}
+
+% \newcommand{\etc}{\textit{etc.}\xspace}
+
+% \newcommand{\ie}{\textit{i.e.},\xspace}
+
+% \newcommand{\ala}{\textit{\`a\,la}\xspace}
+
+% \newcommand{\viceversa}{\textit{vice versa}\xspace}
+
+% \newcommand{\vs}{\textit{vs}\xspace} % Versus
+
+% \newcommand{\adhoc}{\textit{ad\,hoc}\xspace}
+
+% \newcommand{\apriori}{\textit{a\,priori}\xspace}
+
+
+
 \newbool{usedetal}\setbool{usedetal}{false}
 \ifdefined\etal%
-  \renewcommand{\etal}{\markfirst{etal}{usedetal}{\textit{et.\,al.}\xspace}}%
+  \renewcommand{\etal}{\markfirst{etal}{usedetal}{{et\,al.}\xspace}}%
 \else%
-  \newcommand{\etal}{\markfirst{etal}{usedetal}{\textit{et.\,al.}\xspace}}%
+  \newcommand{\etal}{\markfirst{etal}{usedetal}{{et\,al.}\xspace}}%
 \fi
 
 \newbool{usedeg}\setbool{usedeg}{false}
 \ifdefined\eg%
-  \renewcommand{\eg}{\markfirst{eg}{usedeg}{\textit{e.g.},\xspace}}%
+  \renewcommand{\eg}{\markfirst{eg}{usedeg}{{e.g.},\xspace}}%
 \else%
-  \newcommand{\eg}{\markfirst{eg}{usedeg}{\textit{e.g.},\xspace}}%
+  \newcommand{\eg}{\markfirst{eg}{usedeg}{{e.g.},\xspace}}%
 \fi
 
 \newbool{usedetc}\setbool{usedetc}{false}
 \ifdefined\etc%
-  \renewcommand{\etc}{\markfirst{etc}{usedetc}{\textit{etc.}\xspace}}%
+  \renewcommand{\etc}{\markfirst{etc}{usedetc}{{etc.}\xspace}}%
 \else%
-  \newcommand{\etc}{\markfirst{etc}{usedetc}{\textit{etc.}\xspace}}%
+  \newcommand{\etc}{\markfirst{etc}{usedetc}{{etc.}\xspace}}%
 \fi
 
 \newbool{usedie}\setbool{usedie}{false}
 \ifdefined\ie%
-  \renewcommand{\ie}{\markfirst{ie}{usedie}{\textit{i.e.},\xspace}}%
+  \renewcommand{\ie}{\markfirst{ie}{usedie}{{i.e.},\xspace}}%
 \else%
-  \newcommand{\ie}{\markfirst{ie}{usedie}{\textit{i.e.},\xspace}}%
-\fi
-
-\newbool{usedala}\setbool{usedala}{false}
-\ifdefined\ala%
-  \renewcommand{\ala}{\markfirst{ala}{usedala}{\textit{\`a\,la}\xspace}}%
-\else%
-  \newcommand{\ala}{\markfirst{ala}{usedala}{\textit{\`a\,la}\xspace}}%
+  \newcommand{\ie}{\markfirst{ie}{usedie}{{i.e.},\xspace}}%
 \fi
 
 \newbool{usedviceversa}\setbool{usedviceversa}{false}
 \ifdefined\viceversa%
-  \renewcommand{\viceversa}{\markfirst{viceversa}{usedviceversa}{\textit{vice versa}\xspace}}%
+  \renewcommand{\viceversa}{\markfirst{viceversa}{usedviceversa}{{vice versa}\xspace}}%
 \else%
-  \newcommand{\viceversa}{\markfirst{viceversa}{usedviceversa}{\textit{vice versa}\xspace}}%
+  \newcommand{\viceversa}{\markfirst{viceversa}{usedviceversa}{{vice versa}\xspace}}%
 \fi
 
 \newbool{usedvs}\setbool{usedvs}{false}
 \ifdefined\vs%
-  \renewcommand{\vs}{\markfirst{vs}{usedvs}{\textit{vs}\xspace}}%
+  \renewcommand{\vs}{\markfirst{vs}{usedvs}{{vs}\xspace}}%
 \else%
-  \newcommand{\vs}{\markfirst{vs}{usedvs}{\textit{vs}\xspace}}%
+  \newcommand{\vs}{\markfirst{vs}{usedvs}{{vs}\xspace}}%
 \fi
 %  Versus
 \newbool{usedadhoc}\setbool{usedadhoc}{false}
 \ifdefined\adhoc%
-  \renewcommand{\adhoc}{\markfirst{adhoc}{usedadhoc}{\textit{ad\,hoc}\xspace}}%
+  \renewcommand{\adhoc}{\markfirst{adhoc}{usedadhoc}{{ad\,hoc}\xspace}}%
 \else%
-  \newcommand{\adhoc}{\markfirst{adhoc}{usedadhoc}{\textit{ad\,hoc}\xspace}}%
+  \newcommand{\adhoc}{\markfirst{adhoc}{usedadhoc}{{ad\,hoc}\xspace}}%
 \fi
 
 \newbool{usedapriori}\setbool{usedapriori}{false}
 \ifdefined\apriori%
-  \renewcommand{\apriori}{\markfirst{apriori}{usedapriori}{\textit{a\,priori}\xspace}}%
+  \renewcommand{\apriori}{\markfirst{apriori}{usedapriori}{{a\,priori}\xspace}}%
 \else%
-  \newcommand{\apriori}{\markfirst{apriori}{usedapriori}{\textit{a\,priori}\xspace}}%
+  \newcommand{\apriori}{\markfirst{apriori}{usedapriori}{{a\,priori}\xspace}}%
 \fi
+
+
+
+
 
 
 
