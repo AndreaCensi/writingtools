@@ -1,9 +1,22 @@
-
 @string{ use_icons = 1 }
 @string{ bib_postscript.icon = "my_own_ps.gif" }
 
+@techreport{censi12phd,
+  author = {Andrea Censi},
+  title = {Bootstrapping Vehicles: A Formal Approach to Unsupervised 
+    Sensorimotor Learning Based on Invariance},
+  institution = {California Institute of Technology},
+  url = {http://purl.org/censi/2012/phd}, 
+  slides={http://purl.org/censi/research/201206-defense.pdf},
+  pdf = {http://purl.org/censi/research/preprints/bootstrapping_vehicles-1.3-a4.pdf},
+  year = {2012},
+  desc = { 
+  Could a "brain in a jar" be able to control an unknown robotic body to which it is connected, and use it to achieve useful tasks, without any prior assumptions on the body's sensors and actuators? In this work, the problem of "bootstrapping" is studied in the context of the Vehicles universe, which is an idealization of simple mobile robots, after the work of Braitenberg. The first thread of results consists in analyzing such simple sensorimotor cascades and proposing models of varying complexity that can be learned from data. The second thread regards how to properly formalize the notions of "absence of assumptions", as a particular form of invariance that the bootstrapping agent must satisfy, and proposes some invariance-based design techniques.
 
-
+  *This is version 1.3 of my dissertation -- after turning it in, I am still working to integrate the newer material that I had not the time to add. So any comments/suggestions are welcome!*
+  },
+  descicon = {http://purl.org/censi/web/media/paper-icons/bv_icon.png}
+}
 
 @inproceedings{delapuente12dense,
   author = {Paloma de la Puente and Andrea Censi},
@@ -12,16 +25,20 @@
   booktitle = {Spatial Cognition},
   address = {Kloster Seeon, Bavaria, Germany},
   year = {2012},
+  pdf = {http://authors.library.caltech.edu/28143/1/report.pdf},
+  slides = {http://purl.org/censi/research/2012-structprior-slides.pdf},
   desc = { 
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur.
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/lorem.jpg}
-}
+    [Paloma][paloma] and I 
+    study how to integrate in the mapping problem "rich" information
+    about the environment structure. We use the concept of *priorlets*
+    to capture a variety of environment priors.
+    We recover the map by optimizing at the same time for continuous and 
+    discrete variables (measurements and topology, respectively).
 
+    [paloma]: http://www.intelligentcontrol.es/paloma/
+  },
+  descicon = {http://purl.org/censi/web/media/paper-icons/delapuente12dense.png}
+}
 
 @ARTICLE{calisi12openrdk,
   author = {Daniele Calisi and Andrea Censi and   Luca Iocchi and  Daniele Nardi },
@@ -50,6 +67,8 @@
   month = {5},
   timestamp = {2011.09.13},
   url = {http://purl.org/censi/2011/diffeo},
+  pdf = {http://purl.org/censi/research/2012-diffeo.pdf},
+  slides = {http://purl.org/censi/research/2012-diffeo-slides.pdf},
   desc = { 
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -73,7 +92,8 @@
   address = {Saint Paul, MN},
   month = {5},
   timestamp = {2011.09.16},
-  url = {http://purl.org/censi/2011/fault},
+    pdf = {http://purl.org/censi/research/2012-fault.pdf},
+  slides = {http://purl.org/censi/research/2012-fault-slides.pdf},
     desc = { 
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -785,4 +805,3 @@ in the analyzed cases the method still provides a good estimate of the
   },
   descicon = {http://purl.org/censi/web/media/paper-icons/lorem.jpg}
 }
-
