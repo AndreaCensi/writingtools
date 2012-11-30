@@ -1,3 +1,36 @@
+@ARTICLE{carlone12angular_preprint,
+   author = {Carlone, Luca and Censi, Andrea},
+    title = "{From Angular Manifolds to the Integer Lattice: Guaranteed Orientation Estimation with Application to Pose Graph Optimization}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1211.3063},
+ primaryClass = "cs.RO",
+ keywords = {Computer Science - Robotics, Mathematics - Optimization and Control, 68T40, I.2.9, G.1.6, G.3, G.4},
+     year = 2012,
+    month = nov,
+  pdf = {http://arxiv.org/pdf/1211.3063v1},
+  desc = { 
+    Pose optimization is what is used in SLAM to optimize the map
+    after pose-pose and pose-features correspondences have been established. 
+    The variables in this problem are poses living
+    on the nodes of a graph, and measurements are relative measurements
+    along the graph edges. The
+    problem is hard because orientations live on a manifold
+    with nontrivial topology, which makes the problem
+    nonlinear, nonconvex, and with multiple minima.
+    [Luca][luca] and I try to solve the subproblem of orientation estimation. 
+    We find a way to convert
+    the problem to an unconstrained optimization problem on integers.
+    This makes it possible to solve the problem globally 
+    and return all likely guesses for the orientation.
+
+    [luca]: http://lucacarlone.com
+  },
+  descicon = {http://purl.org/censi/web/media/paper-icons/carlone12angular_preprint.png}
+}
+
+
+
 @techreport{censi12dptr1_preprint,
   author = {Andrea Censi and Adam Nilsson
              and Richard M. Murray
@@ -5,24 +38,28 @@
   title = {Motion planning in observations space with learned diffeomorphism models.},
   institution = {California Institute of Technology},
   url = {http://resolver.caltech.edu/CaltechCDSTR:2012.004}, 
+  pdf = {http://authors.library.caltech.edu/34529/1/dptr1b_final.pdf},
   year = {2012},
   number={CaltechCDSTR:2012.004},
   kind = {preprint},
   abstract = { We consider the problem of planning motions in observations space, based on learned models of the dynamics that associate to each action a diffeomorphism of the obser- vations domain. For an arbitrary set of diffeomorphisms, this problem must be formulated as a generic search problem. We adapt established algorithms of the graph search family. In this scenario, node expansion is very costly, as each node in the graph is associated to an uncertain diffeomorphism and corresponding predicted observations. We describe several improvements that ameliorate performance: the introduction of better image similarities to use as heuristics; a method to reduce the number of expanded nodes by preliminarily identifying redundant plans; and a method to pre-compute composite actions that make the search efficient in all directions.},
   desc = { 
-    lorem
+    Using learned diffeomorphism models of the dynamics of cameras and range-finders,
+    we formulate motion planning as a planning problem in the observations space.
+    Nodes/states are (uncertain) images; actions/edges are (uncertain) diffeomorphisms.
   },
-  descicon = {http://purl.org/censi/web/media/paper-icons/lorem.jpg}
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi12dptr1_preprint.png}
 }
 
 @techreport{censi12saccade_preprint,
-  author = {Andrea Censi and Andrew D. Straw 
+  author = {Andrea Censi* and Andrew D. Straw* 
              and Rosalyn W. Sayaman and Richard M. Murray
              and Michael H. Dickinson},
   title = {Discriminating external and internal causes
 for saccade initiation in freely flying {\em Drosophila}},
   institution = {California Institute of Technology},
   url = {http://purl.org/censi/2011/saccade}, 
+  pdf = {http://resolver.caltech.edu/CaltechAUTHORS:20120805-120309438},
   slides = {http://purl.org/censi/research/preprints/saccades/20120104-sicb.pdf},
   year = {2012},
   number={CaltechAUTHORS:20120805-120309438},
@@ -52,14 +89,16 @@ for saccade initiation in freely flying {\em Drosophila}},
   be generalized for use in other systems and employed as a tool for classifying
   effects into sensory, decision, and motor categories when used to analyze data
   from genetic behavioral screens.},
+  note = {(In the revision process for PLOS Computational Biology)},
   desc = { 
-    Fruit flies do pretty much what they please.
-
-    Second line.\\
-
-    Third.
+    What goes on in a fruit fly's head while it flies? 
+    
+    In this paper we try to identify the dependence of the decision processes
+    on the external stimulus experienced by the fly. Remarkably, we are able to 
+    say a great deal about internal sensory processing by just observing the 
+    external behavior.
   },
-  descicon = {http://purl.org/censi/web/media/paper-icons/lorem.jpg}
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi12saccade_preprint.png}
 
 }
 
@@ -69,10 +108,32 @@ for saccade initiation in freely flying {\em Drosophila}},
            from non-metric similarities},
   kind = {preprint},
   url = {http://purl.org/censi/2012/camera_calibration}, 
+  pdf = {http://andrea.caltech.edu/pub/research/preprints/camera_calibration/2012-camera_calibration.pdf},
   year = {2012},
   institution = {California Institute of Technology},
   number = {CaltechAUTHORS:20120805-103228127},
   kind = {preprint},
+  note = {(To appear in IEEE Transactions on Pattern Analysis and Machine Intelligence)},
+  desc = { 
+    [Davide] and I explain how to calibrate a generic single-view-point camera
+    by only waving it around.
+
+    [Davide]: https://sites.google.com/site/scarabotix/home
+  },
+  descicon = {http://purl.org/censi/web/media/paper-icons/lorem.jpg}
+}
+
+@techreport{censi12joint_preprint_old,
+  author = {Andrea Censi and Antonio Franchi 
+            and Luca Marchionni and Giuseppe Oriolo},
+  title = {Simultaneous calibration of odometry 
+           and sensor parameters for mobile robots},
+  note = {},
+  kind = {preprint},
+  url = {http://purl.org/censi/2012/joint_calibration},
+  year = {2012},
+  institution = {California Institute of Technology},
+  number = {CaltechAUTHORS:20120805-115123559},
   desc = { 
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -84,17 +145,17 @@ for saccade initiation in freely flying {\em Drosophila}},
   descicon = {http://purl.org/censi/web/media/paper-icons/lorem.jpg}
 }
 
-@techreport{censi12joint_preprint,
+
+@article{censi12joint_preprint,
   author = {Andrea Censi and Antonio Franchi 
             and Luca Marchionni and Giuseppe Oriolo},
   title = {Simultaneous calibration of odometry 
            and sensor parameters for mobile robots},
-  note = {},
+  note = {(to appear)},
   kind = {preprint},
+  journal = {IEEE Transactions on Robotics},
   url = {http://purl.org/censi/2012/joint_calibration},
-  year = {2012},
-  institution = {California Institute of Technology},
-  number = {CaltechAUTHORS:20120805-115123559},
+  year = {2013},
   desc = { 
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
