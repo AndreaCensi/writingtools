@@ -546,3 +546,36 @@
   nopages = {221-248}
 }
 
+
+
+@ARTICLE{carlone12angular_preprint,
+   author = {Carlone, Luca and Censi, Andrea},
+    title = "{From Angular Manifolds to the Integer Lattice: Guaranteed Orientation Estimation with Application to Pose Graph Optimization}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1211.3063},
+ primaryClass = "cs.RO",
+ keywords = {Computer Science - Robotics, Mathematics - Optimization and Control, 68T40, I.2.9, G.1.6, G.3, G.4},
+     year = 2012,
+    month = nov,
+  pdf = {http://arxiv.org/pdf/1211.3063v1},
+  desc = { 
+    Pose optimization is what is used in SLAM to optimize the map
+    after pose-pose and pose-features correspondences have been established. 
+    The variables in this problem are poses living
+    on the nodes of a graph, and measurements are relative measurements
+    along the graph edges. The
+    problem is hard because orientations live on a manifold
+    with nontrivial topology, which makes the problem
+    nonlinear, nonconvex, and with multiple minima.
+    [Luca][luca] and I try to solve the subproblem of orientation estimation. 
+    We find a way to convert
+    the problem to an unconstrained optimization problem on integers.
+    This makes it possible to solve the problem globally 
+    and return all likely guesses for the orientation.
+
+    [luca]: http://lucacarlone.com
+  },
+  descicon = {http://purl.org/censi/web/media/paper-icons/carlone12angular_preprint.png}
+}
+
