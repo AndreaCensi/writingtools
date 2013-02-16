@@ -1,829 +1,734 @@
-@string{ use_icons = 1 }
-@string{ bib_postscript.icon = "my_own_ps.gif" }
+% This file was created with JabRef 2.9b.
+% Encoding: ISO8859_1
 
-@techreport{censi12phd,
-  author = {Andrea Censi},
-  title = {Bootstrapping Vehicles: A Formal Approach to Unsupervised 
-    Sensorimotor Learning Based on Invariance},
-  institution = {California Institute of Technology},
-  url = {http://purl.org/censi/2012/phd}, 
-  slides={http://purl.org/censi/research/201206-defense.pdf},
-  pdf = {http://purl.org/censi/research/preprints/bootstrapping_vehicles-1.3-a4.pdf},
-  year = {2012},
-  desc = { 
-  Could a "brain in a jar" be able to control an unknown robotic body to which it is connected, and use it to achieve useful tasks, without any prior assumptions on the body's sensors and actuators? In this work, the problem of "bootstrapping" is studied in the context of the Vehicles universe, which is an idealization of simple mobile robots, after the work of Braitenberg. The first thread of results consists in analyzing such simple sensorimotor cascades and proposing models of varying complexity that can be learned from data. The second thread regards how to properly formalize the notions of "absence of assumptions", as a particular form of invariance that the bootstrapping agent must satisfy, and proposes some invariance-based design techniques.
+@STRING{bib_postscript.icon = {my_own_ps.gif}}
 
-  *This is version 1.3 of my dissertation -- after turning it in, I am still working to integrate the newer material that I had not the time to add. So any comments/suggestions are welcome!*
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/bv_icon.png}
-}
+@STRING{use_icons = {1}}
 
-@inproceedings{delapuente12dense,
-year={2012},
-month=aug,
-isbn={978-3-642-32731-5},
-booktitle={Spatial Cognition VIII},
-volume={7463},
-series={Lecture Notes in Computer Science},
-editor={Stachniss, Cyrill and Schill, Kerstin and Uttal, David},
-doi={10.1007/978-3-642-32732-2_6},
-title={Dense Map Inference with User-Defined Priors: From Priorlets to Scan Eigenvariations},
-doi ={10.1007/978-3-642-32732-2_6},
-publisher={Springer Berlin Heidelberg},
-author={Puente, Paloma and Censi, Andrea},
-pages={94-113},
-  pdf = {http://authors.library.caltech.edu/28143/1/report.pdf},
-  slides = {http://purl.org/censi/research/2012-structprior-slides.pdf},
-  desc = { 
-    [Paloma][paloma] and I 
-    study how to integrate in the mapping problem "rich" information
-    about the environment structure. We use the concept of *priorlets*
-    to capture a variety of environment priors.
-    We recover the map by optimizing at the same time for continuous and 
-    discrete variables (measurements and topology, respectively).
-
-    [paloma]: http://www.intelligentcontrol.es/paloma/
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/delapuente12dense.png}
-
-}
-  
-
-@inproceedings{delapuente12dense_old,
-  author = {Paloma de la Puente and Andrea Censi},
-  title = {Dense map inference with user-defined priors: 
-           from priorlets to scan eigenvariations},
-  booktitle = {Spatial Cognition},
-  address = {Kloster Seeon, Bavaria, Germany},
-  year = {2012},
-  month = aug,
-  pdf = {http://authors.library.caltech.edu/28143/1/report.pdf},
-  slides = {http://purl.org/censi/research/2012-structprior-slides.pdf},
-  desc = { 
-    [Paloma][paloma] and I 
-    study how to integrate in the mapping problem "rich" information
-    about the environment structure. We use the concept of *priorlets*
-    to capture a variety of environment priors.
-    We recover the map by optimizing at the same time for continuous and 
-    discrete variables (measurements and topology, respectively).
-
-    [paloma]: http://www.intelligentcontrol.es/paloma/
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/delapuente12dense.png}
+@INPROCEEDINGS{BaCa04,
+  author = {Bahadori, S. and Calisi, D. and Censi, A. and Farinelli, A. and Grisetti,
+	G. and Iocchi, L. and Nardi, D.},
+  title = {Intelligent Systems for Search and Rescue},
+  booktitle = {Proc. of IROS Workshop ``Urban Search and Rescue: from RoboCup to
+	real world applications'' (IROS), Sendai, Japan},
+  year = {2004},
+  desc = { In my first lab, we used to do rescue robotics. Those were the days
+	when I was in charge of charging the robot batteries... },
+  descicon = {http://purl.org/censi/web/media/paper-icons/BaCa04.png},
+  kind = {unref},
+  pdf = {http://purl.org/censi/research/2004-iros-rescue.pdf}
 }
 
 @ARTICLE{calisi12openrdk,
-  author = {Daniele Calisi and Andrea Censi and   Luca Iocchi and  Daniele Nardi },
-  title = {Design choices for modular and flexible robotic software development: the {OpenRDK} viewpoint},
- journal = {Journal of Software Engineering for Robotics},
- issue = {3},
- number = 1,
+  author = {Daniele Calisi and Andrea Censi and Luca Iocchi and Daniele Nardi
+	},
+  title = {Design choices for modular and flexible robotic software development:
+	the {OpenRDK} viewpoint},
+  journal = {Journal of Software Engineering for Robotics},
   year = {2012},
-  sortyear={2010},
-  url ={http://joser.unibg.it/index.php?journal=joser&page=article&op=view&path%5B%5D=48}
+  number = {1},
+  issue = {3},
+  sortyear = {2010},
+  url = {http://joser.unibg.it/index.php?journal=joser&page=article&op=view&path%5B%5D=48}
 }
 
-@inproceedings{censi12diffeo,
-  author = {Andrea Censi and Richard M. Murray},
-  title = {Learning diffeomorphism models of robotic sensorimotor cascades},
-  booktitle = {Proceedings of the {IEEE} International Conference 
-                 on Robotics and Automation ({ICRA})},
+@INPROCEEDINGS{calisi08openrdk,
+  author = {Daniele Calisi and Andrea Censi and Luca Iocchi and Daniele Nardi},
+  title = {{OpenRDK}: A Modular Framework for Robotic Software Development },
+  booktitle = {Proceedings of the IEEE/RSJ International Conference on Intelligent
+	Robots and Systems (IROS)},
+  year = {2008},
+  address = {Nice, France},
+  month = sep,
+  abstract = {In this paper we conduct an analysis of existingframeworks for robot
+	software development and wepresent OpenRDK, a modular framework focused
+	onrapid development of distributed robotic systems.It has been designed
+	following users' advice andhas been in use within our group for severalyears.
+	By now OpenRDK has been successfullyapplied in diverse applications
+	with heterogeneousrobots and as we believe it is fruitfully usableby
+	others we are releasing it as open source.. },
+  doi = {10.1109/IROS.2008.4651213},
+  pdf = {http://purl.org/censi/research/2008-iros-openrdk.pdf},
+  slides = {http://purl.org/censi/research/2008-iros-openrdk-slides.pdf},
+  url = {http://openrdk.sourceforge.net}
+}
+
+@INPROCEEDINGS{carpin09hsm3d,
+  author = {Carpin, Stefano and Censi, Andrea},
+  title = {An experimental assessment of the HSM3D algorithm for sparse and
+	colored data},
+  booktitle = {Proceedings of the {IEEE/RSJ} International Conference on Intelligent
+	Robots and Systems (IROS)},
+  year = {2009},
+  pages = {3595-3600},
+  address = {St. Louis, MO},
+  month = oct,
+  desc = { Adding color to [HSM3D].
+	
+	 [HSM3D]: http://purl.org/censi/2008/hsm3d},
+  descicon = {http://purl.org/censi/web/media/paper-icons/carpin09hsm3d.png},
+  doi = {10.1109/IROS.2009.5354618}
+}
+
+@TECHREPORT{censi12phd,
+  author = {Andrea Censi},
+  title = {Bootstrapping Vehicles: A Formal Approach to Unsupervised Sensorimotor
+	Learning Based on Invariance},
+  institution = {California Institute of Technology},
   year = {2012},
-  address = {Saint Paul, MN},
+  desc = { Could a "brain in a jar" be able to control an unknown robotic body
+	to which it is connected, and use it to achieve useful tasks, without
+	any prior assumptions on the body's sensors and actuators? In this
+	work, the problem of "bootstrapping" is studied in the context of
+	the Vehicles universe, which is an idealization of simple mobile
+	robots, after the work of Braitenberg. The first thread of results
+	consists in analyzing such simple sensorimotor cascades and proposing
+	models of varying complexity that can be learned from data. The second
+	thread regards how to properly formalize the notions of "absence
+	of assumptions", as a particular form of invariance that the bootstrapping
+	agent must satisfy, and proposes some invariance-based design techniques.
+	
+	 *This is version 1.3 of my dissertation -- after turning it in, I
+	am still working to integrate the newer material that I had not the
+	time to add. So any comments/suggestions are welcome!* },
+  descicon = {http://purl.org/censi/web/media/paper-icons/bv_icon.png},
+  pdf = {http://purl.org/censi/research/preprints/bootstrapping_vehicles-1.3-a4.pdf},
+  slides = {http://purl.org/censi/research/201206-defense.pdf},
+  url = {http://purl.org/censi/2012/phd}
+}
+
+@ARTICLE{censi11kf,
+  author = {Censi, Andrea},
+  title = {Kalman filtering with intermittent observations: convergence for
+	semi-Markov chains and an intrinsic performance measure},
+  journal = {IEEE Transactions on Automatic Control},
+  year = {2011},
+  month = feb,
+  desc = { This paper considers the problem of linear filtering over unreliable
+	channels. Previous research by Sinopoli et al. has shown that there
+	is a threshold on the observations arrival probability that distinguishes
+	between a "stable" and an "unstable" behavior. This paper shows that
+	those conclusions are misleading and only depend on a particular
+	choice of the loss function. In fact, the probability distribution
+	of the filter state exists for each nonzero arrival probability.
+	},
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi11kf.png},
+  doi = {10.1109/TAC.2010.2097350},
+  issn = {0018-9286},
+  pdf = {http://purl.org/censi/research/2011-tac-kf-geometry.pdf},
+  sortyear = {2010}
+}
+
+@INPROCEEDINGS{censi09fractals,
+  author = {Andrea Censi},
+  title = {On the performance of {K}alman filtering with intermittent observations:
+	a geometric approach with fractals},
+  booktitle = {Proceedings of the American Control Conference (ACC)},
+  year = {2009},
+  address = {St. Louis, Missouri},
+  month = jun,
+  abstract = {This paper describes the stationary distribution of the a-posteriori
+	covariance matrix of a Kalman filter when the availability of measurements
+	is subject to random phenomena such as lossy network links. If a
+	certain non-overlapping condition is satisfied, the cdf has a fractal
+	nature, and there exists a closed-form expression for it. If the
+	condition is not satisfied, deciding whether the cdf is singular
+	or not, even in the scalar case, is at least as hard as some open
+	problems in measure and number theory. },
+  desc = { The ultimate match: Cantor meets Kalman! },
+  descicon = {http://purl.org/censi/web/media/paper-icons/fractals.jpg},
+  doi = {10.1109/ACC.2009.5159869},
+  pdf = {http://purl.org/censi/research/2009-acc-fractals.pdf},
+  slides = {http://purl.org/censi/research/2009-acc-fractals-slides.pdf},
+  url = {http://purl.org/censi/2008/fractals}
+}
+
+@INPROCEEDINGS{censi09posetracking,
+  author = {Andrea Censi},
+  title = {On achievable accuracy for pose tracking},
+  booktitle = {Proceedings of the {IEEE} International Conference on Robotics and
+	Automation ({ICRA})},
+  year = {2009},
+  address = {Kobe, Japan},
   month = may,
-  timestamp = {2011.09.13},
-  doi = {10.1109/ICRA.2012.6225318},
-  url = {http://purl.org/censi/2011/diffeo},
-  pdf = {http://purl.org/censi/research/2012-diffeo.pdf},
-  slides = {http://purl.org/censi/research/2012-diffeo-slides.pdf},
-  desc = { 
-    We show that diffeomorphisms can represent the dynamics of 
-    both range-finders as well as cameras, and can be easily learned 
-    from raw sensorimotor data.
-    A [follow-up paper][follow] shows how to do planning 
-    in observations space with these learned diffeomorphisms.
-
-    [follow]: http://purl.org/censi/2012/dptr1
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi12diffeo.png}
+  abstract = { This paper presents Cramer-Rao bound-like inequalities for pose tracking,
+	which is defined as the problem of recovering the robot displacement
+	given two successive readings of a relative sensor. Computing the
+	exact Fisher Information Matrix (FIM) for pose tracking is hard,
+	because the state comprises the map, which is infinite-dimensional
+	and unknown. This paper shows that the FIM for pose tracking can
+	be bounded by a function of the FIM for localization on a known map,
+	thereby reducing the analysis to a finite-dimensional problem. The
+	resulting bounds are independent of the map prior and representation.
+	The results are valid for any relative sensor; the experimental verification
+	is done for the particular case of pose tracking using range-finders
+	(scan matching). },
+  desc = { In principle, how precise can a scan-matching method be? This paper
+	gives a very simple relation between the achievable accuracy for
+	localization (when the map is known) and the accuracy for scan-matching
+	(when the map is *not* known). },
+  descicon = {http://purl.org/censi/web/media/paper-icons/posetracking.jpg},
+  doi = {10.1109/ROBOT.2009.5152236},
+  pdf = {http://purl.org/censi/research/2009-icra-posetracking.pdf},
+  slides = {http://purl.org/censi/research/2009-icra-posetracking-slides.pdf},
+  url = {http://purl.org/censi/2008/posetracking}
 }
 
+@INPROCEEDINGS{censi08plicp,
+  author = {Andrea Censi},
+  title = {An {ICP} variant using a point-to-line metric},
+  booktitle = {Proceedings of the {IEEE} International Conference on Robotics and
+	Automation ({ICRA})},
+  year = {2008},
+  address = {Pasadena, CA},
+  month = may,
+  abstract = { This paper describes PLICP, an ICP (Iterative Closest/Corresponding
+	Point) variant that uses a point-to-line metric, and an exact closed-form
+	for minimizing such metric. The resulting algorithm has some interesting
+	properties: it converges quadratically, and in a finite number of
+	steps. The method is validated against vanilla ICP, IDC (Iterative
+	Dual Correspondences), and MbICP (Metric-Based ICP) by reproducing
+	the experiments performed in Minguez et al. (2006). The experiments
+	suggest that PLICP is more precise, and requires less iterations.
+	However, it is less robust to very large initial displacement errors.
+	The last part of the paper is devoted to purely algorithmic optimization
+	of the correspondence search; this allows for significant speed-up
+	of the computation. The source code is available for download. },
+  desc = { An extremely fast and precise ICP variant for range-finder scan matching,
+	which converges quadratically in a finite number of steps. [The implementation
+	is available][imp] and included also in ROS.
+	
+	 [imp]: http://purl.org/censi/2007/plicp },
+  descicon = {http://purl.org/censi/web/media/paper-icons/plicp.jpg},
+  doi = {10.1109/ROBOT.2008.4543181},
+  pdf = {http://purl.org/censi/research/2008-icra-plicp.pdf},
+  slides = {http://purl.org/censi/research/2008-icra-plicp-slides.pdf},
+  url = {http://purl.org/censi/2007/plicp}
+}
+
+@INPROCEEDINGS{censi07accurate,
+  author = {Andrea Censi},
+  title = {An accurate closed-form estimate of {ICP}'s covariance},
+  booktitle = {Proceedings of the {IEEE} International Conference on Robotics and
+	Automation ({ICRA})},
+  year = {2007},
+  pages = {3167--3172},
+  address = {Rome, Italy},
+  month = apr,
+  abstract = { Existing methods for estimating the covariance of the ICP (Iterative
+	Closest/Corresponding Point) algorithm are either inaccurate or are
+	computationally too expensive to be used online. This paper proposes
+	a new method, based on the analysis of the error function being minimized.
+	It considers that the correspondences are not independent (the same
+	measurement being used in more than one correspondence), and explicitly
+	utilizes the covariance matrix of the measurements, which are not
+	assumed to be independent either. The validity of the approach is
+	verified through extensive simulations: it is more accurate than
+	previous methods and its computational load is negligible. The ill-posedness
+	of the surface matching problem is explicitly tackled for under-constrained
+	situations by performing an observability analysis; in the analyzed
+	cases the method still provides a good estimate of the error projected
+	on the observable manifold.},
+  desc = { This paper describes a *proper* way to compute the covariance of
+	an ICP estimate, which is shown to be superior to the existing algernatives.
+	},
+  descicon = {http://purl.org/censi/web/media/paper-icons/icpcov.jpg},
+  doi = {10.1109/ROBOT.2007.363961},
+  issn = {1050-4729},
+  pdf = {http://purl.org/censi/research/2007-icra-icpcov.pdf},
+  slides = {http://purl.org/censi/research/2007-icra-icpcov-slides.pdf},
+  url = {http://purl.org/censi/2006/icpcov}
+}
+
+@INPROCEEDINGS{censi07achievable,
+  author = {Andrea Censi},
+  title = {On achievable accuracy for range-finder localization},
+  booktitle = {Proceedings of the {IEEE} International Conference on Robotics and
+	Automation ({ICRA})},
+  year = {2007},
+  pages = {4170--4175},
+  address = {Rome, Italy},
+  month = apr,
+  abstract = { The covariance of every unbiased estimator is bounded by the Cramer-Rao
+	lower bound, which is the inverse of Fisher's information matrix.
+	This paper shows that, for the case of localization with range-finders,
+	Fisher's matrix is a function of the expected readings and of the
+	orientation of the environment's surfaces at the sensed points. The
+	matrix also offers a mathematically sound way to characterize under-
+	constrained situations as those for which it is singular: in those
+	cases the kernel describes the direction of maximum uncertainty.
+	This paper also introduces a simple model of unstructured environments
+	for which the Cramer-Rao bound is a function of two statistics of
+	the shape of the environment: the average radius and a measure of
+	the irregularity of the surfaces. Although this model is not valid
+	for all environments, it allows for some interesting qualitative
+	considerations. As an experimental validation, this paper reports
+	simulations comparing the bound with the actual performance of the
+	ICP (Iterative Closest/Corresponding Point) algorithm. Finally, it
+	is discussed the difficulty in extending these results to find a
+	lower bound for accuracy in scan matching and SLAM.},
+  desc = { How precise can a localization method be? This paper derives the
+	Cramer-Rao lower bound for localization with range finders. },
+  descicon = {http://purl.org/censi/web/media/paper-icons/accuracy.jpg},
+  doi = {10.1109/ROBOT.2007.364120},
+  issn = {1050-4729},
+  pdf = {http://purl.org/censi/research/2007-icra-accuracy.pdf},
+  slides = {http://purl.org/censi/research/2007-icra-accuracy-slides.pdf},
+  url = {http://purl.org/censi/2006/accuracy}
+}
+
+@TECHREPORT{censi06comparison,
+  author = {Andrea Censi},
+  title = {A comparison of algorithms for likelihood approximation in Bayesian
+	localization},
+  institution = {Sapienza Universita di Roma},
+  year = {2006},
+  desc = { },
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi06comparison.png},
+  kind = {unref},
+  pdf = {http://purl.org/censi/research/2006-draft-acomparison.pdf},
+  url = {http://purl.org/censi/2006/ghtv}
+}
+
+@INPROCEEDINGS{censi06scan,
+  author = {Andrea Censi},
+  title = {Scan matching in a probabilistic framework},
+  booktitle = {Proceedings of the IEEE International Conference on Robotics and
+	Automation (ICRA)},
+  year = {2006},
+  pages = {2291--2296},
+  address = {Orlando, Florida},
+  month = may,
+  desc = { },
+  descicon = {http://purl.org/censi/web/media/paper-icons/gpm.jpg},
+  doi = {10.1109/ROBOT.2006.1642044},
+  pdf = {http://purl.org/censi/research/2006-icra-gpm.pdf},
+  slides = {http://purl.org/censi/research/2006-icra-gpm-slides.pdf},
+  url = {http://purl.org/censi/2006/gpm}
+}
+
+@INPROCEEDINGS{censi08ppu,
+  author = {Andrea Censi and Daniele Calisi and Alessandro De Luca and Giuseppe
+	Oriolo},
+  title = {A {B}ayesian framework for optimal motion planning with uncertainty
+	},
+  booktitle = {Proceedings of the {IEEE} International Conference on Robotics and
+	Automation ({ICRA})},
+  year = {2008},
+  address = {Pasadena, CA},
+  month = may,
+  abstract = { Modeling robot motion planning with uncertainty in a Bayesian framework
+	leads to a computationally intractable stochastic control problem.
+	We seek hypotheses that can justify a separate implementation of
+	control, localization and planning. In the end, we reduce the stochastic
+	control problem to path-planning in the extended space of poses x
+	covariances; the transitions between states are modeled through the
+	use of the Fisher information matrix. In this framework, we consider
+	two problems: minimizing the execution time, and minimizing the final
+	covariance, with an upper bound on the execution time. Two correct
+	and complete algorithms are presented. The first is the direct extension
+	of classical graph-search algorithms in the extended space. The second
+	one is a back-projection algorithm: uncertainty constraints are propagated
+	backward from the goal towards the start state. },
+  desc = { How to get to your goal without getting lost. This was my Master's
+	degree final thesis. },
+  descicon = {http://purl.org/censi/web/media/paper-icons/ppu.jpg},
+  doi = {10.1109/ROBOT.2008.4543469},
+  pdf = {http://purl.org/censi/research/2008-icra-ppu.pdf},
+  slides = {http://purl.org/censi/research/2008-icra-ppu-slides.pdf},
+  url = {http://purl.org/censi/2007/ppu}
+}
+
+@INPROCEEDINGS{censi09hsm3d,
+  author = {Andrea Censi and Stefano Carpin},
+  title = {{HSM3D}: Feature-Less Global {6DOF} Scan-Matching in the {H}ough/{R}adon
+	Domain },
+  booktitle = {Proceedings of the {IEEE} International Conference on Robotics and
+	Automation ({ICRA})},
+  year = {2009},
+  address = {Kobe, Japan},
+  month = may,
+  abstract = { This paper presents HSM3D, an algorithm for global rigid6DOF alignment
+	of 3D point clouds. The algorithm works byprojecting the two input
+	sets into the Radon/Hough domain,whose properties allow to decompose
+	the 6DOF search into aseries of fast one-dimensional cross-correlations.
+	Noplanes or other particular features must be present in theinput
+	data, and the algorithm is provably complete in thecase of noise-free
+	input. The algorithm has beenexperimentally validated on publicly
+	available data sets. },
+  desc = { [Stefano][carpin] and I try to do [HSM][hsm] in 3D: much more difficult!
+	
+	 [HSM]: http://purl.org/censi/2006/hsm [carpin]: https://eng.ucmerced.edu/people/scarpin/StefanoCarpin
+	},
+  descicon = {http://purl.org/censi/web/media/paper-icons/hsm3d.jpg},
+  doi = {10.1109/ROBOT.2009.5152431},
+  pdf = {http://purl.org/censi/research/2009-icra-hsm3d.pdf},
+  slides = {http://purl.org/censi/research/2009-icra-hsm3d-slides.pdf},
+  url = {http://purl.org/censi/2008/hsm3d}
+}
 
 @INPROCEEDINGS{censi12fault,
   author = {Andrea Censi and Magnus Hakansson and Richard M. Murray},
   title = {Fault detection and isolation from uninterpreted data in robotic
-  sensorimotor cascades},
-  booktitle = {Proceedings of the {IEEE} International Conference 
-                 on Robotics and Automation ({ICRA})},
+	sensorimotor cascades},
+  booktitle = {Proceedings of the {IEEE} International Conference on Robotics and
+	Automation ({ICRA})},
   year = {2012},
   address = {Saint Paul, MN},
   month = may,
-  timestamp = {2011.09.16},
+  desc = { This paper shows how bootstrapped low-level sensorimotor models,
+	such as [BDS][BDS] and [BGDS][BGDS] can be used for faults and anomaly
+	detection in sensorimotor cascades. The concept of *usefulness* allows
+	to do detection without having a model for the healthy system.
+	
+	 [BDS]: http://purl.org/censi/2010/boot [BGDS]: http://purl.org/censi/2011/bgds
+	},
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi12fault.png},
   doi = {10.1109/ICRA.2012.6225311},
-    pdf = {http://purl.org/censi/research/2012-fault.pdf},
+  pdf = {http://purl.org/censi/research/2012-fault.pdf},
   slides = {http://purl.org/censi/research/2012-fault-slides.pdf},
-  url = {http://purl.org/censi/2011/fault},
-    desc = { 
-    This paper shows how bootstrapped low-level sensorimotor models,
-    such as [BDS][BDS] and [BGDS][BGDS] can be used 
-    for faults and anomaly detection in sensorimotor cascades.
-    The concept of *usefulness* allows to do detection without
-    having a model for the healthy system.
-
-    [BDS]: http://purl.org/censi/2010/boot
-    [BGDS]: http://purl.org/censi/2011/bgds
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi12fault.png}
+  timestamp = {2011.09.16},
+  url = {http://purl.org/censi/2011/fault}
 }
 
-
-@inproceedings{censi11semantics,
-  author = {Andrea Censi and Richard M. Murray},
-  title = {Uncertain semantics, representation nuisances, 
-          and necessary invariance properties of bootstrapping agents},
-  booktitle = {Joint IEEE International Conference on Development and Learning
-    and Epigenetic Robotics},
-  year = {2011},
-  doi = {10.1109/DEVLRN.2011.6037313},
-  month = aug,
-  address={Frankfurt, Germany},
-  pdf = {http://purl.org/censi/research/2011-icdl-invariance.pdf},
-  slides = {http://purl.org/censi/research/2011-icdl-invariance-poster.pdf},
-  desc = { 
-    This paper tries to describe formally the idea of "uncertain semantics"
-    in a bootstrapping problem by using the mathematics of group actions.
-    If interested, please see Part 1 and Part 3 of 
-    of [my dissertation][phd], where these ideas are further expanded
-    and made much more formal than in this short paper.
-
-    [phd]: http://purl.org/censi/2012/phd
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi11semantics.png}
+@INPROCEEDINGS{censi09attitude,
+  author = {Andrea Censi and Shuo Han and Sawyer B. Fuller and Richard M. Murray},
+  title = {A bio-plausible design for visual attitude stabilization},
+  booktitle = {Proceedings of the 48th IEEE Conference on Decision and Control},
+  year = {2009},
+  address = {Shanghai, China},
+  month = dec,
+  desc = { This paper describes a "bio-plausible" control strategy for stabilizing
+	the attitude in SO(3) of a flying body. The [follow-up paper][follow]
+	considers the SE(3) case.
+	
+	 [follow]: http://purl.org/hanshuo/2010/pd_pose_stabilization },
+  descicon = {http://purl.org/censi/web/media/paper-icons/bio-attitude.jpg},
+  doi = {10.1109/CDC.2009.5400408},
+  pdf = {http://purl.org/censi/research/2009-cdc-bio-attitude.pdf},
+  slides = {http://purl.org/censi/research/2009-cdc-bio-attitude-slides.pdf}
 }
 
+@INPROCEEDINGS{censi05hough,
+  author = {Andrea Censi and Luca Iocchi and Giorgio Grisetti},
+  title = {Scan matching in the {H}ough domain},
+  booktitle = {Proceedings of the IEEE International Conference on Robotics and
+	Automation (ICRA)},
+  year = {2005},
+  pages = {2739--2744},
+  address = {Barcelona, Spain},
+  desc = { A global, complete algorithm for scan matching based on the Hough/Radon
+	transform. This was my Bachelor's thesis. },
+  descicon = {http://purl.org/censi/web/media/paper-icons/hsm.jpg},
+  doi = {10.1109/ROBOT.2005.1570528},
+  pdf = {http://purl.org/censi/research/2005-icra-hsm.pdf},
+  slides = {http://purl.org/censi/research/2005-icra-hsm-slides.ppt},
+  url = {http://purl.org/censi/2006/hsm}
+}
 
-@inproceedings{scaramuzza11visodo,
-  author = {Davide Scaramuzza and Andrea Censi and Kostas Daniilidis},
-  title = {Exploiting motion priors in visual odometry for vehicle-mounted 
-            cameras with non-holonomic constraints},
-  booktitle = {{IEEE/RSJ} International Conference on Intelligent 
-                Robots and Systems (IROS)},
-  year = {2011},
-  month = sep,
-  address = {San Francisco, CA},
-  doi = {10.1109/IROS.2011.6095123},
-  pdf = {http://purl.org/censi/research/2011-iros-scaRansac.pdf},
-      desc = { 
-    Fast and precise visual odometry by exploiting the motion priors
-    specific to the dynamics of a car.
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/scaramuzza11visodo.png}
- }
- 
+@INPROCEEDINGS{censi08calib,
+  author = {Andrea Censi and Luca Marchionni and Giuseppe Oriolo},
+  title = { Simultaneous maximum-likelihood calibration of robot and sensor
+	parameters},
+  booktitle = {Proceedings of the {IEEE} International Conference on Robotics and
+	Automation ({ICRA})},
+  year = {2008},
+  address = {Pasadena, CA},
+  month = may,
+  abstract = { For a differential-drive mobile robot equipped with an on-board range
+	sensor, there are six parameters to calibrate: three for the odometry
+	(radii and distance between the wheels), and three for the pose of
+	the sensor with respect to the robot frame. This paper describes
+	a method for calibrating all six parameters at the same time, without
+	the need for external sensors or devices. Moreover, it is not necessary
+	to drive the robot along particular trajectories. The available data
+	are the measures of the angular velocities of the wheels and the
+	range sensor readings. The maximum-likelihood calibration solution
+	is found in a closed form. },
+  desc = { Please see [the journal version][j].
+	
+	 [j]: http://purl.org/censi/2012/joint_calibration },
+  descicon = {http://purl.org/censi/web/media/paper-icons/calibration.jpg},
+  doi = {10.1109/ROBOT.2008.4543516},
+  pdf = {http://purl.org/censi/research/2008-icra-calibration.pdf},
+  slides = {http://purl.org/censi/research/2008-icra-calibration-slides.pdf},
+  url = {http://purl.org/censi/2007/calib},
+  video = {http://purl.org/censi/research/2008-icra-calibration-video.mpg}
+}
 
-@inproceedings{censi11bgds,
+@INPROCEEDINGS{censi12diffeo,
   author = {Andrea Censi and Richard M. Murray},
-  title = {Bootstrapping sensorimotor cascades: a group-theoretic perspective},
-  booktitle = {{IEEE/RSJ} International Conference on Intelligent 
-                Robots and Systems (IROS)},
-  year = {2011},
-  month = sep,
-  address = {San Francisco, CA},
-  doi = {10.1109/IROS.2011.6095151},
-  pdf = {http://purl.org/censi/research/2011-iros-bgds.pdf},
-  url = {http://purl.org/censi/2011/bgds},
-  desc = { 
-    This paper discusses a class of models (BGDS) 
-    that capture
-    the bilinear dynamics of heterogeneous sensors, such as field samplers,
-    cameras, and range-finders, as well as their
-    dependence on the gradient of the observations.
+  title = {Learning diffeomorphism models of robotic sensorimotor cascades},
+  booktitle = {Proceedings of the {IEEE} International Conference on Robotics and
+	Automation ({ICRA})},
+  year = {2012},
+  address = {Saint Paul, MN},
+  month = may,
+  desc = { We show that diffeomorphisms can represent the dynamics of both range-finders
+	as well as cameras, and can be easily learned from raw sensorimotor
+	data. A [follow-up paper][follow] shows how to do planning in observations
+	space with these learned diffeomorphisms.
+	
+	 [follow]: http://purl.org/censi/2012/dptr1 },
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi12diffeo.png},
+  doi = {10.1109/ICRA.2012.6225318},
+  pdf = {http://purl.org/censi/research/2012-diffeo.pdf},
+  slides = {http://purl.org/censi/research/2012-diffeo-slides.pdf},
+  timestamp = {2011.09.13},
+  url = {http://purl.org/censi/2011/diffeo}
+}
 
-    This material has been greatly expanded in 
-    [my dissertation][phd] (Part 2).
-
-    [phd]: http://purl.org/censi/2012/phd
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi11bgds.png}
- }
-
-
-
-@inproceedings{censi11bds,
+@INPROCEEDINGS{censi11bds,
   author = {Andrea Censi and Richard M. Murray},
   title = {Bootstrapping bilinear models of robotic sensorimotor cascades},
-  booktitle = {Proceedings of the {IEEE} International Conference 
-                 on Robotics and Automation ({ICRA})},
+  booktitle = {Proceedings of the {IEEE} International Conference on Robotics and
+	Automation ({ICRA})},
   year = {2011},
   address = {Shanghai, China},
   month = may,
-  url = {http://purl.org/censi/2010/boot},
+  desc = { This paper shows that simple bilinear models capture the dynamics
+	of heterogeneous sensors, such as field samplers, cameras, and range-finders.
+	These models can be learned unsupervisedly and used to perform simple
+	tasks.
+	
+	 This material has been greatly expanded in [my dissertation][phd]
+	(Part 2), but not yet published.
+	
+	 [phd]: http://purl.org/censi/2012/phd
+	},
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi11bds.png},
+  doi = {10.1109/ICRA.2011.5979844},
   pdf = {http://purl.org/censi/research/2010-bootstrapping-bilinear-short.pdf},
   slides = {http://purl.org/censi/research/2011-icra-bds-slides.pdf},
-  desc = { 
-    This paper shows that simple bilinear models capture
-    the dynamics of heterogeneous sensors, such as field samplers,
-    cameras, and range-finders. These models can be learned 
-    unsupervisedly and used to perform simple tasks.
-
-    This material has been greatly expanded in 
-    [my dissertation][phd] (Part 2), but not yet published.
-
-    [phd]: http://purl.org/censi/2012/phd
-
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi11bds.png}
+  url = {http://purl.org/censi/2010/boot}
 }
 
-
-@article{censi11kf, 
-author={Censi, Andrea}, 
-journal={IEEE Transactions on Automatic Control}, 
-title={Kalman filtering with intermittent observations: 
-       convergence for semi-Markov chains 
-      and an intrinsic performance measure}, 
-year={2011}, 
-sortyear={2010},
-month=feb,
-doi={10.1109/TAC.2010.2097350}, 
-ISSN={0018-9286},
-pdf={http://purl.org/censi/research/2011-tac-kf-geometry.pdf},
-desc = { 
-    This paper considers the problem
-    of linear filtering over unreliable channels.
-    Previous research by Sinopoli et al. has
-    shown that there is a threshold on the observations
-    arrival probability that distinguishes between
-    a "stable" and an "unstable" behavior. This paper 
-    shows that those conclusions are misleading and
-    only depend on a particular choice of the loss function.
-    In fact, the probability distribution of the filter 
-    state exists for each nonzero arrival probability.
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi11kf.png}
+@INPROCEEDINGS{censi11bgds,
+  author = {Andrea Censi and Richard M. Murray},
+  title = {Bootstrapping sensorimotor cascades: a group-theoretic perspective},
+  booktitle = {{IEEE/RSJ} International Conference on Intelligent Robots and Systems
+	(IROS)},
+  year = {2011},
+  address = {San Francisco, CA},
+  month = sep,
+  desc = { This paper discusses a class of models (BGDS) that capture the bilinear
+	dynamics of heterogeneous sensors, such as field samplers, cameras,
+	and range-finders, as well as their dependence on the gradient of
+	the observations.
+	
+	 This material has been greatly expanded in [my dissertation][phd]
+	(Part 2).
+	
+	 [phd]: http://purl.org/censi/2012/phd },
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi11bgds.png},
+  doi = {10.1109/IROS.2011.6095151},
+  pdf = {http://purl.org/censi/research/2011-iros-bgds.pdf},
+  url = {http://purl.org/censi/2011/bgds}
 }
 
- 
-
-
-@inproceedings{han10pose, 
-  author={Shuo Han and Andrea Censi and Andrew D. Straw and Richard M. Murray}, 
-booktitle={{IEEE/RSJ} International Conference 
-           on Intelligent Robots and Systems (IROS)}, 
-title={A bio-plausible design for visual pose stabilization}, 
-year={2010},  
-month=oct,
-address={Taipei, Taiwan},
-pages={5679--5686}, 
-
-abstract={We consider the problem of purely visual pose stabilization (also
-known as servoing) of a second-order rigid-body system with six degrees of
-freedom: how to choose forces and torques, based on the current view and a
-memorized goal image, to steer the pose towards a desired one. Emphasis has been
-given to the bio-plausibility of the computation, in the sense that the control
-laws could be in principle implemented on the neural substrate of simple
-insects. We show that stabilizing laws can be realized by bilinear/quadratic
-operations on the visual input. This particular computational structure has
-several numerically favorable characteristics (sparse, local, and parallel), and
-thus permits an efficient engineering implementation. We show results of the
-control law tested on an indoor helicopter platform.},
-pdf={http://purl.org/censi/research/2010-iros-bioplausible_pose.pdf},
-doi={10.1109/IROS.2010.5652857}, 
-video = {http://purl.org/hanshuo/2010/pd_pose_stabilization},
-slides={http://purl.org/censi/research/2009-cdc-bio-attitude-slides.pdf},
-desc = { 
-    Stabilizing hovering for an helicopter using a bio-plausible strategy.
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/han10pose.png}
-}
-%pdf={http://caltechcdstr.library.caltech.edu/172/},
-%note = {(Link is to the extended technical report)},
-
-% otherlink = {http://www.youtube.com/watch?v=H9zORGbfTK4#t=00m20s$ How we spent one month of our lives},
-
-@incollection{scrapper09,
-   author = {Scrapper, C. and Madhavan, R. and Lakaemper, R.
-    and Censi, A. and Godil, A. and Wagan, A. and Jacoff, A.},
-   affiliation = {The MITRE Corporation, 22102 McLean, VA USA},
-   title = {Quantitative Assessment of Robot-Generated Maps},
-   booktitle = {Performance Evaluation and Benchmarking of Intelligent Systems},
-   editor = {Madhavan, Raj and Tunstel, Edward and Messina, Elena},
-   publisher = {Springer US},
-   isbn = {978-1-4419-0492-8},
-   pages = {221-248},
-   doi = {10.1007/978-1-4419-0492-8_10},
-   pdf = {http://dx.doi.org/10.1007/978-1-4419-0492-8_10},
-   abstract = {Mobile robotic mapping is now considered to be a sufficiently
-mature field with demonstrated successes in various domains. While much progress
-has been made in the development of computationally efficient and consistent
-mapping schemes, it is still murky, at best, on how these maps can be evaluated.
-We are motivated by the absence of an accepted standard for quantitatively
-measuring the performance of robotic mapping systems against user-defined
-requirements. It is our belief that the development of standardized methods for
-quantitatively evaluating existing robotic technologies will improve the utility
-of mobile robots in already established application areas, such as vacuum
-cleaning, robot surveillance, and bomb disposal. This approach will also enable
-the proliferation and acceptance of such technologies in emerging markets. This
-chapter summarizes our preliminary efforts by bringing together the research
-community towards addressing this important problem which has ramifications not
-only from researchers' perspective but also from consumers', robot
-manufacturers', and developers' viewpoints.},
-
-year = {2009},    kind = {unref} 
+@INPROCEEDINGS{censi11semantics,
+  author = {Andrea Censi and Richard M. Murray},
+  title = {Uncertain semantics, representation nuisances, and necessary invariance
+	properties of bootstrapping agents},
+  booktitle = {Joint IEEE International Conference on Development and Learning and
+	Epigenetic Robotics},
+  year = {2011},
+  address = {Frankfurt, Germany},
+  month = aug,
+  desc = { This paper tries to describe formally the idea of "uncertain semantics"
+	in a bootstrapping problem by using the mathematics of group actions.
+	If interested, please see Part 1 and Part 3 of of [my dissertation][phd],
+	where these ideas are further expanded and made much more formal
+	than in this short paper.
+	
+	 [phd]: http://purl.org/censi/2012/phd },
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi11semantics.png},
+  doi = {10.1109/DEVLRN.2011.6037313},
+  pdf = {http://purl.org/censi/research/2011-icdl-invariance.pdf},
+  slides = {http://purl.org/censi/research/2011-icdl-invariance-poster.pdf}
 }
 
-@inproceedings{censi09attitude, 
-author={Andrea Censi and Shuo Han and Sawyer B. Fuller and Richard M. Murray}, 
-booktitle={Proceedings of the 48th IEEE Conference on Decision and Control}, 
-title={A bio-plausible design for visual attitude stabilization}, 
-year={2009}, 
-  month = dec,
-  address = {Shanghai, China},
-doi={10.1109/CDC.2009.5400408}, 
-pdf={http://purl.org/censi/research/2009-cdc-bio-attitude.pdf},
-slides={http://purl.org/censi/research/2009-cdc-bio-attitude-slides.pdf},
-desc = { 
-    This paper describes a "bio-plausible" control strategy
-    for stabilizing the attitude in SO(3) of a flying body.
-    The [follow-up paper][follow] considers the SE(3) case.
-
-    [follow]: http://purl.org/hanshuo/2010/pd_pose_stabilization
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/bio-attitude.jpg}
-}
-
-
-@inproceedings{censi09fractals,
-  author = {Andrea Censi},
-  title = {On the performance of {K}alman filtering with intermittent 
-          observations: a geometric approach with fractals},
-  booktitle = {Proceedings of the American Control Conference (ACC)},
-  year = {2009},
-  month = jun,
-  address = {St. Louis, Missouri},
-  doi = {10.1109/ACC.2009.5159869},
-  url = {http://purl.org/censi/2008/fractals},
-  pdf = {http://purl.org/censi/research/2009-acc-fractals.pdf},
-  slides = {http://purl.org/censi/research/2009-acc-fractals-slides.pdf},
-  abstract = {
-This paper describes the stationary distribution of the a-posteriori 
-covariance matrix of a Kalman filter when the availability of measurements 
-is subject to random phenomena such as lossy network links. 
-If a certain non-overlapping condition is satisfied, the cdf has a fractal nature, 
-and there exists a closed-form expression for it. If the condition 
-is not satisfied, deciding whether the cdf is singular or not, even 
-in the scalar case, is at least as hard as some open problems in measure and number theory. 
-	},
-  desc = { 
-   The ultimate match: Cantor meets Kalman! 
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/fractals.jpg}
-}
-
-@inproceedings{censi09posetracking,
-  author = {Andrea Censi},
-  title = {On achievable accuracy for pose tracking},
-  booktitle = {Proceedings of the {IEEE} International Conference 
-                 on Robotics and Automation ({ICRA})},
-  year = {2009},
-  address = {Kobe, Japan},
-  month = may,
-  doi = {10.1109/ROBOT.2009.5152236},
-  url = {http://purl.org/censi/2008/posetracking},
-  pdf = {http://purl.org/censi/research/2009-icra-posetracking.pdf},
-  slides = {http://purl.org/censi/research/2009-icra-posetracking-slides.pdf},
-  abstract = {
-  This paper presents Cramer-Rao bound-like inequalities for
-  pose tracking, which is defined as the problem of
-  recovering the robot displacement given two successive
-  readings of a relative sensor. Computing the exact Fisher
-  Information Matrix (FIM) for pose tracking is hard, because
-  the state comprises the map, which is infinite-dimensional
-  and unknown. This paper shows that the FIM for pose
-  tracking can be bounded by a function of the FIM for
-  localization on a known map, thereby reducing the analysis
-  to a finite-dimensional problem. The resulting bounds are
-  independent of the map prior and representation. The
-  results are valid for any relative sensor; the experimental
-  verification is done for the particular case of pose
-  tracking using range-finders (scan matching).
-	},
-  desc = { 
-    In principle, how precise can a scan-matching method be?
-    This paper gives a very simple relation between the 
-    achievable accuracy for localization (when the map is known)
-    and the accuracy for scan-matching (when the map is *not* known).
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/posetracking.jpg}
-}
-
-
-@inproceedings{carpin09hsm3d, 
-author={Carpin, Stefano and Censi, Andrea}, 
-booktitle={Proceedings of the {IEEE/RSJ} International Conference 
-            on Intelligent Robots and Systems (IROS)}, 
-title={An experimental assessment of the HSM3D algorithm for sparse and colored data}, 
-year={2009}, 
-pages={3595-3600}, 
-doi={10.1109/IROS.2009.5354618}, 
-address={St. Louis, MO},
-month=oct,
-desc = { 
-  Adding color to [HSM3D].
-
-  [HSM3D]: http://purl.org/censi/2008/hsm3d
-},
-  descicon = {http://purl.org/censi/web/media/paper-icons/carpin09hsm3d.png}
-}
-
-
-@inproceedings{censi09hsm3d,
-  author = {Andrea Censi and Stefano Carpin},
-  title = {{HSM3D}: Feature-Less Global {6DOF} Scan-Matching in the {H}ough/{R}adon Domain },
-  booktitle = {Proceedings of the {IEEE} International Conference 
-                 on Robotics and Automation ({ICRA})},
-  year = {2009},
-  address = {Kobe, Japan},
-  month = may,
-  url = {http://purl.org/censi/2008/hsm3d},
-  pdf = {http://purl.org/censi/research/2009-icra-hsm3d.pdf},
-  slides = {http://purl.org/censi/research/2009-icra-hsm3d-slides.pdf},
-  abstract = {
-		 This paper presents HSM3D, an algorithm for global rigid
-		6DOF alignment of 3D point clouds. The algorithm works by
-		projecting the two input sets into the Radon/Hough domain,
-		whose properties allow to decompose the 6DOF search into a
-		series of fast one-dimensional cross-correlations. No
-		planes or other particular features must be present in the
-		input data, and the algorithm is provably complete in the
-		case of noise-free input. The algorithm has been
-		experimentally validated on publicly available data sets.
-	},
-  desc = {
-   [Stefano][carpin] and I try to do [HSM][hsm] in 3D: much more difficult!
-
-   [HSM]: http://purl.org/censi/2006/hsm
-   [carpin]: https://eng.ucmerced.edu/people/scarpin/StefanoCarpin
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/hsm3d.jpg}
-}
-
-
-@inproceedings{censi09consensus,
+@INPROCEEDINGS{censi09consensus,
   author = {Andrea Censi and Richard M. Murray},
   title = {Real-valued consensus over noisy quantized channels},
   booktitle = {Proceedings of the American Control Conference (ACC)},
   year = {2009},
-  month = jun,
   address = {St. Louis, Missouri},
+  month = jun,
+  abstract = {This paper concerns the average consensus problem with theconstraint
+	of quantized communication between nodes. Abroad class of algorithms
+	is analyzed, in which thetransmission strategy, which decides what
+	value tocommunicate to the neighbors, can include various kinds ofrounding,
+	probabilistic quantization, and bounded noise.The arbitrariness of
+	the transmission strategy iscompensated by a feedback mechanism which
+	can beinterpreted as a self-inhibitory action. The result is thatthe
+	average of the nodes state is not conserved acrossiterations, and
+	the nodes do not converge to a consensus;however, we show that both
+	errors can be made as small asdesired. Bounds on these quantities
+	involve the spectralproperties of the graph and can be proved by
+	employingelementary techniques of LTI systems analysis. },
+  desc = { How to reach a consensus if you and your friends are a bunch of spiking
+	neurons. },
+  descicon = {http://purl.org/censi/web/media/paper-icons/consensus.jpg},
   doi = {10.1109/ACC.2009.5159872},
-  url = {http://purl.org/censi/2008/consensus},
   pdf = {http://purl.org/censi/research/2009-acc-consensus.pdf},
   slides = {http://purl.org/censi/research/2009-acc-consensus-slides.pdf},
-  abstract = {
-		This paper concerns the average consensus problem with the
-		constraint of quantized communication between nodes. A
-		broad class of algorithms is analyzed, in which the
-		transmission strategy, which decides what value to
-		communicate to the neighbors, can include various kinds of
-		rounding, probabilistic quantization, and bounded noise.
-		The arbitrariness of the transmission strategy is
-		compensated by a feedback mechanism which can be
-		interpreted as a self-inhibitory action. The result is that
-		the average of the nodes state is not conserved across
-		iterations, and the nodes do not converge to a consensus;
-		however, we show that both errors can be made as small as
-		desired. Bounds on these quantities involve the spectral
-		properties of the graph and can be proved by employing
-		elementary techniques of LTI systems analysis.
-	},
-  desc = { 
-  How to reach a consensus if you and your friends are a bunch of spiking neurons. 
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/consensus.jpg}
+  url = {http://purl.org/censi/2008/consensus}
 }
 
-@inproceedings{calisi08openrdk,
-  author = {Daniele Calisi and Andrea Censi and Luca Iocchi and Daniele Nardi},
-  title = {{OpenRDK}: A Modular Framework for Robotic Software Development },
-  booktitle = {Proceedings of the IEEE/RSJ International Conference 
-               on Intelligent Robots and Systems (IROS)},
-  year = {2008},
-  month = sep,
-  address = {Nice, France},
-  doi = {10.1109/IROS.2008.4651213},
-  url = {http://openrdk.sourceforge.net},
-  pdf = {http://purl.org/censi/research/2008-iros-openrdk.pdf},
-  slides = {http://purl.org/censi/research/2008-iros-openrdk-slides.pdf},
-  abstract = {
-		In this paper we conduct an analysis of existing
-		frameworks for robot software development and we
-		present OpenRDK, a modular framework focused on
-		rapid development of distributed robotic systems.
-		It has been designed following users' advice and
-		has been in use within our group for several
-		years. By now OpenRDK has been successfully
-		applied in diverse applications with heterogeneous
-		robots and as we believe it is fruitfully usable
-		by others we are releasing it as open source..
-	}
-}
-
-@inproceedings{censi08ppu,
-  author = {Andrea Censi and Daniele Calisi and 
-              Alessandro De Luca and Giuseppe Oriolo},
-  title = {A {B}ayesian framework for optimal motion 
-             planning with uncertainty },
-  booktitle = {Proceedings of the {IEEE} International Conference 
-                 on Robotics and Automation ({ICRA})},
-  year = {2008},
-  month = may,
-  address = {Pasadena, CA},
-  doi = {10.1109/ROBOT.2008.4543469},
-  url = {http://purl.org/censi/2007/ppu},
-  pdf = {http://purl.org/censi/research/2008-icra-ppu.pdf},
-  slides = {http://purl.org/censi/research/2008-icra-ppu-slides.pdf},
-  abstract = {
-        Modeling robot motion planning with uncertainty in a
-        Bayesian framework leads to a computationally intractable
-        stochastic control problem. We seek hypotheses that can
-        justify a separate implementation of control, localization
-        and planning. In the end, we reduce the stochastic control
-        problem to path-planning in the extended space of poses x
-        covariances; the transitions between states are modeled
-        through the use of the Fisher information matrix. In this
-        framework, we consider two problems: minimizing the
-        execution time, and minimizing the final covariance, with
-        an upper bound on the execution time. Two correct and
-        complete algorithms are presented. The first is the direct
-        extension of classical graph-search algorithms in the
-        extended space. The second one is a back-projection
-        algorithm: uncertainty constraints are propagated backward
-        from the goal towards the start state.
-	},
-  desc = { 
-    How to get to your goal without getting lost. 
-    This was my Master's degree final thesis.
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/ppu.jpg}
-}
-
-@inproceedings{censi08plicp,
-  author = {Andrea Censi},
-  title = {An {ICP} variant using a point-to-line metric},
-  booktitle = {Proceedings of the {IEEE} International Conference 
-                 on Robotics and Automation ({ICRA})},
-  year = {2008},
-  month = may,
-  address = {Pasadena, CA},
-  doi = {10.1109/ROBOT.2008.4543181},
-  url = {http://purl.org/censi/2007/plicp},
-  pdf = {http://purl.org/censi/research/2008-icra-plicp.pdf},
-  slides = {http://purl.org/censi/research/2008-icra-plicp-slides.pdf},
-  abstract = {
-        This paper describes PLICP, an  ICP (Iterative
-        Closest/Corresponding Point) variant that uses a
-        point-to-line metric, and an exact closed-form for
-        minimizing such metric. The resulting algorithm has some
-        interesting properties: it converges quadratically, and in
-        a finite number of steps. The method is validated against
-        vanilla ICP, IDC (Iterative Dual Correspondences), and
-        MbICP (Metric-Based ICP) by reproducing the experiments
-        performed in Minguez et al. (2006). The experiments suggest
-        that PLICP is more precise, and requires less iterations.
-        However, it is less robust to very large initial
-        displacement errors. The last part of the paper is devoted
-        to purely algorithmic optimization of the correspondence
-        search; this allows for significant speed-up of the
-        computation. The source code is available for download.
-    },
-  desc = { 
-    An extremely fast and precise ICP variant for range-finder scan matching,
-    which converges quadratically in a finite number of steps.
-    [The implementation is available][imp] and included also in ROS.
-
-    [imp]: http://purl.org/censi/2007/plicp
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/plicp.jpg},
-
-}
-
-@inproceedings{censi08fts,
+@INPROCEEDINGS{censi08fts,
   author = {Andrea Censi and Gian Diego Tipaldi},
   title = {Lazy Localization using the {F}rozen-{T}ime {S}moother},
-  booktitle = {Proceedings of the {IEEE} International Conference 
-                 on Robotics and Automation ({ICRA})},
+  booktitle = {Proceedings of the {IEEE} International Conference on Robotics and
+	Automation ({ICRA})},
   year = {2008},
-  month = may,
   address = {Pasadena, CA},
-  doi = {10.1109/ROBOT.2008.4543631},
-  url = {http://purl.org/censi/2007/fts},
-  pdf = {http://purl.org/censi/research/2008-icra-fts.pdf},
-  abstract = {
-        We present a new algorithm for solving the global localization
-        problem called Frozen-Time Smoother (FTS). Time is `frozen', in
-        the sense that the belief always refers to the same time instant,
-        instead of following a moving target, like Monte Carlo
-        Localization does. This algorithm works in the case in which
-        global localization is formulated as a smoothing problem, and a
-        precise estimate of the incremental motion of the robot is
-        usually available. These assumptions correspond to the case when
-        global localization is used to solve the loop closing problem in
-        SLAM. We compare FTS to two Monte Carlo methods designed with the
-        same assumptions. The experiments suggest that a naive
-        implementation of the FTS is more efficient than an extremely
-        optimized equivalent Monte Carlo solution. Moreover, the FTS has
-        an intrinsic laziness: it does not need frequent updates (scans
-        can be integrated once every many meters) and it can process data
-        in arbitrary order. The source code and datasets are available
-        for download.
-    }, 
-  desc = {
-    Global localization without the worries and anxiety of filtering.
-  },
+  month = may,
+  abstract = { We present a new algorithm for solving the global localization problem
+	called Frozen-Time Smoother (FTS). Time is `frozen', in the sense
+	that the belief always refers to the same time instant, instead of
+	following a moving target, like Monte Carlo Localization does. This
+	algorithm works in the case in which global localization is formulated
+	as a smoothing problem, and a precise estimate of the incremental
+	motion of the robot is usually available. These assumptions correspond
+	to the case when global localization is used to solve the loop closing
+	problem in SLAM. We compare FTS to two Monte Carlo methods designed
+	with the same assumptions. The experiments suggest that a naive implementation
+	of the FTS is more efficient than an extremely optimized equivalent
+	Monte Carlo solution. Moreover, the FTS has an intrinsic laziness:
+	it does not need frequent updates (scans can be integrated once every
+	many meters) and it can process data in arbitrary order. The source
+	code and datasets are available for download. },
+  desc = { Global localization without the worries and anxiety of filtering.
+	},
   descicon = {http://purl.org/censi/web/media/paper-icons/ftf.jpg},
+  doi = {10.1109/ROBOT.2008.4543631},
+  pdf = {http://purl.org/censi/research/2008-icra-fts.pdf},
+  url = {http://purl.org/censi/2007/fts}
 }
 
-@inproceedings{censi08calib,
-  author = {Andrea Censi and Luca Marchionni and Giuseppe Oriolo},
-  title = { Simultaneous maximum-likelihood calibration of robot and sensor parameters},
-  booktitle = {Proceedings of the {IEEE} International Conference 
-                 on Robotics and Automation ({ICRA})},
-  year = {2008},
-  month = may,
-  address = {Pasadena, CA},
-  doi = {10.1109/ROBOT.2008.4543516},
-  url = {http://purl.org/censi/2007/calib},
-  pdf = {http://purl.org/censi/research/2008-icra-calibration.pdf},
-  slides = {http://purl.org/censi/research/2008-icra-calibration-slides.pdf},
-  video = {http://purl.org/censi/research/2008-icra-calibration-video.mpg},
-  abstract = {
-        For a differential-drive mobile robot equipped with an
-        on-board range sensor, there are six parameters to
-        calibrate: three for the odometry (radii and distance
-        between the wheels), and three for the pose of the sensor
-        with respect to the robot frame. This paper describes a
-        method for calibrating all six parameters at the same time,
-        without the need for external sensors or devices. Moreover,
-        it is not necessary to drive the robot along particular
-        trajectories. The available data are the measures of the
-        angular velocities of the wheels and the range sensor
-        readings. The maximum-likelihood calibration solution is
-        found in a closed form.
-    },
-  desc = { 
-    Please see [the journal version][j].
-
-    [j]: http://purl.org/censi/2012/joint_calibration
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/calibration.jpg}
-
+@INPROCEEDINGS{han10pose,
+  author = {Shuo Han and Andrea Censi and Andrew D. Straw and Richard M. Murray},
+  title = {A bio-plausible design for visual pose stabilization},
+  booktitle = {{IEEE/RSJ} International Conference on Intelligent Robots and Systems
+	(IROS)},
+  year = {2010},
+  pages = {5679--5686},
+  address = {Taipei, Taiwan},
+  month = oct,
+  abstract = {We consider the problem of purely visual pose stabilization (also
+	known as servoing) of a second-order rigid-body system with six degrees
+	of freedom: how to choose forces and torques, based on the current
+	view and a memorized goal image, to steer the pose towards a desired
+	one. Emphasis has been given to the bio-plausibility of the computation,
+	in the sense that the control laws could be in principle implemented
+	on the neural substrate of simple insects. We show that stabilizing
+	laws can be realized by bilinear/quadratic operations on the visual
+	input. This particular computational structure has several numerically
+	favorable characteristics (sparse, local, and parallel), and thus
+	permits an efficient engineering implementation. We show results
+	of the control law tested on an indoor helicopter platform.},
+  desc = { Stabilizing hovering for an helicopter using a bio-plausible strategy.
+	},
+  descicon = {http://purl.org/censi/web/media/paper-icons/han10pose.png},
+  doi = {10.1109/IROS.2010.5652857},
+  pdf = {http://purl.org/censi/research/2010-iros-bioplausible_pose.pdf},
+  slides = {http://purl.org/censi/research/2009-cdc-bio-attitude-slides.pdf},
+  video = {http://purl.org/hanshuo/2010/pd_pose_stabilization}
 }
 
-@inproceedings{censi07accurate,
-  author = {Andrea Censi},
-  title = {An accurate closed-form estimate of {ICP}'s covariance},
-  booktitle = {Proceedings of the {IEEE} International Conference 
-                 on Robotics and Automation ({ICRA})},
-  pages = {3167--3172},
-  year = {2007},
-  month = apr,
-  address = {Rome, Italy},
-  doi = {10.1109/ROBOT.2007.363961},
-  issn = {1050-4729},
-  url = {http://purl.org/censi/2006/icpcov},
-  pdf = {http://purl.org/censi/research/2007-icra-icpcov.pdf},
-  slides = {http://purl.org/censi/research/2007-icra-icpcov-slides.pdf},
-  abstract = {
- Existing methods for estimating the covariance of the ICP 
- (Iterative Closest/Corresponding Point) algorithm are either 
- inaccurate or are computationally too expensive to be used online. 
- This paper proposes a new method, based on the analysis of the error
- function being minimized. It considers that the correspondences are 
- not independent (the same measurement being used in more than one correspondence),
- and explicitly utilizes the covariance matrix of the measurements, 
- which are not assumed to be independent either. The validity of the
- approach is verified through extensive simulations: it is more accurate 
-than previous methods and its computational load is negligible. 
-The ill-posedness of the surface matching problem is explicitly tackled 
-for under-constrained situations by performing an observability analysis; 
-in the analyzed cases the method still provides a good estimate of the
- error projected on the observable manifold.
-},
-  desc = { 
-    This paper describes a *proper* way to compute the covariance of an ICP
-    estimate, which is shown to be superior to the existing algernatives.
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/icpcov.jpg}
+@INPROCEEDINGS{delapuente12dense,
+  author = {Puente, Paloma and Censi, Andrea},
+  title = {Dense Map Inference with User-Defined Priors: From Priorlets to Scan
+	Eigenvariations},
+  booktitle = {Spatial Cognition VIII},
+  year = {2012},
+  editor = {Stachniss, Cyrill and Schill, Kerstin and Uttal, David},
+  volume = {7463},
+  series = {Lecture Notes in Computer Science},
+  pages = {94-113},
+  month = aug,
+  publisher = {Springer Berlin Heidelberg},
+  desc = { [Paloma][paloma] and I study how to integrate in the mapping problem
+	"rich" information about the environment structure. We use the concept
+	of *priorlets* to capture a variety of environment priors. We recover
+	the map by optimizing at the same time for continuous and discrete
+	variables (measurements and topology, respectively).
+	
+	 [paloma]: http://www.intelligentcontrol.es/paloma/ },
+  descicon = {http://purl.org/censi/web/media/paper-icons/delapuente12dense.png},
+  doi = {10.1007/978-3-642-32732-2_6},
+  isbn = {978-3-642-32731-5},
+  pdf = {http://authors.library.caltech.edu/28143/1/report.pdf},
+  slides = {http://purl.org/censi/research/2012-structprior-slides.pdf}
 }
 
-@inproceedings{censi07achievable,
-  author = {Andrea Censi},
-  title = {On achievable accuracy 
-             for range-finder localization},
-  booktitle = {Proceedings of the {IEEE} International Conference 
-               on Robotics and Automation ({ICRA})},
-  address = {Rome, Italy},
-  year = {2007},
-  month = apr,
-  pages = {4170--4175},
-  doi = {10.1109/ROBOT.2007.364120},
-  issn = {1050-4729},
-  url = {http://purl.org/censi/2006/accuracy},
-  pdf = {http://purl.org/censi/research/2007-icra-accuracy.pdf},
-  slides = {http://purl.org/censi/research/2007-icra-accuracy-slides.pdf},
-  abstract = { 
-    The covariance of every unbiased estimator is bounded by the Cramer-Rao
-    lower bound, which is the inverse of Fisher's information matrix.
-    This paper shows that, for the case of localization with range-finders,
-    Fisher's matrix is a function of the expected readings and of the
-    orientation of the environment's surfaces at the sensed points. The
-    matrix also offers a mathematically sound way to characterize under-
-    constrained situations as those for which it is singular: in those
-    cases the kernel describes the direction of maximum uncertainty.
-    This paper also introduces a simple model of unstructured environments
-    for which the Cramer-Rao bound is a function of two statistics of
-    the shape of the environment: the average radius and a measure of
-    the irregularity of the surfaces. Although this model is not valid
-    for all environments, it allows for some interesting qualitative
-    considerations. As an experimental validation, this paper reports
-    simulations comparing the bound with the actual performance of the
-    ICP (Iterative Closest/Corresponding Point) algorithm. Finally, it
-    is discussed the difficulty in extending these results to find a
-    lower bound for accuracy in scan matching and SLAM.},
-  desc = { 
-   How precise can a localization method be? This paper 
-   derives the Cramer-Rao lower bound  for localization with
-   range finders.
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/accuracy.jpg}
+@INPROCEEDINGS{delapuente12dense_old,
+  author = {Paloma de la Puente and Andrea Censi},
+  title = {Dense map inference with user-defined priors: from priorlets to scan
+	eigenvariations},
+  booktitle = {Spatial Cognition},
+  year = {2012},
+  address = {Kloster Seeon, Bavaria, Germany},
+  month = aug,
+  desc = { [Paloma][paloma] and I study how to integrate in the mapping problem
+	"rich" information about the environment structure. We use the concept
+	of *priorlets* to capture a variety of environment priors. We recover
+	the map by optimizing at the same time for continuous and discrete
+	variables (measurements and topology, respectively).
+	
+	 [paloma]: http://www.intelligentcontrol.es/paloma/ },
+  descicon = {http://purl.org/censi/web/media/paper-icons/delapuente12dense.png},
+  pdf = {http://authors.library.caltech.edu/28143/1/report.pdf},
+  slides = {http://purl.org/censi/research/2012-structprior-slides.pdf}
 }
 
-@techreport{censi06comparison,
-  author = {Andrea Censi},
-  title = {A comparison of algorithms for likelihood approximation 
-             in Bayesian localization},
-  institution = {Sapienza Universita di Roma},
-  year = {2006},
-  url = {http://purl.org/censi/2006/ghtv},
-  pdf = {http://purl.org/censi/research/2006-draft-acomparison.pdf},
+@INPROCEEDINGS{scaramuzza11visodo,
+  author = {Davide Scaramuzza and Andrea Censi and Kostas Daniilidis},
+  title = {Exploiting motion priors in visual odometry for vehicle-mounted cameras
+	with non-holonomic constraints},
+  booktitle = {{IEEE/RSJ} International Conference on Intelligent Robots and Systems
+	(IROS)},
+  year = {2011},
+  address = {San Francisco, CA},
+  month = sep,
+  desc = { Fast and precise visual odometry by exploiting the motion priors
+	specific to the dynamics of a car. },
+  descicon = {http://purl.org/censi/web/media/paper-icons/scaramuzza11visodo.png},
+  doi = {10.1109/IROS.2011.6095123},
+  pdf = {http://purl.org/censi/research/2011-iros-scaRansac.pdf}
+}
+
+@INCOLLECTION{scrapper09,
+  author = {Scrapper, C. and Madhavan, R. and Lakaemper, R. and Censi, A. and
+	Godil, A. and Wagan, A. and Jacoff, A.},
+  title = {Quantitative Assessment of Robot-Generated Maps},
+  booktitle = {Performance Evaluation and Benchmarking of Intelligent Systems},
+  publisher = {Springer US},
+  year = {2009},
+  editor = {Madhavan, Raj and Tunstel, Edward and Messina, Elena},
+  pages = {221-248},
+  abstract = {Mobile robotic mapping is now considered to be a sufficiently mature
+	field with demonstrated successes in various domains. While much
+	progress has been made in the development of computationally efficient
+	and consistent mapping schemes, it is still murky, at best, on how
+	these maps can be evaluated. We are motivated by the absence of an
+	accepted standard for quantitatively measuring the performance of
+	robotic mapping systems against user-defined requirements. It is
+	our belief that the development of standardized methods for quantitatively
+	evaluating existing robotic technologies will improve the utility
+	of mobile robots in already established application areas, such as
+	vacuum cleaning, robot surveillance, and bomb disposal. This approach
+	will also enable the proliferation and acceptance of such technologies
+	in emerging markets. This chapter summarizes our preliminary efforts
+	by bringing together the research community towards addressing this
+	important problem which has ramifications not only from researchers'
+	perspective but also from consumers', robot manufacturers', and developers'
+	viewpoints.},
+  affiliation = {The MITRE Corporation, 22102 McLean, VA USA},
+  doi = {10.1007/978-1-4419-0492-8_10},
+  isbn = {978-1-4419-0492-8},
   kind = {unref},
-  desc = { 
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi06comparison.png}
+  pdf = {http://dx.doi.org/10.1007/978-1-4419-0492-8_10}
 }
 
-@inproceedings{censi06scan,
-  author = {Andrea Censi},
-  title = {Scan matching in a probabilistic framework},
-  booktitle = {Proceedings of the IEEE International Conference 
-	       on Robotics and Automation (ICRA)},
-  pages = {2291--2296},
-  year = {2006},
-  month = may,
-  address = {Orlando, Florida},
-  doi = {10.1109/ROBOT.2006.1642044},
-  url = {http://purl.org/censi/2006/gpm},
-  pdf = {http://purl.org/censi/research/2006-icra-gpm.pdf},
-  slides = {http://purl.org/censi/research/2006-icra-gpm-slides.pdf},
-  desc = { 
-    
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/gpm.jpg}
-
-}
-
-@inproceedings{censi05hough,
-  author = {Andrea Censi and Luca Iocchi and Giorgio Grisetti},
-  title = {Scan matching in the {H}ough domain},
-  booktitle = {Proceedings of the IEEE International Conference 
-               on Robotics and Automation (ICRA)},
-  year = {2005},
-  pages = {2739--2744},
-  address = {Barcelona, Spain},
-  doi = {10.1109/ROBOT.2005.1570528},
-  url = {http://purl.org/censi/2006/hsm},
-  pdf = {http://purl.org/censi/research/2005-icra-hsm.pdf},
-  slides = {http://purl.org/censi/research/2005-icra-hsm-slides.ppt},
-  desc = { 
-    A global, complete algorithm for scan matching based
-    on the Hough/Radon transform.  This was my Bachelor's thesis.
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/hsm.jpg}
-}
-
-@inproceedings{BaCa04,
-  author = {Bahadori, S. and Calisi, D. and Censi, A. and Farinelli, A.
-           and Grisetti, G. and Iocchi, L. and Nardi, D.},
-  title = {Intelligent Systems for Search and Rescue},
-  booktitle = {Proc. of IROS Workshop ``Urban Search and Rescue: 
-   from RoboCup to real world applications'' (IROS), Sendai, Japan},
-  year = {2004},
-  pdf = {http://purl.org/censi/research/2004-iros-rescue.pdf},
-  kind = {unref},
-  desc = { 
-    In my first lab, we used to do rescue robotics. Those were the days
-    when I was in charge of charging the robot batteries...
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/BaCa04.png}
-}

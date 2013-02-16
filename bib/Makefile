@@ -1,7 +1,12 @@
 
 all: all.bib all_only_one.bib andrea_nopdfdoi.bib
 
-all.bib: src/*bib  src-andrea/papers/andrea.bib src-andrea/papers/andrea_drafts.bib
+# andrea=src-andrea/papers/andrea.bib src-andrea/papers/andrea_drafts.bib
+andrea=
+andrea+=src-andrea/web/regular.bib
+andrea+=src-andrea/web/preprints.bib
+
+all.bib: src/*bib  $(andrea)
 	cat $^ > all.bib
 
 # all_only_doi.bib: all.bib
