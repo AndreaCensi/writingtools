@@ -1,27 +1,9 @@
-% This file was created with JabRef 2.9b.
+% This file was created with JabRef 2.9.2.
 % Encoding: ISO8859_1
 
 @STRING{bib_postscript.icon = {my_own_ps.gif}}
 
 @STRING{use_icons = {1}}
-
-
-@inproceedings{censi13motion,
-  author = {Andrea Censi and Adam Nilsson
-             and Richard M. Murray
-             },
-  title = {Motion planning in observations space with learned diffeomorphism models.},
-  booktitle = {ICRA},
-  year = 2013,
-  abstract = { We consider the problem of planning motions in observations space, based on learned models of the dynamics that associate to each action a diffeomorphism of the obser- vations domain. For an arbitrary set of diffeomorphisms, this problem must be formulated as a generic search problem. We adapt established algorithms of the graph search family. In this scenario, node expansion is very costly, as each node in the graph is associated to an uncertain diffeomorphism and corresponding predicted observations. We describe several improvements that ameliorate performance: the introduction of better image similarities to use as heuristics; a method to reduce the number of expanded nodes by preliminarily identifying redundant plans; and a method to pre-compute composite actions that make the search efficient in all directions.},
-  desc = { 
-    Using learned diffeomorphism models of the dynamics of cameras and range-finders,
-    we formulate motion planning as a planning problem in the observations space.
-    Nodes/states are (uncertain) images; actions/edges are (uncertain) diffeomorphisms.
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi12dptr1_preprint.png}
-}
-
 
 @INPROCEEDINGS{BaCa04,
   author = {Bahadori, S. and Calisi, D. and Censi, A. and Farinelli, A. and Grisetti,
@@ -88,11 +70,10 @@
   doi = {10.1109/IROS.2009.5354618}
 }
 
-@TECHREPORT{censi12phd,
+@PHDTHESIS{censi12phd,
   author = {Andrea Censi},
   title = {Bootstrapping Vehicles: A Formal Approach to Unsupervised Sensorimotor
 	Learning Based on Invariance},
-  institution = {California Institute of Technology},
   year = {2012},
   desc = { Could a "brain in a jar" be able to control an unknown robotic body
 	to which it is connected, and use it to achieve useful tasks, without
@@ -110,6 +91,7 @@
 	am still working to integrate the newer material that I had not the
 	time to add. So any comments/suggestions are welcome!* },
   descicon = {http://purl.org/censi/web/media/paper-icons/bv_icon.png},
+  institution = {California Institute of Technology},
   pdf = {http://purl.org/censi/research/preprints/bootstrapping_vehicles-1.3-a4.pdf},
   slides = {http://purl.org/censi/research/201206-defense.pdf},
   url = {http://purl.org/censi/2012/phd}
@@ -512,8 +494,7 @@
 	 This material has been greatly expanded in [my dissertation][phd]
 	(Part 2), but not yet published.
 	
-	 [phd]: http://purl.org/censi/2012/phd
-	},
+	 [phd]: http://purl.org/censi/2012/phd },
   descicon = {http://purl.org/censi/web/media/paper-icons/censi11bds.png},
   doi = {10.1109/ICRA.2011.5979844},
   pdf = {http://purl.org/censi/research/2010-bootstrapping-bilinear-short.pdf},
@@ -592,6 +573,33 @@
   pdf = {http://purl.org/censi/research/2009-acc-consensus.pdf},
   slides = {http://purl.org/censi/research/2009-acc-consensus-slides.pdf},
   url = {http://purl.org/censi/2008/consensus}
+}
+
+@INPROCEEDINGS{censi13motion,
+  author = {Andrea Censi and Adam Nilsson and Richard M. Murray},
+  title = {Motion planning in observations space with learned diffeomorphism
+	models.},
+  booktitle = ICRA,
+  year = {2013},
+  note = {(to appear)},
+  abstract = { We consider the problem of planning motions in observations space,
+	based on learned models of the dynamics that associate to each action
+	a diffeomorphism of the obser- vations domain. For an arbitrary set
+	of diffeomorphisms, this problem must be formulated as a generic
+	search problem. We adapt established algorithms of the graph search
+	family. In this scenario, node expansion is very costly, as each
+	node in the graph is associated to an uncertain diffeomorphism and
+	corresponding predicted observations. We describe several improvements
+	that ameliorate performance: the introduction of better image similarities
+	to use as heuristics; a method to reduce the number of expanded nodes
+	by preliminarily identifying redundant plans; and a method to pre-compute
+	composite actions that make the search efficient in all directions.},
+  desc = { Using learned diffeomorphism models of the dynamics of cameras and
+	range-finders, we formulate motion planning as a planning problem
+	in the observations space. Nodes/states are (uncertain) images; actions/edges
+	are (uncertain) diffeomorphisms. },
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi12dptr1_preprint.png},
+  url = {http://purl.org/censi/2012/dptr1}
 }
 
 @INPROCEEDINGS{censi08fts,

@@ -455,7 +455,7 @@
   url = {http://purl.org/censi/2011/bgds_tr}
 }
 
-% This file was created with JabRef 2.9b.
+% This file was created with JabRef 2.9.2.
 % Encoding: MacRoman
 
 @BOOK{boh,
@@ -1367,21 +1367,21 @@
   timestamp = {2011.04.10}
 }
 
-@ARTICLE{conradt09pencil,
+@INPROCEEDINGS{conradt09pencil,
   author = {Conradt, J and Cook, M. and Berner, R and Lichtsteiner, P and Douglas,
 	R J and Delbruck, T},
   title = {{A pencil balancing robot using a pair of AER dynamic vision sensors}},
+  booktitle = {IEEE International Symposium on Circuits and Systems (ISCAS)},
   year = {2009},
   pages = {781--784},
   date-added = {2012-11-09T16:01:28GMT+00:00},
   date-modified = {2012-11-11T13:47:03GMT+00:00},
+  doi = {10.1109/ISCAS.2009.5117867},
   file = {{2009__Conradt_A_pencil_balancing_robot_using_a_pair_of_AER_dynamic_vision_sensors.pdf:/data/work/Papers2/Files/2009__Conradt_A_pencil_balancing_robot_using_a_pair_of_AER_dynamic_vision_sensors.pdf:application/pdf}},
   isbn = {1424438276},
   local-url = {file://localhost/data/work/Papers2/Files/2009__Conradt_A_pencil_balancing_robot_using_a_pair_of_AER_dynamic_vision_sensors.pdf},
   rating = {0},
-  timestamp = {2012.11.11},
-  uri = {\url{papers2://publication/uuid/BC1304F8-5A81-4DAC-828B-3123666513E2}},
-  url = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5117867}
+  timestamp = {2012.11.11}
 }
 
 @ARTICLE{corcuera99riemannianbarycentres,
@@ -1481,6 +1481,23 @@
   timestamp = {2012.11.11},
   uri = {\url{papers2://publication/uuid/325E6E44-D23E-492F-BB80-C860FC9A4FBD}},
   url = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5537160}
+}
+
+@INPROCEEDINGS{delbruck07fast,
+  author = {Delbruck, T. and Lichtsteiner, P.},
+  title = {Fast sensory motor control based on event-based hybrid neuromorphic-procedural
+	system},
+  booktitle = {IEEE International Symposium on Circuits and Systems},
+  year = {2007},
+  pages = {845-848},
+  month = {May},
+  doi = {10.1109/ISCAS.2007.378038},
+  keywords = {eye;operating systems (computers);sensory aids;servomotors;system
+	buses;2 GHz;Pentium M laptop;USB;Windows XP;address-event silicon
+	retina;event-driven cluster tracker algorithm;fast sensory motor
+	control;frame-based cameras;frame-based computers;hybrid neuromorphic-procedural
+	system;servo motor controller;Cameras;Control systems;Delay;Motor
+	drives;Neuromorphics;Portable computers;Retina;Servomechanisms;Servomotors;Silicon}
 }
 
 @ARTICLE{delbruck10activity,
@@ -5124,6 +5141,15 @@
   timestamp = {2012.01.25}
 }
 
+@INPROCEEDINGS{sutskever08recurrent,
+  author = {Ilya Sutskever and Geoffrey E. Hinton and Graham W. Taylor},
+  title = {The Recurrent Temporal Restricted Boltzmann Machine},
+  booktitle = NIPS,
+  year = {2008},
+  pages = {1601-1608},
+  ee = {http://books.nips.cc/papers/files/nips21/NIPS2008_0583.pdf}
+}
+
 @INPROCEEDINGS{sutton09grand,
   author = {R. Sutton},
   title = {The grand challenge of predictive empirical abstract knowledge,},
@@ -5222,6 +5248,27 @@
   posted-at = {2009-06-19 12:25:31},
   priority = {2},
   timestamp = {2011.02.01}
+}
+
+@INPROCEEDINGS{taylor10convolutional,
+  author = {Graham W. Taylor and Rob Fergus and Yann LeCun and Christoph Bregler},
+  title = {Convolutional Learning of Spatio-temporal Features},
+  booktitle = ECCV,
+  year = {2010},
+  pages = {140-153},
+  doi = {10.1007/978-3-642-15567-3_11},
+  owner = {andrea},
+  timestamp = {2013.03.22}
+}
+
+@INPROCEEDINGS{taylor10dynamical,
+  author = {Graham W. Taylor and Leonid Sigal and David J. Fleet and Geoffrey
+	E. Hinton},
+  title = {Dynamical binary latent variable models for 3D human pose tracking},
+  booktitle = CVPR,
+  year = {2010},
+  pages = {631-638},
+  doi = {10.1109/CVPR.2010.5540157}
 }
 
 @BOOK{thrun05probabilistic,
@@ -5791,30 +5838,12 @@ th05intrinsic\;sorenson70least-squares\;stenflo96semimarkov\;stoytchev
 he96semidefinite\;wan06secondorder\;xu05estimation\;;
 }
 
-% This file was created with JabRef 2.9b.
+% This file was created with JabRef 2.9.2.
 % Encoding: ISO8859_1
 
 @STRING{bib_postscript.icon = {my_own_ps.gif}}
 
 @STRING{use_icons = {1}}
-
-
-@inproceedings{censi13motion,
-  author = {Andrea Censi and Adam Nilsson
-             and Richard M. Murray
-             },
-  title = {Motion planning in observations space with learned diffeomorphism models.},
-  booktitle = {ICRA},
-  year = 2013,
-  abstract = { We consider the problem of planning motions in observations space, based on learned models of the dynamics that associate to each action a diffeomorphism of the obser- vations domain. For an arbitrary set of diffeomorphisms, this problem must be formulated as a generic search problem. We adapt established algorithms of the graph search family. In this scenario, node expansion is very costly, as each node in the graph is associated to an uncertain diffeomorphism and corresponding predicted observations. We describe several improvements that ameliorate performance: the introduction of better image similarities to use as heuristics; a method to reduce the number of expanded nodes by preliminarily identifying redundant plans; and a method to pre-compute composite actions that make the search efficient in all directions.},
-  desc = { 
-    Using learned diffeomorphism models of the dynamics of cameras and range-finders,
-    we formulate motion planning as a planning problem in the observations space.
-    Nodes/states are (uncertain) images; actions/edges are (uncertain) diffeomorphisms.
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi12dptr1_preprint.png}
-}
-
 
 @INPROCEEDINGS{BaCa04,
   author = {Bahadori, S. and Calisi, D. and Censi, A. and Farinelli, A. and Grisetti,
@@ -5881,11 +5910,10 @@ he96semidefinite\;wan06secondorder\;xu05estimation\;;
   doi = {10.1109/IROS.2009.5354618}
 }
 
-@TECHREPORT{censi12phd,
+@PHDTHESIS{censi12phd,
   author = {Andrea Censi},
   title = {Bootstrapping Vehicles: A Formal Approach to Unsupervised Sensorimotor
 	Learning Based on Invariance},
-  institution = {California Institute of Technology},
   year = {2012},
   desc = { Could a "brain in a jar" be able to control an unknown robotic body
 	to which it is connected, and use it to achieve useful tasks, without
@@ -5903,6 +5931,7 @@ he96semidefinite\;wan06secondorder\;xu05estimation\;;
 	am still working to integrate the newer material that I had not the
 	time to add. So any comments/suggestions are welcome!* },
   descicon = {http://purl.org/censi/web/media/paper-icons/bv_icon.png},
+  institution = {California Institute of Technology},
   pdf = {http://purl.org/censi/research/preprints/bootstrapping_vehicles-1.3-a4.pdf},
   slides = {http://purl.org/censi/research/201206-defense.pdf},
   url = {http://purl.org/censi/2012/phd}
@@ -6305,8 +6334,7 @@ he96semidefinite\;wan06secondorder\;xu05estimation\;;
 	 This material has been greatly expanded in [my dissertation][phd]
 	(Part 2), but not yet published.
 	
-	 [phd]: http://purl.org/censi/2012/phd
-	},
+	 [phd]: http://purl.org/censi/2012/phd },
   descicon = {http://purl.org/censi/web/media/paper-icons/censi11bds.png},
   doi = {10.1109/ICRA.2011.5979844},
   pdf = {http://purl.org/censi/research/2010-bootstrapping-bilinear-short.pdf},
@@ -6385,6 +6413,33 @@ he96semidefinite\;wan06secondorder\;xu05estimation\;;
   pdf = {http://purl.org/censi/research/2009-acc-consensus.pdf},
   slides = {http://purl.org/censi/research/2009-acc-consensus-slides.pdf},
   url = {http://purl.org/censi/2008/consensus}
+}
+
+@INPROCEEDINGS{censi13motion,
+  author = {Andrea Censi and Adam Nilsson and Richard M. Murray},
+  title = {Motion planning in observations space with learned diffeomorphism
+	models.},
+  booktitle = ICRA,
+  year = {2013},
+  note = {(to appear)},
+  abstract = { We consider the problem of planning motions in observations space,
+	based on learned models of the dynamics that associate to each action
+	a diffeomorphism of the obser- vations domain. For an arbitrary set
+	of diffeomorphisms, this problem must be formulated as a generic
+	search problem. We adapt established algorithms of the graph search
+	family. In this scenario, node expansion is very costly, as each
+	node in the graph is associated to an uncertain diffeomorphism and
+	corresponding predicted observations. We describe several improvements
+	that ameliorate performance: the introduction of better image similarities
+	to use as heuristics; a method to reduce the number of expanded nodes
+	by preliminarily identifying redundant plans; and a method to pre-compute
+	composite actions that make the search efficient in all directions.},
+  desc = { Using learned diffeomorphism models of the dynamics of cameras and
+	range-finders, we formulate motion planning as a planning problem
+	in the observations space. Nodes/states are (uncertain) images; actions/edges
+	are (uncertain) diffeomorphisms. },
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi12dptr1_preprint.png},
+  url = {http://purl.org/censi/2012/dptr1}
 }
 
 @INPROCEEDINGS{censi08fts,
@@ -6543,169 +6598,167 @@ he96semidefinite\;wan06secondorder\;xu05estimation\;;
   pdf = {http://dx.doi.org/10.1007/978-1-4419-0492-8_10}
 }
 
+% This file was created with JabRef 2.9.2.
+% Encoding: ISO8859_1
+
 @ARTICLE{carlone12angular_preprint,
-   author = {Carlone, Luca and Censi, Andrea},
-    title = "{From Angular Manifolds to the Integer Lattice: Guaranteed Orientation Estimation with Application to Pose Graph Optimization}",
+  author = {Carlone, Luca and Censi, Andrea},
+  title = {{From Angular Manifolds to the Integer Lattice: Guaranteed Orientation
+	Estimation with Application to Pose Graph Optimization}},
   journal = {ArXiv e-prints},
-archivePrefix = "arXiv",
- primaryClass = "cs.RO",
- keywords = {Computer Science - Robotics, Mathematics - Optimization and Control, 68T40, I.2.9, G.1.6, G.3, G.4},
-     year = 2012,
-    month = nov,
-  pdf = {http://arxiv.org/pdf/1211.3063v1},
-  desc = { 
-    Pose optimization is what is used in SLAM to optimize the map
-    after pose-pose and pose-features correspondences have been established. 
-    The variables in this problem are poses living
-    on the nodes of a graph, and measurements are relative measurements
-    along the graph edges. The
-    problem is hard because orientations live on a manifold
-    with nontrivial topology, which makes the problem
-    nonlinear, nonconvex, and with multiple minima.
-    [Luca][luca] and I try to solve the subproblem of orientation estimation. 
-    We find a way to convert
-    the problem to an unconstrained optimization problem on integers.
-    This makes it possible to solve the problem globally 
-    and return all likely guesses for the orientation.
-
-    [luca]: http://lucacarlone.com
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/carlone12angular_preprint.png}
-}
-
-
-
-@techreport{censi12dptr1_preprint,
-  author = {Andrea Censi and Adam Nilsson
-             and Richard M. Murray
-             },
-  title = {Motion planning in observations space with learned diffeomorphism models.},
-  institution = {California Institute of Technology},
-  pdf = {http://purl.org/censi/research/2012-dptr1.pdf},
-  url = {http://purl.org/censi/2012/dptr1}, 
   year = {2012},
-  number={CaltechCDSTR:2012.004},
-  note = {To appear in ICRA 2013.},
-  kind = {preprint},
-  abstract = { We consider the problem of planning motions in observations space, based on learned models of the dynamics that associate to each action a diffeomorphism of the obser- vations domain. For an arbitrary set of diffeomorphisms, this problem must be formulated as a generic search problem. We adapt established algorithms of the graph search family. In this scenario, node expansion is very costly, as each node in the graph is associated to an uncertain diffeomorphism and corresponding predicted observations. We describe several improvements that ameliorate performance: the introduction of better image similarities to use as heuristics; a method to reduce the number of expanded nodes by preliminarily identifying redundant plans; and a method to pre-compute composite actions that make the search efficient in all directions.},
-  desc = { 
-    Using learned diffeomorphism models of the dynamics of cameras and range-finders,
-    we formulate motion planning as a planning problem in the observations space.
-    Nodes/states are (uncertain) images; actions/edges are (uncertain) diffeomorphisms.
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi12dptr1_preprint.png}
-}
-
-@techreport{censi12saccade_preprint,
-  author = {Andrea Censi* and Andrew D. Straw* 
-             and Rosalyn W. Sayaman and Richard M. Murray
-             and Michael H. Dickinson},
-  title = {Discriminating external and internal causes
-for saccade initiation in freely flying {\em Drosophila}},
-  institution = {California Institute of Technology},
-  url = {http://purl.org/censi/2011/saccade}, 
-  pdf = {http://purl.org/censi/research/2012-plos-saccades.pdf},
-  slides = {http://purl.org/censi/research/2012-sicb-saccades.pdf},
-  year = {2012},
-  sortyear={2014},
-  number={CaltechAUTHORS:20120805-120309438},
-  kind = {preprint},
-  abstract = {As animals move through the world in search of resources, they
-  change course in reaction to both external sensory cues and internally-
-  generated programs. Elucidating the functional logic of complex search
-  algorithms is challenging because the observable actions of the animal cannot
-  be unambiguously assigned to externally- or internally-triggered events. We
-  present a technique that addresses this challenge by assessing quantitatively
-  the contribution of external stimuli and internal processes. We apply this
-  technique to the analysis of rapid turns (saccades) of freely flying
-  Drosophila melanogaster. We show that a single scalar feature computed from
-  the visual stimulus experienced by the animal is sufficient to explain a
-  majority (93%) of the turning decisions. We automatically estimate this scalar
-  value from the observable trajectory, without any assumption regarding the
-  sensory processing. A posteriori, we show that the estimated feature field is
-  consistent with previous results measured in other experimental conditions.
-  The remaining turning decisions, not explained by this feature of the visual
-  input, may be attributed to a combination of deterministic processes based on
-  unobservable internal states and purely stochastic behavior. We cannot
-  distinguish these contributions using external observations alone, but we are
-  able to provide a quantitative bound of their relative importance with respect
-  to stimulus-triggered decisions. Our results suggest that comparatively few
-  saccades in free-flying conditions are a result of an intrinsic spontaneous
-  process, contrary to previous suggestions. We discuss how this technique could
-  be generalized for use in other systems and employed as a tool for classifying
-  effects into sensory, decision, and motor categories when used to analyze data
-  from genetic behavioral screens.},
-  note = {(To appear in PLOS Computational Biology, February 2013)},
-  desc = { 
-    What goes on in a fruit fly's head while it flies? 
-    In this paper we try to identify the dependence of the decision processes
-    on the external stimulus experienced by the fly. Remarkably, we are able to 
-    say a great deal about internal sensory processing by just observing the 
-    external behavior.
-  },
-  month = dec,
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi12saccade_preprint.png}
-
-}
-
-@techreport{censi12cameracalib_preprint,
-  author = {Andrea Censi and Davide Scaramuzza},
-  title = {Calibration by correlation using metric embedding 
-           from non-metric similarities},
-  url = {http://purl.org/censi/2012/camera_calibration}, 
-  pdf = {http://andrea.caltech.edu/pub/research/preprints/camera_calibration/2012-camera_calibration.pdf},
   month = nov,
-  year = {2012},
-  institution = {California Institute of Technology},
-  number = {CaltechAUTHORS:20120805-103228127},
-  note = {(To appear in IEEE Transactions on Pattern Analysis and Machine Intelligence, 2013)},
-  desc = { 
-    [Davide] and I explain how to calibrate a generic single-view-point camera
-    by only waving it around.
-
-    [Davide]: https://sites.google.com/site/scarabotix/home
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi12cameracalib_preprint.png}
+  archiveprefix = {arXiv},
+  desc = { Pose optimization is what is used in SLAM to optimize the map after
+	pose-pose and pose-features correspondences have been established.
+	The variables in this problem are poses living on the nodes of a
+	graph, and measurements are relative measurements along the graph
+	edges. The problem is hard because orientations live on a manifold
+	with nontrivial topology, which makes the problem nonlinear, nonconvex,
+	and with multiple minima. [Luca][luca] and I try to solve the subproblem
+	of orientation estimation. We find a way to convert the problem to
+	an unconstrained optimization problem on integers. This makes it
+	possible to solve the problem globally and return all likely guesses
+	for the orientation.
+	
+	 [luca]: http://lucacarlone.com },
+  descicon = {http://purl.org/censi/web/media/paper-icons/carlone12angular_preprint.png},
+  keywords = {Computer Science - Robotics, Mathematics - Optimization and Control,
+	68T40, I.2.9, G.1.6, G.3, G.4},
+  pdf = {http://arxiv.org/pdf/1211.3063v1},
+  primaryclass = {cs.RO}
 }
 
-@techreport{censi12joint_preprint_old,
-  author = {Andrea Censi and Antonio Franchi 
-            and Luca Marchionni and Giuseppe Oriolo},
-  title = {Simultaneous calibration of odometry 
-           and sensor parameters for mobile robots},
-  note = {},
-  kind = {preprint},
-  url = {http://purl.org/censi/2012/joint_calibration},
-  pdf = {http://purl.org/censi/research/2012-joint_calibration.pdf},
-  year = {2012},
-  institution = {California Institute of Technology},
-  number = {CaltechAUTHORS:20120805-115123559},
-  desc = { 
-    Fast, practical, and extremely precise 
-    simultaneous estimation of odometry and sensor configuration 
-    parameters for mobile robots.
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/calibration.jpg}
-}
-
-
-@article{censi12joint_preprint,
-  author = {Andrea Censi and Antonio Franchi 
-            and Luca Marchionni and Giuseppe Oriolo},
-  title = {Simultaneous calibration of odometry 
-           and sensor parameters for mobile robots},
-  note = {(To appear)},
-  kind = {preprint},
+@ARTICLE{censi12joint_preprint,
+  author = {Andrea Censi and Antonio Franchi and Luca Marchionni and Giuseppe
+	Oriolo},
+  title = {Simultaneous calibration of odometry and sensor parameters for mobile
+	robots},
   journal = {IEEE Transactions on Robotics},
-  url = {http://purl.org/censi/2012/joint_calibration},
-  pdf = {http://purl.org/censi/research/2012-joint_calibration.pdf},
   year = {2013},
   month = apr,
-  sortyear = 2011,
-  desc = { 
-    Fast, practical, and extremely precise 
-    simultaneous estimation of odometry and sensor configuration 
-    parameters for mobile robots.
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/calibration.jpg}
+  note = {(To appear)},
+  desc = { Fast, practical, and extremely precise simultaneous estimation of
+	odometry and sensor configuration parameters for mobile robots. },
+  descicon = {http://purl.org/censi/web/media/paper-icons/calibration.jpg},
+  kind = {preprint},
+  pdf = {http://purl.org/censi/research/2012-joint_calibration.pdf},
+  sortyear = {2011},
+  url = {http://purl.org/censi/2012/joint_calibration}
 }
+
+@TECHREPORT{censi12joint_preprint_old,
+  author = {Andrea Censi and Antonio Franchi and Luca Marchionni and Giuseppe
+	Oriolo},
+  title = {Simultaneous calibration of odometry and sensor parameters for mobile
+	robots},
+  institution = {California Institute of Technology},
+  year = {2012},
+  number = {CaltechAUTHORS:20120805-115123559},
+  desc = { Fast, practical, and extremely precise simultaneous estimation of
+	odometry and sensor configuration parameters for mobile robots. },
+  descicon = {http://purl.org/censi/web/media/paper-icons/calibration.jpg},
+  kind = {preprint},
+  pdf = {http://purl.org/censi/research/2012-joint_calibration.pdf},
+  url = {http://purl.org/censi/2012/joint_calibration}
+}
+
+@TECHREPORT{censi12dptr1_preprint,
+  author = {Andrea Censi and Adam Nilsson and Richard M. Murray},
+  title = {Motion planning in observations space with learned diffeomorphism
+	models.},
+  institution = {California Institute of Technology},
+  year = {2012},
+  number = {CaltechCDSTR:2012.004},
+  note = {To appear in ICRA 2013.},
+  abstract = { We consider the problem of planning motions in observations space,
+	based on learned models of the dynamics that associate to each action
+	a diffeomorphism of the obser- vations domain. For an arbitrary set
+	of diffeomorphisms, this problem must be formulated as a generic
+	search problem. We adapt established algorithms of the graph search
+	family. In this scenario, node expansion is very costly, as each
+	node in the graph is associated to an uncertain diffeomorphism and
+	corresponding predicted observations. We describe several improvements
+	that ameliorate performance: the introduction of better image similarities
+	to use as heuristics; a method to reduce the number of expanded nodes
+	by preliminarily identifying redundant plans; and a method to pre-compute
+	composite actions that make the search efficient in all directions.},
+  desc = { Using learned diffeomorphism models of the dynamics of cameras and
+	range-finders, we formulate motion planning as a planning problem
+	in the observations space. Nodes/states are (uncertain) images; actions/edges
+	are (uncertain) diffeomorphisms. },
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi12dptr1_preprint.png},
+  kind = {preprint},
+  pdf = {http://purl.org/censi/research/2012-dptr1.pdf},
+  url = {http://purl.org/censi/2012/dptr1}
+}
+
+@TECHREPORT{censi12cameracalib_preprint,
+  author = {Andrea Censi and Davide Scaramuzza},
+  title = {Calibration by correlation using metric embedding from non-metric
+	similarities},
+  institution = {California Institute of Technology},
+  year = {2012},
+  number = {CaltechAUTHORS:20120805-103228127},
+  month = nov,
+  note = {(To appear in IEEE Transactions on Pattern Analysis and Machine Intelligence,
+	2013)},
+  desc = { [Davide] and I explain how to calibrate a generic single-view-point
+	camera by only waving it around.
+	
+	 [Davide]: https://sites.google.com/site/scarabotix/home },
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi12cameracalib_preprint.png},
+  pdf = {http://andrea.caltech.edu/pub/research/preprints/camera_calibration/2012-camera_calibration.pdf},
+  url = {http://purl.org/censi/2012/camera_calibration}
+}
+
+@TECHREPORT{censi12saccade_preprint,
+  author = {Andrea Censi* and Andrew D. Straw* and Rosalyn W. Sayaman and Richard
+	M. Murray and Michael H. Dickinson},
+  title = {Discriminating external and internal causes for saccade initiation
+	in freely flying {\em Drosophila}},
+  institution = {California Institute of Technology},
+  year = {2012},
+  number = {CaltechAUTHORS:20120805-120309438},
+  month = dec,
+  note = {(To appear in PLOS Computational Biology, February 2013)},
+  abstract = {As animals move through the world in search of resources, they change
+	course in reaction to both external sensory cues and internally-
+	generated programs. Elucidating the functional logic of complex search
+	algorithms is challenging because the observable actions of the animal
+	cannot be unambiguously assigned to externally- or internally-triggered
+	events. We present a technique that addresses this challenge by assessing
+	quantitatively the contribution of external stimuli and internal
+	processes. We apply this technique to the analysis of rapid turns
+	(saccades) of freely flying Drosophila melanogaster. We show that
+	a single scalar feature computed from the visual stimulus experienced
+	by the animal is sufficient to explain a majority (93%) of the turning
+	decisions. We automatically estimate this scalar value from the observable
+	trajectory, without any assumption regarding the sensory processing.
+	A posteriori, we show that the estimated feature field is consistent
+	with previous results measured in other experimental conditions.
+	The remaining turning decisions, not explained by this feature of
+	the visual input, may be attributed to a combination of deterministic
+	processes based on unobservable internal states and purely stochastic
+	behavior. We cannot distinguish these contributions using external
+	observations alone, but we are able to provide a quantitative bound
+	of their relative importance with respect to stimulus-triggered decisions.
+	Our results suggest that comparatively few saccades in free-flying
+	conditions are a result of an intrinsic spontaneous process, contrary
+	to previous suggestions. We discuss how this technique could be generalized
+	for use in other systems and employed as a tool for classifying effects
+	into sensory, decision, and motor categories when used to analyze
+	data from genetic behavioral screens.},
+  desc = { What goes on in a fruit fly's head while it flies? In this paper
+	we try to identify the dependence of the decision processes on the
+	external stimulus experienced by the fly. Remarkably, we are able
+	to say a great deal about internal sensory processing by just observing
+	the external behavior. },
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi12saccade_preprint.png},
+  kind = {preprint},
+  pdf = {http://purl.org/censi/research/2012-plos-saccades.pdf},
+  slides = {http://purl.org/censi/research/2012-sicb-saccades.pdf},
+  sortyear = {2014},
+  url = {http://purl.org/censi/2011/saccade}
+}
+
