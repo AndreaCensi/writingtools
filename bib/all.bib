@@ -5798,6 +5798,24 @@ he96semidefinite\;wan06secondorder\;xu05estimation\;;
 
 @STRING{use_icons = {1}}
 
+
+@inproceedings{censi13motion,
+  author = {Andrea Censi and Adam Nilsson
+             and Richard M. Murray
+             },
+  title = {Motion planning in observations space with learned diffeomorphism models.},
+  booktitle = {ICRA},
+  year = 2013,
+  abstract = { We consider the problem of planning motions in observations space, based on learned models of the dynamics that associate to each action a diffeomorphism of the obser- vations domain. For an arbitrary set of diffeomorphisms, this problem must be formulated as a generic search problem. We adapt established algorithms of the graph search family. In this scenario, node expansion is very costly, as each node in the graph is associated to an uncertain diffeomorphism and corresponding predicted observations. We describe several improvements that ameliorate performance: the introduction of better image similarities to use as heuristics; a method to reduce the number of expanded nodes by preliminarily identifying redundant plans; and a method to pre-compute composite actions that make the search efficient in all directions.},
+  desc = { 
+    Using learned diffeomorphism models of the dynamics of cameras and range-finders,
+    we formulate motion planning as a planning problem in the observations space.
+    Nodes/states are (uncertain) images; actions/edges are (uncertain) diffeomorphisms.
+  },
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi12dptr1_preprint.png}
+}
+
+
 @INPROCEEDINGS{BaCa04,
   author = {Bahadori, S. and Calisi, D. and Censi, A. and Farinelli, A. and Grisetti,
 	G. and Iocchi, L. and Nardi, D.},
