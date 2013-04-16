@@ -1,3 +1,9 @@
+#####
+##
+# Q: I try "make <file>.tex" and nothing happens!
+# A: Maybe dependencies are off (files deleted and things like that)
+#    Try to delete all: "rm *.lyx.d" and restart
+
 #lyx?=/Applications/LyX.app/Contents/MacOS/lyx
 lyx?=lyx
 
@@ -35,7 +41,10 @@ lyxtex: $(lyx_generated_tex)
 
 # if not given hypehn it shows alarming message
 # http://www.makelinux.net/make3/make3-CHP-2-SECT-7
--include $(lyx_deps)
+include $(lyx_deps)
+
+# But if you do there might be other problems
+# -include $(lyx_deps)
 
 
 # Note we delete the .tex. otherwise lyx does not update the time
