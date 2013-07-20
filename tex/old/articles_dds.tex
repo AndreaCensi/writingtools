@@ -67,12 +67,18 @@
 %:deprecated:
 
 
-\newcommand{\ddsfov}{\aset{V}} % Field of view for DDS
+\newcommand{\obspsV}{\aset{V}} % viewport
+\newcommand{\ddsfov}{\obspsV} % viewport
 %:def:def:dds-uncertainty
 %:sort:V
+\newcommand{\obspsVunpred}{\obspsV_\text{unpr}} % undpredictable part
+\newcommand{\obspsVpred}{\obspsV_\text{pred}} % predictable part 
+
+
 
 \newcommand{\ddsctod}{\myacronym{c\_to\_diff}} 
 \newcommand{\ddsste}{x} % State of a DDS (element)
 \newcommand{\ddsst}{\boldsymbol{\ddsste}} % State of a DDS
+
 
 
