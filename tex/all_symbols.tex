@@ -1643,9 +1643,9 @@
 \fi
 
 \ifdefined\obsgoal%
-  \renewcommand{\obsgoal}{\obs_{\text{goal}}}%
+  \renewcommand{\obsgoal}{\obsg}%
 \else%
-  \newcommand{\obsgoal}{\obs_{\text{goal}}}%
+  \newcommand{\obsgoal}{\obsg}%
 \fi
 
 
@@ -2638,7 +2638,7 @@
 \else%
   \newcommand{\ygneig}{N}%
 \fi
-%  A neighborhoood of $\ygoal$.
+%  A neighborhoood of $\obsg$.
 
 
 
@@ -4067,33 +4067,33 @@
 
 
 \ifdefined\obsg%
-  \renewcommand{\obsg}{\check{\obs}}%
+  \renewcommand{\obsg}{\obs_{g}}%
 \else%
-  \newcommand{\obsg}{\check{\obs}}%
+  \newcommand{\obsg}{\obs_{g}}%
 \fi
 %  Goal observations.
 
 
 \ifdefined\obsge%
-  \renewcommand{\obsge}{\check{\obse}}%
+  \renewcommand{\obsge}{\obse_{g}}%
 \else%
-  \newcommand{\obsge}{\check{\obse}}%
+  \newcommand{\obsge}{\obse_{g}}%
 \fi
 %  Goal observations (element).
 
 
 \ifdefined\obsgl%
-  \renewcommand{\obsgl}{\check{\obsl}}%
+  \renewcommand{\obsgl}{\obsl_{g}}%
 \else%
-  \newcommand{\obsgl}{\check{\obsl}}%
+  \newcommand{\obsgl}{\obsl_{g}}%
 \fi
 %  Goal observations (element).
 
 
 \ifdefined\obsgle%
-  \renewcommand{\obsgle}{\check{\obsle}}%
+  \renewcommand{\obsgle}{\obsle_{g}}%
 \else%
-  \newcommand{\obsgle}{\check{\obsle}}%
+  \newcommand{\obsgle}{\obsle_{g}}%
 \fi
 %  Goal observations (element).
 
@@ -4466,10 +4466,10 @@
   \newcommand{\citeboh}{{\color{red}[xxx]}\xspace}%
 \fi
 
-\ifdefined\citexx%
-  \renewcommand{\citexx}{\citeboh\xspace}%
+\ifdefined\citexxx%
+  \renewcommand{\citexxx}{\citeboh\xspace}%
 \else%
-  \newcommand{\citexx}{\citeboh\xspace}%
+  \newcommand{\citexxx}{\citeboh\xspace}%
 \fi
 
 \ifdefined\xxx%

@@ -11,10 +11,15 @@
 \newcommand{\env}{e} % Environment
 \newcommand{\envSp}{\mathcal{E}} % Environment space
 
-\newcommand{\envo}{\mathsf{Obs}} % Obstacles in the environment
+% \newcommand{\envo}{\mathsf{Obs}} % Obstacles in the environment
+% \newcommand{\envt}{\mathsf{Ref}} % Texture (function on $\envob$)
+% \newcommand{\envf}{\mathsf{Fie}} % Field sensed by field sampler
+
+\newcommand{\envo}{\mathcal{O}} % Obstacles in the environment
+\newcommand{\envt}{\mathcal{T}} % Texture (function on $\envob$)
+\newcommand{\envf}{\mathcal{F}} % Field sensed by field sampler
+
 \newcommand{\envob}{\partial \envo} % Obstacles boundaries
-\newcommand{\envt}{\mathsf{Ref}} % Texture (function on $\envob$)
-\newcommand{\envf}{\mathsf{Fie}} % Field sensed by field sampler
 
 \newcommand{\obspsDiff}{\obsps^{\text{dif}}}
 \newcommand{\obspsNotDiff}{\obsps^{\overline{\text{dif}}}}
@@ -30,7 +35,7 @@
 
 %:section:articles/jbds/misc:Used in proofs for JBDS
 
-\newcommand{\ygneig}{N} % A neighborhoood of $\ygoal$.
+\newcommand{\ygneig}{N} % A neighborhoood of $\obsg$.
 
 
 %:section:articles/jbds/robots: 

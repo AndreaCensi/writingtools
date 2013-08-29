@@ -199,11 +199,29 @@
 
 
 
+\newbool{usedBDSSk}\setbool{usedBDSSk}{false}
+\ifdefined\BDSSk%
+  \renewcommand{\BDSSk}{\markfirst{BDSSk}{usedBDSSk}{\bgCBDSfamily(\obsps;k)}}%
+\else%
+  \newcommand{\BDSSk}{\markfirst{BDSSk}{usedBDSSk}{\bgCBDSfamily(\obsps;k)}}%
+\fi
+
+
+
 \newbool{usedbgBDSfamily}\setbool{usedbgBDSfamily}{false}
 \ifdefined\bgBDSfamily%
   \renewcommand{\bgBDSfamily}{\markfirst{bgBDSfamily}{usedbgBDSfamily}{\mathsf{BDS}}}%
 \else%
   \newcommand{\bgBDSfamily}{\markfirst{bgBDSfamily}{usedbgBDSfamily}{\mathsf{BDS}}}%
+\fi
+%  Family of BDS sensors
+
+
+\newbool{usedbgCBDSfamily}\setbool{usedbgCBDSfamily}{false}
+\ifdefined\bgCBDSfamily%
+  \renewcommand{\bgCBDSfamily}{\markfirst{bgCBDSfamily}{usedbgCBDSfamily}{\mathsf{CBDS}}}%
+\else%
+  \newcommand{\bgCBDSfamily}{\markfirst{bgCBDSfamily}{usedbgCBDSfamily}{\mathsf{CBDS}}}%
 \fi
 %  Family of BDS sensors
 
@@ -228,14 +246,38 @@
 
 
 
+\newbool{usedcbds}\setbool{usedcbds}{false}
+\ifdefined\cbds%
+  \renewcommand{\cbds}{\markfirst{cbds}{usedcbds}{\myacronym{cbds}}}%
+\else%
+  \newcommand{\cbds}{\markfirst{cbds}{usedcbds}{\myacronym{cbds}}}%
+\fi
+%  Continuous-space bilinear dynamics system
+
+
+\newbool{usedCBDS}\setbool{usedCBDS}{false}
+\ifdefined\CBDS%
+  \renewcommand{\CBDS}{\markfirst{CBDS}{usedCBDS}{\cbds}}%
+\else%
+  \newcommand{\CBDS}{\markfirst{CBDS}{usedCBDS}{\cbds}}%
+\fi
+
+
+
 
 
 \ifdefined\omsum%
-  \renewcommand{\omsum}[1]{{\color{gray}\sum_{#1}}\ }%
+  \renewcommand{\omsum}[1]{{\textstyle{\color{gray}\sum_{#1}}}\ }%
 \else%
-  \newcommand{\omsum}[1]{{\color{gray}\sum_{#1}}\ }%
+  \newcommand{\omsum}[1]{{\textstyle{\color{gray}\sum_{#1}}}\ }%
 \fi
 %  omitted sum
+\ifdefined\omsumb%
+  \renewcommand{\omsumb}[2]{{\textstyle{\color{gray}\sum_{#1}^{#2}}}\ }%
+\else%
+  \newcommand{\omsumb}[2]{{\textstyle{\color{gray}\sum_{#1}^{#2}}}\ }%
+\fi
+%  omitted sum (two arguments)
 
 
 %%% Bilinear models
@@ -600,8 +642,6 @@
 
  
 
-
-
 \newbool{usedstate}\setbool{usedstate}{false}
 \ifdefined\state%
   \renewcommand{\state}{\markfirst{state}{usedstate}{\boldsymbol{x}}}%
@@ -609,6 +649,15 @@
   \newcommand{\state}{\markfirst{state}{usedstate}{\boldsymbol{x}}}%
 \fi
 %  Generic underlying state.
+\newbool{usedstateSp}\setbool{usedstateSp}{false}
+\ifdefined\stateSp%
+  \renewcommand{\stateSp}{\markfirst{stateSp}{usedstateSp}{\aset{X}}}%
+\else%
+  \newcommand{\stateSp}{\markfirst{stateSp}{usedstateSp}{\aset{X}}}%
+\fi
+%  Generic underlying state space.
+
+
 \newbool{useddetecte}\setbool{useddetecte}{false}
 \ifdefined\detecte%
   \renewcommand{\detecte}{\markfirst{detecte}{useddetecte}{d}}%
@@ -1689,13 +1738,77 @@
 
 
 
+\newbool{usedobspsV}\setbool{usedobspsV}{false}
+\ifdefined\obspsV%
+  \renewcommand{\obspsV}{\markfirst{obspsV}{usedobspsV}{\aset{V}}}%
+\else%
+  \newcommand{\obspsV}{\markfirst{obspsV}{usedobspsV}{\aset{V}}}%
+\fi
+%  viewport
 \newbool{usedddsfov}\setbool{usedddsfov}{false}
 \ifdefined\ddsfov%
-  \renewcommand{\ddsfov}{\markfirst{ddsfov}{usedddsfov}{\aset{V}}}%
+  \renewcommand{\ddsfov}{\markfirst{ddsfov}{usedddsfov}{\obspsV}}%
 \else%
-  \newcommand{\ddsfov}{\markfirst{ddsfov}{usedddsfov}{\aset{V}}}%
+  \newcommand{\ddsfov}{\markfirst{ddsfov}{usedddsfov}{\obspsV}}%
 \fi
-%  Field of view for DDS
+%  viewport
+\newbool{usedobspsVunpred}\setbool{usedobspsVunpred}{false}
+\ifdefined\obspsVunpred%
+  \renewcommand{\obspsVunpred}{\markfirst{obspsVunpred}{usedobspsVunpred}{\obspsV^{\overline{\text{pr}}}}}%
+\else%
+  \newcommand{\obspsVunpred}{\markfirst{obspsVunpred}{usedobspsVunpred}{\obspsV^{\overline{\text{pr}}}}}%
+\fi
+%  undpredictable part
+\newbool{usedobspsVpred}\setbool{usedobspsVpred}{false}
+\ifdefined\obspsVpred%
+  \renewcommand{\obspsVpred}{\markfirst{obspsVpred}{usedobspsVpred}{\obspsV^\text{pr}}}%
+\else%
+  \newcommand{\obspsVpred}{\markfirst{obspsVpred}{usedobspsVpred}{\obspsV^\text{pr}}}%
+\fi
+%  predictable part 
+\newbool{usedobspsVunpredt}\setbool{usedobspsVunpredt}{false}
+\ifdefined\obspsVunpredt%
+  \renewcommand{\obspsVunpredt}{\markfirst{obspsVunpredt}{usedobspsVunpredt}{\obspsV_t^{\overline{\text{pr}}}}}%
+\else%
+  \newcommand{\obspsVunpredt}{\markfirst{obspsVunpredt}{usedobspsVunpredt}{\obspsV_t^{\overline{\text{pr}}}}}%
+\fi
+%  undpredictable part at time t
+\newbool{usedobspsVpredt}\setbool{usedobspsVpredt}{false}
+\ifdefined\obspsVpredt%
+  \renewcommand{\obspsVpredt}{\markfirst{obspsVpredt}{usedobspsVpredt}{\obspsV_t^\text{pr}}}%
+\else%
+  \newcommand{\obspsVpredt}{\markfirst{obspsVpredt}{usedobspsVpredt}{\obspsV_t^\text{pr}}}%
+\fi
+%  predictable part at time t
+
+
+
+
+
+
+\newbool{usedddsctod}\setbool{usedddsctod}{false}
+\ifdefined\ddsctod%
+  \renewcommand{\ddsctod}{\markfirst{ddsctod}{usedddsctod}{\myacronym{c\_to\_diff}}}%
+\else%
+  \newcommand{\ddsctod}{\markfirst{ddsctod}{usedddsctod}{\myacronym{c\_to\_diff}}}%
+\fi
+
+\newbool{usedddsste}\setbool{usedddsste}{false}
+\ifdefined\ddsste%
+  \renewcommand{\ddsste}{\markfirst{ddsste}{usedddsste}{x}}%
+\else%
+  \newcommand{\ddsste}{\markfirst{ddsste}{usedddsste}{x}}%
+\fi
+%  State of a DDS (element)
+\newbool{usedddsst}\setbool{usedddsst}{false}
+\ifdefined\ddsst%
+  \renewcommand{\ddsst}{\markfirst{ddsst}{usedddsst}{\boldsymbol{\ddsste}}}%
+\else%
+  \newcommand{\ddsst}{\markfirst{ddsst}{usedddsst}{\boldsymbol{\ddsste}}}%
+\fi
+%  State of a DDS
+
+
 
 
 
@@ -1741,9 +1854,9 @@
 
 \newbool{usedobsgoal}\setbool{usedobsgoal}{false}
 \ifdefined\obsgoal%
-  \renewcommand{\obsgoal}{\markfirst{obsgoal}{usedobsgoal}{\obs_{\text{goal}}}}%
+  \renewcommand{\obsgoal}{\markfirst{obsgoal}{usedobsgoal}{\obsg}}%
 \else%
-  \newcommand{\obsgoal}{\markfirst{obsgoal}{usedobsgoal}{\obs_{\text{goal}}}}%
+  \newcommand{\obsgoal}{\markfirst{obsgoal}{usedobsgoal}{\obsg}}%
 \fi
 
 
@@ -2700,6 +2813,214 @@
 
 
  
+
+
+
+
+
+
+\newbool{usedveh}\setbool{usedveh}{false}
+\ifdefined\veh%
+  \renewcommand{\veh}{\markfirst{veh}{usedveh}{\vehBody}}%
+\else%
+  \newcommand{\veh}{\markfirst{veh}{usedveh}{\vehBody}}%
+\fi
+%  A vehicle body
+\newbool{usedvehBody}\setbool{usedvehBody}{false}
+\ifdefined\vehBody%
+  \renewcommand{\vehBody}{\markfirst{vehBody}{usedvehBody}{B}}%
+\else%
+  \newcommand{\vehBody}{\markfirst{vehBody}{usedvehBody}{B}}%
+\fi
+%  A vehicle body
+\newbool{usedvehKin}\setbool{usedvehKin}{false}
+\ifdefined\vehKin%
+  \renewcommand{\vehKin}{\markfirst{vehKin}{usedvehKin}{K}}%
+\else%
+  \newcommand{\vehKin}{\markfirst{vehKin}{usedvehKin}{K}}%
+\fi
+%  Vehicle kinematics 
+\newbool{usedvehSensPos}\setbool{usedvehSensPos}{false}
+\ifdefined\vehSensPos%
+  \renewcommand{\vehSensPos}{\markfirst{vehSensPos}{usedvehSensPos}{\boldsymbol{r}}}%
+\else%
+  \newcommand{\vehSensPos}{\markfirst{vehSensPos}{usedvehSensPos}{\boldsymbol{r}}}%
+\fi
+%  Sensor relative pose
+
+
+\newbool{usedvehSensFun}\setbool{usedvehSensFun}{false}
+\ifdefined\vehSensFun%
+  \renewcommand{\vehSensFun}{\markfirst{vehSensFun}{usedvehSensFun}{\psi}}%
+\else%
+  \newcommand{\vehSensFun}{\markfirst{vehSensFun}{usedvehSensFun}{\psi}}%
+\fi
+%  Function that defines an exteroceptive sensor
+\newbool{usedenv}\setbool{usedenv}{false}
+\ifdefined\env%
+  \renewcommand{\env}{\markfirst{env}{usedenv}{e}}%
+\else%
+  \newcommand{\env}{\markfirst{env}{usedenv}{e}}%
+\fi
+%  Environment
+\newbool{usedenvSp}\setbool{usedenvSp}{false}
+\ifdefined\envSp%
+  \renewcommand{\envSp}{\markfirst{envSp}{usedenvSp}{\mathcal{E}}}%
+\else%
+  \newcommand{\envSp}{\markfirst{envSp}{usedenvSp}{\mathcal{E}}}%
+\fi
+%  Environment space
+
+
+\newbool{usedenvo}\setbool{usedenvo}{false}
+\ifdefined\envo%
+  \renewcommand{\envo}{\markfirst{envo}{usedenvo}{\mathsf{Obs}}}%
+\else%
+  \newcommand{\envo}{\markfirst{envo}{usedenvo}{\mathsf{Obs}}}%
+\fi
+%  Obstacles in the environment
+\newbool{usedenvob}\setbool{usedenvob}{false}
+\ifdefined\envob%
+  \renewcommand{\envob}{\markfirst{envob}{usedenvob}{\partial \envo}}%
+\else%
+  \newcommand{\envob}{\markfirst{envob}{usedenvob}{\partial \envo}}%
+\fi
+%  Obstacles boundaries
+\newbool{usedenvt}\setbool{usedenvt}{false}
+\ifdefined\envt%
+  \renewcommand{\envt}{\markfirst{envt}{usedenvt}{\mathsf{Ref}}}%
+\else%
+  \newcommand{\envt}{\markfirst{envt}{usedenvt}{\mathsf{Ref}}}%
+\fi
+%  Texture (function on $\envob$)
+\newbool{usedenvf}\setbool{usedenvf}{false}
+\ifdefined\envf%
+  \renewcommand{\envf}{\markfirst{envf}{usedenvf}{\mathsf{Fie}}}%
+\else%
+  \newcommand{\envf}{\markfirst{envf}{usedenvf}{\mathsf{Fie}}}%
+\fi
+%  Field sensed by field sampler
+
+
+\newbool{usedobspsDiff}\setbool{usedobspsDiff}{false}
+\ifdefined\obspsDiff%
+  \renewcommand{\obspsDiff}{\markfirst{obspsDiff}{usedobspsDiff}{\obsps^{\text{dif}}}}%
+\else%
+  \newcommand{\obspsDiff}{\markfirst{obspsDiff}{usedobspsDiff}{\obsps^{\text{dif}}}}%
+\fi
+
+\newbool{usedobspsNotDiff}\setbool{usedobspsNotDiff}{false}
+\ifdefined\obspsNotDiff%
+  \renewcommand{\obspsNotDiff}{\markfirst{obspsNotDiff}{usedobspsNotDiff}{\obsps^{\overline{\text{dif}}}}}%
+\else%
+  \newcommand{\obspsNotDiff}{\markfirst{obspsNotDiff}{usedobspsNotDiff}{\obsps^{\overline{\text{dif}}}}}%
+\fi
+
+
+
+\newbool{usedsic}\setbool{usedsic}{false}
+\ifdefined\sic%
+  \renewcommand{\sic}{\markfirst{sic}{usedsic}{\text{IdealCams}}}%
+\else%
+  \newcommand{\sic}{\markfirst{sic}{usedsic}{\text{IdealCams}}}%
+\fi
+%  ideal camera
+\newbool{usedsir}\setbool{usedsir}{false}
+\ifdefined\sir%
+  \renewcommand{\sir}{\markfirst{sir}{usedsir}{\text{IdealRFs}}}%
+\else%
+  \newcommand{\sir}{\markfirst{sir}{usedsir}{\text{IdealRFs}}}%
+\fi
+%  ideal range finder
+\newbool{usedsif}\setbool{usedsif}{false}
+\ifdefined\sif%
+  \renewcommand{\sif}{\markfirst{sif}{usedsif}{\text{IdealFSs}}}%
+\else%
+  \newcommand{\sif}{\markfirst{sif}{usedsif}{\text{IdealFSs}}}%
+\fi
+%  ideal field sampler
+\newbool{usedsicV}\setbool{usedsicV}{false}
+\ifdefined\sicV%
+  \renewcommand{\sicV}{\markfirst{sicV}{usedsicV}{\sic(\obspsV)}}%
+\else%
+  \newcommand{\sicV}{\markfirst{sicV}{usedsicV}{\sic(\obspsV)}}%
+\fi
+%  ideal camera with viewport
+\newbool{usedsirV}\setbool{usedsirV}{false}
+\ifdefined\sirV%
+  \renewcommand{\sirV}{\markfirst{sirV}{usedsirV}{\sir(\obspsV)}}%
+\else%
+  \newcommand{\sirV}{\markfirst{sirV}{usedsirV}{\sir(\obspsV)}}%
+\fi
+%  ideal range finder with viewport
+\newbool{usedsifV}\setbool{usedsifV}{false}
+\ifdefined\sifV%
+  \renewcommand{\sifV}{\markfirst{sifV}{usedsifV}{\sif(\obspsV)}}%
+\else%
+  \newcommand{\sifV}{\markfirst{sifV}{usedsifV}{\sif(\obspsV)}}%
+\fi
+%  ideal field sampler with viewport
+
+
+\ifdefined\zoh%
+  \renewcommand{\zoh}[1]{\text{Zoh}_{#1}}%
+\else%
+  \newcommand{\zoh}[1]{\text{Zoh}_{#1}}%
+\fi
+%  Zero order hold
+
+
+
+
+\newbool{usedygneig}\setbool{usedygneig}{false}
+\ifdefined\ygneig%
+  \renewcommand{\ygneig}{\markfirst{ygneig}{usedygneig}{N}}%
+\else%
+  \newcommand{\ygneig}{\markfirst{ygneig}{usedygneig}{N}}%
+\fi
+%  A neighborhoood of $\obsg$.
+
+
+
+
+
+
+\newbool{usedallrobots}\setbool{usedallrobots}{false}
+\ifdefined\allrobots%
+  \renewcommand{\allrobots}{\markfirst{allrobots}{usedallrobots}{\mathsf{Robots}}}%
+\else%
+  \newcommand{\allrobots}{\markfirst{allrobots}{usedallrobots}{\mathsf{Robots}}}%
+\fi
+%  The set of all robots
+\newbool{usedvehRob}\setbool{usedvehRob}{false}
+\ifdefined\vehRob%
+  \renewcommand{\vehRob}{\markfirst{vehRob}{usedvehRob}{\mathsf{Vehicles}}}%
+\else%
+  \newcommand{\vehRob}{\markfirst{vehRob}{usedvehRob}{\mathsf{Vehicles}}}%
+\fi
+%  Vehicle robots
+\newbool{usedvehRobNuis}\setbool{usedvehRobNuis}{false}
+\ifdefined\vehRobNuis%
+  \renewcommand{\vehRobNuis}{\markfirst{vehRobNuis}{usedvehRobNuis}{{\tilde{\vehRob}}}}%
+\else%
+  \newcommand{\vehRobNuis}{\markfirst{vehRobNuis}{usedvehRobNuis}{{\tilde{\vehRob}}}}%
+\fi
+%  Vehicle robots with nuisances
+
+
+\newbool{usedrobVeh}\setbool{usedrobVeh}{false}
+\ifdefined\robVeh%
+  \renewcommand{\robVeh}{\markfirst{robVeh}{usedrobVeh}{\vehRob}}%
+\else%
+  \newcommand{\robVeh}{\markfirst{robVeh}{usedrobVeh}{\vehRob}}%
+\fi
+
+
+
+
+
+
+
 
 
 \newbool{usedscene}\setbool{usedscene}{false}
@@ -4081,9 +4402,9 @@
 
 \newbool{usedworld}\setbool{usedworld}{false}
 \ifdefined\world%
-  \renewcommand{\world}{\markfirst{world}{usedworld}{\boldsymbol{w}}}%
+  \renewcommand{\world}{\markfirst{world}{usedworld}{\textsf{map}}}%
 \else%
-  \newcommand{\world}{\markfirst{world}{usedworld}{\boldsymbol{w}}}%
+  \newcommand{\world}{\markfirst{world}{usedworld}{\textsf{map}}}%
 \fi
 %  The "world", an element of $\bbSpYU$.
 
@@ -4248,36 +4569,36 @@
 
 \newbool{usedobsg}\setbool{usedobsg}{false}
 \ifdefined\obsg%
-  \renewcommand{\obsg}{\markfirst{obsg}{usedobsg}{\check{\obs}}}%
+  \renewcommand{\obsg}{\markfirst{obsg}{usedobsg}{\obs_{g}}}%
 \else%
-  \newcommand{\obsg}{\markfirst{obsg}{usedobsg}{\check{\obs}}}%
+  \newcommand{\obsg}{\markfirst{obsg}{usedobsg}{\obs_{g}}}%
 \fi
 %  Goal observations.
 
 
 \newbool{usedobsge}\setbool{usedobsge}{false}
 \ifdefined\obsge%
-  \renewcommand{\obsge}{\markfirst{obsge}{usedobsge}{\check{\obse}}}%
+  \renewcommand{\obsge}{\markfirst{obsge}{usedobsge}{\obse_{g}}}%
 \else%
-  \newcommand{\obsge}{\markfirst{obsge}{usedobsge}{\check{\obse}}}%
+  \newcommand{\obsge}{\markfirst{obsge}{usedobsge}{\obse_{g}}}%
 \fi
 %  Goal observations (element).
 
 
 \newbool{usedobsgl}\setbool{usedobsgl}{false}
 \ifdefined\obsgl%
-  \renewcommand{\obsgl}{\markfirst{obsgl}{usedobsgl}{\check{\obsl}}}%
+  \renewcommand{\obsgl}{\markfirst{obsgl}{usedobsgl}{\obsl_{g}}}%
 \else%
-  \newcommand{\obsgl}{\markfirst{obsgl}{usedobsgl}{\check{\obsl}}}%
+  \newcommand{\obsgl}{\markfirst{obsgl}{usedobsgl}{\obsl_{g}}}%
 \fi
 %  Goal observations (element).
 
 
 \newbool{usedobsgle}\setbool{usedobsgle}{false}
 \ifdefined\obsgle%
-  \renewcommand{\obsgle}{\markfirst{obsgle}{usedobsgle}{\check{\obsle}}}%
+  \renewcommand{\obsgle}{\markfirst{obsgle}{usedobsgle}{\obsle_{g}}}%
 \else%
-  \newcommand{\obsgle}{\markfirst{obsgle}{usedobsgle}{\check{\obsle}}}%
+  \newcommand{\obsgle}{\markfirst{obsgle}{usedobsgle}{\obsle_{g}}}%
 \fi
 %  Goal observations (element).
 
@@ -4293,6 +4614,17 @@
   \renewcommand{\bbSpYU}{\markfirst{bbSpYU}{usedbbSpYU}{\bbSp(\obsSp;\cmdSp)}}%
 \else%
   \newcommand{\bbSpYU}{\markfirst{bbSpYU}{usedbbSpYU}{\bbSp(\obsSp;\cmdSp)}}%
+\fi
+%  \towrite
+
+
+
+
+\newbool{usedbbSpYXU}\setbool{usedbbSpYXU}{false}
+\ifdefined\bbSpYXU%
+  \renewcommand{\bbSpYXU}{\markfirst{bbSpYXU}{usedbbSpYXU}{\bbSp(\obsSp;\stateSp;\cmdSp)}}%
+\else%
+  \newcommand{\bbSpYXU}{\markfirst{bbSpYXU}{usedbbSpYXU}{\bbSp(\obsSp;\stateSp;\cmdSp)}}%
 \fi
 %  \towrite
 
@@ -4382,8 +4714,6 @@
 \else%
   \newcommand{\veVehicles}{\markfirst{veVehicles}{usedveVehicles}{\mathsf{Vehicles}}}%
 \fi
-%  all Vehicles dynamics
-
 
 
 
@@ -4679,6 +5009,13 @@
   \renewcommand{\citeboh}{\markfirst{citeboh}{usedciteboh}{{\color{red}[xxx]}\xspace}}%
 \else%
   \newcommand{\citeboh}{\markfirst{citeboh}{usedciteboh}{{\color{red}[xxx]}\xspace}}%
+\fi
+
+\newbool{usedcitexxx}\setbool{usedcitexxx}{false}
+\ifdefined\citexxx%
+  \renewcommand{\citexxx}{\markfirst{citexxx}{usedcitexxx}{\citeboh\xspace}}%
+\else%
+  \newcommand{\citexxx}{\markfirst{citexxx}{usedcitexxx}{\citeboh\xspace}}%
 \fi
 
 \newbool{usedxxx}\setbool{usedxxx}{false}
@@ -5252,31 +5589,95 @@
 %  Special Euclidean algebra
 
 
-\newbool{usedsothree}\setbool{usedsothree}{false}
-\ifdefined\sothree%
-  \renewcommand{\sothree}{\markfirst{sothree}{usedsothree}{\mathrm{SO(3)}}}%
+\newbool{usedSOthree}\setbool{usedSOthree}{false}
+\ifdefined\SOthree%
+  \renewcommand{\SOthree}{\markfirst{SOthree}{usedSOthree}{\mathrm{SO(3)}}}%
 \else%
-  \newcommand{\sothree}{\markfirst{sothree}{usedsothree}{\mathrm{SO(3)}}}%
+  \newcommand{\SOthree}{\markfirst{SOthree}{usedSOthree}{\mathrm{SO(3)}}}%
 \fi
 %  Special orthogonal group (rotation matrices)
 
 
-\newbool{usedsethree}\setbool{usedsethree}{false}
-\ifdefined\sethree%
-  \renewcommand{\sethree}{\markfirst{sethree}{usedsethree}{\mathrm{SE(3)}}}%
+\newbool{usedSEthree}\setbool{usedSEthree}{false}
+\ifdefined\SEthree%
+  \renewcommand{\SEthree}{\markfirst{SEthree}{usedSEthree}{\mathrm{SE(3)}}}%
 \else%
-  \newcommand{\sethree}{\markfirst{sethree}{usedsethree}{\mathrm{SE(3)}}}%
+  \newcommand{\SEthree}{\markfirst{SEthree}{usedSEthree}{\mathrm{SE(3)}}}%
 \fi
 %  Special Euclidean group 
+
+
+\newbool{usedSEtwo}\setbool{usedSEtwo}{false}
+\ifdefined\SEtwo%
+  \renewcommand{\SEtwo}{\markfirst{SEtwo}{usedSEtwo}{\mathrm{SE(2)}}}%
+\else%
+  \newcommand{\SEtwo}{\markfirst{SEtwo}{usedSEtwo}{\mathrm{SE(2)}}}%
+\fi
+%  Special Euclidean group 
+
+
+% \newcommand{\SOtwo}{\mathrm{SO(2)}}  % Special Euclidean group 
+
+
+
+\newbool{usedSEthreeAlg}\setbool{usedSEthreeAlg}{false}
+\ifdefined\SEthreeAlg%
+  \renewcommand{\SEthreeAlg}{\markfirst{SEthreeAlg}{usedSEthreeAlg}{\sealgebra(3)}}%
+\else%
+  \newcommand{\SEthreeAlg}{\markfirst{SEthreeAlg}{usedSEthreeAlg}{\sealgebra(3)}}%
+\fi
+
+\newbool{usedSEtwoAlg}\setbool{usedSEtwoAlg}{false}
+\ifdefined\SEtwoAlg%
+  \renewcommand{\SEtwoAlg}{\markfirst{SEtwoAlg}{usedSEtwoAlg}{\sealgebra(2)}}%
+\else%
+  \newcommand{\SEtwoAlg}{\markfirst{SEtwoAlg}{usedSEtwoAlg}{\sealgebra(2)}}%
+\fi
+
+\newbool{usedSOthreeAlg}\setbool{usedSOthreeAlg}{false}
+\ifdefined\SOthreeAlg%
+  \renewcommand{\SOthreeAlg}{\markfirst{SOthreeAlg}{usedSOthreeAlg}{\sealgebra(3)}}%
+\else%
+  \newcommand{\SOthreeAlg}{\markfirst{SOthreeAlg}{usedSOthreeAlg}{\sealgebra(3)}}%
+\fi
+
+\newbool{usedSOtwoAlg}\setbool{usedSOtwoAlg}{false}
+\ifdefined\SOtwoAlg%
+  \renewcommand{\SOtwoAlg}{\markfirst{SOtwoAlg}{usedSOtwoAlg}{\sealgebra(2)}}%
+\else%
+  \newcommand{\SOtwoAlg}{\markfirst{SOtwoAlg}{usedSOtwoAlg}{\sealgebra(2)}}%
+\fi
+
 
 
 \newbool{usedsetwo}\setbool{usedsetwo}{false}
 \ifdefined\setwo%
-  \renewcommand{\setwo}{\markfirst{setwo}{usedsetwo}{\mathrm{SE(2)}}}%
+  \renewcommand{\setwo}{\markfirst{setwo}{usedsetwo}{\SEtwo}}%
 \else%
-  \newcommand{\setwo}{\markfirst{setwo}{usedsetwo}{\mathrm{SE(2)}}}%
+  \newcommand{\setwo}{\markfirst{setwo}{usedsetwo}{\SEtwo}}%
 \fi
-%  Special Euclidean group 
+
+\newbool{usedsethree}\setbool{usedsethree}{false}
+\ifdefined\sethree%
+  \renewcommand{\sethree}{\markfirst{sethree}{usedsethree}{\SEthree}}%
+\else%
+  \newcommand{\sethree}{\markfirst{sethree}{usedsethree}{\SEthree}}%
+\fi
+
+\newbool{usedsotwo}\setbool{usedsotwo}{false}
+\ifdefined\sotwo%
+  \renewcommand{\sotwo}{\markfirst{sotwo}{usedsotwo}{\SOtwo}}%
+\else%
+  \newcommand{\sotwo}{\markfirst{sotwo}{usedsotwo}{\SOtwo}}%
+\fi
+
+\newbool{usedsothree}\setbool{usedsothree}{false}
+\ifdefined\sothree%
+  \renewcommand{\sothree}{\markfirst{sothree}{usedsothree}{\SOthree}}%
+\else%
+  \newcommand{\sothree}{\markfirst{sothree}{usedsothree}{\SOthree}}%
+\fi
+
 
 
 
@@ -5494,6 +5895,13 @@
   \newcommand{\posesp}{\markfirst{posesp}{usedposesp}{\mathscr{Q}}}%
 \fi
 %  Pose space, subgroup of $\sethree$.
+\newbool{usedposespAlg}\setbool{usedposespAlg}{false}
+\ifdefined\posespAlg%
+  \renewcommand{\posespAlg}{\markfirst{posespAlg}{usedposespAlg}{\text{q}}}%
+\else%
+  \newcommand{\posespAlg}{\markfirst{posespAlg}{usedposespAlg}{\text{q}}}%
+\fi
+%  Pose space algebra.
 \newbool{usedconfspace}\setbool{usedconfspace}{false}
 \ifdefined\confspace%
   \renewcommand{\confspace}{\markfirst{confspace}{usedconfspace}{\posesp}}%
@@ -5508,6 +5916,13 @@
   \newcommand{\pos}{\markfirst{pos}{usedpos}{\boldsymbol{t}}}%
 \fi
 %  Position in the world frame.
+\newbool{usedposEl}\setbool{usedposEl}{false}
+\ifdefined\posEl%
+  \renewcommand{\posEl}{\markfirst{posEl}{usedposEl}{t}}%
+\else%
+  \newcommand{\posEl}{\markfirst{posEl}{usedposEl}{t}}%
+\fi
+%  Position in the world frame.
 \newbool{usedrotm}\setbool{usedrotm}{false}
 \ifdefined\rotm%
   \renewcommand{\rotm}{\markfirst{rotm}{usedrotm}{\M{R}}}%
@@ -5515,6 +5930,13 @@
   \newcommand{\rotm}{\markfirst{rotm}{usedrotm}{\M{R}}}%
 \fi
 %  Rotation matrix representing orientation in the world frame.
+\newbool{usedrotme}\setbool{usedrotme}{false}
+\ifdefined\rotme%
+  \renewcommand{\rotme}{\markfirst{rotme}{usedrotme}{R}}%
+\else%
+  \newcommand{\rotme}{\markfirst{rotme}{usedrotme}{R}}%
+\fi
+%  Element of rotation matrix
 \newbool{usedlvel}\setbool{usedlvel}{false}
 \ifdefined\lvel%
   \renewcommand{\lvel}{\markfirst{lvel}{usedlvel}{\boldsymbol{v}}}%
@@ -5536,6 +5958,13 @@
   \newcommand{\avel}{\markfirst{avel}{usedavel}{\boldsymbol{\omega}}}%
 \fi
 %  Angular velocity (as vector)
+\newbool{usedavele}\setbool{usedavele}{false}
+\ifdefined\avele%
+  \renewcommand{\avele}{\markfirst{avele}{usedavele}{\omega}}%
+\else%
+  \newcommand{\avele}{\markfirst{avele}{usedavele}{\omega}}%
+\fi
+%  Angular velocity (element)
 \newbool{usedavels}\setbool{usedavels}{false}
 \ifdefined\avels%
   \renewcommand{\avels}{\markfirst{avels}{usedavels}{\omega}}%
@@ -5593,7 +6022,21 @@
   \newcommand{\fieldpos}{\markfirst{fieldpos}{usedfieldpos}{\boldsymbol{z}}}%
 \fi
 %  Generic position in the world.
+\newbool{usedfieldpose}\setbool{usedfieldpose}{false}
+\ifdefined\fieldpose%
+  \renewcommand{\fieldpose}{\markfirst{fieldpose}{usedfieldpose}{z}}%
+\else%
+  \newcommand{\fieldpose}{\markfirst{fieldpose}{usedfieldpose}{z}}%
+\fi
+%  Generic position in the world.
 
+
+\newbool{usedworldSp}\setbool{usedworldSp}{false}
+\ifdefined\worldSp%
+  \renewcommand{\worldSp}{\markfirst{worldSp}{usedworldSp}{\mapsp}}%
+\else%
+  \newcommand{\worldSp}{\markfirst{worldSp}{usedworldSp}{\mapsp}}%
+\fi
 
 
 
@@ -5620,12 +6063,16 @@
   \newcommand{\worldsp}{\markfirst{worldsp}{usedworldsp}{\mapsp}}%
 \fi
 
+
+
 \newbool{usedwshapesp}\setbool{usedwshapesp}{false}
 \ifdefined\wshapesp%
   \renewcommand{\wshapesp}{\markfirst{wshapesp}{usedwshapesp}{\mshapesp}}%
 \else%
   \newcommand{\wshapesp}{\markfirst{wshapesp}{usedwshapesp}{\mshapesp}}%
 \fi
+
+
 
 
 
