@@ -25,7 +25,8 @@
 %:section:common/goodformulas: Better formulas annotations
 %:nomenc-exclude:
 % TODO: add custom color
-\newcommand{\expl}[1]{{ \quad (#1)}\nonumber} % Explanation in formulas
+% \newcommand{\expl}[1]{{ \quad (#1)}\nonumber} % Explanation in formulas
+\newcommand{\expl}[1]{{ \color{gray}\quad \{#1\}}\nonumber} % Explanation in formulas
 %\newcommand{\expl}[1]{{ \circledcirc\quad\small \color{blue} #1}} % Explanation in formulas
 
 \newcommand{\highA}[1]{{\color[rgb]{0,0,0.5}#1}} % Highlight something in formulas (observations)
