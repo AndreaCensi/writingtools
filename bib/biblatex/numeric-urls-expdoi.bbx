@@ -1,6 +1,6 @@
 \ProvidesFile{numeric-urls.bbx}
 []
-
+\usepackage{xstring}
 \RequireBibliographyStyle{numeric}
 
 \newtoggle{bbx:file}
@@ -17,18 +17,21 @@
 \renewbibmacro*{doi+eprint+url}{%
   \iftoggle{bbx:doi}{\iffieldundef{doi}{\notpresent{doi}}{
       \hspace{1pt}%
-     \href{http://dx.doi.org/\thefield{doi}}{\textsc{doi}:\thefield{doi}}%
+     % \def\mysp{\hspace{0pt}|\hspace{0pt}}%
+     \StrSubstitute{\thefield{doi}}{/}{/ }[\fooo]%
+     \href{http://dx.doi.org/\thefield{doi}}{\footnotesize\textsc{doi}:\fooo}%
+     %\href{http://dx.doi.org/\thefield{doi}}{\small\textsc{doi}: \thefield{doi}}%
   }}{}%
   \iftoggle{bbx:file}{\iffieldundef{file}{\notpresent{file}}{%
       \hspace{1pt}%
       \biburl{\thefield{file}}%
   }}{}%
   \iftoggle{bbx:eprint}{\iffieldundef{eprint}{\notpresent{eprint}}{%
-      \hspace{1pt}%
+      ~%\hspace{1pt}%
       \slidesurl{\thefield{eprint}}%
   }}{}%
   \iftoggle{bbx:url}{\iffieldundef{url}{\notpresent{url}}{%
-      \hspace{1pt}%
+      ~%\hspace{1pt}%
       \weburl{\thefield{url}}%
   }}{}%
 }
