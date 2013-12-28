@@ -2545,30 +2545,40 @@
 %  Environment space
 
 
+% \newcommand{\envo}{\mathsf{Obs}} % Obstacles in the environment
+
+% \newcommand{\envt}{\mathsf{Ref}} % Texture (function on $\envob$)
+
+% \newcommand{\envf}{\mathsf{Fie}} % Field sensed by field sampler
+
+
+
 \ifdefined\envo%
-  \renewcommand{\envo}{{\color{green} \mathsf{Obs}}}%
+  \renewcommand{\envo}{{\color{green} \mathcal{O}}}%
 \else%
-  \newcommand{\envo}{{\color{green} \mathsf{Obs}}}%
+  \newcommand{\envo}{{\color{green} \mathcal{O}}}%
 \fi
 %  Obstacles in the environment
+\ifdefined\envt%
+  \renewcommand{\envt}{{\color{green} \mathcal{T}}}%
+\else%
+  \newcommand{\envt}{{\color{green} \mathcal{T}}}%
+\fi
+%  Texture (function on $\envob$)
+\ifdefined\envf%
+  \renewcommand{\envf}{{\color{green} \mathcal{F}}}%
+\else%
+  \newcommand{\envf}{{\color{green} \mathcal{F}}}%
+\fi
+%  Field sensed by field sampler
+
+
 \ifdefined\envob%
   \renewcommand{\envob}{{\color{green} \partial \envo}}%
 \else%
   \newcommand{\envob}{{\color{green} \partial \envo}}%
 \fi
 %  Obstacles boundaries
-\ifdefined\envt%
-  \renewcommand{\envt}{{\color{green} \mathsf{Ref}}}%
-\else%
-  \newcommand{\envt}{{\color{green} \mathsf{Ref}}}%
-\fi
-%  Texture (function on $\envob$)
-\ifdefined\envf%
-  \renewcommand{\envf}{{\color{green} \mathsf{Fie}}}%
-\else%
-  \newcommand{\envf}{{\color{green} \mathsf{Fie}}}%
-\fi
-%  Field sensed by field sampler
 
 
 \ifdefined\obspsDiff%
@@ -2586,21 +2596,21 @@
 
 
 \ifdefined\sic%
-  \renewcommand{\sic}{{\color{green} \text{IdealCams}}}%
+  \renewcommand{\sic}{{\color{green} \text{VS}}}%
 \else%
-  \newcommand{\sic}{{\color{green} \text{IdealCams}}}%
+  \newcommand{\sic}{{\color{green} \text{VS}}}%
 \fi
 %  ideal camera
 \ifdefined\sir%
-  \renewcommand{\sir}{{\color{green} \text{IdealRFs}}}%
+  \renewcommand{\sir}{{\color{green} \text{RF}}}%
 \else%
-  \newcommand{\sir}{{\color{green} \text{IdealRFs}}}%
+  \newcommand{\sir}{{\color{green} \text{RF}}}%
 \fi
 %  ideal range finder
 \ifdefined\sif%
-  \renewcommand{\sif}{{\color{green} \text{IdealFSs}}}%
+  \renewcommand{\sif}{{\color{green} \text{FS}}}%
 \else%
-  \newcommand{\sif}{{\color{green} \text{IdealFSs}}}%
+  \newcommand{\sif}{{\color{green} \text{FS}}}%
 \fi
 %  ideal field sampler
 \ifdefined\sicV%
@@ -3917,9 +3927,9 @@
 
 
 \ifdefined\world%
-  \renewcommand{\world}{{\color{green} \textsf{map}}}%
+  \renewcommand{\world}{{\color{green} \textsf{m}}}%
 \else%
-  \newcommand{\world}{{\color{green} \textsf{map}}}%
+  \newcommand{\world}{{\color{green} \textsf{m}}}%
 \fi
 %  The "world", an element of $\bbSpYU$.
 
@@ -4047,9 +4057,9 @@
 
 
 \ifdefined\genimages%
-  \renewcommand{\genimages}{{\color{green} \vmath{Images}}}%
+  \renewcommand{\genimages}{{\color{green} \vmath{Im}}}%
 \else%
-  \newcommand{\genimages}{{\color{green} \vmath{Images}}}%
+  \newcommand{\genimages}{{\color{green} \vmath{Im}}}%
 \fi
 %  Images on physical space $\obsps$.
 
@@ -4064,36 +4074,40 @@
 
 
 
-
+\ifdefined\obsgmark%
+  \renewcommand{\obsgmark}{{\color{green} \circ}}%
+\else%
+  \newcommand{\obsgmark}{{\color{green} \circ}}%
+\fi
 
 \ifdefined\obsg%
-  \renewcommand{\obsg}{{\color{green} \obs_{g}}}%
+  \renewcommand{\obsg}{{\color{green} \obs_{\obsgmark}}}%
 \else%
-  \newcommand{\obsg}{{\color{green} \obs_{g}}}%
+  \newcommand{\obsg}{{\color{green} \obs_{\obsgmark}}}%
 \fi
 %  Goal observations.
 
 
 \ifdefined\obsge%
-  \renewcommand{\obsge}{{\color{green} \obse_{g}}}%
+  \renewcommand{\obsge}{{\color{green} \obse_{\obsgmark}}}%
 \else%
-  \newcommand{\obsge}{{\color{green} \obse_{g}}}%
+  \newcommand{\obsge}{{\color{green} \obse_{\obsgmark}}}%
 \fi
 %  Goal observations (element).
 
 
 \ifdefined\obsgl%
-  \renewcommand{\obsgl}{{\color{green} \obsl_{g}}}%
+  \renewcommand{\obsgl}{{\color{green} \obsl_{\obsgmark}}}%
 \else%
-  \newcommand{\obsgl}{{\color{green} \obsl_{g}}}%
+  \newcommand{\obsgl}{{\color{green} \obsl_{\obsgmark}}}%
 \fi
 %  Goal observations (element).
 
 
 \ifdefined\obsgle%
-  \renewcommand{\obsgle}{{\color{green} \obsle_{g}}}%
+  \renewcommand{\obsgle}{{\color{green} \obsle_{\obsgmark}}}%
 \else%
-  \newcommand{\obsgle}{{\color{green} \obsle_{g}}}%
+  \newcommand{\obsgle}{{\color{green} \obsle_{\obsgmark}}}%
 \fi
 %  Goal observations (element).
 
@@ -5211,9 +5225,9 @@
 
 
 \ifdefined\measures%
-  \renewcommand{\measures}{{\color{green} \vmath{ProbMeasures}}}%
+  \renewcommand{\measures}{{\color{green} \vmath{Measures}}}%
 \else%
-  \newcommand{\measures}{{\color{green} \vmath{ProbMeasures}}}%
+  \newcommand{\measures}{{\color{green} \vmath{Measures}}}%
 \fi
 %  Set of probability measures on a set.
 
@@ -5287,7 +5301,7 @@
 \else%
   \newcommand{\posEl}{{\color{green} t}}%
 \fi
-%  Position in the world frame.
+%  Position in the world frame (element)
 \ifdefined\rotm%
   \renewcommand{\rotm}{{\color{green} \M{R}}}%
 \else%

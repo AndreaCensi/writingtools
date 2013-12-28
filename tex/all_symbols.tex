@@ -2545,30 +2545,40 @@
 %  Environment space
 
 
+% \newcommand{\envo}{\mathsf{Obs}} % Obstacles in the environment
+
+% \newcommand{\envt}{\mathsf{Ref}} % Texture (function on $\envob$)
+
+% \newcommand{\envf}{\mathsf{Fie}} % Field sensed by field sampler
+
+
+
 \ifdefined\envo%
-  \renewcommand{\envo}{\mathsf{Obs}}%
+  \renewcommand{\envo}{\mathcal{O}}%
 \else%
-  \newcommand{\envo}{\mathsf{Obs}}%
+  \newcommand{\envo}{\mathcal{O}}%
 \fi
 %  Obstacles in the environment
+\ifdefined\envt%
+  \renewcommand{\envt}{\mathcal{T}}%
+\else%
+  \newcommand{\envt}{\mathcal{T}}%
+\fi
+%  Texture (function on $\envob$)
+\ifdefined\envf%
+  \renewcommand{\envf}{\mathcal{F}}%
+\else%
+  \newcommand{\envf}{\mathcal{F}}%
+\fi
+%  Field sensed by field sampler
+
+
 \ifdefined\envob%
   \renewcommand{\envob}{\partial \envo}%
 \else%
   \newcommand{\envob}{\partial \envo}%
 \fi
 %  Obstacles boundaries
-\ifdefined\envt%
-  \renewcommand{\envt}{\mathsf{Ref}}%
-\else%
-  \newcommand{\envt}{\mathsf{Ref}}%
-\fi
-%  Texture (function on $\envob$)
-\ifdefined\envf%
-  \renewcommand{\envf}{\mathsf{Fie}}%
-\else%
-  \newcommand{\envf}{\mathsf{Fie}}%
-\fi
-%  Field sensed by field sampler
 
 
 \ifdefined\obspsDiff%
@@ -2586,21 +2596,21 @@
 
 
 \ifdefined\sic%
-  \renewcommand{\sic}{\text{IdealCams}}%
+  \renewcommand{\sic}{\text{VS}}%
 \else%
-  \newcommand{\sic}{\text{IdealCams}}%
+  \newcommand{\sic}{\text{VS}}%
 \fi
 %  ideal camera
 \ifdefined\sir%
-  \renewcommand{\sir}{\text{IdealRFs}}%
+  \renewcommand{\sir}{\text{RF}}%
 \else%
-  \newcommand{\sir}{\text{IdealRFs}}%
+  \newcommand{\sir}{\text{RF}}%
 \fi
 %  ideal range finder
 \ifdefined\sif%
-  \renewcommand{\sif}{\text{IdealFSs}}%
+  \renewcommand{\sif}{\text{FS}}%
 \else%
-  \newcommand{\sif}{\text{IdealFSs}}%
+  \newcommand{\sif}{\text{FS}}%
 \fi
 %  ideal field sampler
 \ifdefined\sicV%
@@ -3917,9 +3927,9 @@
 
 
 \ifdefined\world%
-  \renewcommand{\world}{\textsf{map}}%
+  \renewcommand{\world}{\textsf{m}}%
 \else%
-  \newcommand{\world}{\textsf{map}}%
+  \newcommand{\world}{\textsf{m}}%
 \fi
 %  The "world", an element of $\bbSpYU$.
 
@@ -4047,9 +4057,9 @@
 
 
 \ifdefined\genimages%
-  \renewcommand{\genimages}{\vmath{Images}}%
+  \renewcommand{\genimages}{\vmath{Im}}%
 \else%
-  \newcommand{\genimages}{\vmath{Images}}%
+  \newcommand{\genimages}{\vmath{Im}}%
 \fi
 %  Images on physical space $\obsps$.
 
@@ -4064,36 +4074,40 @@
 
 
 
-
+\ifdefined\obsgmark%
+  \renewcommand{\obsgmark}{\circ}%
+\else%
+  \newcommand{\obsgmark}{\circ}%
+\fi
 
 \ifdefined\obsg%
-  \renewcommand{\obsg}{\obs_{g}}%
+  \renewcommand{\obsg}{\obs_{\obsgmark}}%
 \else%
-  \newcommand{\obsg}{\obs_{g}}%
+  \newcommand{\obsg}{\obs_{\obsgmark}}%
 \fi
 %  Goal observations.
 
 
 \ifdefined\obsge%
-  \renewcommand{\obsge}{\obse_{g}}%
+  \renewcommand{\obsge}{\obse_{\obsgmark}}%
 \else%
-  \newcommand{\obsge}{\obse_{g}}%
+  \newcommand{\obsge}{\obse_{\obsgmark}}%
 \fi
 %  Goal observations (element).
 
 
 \ifdefined\obsgl%
-  \renewcommand{\obsgl}{\obsl_{g}}%
+  \renewcommand{\obsgl}{\obsl_{\obsgmark}}%
 \else%
-  \newcommand{\obsgl}{\obsl_{g}}%
+  \newcommand{\obsgl}{\obsl_{\obsgmark}}%
 \fi
 %  Goal observations (element).
 
 
 \ifdefined\obsgle%
-  \renewcommand{\obsgle}{\obsle_{g}}%
+  \renewcommand{\obsgle}{\obsle_{\obsgmark}}%
 \else%
-  \newcommand{\obsgle}{\obsle_{g}}%
+  \newcommand{\obsgle}{\obsle_{\obsgmark}}%
 \fi
 %  Goal observations (element).
 
@@ -5211,9 +5225,9 @@
 
 
 \ifdefined\measures%
-  \renewcommand{\measures}{\vmath{ProbMeasures}}%
+  \renewcommand{\measures}{\vmath{Measures}}%
 \else%
-  \newcommand{\measures}{\vmath{ProbMeasures}}%
+  \newcommand{\measures}{\vmath{Measures}}%
 \fi
 %  Set of probability measures on a set.
 
@@ -5287,7 +5301,7 @@
 \else%
   \newcommand{\posEl}{t}%
 \fi
-%  Position in the world frame.
+%  Position in the world frame (element)
 \ifdefined\rotm%
   \renewcommand{\rotm}{\M{R}}%
 \else%

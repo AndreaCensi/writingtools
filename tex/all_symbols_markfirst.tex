@@ -2872,13 +2872,37 @@
 %  Environment space
 
 
+% \newcommand{\envo}{\mathsf{Obs}} % Obstacles in the environment
+
+% \newcommand{\envt}{\mathsf{Ref}} % Texture (function on $\envob$)
+
+% \newcommand{\envf}{\mathsf{Fie}} % Field sensed by field sampler
+
+
+
 \newbool{usedenvo}\setbool{usedenvo}{false}
 \ifdefined\envo%
-  \renewcommand{\envo}{\markfirst{envo}{usedenvo}{\mathsf{Obs}}}%
+  \renewcommand{\envo}{\markfirst{envo}{usedenvo}{\mathcal{O}}}%
 \else%
-  \newcommand{\envo}{\markfirst{envo}{usedenvo}{\mathsf{Obs}}}%
+  \newcommand{\envo}{\markfirst{envo}{usedenvo}{\mathcal{O}}}%
 \fi
 %  Obstacles in the environment
+\newbool{usedenvt}\setbool{usedenvt}{false}
+\ifdefined\envt%
+  \renewcommand{\envt}{\markfirst{envt}{usedenvt}{\mathcal{T}}}%
+\else%
+  \newcommand{\envt}{\markfirst{envt}{usedenvt}{\mathcal{T}}}%
+\fi
+%  Texture (function on $\envob$)
+\newbool{usedenvf}\setbool{usedenvf}{false}
+\ifdefined\envf%
+  \renewcommand{\envf}{\markfirst{envf}{usedenvf}{\mathcal{F}}}%
+\else%
+  \newcommand{\envf}{\markfirst{envf}{usedenvf}{\mathcal{F}}}%
+\fi
+%  Field sensed by field sampler
+
+
 \newbool{usedenvob}\setbool{usedenvob}{false}
 \ifdefined\envob%
   \renewcommand{\envob}{\markfirst{envob}{usedenvob}{\partial \envo}}%
@@ -2886,20 +2910,6 @@
   \newcommand{\envob}{\markfirst{envob}{usedenvob}{\partial \envo}}%
 \fi
 %  Obstacles boundaries
-\newbool{usedenvt}\setbool{usedenvt}{false}
-\ifdefined\envt%
-  \renewcommand{\envt}{\markfirst{envt}{usedenvt}{\mathsf{Ref}}}%
-\else%
-  \newcommand{\envt}{\markfirst{envt}{usedenvt}{\mathsf{Ref}}}%
-\fi
-%  Texture (function on $\envob$)
-\newbool{usedenvf}\setbool{usedenvf}{false}
-\ifdefined\envf%
-  \renewcommand{\envf}{\markfirst{envf}{usedenvf}{\mathsf{Fie}}}%
-\else%
-  \newcommand{\envf}{\markfirst{envf}{usedenvf}{\mathsf{Fie}}}%
-\fi
-%  Field sensed by field sampler
 
 
 \newbool{usedobspsDiff}\setbool{usedobspsDiff}{false}
@@ -2920,23 +2930,23 @@
 
 \newbool{usedsic}\setbool{usedsic}{false}
 \ifdefined\sic%
-  \renewcommand{\sic}{\markfirst{sic}{usedsic}{\text{IdealCams}}}%
+  \renewcommand{\sic}{\markfirst{sic}{usedsic}{\text{VS}}}%
 \else%
-  \newcommand{\sic}{\markfirst{sic}{usedsic}{\text{IdealCams}}}%
+  \newcommand{\sic}{\markfirst{sic}{usedsic}{\text{VS}}}%
 \fi
 %  ideal camera
 \newbool{usedsir}\setbool{usedsir}{false}
 \ifdefined\sir%
-  \renewcommand{\sir}{\markfirst{sir}{usedsir}{\text{IdealRFs}}}%
+  \renewcommand{\sir}{\markfirst{sir}{usedsir}{\text{RF}}}%
 \else%
-  \newcommand{\sir}{\markfirst{sir}{usedsir}{\text{IdealRFs}}}%
+  \newcommand{\sir}{\markfirst{sir}{usedsir}{\text{RF}}}%
 \fi
 %  ideal range finder
 \newbool{usedsif}\setbool{usedsif}{false}
 \ifdefined\sif%
-  \renewcommand{\sif}{\markfirst{sif}{usedsif}{\text{IdealFSs}}}%
+  \renewcommand{\sif}{\markfirst{sif}{usedsif}{\text{FS}}}%
 \else%
-  \newcommand{\sif}{\markfirst{sif}{usedsif}{\text{IdealFSs}}}%
+  \newcommand{\sif}{\markfirst{sif}{usedsif}{\text{FS}}}%
 \fi
 %  ideal field sampler
 \newbool{usedsicV}\setbool{usedsicV}{false}
@@ -4402,9 +4412,9 @@
 
 \newbool{usedworld}\setbool{usedworld}{false}
 \ifdefined\world%
-  \renewcommand{\world}{\markfirst{world}{usedworld}{\textsf{map}}}%
+  \renewcommand{\world}{\markfirst{world}{usedworld}{\textsf{m}}}%
 \else%
-  \newcommand{\world}{\markfirst{world}{usedworld}{\textsf{map}}}%
+  \newcommand{\world}{\markfirst{world}{usedworld}{\textsf{m}}}%
 \fi
 %  The "world", an element of $\bbSpYU$.
 
@@ -4547,9 +4557,9 @@
 
 \newbool{usedgenimages}\setbool{usedgenimages}{false}
 \ifdefined\genimages%
-  \renewcommand{\genimages}{\markfirst{genimages}{usedgenimages}{\vmath{Images}}}%
+  \renewcommand{\genimages}{\markfirst{genimages}{usedgenimages}{\vmath{Im}}}%
 \else%
-  \newcommand{\genimages}{\markfirst{genimages}{usedgenimages}{\vmath{Images}}}%
+  \newcommand{\genimages}{\markfirst{genimages}{usedgenimages}{\vmath{Im}}}%
 \fi
 %  Images on physical space $\obsps$.
 
@@ -4565,40 +4575,45 @@
 
 
 
-
+\newbool{usedobsgmark}\setbool{usedobsgmark}{false}
+\ifdefined\obsgmark%
+  \renewcommand{\obsgmark}{\markfirst{obsgmark}{usedobsgmark}{\circ}}%
+\else%
+  \newcommand{\obsgmark}{\markfirst{obsgmark}{usedobsgmark}{\circ}}%
+\fi
 
 \newbool{usedobsg}\setbool{usedobsg}{false}
 \ifdefined\obsg%
-  \renewcommand{\obsg}{\markfirst{obsg}{usedobsg}{\obs_{g}}}%
+  \renewcommand{\obsg}{\markfirst{obsg}{usedobsg}{\obs_{\obsgmark}}}%
 \else%
-  \newcommand{\obsg}{\markfirst{obsg}{usedobsg}{\obs_{g}}}%
+  \newcommand{\obsg}{\markfirst{obsg}{usedobsg}{\obs_{\obsgmark}}}%
 \fi
 %  Goal observations.
 
 
 \newbool{usedobsge}\setbool{usedobsge}{false}
 \ifdefined\obsge%
-  \renewcommand{\obsge}{\markfirst{obsge}{usedobsge}{\obse_{g}}}%
+  \renewcommand{\obsge}{\markfirst{obsge}{usedobsge}{\obse_{\obsgmark}}}%
 \else%
-  \newcommand{\obsge}{\markfirst{obsge}{usedobsge}{\obse_{g}}}%
+  \newcommand{\obsge}{\markfirst{obsge}{usedobsge}{\obse_{\obsgmark}}}%
 \fi
 %  Goal observations (element).
 
 
 \newbool{usedobsgl}\setbool{usedobsgl}{false}
 \ifdefined\obsgl%
-  \renewcommand{\obsgl}{\markfirst{obsgl}{usedobsgl}{\obsl_{g}}}%
+  \renewcommand{\obsgl}{\markfirst{obsgl}{usedobsgl}{\obsl_{\obsgmark}}}%
 \else%
-  \newcommand{\obsgl}{\markfirst{obsgl}{usedobsgl}{\obsl_{g}}}%
+  \newcommand{\obsgl}{\markfirst{obsgl}{usedobsgl}{\obsl_{\obsgmark}}}%
 \fi
 %  Goal observations (element).
 
 
 \newbool{usedobsgle}\setbool{usedobsgle}{false}
 \ifdefined\obsgle%
-  \renewcommand{\obsgle}{\markfirst{obsgle}{usedobsgle}{\obsle_{g}}}%
+  \renewcommand{\obsgle}{\markfirst{obsgle}{usedobsgle}{\obsle_{\obsgmark}}}%
 \else%
-  \newcommand{\obsgle}{\markfirst{obsgle}{usedobsgle}{\obsle_{g}}}%
+  \newcommand{\obsgle}{\markfirst{obsgle}{usedobsgle}{\obsle_{\obsgmark}}}%
 \fi
 %  Goal observations (element).
 
@@ -5836,9 +5851,9 @@
 
 \newbool{usedmeasures}\setbool{usedmeasures}{false}
 \ifdefined\measures%
-  \renewcommand{\measures}{\markfirst{measures}{usedmeasures}{\vmath{ProbMeasures}}}%
+  \renewcommand{\measures}{\markfirst{measures}{usedmeasures}{\vmath{Measures}}}%
 \else%
-  \newcommand{\measures}{\markfirst{measures}{usedmeasures}{\vmath{ProbMeasures}}}%
+  \newcommand{\measures}{\markfirst{measures}{usedmeasures}{\vmath{Measures}}}%
 \fi
 %  Set of probability measures on a set.
 
@@ -5922,7 +5937,7 @@
 \else%
   \newcommand{\posEl}{\markfirst{posEl}{usedposEl}{t}}%
 \fi
-%  Position in the world frame.
+%  Position in the world frame (element)
 \newbool{usedrotm}\setbool{usedrotm}{false}
 \ifdefined\rotm%
   \renewcommand{\rotm}{\markfirst{rotm}{usedrotm}{\M{R}}}%
