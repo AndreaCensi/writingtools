@@ -1,7 +1,7 @@
 %:section:common/boot: Bootstrapping symbols
 
 %:section:common/boot/obscmd: Observations and commands
-\newcommand{\world}{\boldsymbol{w}}  % The "world", an element of $\bbSpYU$.
+\newcommand{\world}{\textsf{m}}  % The "world", an element of $\bbSpYU$.
 %:sort:w
 
 \newcommand{\obs}{\boldsymbol{y}} % Observations vector.
@@ -55,7 +55,7 @@
 \newcommand{\obsps}{\CMcal{S}} % Observation physical space.
 %:sort:S
 
-\newcommand{\genimages}{\vmath{Images}} % Images on physical space $\obsps$.
+\newcommand{\genimages}{\vmath{Im}} % Images on physical space $\obsps$.
 %:sort:Images
 %:nomenc-exclude:
 
@@ -64,19 +64,19 @@
 
 
 %:section:common/boot/servo: Servoing
-
-\newcommand{\obsg}{\check{\obs}} % Goal observations.
+\newcommand{\obsgmark}{\circ} 
+\newcommand{\obsg}{\obs_{\obsgmark}} % Goal observations.
 %:sort:y*
 %:todo:
 
-\newcommand{\obsge}{\check{\obse}} % Goal observations (element).
+\newcommand{\obsge}{\obse_{\obsgmark}} % Goal observations (element).
 %:sort:y*
 %:todo:
 
-\newcommand{\obsgl}{\check{\obsl}} % Goal observations (element).
+\newcommand{\obsgl}{\obsl_{\obsgmark}} % Goal observations (element).
 %:sort:z*
 
-\newcommand{\obsgle}{\check{\obsle}} % Goal observations (element).
+\newcommand{\obsgle}{\obsle_{\obsgmark}} % Goal observations (element).
 %:sort:z*
 
 
@@ -85,6 +85,11 @@
 
 \newcommand{\bbSpYU}{\bbSp(\obsSp;\cmdSp)}  % \towrite
 %:sort:D-YU
+%:nomenc-exclude:
+
+
+\newcommand{\bbSpYXU}{\bbSp(\obsSp;\stateSp;\cmdSp)}  % \towrite
+%:sort:D-YXU
 %:nomenc-exclude:
 
 \newcommand{\bbSpUY}{\bbSp(\cmdSp;\obsSp)}  % \towrite
@@ -118,7 +123,7 @@
 \newcommand{\veEnvironments}{\mathsf{Environments}} % All Vehicles environments 
 \newcommand{\veSensors}{\mathsf{Sensors}} % all Vehicles sensors
 \newcommand{\veDynamics}{\mathsf{Dynamics}} % all Vehicles dynamics
-\newcommand{\veVehicles}{\mathsf{Vehicles}} % all Vehicles dynamics
+\newcommand{\veVehicles}{\mathsf{Vehicles}} 
 
 %:section:common/vehicles/mah: todo
 %:nomenc-exclude:

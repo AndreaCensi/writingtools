@@ -15,17 +15,23 @@
 %:sort:q
 \newcommand{\posesp}{\mathscr{Q}} % Pose space, subgroup of $\sethree$.
 %:sort:Q
+\newcommand{\posespAlg}{\text{q}} % Pose space algebra.
+%:sort:q
 \newcommand{\confspace}{\posesp} % Robot configuration space
 %:deprecated:
 \newcommand{\pos}{\boldsymbol{t}} % Position in the world frame.
+\newcommand{\posEl}{t} % Position in the world frame (element)
 %:sort:t
 \newcommand{\rotm}{\M{R}} % Rotation matrix representing orientation in the world frame.
+\newcommand{\rotme}{R} % Element of rotation matrix
 %:sort:R
 \newcommand{\lvel}{\boldsymbol{v}} % Linear velocity
 %:sort:v
 \newcommand{\lvele}{v} % Linear velocity (element)
 %:sort:v
 \newcommand{\avel}{\boldsymbol{\omega}} % Angular velocity (as vector)
+%:sort:v
+\newcommand{\avele}{\omega} % Angular velocity (element)
 %:sort:w
 \newcommand{\avels}{\omega} % Angular velocity in 2D (scalar)
 %:sort:w
@@ -45,8 +51,10 @@
 \newcommand{\field}{\mathcal{F}} % Field sampled by the field sensor.
 %:sort:F
 \newcommand{\fieldpos}{\boldsymbol{z}} % Generic position in the world.
+\newcommand{\fieldpose}{z} % Generic position in the world.
 %:nomenc-exclude:
 
+\newcommand{\worldSp}{\mapsp} 
 
 %% maps
 %:section:common/robotics/old: Deprecated
@@ -55,7 +63,9 @@
 \newcommand{\wshape}{\mshape} 
 \newcommand{\wpose}{\mpose} 
 \newcommand{\worldsp}{\mapsp} 
+
 \newcommand{\wshapesp}{\mshapesp} 
+
 
 %:section:common/robotics/maps: New stuff
 \newcommand{\mshape}{\boldsymbol{s}} % Map shape.

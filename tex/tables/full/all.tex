@@ -34,10 +34,15 @@
  {\color[rgb]{0.5,0.5,0.5}\texttt{articles/bds}} & \multicolumn{2}{l}{\emph{BDS report}}\\ 
  \hline
 {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash BDSnk}} & $\BDSnk$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash BDSSk}} & $\BDSSk$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bgBDSfamily}} & $\bgBDSfamily$ &  Family of BDS sensors\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bgCBDSfamily}} & $\bgCBDSfamily$ &  Family of BDS sensors\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bds}} & $\bds$ &  Bilinear dynamics system\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash BDS}} & $\BDS$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash cbds}} & $\cbds$ &  Continuous-space bilinear dynamics system\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash CBDS}} & $\CBDS$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash omsum\{...\}}} &  &  omitted sum\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash omsumb\{...,...\}}} &  &  omitted sum (two arguments)\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash TT}} & $\TT$ &  Learned tensor\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash TTe}} & $\TTe$ &  ?\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash TP}} & $\TP$ & \\ 
@@ -67,11 +72,10 @@
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-$\bgWorld \in \bgRSSp(\bgTime, \bgCmdSp, \bgObsSp)$
-
+$\bgWorld \in \bgRSSp(\bgTime, \bgCmdSp, \bgObsSp)$\par%
 {\small{\texttt{\$\textbackslash bgWorld \textbackslash in \textbackslash bgRSSp(\textbackslash bgTime, \textbackslash bgCmdSp, \textbackslash bgObsSp)\$}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bgAgent}} & $\bgAgent$ &  Agent\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bgAgentEx}} & $\bgAgentEx$ &  Agent exploration\\ 
@@ -96,6 +100,7 @@ $\bgWorld \in \bgRSSp(\bgTime, \bgCmdSp, \bgObsSp)$
  {\color[rgb]{0.5,0.5,0.5}\texttt{articles/bgds/old}} & \multicolumn{2}{l}{\emph{BGDS report}}\\ 
  \hline
 {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash state}} & $\state$ &  Generic underlying state.\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash stateSp}} & $\stateSp$ &  Generic underlying state space.\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash detecte}} & $\detecte$ &  Detector\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash submean\{...\}}} &  &  Quantity with mean normalized.\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash dist}} & $\dist$ &  Distance to obstacle\\ 
@@ -240,7 +245,15 @@ $\bgWorld \in \bgRSSp(\bgTime, \bgCmdSp, \bgObsSp)$
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash cmdDist}} & $\cmdDist$ &  Distance between two commands.\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash cmdADist}} & $\cmdADist$ &  Anti-distance between two commands.\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash images}} & $\images$ & \\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash ddsfov}} & $\ddsfov$ &  Field of view for DDS\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash obspsV}} & $\obspsV$ &  viewport\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash ddsfov}} & $\ddsfov$ &  viewport\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash obspsVunpred}} & $\obspsVunpred$ &  undpredictable part\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash obspsVpred}} & $\obspsVpred$ &  predictable part \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash obspsVunpredt}} & $\obspsVunpredt$ &  undpredictable part at time t\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash obspsVpredt}} & $\obspsVpredt$ &  predictable part at time t\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash ddsctod}} & $\ddsctod$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash ddsste}} & $\ddsste$ &  State of a DDS (element)\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash ddsst}} & $\ddsst$ &  State of a DDS\\ 
   &  & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{articles/dptr1}} & \multicolumn{2}{l}{\emph{Technical report for diffeoplanning}}\\ 
  \hline
@@ -349,11 +362,10 @@ $\bgWorld \in \bgRSSp(\bgTime, \bgCmdSp, \bgObsSp)$
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-$\esObs = \esNuis \esObsMap(\esSt)$
-
+$\esObs = \esNuis \esObsMap(\esSt)$\par%
 {\small{\texttt{\$\textbackslash esObs = \textbackslash esNuis \textbackslash esObsMap(\textbackslash esSt)\$}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
   &  & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{articles/estgroups/nuisances}} & \multicolumn{2}{l}{\emph{Nuisances}}\\ 
@@ -381,11 +393,10 @@ $\esObs = \esNuis \esObsMap(\esSt)$
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-$\esRep: \esSt \mapsto \esStAb$.
-
+$\esRep: \esSt \mapsto \esStAb$.\par%
 {\small{\texttt{\$\textbackslash esRep: \textbackslash esSt \textbackslash mapsto \textbackslash esStAb\$.}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esStSym}} & $\esStSym$ &  Group of symmetries of the state\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash esObsSym}} & $\esObsSym$ &  Group of symmetries of the observation\\ 
@@ -423,6 +434,40 @@ $\esRep: \esSt \mapsto \esStAb$.
  {\color[rgb]{0.5,0.5,0.5}\texttt{articles/invariances}} & \multicolumn{2}{l}{\emph{Invariances}}\\ 
  \hline
 {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash rndual\{...\}}} &  &  Dual of a representation nuisance\\ 
+  &  & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{articles/jbds}} & \multicolumn{2}{l}{\emph{Symbols introduced in JBDS}}\\ 
+ \hline
+{\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash veh}} & $\veh$ &  A vehicle body\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash vehBody}} & $\vehBody$ &  A vehicle body\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash vehKin}} & $\vehKin$ &  Vehicle kinematics \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash vehSensPos}} & $\vehSensPos$ &  Sensor relative pose\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash vehSensFun}} & $\vehSensFun$ &  Function that defines an exteroceptive sensor\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash env}} & $\env$ &  Environment\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash envSp}} & $\envSp$ &  Environment space\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash envo}} & $\envo$ &  Obstacles in the environment\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash envob}} & $\envob$ &  Obstacles boundaries\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash envt}} & $\envt$ &  Texture (function on $\envob$)\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash envf}} & $\envf$ &  Field sensed by field sampler\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash obspsDiff}} & $\obspsDiff$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash obspsNotDiff}} & $\obspsNotDiff$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash sic}} & $\sic$ &  ideal camera\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash sir}} & $\sir$ &  ideal range finder\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash sif}} & $\sif$ &  ideal field sampler\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash sicV}} & $\sicV$ &  ideal camera with viewport\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash sirV}} & $\sirV$ &  ideal range finder with viewport\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash sifV}} & $\sifV$ &  ideal field sampler with viewport\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash zoh\{...\}}} &  &  Zero order hold\\ 
+  &  & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{articles/jbds/misc}} & \multicolumn{2}{l}{\emph{Used in proofs for JBDS}}\\ 
+ \hline
+{\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash ygneig}} & $\ygneig$ &  A neighborhoood of $\obsg$.\\ 
+  &  & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{articles/jbds/robots}} & \multicolumn{2}{l}{\emph{}}\\ 
+ \hline
+{\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash allrobots}} & $\allrobots$ &  The set of all robots\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash vehRob}} & $\vehRob$ &  Vehicle robots\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash vehRobNuis}} & $\vehRobNuis$ &  Vehicle robots with nuisances\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash robVeh}} & $\robVeh$ & \\ 
   &  & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{articles/soattotheory}} & \multicolumn{2}{l}{\emph{Symbols used by Soatto}}\\ 
  \hline
@@ -544,31 +589,28 @@ $\esRep: \esSt \mapsto \esStAb$.
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-$\algfield(\aset{X},+,\times)$ is an algebraic field.
-
+$\algfield(\aset{X},+,\times)$ is an algebraic field.\par%
 {\small{\texttt{\$\textbackslash algfield(\textbackslash aset\{X\},+,\textbackslash times)\$ is an algebraic field.}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash wellorder}} & $\wellorder$ &  A well ordered set.\\ 
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-$\wellorder(\aset{X},\leq)$ is a well-ordered set.
-
+$\wellorder(\aset{X},\leq)$ is a well-ordered set.\par%
 {\small{\texttt{\$\textbackslash wellorder(\textbackslash aset\{X\},\textbackslash leq)\$ is a well-ordered set.}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash orderedfield}} & $\orderedfield$ &  A well ordered field.\\ 
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-$\orderedfield(\aset{X},+,\times,\leq)$ is a well-ordered field.
-
+$\orderedfield(\aset{X},+,\times,\leq)$ is a well-ordered field.\par%
 {\small{\texttt{\$\textbackslash orderedfield(\textbackslash aset\{X\},+,\textbackslash times,\textbackslash leq)\$ is a well-ordered field.}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash powerset}} & $\powerset$ &  Power set of a space\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash supp}} & $\supp$ &  Support of a set\\ 
@@ -589,11 +631,10 @@ $\orderedfield(\aset{X},+,\times,\leq)$ is a well-ordered field.
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-$\contFuncs(\setA)$ are all continuous functions on $\setA$.
-
+$\contFuncs(\setA)$ are all continuous functions on $\setA$.\par%
 {\small{\texttt{\$\textbackslash contFuncs(\textbackslash setA)\$ are all continuous functions on \$\textbackslash setA\$.}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash differFuncs}} & $\differFuncs$ &  Differentiable functions\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash partitions}} & $\partitions$ & \\ 
@@ -645,11 +686,10 @@ $\contFuncs(\setA)$ are all continuous functions on $\setA$.
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-$\bbSp(\setX;\setY)$ are all the black boxes from $\setX$ to $\setY$.
-
+$\bbSp(\setX;\setY)$ are all the black boxes from $\setX$ to $\setY$.\par%
 {\small{\texttt{\$\textbackslash bbSp(\textbackslash setX;\textbackslash setY)\$ are all the black boxes from \$\textbackslash setX\$ to \$\textbackslash setY\$.}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bbFM}} & $\bbFM$ &  Systems with finite memory\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bbSpInv}} & $\bbSpInv$ &  Set of invertible systems\\ 
@@ -660,11 +700,10 @@ $\bbSp(\setX;\setY)$ are all the black boxes from $\setX$ to $\setY$.
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-$\bbSpInv(\setA)$ is a subset of ${\bbSp(\setA;\setA)}$
-
+$\bbSpInv(\setA)$ is a subset of ${\bbSp(\setA;\setA)}$\par%
 {\small{\texttt{\$\textbackslash bbSpInv(\textbackslash setA)\$ is a subset of \$\{\textbackslash bbSp(\textbackslash setA;\textbackslash setA)\}\$}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bbSpCore}} & $\bbSpCore$ &  Systems up to representation\\ 
   &  & \\ 
@@ -720,6 +759,7 @@ $\bbSpInv(\setA)$ is a subset of ${\bbSp(\setA;\setA)}$
  {\color[rgb]{0.5,0.5,0.5}\texttt{common/boot/abbreviations}} & \multicolumn{2}{l}{\emph{Abbreviations}}\\ 
  \hline
 {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bbSpYU}} & $\bbSpYU$ &  \towrite\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bbSpYXU}} & $\bbSpYXU$ &  \towrite\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bbSpUY}} & $\bbSpUY$ &  \towrite\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bbSpInvY}} & $\bbSpInvY$ &  Representation nuisances on commands\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bbSpInvU}} & $\bbSpInvU$ &  Representation nuisances on observations\\ 
@@ -732,8 +772,11 @@ $\bbSpInv(\setA)$ is a subset of ${\bbSp(\setA;\setA)}$
 {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash veEnvironments}} & $\veEnvironments$ &  All Vehicles environments \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash veSensors}} & $\veSensors$ &  all Vehicles sensors\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash veDynamics}} & $\veDynamics$ &  all Vehicles dynamics\\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash veVehicles}} & $\veVehicles$ &  all Vehicles dynamics\\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash veSce}} & $\veSce$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash veVehicles}} & $\veVehicles$ & \\ 
+  &  & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{common/vehicles/mah}} & \multicolumn{2}{l}{\emph{todo}}\\ 
+ \hline
+{\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash veSce}} & $\veSce$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash veVeh}} & $\veVeh$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash veMov}} & $\veMov$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash veAdd}} & $\veAdd$ & \\ 
@@ -781,6 +824,7 @@ $\bbSpInv(\setA)$ is a subset of ${\bbSp(\setA;\setA)}$
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash placeholder\{...,...\}}} &  &  A placeholder \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash tocite\{...\}}} &  & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash citeboh}} & $\citeboh$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash citexxx}} & $\citexxx$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash xxx}} & $\xxx$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash notsure}} & $\notsure$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash dontlike}} & $\dontlike$ & \\ 
@@ -799,11 +843,10 @@ $\bbSpInv(\setA)$ is a subset of ${\bbSp(\setA;\setA)}$
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-$\diff(\aset{M})$ are the diffeomeorphisms from $\aset{M}$ to itself.
-
+$\diff(\aset{M})$ are the diffeomeorphisms from $\aset{M}$ to itself.\par%
 {\small{\texttt{\$\textbackslash diff(\textbackslash aset\{M\})\$ are the diffeomeorphisms from \$\textbackslash aset\{M\}\$ to itself.}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash diffPos}} & $\diffPos$ &  Orientation-preserving diffeomorphism.\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash homeoPos}} & $\homeoPos$ &  Orientation-preserving homeomorphisms (of the real line)\\ 
@@ -814,11 +857,10 @@ $\diff(\aset{M})$ are the diffeomeorphisms from $\aset{M}$ to itself.
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-$\isometries(\aset{M})$ are all the isometries of $\aset{M}$.
-
+$\isometries(\aset{M})$ are all the isometries of $\aset{M}$.\par%
 {\small{\texttt{\$\textbackslash isometries(\textbackslash aset\{M\})\$ are all the isometries of \$\textbackslash aset\{M\}\$.}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash diffFix\{...\}}} &  &  Diffeomorphisms that fix a point\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash conformalFuncs}} & $\conformalFuncs$ &  Conformal transformations\\ 
@@ -838,21 +880,19 @@ $\isometries(\aset{M})$ are all the isometries of $\aset{M}$.
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-$\tgroup(\agroup{G},\cdot)$ means $\agroup{G}$ is a group under $\cdot$.
-
+$\tgroup(\agroup{G},\cdot)$ means $\agroup{G}$ is a group under $\cdot$.\par%
 {\small{\texttt{\$\textbackslash tgroup(\textbackslash agroup\{G\},\textbackslash cdot)\$ means \$\textbackslash agroup\{G\}\$ is a group under \$\textbackslash cdot\$.}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash haar}} & $\haar$ &  Haar measure\\ 
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-The Haar measure on $\aset{X}$ is ${\haar}^{X}$.
-
+The Haar measure on $\aset{X}$ is ${\haar}^{X}$.\par%
 {\small{\texttt{The Haar measure on \$\textbackslash aset\{X\}\$ is \$\{\textbackslash haar\}\^\{X\}\$.}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
   &  & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{common/groups/famous}} & \multicolumn{2}{l}{\emph{Famous groups}}\\ 
@@ -893,9 +933,17 @@ The Haar measure on $\aset{X}$ is ${\haar}^{X}$.
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash se}} & $\se$ &  Special Euclidean algebra\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash soalgebra}} & $\soalgebra$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash sealgebra}} & $\sealgebra$ &  Special Euclidean algebra\\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash sothree}} & $\sothree$ &  Special orthogonal group (rotation matrices)\\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash sethree}} & $\sethree$ &  Special Euclidean group \\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash setwo}} & $\setwo$ &  Special Euclidean group \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash SOthree}} & $\SOthree$ &  Special orthogonal group (rotation matrices)\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash SEthree}} & $\SEthree$ &  Special Euclidean group \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash SEtwo}} & $\SEtwo$ &  Special Euclidean group \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash SEthreeAlg}} & $\SEthreeAlg$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash SEtwoAlg}} & $\SEtwoAlg$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash SOthreeAlg}} & $\SOthreeAlg$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash SOtwoAlg}} & $\SOtwoAlg$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash setwo}} & $\setwo$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash sethree}} & $\sethree$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash sotwo}} & $\sotwo$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash sothree}} & $\sothree$ & \\ 
   &  & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{common/groups/simple}} & \multicolumn{2}{l}{\emph{Very simple groups}}\\ 
  \hline
@@ -921,42 +969,38 @@ The Haar measure on $\aset{X}$ is ${\haar}^{X}$.
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-$\conditional(\setB;\setA)$ is the set of conditional distributions
-
+$\conditional(\setB;\setA)$ is the set of conditional distributions\par%
 {\small{\texttt{\$\textbackslash conditional(\textbackslash setB;\textbackslash setA)\$ is the set of conditional distributions}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash finaldist}} & $\finaldist$ &  Stationary distribution of a stochastic process.\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash measureSp}} & $\measureSp$ &  Measure space.\\ 
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-$\measureSp(\aset{X},\Sigma,\mu)$ is a measure space.
-
+$\measureSp(\aset{X},\Sigma,\mu)$ is a measure space.\par%
 {\small{\texttt{\$\textbackslash measureSp(\textbackslash aset\{X\},\textbackslash Sigma,\textbackslash mu)\$ is a measure space.}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash probSp}} & $\probSp$ &  Probability space.\\ 
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-$\probSp(\aset{X},\Sigma,\mu)$ is a probability space.
-
+$\probSp(\aset{X},\Sigma,\mu)$ is a probability space.\par%
 {\small{\texttt{\$\textbackslash probSp(\textbackslash aset\{X\},\textbackslash Sigma,\textbackslash mu)\$ is a probability space.}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash measures}} & $\measures$ &  Set of probability measures on a set.\\ 
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-Try $\mu^{\aset{X}} \in \measures(\aset{X})$
-
+Try $\mu^{\aset{X}} \in \measures(\aset{X})$\par%
 {\small{\texttt{Try \$\textbackslash mu\^\{\textbackslash aset\{X\}\} \textbackslash in \textbackslash measures(\textbackslash aset\{X\})\$}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash dirac}} & $\dirac$ & \\ 
   &  & \\ 
@@ -967,12 +1011,16 @@ Try $\mu^{\aset{X}} \in \measures(\aset{X})$
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash dummySensel}} & $\dummySensel$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash pose}} & $\pose$ &  Robot pose $\pose = (\pos, \rotm) \in \posesp \subset \sethree$.\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash posesp}} & $\posesp$ &  Pose space, subgroup of $\sethree$.\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash posespAlg}} & $\posespAlg$ &  Pose space algebra.\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash confspace}} & $\confspace$ &  Robot configuration space\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash pos}} & $\pos$ &  Position in the world frame.\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash posEl}} & $\posEl$ &  Position in the world frame.\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash rotm}} & $\rotm$ &  Rotation matrix representing orientation in the world frame.\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash rotme}} & $\rotme$ &  Element of rotation matrix\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash lvel}} & $\lvel$ &  Linear velocity\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash lvele}} & $\lvele$ &  Linear velocity (element)\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash avel}} & $\avel$ &  Angular velocity (as vector)\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash avele}} & $\avele$ &  Angular velocity (element)\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash avels}} & $\avels$ &  Angular velocity in 2D (scalar)\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash avelse}} & $\avelse$ &  Angular velocity (as skew-symmetric matrix)\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash njoints}} & $\njoints$ &  Number of joints in a robot\\ 
@@ -983,6 +1031,8 @@ Try $\mu^{\aset{X}} \in \measures(\aset{X})$
  \hline
 {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash field}} & $\field$ &  Field sampled by the field sensor.\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash fieldpos}} & $\fieldpos$ &  Generic position in the world.\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash fieldpose}} & $\fieldpose$ &  Generic position in the world.\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash worldSp}} & $\worldSp$ & \\ 
   &  & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{common/robotics/old}} & \multicolumn{2}{l}{\emph{Deprecated}}\\ 
  \hline
@@ -1062,11 +1112,10 @@ Try $\mu^{\aset{X}} \in \measures(\aset{X})$
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-A set $\aset{X}$, a group $\agroup{X}$, $\agroup{G}$, \dots
-
+A set $\aset{X}$, a group $\agroup{X}$, $\agroup{G}$, \dots\par%
 {\small{\texttt{A set \$\textbackslash aset\{X\}\$, a group \$\textbackslash agroup\{X\}\$, \$\textbackslash agroup\{G\}\$, \textbackslash dots}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash aseq\{...\}}} &  &  Formatting for sequences\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash aseqe\{...\}}} &  &  Formatting for one element in a sequence\\ 
@@ -1078,11 +1127,10 @@ A set $\aset{X}$, a group $\agroup{X}$, $\agroup{G}$, \dots
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
 \color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-Consider the operator $\aword{scale}$, \dots
-
+Consider the operator $\aword{scale}$, \dots\par%
 {\small{\texttt{Consider the operator \$\textbackslash aword\{scale\}\$, \textbackslash dots}}}\end{minipage}%
-}%
-}%
+}% fbox
+}% setlength
 \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash vmath\{...\}}} &  &  How words should appear in math mode.\\ 
  \end{longtable}

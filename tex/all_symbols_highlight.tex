@@ -176,10 +176,26 @@
 
 
 
+\ifdefined\BDSSk%
+  \renewcommand{\BDSSk}{{\color{green} \bgCBDSfamily(\obsps;k)}}%
+\else%
+  \newcommand{\BDSSk}{{\color{green} \bgCBDSfamily(\obsps;k)}}%
+\fi
+
+
+
 \ifdefined\bgBDSfamily%
   \renewcommand{\bgBDSfamily}{{\color{green} \mathsf{BDS}}}%
 \else%
   \newcommand{\bgBDSfamily}{{\color{green} \mathsf{BDS}}}%
+\fi
+%  Family of BDS sensors
+
+
+\ifdefined\bgCBDSfamily%
+  \renewcommand{\bgCBDSfamily}{{\color{green} \mathsf{CBDS}}}%
+\else%
+  \newcommand{\bgCBDSfamily}{{\color{green} \mathsf{CBDS}}}%
 \fi
 %  Family of BDS sensors
 
@@ -202,14 +218,36 @@
 
 
 
+\ifdefined\cbds%
+  \renewcommand{\cbds}{{\color{green} \myacronym{cbds}}}%
+\else%
+  \newcommand{\cbds}{{\color{green} \myacronym{cbds}}}%
+\fi
+%  Continuous-space bilinear dynamics system
+
+
+\ifdefined\CBDS%
+  \renewcommand{\CBDS}{{\color{green} \cbds}}%
+\else%
+  \newcommand{\CBDS}{{\color{green} \cbds}}%
+\fi
+
+
+
 
 
 \ifdefined\omsum%
-  \renewcommand{\omsum}[1]{{\color{gray}\sum_{#1}}\ }%
+  \renewcommand{\omsum}[1]{{\textstyle{\color{gray}\sum_{#1}}}\ }%
 \else%
-  \newcommand{\omsum}[1]{{\color{gray}\sum_{#1}}\ }%
+  \newcommand{\omsum}[1]{{\textstyle{\color{gray}\sum_{#1}}}\ }%
 \fi
 %  omitted sum
+\ifdefined\omsumb%
+  \renewcommand{\omsumb}[2]{{\textstyle{\color{gray}\sum_{#1}^{#2}}}\ }%
+\else%
+  \newcommand{\omsumb}[2]{{\textstyle{\color{gray}\sum_{#1}^{#2}}}\ }%
+\fi
+%  omitted sum (two arguments)
 
 
 %%% Bilinear models
@@ -532,14 +570,20 @@
 
  
 
-
-
 \ifdefined\state%
   \renewcommand{\state}{{\color{green} \boldsymbol{x}}}%
 \else%
   \newcommand{\state}{{\color{green} \boldsymbol{x}}}%
 \fi
 %  Generic underlying state.
+\ifdefined\stateSp%
+  \renewcommand{\stateSp}{{\color{green} \aset{X}}}%
+\else%
+  \newcommand{\stateSp}{{\color{green} \aset{X}}}%
+\fi
+%  Generic underlying state space.
+
+
 \ifdefined\detecte%
   \renewcommand{\detecte}{{\color{green} d}}%
 \else%
@@ -1496,12 +1540,68 @@
 
 
 
-\ifdefined\ddsfov%
-  \renewcommand{\ddsfov}{{\color{green} \aset{V}}}%
+\ifdefined\obspsV%
+  \renewcommand{\obspsV}{{\color{green} \aset{V}}}%
 \else%
-  \newcommand{\ddsfov}{{\color{green} \aset{V}}}%
+  \newcommand{\obspsV}{{\color{green} \aset{V}}}%
 \fi
-%  Field of view for DDS
+%  viewport
+\ifdefined\ddsfov%
+  \renewcommand{\ddsfov}{{\color{green} \obspsV}}%
+\else%
+  \newcommand{\ddsfov}{{\color{green} \obspsV}}%
+\fi
+%  viewport
+\ifdefined\obspsVunpred%
+  \renewcommand{\obspsVunpred}{{\color{green} \obspsV^{\overline{\text{pr}}}}}%
+\else%
+  \newcommand{\obspsVunpred}{{\color{green} \obspsV^{\overline{\text{pr}}}}}%
+\fi
+%  undpredictable part
+\ifdefined\obspsVpred%
+  \renewcommand{\obspsVpred}{{\color{green} \obspsV^\text{pr}}}%
+\else%
+  \newcommand{\obspsVpred}{{\color{green} \obspsV^\text{pr}}}%
+\fi
+%  predictable part 
+\ifdefined\obspsVunpredt%
+  \renewcommand{\obspsVunpredt}{{\color{green} \obspsV_t^{\overline{\text{pr}}}}}%
+\else%
+  \newcommand{\obspsVunpredt}{{\color{green} \obspsV_t^{\overline{\text{pr}}}}}%
+\fi
+%  undpredictable part at time t
+\ifdefined\obspsVpredt%
+  \renewcommand{\obspsVpredt}{{\color{green} \obspsV_t^\text{pr}}}%
+\else%
+  \newcommand{\obspsVpredt}{{\color{green} \obspsV_t^\text{pr}}}%
+\fi
+%  predictable part at time t
+
+
+
+
+
+
+\ifdefined\ddsctod%
+  \renewcommand{\ddsctod}{{\color{green} \myacronym{c\_to\_diff}}}%
+\else%
+  \newcommand{\ddsctod}{{\color{green} \myacronym{c\_to\_diff}}}%
+\fi
+
+\ifdefined\ddsste%
+  \renewcommand{\ddsste}{{\color{green} x}}%
+\else%
+  \newcommand{\ddsste}{{\color{green} x}}%
+\fi
+%  State of a DDS (element)
+\ifdefined\ddsst%
+  \renewcommand{\ddsst}{{\color{green} \boldsymbol{\ddsste}}}%
+\else%
+  \newcommand{\ddsst}{{\color{green} \boldsymbol{\ddsste}}}%
+\fi
+%  State of a DDS
+
+
 
 
 
@@ -1543,9 +1643,9 @@
 \fi
 
 \ifdefined\obsgoal%
-  \renewcommand{\obsgoal}{{\color{green} \obs_{\text{goal}}}}%
+  \renewcommand{\obsgoal}{{\color{green} \obsg}}%
 \else%
-  \newcommand{\obsgoal}{{\color{green} \obs_{\text{goal}}}}%
+  \newcommand{\obsgoal}{{\color{green} \obsg}}%
 \fi
 
 
@@ -2393,6 +2493,190 @@
 
 
  
+
+
+
+
+
+
+\ifdefined\veh%
+  \renewcommand{\veh}{{\color{green} \vehBody}}%
+\else%
+  \newcommand{\veh}{{\color{green} \vehBody}}%
+\fi
+%  A vehicle body
+\ifdefined\vehBody%
+  \renewcommand{\vehBody}{{\color{green} B}}%
+\else%
+  \newcommand{\vehBody}{{\color{green} B}}%
+\fi
+%  A vehicle body
+\ifdefined\vehKin%
+  \renewcommand{\vehKin}{{\color{green} K}}%
+\else%
+  \newcommand{\vehKin}{{\color{green} K}}%
+\fi
+%  Vehicle kinematics 
+\ifdefined\vehSensPos%
+  \renewcommand{\vehSensPos}{{\color{green} \boldsymbol{r}}}%
+\else%
+  \newcommand{\vehSensPos}{{\color{green} \boldsymbol{r}}}%
+\fi
+%  Sensor relative pose
+
+
+\ifdefined\vehSensFun%
+  \renewcommand{\vehSensFun}{{\color{green} \psi}}%
+\else%
+  \newcommand{\vehSensFun}{{\color{green} \psi}}%
+\fi
+%  Function that defines an exteroceptive sensor
+\ifdefined\env%
+  \renewcommand{\env}{{\color{green} e}}%
+\else%
+  \newcommand{\env}{{\color{green} e}}%
+\fi
+%  Environment
+\ifdefined\envSp%
+  \renewcommand{\envSp}{{\color{green} \mathcal{E}}}%
+\else%
+  \newcommand{\envSp}{{\color{green} \mathcal{E}}}%
+\fi
+%  Environment space
+
+
+\ifdefined\envo%
+  \renewcommand{\envo}{{\color{green} \mathsf{Obs}}}%
+\else%
+  \newcommand{\envo}{{\color{green} \mathsf{Obs}}}%
+\fi
+%  Obstacles in the environment
+\ifdefined\envob%
+  \renewcommand{\envob}{{\color{green} \partial \envo}}%
+\else%
+  \newcommand{\envob}{{\color{green} \partial \envo}}%
+\fi
+%  Obstacles boundaries
+\ifdefined\envt%
+  \renewcommand{\envt}{{\color{green} \mathsf{Ref}}}%
+\else%
+  \newcommand{\envt}{{\color{green} \mathsf{Ref}}}%
+\fi
+%  Texture (function on $\envob$)
+\ifdefined\envf%
+  \renewcommand{\envf}{{\color{green} \mathsf{Fie}}}%
+\else%
+  \newcommand{\envf}{{\color{green} \mathsf{Fie}}}%
+\fi
+%  Field sensed by field sampler
+
+
+\ifdefined\obspsDiff%
+  \renewcommand{\obspsDiff}{{\color{green} \obsps^{\text{dif}}}}%
+\else%
+  \newcommand{\obspsDiff}{{\color{green} \obsps^{\text{dif}}}}%
+\fi
+
+\ifdefined\obspsNotDiff%
+  \renewcommand{\obspsNotDiff}{{\color{green} \obsps^{\overline{\text{dif}}}}}%
+\else%
+  \newcommand{\obspsNotDiff}{{\color{green} \obsps^{\overline{\text{dif}}}}}%
+\fi
+
+
+
+\ifdefined\sic%
+  \renewcommand{\sic}{{\color{green} \text{IdealCams}}}%
+\else%
+  \newcommand{\sic}{{\color{green} \text{IdealCams}}}%
+\fi
+%  ideal camera
+\ifdefined\sir%
+  \renewcommand{\sir}{{\color{green} \text{IdealRFs}}}%
+\else%
+  \newcommand{\sir}{{\color{green} \text{IdealRFs}}}%
+\fi
+%  ideal range finder
+\ifdefined\sif%
+  \renewcommand{\sif}{{\color{green} \text{IdealFSs}}}%
+\else%
+  \newcommand{\sif}{{\color{green} \text{IdealFSs}}}%
+\fi
+%  ideal field sampler
+\ifdefined\sicV%
+  \renewcommand{\sicV}{{\color{green} \sic(\obspsV)}}%
+\else%
+  \newcommand{\sicV}{{\color{green} \sic(\obspsV)}}%
+\fi
+%  ideal camera with viewport
+\ifdefined\sirV%
+  \renewcommand{\sirV}{{\color{green} \sir(\obspsV)}}%
+\else%
+  \newcommand{\sirV}{{\color{green} \sir(\obspsV)}}%
+\fi
+%  ideal range finder with viewport
+\ifdefined\sifV%
+  \renewcommand{\sifV}{{\color{green} \sif(\obspsV)}}%
+\else%
+  \newcommand{\sifV}{{\color{green} \sif(\obspsV)}}%
+\fi
+%  ideal field sampler with viewport
+
+
+\ifdefined\zoh%
+  \renewcommand{\zoh}[1]{\text{Zoh}_{#1}}%
+\else%
+  \newcommand{\zoh}[1]{\text{Zoh}_{#1}}%
+\fi
+%  Zero order hold
+
+
+
+
+\ifdefined\ygneig%
+  \renewcommand{\ygneig}{{\color{green} N}}%
+\else%
+  \newcommand{\ygneig}{{\color{green} N}}%
+\fi
+%  A neighborhoood of $\obsg$.
+
+
+
+
+
+
+\ifdefined\allrobots%
+  \renewcommand{\allrobots}{{\color{green} \mathsf{Robots}}}%
+\else%
+  \newcommand{\allrobots}{{\color{green} \mathsf{Robots}}}%
+\fi
+%  The set of all robots
+\ifdefined\vehRob%
+  \renewcommand{\vehRob}{{\color{green} \mathsf{Vehicles}}}%
+\else%
+  \newcommand{\vehRob}{{\color{green} \mathsf{Vehicles}}}%
+\fi
+%  Vehicle robots
+\ifdefined\vehRobNuis%
+  \renewcommand{\vehRobNuis}{{\color{green} {\tilde{\vehRob}}}}%
+\else%
+  \newcommand{\vehRobNuis}{{\color{green} {\tilde{\vehRob}}}}%
+\fi
+%  Vehicle robots with nuisances
+
+
+\ifdefined\robVeh%
+  \renewcommand{\robVeh}{{\color{green} \vehRob}}%
+\else%
+  \newcommand{\robVeh}{{\color{green} \vehRob}}%
+\fi
+
+
+
+
+
+
+
 
 
 \ifdefined\scene%
@@ -3633,9 +3917,9 @@
 
 
 \ifdefined\world%
-  \renewcommand{\world}{{\color{green} \boldsymbol{w}}}%
+  \renewcommand{\world}{{\color{green} \textsf{map}}}%
 \else%
-  \newcommand{\world}{{\color{green} \boldsymbol{w}}}%
+  \newcommand{\world}{{\color{green} \textsf{map}}}%
 \fi
 %  The "world", an element of $\bbSpYU$.
 
@@ -3783,33 +4067,33 @@
 
 
 \ifdefined\obsg%
-  \renewcommand{\obsg}{{\color{green} \check{\obs}}}%
+  \renewcommand{\obsg}{{\color{green} \obs_{g}}}%
 \else%
-  \newcommand{\obsg}{{\color{green} \check{\obs}}}%
+  \newcommand{\obsg}{{\color{green} \obs_{g}}}%
 \fi
 %  Goal observations.
 
 
 \ifdefined\obsge%
-  \renewcommand{\obsge}{{\color{green} \check{\obse}}}%
+  \renewcommand{\obsge}{{\color{green} \obse_{g}}}%
 \else%
-  \newcommand{\obsge}{{\color{green} \check{\obse}}}%
+  \newcommand{\obsge}{{\color{green} \obse_{g}}}%
 \fi
 %  Goal observations (element).
 
 
 \ifdefined\obsgl%
-  \renewcommand{\obsgl}{{\color{green} \check{\obsl}}}%
+  \renewcommand{\obsgl}{{\color{green} \obsl_{g}}}%
 \else%
-  \newcommand{\obsgl}{{\color{green} \check{\obsl}}}%
+  \newcommand{\obsgl}{{\color{green} \obsl_{g}}}%
 \fi
 %  Goal observations (element).
 
 
 \ifdefined\obsgle%
-  \renewcommand{\obsgle}{{\color{green} \check{\obsle}}}%
+  \renewcommand{\obsgle}{{\color{green} \obsle_{g}}}%
 \else%
-  \newcommand{\obsgle}{{\color{green} \check{\obsle}}}%
+  \newcommand{\obsgle}{{\color{green} \obsle_{g}}}%
 \fi
 %  Goal observations (element).
 
@@ -3824,6 +4108,16 @@
   \renewcommand{\bbSpYU}{{\color{green} \bbSp(\obsSp;\cmdSp)}}%
 \else%
   \newcommand{\bbSpYU}{{\color{green} \bbSp(\obsSp;\cmdSp)}}%
+\fi
+%  \towrite
+
+
+
+
+\ifdefined\bbSpYXU%
+  \renewcommand{\bbSpYXU}{{\color{green} \bbSp(\obsSp;\stateSp;\cmdSp)}}%
+\else%
+  \newcommand{\bbSpYXU}{{\color{green} \bbSp(\obsSp;\stateSp;\cmdSp)}}%
 \fi
 %  \towrite
 
@@ -3903,8 +4197,6 @@
 \else%
   \newcommand{\veVehicles}{{\color{green} \mathsf{Vehicles}}}%
 \fi
-%  all Vehicles dynamics
-
 
 
 
@@ -4172,6 +4464,12 @@
   \renewcommand{\citeboh}{{\color{green} {\color{red}[xxx]}\xspace}}%
 \else%
   \newcommand{\citeboh}{{\color{green} {\color{red}[xxx]}\xspace}}%
+\fi
+
+\ifdefined\citexxx%
+  \renewcommand{\citexxx}{{\color{green} \citeboh\xspace}}%
+\else%
+  \newcommand{\citexxx}{{\color{green} \citeboh\xspace}}%
 \fi
 
 \ifdefined\xxx%
@@ -4694,28 +4992,84 @@
 %  Special Euclidean algebra
 
 
-\ifdefined\sothree%
-  \renewcommand{\sothree}{{\color{green} \mathrm{SO(3)}}}%
+\ifdefined\SOthree%
+  \renewcommand{\SOthree}{{\color{green} \mathrm{SO(3)}}}%
 \else%
-  \newcommand{\sothree}{{\color{green} \mathrm{SO(3)}}}%
+  \newcommand{\SOthree}{{\color{green} \mathrm{SO(3)}}}%
 \fi
 %  Special orthogonal group (rotation matrices)
 
 
-\ifdefined\sethree%
-  \renewcommand{\sethree}{{\color{green} \mathrm{SE(3)}}}%
+\ifdefined\SEthree%
+  \renewcommand{\SEthree}{{\color{green} \mathrm{SE(3)}}}%
 \else%
-  \newcommand{\sethree}{{\color{green} \mathrm{SE(3)}}}%
+  \newcommand{\SEthree}{{\color{green} \mathrm{SE(3)}}}%
 \fi
 %  Special Euclidean group 
+
+
+\ifdefined\SEtwo%
+  \renewcommand{\SEtwo}{{\color{green} \mathrm{SE(2)}}}%
+\else%
+  \newcommand{\SEtwo}{{\color{green} \mathrm{SE(2)}}}%
+\fi
+%  Special Euclidean group 
+
+
+% \newcommand{\SOtwo}{\mathrm{SO(2)}}  % Special Euclidean group 
+
+
+
+\ifdefined\SEthreeAlg%
+  \renewcommand{\SEthreeAlg}{{\color{green} \sealgebra(3)}}%
+\else%
+  \newcommand{\SEthreeAlg}{{\color{green} \sealgebra(3)}}%
+\fi
+
+\ifdefined\SEtwoAlg%
+  \renewcommand{\SEtwoAlg}{{\color{green} \sealgebra(2)}}%
+\else%
+  \newcommand{\SEtwoAlg}{{\color{green} \sealgebra(2)}}%
+\fi
+
+\ifdefined\SOthreeAlg%
+  \renewcommand{\SOthreeAlg}{{\color{green} \sealgebra(3)}}%
+\else%
+  \newcommand{\SOthreeAlg}{{\color{green} \sealgebra(3)}}%
+\fi
+
+\ifdefined\SOtwoAlg%
+  \renewcommand{\SOtwoAlg}{{\color{green} \sealgebra(2)}}%
+\else%
+  \newcommand{\SOtwoAlg}{{\color{green} \sealgebra(2)}}%
+\fi
+
 
 
 \ifdefined\setwo%
-  \renewcommand{\setwo}{{\color{green} \mathrm{SE(2)}}}%
+  \renewcommand{\setwo}{{\color{green} \SEtwo}}%
 \else%
-  \newcommand{\setwo}{{\color{green} \mathrm{SE(2)}}}%
+  \newcommand{\setwo}{{\color{green} \SEtwo}}%
 \fi
-%  Special Euclidean group 
+
+\ifdefined\sethree%
+  \renewcommand{\sethree}{{\color{green} \SEthree}}%
+\else%
+  \newcommand{\sethree}{{\color{green} \SEthree}}%
+\fi
+
+\ifdefined\sotwo%
+  \renewcommand{\sotwo}{{\color{green} \SOtwo}}%
+\else%
+  \newcommand{\sotwo}{{\color{green} \SOtwo}}%
+\fi
+
+\ifdefined\sothree%
+  \renewcommand{\sothree}{{\color{green} \SOthree}}%
+\else%
+  \newcommand{\sothree}{{\color{green} \SOthree}}%
+\fi
+
 
 
 
@@ -4910,6 +5264,12 @@
   \newcommand{\posesp}{{\color{green} \mathscr{Q}}}%
 \fi
 %  Pose space, subgroup of $\sethree$.
+\ifdefined\posespAlg%
+  \renewcommand{\posespAlg}{{\color{green} \text{q}}}%
+\else%
+  \newcommand{\posespAlg}{{\color{green} \text{q}}}%
+\fi
+%  Pose space algebra.
 \ifdefined\confspace%
   \renewcommand{\confspace}{{\color{green} \posesp}}%
 \else%
@@ -4922,12 +5282,24 @@
   \newcommand{\pos}{{\color{green} \boldsymbol{t}}}%
 \fi
 %  Position in the world frame.
+\ifdefined\posEl%
+  \renewcommand{\posEl}{{\color{green} t}}%
+\else%
+  \newcommand{\posEl}{{\color{green} t}}%
+\fi
+%  Position in the world frame.
 \ifdefined\rotm%
   \renewcommand{\rotm}{{\color{green} \M{R}}}%
 \else%
   \newcommand{\rotm}{{\color{green} \M{R}}}%
 \fi
 %  Rotation matrix representing orientation in the world frame.
+\ifdefined\rotme%
+  \renewcommand{\rotme}{{\color{green} R}}%
+\else%
+  \newcommand{\rotme}{{\color{green} R}}%
+\fi
+%  Element of rotation matrix
 \ifdefined\lvel%
   \renewcommand{\lvel}{{\color{green} \boldsymbol{v}}}%
 \else%
@@ -4946,6 +5318,12 @@
   \newcommand{\avel}{{\color{green} \boldsymbol{\omega}}}%
 \fi
 %  Angular velocity (as vector)
+\ifdefined\avele%
+  \renewcommand{\avele}{{\color{green} \omega}}%
+\else%
+  \newcommand{\avele}{{\color{green} \omega}}%
+\fi
+%  Angular velocity (element)
 \ifdefined\avels%
   \renewcommand{\avels}{{\color{green} \omega}}%
 \else%
@@ -4996,7 +5374,19 @@
   \newcommand{\fieldpos}{{\color{green} \boldsymbol{z}}}%
 \fi
 %  Generic position in the world.
+\ifdefined\fieldpose%
+  \renewcommand{\fieldpose}{{\color{green} z}}%
+\else%
+  \newcommand{\fieldpose}{{\color{green} z}}%
+\fi
+%  Generic position in the world.
 
+
+\ifdefined\worldSp%
+  \renewcommand{\worldSp}{{\color{green} \mapsp}}%
+\else%
+  \newcommand{\worldSp}{{\color{green} \mapsp}}%
+\fi
 
 
 
@@ -5020,11 +5410,15 @@
   \newcommand{\worldsp}{{\color{green} \mapsp}}%
 \fi
 
+
+
 \ifdefined\wshapesp%
   \renewcommand{\wshapesp}{{\color{green} \mshapesp}}%
 \else%
   \newcommand{\wshapesp}{{\color{green} \mshapesp}}%
 \fi
+
+
 
 
 
