@@ -3333,27 +3333,6 @@ for saccade initiation in freely flying {\em Drosophila}},
   timestamp = {2011.09.13}
 }
 
-@inproceedings{censi11bds,
-  author = {Andrea Censi and Richard M. Murray},
-  title = {Bootstrapping bilinear models of robotic sensorimotor cascades},
-  booktitle = {Proceedings of the {IEEE} International Conference on Robotics and
-  Automation ({ICRA})},
-  year = {2011},
-  address = {Shanghai, China},
-  desc = { 
-  This paper shows that simple bilinear models capture the dynamics
-  of heterogeneous sensors, such as field samplers, cameras, and range-finders.
-  These models can be learned unsupervisedly and used to perform simple
-  tasks.
-  
-  This material has been greatly expanded in [my dissertation](http://purl.org/censi/2012/phd)
-  (Part 2), but not yet published.
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi11bds.png},
-  doi = {10.1109/ICRA.2011.5979844},
-  slides = {http://purl.org/censi/research/2011-icra-bds-slides.pdf}
-}
-
 @inproceedings{censi11bgds,
   author = {Andrea Censi and Richard M. Murray},
   title = {Bootstrapping sensorimotor cascades: a group-theoretic perspective},
@@ -6791,6 +6770,35 @@ th05intrinsic\;sorenson70least-squares\;stenflo96semimarkov\;stoytchev
 he96semidefinite\;wan06secondorder\;xu05estimation\;;
 }}
 
+@article{carlone14angular,
+  author = {Carlone, Luca and Censi, Andrea},
+  title = {{From Angular Manifolds to the Integer Lattice: Guaranteed Orientation Estimation with Application to Pose Graph Optimization}},
+  journal = {IEEE Transactions on Robotics},
+  year = 2013,
+  note = {(To appear)},
+  pdf = {http://purl.org/censi/research/2013-mole2d.pdf},
+  slides = {http://purl.org/censi/research/2013-mole2d-slides.pdf},
+  url = {http://www.lucacarlone.com/index.php/resources/research/mole2d},
+  desc = { 
+    Pose optimization is what is used in SLAM to optimize the map
+    after pose-pose and pose-features correspondences have been established. 
+    The variables in this problem are poses living
+    on the nodes of a graph, and measurements are relative measurements
+    along the graph edges. The
+    problem is hard because orientations live on a manifold
+    with nontrivial topology, which makes the problem
+    nonlinear, nonconvex, and with multiple minima.
+    [Luca][luca] and I try to solve the subproblem of orientation estimation. 
+    We find a way to convert
+    the problem to an unconstrained optimization problem on integers.
+    This makes it possible to solve the problem globally 
+    and return all likely guesses for the orientation.
+
+    [luca]: http://lucacarlone.com
+  },
+  descicon = {http://purl.org/censi/web/media/paper-icons/carlone12angular_preprint.png}
+}
+
 @inproceedings{censi13motion,
   author = {Andrea Censi and Adam Nilsson
              and Richard M. Murray
@@ -6834,6 +6842,7 @@ he96semidefinite\;wan06secondorder\;xu05estimation\;;
   number = {1},
   issue = {3},
   sortyear = {2010},
+  descicon = {http://purl.org/censi/web/media/paper-icons/calisi12openrdk.png},
   url = {http://joser.unibg.it/index.php?journal=joser&page=article&op=view&path%5B%5D=48}
 }
 
@@ -6844,7 +6853,7 @@ he96semidefinite\;wan06secondorder\;xu05estimation\;;
   institution = {California Institute of Technology},
   year = {2012},
   desc = { 
-  Could a "brain in a jar" be able to control an unknown robotic body
+  Could a "brain in a vat" be able to control an unknown robotic body
   to which it is connected, and use it to achieve useful tasks, without
   any prior assumptions on the body's sensors and actuators? In this
   work, the problem of "bootstrapping" is studied in the context of
@@ -6878,6 +6887,28 @@ he96semidefinite\;wan06secondorder\;xu05estimation\;;
   url = {http://purl.org/censi/2006/ghtv}
 }
 
+@inproceedings{censi11bds,
+  author = {Andrea Censi and Richard M. Murray},
+  title = {Bootstrapping bilinear models of robotic sensorimotor cascades},
+  booktitle = {Proceedings of the {IEEE} International Conference on Robotics and
+  Automation ({ICRA})},
+  year = {2011},
+  address = {Shanghai, China},
+  desc = { 
+  This paper shows that simple bilinear models capture the dynamics
+  of heterogeneous sensors, such as field samplers, cameras, and range-finders.
+  These models can be learned unsupervisedly and used to perform simple
+  tasks.
+  
+  This material has been greatly expanded in [the following paper](http://purl.org/censi/2013/jbds).
+  },
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi11bds.png},
+  olddoi = {10.1109/ICRA.2011.5979844},
+  oldpdf = {http://purl.org/censi/research/2010-bootstrapping-bilinear-short.pdf},
+  slides = {http://purl.org/censi/research/2011-icra-bds-slides.pdf},
+  url = {http://purl.org/censi/2010/boot}
+}
+
 @inproceedings{delapuente12dense_old,
   author = {Paloma de la Puente and Andrea Censi},
   title = {Dense map inference with user-defined priors: from priorlets to scan
@@ -6902,16 +6933,39 @@ he96semidefinite\;wan06secondorder\;xu05estimation\;;
 @techreport{censi13jbds_sub,
   author = {Andrea Censi and Richard Murray},
   title = {Bootstrapping bilinear models of simple Vehicles},
-  institution = {California Institute of Technology},
+  institution = {Laboratory for Information and Decision Systems, Massachusetts Institute of Technology},
   pdf = {http://purl.org/censi/research/2013-jbds-sub.pdf},
+  slides = {http://purl.org/censi/research/2013-jbds-slides.pdf},
+  slideskeynote = {http://purl.org/censi/research/2013-jbds-slides.key.zip},
   url = {http://purl.org/censi/2013/jbds},
+  video = {https://vimeo.com/80954603},
   year = {2013},
-  number = {},
+  number = {2913},
   note = {},
-  kind = {preprint},
   abstract = {Learning and adaptivity will play a large role in robotics in the future, as robots transition from unstructured to unstructured environments that cannot be fully predicted or understood by the designer. Two questions that are open are how much it is possible to learn, and how much we should learn. The goal of bootstrapping is creating agents that are able to learn "everything" from scratch, including a torque-to-pixels models for its robotic body. Systems with such capabilities will be advantaged in terms of being resilient to unforeseen changes and deviations from prior assumptions. The robotics domain is a challenging one for learning, due to the presence of high-dimensional signals, various nonlinearities, and hidden states. There are no formal results, in the spirit of control theory, that could give guarantees. This paper considers the bootstrapping problem for a subset of the set of all robots. The Vehicles, inspired by Braitenberg's work, are idealization of mobile robots equipped with a set of “canonical” exteroceptive sensors (camera; range-finder; field-sampler). Their sensel-level dynamics are derived and shown to be surprising close. We define the class of BDS models, which assume an instantaneous bilinear dynamics between observations and commands, and derive streaming-based bilinear strategies for them. We show in what sense the BDS dynamics approximates the set of Vehicles to guarantee success in the task of generalized servoing: driving the observations to a given goal snapshot.  Simulations and experiments substantiate the theoretical results. This is the first instance of a bootstrapping agent that can learn the dynamics of a relatively large universe of systems, and use the models to solve well-defined tasks, with no parameter tuning or hand-designed features.},
-  desc = { },
+  desc = { 
+This paper formulates and solves the bootstrapping problem for the set of Vehicles,
+a subset of the set of all robots. 
+  },
   descicon = {http://purl.org/censi/web/media/paper-icons/censi13jbds.png}
+}
+
+@techreport{censi13dvsd_sub,
+  author = {Andrea Censi and Davide Scaramuzza},
+  title = {Low-latency event-based visual odometry},
+  institution = {Laboratory for Information and Decision Systems, Massachusetts Institute of Technology},
+  url = {http://purl.org/censi/2013/dvsd},
+  pdf = {http://purl.org/censi/research/2013-dvsd-sub.pdf},
+  year = {2013},
+  number = {2912},
+  note = {Submitted to ICRA 2014},
+  kind = {preprint},
+  abstract = {},
+  desc = {
+    This paper describes an event-based visual odometry algorighm which
+    uses a DVS sensor together with a normal camera.
+  },
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi13dvsd.png}
 }
 
 @techreport{censi13dvs,

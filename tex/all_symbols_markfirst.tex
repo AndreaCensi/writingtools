@@ -4877,9 +4877,9 @@
 
 
 \ifdefined\expl%
-  \renewcommand{\expl}[1]{{ \quad (#1)}\nonumber}%
+  \renewcommand{\expl}[1]{{ \color{gray}\quad \{#1\}}\nonumber}%
 \else%
-  \newcommand{\expl}[1]{{ \quad (#1)}\nonumber}%
+  \newcommand{\expl}[1]{{ \color{gray}\quad \{#1\}}\nonumber}%
 \fi
 %  Explanation in formulas
 %\newcommand{\expl}[1]{{ \circledcirc\quad\small \color{blue} #1}} % Explanation in formulas
