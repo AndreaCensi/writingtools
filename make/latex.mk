@@ -79,5 +79,5 @@ texclean:: $(foreach s, $(tex_subdirs), texclean-$s)
 	@-rm -f $(tmp_files)
 	
 texhide::
-	#@-chflags hidden $(tmp_files)  2>/dev/null
-	chflags hidden $(tmp_files)  2>/dev/null
+	@-chflags hidden $(tmp_files)  2>/dev/null
+	#chflags hidden $(tmp_files)  2>/dev/null
