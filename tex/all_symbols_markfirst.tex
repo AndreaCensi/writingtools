@@ -1815,6 +1815,33 @@
 
 
 
+\newbool{usedldmap}\setbool{usedldmap}{false}
+\ifdefined\ldmap%
+  \renewcommand{\ldmap}{\markfirst{ldmap}{usedldmap}{\gamma}}%
+\else%
+  \newcommand{\ldmap}{\markfirst{ldmap}{usedldmap}{\gamma}}%
+\fi
+%  Map from latent state to instantaneous dynamics
+
+
+\newbool{usedhclass}\setbool{usedhclass}{false}
+\ifdefined\hclass%
+  \renewcommand{\hclass}{\markfirst{hclass}{usedhclass}{\mathcal{H}}}%
+\else%
+  \newcommand{\hclass}{\markfirst{hclass}{usedhclass}{\mathcal{H}}}%
+\fi
+%  Hidden class
+\newbool{usediclass}\setbool{usediclass}{false}
+\ifdefined\iclass%
+  \renewcommand{\iclass}{\markfirst{iclass}{usediclass}{\mathcal{M}}}%
+\else%
+  \newcommand{\iclass}{\markfirst{iclass}{usediclass}{\mathcal{M}}}%
+\fi
+%  Instantnaeous class
+
+
+
+
 
 
 \newbool{usedSetImages}\setbool{usedSetImages}{false}

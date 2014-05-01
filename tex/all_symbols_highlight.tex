@@ -1608,6 +1608,30 @@
 
 
 
+\ifdefined\ldmap%
+  \renewcommand{\ldmap}{{\color{green} \gamma}}%
+\else%
+  \newcommand{\ldmap}{{\color{green} \gamma}}%
+\fi
+%  Map from latent state to instantaneous dynamics
+
+
+\ifdefined\hclass%
+  \renewcommand{\hclass}{{\color{green} \mathcal{H}}}%
+\else%
+  \newcommand{\hclass}{{\color{green} \mathcal{H}}}%
+\fi
+%  Hidden class
+\ifdefined\iclass%
+  \renewcommand{\iclass}{{\color{green} \mathcal{M}}}%
+\else%
+  \newcommand{\iclass}{{\color{green} \mathcal{M}}}%
+\fi
+%  Instantnaeous class
+
+
+
+
 
 
 \ifdefined\SetImages%
