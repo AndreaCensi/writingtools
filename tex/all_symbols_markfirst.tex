@@ -614,7 +614,12 @@
 %  Family of range-finders models
 
 
-% \newcommand{\bgFields}{{\mathsf{C}} }
+\newbool{usedbgFields}\setbool{usedbgFields}{false}
+\ifdefined\bgFields%
+  \renewcommand{\bgFields}{\markfirst{bgFields}{usedbgFields}{{\mathsf{C}} }}%
+\else%
+  \newcommand{\bgFields}{\markfirst{bgFields}{usedbgFields}{{\mathsf{C}} }}%
+\fi
 
 
 
