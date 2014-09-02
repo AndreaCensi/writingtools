@@ -1630,6 +1630,134 @@
 %  Instantnaeous class
 
 
+\ifdefined\atype%
+  \renewcommand{\atype}[1]{\vmath{\bf #1    }}%
+\else%
+  \newcommand{\atype}[1]{\vmath{\bf #1    }}%
+\fi
+
+\ifdefined\mycode%
+  \renewcommand{\mycode}[1]{\texttt{\small #1}}%
+\else%
+  \newcommand{\mycode}[1]{\texttt{\small #1}}%
+\fi
+
+\ifdefined\desplStats%
+  \renewcommand{\desplStats}{{\color{green} \atype{Stats}}}%
+\else%
+  \newcommand{\desplStats}{{\color{green} \atype{Stats}}}%
+\fi
+
+\ifdefined\desplIStats%
+  \renewcommand{\desplIStats}{{\color{green} \atype{IStats}}}%
+\else%
+  \newcommand{\desplIStats}{{\color{green} \atype{IStats}}}%
+\fi
+
+\ifdefined\desplData%
+  \renewcommand{\desplData}{{\color{green} \atype{Data}}}%
+\else%
+  \newcommand{\desplData}{{\color{green} \atype{Data}}}%
+\fi
+
+\ifdefined\desplIData%
+  \renewcommand{\desplIData}{{\color{green} \atype{IData}}}%
+\else%
+  \newcommand{\desplIData}{{\color{green} \atype{IData}}}%
+\fi
+
+\ifdefined\desplModels%
+  \renewcommand{\desplModels}{{\color{green} \atype{Models}}}%
+\else%
+  \newcommand{\desplModels}{{\color{green} \atype{Models}}}%
+\fi
+
+\ifdefined\desplIModels%
+  \renewcommand{\desplIModels}{{\color{green} \atype{IModels}}}%
+\else%
+  \newcommand{\desplIModels}{{\color{green} \atype{IModels}}}%
+\fi
+
+
+
+\ifdefined\despllearn%
+  \renewcommand{\despllearn}{{\color{green} \vmath{learn}}}%
+\else%
+  \newcommand{\despllearn}{{\color{green} \vmath{learn}}}%
+\fi
+
+\ifdefined\desplilearn%
+  \renewcommand{\desplilearn}{{\color{green} \vmath{ilearn}}}%
+\else%
+  \newcommand{\desplilearn}{{\color{green} \vmath{ilearn}}}%
+\fi
+
+
+
+\ifdefined\desplfilter%
+  \renewcommand{\desplfilter}{{\color{green} \vmath{filter}}}%
+\else%
+  \newcommand{\desplfilter}{{\color{green} \vmath{filter}}}%
+\fi
+
+\ifdefined\desplfmodel%
+  \renewcommand{\desplfmodel}{{\color{green} \vmath{fm}}}%
+\else%
+  \newcommand{\desplfmodel}{{\color{green} \vmath{fm}}}%
+\fi
+
+
+
+\ifdefined\desplistats%
+  \renewcommand{\desplistats}{{\color{green} \vmath{istats}}}%
+\else%
+  \newcommand{\desplistats}{{\color{green} \vmath{istats}}}%
+\fi
+
+\ifdefined\desplglue%
+  \renewcommand{\desplglue}{{\color{green} \vmath{glue}}}%
+\else%
+  \newcommand{\desplglue}{{\color{green} \vmath{glue}}}%
+\fi
+
+\ifdefined\desplmglue%
+  \renewcommand{\desplmglue}{{\color{green} \vmath{mglue}}}%
+\else%
+  \newcommand{\desplmglue}{{\color{green} \vmath{mglue}}}%
+\fi
+
+\ifdefined\desplstats%
+  \renewcommand{\desplstats}{{\color{green} \vmath{stats}}}%
+\else%
+  \newcommand{\desplstats}{{\color{green} \vmath{stats}}}%
+\fi
+
+\ifdefined\desplmerge%
+  \renewcommand{\desplmerge}{{\color{green} \vmath{merge}}}%
+\else%
+  \newcommand{\desplmerge}{{\color{green} \vmath{merge}}}%
+\fi
+
+
+
+
+
+
+
+% TODO: move away
+
+\ifdefined\ds%
+  \renewcommand{\ds}{{\color{green} \Delta_s}}%
+\else%
+  \newcommand{\ds}{{\color{green} \Delta_s}}%
+\fi
+%  Spatial sampling
+\ifdefined\dt%
+  \renewcommand{\dt}{{\color{green} \Delta_t}}%
+\else%
+  \newcommand{\dt}{{\color{green} \Delta_t}}%
+\fi
+%  Temporal sampling
 
 
 
@@ -2516,7 +2644,18 @@
 
 
 
- 
+\ifdefined\brel%
+  \renewcommand{\brel}{{\color{green} \leq_{B}}}%
+\else%
+  \newcommand{\brel}{{\color{green} \leq_{B}}}%
+\fi
+%  Simulation partial order
+\ifdefined\bsim%
+  \renewcommand{\bsim}{{\color{green} \sim_{B}}}%
+\else%
+  \newcommand{\bsim}{{\color{green} \sim_{B}}}%
+\fi
+%  Simulation relation
 
 
 
@@ -3922,6 +4061,20 @@
   \newcommand{\bbG}{{\color{green} \abb{G}}}%
 \fi
 
+\ifdefined\bbH%
+  \renewcommand{\bbH}{{\color{green} \abb{H}}}%
+\else%
+  \newcommand{\bbH}{{\color{green} \abb{H}}}%
+\fi
+
+\ifdefined\bbL%
+  \renewcommand{\bbL}{{\color{green} \abb{L}}}%
+\else%
+  \newcommand{\bbL}{{\color{green} \abb{L}}}%
+\fi
+
+
+
 \ifdefined\bbSpBA%
   \renewcommand{\bbSpBA}{{\color{green} \bbSp(\setB;\setA)}}%
 \else%
@@ -4468,17 +4621,9 @@
 
 
 
-\ifdefined\AC%
-  \renewcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}}%
-\else%
-  \newcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}}%
-\fi
-%  Marker for sections to write
-\ifdefined\ac%
-  \renewcommand{\ac}[1]{\AC{#1}}%
-\else%
-  \newcommand{\ac}[1]{\AC{#1}}%
-\fi
+% \newcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}} % Marker for sections to write
+
+% \newcommand{\ac}[1]{\AC{#1}}
 
 \ifdefined\towrite%
   \renewcommand{\towrite}{{\color{green} \textbf{to write}\xspace}}%

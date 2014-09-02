@@ -1840,6 +1840,151 @@
 %  Instantnaeous class
 
 
+\ifdefined\atype%
+  \renewcommand{\atype}[1]{\vmath{\bf #1    }}%
+\else%
+  \newcommand{\atype}[1]{\vmath{\bf #1    }}%
+\fi
+
+\ifdefined\mycode%
+  \renewcommand{\mycode}[1]{\texttt{\small #1}}%
+\else%
+  \newcommand{\mycode}[1]{\texttt{\small #1}}%
+\fi
+
+\newbool{useddesplStats}\setbool{useddesplStats}{false}
+\ifdefined\desplStats%
+  \renewcommand{\desplStats}{\markfirst{desplStats}{useddesplStats}{\atype{Stats}}}%
+\else%
+  \newcommand{\desplStats}{\markfirst{desplStats}{useddesplStats}{\atype{Stats}}}%
+\fi
+
+\newbool{useddesplIStats}\setbool{useddesplIStats}{false}
+\ifdefined\desplIStats%
+  \renewcommand{\desplIStats}{\markfirst{desplIStats}{useddesplIStats}{\atype{IStats}}}%
+\else%
+  \newcommand{\desplIStats}{\markfirst{desplIStats}{useddesplIStats}{\atype{IStats}}}%
+\fi
+
+\newbool{useddesplData}\setbool{useddesplData}{false}
+\ifdefined\desplData%
+  \renewcommand{\desplData}{\markfirst{desplData}{useddesplData}{\atype{Data}}}%
+\else%
+  \newcommand{\desplData}{\markfirst{desplData}{useddesplData}{\atype{Data}}}%
+\fi
+
+\newbool{useddesplIData}\setbool{useddesplIData}{false}
+\ifdefined\desplIData%
+  \renewcommand{\desplIData}{\markfirst{desplIData}{useddesplIData}{\atype{IData}}}%
+\else%
+  \newcommand{\desplIData}{\markfirst{desplIData}{useddesplIData}{\atype{IData}}}%
+\fi
+
+\newbool{useddesplModels}\setbool{useddesplModels}{false}
+\ifdefined\desplModels%
+  \renewcommand{\desplModels}{\markfirst{desplModels}{useddesplModels}{\atype{Models}}}%
+\else%
+  \newcommand{\desplModels}{\markfirst{desplModels}{useddesplModels}{\atype{Models}}}%
+\fi
+
+\newbool{useddesplIModels}\setbool{useddesplIModels}{false}
+\ifdefined\desplIModels%
+  \renewcommand{\desplIModels}{\markfirst{desplIModels}{useddesplIModels}{\atype{IModels}}}%
+\else%
+  \newcommand{\desplIModels}{\markfirst{desplIModels}{useddesplIModels}{\atype{IModels}}}%
+\fi
+
+
+
+\newbool{useddespllearn}\setbool{useddespllearn}{false}
+\ifdefined\despllearn%
+  \renewcommand{\despllearn}{\markfirst{despllearn}{useddespllearn}{\vmath{learn}}}%
+\else%
+  \newcommand{\despllearn}{\markfirst{despllearn}{useddespllearn}{\vmath{learn}}}%
+\fi
+
+\newbool{useddesplilearn}\setbool{useddesplilearn}{false}
+\ifdefined\desplilearn%
+  \renewcommand{\desplilearn}{\markfirst{desplilearn}{useddesplilearn}{\vmath{ilearn}}}%
+\else%
+  \newcommand{\desplilearn}{\markfirst{desplilearn}{useddesplilearn}{\vmath{ilearn}}}%
+\fi
+
+
+
+\newbool{useddesplfilter}\setbool{useddesplfilter}{false}
+\ifdefined\desplfilter%
+  \renewcommand{\desplfilter}{\markfirst{desplfilter}{useddesplfilter}{\vmath{filter}}}%
+\else%
+  \newcommand{\desplfilter}{\markfirst{desplfilter}{useddesplfilter}{\vmath{filter}}}%
+\fi
+
+\newbool{useddesplfmodel}\setbool{useddesplfmodel}{false}
+\ifdefined\desplfmodel%
+  \renewcommand{\desplfmodel}{\markfirst{desplfmodel}{useddesplfmodel}{\vmath{fm}}}%
+\else%
+  \newcommand{\desplfmodel}{\markfirst{desplfmodel}{useddesplfmodel}{\vmath{fm}}}%
+\fi
+
+
+
+\newbool{useddesplistats}\setbool{useddesplistats}{false}
+\ifdefined\desplistats%
+  \renewcommand{\desplistats}{\markfirst{desplistats}{useddesplistats}{\vmath{istats}}}%
+\else%
+  \newcommand{\desplistats}{\markfirst{desplistats}{useddesplistats}{\vmath{istats}}}%
+\fi
+
+\newbool{useddesplglue}\setbool{useddesplglue}{false}
+\ifdefined\desplglue%
+  \renewcommand{\desplglue}{\markfirst{desplglue}{useddesplglue}{\vmath{glue}}}%
+\else%
+  \newcommand{\desplglue}{\markfirst{desplglue}{useddesplglue}{\vmath{glue}}}%
+\fi
+
+\newbool{useddesplmglue}\setbool{useddesplmglue}{false}
+\ifdefined\desplmglue%
+  \renewcommand{\desplmglue}{\markfirst{desplmglue}{useddesplmglue}{\vmath{mglue}}}%
+\else%
+  \newcommand{\desplmglue}{\markfirst{desplmglue}{useddesplmglue}{\vmath{mglue}}}%
+\fi
+
+\newbool{useddesplstats}\setbool{useddesplstats}{false}
+\ifdefined\desplstats%
+  \renewcommand{\desplstats}{\markfirst{desplstats}{useddesplstats}{\vmath{stats}}}%
+\else%
+  \newcommand{\desplstats}{\markfirst{desplstats}{useddesplstats}{\vmath{stats}}}%
+\fi
+
+\newbool{useddesplmerge}\setbool{useddesplmerge}{false}
+\ifdefined\desplmerge%
+  \renewcommand{\desplmerge}{\markfirst{desplmerge}{useddesplmerge}{\vmath{merge}}}%
+\else%
+  \newcommand{\desplmerge}{\markfirst{desplmerge}{useddesplmerge}{\vmath{merge}}}%
+\fi
+
+
+
+
+
+
+
+% TODO: move away
+
+\newbool{usedds}\setbool{usedds}{false}
+\ifdefined\ds%
+  \renewcommand{\ds}{\markfirst{ds}{usedds}{\Delta_s}}%
+\else%
+  \newcommand{\ds}{\markfirst{ds}{usedds}{\Delta_s}}%
+\fi
+%  Spatial sampling
+\newbool{useddt}\setbool{useddt}{false}
+\ifdefined\dt%
+  \renewcommand{\dt}{\markfirst{dt}{useddt}{\Delta_t}}%
+\else%
+  \newcommand{\dt}{\markfirst{dt}{useddt}{\Delta_t}}%
+\fi
+%  Temporal sampling
 
 
 
@@ -2839,7 +2984,20 @@
 
 
 
- 
+\newbool{usedbrel}\setbool{usedbrel}{false}
+\ifdefined\brel%
+  \renewcommand{\brel}{\markfirst{brel}{usedbrel}{\leq_{B}}}%
+\else%
+  \newcommand{\brel}{\markfirst{brel}{usedbrel}{\leq_{B}}}%
+\fi
+%  Simulation partial order
+\newbool{usedbsim}\setbool{usedbsim}{false}
+\ifdefined\bsim%
+  \renewcommand{\bsim}{\markfirst{bsim}{usedbsim}{\sim_{B}}}%
+\else%
+  \newcommand{\bsim}{\markfirst{bsim}{usedbsim}{\sim_{B}}}%
+\fi
+%  Simulation relation
 
 
 
@@ -4405,6 +4563,22 @@
   \newcommand{\bbG}{\markfirst{bbG}{usedbbG}{\abb{G}}}%
 \fi
 
+\newbool{usedbbH}\setbool{usedbbH}{false}
+\ifdefined\bbH%
+  \renewcommand{\bbH}{\markfirst{bbH}{usedbbH}{\abb{H}}}%
+\else%
+  \newcommand{\bbH}{\markfirst{bbH}{usedbbH}{\abb{H}}}%
+\fi
+
+\newbool{usedbbL}\setbool{usedbbL}{false}
+\ifdefined\bbL%
+  \renewcommand{\bbL}{\markfirst{bbL}{usedbbL}{\abb{L}}}%
+\else%
+  \newcommand{\bbL}{\markfirst{bbL}{usedbbL}{\abb{L}}}%
+\fi
+
+
+
 \newbool{usedbbSpBA}\setbool{usedbbSpBA}{false}
 \ifdefined\bbSpBA%
   \renewcommand{\bbSpBA}{\markfirst{bbSpBA}{usedbbSpBA}{\bbSp(\setB;\setA)}}%
@@ -5015,17 +5189,9 @@
 
 
 
-\ifdefined\AC%
-  \renewcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}}%
-\else%
-  \newcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}}%
-\fi
-%  Marker for sections to write
-\ifdefined\ac%
-  \renewcommand{\ac}[1]{\AC{#1}}%
-\else%
-  \newcommand{\ac}[1]{\AC{#1}}%
-\fi
+% \newcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}} % Marker for sections to write
+
+% \newcommand{\ac}[1]{\AC{#1}}
 
 \newbool{usedtowrite}\setbool{usedtowrite}{false}
 \ifdefined\towrite%

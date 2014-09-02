@@ -8,7 +8,7 @@ tex_subdirs?=
 # Main tex files (not lyx)
 tex_base=$(subst .tex,, $(tex_files))
 tex_targets=$(subst .tex,.pdf, $(tex_files))
-tmp_exts:=.fdb_latexmk .fls .loa .lof .lot .unused-labels.txt .unused-fig.txt .unused-def.txt .unused-lem.txt .missing-bib.txt .missing-ref.txt .run.xml -blx.bib .nlo .nls .idx .ind .ilg .d .4ct .4tc .auxlock .aux .idv .atfi .tmp .lg .log .bbl .blg .brf .out .lyx~ .xref .lyx\# .dvi 
+tmp_exts:=.fdb_latexmk .fls .loa .lof .lot .unused-labels.txt .unused-fig.txt .unused-def.txt .unused-lem.txt .missing-bib.txt .missing-ref.txt .run.xml -blx.bib .nlo .nls .idx .ind .ilg .d .4ct .4tc .auxlock .aux .idv .atfi .tmp .lg .log .bbl .blg .brf .out .lyx~ .xref .lyx\# .dvi .pyg
 
 #tmp_files:=$(wildcard $(foreach ext,$(tmp_exts),*.$(ext))*)
 tmp_files:=$(foreach base, $(tex_base), $(foreach ext,$(tmp_exts), $(base)$(ext)))
@@ -42,9 +42,10 @@ $(DEPDIR)/%.tex.d: %.tex
 -include $(addprefix $(DEPDIR)/,$(subst .tex,.tex.d, $(tex_files)))
 
 pdflatex=pdflatex -shell-escape
+#pdflatex=xelatex -shell-escape
 
 %.pdf: %.tex
-	latexmk -pdf $*.tex
+	latexmk -pdflatex="$(pdflatex)" -pdf $*.tex
 	# $(pdflatex) $(latex_args) $*
 	# - bibtex $*
 	# $(pdflatex) $(latex_args) $*

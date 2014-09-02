@@ -44,7 +44,9 @@ lyxtex: $(lyx_generated_tex)
 
 # if not given hypehn it shows alarming message
 # http://www.makelinux.net/make3/make3-CHP-2-SECT-7
-include $(lyx_deps)
+# 
+# Jul 14: Disabling dependencies
+# include $(lyx_deps)
 
 # But if you do there might be other problems
 # -include $(lyx_deps)
@@ -55,6 +57,7 @@ include $(lyx_deps)
 	echo Redoing $@
 	@-rm -f $@
 	$(lyx) -e pdflatex -f all $<
+	# $(lyx) -e xetex -f all $<
 
 # We redo the lyx, otherwise we would never be sure 
 # whether this was compiled to a standalone or child document.

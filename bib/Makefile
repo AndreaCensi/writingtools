@@ -5,6 +5,7 @@ all: all.bib all_only_one.bib andrea_nopdfdoi.bib all_only_one_w_pages.bib
 andrea=
 andrea+=src-andrea/web/regular.bib
 andrea+=src-andrea/web/preprints.bib
+andrea+=src-andrea/web/future.bib
 
 all.bib: src/*bib  $(andrea)
 	cat $^ > all.bib
