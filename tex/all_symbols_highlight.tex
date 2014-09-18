@@ -1758,6 +1758,18 @@
   \newcommand{\dt}{{\color{green} \Delta_t}}%
 \fi
 %  Temporal sampling
+\ifdefined\db%
+  \renewcommand{\db}{{\color{green} \Delta_b}}%
+\else%
+  \newcommand{\db}{{\color{green} \Delta_b}}%
+\fi
+%  Brightness threshold
+\ifdefined\camexp%
+  \renewcommand{\camexp}{{\color{green} \text{EX}}}%
+\else%
+  \newcommand{\camexp}{{\color{green} \text{EX}}}%
+\fi
+%  Exposure
 
 
 
@@ -2850,6 +2862,128 @@
 
 
 
+
+
+
+
+\ifdefined\MA%
+  \renewcommand{\MA}{{\color{green} \M{A}}}%
+\else%
+  \newcommand{\MA}{{\color{green} \M{A}}}%
+\fi
+
+\ifdefined\MB%
+  \renewcommand{\MB}{{\color{green} \M{B}}}%
+\else%
+  \newcommand{\MB}{{\color{green} \M{B}}}%
+\fi
+
+\ifdefined\MC%
+  \renewcommand{\MC}{{\color{green} \M{C}}}%
+\else%
+  \newcommand{\MC}{{\color{green} \M{C}}}%
+\fi
+
+\ifdefined\MG%
+  \renewcommand{\MG}{{\color{green} \M{G}}}%
+\else%
+  \newcommand{\MG}{{\color{green} \M{G}}}%
+\fi
+
+\ifdefined\MH%
+  \renewcommand{\MH}{{\color{green} \M{H}}}%
+\else%
+  \newcommand{\MH}{{\color{green} \M{H}}}%
+\fi
+
+\ifdefined\MR%
+  \renewcommand{\MR}{{\color{green} \M{R}}}%
+\else%
+  \newcommand{\MR}{{\color{green} \M{R}}}%
+\fi
+
+\ifdefined\ML%
+  \renewcommand{\ML}{{\color{green} \M{L}}}%
+\else%
+  \newcommand{\ML}{{\color{green} \M{L}}}%
+\fi
+
+\ifdefined\MQ%
+  \renewcommand{\MQ}{{\color{green} \M{Q}}}%
+\else%
+  \newcommand{\MQ}{{\color{green} \M{Q}}}%
+\fi
+
+\ifdefined\MP%
+  \renewcommand{\MP}{{\color{green} \M{P}}}%
+\else%
+  \newcommand{\MP}{{\color{green} \M{P}}}%
+\fi
+
+\ifdefined\MS%
+  \renewcommand{\MS}{{\color{green} \M{S}}}%
+\else%
+  \newcommand{\MS}{{\color{green} \M{S}}}%
+\fi
+
+\ifdefined\MSigma%
+  \renewcommand{\MSigma}{{\color{green} \M{\Sigma}}}%
+\else%
+  \newcommand{\MSigma}{{\color{green} \M{\Sigma}}}%
+\fi
+
+\ifdefined\MV%
+  \renewcommand{\MV}{{\color{green} \M{V}}}%
+\else%
+  \newcommand{\MV}{{\color{green} \M{V}}}%
+\fi
+
+\ifdefined\MW%
+  \renewcommand{\MW}{{\color{green} \M{W}}}%
+\else%
+  \newcommand{\MW}{{\color{green} \M{W}}}%
+\fi
+
+
+
+
+
+\ifdefined\SP%
+  \renewcommand{\SP}{{\color{green} P_{\text{s}}}}%
+\else%
+  \newcommand{\SP}{{\color{green} P_{\text{s}}}}%
+\fi
+%  Sensing power
+\ifdefined\AP%
+  \renewcommand{\AP}{{\color{green} P_{\text{a}}}}%
+\else%
+  \newcommand{\AP}{{\color{green} P_{\text{a}}}}%
+\fi
+%  Actuation power
+\ifdefined\SE%
+  \renewcommand{\SE}{{\color{green} E}}%
+\else%
+  \newcommand{\SE}{{\color{green} E}}%
+\fi
+%  Stored energy
+\ifdefined\ER%
+  \renewcommand{\ER}{{\color{green} r}}%
+\else%
+  \newcommand{\ER}{{\color{green} r}}%
+\fi
+%  Trajectory efficiency ratio
+\ifdefined\HP%
+  \renewcommand{\HP}{{\color{green} \Theta}}%
+\else%
+  \newcommand{\HP}{{\color{green} \Theta}}%
+\fi
+%  Heading precision
+\ifdefined\np%
+  \renewcommand{\np}{{\color{green} n}}%
+\else%
+  \newcommand{\np}{{\color{green} n}}%
+\fi
+%  Number of pixels
 
 
 \ifdefined\scene%

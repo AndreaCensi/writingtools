@@ -1985,6 +1985,20 @@
   \newcommand{\dt}{\markfirst{dt}{useddt}{\Delta_t}}%
 \fi
 %  Temporal sampling
+\newbool{useddb}\setbool{useddb}{false}
+\ifdefined\db%
+  \renewcommand{\db}{\markfirst{db}{useddb}{\Delta_b}}%
+\else%
+  \newcommand{\db}{\markfirst{db}{useddb}{\Delta_b}}%
+\fi
+%  Brightness threshold
+\newbool{usedcamexp}\setbool{usedcamexp}{false}
+\ifdefined\camexp%
+  \renewcommand{\camexp}{\markfirst{camexp}{usedcamexp}{\text{EX}}}%
+\else%
+  \newcommand{\camexp}{\markfirst{camexp}{usedcamexp}{\text{EX}}}%
+\fi
+%  Exposure
 
 
 
@@ -3216,6 +3230,147 @@
 
 
 
+
+
+
+
+\newbool{usedMA}\setbool{usedMA}{false}
+\ifdefined\MA%
+  \renewcommand{\MA}{\markfirst{MA}{usedMA}{\M{A}}}%
+\else%
+  \newcommand{\MA}{\markfirst{MA}{usedMA}{\M{A}}}%
+\fi
+
+\newbool{usedMB}\setbool{usedMB}{false}
+\ifdefined\MB%
+  \renewcommand{\MB}{\markfirst{MB}{usedMB}{\M{B}}}%
+\else%
+  \newcommand{\MB}{\markfirst{MB}{usedMB}{\M{B}}}%
+\fi
+
+\newbool{usedMC}\setbool{usedMC}{false}
+\ifdefined\MC%
+  \renewcommand{\MC}{\markfirst{MC}{usedMC}{\M{C}}}%
+\else%
+  \newcommand{\MC}{\markfirst{MC}{usedMC}{\M{C}}}%
+\fi
+
+\newbool{usedMG}\setbool{usedMG}{false}
+\ifdefined\MG%
+  \renewcommand{\MG}{\markfirst{MG}{usedMG}{\M{G}}}%
+\else%
+  \newcommand{\MG}{\markfirst{MG}{usedMG}{\M{G}}}%
+\fi
+
+\newbool{usedMH}\setbool{usedMH}{false}
+\ifdefined\MH%
+  \renewcommand{\MH}{\markfirst{MH}{usedMH}{\M{H}}}%
+\else%
+  \newcommand{\MH}{\markfirst{MH}{usedMH}{\M{H}}}%
+\fi
+
+\newbool{usedMR}\setbool{usedMR}{false}
+\ifdefined\MR%
+  \renewcommand{\MR}{\markfirst{MR}{usedMR}{\M{R}}}%
+\else%
+  \newcommand{\MR}{\markfirst{MR}{usedMR}{\M{R}}}%
+\fi
+
+\newbool{usedML}\setbool{usedML}{false}
+\ifdefined\ML%
+  \renewcommand{\ML}{\markfirst{ML}{usedML}{\M{L}}}%
+\else%
+  \newcommand{\ML}{\markfirst{ML}{usedML}{\M{L}}}%
+\fi
+
+\newbool{usedMQ}\setbool{usedMQ}{false}
+\ifdefined\MQ%
+  \renewcommand{\MQ}{\markfirst{MQ}{usedMQ}{\M{Q}}}%
+\else%
+  \newcommand{\MQ}{\markfirst{MQ}{usedMQ}{\M{Q}}}%
+\fi
+
+\newbool{usedMP}\setbool{usedMP}{false}
+\ifdefined\MP%
+  \renewcommand{\MP}{\markfirst{MP}{usedMP}{\M{P}}}%
+\else%
+  \newcommand{\MP}{\markfirst{MP}{usedMP}{\M{P}}}%
+\fi
+
+\newbool{usedMS}\setbool{usedMS}{false}
+\ifdefined\MS%
+  \renewcommand{\MS}{\markfirst{MS}{usedMS}{\M{S}}}%
+\else%
+  \newcommand{\MS}{\markfirst{MS}{usedMS}{\M{S}}}%
+\fi
+
+\newbool{usedMSigma}\setbool{usedMSigma}{false}
+\ifdefined\MSigma%
+  \renewcommand{\MSigma}{\markfirst{MSigma}{usedMSigma}{\M{\Sigma}}}%
+\else%
+  \newcommand{\MSigma}{\markfirst{MSigma}{usedMSigma}{\M{\Sigma}}}%
+\fi
+
+\newbool{usedMV}\setbool{usedMV}{false}
+\ifdefined\MV%
+  \renewcommand{\MV}{\markfirst{MV}{usedMV}{\M{V}}}%
+\else%
+  \newcommand{\MV}{\markfirst{MV}{usedMV}{\M{V}}}%
+\fi
+
+\newbool{usedMW}\setbool{usedMW}{false}
+\ifdefined\MW%
+  \renewcommand{\MW}{\markfirst{MW}{usedMW}{\M{W}}}%
+\else%
+  \newcommand{\MW}{\markfirst{MW}{usedMW}{\M{W}}}%
+\fi
+
+
+
+
+
+\newbool{usedSP}\setbool{usedSP}{false}
+\ifdefined\SP%
+  \renewcommand{\SP}{\markfirst{SP}{usedSP}{P_{\text{s}}}}%
+\else%
+  \newcommand{\SP}{\markfirst{SP}{usedSP}{P_{\text{s}}}}%
+\fi
+%  Sensing power
+\newbool{usedAP}\setbool{usedAP}{false}
+\ifdefined\AP%
+  \renewcommand{\AP}{\markfirst{AP}{usedAP}{P_{\text{a}}}}%
+\else%
+  \newcommand{\AP}{\markfirst{AP}{usedAP}{P_{\text{a}}}}%
+\fi
+%  Actuation power
+\newbool{usedSE}\setbool{usedSE}{false}
+\ifdefined\SE%
+  \renewcommand{\SE}{\markfirst{SE}{usedSE}{E}}%
+\else%
+  \newcommand{\SE}{\markfirst{SE}{usedSE}{E}}%
+\fi
+%  Stored energy
+\newbool{usedER}\setbool{usedER}{false}
+\ifdefined\ER%
+  \renewcommand{\ER}{\markfirst{ER}{usedER}{r}}%
+\else%
+  \newcommand{\ER}{\markfirst{ER}{usedER}{r}}%
+\fi
+%  Trajectory efficiency ratio
+\newbool{usedHP}\setbool{usedHP}{false}
+\ifdefined\HP%
+  \renewcommand{\HP}{\markfirst{HP}{usedHP}{\Theta}}%
+\else%
+  \newcommand{\HP}{\markfirst{HP}{usedHP}{\Theta}}%
+\fi
+%  Heading precision
+\newbool{usednp}\setbool{usednp}{false}
+\ifdefined\np%
+  \renewcommand{\np}{\markfirst{np}{usednp}{n}}%
+\else%
+  \newcommand{\np}{\markfirst{np}{usednp}{n}}%
+\fi
+%  Number of pixels
 
 
 \newbool{usedscene}\setbool{usedscene}{false}

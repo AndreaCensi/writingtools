@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-from quickapp import QuickAppBase, UserError
+from quickapp import QuickAppBase
+from compmake.exceptions import UserError
 import os, string
 from system_cmd import system_cmd_result
 
