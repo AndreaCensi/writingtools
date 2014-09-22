@@ -2264,6 +2264,76 @@
 
 
 
+\ifdefined\clip%
+  \renewcommand{\clip}[1]{\mathsf{clip}_{#1}}%
+\else%
+  \newcommand{\clip}[1]{\mathsf{clip}_{#1}}%
+\fi
+%  Clip up to some boundary 
+\ifdefined\maxu%
+  \renewcommand{\maxu}{{\color{green} b}}%
+\else%
+  \newcommand{\maxu}{{\color{green} b}}%
+\fi
+
+\ifdefined\clipu%
+  \renewcommand{\clipu}{{\color{green} \clip{\maxu}}}%
+\else%
+  \newcommand{\clipu}{{\color{green} \clip{\maxu}}}%
+\fi
+
+\ifdefined\dvsth%
+  \renewcommand{\dvsth}{{\color{green} {\Delta_{b}}}}%
+\else%
+  \newcommand{\dvsth}{{\color{green} {\Delta_{b}}}}%
+\fi
+%  Threshold
+
+
+\ifdefined\gain%
+  \renewcommand{\gain}{{\color{green} \kappa}}%
+\else%
+  \newcommand{\gain}{{\color{green} \kappa}}%
+\fi
+
+
+
+\ifdefined\settime%
+  \renewcommand{\settime}{{\color{green} \mathbb{T}}}%
+\else%
+  \newcommand{\settime}{{\color{green} \mathbb{T}}}%
+\fi
+
+
+
+\ifdefined\controllerLast%
+  \renewcommand{\controllerLast}{{\color{green} C1}}%
+\else%
+  \newcommand{\controllerLast}{{\color{green} C1}}%
+\fi
+%  Uses last event
+\ifdefined\controllerTI%
+  \renewcommand{\controllerTI}{{\color{green} C2}}%
+\else%
+  \newcommand{\controllerTI}{{\color{green} C2}}%
+\fi
+%  Time integrale
+\ifdefined\controllerTS%
+  \renewcommand{\controllerTS}{{\color{green} C3}}%
+\else%
+  \newcommand{\controllerTS}{{\color{green} C3}}%
+\fi
+%  time smoothed
+\ifdefined\controllerTN%
+  \renewcommand{\controllerTN}{{\color{green} C4}}%
+\else%
+  \newcommand{\controllerTN}{{\color{green} C4}}%
+\fi
+%  Time neural
+
+
+
+
 %
 
 \ifdefined\esSt%

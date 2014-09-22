@@ -2559,6 +2559,85 @@
 
 
 
+\ifdefined\clip%
+  \renewcommand{\clip}[1]{\mathsf{clip}_{#1}}%
+\else%
+  \newcommand{\clip}[1]{\mathsf{clip}_{#1}}%
+\fi
+%  Clip up to some boundary 
+\newbool{usedmaxu}\setbool{usedmaxu}{false}
+\ifdefined\maxu%
+  \renewcommand{\maxu}{\markfirst{maxu}{usedmaxu}{b}}%
+\else%
+  \newcommand{\maxu}{\markfirst{maxu}{usedmaxu}{b}}%
+\fi
+
+\newbool{usedclipu}\setbool{usedclipu}{false}
+\ifdefined\clipu%
+  \renewcommand{\clipu}{\markfirst{clipu}{usedclipu}{\clip{\maxu}}}%
+\else%
+  \newcommand{\clipu}{\markfirst{clipu}{usedclipu}{\clip{\maxu}}}%
+\fi
+
+\newbool{useddvsth}\setbool{useddvsth}{false}
+\ifdefined\dvsth%
+  \renewcommand{\dvsth}{\markfirst{dvsth}{useddvsth}{{\Delta_{b}}}}%
+\else%
+  \newcommand{\dvsth}{\markfirst{dvsth}{useddvsth}{{\Delta_{b}}}}%
+\fi
+%  Threshold
+
+
+\newbool{usedgain}\setbool{usedgain}{false}
+\ifdefined\gain%
+  \renewcommand{\gain}{\markfirst{gain}{usedgain}{\kappa}}%
+\else%
+  \newcommand{\gain}{\markfirst{gain}{usedgain}{\kappa}}%
+\fi
+
+
+
+\newbool{usedsettime}\setbool{usedsettime}{false}
+\ifdefined\settime%
+  \renewcommand{\settime}{\markfirst{settime}{usedsettime}{\mathbb{T}}}%
+\else%
+  \newcommand{\settime}{\markfirst{settime}{usedsettime}{\mathbb{T}}}%
+\fi
+
+
+
+\newbool{usedcontrollerLast}\setbool{usedcontrollerLast}{false}
+\ifdefined\controllerLast%
+  \renewcommand{\controllerLast}{\markfirst{controllerLast}{usedcontrollerLast}{C1}}%
+\else%
+  \newcommand{\controllerLast}{\markfirst{controllerLast}{usedcontrollerLast}{C1}}%
+\fi
+%  Uses last event
+\newbool{usedcontrollerTI}\setbool{usedcontrollerTI}{false}
+\ifdefined\controllerTI%
+  \renewcommand{\controllerTI}{\markfirst{controllerTI}{usedcontrollerTI}{C2}}%
+\else%
+  \newcommand{\controllerTI}{\markfirst{controllerTI}{usedcontrollerTI}{C2}}%
+\fi
+%  Time integrale
+\newbool{usedcontrollerTS}\setbool{usedcontrollerTS}{false}
+\ifdefined\controllerTS%
+  \renewcommand{\controllerTS}{\markfirst{controllerTS}{usedcontrollerTS}{C3}}%
+\else%
+  \newcommand{\controllerTS}{\markfirst{controllerTS}{usedcontrollerTS}{C3}}%
+\fi
+%  time smoothed
+\newbool{usedcontrollerTN}\setbool{usedcontrollerTN}{false}
+\ifdefined\controllerTN%
+  \renewcommand{\controllerTN}{\markfirst{controllerTN}{usedcontrollerTN}{C4}}%
+\else%
+  \newcommand{\controllerTN}{\markfirst{controllerTN}{usedcontrollerTN}{C4}}%
+\fi
+%  Time neural
+
+
+
+
 %
 
 \newbool{usedesSt}\setbool{usedesSt}{false}
