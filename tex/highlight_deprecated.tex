@@ -214,7 +214,11 @@
 %  Family of range-finders models
 
 
-% \newcommand{\bgFields}{{\mathsf{C}} }
+\ifdefined\bgFields%
+  \renewcommand{\bgFields}{{\color{red} {\mathsf{C}} }}%
+\else%
+  \newcommand{\bgFields}{{\color{red} {\mathsf{C}} }}%
+\fi
 
 
 

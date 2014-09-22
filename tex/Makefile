@@ -1,22 +1,13 @@
 sources=$(wildcard old/*.tex)
 
-targets = summary.pdf  all_symbols.tex all_symbols_highlight.tex all_symbols_markfirst.tex 
+targets = \
+	summary.pdf  \
+	all_symbols.tex \
+	all_symbols_highlight.tex \
+	all_symbols_markfirst.tex 
 
 
-all: $(targets)
-
-	# tables/full/estimation_groups.tex \
-	# tables/mini/estimation_groups.tex \
-	# tables/full/articles_bgds.tex \
-	# tables/mini/articles_bgds.tex \
-	# tables/full/basic_typography.tex \
-	# tables/mini/basic_typography.tex \
-	# tables/full/formatting.tex \
-	# tables/mini/formatting.tex \
-	# tables/full/groups.tex \
-	# tables/mini/groups.tex \
-	# tables/full/soattotheory.tex \
-	# tables/mini/soattotheory.tex 
+all: $(targets) 
 
 clean: 
 	rm -f $(targets)
