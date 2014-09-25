@@ -53,10 +53,13 @@ lyxtex: $(lyx_generated_tex)
 
 # Note we delete the .tex. otherwise lyx does not update the time
 # and make always remake the file.
+
+texflavor?=pdflatex
+
 %.tex: %.lyx
 	echo Redoing $@
 	@-rm -f $@
-	$(lyx) -e pdflatex -f all $<
+	$(lyx) -e $(texflavor) -f all $<
 	# $(lyx) -e xetex -f all $<
 
 # We redo the lyx, otherwise we would never be sure 

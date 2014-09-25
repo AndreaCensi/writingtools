@@ -41,7 +41,8 @@ $(DEPDIR)/%.tex.d: %.tex
 # http://www.makelinux.net/make3/make3-CHP-2-SECT-7
 -include $(addprefix $(DEPDIR)/,$(subst .tex,.tex.d, $(tex_files)))
 
-pdflatex=pdflatex -shell-escape
+
+pdflatex?=pdflatex -shell-escape
 #pdflatex=xelatex -shell-escape
 
 %.pdf: %.tex
