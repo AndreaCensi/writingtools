@@ -20,13 +20,13 @@ a subset of the set of all robots.
 
 @techreport{censi13dvsd_sub,
   author = {Andrea Censi and Davide Scaramuzza},
-  title = {Low-latency event-based visual odometry},
+  title = {Low-latency Event-Based Visual Odometry},
   institution = {Laboratory for Information and Decision Systems, Massachusetts Institute of Technology},
   url = {http://purl.org/censi/2013/dvsd}, 
   pdf = {http://purl.org/censi/research/2013-dvsd-sub.pdf},
   year = {2013},
   number={2912},
-  note = {Submitted to ICRA 2014},
+  note = {To appear in ICRA 2014},
   kind = {preprint},
   abstract = {},
   desc = {
@@ -36,208 +36,25 @@ a subset of the set of all robots.
   descicon = {http://purl.org/censi/web/media/paper-icons/censi13dvsd.png}
 }
  
-@techreport{censi13dvs,
-  author = {Andrea Censi and Jonas Strubel and Christian Brandli and Tobi Delbruck and Davide Scaramuzza},
-  title = {Low-latency localization by Active LED Markers tracking using a Dynamic Vision Sensor},
-  institution = {California Institute of Technology},
-  pdf = {http://purl.org/censi/research/2013-dvs-sub.pdf},
-  slides = {http://purl.org/censi/research/2013-dvs-slides.pdf},
-  url = {http://purl.org/censi/2013/dvs}, 
-  year = {2013},
-  month = {Mar},
-  number={},
-  note = {(To appear in IROS 2013)},
-  kind = {preprint},
-  abstract = {At the current state of the art, the agility of an autonomous flying robot is limited by the speed of its sensing pipeline, as the relatively high latency and low sampling frequency limit the aggressiveness of the control strategies that can be implemented. To obtain more agile robots, we need faster sensors. A Dynamic Vision Sensor (DVS) encodes changes in the perceived brightness using an address-event representation. The latency of such sensors can be measured in the microseconds, thus offering the theoretical possibility of creating a sensing pipeline whose latency is negligible compared to the dynamics of the platform. However, to use these sensors we must rethink the way we interpret visual data. We present an approach to low-latency pose tracking using a DVS and Active Led Markers (ALMs), which are LEDs blinking at high frequency (>1 KHz). The DVS time resolution is able to distinguish different frequencies, thus avoiding the need for data association. We compare the DVS approach to traditional tracking using a CMOS camera, and we show that the DVS performance is not affected by fast motion, unlike the CMOS camera, which suffers from motion blur.},
-  desc = { },  
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi13dvs.png}
+
+
+
+@inproceedings{carlone14coherent_sub,
+  author = {Luca Carlone and Andrea Censi and Frank Dellaert},
+  title = {Coherent Measurements Selection via $\ell_1$ Relaxation: an Approach to Robust Estimation over Graphs},
+  month = feb,
+  year = {2014},
+  note = {(Submitted to IROS 2014)},
+  abstract = {},
+  booktitle={-},
+  desc = {
+      [Luca](http://lucacarlone.com), [Frank](http://www.cc.gatech.edu/~dellaert/)
+      and I show how outliers in planar pose graph optimization 
+      can be detected using convex relaxation. This builds on previous papers showing
+      that planar pose graph optimization can be decoupled in linear problems (with a few tricks).
+  },  
+  descicon = {http://purl.org/censi/web/media/paper-icons/carlone14coherent.png}
 }
-
-@techreport{nilsson13rddl,
-  author = {Adam Nilsson and Andrea Censi},
-  title = {Accurate recursive learning of uncertain diffeomorphism dynamics},
-  institution = {California Institute of Technology},
-  pdf = {http://purl.org/censi/research/2013-diff-rlearn-sub.pdf},
-  url = {http://purl.org/censi/2013/rddl}, 
-  year = {2013},
-  month = {Mar},
-  number={},
-  note = {(To appear in IROS 2013)},
-  kind = {preprint},
-  abstract = {Diffeomorphisms dynamical systems are dynamical systems where the state is an image and each commands induce a diffeomorphism of the state. These systems can approximate the dynamics of robotic sensorimotor cascades well enough to be used for problems such as planning in observations space. Learning of an arbitrary diffeomorphism from pairs of images is a high dimensional learning problem. This paper describes two improvements to the methods presented in previous work. The previous method had required O(ρ⁴)  memory as a function of the desired resolution ρ, which, in practice, was the main limitation to the resolution of the diffeomorphisms that could be learned. This paper describes an algorithm based on recursive refinement that lowers the memory requirement to  O(ρ²) memory and O(ρ² log(ρ)) computation. Another improvement regards the estimation the diffeomorphism uncertainty, which is used to represent the sensor's limited field of view; the improved method obtains a more accurate estimation of the uncertainty by checking the consistency of a learned diffeomorphism and its independently learned inverse. The methods are tested on two robotic systems (a pan-tilt camera and a 5-DOF manipulator). },
-  desc = { },
-  descicon = {http://purl.org/censi/web/media/paper-icons/nilsson13rddl.png}
-}
+ 
 
 
-
-@ARTICLE{carlone12angular_preprint,
-   author = {Carlone, Luca and Censi, Andrea},
-    title = "{From Angular Manifolds to the Integer Lattice: Guaranteed Orientation Estimation with Application to Pose Graph Optimization}",
-  journal = {ArXiv e-prints},
-archivePrefix = "arXiv",
- primaryClass = "cs.RO",
- keywords = {Computer Science - Robotics, Mathematics - Optimization and Control, 68T40, I.2.9, G.1.6, G.3, G.4},
-     year = 2012,
-    month = nov,
-    note = {(Conditionally accepted to IEEE Transactions on Robotics)},
-  pdf = {http://arxiv.org/pdf/1211.3063v1},
-  slides = {http://purl.org/censi/research/2013-mole2d-slides.pdf},
-  url = {http://www.lucacarlone.com/index.php/resources/research/mole2d},
-  desc = { 
-    Pose optimization is what is used in SLAM to optimize the map
-    after pose-pose and pose-features correspondences have been established. 
-    The variables in this problem are poses living
-    on the nodes of a graph, and measurements are relative measurements
-    along the graph edges. The
-    problem is hard because orientations live on a manifold
-    with nontrivial topology, which makes the problem
-    nonlinear, nonconvex, and with multiple minima.
-    [Luca][luca] and I try to solve the subproblem of orientation estimation. 
-    We find a way to convert
-    the problem to an unconstrained optimization problem on integers.
-    This makes it possible to solve the problem globally 
-    and return all likely guesses for the orientation.
-
-    [luca]: http://lucacarlone.com
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/carlone12angular_preprint.png}
-}
-
-
-
-
-
-@techreport{censi12saccade_preprint,
-  author = {Andrea Censi* and Andrew D. Straw* 
-             and Rosalyn W. Sayaman and Richard M. Murray
-             and Michael H. Dickinson},
-  title = {Discriminating external and internal causes
-for saccade initiation in freely flying {\em Drosophila}},
-  institution = {California Institute of Technology},
-  url = {http://purl.org/censi/2011/saccade}, 
-  pdf = {http://purl.org/censi/research/2012-plos-saccades.pdf},
-  slides = {http://purl.org/censi/research/2012-sicb-saccades.pdf},
-  year = {2012},
-  sortyear={2014},
-  number={CaltechAUTHORS:20120805-120309438},
-  kind = {preprint},
-  abstract = {As animals move through the world in search of resources, they
-  change course in reaction to both external sensory cues and internally-
-  generated programs. Elucidating the functional logic of complex search
-  algorithms is challenging because the observable actions of the animal cannot
-  be unambiguously assigned to externally- or internally-triggered events. We
-  present a technique that addresses this challenge by assessing quantitatively
-  the contribution of external stimuli and internal processes. We apply this
-  technique to the analysis of rapid turns (saccades) of freely flying
-  Drosophila melanogaster. We show that a single scalar feature computed from
-  the visual stimulus experienced by the animal is sufficient to explain a
-  majority (93%) of the turning decisions. We automatically estimate this scalar
-  value from the observable trajectory, without any assumption regarding the
-  sensory processing. A posteriori, we show that the estimated feature field is
-  consistent with previous results measured in other experimental conditions.
-  The remaining turning decisions, not explained by this feature of the visual
-  input, may be attributed to a combination of deterministic processes based on
-  unobservable internal states and purely stochastic behavior. We cannot
-  distinguish these contributions using external observations alone, but we are
-  able to provide a quantitative bound of their relative importance with respect
-  to stimulus-triggered decisions. Our results suggest that comparatively few
-  saccades in free-flying conditions are a result of an intrinsic spontaneous
-  process, contrary to previous suggestions. We discuss how this technique could
-  be generalized for use in other systems and employed as a tool for classifying
-  effects into sensory, decision, and motor categories when used to analyze data
-  from genetic behavioral screens.},
-  note = {(To appear in PLOS Computational Biology, February 2013)},
-  desc = { 
-    What goes on in a fruit fly's head while it flies? 
-    In this paper we try to identify the dependence of the decision processes
-    on the external stimulus experienced by the fly. Remarkably, we are able to 
-    say a great deal about internal sensory processing by just observing the 
-    external behavior.
-  },
-  month = dec,
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi12saccade_preprint.png}
-
-}
-
-@techreport{censi12cameracalib_preprint,
-  author = {Andrea Censi and Davide Scaramuzza},
-  title = {Calibration by correlation using metric embedding 
-           from non-metric similarities},
-  url = {http://purl.org/censi/2012/camera_calibration}, 
-  pdf = {http://andrea.caltech.edu/pub/research/preprints/camera_calibration/2012-camera_calibration.pdf},
-  month = nov,
-  year = {2012},
-  institution = {California Institute of Technology},
-  number = {CaltechAUTHORS:20120805-103228127},
-  note = {(To appear in IEEE Transactions on Pattern Analysis and Machine Intelligence, 2013)},
-  desc = { 
-    [Davide] and I explain how to calibrate a generic single-view-point camera
-    by only waving it around.
-
-    [Davide]: https://sites.google.com/site/scarabotix/home
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi12cameracalib_preprint.png}
-}
-
-
-@article{censi12cameracalib,
-  author = {Andrea Censi and Davide Scaramuzza},
-  title = {Calibration by correlation using metric embedding 
-           from non-metric similarities},
-  url = {http://purl.org/censi/2012/camera_calibration}, 
-  pdf = {http://andrea.caltech.edu/pub/research/preprints/camera_calibration/2012-camera_calibration.pdf},
-  month = oct,
-  year = {2013},
-  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  doi = {10.1109/TPAMI.2013.34},
-  desc = { 
-    [Davide] and I explain how to calibrate a generic single-view-point camera
-    by only waving it around.
-
-    [Davide]: https://sites.google.com/site/scarabotix/home
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi12cameracalib_preprint.png}
-}
-
-@techreport{censi12joint_preprint_old,
-  author = {Andrea Censi and Antonio Franchi 
-            and Luca Marchionni and Giuseppe Oriolo},
-  title = {Simultaneous calibration of odometry 
-           and sensor parameters for mobile robots},
-  note = {},
-  kind = {preprint},
-  url = {http://purl.org/censi/2012/joint_calibration},
-  pdf = {http://purl.org/censi/research/2012-joint_calibration.pdf},
-  year = {2012},
-  institution = {California Institute of Technology},
-  number = {CaltechAUTHORS:20120805-115123559},
-  desc = { 
-    Fast, practical, and extremely precise 
-    simultaneous estimation of odometry and sensor configuration 
-    parameters for mobile robots.
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/calibration.jpg}
-}
-
-@article{censi13joint,
-  author = {Andrea Censi and Antonio Franchi 
-            and Luca Marchionni and Giuseppe Oriolo},
-  title = {Simultaneous calibration of odometry 
-           and sensor parameters for mobile robots},
-  doi = {10.1109/TRO.2012.2226380},
-  journal = {IEEE Transactions on Robotics},
-  url = {http://purl.org/censi/2012/joint_calibration},
-  pdf = {http://purl.org/censi/research/2012-joint_calibration.pdf},
-  year = {2013},
-  volume = 29,
-  number = 2,
-  month = apr,
-  sortyear = 2011,
-  desc = { 
-    Fast, practical, and extremely precise 
-    simultaneous estimation of odometry and sensor configuration 
-    parameters for mobile robots.
-  },
-  descicon = {http://purl.org/censi/web/media/paper-icons/calibration.jpg}
-}
