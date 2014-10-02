@@ -544,7 +544,11 @@
 %  Family of range-finders models
 
 
-% \newcommand{\bgFields}{{\mathsf{C}} }
+\ifdefined\bgFields%
+  \renewcommand{\bgFields}{{\mathsf{C}} }%
+\else%
+  \newcommand{\bgFields}{{\mathsf{C}} }%
+\fi
 
 
 
@@ -1740,36 +1744,12 @@
 
 
 
-
-
-
-
-% TODO: move away
-
-\ifdefined\ds%
-  \renewcommand{\ds}{\Delta_s}%
+\ifdefined\desplInter%
+  \renewcommand{\desplInter}{\atype{I}}%
 \else%
-  \newcommand{\ds}{\Delta_s}%
+  \newcommand{\desplInter}{\atype{I}}%
 \fi
-%  Spatial sampling
-\ifdefined\dt%
-  \renewcommand{\dt}{\Delta_t}%
-\else%
-  \newcommand{\dt}{\Delta_t}%
-\fi
-%  Temporal sampling
-\ifdefined\db%
-  \renewcommand{\db}{\Delta_b}%
-\else%
-  \newcommand{\db}{\Delta_b}%
-\fi
-%  Brightness threshold
-\ifdefined\camexp%
-  \renewcommand{\camexp}{\text{EX}}%
-\else%
-  \newcommand{\camexp}{\text{EX}}%
-\fi
-%  Exposure
+%  Interval
 
 
 
@@ -2265,9 +2245,9 @@
 
 
 \ifdefined\clip%
-  \renewcommand{\clip}[1]{\mathsf{clip}_{#1}}%
+  \renewcommand{\clip}[1]{\mathsf{sat}_{#1}}%
 \else%
-  \newcommand{\clip}[1]{\mathsf{clip}_{#1}}%
+  \newcommand{\clip}[1]{\mathsf{sat}_{#1}}%
 \fi
 %  Clip up to some boundary 
 \ifdefined\maxu%
@@ -2282,12 +2262,8 @@
   \newcommand{\clipu}{\clip{\maxu}}%
 \fi
 
-\ifdefined\dvsth%
-  \renewcommand{\dvsth}{{\Delta_{b}}}%
-\else%
-  \newcommand{\dvsth}{{\Delta_{b}}}%
-\fi
-%  Threshold
+
+
 
 
 \ifdefined\gain%
@@ -2307,30 +2283,98 @@
 
 
 \ifdefined\controllerLast%
-  \renewcommand{\controllerLast}{C1}%
+  \renewcommand{\controllerLast}{\text{C1}}%
 \else%
-  \newcommand{\controllerLast}{C1}%
+  \newcommand{\controllerLast}{\text{C1}}%
 \fi
 %  Uses last event
 \ifdefined\controllerTI%
-  \renewcommand{\controllerTI}{C2}%
+  \renewcommand{\controllerTI}{\text{C2}}%
 \else%
-  \newcommand{\controllerTI}{C2}%
+  \newcommand{\controllerTI}{\text{C2}}%
 \fi
 %  Time integrale
 \ifdefined\controllerTS%
-  \renewcommand{\controllerTS}{C3}%
+  \renewcommand{\controllerTS}{\text{C3}}%
 \else%
-  \newcommand{\controllerTS}{C3}%
+  \newcommand{\controllerTS}{\text{C3}}%
 \fi
 %  time smoothed
 \ifdefined\controllerTN%
-  \renewcommand{\controllerTN}{C4}%
+  \renewcommand{\controllerTN}{\text{C4}}%
 \else%
-  \newcommand{\controllerTN}{C4}%
+  \newcommand{\controllerTN}{\text{C4}}%
 \fi
 %  Time neural
 
+
+
+
+
+
+\ifdefined\ds%
+  \renewcommand{\ds}{\Delta_s}%
+\else%
+  \newcommand{\ds}{\Delta_s}%
+\fi
+%  Spatial sampling
+\ifdefined\dt%
+  \renewcommand{\dt}{\Delta_t}%
+\else%
+  \newcommand{\dt}{\Delta_t}%
+\fi
+%  Temporal sampling
+\ifdefined\db%
+  \renewcommand{\db}{\Delta_b}%
+\else%
+  \newcommand{\db}{\Delta_b}%
+\fi
+%  Brightness threshold
+\ifdefined\dvsth%
+  \renewcommand{\dvsth}{\db}%
+\else%
+  \newcommand{\dvsth}{\db}%
+\fi
+%  Threshold
+\ifdefined\camexp%
+  \renewcommand{\camexp}{\text{EX}}%
+\else%
+  \newcommand{\camexp}{\text{EX}}%
+\fi
+%  Exposure
+
+
+\ifdefined\mseps%
+  \renewcommand{\mseps}{\text{MSE}_{\text{ps}}}%
+\else%
+  \newcommand{\mseps}{\text{MSE}_{\text{ps}}}%
+\fi
+%  periodic sampling
+\ifdefined\mseeb%
+  \renewcommand{\mseeb}{\text{MSE}_{\text{eb}}}%
+\else%
+  \newcommand{\mseeb}{\text{MSE}_{\text{eb}}}%
+\fi
+%  MSE event based
+\ifdefined\bwps%
+  \renewcommand{\bwps}{\text{BW}_{\text{ps}}}%
+\else%
+  \newcommand{\bwps}{\text{BW}_{\text{ps}}}%
+\fi
+%  bandwidth periodic sampling
+\ifdefined\bweb%
+  \renewcommand{\bweb}{\text{BW}_{\text{eb}}}%
+\else%
+  \newcommand{\bweb}{\text{BW}_{\text{eb}}}%
+\fi
+%  bandwidth event based
+
+
+\ifdefined\ori%
+  \renewcommand{\ori}{\alpha}%
+\else%
+  \newcommand{\ori}{\alpha}%
+\fi
 
 
 
@@ -2906,12 +2950,16 @@
   \newcommand{\allrobots}{\mathsf{Robots}}%
 \fi
 %  The set of all robots
+% \newcommand{\vehRob}{\mathsf{Vehicles}} % Vehicle robots
+
+% \newcommand{\vehRob}{\mathsf{\color{blue}ISV}} % Idealized Simple Vehicles
+
 \ifdefined\vehRob%
-  \renewcommand{\vehRob}{\mathsf{Vehicles}}%
+  \renewcommand{\vehRob}{\mathsf{\changes{ISV}}}%
 \else%
-  \newcommand{\vehRob}{\mathsf{Vehicles}}%
+  \newcommand{\vehRob}{\mathsf{\changes{ISV}}}%
 \fi
-%  Vehicle robots
+%  Idealized Simple Vehicles
 \ifdefined\vehRobNuis%
   \renewcommand{\vehRobNuis}{{\tilde{\vehRob}}}%
 \else%
@@ -2966,11 +3014,7 @@
   \newcommand{\MH}{\M{H}}%
 \fi
 
-\ifdefined\MR%
-  \renewcommand{\MR}{\M{R}}%
-\else%
-  \newcommand{\MR}{\M{R}}%
-\fi
+
 
 \ifdefined\ML%
   \renewcommand{\ML}{\M{L}}%

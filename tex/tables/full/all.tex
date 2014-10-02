@@ -281,10 +281,7 @@ $\bgWorld \in \bgRSSp(\bgTime, \bgCmdSp, \bgObsSp)$\par%
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash desplmglue}} & $\desplmglue$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash desplstats}} & $\desplstats$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash desplmerge}} & $\desplmerge$ & \\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash ds}} & $\ds$ &  Spatial sampling\\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash dt}} & $\dt$ &  Temporal sampling\\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash db}} & $\db$ &  Brightness threshold\\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash camexp}} & $\camexp$ &  Exposure\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash desplInter}} & $\desplInter$ &  Interval\\ 
   &  & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{articles/dptr1}} & \multicolumn{2}{l}{\emph{Technical report for diffeoplanning}}\\ 
  \hline
@@ -374,18 +371,30 @@ $\bgWorld \in \bgRSSp(\bgTime, \bgCmdSp, \bgObsSp)$\par%
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash impred}} & $\impred$ &  Image prediction\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash plA}} & $\plA$ & \\ 
   &  & \\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{articles/neucontrol}} & \multicolumn{2}{l}{\emph{neromorphic control}}\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{articles/neucontrol}} & \multicolumn{2}{l}{\emph{neuromorphic control}}\\ 
  \hline
 {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash clip\{...\}}} &  &  Clip up to some boundary \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash maxu}} & $\maxu$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash clipu}} & $\clipu$ & \\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash dvsth}} & $\dvsth$ &  Threshold\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash gain}} & $\gain$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash settime}} & $\settime$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash controllerLast}} & $\controllerLast$ &  Uses last event\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash controllerTI}} & $\controllerTI$ &  Time integrale\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash controllerTS}} & $\controllerTS$ &  time smoothed\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash controllerTN}} & $\controllerTN$ &  Time neural\\ 
+  &  & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{articles/optcam}} & \multicolumn{2}{l}{\emph{optimal sensor}}\\ 
+ \hline
+{\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash ds}} & $\ds$ &  Spatial sampling\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash dt}} & $\dt$ &  Temporal sampling\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash db}} & $\db$ &  Brightness threshold\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash dvsth}} & $\dvsth$ &  Threshold\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash camexp}} & $\camexp$ &  Exposure\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash mseps}} & $\mseps$ &  periodic sampling\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash mseeb}} & $\mseeb$ &  MSE event based\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bwps}} & $\bwps$ &  bandwidth periodic sampling\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash bweb}} & $\bweb$ &  bandwidth event based\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash ori}} & $\ori$ & \\ 
   &  & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{articles/estgroups}} & \multicolumn{2}{l}{\emph{Estimation with symmetries}}\\ 
  \hline
@@ -511,7 +520,7 @@ $\esRep: \esSt \mapsto \esStAb$.\par%
  {\color[rgb]{0.5,0.5,0.5}\texttt{articles/jbds/robots}} & \multicolumn{2}{l}{\emph{}}\\ 
  \hline
 {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash allrobots}} & $\allrobots$ &  The set of all robots\\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash vehRob}} & $\vehRob$ &  Vehicle robots\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash vehRob}} & $\vehRob$ &  Idealized Simple Vehicles\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash vehRobNuis}} & $\vehRobNuis$ &  Vehicle robots with nuisances\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash robVeh}} & $\robVeh$ & \\ 
   &  & \\ 
@@ -522,7 +531,6 @@ $\esRep: \esSt \mapsto \esStAb$.\par%
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash MC}} & $\MC$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash MG}} & $\MG$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash MH}} & $\MH$ & \\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash MR}} & $\MR$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash ML}} & $\ML$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash MQ}} & $\MQ$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash MP}} & $\MP$ & \\ 
