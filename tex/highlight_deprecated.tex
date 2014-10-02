@@ -214,7 +214,11 @@
 %  Family of range-finders models
 
 
-% \newcommand{\bgFields}{{\mathsf{C}} }
+\ifdefined\bgFields%
+  \renewcommand{\bgFields}{{\color{red} {\mathsf{C}} }}%
+\else%
+  \newcommand{\bgFields}{{\color{red} {\mathsf{C}} }}%
+\fi
 
 
 
@@ -725,6 +729,32 @@
 % \iclass: Skipped because no field 'deprecated'
 
 
+% \atype: Skipped because no field 'deprecated'
+% \mycode: Skipped because no field 'deprecated'
+% \desplStats: Skipped because no field 'deprecated'
+% \desplIStats: Skipped because no field 'deprecated'
+% \desplData: Skipped because no field 'deprecated'
+% \desplIData: Skipped because no field 'deprecated'
+% \desplModels: Skipped because no field 'deprecated'
+% \desplIModels: Skipped because no field 'deprecated'
+
+
+% \despllearn: Skipped because no field 'deprecated'
+% \desplilearn: Skipped because no field 'deprecated'
+
+
+% \desplfilter: Skipped because no field 'deprecated'
+% \desplfmodel: Skipped because no field 'deprecated'
+
+
+% \desplistats: Skipped because no field 'deprecated'
+% \desplglue: Skipped because no field 'deprecated'
+% \desplmglue: Skipped because no field 'deprecated'
+% \desplstats: Skipped because no field 'deprecated'
+% \desplmerge: Skipped because no field 'deprecated'
+
+
+% \desplInter: Skipped because no field 'deprecated'
 
 
 
@@ -852,6 +882,45 @@
 
 
 % \plA: Skipped because no field 'deprecated'
+
+
+% \clip: Skipped because no field 'deprecated'
+% \maxu: Skipped because no field 'deprecated'
+% \clipu: Skipped because no field 'deprecated'
+
+
+
+
+% \gain: Skipped because no field 'deprecated'
+
+
+% \settime: Skipped because no field 'deprecated'
+
+
+% \controllerLast: Skipped because no field 'deprecated'
+% \controllerTI: Skipped because no field 'deprecated'
+% \controllerTS: Skipped because no field 'deprecated'
+% \controllerTN: Skipped because no field 'deprecated'
+
+
+
+
+
+
+% \ds: Skipped because no field 'deprecated'
+% \dt: Skipped because no field 'deprecated'
+% \db: Skipped because no field 'deprecated'
+% \dvsth: Skipped because no field 'deprecated'
+% \camexp: Skipped because no field 'deprecated'
+
+
+% \mseps: Skipped because no field 'deprecated'
+% \mseeb: Skipped because no field 'deprecated'
+% \bwps: Skipped because no field 'deprecated'
+% \bweb: Skipped because no field 'deprecated'
+
+
+% \ori: Skipped because no field 'deprecated'
 
 
 %
@@ -1001,7 +1070,8 @@
 
 
 
- 
+% \brel: Skipped because no field 'deprecated'
+% \bsim: Skipped because no field 'deprecated'
 
 
 
@@ -1060,6 +1130,10 @@
 
 
 % \allrobots: Skipped because no field 'deprecated'
+% \newcommand{\vehRob}{\mathsf{Vehicles}} % Vehicle robots
+
+% \newcommand{\vehRob}{\mathsf{\color{blue}ISV}} % Idealized Simple Vehicles
+
 % \vehRob: Skipped because no field 'deprecated'
 % \vehRobNuis: Skipped because no field 'deprecated'
 
@@ -1071,6 +1145,34 @@
 
 
 
+
+
+
+
+% \MA: Skipped because no field 'deprecated'
+% \MB: Skipped because no field 'deprecated'
+% \MC: Skipped because no field 'deprecated'
+% \MG: Skipped because no field 'deprecated'
+% \MH: Skipped because no field 'deprecated'
+
+
+% \ML: Skipped because no field 'deprecated'
+% \MQ: Skipped because no field 'deprecated'
+% \MP: Skipped because no field 'deprecated'
+% \MS: Skipped because no field 'deprecated'
+% \MSigma: Skipped because no field 'deprecated'
+% \MV: Skipped because no field 'deprecated'
+% \MW: Skipped because no field 'deprecated'
+
+
+
+
+% \SP: Skipped because no field 'deprecated'
+% \AP: Skipped because no field 'deprecated'
+% \SE: Skipped because no field 'deprecated'
+% \ER: Skipped because no field 'deprecated'
+% \HP: Skipped because no field 'deprecated'
+% \np: Skipped because no field 'deprecated'
 
 
 % \scene: Skipped because no field 'deprecated'
@@ -1517,6 +1619,10 @@
 % \bbE: Skipped because no field 'deprecated'
 % \bbF: Skipped because no field 'deprecated'
 % \bbG: Skipped because no field 'deprecated'
+% \bbH: Skipped because no field 'deprecated'
+% \bbL: Skipped because no field 'deprecated'
+
+
 % \bbSpBA: Skipped because no field 'deprecated'
 % \bbSpAB: Skipped because no field 'deprecated'
 
@@ -1738,8 +1844,10 @@
 
 
 
-% \AC: Skipped because no field 'deprecated'
-% \ac: Skipped because no field 'deprecated'
+% \newcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}} % Marker for sections to write
+
+% \newcommand{\ac}[1]{\AC{#1}}
+
 % \towrite: Skipped because no field 'deprecated'
 % \placeholder: Skipped because no field 'deprecated'
 % \tocite: Skipped because no field 'deprecated'

@@ -1,0 +1,22 @@
+\usepackage{ifxetex}
+\ifxetex
+\usepackage{etoolbox}
+\usepackage{fontspec}
+
+% \defaultfontfeatures+[\sffamily,\ttfamily]{Scale=MatchLowercase}
+% \setmainfont{FreeSerif}
+% \setsansfont{FreeSans}
+% \setmonofont{FreeMono}
+
+% \setmainfont{Times New Roman} % no caps
+% \setmainfont{Times}
+\setmainfont[Ligatures=TeX]{TeX Gyre Termes}
+\setsansfont{Myriad Pro}
+% \setmonofont{TeX Gyre Cursor}
+% cp /usr/local/texlive/2014/texmf-dist/fonts/opentype/public/tex-gyre-math/*otf ~/Library/Fonts/
+% cp /usr/local/texlive/2014/texmf-dist/fonts/opentype/public/tex-gyre/*otf ~/Library/Fonts/
+% \renewcommand{\vmath}[1]{\mathsf{\smaller #1}}
+\setmathrm[Scale=0.9]{Myriad Pro}
+\setmathsf[Scale=0.9]{Myriad Pro}
+\setmonofont[Scale=MatchLowercase]{Consolas}
+\fi

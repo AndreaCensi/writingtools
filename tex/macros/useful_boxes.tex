@@ -4,3 +4,8 @@
 \fbox{#1}%
 }%
 }
+
+
+\newcommand*{\minwidthbox}[2]{%
+  \makebox[{\ifdim#2<\width\width\else#2\fi}]{#1}%
+}

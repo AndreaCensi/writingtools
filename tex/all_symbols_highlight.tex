@@ -544,7 +544,11 @@
 %  Family of range-finders models
 
 
-% \newcommand{\bgFields}{{\mathsf{C}} }
+\ifdefined\bgFields%
+  \renewcommand{\bgFields}{{\color{green} {\mathsf{C}} }}%
+\else%
+  \newcommand{\bgFields}{{\color{green} {\mathsf{C}} }}%
+\fi
 
 
 
@@ -1630,6 +1634,146 @@
 %  Instantnaeous class
 
 
+\ifdefined\atype%
+  \renewcommand{\atype}[1]{\vmath{\bf #1    }}%
+\else%
+  \newcommand{\atype}[1]{\vmath{\bf #1    }}%
+\fi
+
+\ifdefined\mycode%
+  \renewcommand{\mycode}[1]{\texttt{\small #1}}%
+\else%
+  \newcommand{\mycode}[1]{\texttt{\small #1}}%
+\fi
+
+\ifdefined\desplStats%
+  \renewcommand{\desplStats}{{\color{green} \atype{Stats}}}%
+\else%
+  \newcommand{\desplStats}{{\color{green} \atype{Stats}}}%
+\fi
+
+\ifdefined\desplIStats%
+  \renewcommand{\desplIStats}{{\color{green} \atype{IStats}}}%
+\else%
+  \newcommand{\desplIStats}{{\color{green} \atype{IStats}}}%
+\fi
+
+\ifdefined\desplData%
+  \renewcommand{\desplData}{{\color{green} \atype{Data}}}%
+\else%
+  \newcommand{\desplData}{{\color{green} \atype{Data}}}%
+\fi
+
+\ifdefined\desplIData%
+  \renewcommand{\desplIData}{{\color{green} \atype{IData}}}%
+\else%
+  \newcommand{\desplIData}{{\color{green} \atype{IData}}}%
+\fi
+
+\ifdefined\desplModels%
+  \renewcommand{\desplModels}{{\color{green} \atype{Models}}}%
+\else%
+  \newcommand{\desplModels}{{\color{green} \atype{Models}}}%
+\fi
+
+\ifdefined\desplIModels%
+  \renewcommand{\desplIModels}{{\color{green} \atype{IModels}}}%
+\else%
+  \newcommand{\desplIModels}{{\color{green} \atype{IModels}}}%
+\fi
+
+
+
+\ifdefined\despllearn%
+  \renewcommand{\despllearn}{{\color{green} \vmath{learn}}}%
+\else%
+  \newcommand{\despllearn}{{\color{green} \vmath{learn}}}%
+\fi
+
+\ifdefined\desplilearn%
+  \renewcommand{\desplilearn}{{\color{green} \vmath{ilearn}}}%
+\else%
+  \newcommand{\desplilearn}{{\color{green} \vmath{ilearn}}}%
+\fi
+
+
+
+\ifdefined\desplfilter%
+  \renewcommand{\desplfilter}{{\color{green} \vmath{filter}}}%
+\else%
+  \newcommand{\desplfilter}{{\color{green} \vmath{filter}}}%
+\fi
+
+\ifdefined\desplfmodel%
+  \renewcommand{\desplfmodel}{{\color{green} \vmath{fm}}}%
+\else%
+  \newcommand{\desplfmodel}{{\color{green} \vmath{fm}}}%
+\fi
+
+
+
+\ifdefined\desplistats%
+  \renewcommand{\desplistats}{{\color{green} \vmath{istats}}}%
+\else%
+  \newcommand{\desplistats}{{\color{green} \vmath{istats}}}%
+\fi
+
+\ifdefined\desplglue%
+  \renewcommand{\desplglue}{{\color{green} \vmath{glue}}}%
+\else%
+  \newcommand{\desplglue}{{\color{green} \vmath{glue}}}%
+\fi
+
+\ifdefined\desplmglue%
+  \renewcommand{\desplmglue}{{\color{green} \vmath{mglue}}}%
+\else%
+  \newcommand{\desplmglue}{{\color{green} \vmath{mglue}}}%
+\fi
+
+\ifdefined\desplstats%
+  \renewcommand{\desplstats}{{\color{green} \vmath{stats}}}%
+\else%
+  \newcommand{\desplstats}{{\color{green} \vmath{stats}}}%
+\fi
+
+\ifdefined\desplmerge%
+  \renewcommand{\desplmerge}{{\color{green} \vmath{merge}}}%
+\else%
+  \newcommand{\desplmerge}{{\color{green} \vmath{merge}}}%
+\fi
+
+
+
+
+
+
+
+% TODO: move away
+
+\ifdefined\ds%
+  \renewcommand{\ds}{{\color{green} \Delta_s}}%
+\else%
+  \newcommand{\ds}{{\color{green} \Delta_s}}%
+\fi
+%  Spatial sampling
+\ifdefined\dt%
+  \renewcommand{\dt}{{\color{green} \Delta_t}}%
+\else%
+  \newcommand{\dt}{{\color{green} \Delta_t}}%
+\fi
+%  Temporal sampling
+\ifdefined\db%
+  \renewcommand{\db}{{\color{green} \Delta_b}}%
+\else%
+  \newcommand{\db}{{\color{green} \Delta_b}}%
+\fi
+%  Brightness threshold
+\ifdefined\camexp%
+  \renewcommand{\camexp}{{\color{green} \text{EX}}}%
+\else%
+  \newcommand{\camexp}{{\color{green} \text{EX}}}%
+\fi
+%  Exposure
 
 
 
@@ -2124,6 +2268,76 @@
 
 
 
+\ifdefined\clip%
+  \renewcommand{\clip}[1]{\mathsf{clip}_{#1}}%
+\else%
+  \newcommand{\clip}[1]{\mathsf{clip}_{#1}}%
+\fi
+%  Clip up to some boundary 
+\ifdefined\maxu%
+  \renewcommand{\maxu}{{\color{green} b}}%
+\else%
+  \newcommand{\maxu}{{\color{green} b}}%
+\fi
+
+\ifdefined\clipu%
+  \renewcommand{\clipu}{{\color{green} \clip{\maxu}}}%
+\else%
+  \newcommand{\clipu}{{\color{green} \clip{\maxu}}}%
+\fi
+
+\ifdefined\dvsth%
+  \renewcommand{\dvsth}{{\color{green} {\Delta_{b}}}}%
+\else%
+  \newcommand{\dvsth}{{\color{green} {\Delta_{b}}}}%
+\fi
+%  Threshold
+
+
+\ifdefined\gain%
+  \renewcommand{\gain}{{\color{green} \kappa}}%
+\else%
+  \newcommand{\gain}{{\color{green} \kappa}}%
+\fi
+
+
+
+\ifdefined\settime%
+  \renewcommand{\settime}{{\color{green} \mathbb{T}}}%
+\else%
+  \newcommand{\settime}{{\color{green} \mathbb{T}}}%
+\fi
+
+
+
+\ifdefined\controllerLast%
+  \renewcommand{\controllerLast}{{\color{green} C1}}%
+\else%
+  \newcommand{\controllerLast}{{\color{green} C1}}%
+\fi
+%  Uses last event
+\ifdefined\controllerTI%
+  \renewcommand{\controllerTI}{{\color{green} C2}}%
+\else%
+  \newcommand{\controllerTI}{{\color{green} C2}}%
+\fi
+%  Time integrale
+\ifdefined\controllerTS%
+  \renewcommand{\controllerTS}{{\color{green} C3}}%
+\else%
+  \newcommand{\controllerTS}{{\color{green} C3}}%
+\fi
+%  time smoothed
+\ifdefined\controllerTN%
+  \renewcommand{\controllerTN}{{\color{green} C4}}%
+\else%
+  \newcommand{\controllerTN}{{\color{green} C4}}%
+\fi
+%  Time neural
+
+
+
+
 %
 
 \ifdefined\esSt%
@@ -2516,7 +2730,18 @@
 
 
 
- 
+\ifdefined\brel%
+  \renewcommand{\brel}{{\color{green} \leq_{B}}}%
+\else%
+  \newcommand{\brel}{{\color{green} \leq_{B}}}%
+\fi
+%  Simulation partial order
+\ifdefined\bsim%
+  \renewcommand{\bsim}{{\color{green} \sim_{B}}}%
+\else%
+  \newcommand{\bsim}{{\color{green} \sim_{B}}}%
+\fi
+%  Simulation relation
 
 
 
@@ -2711,6 +2936,128 @@
 
 
 
+
+
+
+
+\ifdefined\MA%
+  \renewcommand{\MA}{{\color{green} \M{A}}}%
+\else%
+  \newcommand{\MA}{{\color{green} \M{A}}}%
+\fi
+
+\ifdefined\MB%
+  \renewcommand{\MB}{{\color{green} \M{B}}}%
+\else%
+  \newcommand{\MB}{{\color{green} \M{B}}}%
+\fi
+
+\ifdefined\MC%
+  \renewcommand{\MC}{{\color{green} \M{C}}}%
+\else%
+  \newcommand{\MC}{{\color{green} \M{C}}}%
+\fi
+
+\ifdefined\MG%
+  \renewcommand{\MG}{{\color{green} \M{G}}}%
+\else%
+  \newcommand{\MG}{{\color{green} \M{G}}}%
+\fi
+
+\ifdefined\MH%
+  \renewcommand{\MH}{{\color{green} \M{H}}}%
+\else%
+  \newcommand{\MH}{{\color{green} \M{H}}}%
+\fi
+
+\ifdefined\MR%
+  \renewcommand{\MR}{{\color{green} \M{R}}}%
+\else%
+  \newcommand{\MR}{{\color{green} \M{R}}}%
+\fi
+
+\ifdefined\ML%
+  \renewcommand{\ML}{{\color{green} \M{L}}}%
+\else%
+  \newcommand{\ML}{{\color{green} \M{L}}}%
+\fi
+
+\ifdefined\MQ%
+  \renewcommand{\MQ}{{\color{green} \M{Q}}}%
+\else%
+  \newcommand{\MQ}{{\color{green} \M{Q}}}%
+\fi
+
+\ifdefined\MP%
+  \renewcommand{\MP}{{\color{green} \M{P}}}%
+\else%
+  \newcommand{\MP}{{\color{green} \M{P}}}%
+\fi
+
+\ifdefined\MS%
+  \renewcommand{\MS}{{\color{green} \M{S}}}%
+\else%
+  \newcommand{\MS}{{\color{green} \M{S}}}%
+\fi
+
+\ifdefined\MSigma%
+  \renewcommand{\MSigma}{{\color{green} \M{\Sigma}}}%
+\else%
+  \newcommand{\MSigma}{{\color{green} \M{\Sigma}}}%
+\fi
+
+\ifdefined\MV%
+  \renewcommand{\MV}{{\color{green} \M{V}}}%
+\else%
+  \newcommand{\MV}{{\color{green} \M{V}}}%
+\fi
+
+\ifdefined\MW%
+  \renewcommand{\MW}{{\color{green} \M{W}}}%
+\else%
+  \newcommand{\MW}{{\color{green} \M{W}}}%
+\fi
+
+
+
+
+
+\ifdefined\SP%
+  \renewcommand{\SP}{{\color{green} P_{\text{s}}}}%
+\else%
+  \newcommand{\SP}{{\color{green} P_{\text{s}}}}%
+\fi
+%  Sensing power
+\ifdefined\AP%
+  \renewcommand{\AP}{{\color{green} P_{\text{a}}}}%
+\else%
+  \newcommand{\AP}{{\color{green} P_{\text{a}}}}%
+\fi
+%  Actuation power
+\ifdefined\SE%
+  \renewcommand{\SE}{{\color{green} E}}%
+\else%
+  \newcommand{\SE}{{\color{green} E}}%
+\fi
+%  Stored energy
+\ifdefined\ER%
+  \renewcommand{\ER}{{\color{green} r}}%
+\else%
+  \newcommand{\ER}{{\color{green} r}}%
+\fi
+%  Trajectory efficiency ratio
+\ifdefined\HP%
+  \renewcommand{\HP}{{\color{green} \Theta}}%
+\else%
+  \newcommand{\HP}{{\color{green} \Theta}}%
+\fi
+%  Heading precision
+\ifdefined\np%
+  \renewcommand{\np}{{\color{green} n}}%
+\else%
+  \newcommand{\np}{{\color{green} n}}%
+\fi
+%  Number of pixels
 
 
 \ifdefined\scene%
@@ -3922,6 +4269,20 @@
   \newcommand{\bbG}{{\color{green} \abb{G}}}%
 \fi
 
+\ifdefined\bbH%
+  \renewcommand{\bbH}{{\color{green} \abb{H}}}%
+\else%
+  \newcommand{\bbH}{{\color{green} \abb{H}}}%
+\fi
+
+\ifdefined\bbL%
+  \renewcommand{\bbL}{{\color{green} \abb{L}}}%
+\else%
+  \newcommand{\bbL}{{\color{green} \abb{L}}}%
+\fi
+
+
+
 \ifdefined\bbSpBA%
   \renewcommand{\bbSpBA}{{\color{green} \bbSp(\setB;\setA)}}%
 \else%
@@ -4468,17 +4829,9 @@
 
 
 
-\ifdefined\AC%
-  \renewcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}}%
-\else%
-  \newcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}}%
-\fi
-%  Marker for sections to write
-\ifdefined\ac%
-  \renewcommand{\ac}[1]{\AC{#1}}%
-\else%
-  \newcommand{\ac}[1]{\AC{#1}}%
-\fi
+% \newcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}} % Marker for sections to write
+
+% \newcommand{\ac}[1]{\AC{#1}}
 
 \ifdefined\towrite%
   \renewcommand{\towrite}{{\color{green} \textbf{to write}\xspace}}%

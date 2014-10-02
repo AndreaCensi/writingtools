@@ -614,7 +614,12 @@
 %  Family of range-finders models
 
 
-% \newcommand{\bgFields}{{\mathsf{C}} }
+\newbool{usedbgFields}\setbool{usedbgFields}{false}
+\ifdefined\bgFields%
+  \renewcommand{\bgFields}{\markfirst{bgFields}{usedbgFields}{{\mathsf{C}} }}%
+\else%
+  \newcommand{\bgFields}{\markfirst{bgFields}{usedbgFields}{{\mathsf{C}} }}%
+\fi
 
 
 
@@ -1840,6 +1845,165 @@
 %  Instantnaeous class
 
 
+\ifdefined\atype%
+  \renewcommand{\atype}[1]{\vmath{\bf #1    }}%
+\else%
+  \newcommand{\atype}[1]{\vmath{\bf #1    }}%
+\fi
+
+\ifdefined\mycode%
+  \renewcommand{\mycode}[1]{\texttt{\small #1}}%
+\else%
+  \newcommand{\mycode}[1]{\texttt{\small #1}}%
+\fi
+
+\newbool{useddesplStats}\setbool{useddesplStats}{false}
+\ifdefined\desplStats%
+  \renewcommand{\desplStats}{\markfirst{desplStats}{useddesplStats}{\atype{Stats}}}%
+\else%
+  \newcommand{\desplStats}{\markfirst{desplStats}{useddesplStats}{\atype{Stats}}}%
+\fi
+
+\newbool{useddesplIStats}\setbool{useddesplIStats}{false}
+\ifdefined\desplIStats%
+  \renewcommand{\desplIStats}{\markfirst{desplIStats}{useddesplIStats}{\atype{IStats}}}%
+\else%
+  \newcommand{\desplIStats}{\markfirst{desplIStats}{useddesplIStats}{\atype{IStats}}}%
+\fi
+
+\newbool{useddesplData}\setbool{useddesplData}{false}
+\ifdefined\desplData%
+  \renewcommand{\desplData}{\markfirst{desplData}{useddesplData}{\atype{Data}}}%
+\else%
+  \newcommand{\desplData}{\markfirst{desplData}{useddesplData}{\atype{Data}}}%
+\fi
+
+\newbool{useddesplIData}\setbool{useddesplIData}{false}
+\ifdefined\desplIData%
+  \renewcommand{\desplIData}{\markfirst{desplIData}{useddesplIData}{\atype{IData}}}%
+\else%
+  \newcommand{\desplIData}{\markfirst{desplIData}{useddesplIData}{\atype{IData}}}%
+\fi
+
+\newbool{useddesplModels}\setbool{useddesplModels}{false}
+\ifdefined\desplModels%
+  \renewcommand{\desplModels}{\markfirst{desplModels}{useddesplModels}{\atype{Models}}}%
+\else%
+  \newcommand{\desplModels}{\markfirst{desplModels}{useddesplModels}{\atype{Models}}}%
+\fi
+
+\newbool{useddesplIModels}\setbool{useddesplIModels}{false}
+\ifdefined\desplIModels%
+  \renewcommand{\desplIModels}{\markfirst{desplIModels}{useddesplIModels}{\atype{IModels}}}%
+\else%
+  \newcommand{\desplIModels}{\markfirst{desplIModels}{useddesplIModels}{\atype{IModels}}}%
+\fi
+
+
+
+\newbool{useddespllearn}\setbool{useddespllearn}{false}
+\ifdefined\despllearn%
+  \renewcommand{\despllearn}{\markfirst{despllearn}{useddespllearn}{\vmath{learn}}}%
+\else%
+  \newcommand{\despllearn}{\markfirst{despllearn}{useddespllearn}{\vmath{learn}}}%
+\fi
+
+\newbool{useddesplilearn}\setbool{useddesplilearn}{false}
+\ifdefined\desplilearn%
+  \renewcommand{\desplilearn}{\markfirst{desplilearn}{useddesplilearn}{\vmath{ilearn}}}%
+\else%
+  \newcommand{\desplilearn}{\markfirst{desplilearn}{useddesplilearn}{\vmath{ilearn}}}%
+\fi
+
+
+
+\newbool{useddesplfilter}\setbool{useddesplfilter}{false}
+\ifdefined\desplfilter%
+  \renewcommand{\desplfilter}{\markfirst{desplfilter}{useddesplfilter}{\vmath{filter}}}%
+\else%
+  \newcommand{\desplfilter}{\markfirst{desplfilter}{useddesplfilter}{\vmath{filter}}}%
+\fi
+
+\newbool{useddesplfmodel}\setbool{useddesplfmodel}{false}
+\ifdefined\desplfmodel%
+  \renewcommand{\desplfmodel}{\markfirst{desplfmodel}{useddesplfmodel}{\vmath{fm}}}%
+\else%
+  \newcommand{\desplfmodel}{\markfirst{desplfmodel}{useddesplfmodel}{\vmath{fm}}}%
+\fi
+
+
+
+\newbool{useddesplistats}\setbool{useddesplistats}{false}
+\ifdefined\desplistats%
+  \renewcommand{\desplistats}{\markfirst{desplistats}{useddesplistats}{\vmath{istats}}}%
+\else%
+  \newcommand{\desplistats}{\markfirst{desplistats}{useddesplistats}{\vmath{istats}}}%
+\fi
+
+\newbool{useddesplglue}\setbool{useddesplglue}{false}
+\ifdefined\desplglue%
+  \renewcommand{\desplglue}{\markfirst{desplglue}{useddesplglue}{\vmath{glue}}}%
+\else%
+  \newcommand{\desplglue}{\markfirst{desplglue}{useddesplglue}{\vmath{glue}}}%
+\fi
+
+\newbool{useddesplmglue}\setbool{useddesplmglue}{false}
+\ifdefined\desplmglue%
+  \renewcommand{\desplmglue}{\markfirst{desplmglue}{useddesplmglue}{\vmath{mglue}}}%
+\else%
+  \newcommand{\desplmglue}{\markfirst{desplmglue}{useddesplmglue}{\vmath{mglue}}}%
+\fi
+
+\newbool{useddesplstats}\setbool{useddesplstats}{false}
+\ifdefined\desplstats%
+  \renewcommand{\desplstats}{\markfirst{desplstats}{useddesplstats}{\vmath{stats}}}%
+\else%
+  \newcommand{\desplstats}{\markfirst{desplstats}{useddesplstats}{\vmath{stats}}}%
+\fi
+
+\newbool{useddesplmerge}\setbool{useddesplmerge}{false}
+\ifdefined\desplmerge%
+  \renewcommand{\desplmerge}{\markfirst{desplmerge}{useddesplmerge}{\vmath{merge}}}%
+\else%
+  \newcommand{\desplmerge}{\markfirst{desplmerge}{useddesplmerge}{\vmath{merge}}}%
+\fi
+
+
+
+
+
+
+
+% TODO: move away
+
+\newbool{usedds}\setbool{usedds}{false}
+\ifdefined\ds%
+  \renewcommand{\ds}{\markfirst{ds}{usedds}{\Delta_s}}%
+\else%
+  \newcommand{\ds}{\markfirst{ds}{usedds}{\Delta_s}}%
+\fi
+%  Spatial sampling
+\newbool{useddt}\setbool{useddt}{false}
+\ifdefined\dt%
+  \renewcommand{\dt}{\markfirst{dt}{useddt}{\Delta_t}}%
+\else%
+  \newcommand{\dt}{\markfirst{dt}{useddt}{\Delta_t}}%
+\fi
+%  Temporal sampling
+\newbool{useddb}\setbool{useddb}{false}
+\ifdefined\db%
+  \renewcommand{\db}{\markfirst{db}{useddb}{\Delta_b}}%
+\else%
+  \newcommand{\db}{\markfirst{db}{useddb}{\Delta_b}}%
+\fi
+%  Brightness threshold
+\newbool{usedcamexp}\setbool{usedcamexp}{false}
+\ifdefined\camexp%
+  \renewcommand{\camexp}{\markfirst{camexp}{usedcamexp}{\text{EX}}}%
+\else%
+  \newcommand{\camexp}{\markfirst{camexp}{usedcamexp}{\text{EX}}}%
+\fi
+%  Exposure
 
 
 
@@ -2400,6 +2564,85 @@
 
 
 
+\ifdefined\clip%
+  \renewcommand{\clip}[1]{\mathsf{clip}_{#1}}%
+\else%
+  \newcommand{\clip}[1]{\mathsf{clip}_{#1}}%
+\fi
+%  Clip up to some boundary 
+\newbool{usedmaxu}\setbool{usedmaxu}{false}
+\ifdefined\maxu%
+  \renewcommand{\maxu}{\markfirst{maxu}{usedmaxu}{b}}%
+\else%
+  \newcommand{\maxu}{\markfirst{maxu}{usedmaxu}{b}}%
+\fi
+
+\newbool{usedclipu}\setbool{usedclipu}{false}
+\ifdefined\clipu%
+  \renewcommand{\clipu}{\markfirst{clipu}{usedclipu}{\clip{\maxu}}}%
+\else%
+  \newcommand{\clipu}{\markfirst{clipu}{usedclipu}{\clip{\maxu}}}%
+\fi
+
+\newbool{useddvsth}\setbool{useddvsth}{false}
+\ifdefined\dvsth%
+  \renewcommand{\dvsth}{\markfirst{dvsth}{useddvsth}{{\Delta_{b}}}}%
+\else%
+  \newcommand{\dvsth}{\markfirst{dvsth}{useddvsth}{{\Delta_{b}}}}%
+\fi
+%  Threshold
+
+
+\newbool{usedgain}\setbool{usedgain}{false}
+\ifdefined\gain%
+  \renewcommand{\gain}{\markfirst{gain}{usedgain}{\kappa}}%
+\else%
+  \newcommand{\gain}{\markfirst{gain}{usedgain}{\kappa}}%
+\fi
+
+
+
+\newbool{usedsettime}\setbool{usedsettime}{false}
+\ifdefined\settime%
+  \renewcommand{\settime}{\markfirst{settime}{usedsettime}{\mathbb{T}}}%
+\else%
+  \newcommand{\settime}{\markfirst{settime}{usedsettime}{\mathbb{T}}}%
+\fi
+
+
+
+\newbool{usedcontrollerLast}\setbool{usedcontrollerLast}{false}
+\ifdefined\controllerLast%
+  \renewcommand{\controllerLast}{\markfirst{controllerLast}{usedcontrollerLast}{C1}}%
+\else%
+  \newcommand{\controllerLast}{\markfirst{controllerLast}{usedcontrollerLast}{C1}}%
+\fi
+%  Uses last event
+\newbool{usedcontrollerTI}\setbool{usedcontrollerTI}{false}
+\ifdefined\controllerTI%
+  \renewcommand{\controllerTI}{\markfirst{controllerTI}{usedcontrollerTI}{C2}}%
+\else%
+  \newcommand{\controllerTI}{\markfirst{controllerTI}{usedcontrollerTI}{C2}}%
+\fi
+%  Time integrale
+\newbool{usedcontrollerTS}\setbool{usedcontrollerTS}{false}
+\ifdefined\controllerTS%
+  \renewcommand{\controllerTS}{\markfirst{controllerTS}{usedcontrollerTS}{C3}}%
+\else%
+  \newcommand{\controllerTS}{\markfirst{controllerTS}{usedcontrollerTS}{C3}}%
+\fi
+%  time smoothed
+\newbool{usedcontrollerTN}\setbool{usedcontrollerTN}{false}
+\ifdefined\controllerTN%
+  \renewcommand{\controllerTN}{\markfirst{controllerTN}{usedcontrollerTN}{C4}}%
+\else%
+  \newcommand{\controllerTN}{\markfirst{controllerTN}{usedcontrollerTN}{C4}}%
+\fi
+%  Time neural
+
+
+
+
 %
 
 \newbool{usedesSt}\setbool{usedesSt}{false}
@@ -2839,7 +3082,20 @@
 
 
 
- 
+\newbool{usedbrel}\setbool{usedbrel}{false}
+\ifdefined\brel%
+  \renewcommand{\brel}{\markfirst{brel}{usedbrel}{\leq_{B}}}%
+\else%
+  \newcommand{\brel}{\markfirst{brel}{usedbrel}{\leq_{B}}}%
+\fi
+%  Simulation partial order
+\newbool{usedbsim}\setbool{usedbsim}{false}
+\ifdefined\bsim%
+  \renewcommand{\bsim}{\markfirst{bsim}{usedbsim}{\sim_{B}}}%
+\else%
+  \newcommand{\bsim}{\markfirst{bsim}{usedbsim}{\sim_{B}}}%
+\fi
+%  Simulation relation
 
 
 
@@ -3058,6 +3314,147 @@
 
 
 
+
+
+
+
+\newbool{usedMA}\setbool{usedMA}{false}
+\ifdefined\MA%
+  \renewcommand{\MA}{\markfirst{MA}{usedMA}{\M{A}}}%
+\else%
+  \newcommand{\MA}{\markfirst{MA}{usedMA}{\M{A}}}%
+\fi
+
+\newbool{usedMB}\setbool{usedMB}{false}
+\ifdefined\MB%
+  \renewcommand{\MB}{\markfirst{MB}{usedMB}{\M{B}}}%
+\else%
+  \newcommand{\MB}{\markfirst{MB}{usedMB}{\M{B}}}%
+\fi
+
+\newbool{usedMC}\setbool{usedMC}{false}
+\ifdefined\MC%
+  \renewcommand{\MC}{\markfirst{MC}{usedMC}{\M{C}}}%
+\else%
+  \newcommand{\MC}{\markfirst{MC}{usedMC}{\M{C}}}%
+\fi
+
+\newbool{usedMG}\setbool{usedMG}{false}
+\ifdefined\MG%
+  \renewcommand{\MG}{\markfirst{MG}{usedMG}{\M{G}}}%
+\else%
+  \newcommand{\MG}{\markfirst{MG}{usedMG}{\M{G}}}%
+\fi
+
+\newbool{usedMH}\setbool{usedMH}{false}
+\ifdefined\MH%
+  \renewcommand{\MH}{\markfirst{MH}{usedMH}{\M{H}}}%
+\else%
+  \newcommand{\MH}{\markfirst{MH}{usedMH}{\M{H}}}%
+\fi
+
+\newbool{usedMR}\setbool{usedMR}{false}
+\ifdefined\MR%
+  \renewcommand{\MR}{\markfirst{MR}{usedMR}{\M{R}}}%
+\else%
+  \newcommand{\MR}{\markfirst{MR}{usedMR}{\M{R}}}%
+\fi
+
+\newbool{usedML}\setbool{usedML}{false}
+\ifdefined\ML%
+  \renewcommand{\ML}{\markfirst{ML}{usedML}{\M{L}}}%
+\else%
+  \newcommand{\ML}{\markfirst{ML}{usedML}{\M{L}}}%
+\fi
+
+\newbool{usedMQ}\setbool{usedMQ}{false}
+\ifdefined\MQ%
+  \renewcommand{\MQ}{\markfirst{MQ}{usedMQ}{\M{Q}}}%
+\else%
+  \newcommand{\MQ}{\markfirst{MQ}{usedMQ}{\M{Q}}}%
+\fi
+
+\newbool{usedMP}\setbool{usedMP}{false}
+\ifdefined\MP%
+  \renewcommand{\MP}{\markfirst{MP}{usedMP}{\M{P}}}%
+\else%
+  \newcommand{\MP}{\markfirst{MP}{usedMP}{\M{P}}}%
+\fi
+
+\newbool{usedMS}\setbool{usedMS}{false}
+\ifdefined\MS%
+  \renewcommand{\MS}{\markfirst{MS}{usedMS}{\M{S}}}%
+\else%
+  \newcommand{\MS}{\markfirst{MS}{usedMS}{\M{S}}}%
+\fi
+
+\newbool{usedMSigma}\setbool{usedMSigma}{false}
+\ifdefined\MSigma%
+  \renewcommand{\MSigma}{\markfirst{MSigma}{usedMSigma}{\M{\Sigma}}}%
+\else%
+  \newcommand{\MSigma}{\markfirst{MSigma}{usedMSigma}{\M{\Sigma}}}%
+\fi
+
+\newbool{usedMV}\setbool{usedMV}{false}
+\ifdefined\MV%
+  \renewcommand{\MV}{\markfirst{MV}{usedMV}{\M{V}}}%
+\else%
+  \newcommand{\MV}{\markfirst{MV}{usedMV}{\M{V}}}%
+\fi
+
+\newbool{usedMW}\setbool{usedMW}{false}
+\ifdefined\MW%
+  \renewcommand{\MW}{\markfirst{MW}{usedMW}{\M{W}}}%
+\else%
+  \newcommand{\MW}{\markfirst{MW}{usedMW}{\M{W}}}%
+\fi
+
+
+
+
+
+\newbool{usedSP}\setbool{usedSP}{false}
+\ifdefined\SP%
+  \renewcommand{\SP}{\markfirst{SP}{usedSP}{P_{\text{s}}}}%
+\else%
+  \newcommand{\SP}{\markfirst{SP}{usedSP}{P_{\text{s}}}}%
+\fi
+%  Sensing power
+\newbool{usedAP}\setbool{usedAP}{false}
+\ifdefined\AP%
+  \renewcommand{\AP}{\markfirst{AP}{usedAP}{P_{\text{a}}}}%
+\else%
+  \newcommand{\AP}{\markfirst{AP}{usedAP}{P_{\text{a}}}}%
+\fi
+%  Actuation power
+\newbool{usedSE}\setbool{usedSE}{false}
+\ifdefined\SE%
+  \renewcommand{\SE}{\markfirst{SE}{usedSE}{E}}%
+\else%
+  \newcommand{\SE}{\markfirst{SE}{usedSE}{E}}%
+\fi
+%  Stored energy
+\newbool{usedER}\setbool{usedER}{false}
+\ifdefined\ER%
+  \renewcommand{\ER}{\markfirst{ER}{usedER}{r}}%
+\else%
+  \newcommand{\ER}{\markfirst{ER}{usedER}{r}}%
+\fi
+%  Trajectory efficiency ratio
+\newbool{usedHP}\setbool{usedHP}{false}
+\ifdefined\HP%
+  \renewcommand{\HP}{\markfirst{HP}{usedHP}{\Theta}}%
+\else%
+  \newcommand{\HP}{\markfirst{HP}{usedHP}{\Theta}}%
+\fi
+%  Heading precision
+\newbool{usednp}\setbool{usednp}{false}
+\ifdefined\np%
+  \renewcommand{\np}{\markfirst{np}{usednp}{n}}%
+\else%
+  \newcommand{\np}{\markfirst{np}{usednp}{n}}%
+\fi
+%  Number of pixels
 
 
 \newbool{usedscene}\setbool{usedscene}{false}
@@ -4405,6 +4802,22 @@
   \newcommand{\bbG}{\markfirst{bbG}{usedbbG}{\abb{G}}}%
 \fi
 
+\newbool{usedbbH}\setbool{usedbbH}{false}
+\ifdefined\bbH%
+  \renewcommand{\bbH}{\markfirst{bbH}{usedbbH}{\abb{H}}}%
+\else%
+  \newcommand{\bbH}{\markfirst{bbH}{usedbbH}{\abb{H}}}%
+\fi
+
+\newbool{usedbbL}\setbool{usedbbL}{false}
+\ifdefined\bbL%
+  \renewcommand{\bbL}{\markfirst{bbL}{usedbbL}{\abb{L}}}%
+\else%
+  \newcommand{\bbL}{\markfirst{bbL}{usedbbL}{\abb{L}}}%
+\fi
+
+
+
 \newbool{usedbbSpBA}\setbool{usedbbSpBA}{false}
 \ifdefined\bbSpBA%
   \renewcommand{\bbSpBA}{\markfirst{bbSpBA}{usedbbSpBA}{\bbSp(\setB;\setA)}}%
@@ -5015,17 +5428,9 @@
 
 
 
-\ifdefined\AC%
-  \renewcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}}%
-\else%
-  \newcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}}%
-\fi
-%  Marker for sections to write
-\ifdefined\ac%
-  \renewcommand{\ac}[1]{\AC{#1}}%
-\else%
-  \newcommand{\ac}[1]{\AC{#1}}%
-\fi
+% \newcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}} % Marker for sections to write
+
+% \newcommand{\ac}[1]{\AC{#1}}
 
 \newbool{usedtowrite}\setbool{usedtowrite}{false}
 \ifdefined\towrite%
