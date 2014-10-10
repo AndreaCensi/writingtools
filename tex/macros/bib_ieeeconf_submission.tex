@@ -1,0 +1,12 @@
+
+\usepackage{xstring}
+% \renewcommand{\weburl}[1]{\href{#1}{#1}}
+\providecommand{\weburl}[1]{%
+    \StrSubstitute{#1}{http://}{}[\better]%
+    \href{#1}{\better}%
+}
+% \renewcommand{\biburl}[1]{\href{#1}{#1}}
+\renewcommand{\biburl}[1]{}
+\renewcommand\UrlFont{\sffamily\small}
+
+% \renewcommand{\url}[1]{my url}
