@@ -5027,6 +5027,12 @@
   \newcommand{\xxx}{\boh}%
 \fi
 
+\ifdefined\XXX%
+  \renewcommand{\XXX}{\xxx}%
+\else%
+  \newcommand{\XXX}{\xxx}%
+\fi
+
 \ifdefined\notsure%
   \renewcommand{\notsure}{\textbf{\color{red}(Not sure...)}}%
 \else%

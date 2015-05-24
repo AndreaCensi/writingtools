@@ -5650,6 +5650,13 @@
   \newcommand{\xxx}{\markfirst{xxx}{usedxxx}{\boh}}%
 \fi
 
+\newbool{usedXXX}\setbool{usedXXX}{false}
+\ifdefined\XXX%
+  \renewcommand{\XXX}{\markfirst{XXX}{usedXXX}{\xxx}}%
+\else%
+  \newcommand{\XXX}{\markfirst{XXX}{usedXXX}{\xxx}}%
+\fi
+
 \newbool{usednotsure}\setbool{usednotsure}{false}
 \ifdefined\notsure%
   \renewcommand{\notsure}{\markfirst{notsure}{usednotsure}{\textbf{\color{red}(Not sure...)}}}%

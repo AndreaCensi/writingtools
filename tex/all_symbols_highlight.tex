@@ -5027,6 +5027,12 @@
   \newcommand{\xxx}{{\color{green} \boh}}%
 \fi
 
+\ifdefined\XXX%
+  \renewcommand{\XXX}{{\color{green} \xxx}}%
+\else%
+  \newcommand{\XXX}{{\color{green} \xxx}}%
+\fi
+
 \ifdefined\notsure%
   \renewcommand{\notsure}{{\color{green} \textbf{\color{red}(Not sure...)}}}%
 \else%
