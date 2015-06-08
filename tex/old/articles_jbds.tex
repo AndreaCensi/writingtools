@@ -1,0 +1,52 @@
+
+
+
+%:section:articles/jbds: Symbols introduced in JBDS
+\newcommand{\veh}{\vehBody} % A vehicle body
+\newcommand{\vehBody}{B} % A vehicle body
+\newcommand{\vehKin}{K} % Vehicle kinematics 
+\newcommand{\vehSensPos}{\boldsymbol{r}} % Sensor relative pose
+
+\newcommand{\vehSensFun}{\psi} % Function that defines an exteroceptive sensor
+\newcommand{\env}{e} % Environment
+\newcommand{\envSp}{\mathcal{E}} % Environment space
+
+% \newcommand{\envo}{\mathsf{Obs}} % Obstacles in the environment
+% \newcommand{\envt}{\mathsf{Ref}} % Texture (function on $\envob$)
+% \newcommand{\envf}{\mathsf{Fie}} % Field sensed by field sampler
+
+\newcommand{\envo}{\mathcal{O}} % Obstacles in the environment
+\newcommand{\envt}{\mathcal{T}} % Texture (function on $\envob$)
+\newcommand{\envf}{\mathcal{F}} % Field sensed by field sampler
+
+\newcommand{\envob}{\partial \envo} % Obstacles boundaries
+
+\newcommand{\obspsDiff}{\obsps^{\text{dif}}}
+\newcommand{\obspsNotDiff}{\obsps^{\overline{\text{dif}}}}
+
+\newcommand{\sic}{\text{VS}} % ideal camera
+\newcommand{\sir}{\text{RF}} % ideal range finder
+\newcommand{\sif}{\text{FS}} % ideal field sampler
+\newcommand{\sicV}{\sic(\obspsV)} % ideal camera with viewport
+\newcommand{\sirV}{\sir(\obspsV)} % ideal range finder with viewport
+\newcommand{\sifV}{\sif(\obspsV)} % ideal field sampler with viewport
+
+\newcommand{\zoh}[1]{\text{Zoh}_{#1}} % Zero order hold
+
+%:section:articles/jbds/misc:Used in proofs for JBDS
+
+\newcommand{\ygneig}{N} % A neighborhoood of $\obsg$.
+
+
+%:section:articles/jbds/robots: 
+
+\newcommand{\allrobots}{\mathsf{Robots}} % The set of all robots
+% \newcommand{\vehRob}{\mathsf{Vehicles}} % Vehicle robots
+% \newcommand{\vehRob}{\mathsf{\color{blue}ISV}} % Idealized Simple Vehicles
+\newcommand{\vehRob}{\mathsf{ISV}} % Idealized Simple Vehicles
+\newcommand{\vehRobNuis}{{\tilde{\vehRob}}} % Vehicle robots with nuisances
+
+\newcommand{\robVeh}{\vehRob}
+
+
+

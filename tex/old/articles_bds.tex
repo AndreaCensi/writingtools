@@ -5,9 +5,16 @@
 %:def:def:bds
 %:sort:BDS(n;k)
 
+\newcommand{\BDSSk}{\bgCBDSfamily(\obsps;k)}
+%:sort:BDS(S;k)
+
 \newcommand{\bgBDSfamily}{\mathsf{BDS}} % Family of BDS sensors
 %:nomenc-exclude:
 %:sort:BDS
+
+\newcommand{\bgCBDSfamily}{\mathsf{CBDS}} % Family of BDS sensors
+%:nomenc-exclude:
+%:sort:CBDS
 
 
 \newcommand{\bds}{\myacronym{bds}} % Bilinear dynamics system
@@ -19,9 +26,15 @@
 %:nomenc-exclude:
 %:sort:bds
 
+\newcommand{\cbds}{\myacronym{cbds}} % Continuous-space bilinear dynamics system
 
-\newcommand{\omsum}[1]{{\color{gray}\sum_{#1}}\ } % omitted sum
-%:todo:color sum
+\newcommand{\CBDS}{\cbds} 
+%:nomenc-exclude:
+%:sort:bds
+
+
+\newcommand{\omsum}[1]{{\textstyle{\color{gray}\sum_{#1}}}\ } % omitted sum
+\newcommand{\omsumb}[2]{{\textstyle{\color{gray}\sum_{#1}^{#2}}}\ } % omitted sum (two arguments)
 
 %%% Bilinear models
 

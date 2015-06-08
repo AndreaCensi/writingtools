@@ -76,7 +76,13 @@
 % \BDSnk: Skipped because no field 'deprecated'
 
 
+% \BDSSk: Skipped because no field 'deprecated'
+
+
 % \bgBDSfamily: Skipped because no field 'deprecated'
+
+
+% \bgCBDSfamily: Skipped because no field 'deprecated'
 
 
 
@@ -87,9 +93,16 @@
 % \BDS: Skipped because no field 'deprecated'
 
 
+% \cbds: Skipped because no field 'deprecated'
+
+
+% \CBDS: Skipped because no field 'deprecated'
+
+
 
 
 % \omsum: Skipped because no field 'deprecated'
+% \omsumb: Skipped because no field 'deprecated'
 
 
 %%% Bilinear models
@@ -201,7 +214,11 @@
 %  Family of range-finders models
 
 
-% \newcommand{\bgFields}{{\mathsf{C}} }
+\ifdefined\bgFields%
+  \renewcommand{\bgFields}{{\color{red} {\mathsf{C}} }}%
+\else%
+  \newcommand{\bgFields}{{\color{red} {\mathsf{C}} }}%
+\fi
 
 
 
@@ -227,9 +244,10 @@
 
  
 
-
-
 % \state: Skipped because no field 'deprecated'
+% \stateSp: Skipped because no field 'deprecated'
+
+
 % \detecte: Skipped because no field 'deprecated'
 
 
@@ -681,11 +699,86 @@
 
 
 
+% \obspsV: Skipped because no field 'deprecated'
 % \ddsfov: Skipped because no field 'deprecated'
+% \obspsVunpred: Skipped because no field 'deprecated'
+% \obspsVpred: Skipped because no field 'deprecated'
+% \obspsVunpredt: Skipped because no field 'deprecated'
+% \obspsVpredt: Skipped because no field 'deprecated'
 
 
 
 
+
+
+% \ddsctod: Skipped because no field 'deprecated'
+% \ddsste: Skipped because no field 'deprecated'
+% \ddsst: Skipped because no field 'deprecated'
+
+
+
+
+
+
+
+
+% \ldmap: Skipped because no field 'deprecated'
+
+
+% \hclass: Skipped because no field 'deprecated'
+% \iclass: Skipped because no field 'deprecated'
+
+
+% \atype: Skipped because no field 'deprecated'
+% \mycode: Skipped because no field 'deprecated'
+% \desplStats: Skipped because no field 'deprecated'
+% \desplIStats: Skipped because no field 'deprecated'
+% \desplData: Skipped because no field 'deprecated'
+% \desplIData: Skipped because no field 'deprecated'
+% \desplModels: Skipped because no field 'deprecated'
+% \desplIModels: Skipped because no field 'deprecated'
+
+
+% \despllearn: Skipped because no field 'deprecated'
+% \desplilearn: Skipped because no field 'deprecated'
+
+
+% \desplfilter: Skipped because no field 'deprecated'
+% \desplfmodel: Skipped because no field 'deprecated'
+
+
+% \desplistats: Skipped because no field 'deprecated'
+% \desplglue: Skipped because no field 'deprecated'
+% \desplmglue: Skipped because no field 'deprecated'
+% \desplstats: Skipped because no field 'deprecated'
+% \desplmerge: Skipped because no field 'deprecated'
+
+
+% \desplInter: Skipped because no field 'deprecated'
+
+
+
+
+% \patternA: Skipped because no field 'deprecated'
+% \patternB: Skipped because no field 'deprecated'
+% \patternC: Skipped because no field 'deprecated'
+% \patternD: Skipped because no field 'deprecated'
+
+
+% \proto: Skipped because no field 'deprecated'
+% \newcommand{\real}{A1\xspace}
+
+
+
+% \slicelen: Skipped because no field 'deprecated'
+% \njobslearn: Skipped because no field 'deprecated'
+% \njobsmerge: Skipped because no field 'deprecated'
+% \njobstotal: Skipped because no field 'deprecated'
+
+
+% \Compmake: Skipped because no field 'deprecated'
+% \parmake: Skipped because no field 'deprecated'
+% \sgemake: Skipped because no field 'deprecated'
 
 
 
@@ -813,6 +906,45 @@
 
 
 % \plA: Skipped because no field 'deprecated'
+
+
+% \clip: Skipped because no field 'deprecated'
+% \maxu: Skipped because no field 'deprecated'
+% \clipu: Skipped because no field 'deprecated'
+
+
+
+
+% \gain: Skipped because no field 'deprecated'
+
+
+% \settime: Skipped because no field 'deprecated'
+
+
+% \controllerLast: Skipped because no field 'deprecated'
+% \controllerTI: Skipped because no field 'deprecated'
+% \controllerTS: Skipped because no field 'deprecated'
+% \controllerTN: Skipped because no field 'deprecated'
+
+
+
+
+
+
+% \ds: Skipped because no field 'deprecated'
+% \dt: Skipped because no field 'deprecated'
+% \db: Skipped because no field 'deprecated'
+% \dvsth: Skipped because no field 'deprecated'
+% \camexp: Skipped because no field 'deprecated'
+
+
+% \mseps: Skipped because no field 'deprecated'
+% \mseeb: Skipped because no field 'deprecated'
+% \bwps: Skipped because no field 'deprecated'
+% \bweb: Skipped because no field 'deprecated'
+
+
+% \ori: Skipped because no field 'deprecated'
 
 
 %
@@ -962,7 +1094,109 @@
 
 
 
- 
+% \brel: Skipped because no field 'deprecated'
+% \bsim: Skipped because no field 'deprecated'
+
+
+
+
+
+
+% \veh: Skipped because no field 'deprecated'
+% \vehBody: Skipped because no field 'deprecated'
+% \vehKin: Skipped because no field 'deprecated'
+% \vehSensPos: Skipped because no field 'deprecated'
+
+
+% \vehSensFun: Skipped because no field 'deprecated'
+% \env: Skipped because no field 'deprecated'
+% \envSp: Skipped because no field 'deprecated'
+
+
+% \newcommand{\envo}{\mathsf{Obs}} % Obstacles in the environment
+
+% \newcommand{\envt}{\mathsf{Ref}} % Texture (function on $\envob$)
+
+% \newcommand{\envf}{\mathsf{Fie}} % Field sensed by field sampler
+
+
+
+% \envo: Skipped because no field 'deprecated'
+% \envt: Skipped because no field 'deprecated'
+% \envf: Skipped because no field 'deprecated'
+
+
+% \envob: Skipped because no field 'deprecated'
+
+
+% \obspsDiff: Skipped because no field 'deprecated'
+% \obspsNotDiff: Skipped because no field 'deprecated'
+
+
+% \sic: Skipped because no field 'deprecated'
+% \sir: Skipped because no field 'deprecated'
+% \sif: Skipped because no field 'deprecated'
+% \sicV: Skipped because no field 'deprecated'
+% \sirV: Skipped because no field 'deprecated'
+% \sifV: Skipped because no field 'deprecated'
+
+
+% \zoh: Skipped because no field 'deprecated'
+
+
+
+
+% \ygneig: Skipped because no field 'deprecated'
+
+
+
+
+
+
+% \allrobots: Skipped because no field 'deprecated'
+% \newcommand{\vehRob}{\mathsf{Vehicles}} % Vehicle robots
+
+% \newcommand{\vehRob}{\mathsf{\color{blue}ISV}} % Idealized Simple Vehicles
+
+% \vehRob: Skipped because no field 'deprecated'
+% \vehRobNuis: Skipped because no field 'deprecated'
+
+
+% \robVeh: Skipped because no field 'deprecated'
+
+
+
+
+
+
+
+
+
+
+% \MA: Skipped because no field 'deprecated'
+% \MB: Skipped because no field 'deprecated'
+% \MC: Skipped because no field 'deprecated'
+% \MG: Skipped because no field 'deprecated'
+% \MH: Skipped because no field 'deprecated'
+
+
+% \ML: Skipped because no field 'deprecated'
+% \MQ: Skipped because no field 'deprecated'
+% \MP: Skipped because no field 'deprecated'
+% \MS: Skipped because no field 'deprecated'
+% \MSigma: Skipped because no field 'deprecated'
+% \MV: Skipped because no field 'deprecated'
+% \MW: Skipped because no field 'deprecated'
+
+
+
+
+% \SP: Skipped because no field 'deprecated'
+% \AP: Skipped because no field 'deprecated'
+% \SE: Skipped because no field 'deprecated'
+% \ER: Skipped because no field 'deprecated'
+% \HP: Skipped because no field 'deprecated'
+% \np: Skipped because no field 'deprecated'
 
 
 % \scene: Skipped because no field 'deprecated'
@@ -1409,6 +1643,10 @@
 % \bbE: Skipped because no field 'deprecated'
 % \bbF: Skipped because no field 'deprecated'
 % \bbG: Skipped because no field 'deprecated'
+% \bbH: Skipped because no field 'deprecated'
+% \bbL: Skipped because no field 'deprecated'
+
+
 % \bbSpBA: Skipped because no field 'deprecated'
 % \bbSpAB: Skipped because no field 'deprecated'
 
@@ -1425,6 +1663,40 @@
   \newcommand{\inSeries}{{\color{red} \aword{Series}}}%
 \fi
 %  Series of two systems
+
+
+\ifdefined\bbSpAny%
+  \renewcommand{\bbSpAny}{{\color{red} \bbSp_{*}}}%
+\else%
+  \newcommand{\bbSpAny}{{\color{red} \bbSp_{*}}}%
+\fi
+%  Any of the following
+\ifdefined\bbSpDT%
+  \renewcommand{\bbSpDT}[1]{\bbSp^{\text{d}}_{#1}}%
+\else%
+  \newcommand{\bbSpDT}[1]{\bbSp^{\text{d}}_{#1}}%
+\fi
+%  Discrete time
+\ifdefined\bbSpCT%
+  \renewcommand{\bbSpCT}{{\color{red} \bbSp^{\text{c}}}}%
+\else%
+  \newcommand{\bbSpCT}{{\color{red} \bbSp^{\text{c}}}}%
+\fi
+%  Continuous time
+\ifdefined\bbSpEB%
+  \renewcommand{\bbSpEB}{{\color{red} \bbSp^{\text{e}}}}%
+\else%
+  \newcommand{\bbSpEB}{{\color{red} \bbSp^{\text{e}}}}%
+\fi
+%  Event-based
+
+
+
+
+
+
+
+
 
 
 % \world: Skipped because no field 'deprecated'
@@ -1495,8 +1767,7 @@
 
 
 
-
-
+% \obsgmark: Skipped because no field 'deprecated'
 % \obsg: Skipped because no field 'deprecated'
 
 
@@ -1516,6 +1787,11 @@
 
 
 % \bbSpYU: Skipped because no field 'deprecated'
+
+
+
+
+% \bbSpYXU: Skipped because no field 'deprecated'
 
 
 % \bbSpUY: Skipped because no field 'deprecated'
@@ -1544,8 +1820,6 @@
 % \veSensors: Skipped because no field 'deprecated'
 % \veDynamics: Skipped because no field 'deprecated'
 % \veVehicles: Skipped because no field 'deprecated'
-
-
 
 
 % \veSce: Skipped because no field 'deprecated'
@@ -1628,13 +1902,17 @@
 
 
 
-% \AC: Skipped because no field 'deprecated'
-% \ac: Skipped because no field 'deprecated'
+% \newcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}} % Marker for sections to write
+
+% \newcommand{\ac}[1]{\AC{#1}}
+
 % \towrite: Skipped because no field 'deprecated'
 % \placeholder: Skipped because no field 'deprecated'
 % \tocite: Skipped because no field 'deprecated'
 % \citeboh: Skipped because no field 'deprecated'
+% \citexxx: Skipped because no field 'deprecated'
 % \xxx: Skipped because no field 'deprecated'
+% \XXX: Skipped because no field 'deprecated'
 % \notsure: Skipped because no field 'deprecated'
 % \dontlike: Skipped because no field 'deprecated'
 % \notformal: Skipped because no field 'deprecated'
@@ -1854,13 +2132,29 @@
 % \sealgebra: Skipped because no field 'deprecated'
 
 
-% \sothree: Skipped because no field 'deprecated'
+% \SOthree: Skipped because no field 'deprecated'
 
 
-% \sethree: Skipped because no field 'deprecated'
+% \SEthree: Skipped because no field 'deprecated'
+
+
+% \SEtwo: Skipped because no field 'deprecated'
+
+
+% \newcommand{\SOtwo}{\mathrm{SO(2)}}  % Special Euclidean group 
+
+
+
+% \SEthreeAlg: Skipped because no field 'deprecated'
+% \SEtwoAlg: Skipped because no field 'deprecated'
+% \SOthreeAlg: Skipped because no field 'deprecated'
+% \SOtwoAlg: Skipped because no field 'deprecated'
 
 
 % \setwo: Skipped because no field 'deprecated'
+% \sethree: Skipped because no field 'deprecated'
+% \sotwo: Skipped because no field 'deprecated'
+% \sothree: Skipped because no field 'deprecated'
 
 
 
@@ -1940,6 +2234,7 @@
 
 % \pose: Skipped because no field 'deprecated'
 % \posesp: Skipped because no field 'deprecated'
+% \posespAlg: Skipped because no field 'deprecated'
 \ifdefined\confspace%
   \renewcommand{\confspace}{{\color{red} \posesp}}%
 \else%
@@ -1947,10 +2242,13 @@
 \fi
 %  Robot configuration space
 % \pos: Skipped because no field 'deprecated'
+% \posEl: Skipped because no field 'deprecated'
 % \rotm: Skipped because no field 'deprecated'
+% \rotme: Skipped because no field 'deprecated'
 % \lvel: Skipped because no field 'deprecated'
 % \lvele: Skipped because no field 'deprecated'
 % \avel: Skipped because no field 'deprecated'
+% \avele: Skipped because no field 'deprecated'
 % \avels: Skipped because no field 'deprecated'
 % \avelse: Skipped because no field 'deprecated'
 
@@ -1966,8 +2264,10 @@
 
 % \field: Skipped because no field 'deprecated'
 % \fieldpos: Skipped because no field 'deprecated'
+% \fieldpose: Skipped because no field 'deprecated'
 
 
+% \worldSp: Skipped because no field 'deprecated'
 
 
 %% maps
@@ -1990,11 +2290,15 @@
   \newcommand{\worldsp}{{\color{red} \mapsp}}%
 \fi
 
+
+
 \ifdefined\wshapesp%
   \renewcommand{\wshapesp}{{\color{red} \mshapesp}}%
 \else%
   \newcommand{\wshapesp}{{\color{red} \mshapesp}}%
 \fi
+
+
 
 
 

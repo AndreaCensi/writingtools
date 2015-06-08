@@ -176,10 +176,26 @@
 
 
 
+\ifdefined\BDSSk%
+  \renewcommand{\BDSSk}{\bgCBDSfamily(\obsps;k)}%
+\else%
+  \newcommand{\BDSSk}{\bgCBDSfamily(\obsps;k)}%
+\fi
+
+
+
 \ifdefined\bgBDSfamily%
   \renewcommand{\bgBDSfamily}{\mathsf{BDS}}%
 \else%
   \newcommand{\bgBDSfamily}{\mathsf{BDS}}%
+\fi
+%  Family of BDS sensors
+
+
+\ifdefined\bgCBDSfamily%
+  \renewcommand{\bgCBDSfamily}{\mathsf{CBDS}}%
+\else%
+  \newcommand{\bgCBDSfamily}{\mathsf{CBDS}}%
 \fi
 %  Family of BDS sensors
 
@@ -202,14 +218,36 @@
 
 
 
+\ifdefined\cbds%
+  \renewcommand{\cbds}{\myacronym{cbds}}%
+\else%
+  \newcommand{\cbds}{\myacronym{cbds}}%
+\fi
+%  Continuous-space bilinear dynamics system
+
+
+\ifdefined\CBDS%
+  \renewcommand{\CBDS}{\cbds}%
+\else%
+  \newcommand{\CBDS}{\cbds}%
+\fi
+
+
+
 
 
 \ifdefined\omsum%
-  \renewcommand{\omsum}[1]{{\color{gray}\sum_{#1}}\ }%
+  \renewcommand{\omsum}[1]{{\textstyle{\color{gray}\sum_{#1}}}\ }%
 \else%
-  \newcommand{\omsum}[1]{{\color{gray}\sum_{#1}}\ }%
+  \newcommand{\omsum}[1]{{\textstyle{\color{gray}\sum_{#1}}}\ }%
 \fi
 %  omitted sum
+\ifdefined\omsumb%
+  \renewcommand{\omsumb}[2]{{\textstyle{\color{gray}\sum_{#1}^{#2}}}\ }%
+\else%
+  \newcommand{\omsumb}[2]{{\textstyle{\color{gray}\sum_{#1}^{#2}}}\ }%
+\fi
+%  omitted sum (two arguments)
 
 
 %%% Bilinear models
@@ -506,7 +544,11 @@
 %  Family of range-finders models
 
 
-% \newcommand{\bgFields}{{\mathsf{C}} }
+\ifdefined\bgFields%
+  \renewcommand{\bgFields}{{\mathsf{C}} }%
+\else%
+  \newcommand{\bgFields}{{\mathsf{C}} }%
+\fi
 
 
 
@@ -532,14 +574,20 @@
 
  
 
-
-
 \ifdefined\state%
   \renewcommand{\state}{\boldsymbol{x}}%
 \else%
   \newcommand{\state}{\boldsymbol{x}}%
 \fi
 %  Generic underlying state.
+\ifdefined\stateSp%
+  \renewcommand{\stateSp}{\aset{X}}%
+\else%
+  \newcommand{\stateSp}{\aset{X}}%
+\fi
+%  Generic underlying state space.
+
+
 \ifdefined\detecte%
   \renewcommand{\detecte}{d}%
 \else%
@@ -1496,15 +1544,295 @@
 
 
 
-\ifdefined\ddsfov%
-  \renewcommand{\ddsfov}{\aset{V}}%
+\ifdefined\obspsV%
+  \renewcommand{\obspsV}{\aset{V}}%
 \else%
-  \newcommand{\ddsfov}{\aset{V}}%
+  \newcommand{\obspsV}{\aset{V}}%
 \fi
-%  Field of view for DDS
+%  viewport
+\ifdefined\ddsfov%
+  \renewcommand{\ddsfov}{\obspsV}%
+\else%
+  \newcommand{\ddsfov}{\obspsV}%
+\fi
+%  viewport
+\ifdefined\obspsVunpred%
+  \renewcommand{\obspsVunpred}{\obspsV^{\overline{\text{pr}}}}%
+\else%
+  \newcommand{\obspsVunpred}{\obspsV^{\overline{\text{pr}}}}%
+\fi
+%  undpredictable part
+\ifdefined\obspsVpred%
+  \renewcommand{\obspsVpred}{\obspsV^\text{pr}}%
+\else%
+  \newcommand{\obspsVpred}{\obspsV^\text{pr}}%
+\fi
+%  predictable part 
+\ifdefined\obspsVunpredt%
+  \renewcommand{\obspsVunpredt}{\obspsV_t^{\overline{\text{pr}}}}%
+\else%
+  \newcommand{\obspsVunpredt}{\obspsV_t^{\overline{\text{pr}}}}%
+\fi
+%  undpredictable part at time t
+\ifdefined\obspsVpredt%
+  \renewcommand{\obspsVpredt}{\obspsV_t^\text{pr}}%
+\else%
+  \newcommand{\obspsVpredt}{\obspsV_t^\text{pr}}%
+\fi
+%  predictable part at time t
 
 
 
+
+
+
+\ifdefined\ddsctod%
+  \renewcommand{\ddsctod}{\myacronym{c\_to\_diff}}%
+\else%
+  \newcommand{\ddsctod}{\myacronym{c\_to\_diff}}%
+\fi
+
+\ifdefined\ddsste%
+  \renewcommand{\ddsste}{x}%
+\else%
+  \newcommand{\ddsste}{x}%
+\fi
+%  State of a DDS (element)
+\ifdefined\ddsst%
+  \renewcommand{\ddsst}{\boldsymbol{\ddsste}}%
+\else%
+  \newcommand{\ddsst}{\boldsymbol{\ddsste}}%
+\fi
+%  State of a DDS
+
+
+
+
+
+
+
+
+\ifdefined\ldmap%
+  \renewcommand{\ldmap}{\gamma}%
+\else%
+  \newcommand{\ldmap}{\gamma}%
+\fi
+%  Map from latent state to instantaneous dynamics
+
+
+\ifdefined\hclass%
+  \renewcommand{\hclass}{\mathcal{H}}%
+\else%
+  \newcommand{\hclass}{\mathcal{H}}%
+\fi
+%  Hidden class
+\ifdefined\iclass%
+  \renewcommand{\iclass}{\mathcal{M}}%
+\else%
+  \newcommand{\iclass}{\mathcal{M}}%
+\fi
+%  Instantnaeous class
+
+
+\ifdefined\atype%
+  \renewcommand{\atype}[1]{\vmath{\bf #1    }}%
+\else%
+  \newcommand{\atype}[1]{\vmath{\bf #1    }}%
+\fi
+
+\ifdefined\mycode%
+  \renewcommand{\mycode}[1]{\texttt{\small #1}}%
+\else%
+  \newcommand{\mycode}[1]{\texttt{\small #1}}%
+\fi
+
+\ifdefined\desplStats%
+  \renewcommand{\desplStats}{\atype{Stats}}%
+\else%
+  \newcommand{\desplStats}{\atype{Stats}}%
+\fi
+
+\ifdefined\desplIStats%
+  \renewcommand{\desplIStats}{\atype{IStats}}%
+\else%
+  \newcommand{\desplIStats}{\atype{IStats}}%
+\fi
+
+\ifdefined\desplData%
+  \renewcommand{\desplData}{\atype{Data}}%
+\else%
+  \newcommand{\desplData}{\atype{Data}}%
+\fi
+
+\ifdefined\desplIData%
+  \renewcommand{\desplIData}{\atype{IData}}%
+\else%
+  \newcommand{\desplIData}{\atype{IData}}%
+\fi
+
+\ifdefined\desplModels%
+  \renewcommand{\desplModels}{\atype{Models}}%
+\else%
+  \newcommand{\desplModels}{\atype{Models}}%
+\fi
+
+\ifdefined\desplIModels%
+  \renewcommand{\desplIModels}{\atype{IModels}}%
+\else%
+  \newcommand{\desplIModels}{\atype{IModels}}%
+\fi
+
+
+
+\ifdefined\despllearn%
+  \renewcommand{\despllearn}{\vmath{learn}}%
+\else%
+  \newcommand{\despllearn}{\vmath{learn}}%
+\fi
+
+\ifdefined\desplilearn%
+  \renewcommand{\desplilearn}{\vmath{ilearn}}%
+\else%
+  \newcommand{\desplilearn}{\vmath{ilearn}}%
+\fi
+
+
+
+\ifdefined\desplfilter%
+  \renewcommand{\desplfilter}{\vmath{filter}}%
+\else%
+  \newcommand{\desplfilter}{\vmath{filter}}%
+\fi
+
+\ifdefined\desplfmodel%
+  \renewcommand{\desplfmodel}{\vmath{fm}}%
+\else%
+  \newcommand{\desplfmodel}{\vmath{fm}}%
+\fi
+
+
+
+\ifdefined\desplistats%
+  \renewcommand{\desplistats}{\vmath{istats}}%
+\else%
+  \newcommand{\desplistats}{\vmath{istats}}%
+\fi
+
+\ifdefined\desplglue%
+  \renewcommand{\desplglue}{\vmath{glue}}%
+\else%
+  \newcommand{\desplglue}{\vmath{glue}}%
+\fi
+
+\ifdefined\desplmglue%
+  \renewcommand{\desplmglue}{\vmath{mglue}}%
+\else%
+  \newcommand{\desplmglue}{\vmath{mglue}}%
+\fi
+
+\ifdefined\desplstats%
+  \renewcommand{\desplstats}{\vmath{stats}}%
+\else%
+  \newcommand{\desplstats}{\vmath{stats}}%
+\fi
+
+\ifdefined\desplmerge%
+  \renewcommand{\desplmerge}{\vmath{merge}}%
+\else%
+  \newcommand{\desplmerge}{\vmath{merge}}%
+\fi
+
+
+
+\ifdefined\desplInter%
+  \renewcommand{\desplInter}{\atype{I}}%
+\else%
+  \newcommand{\desplInter}{\atype{I}}%
+\fi
+%  Interval
+
+
+
+
+\ifdefined\patternA%
+  \renewcommand{\patternA}{Slice-Stats-Merge\xspace}%
+\else%
+  \newcommand{\patternA}{Slice-Stats-Merge\xspace}%
+\fi
+
+\ifdefined\patternB%
+  \renewcommand{\patternB}{Split-Stats-Glue\xspace}%
+\else%
+  \newcommand{\patternB}{Split-Stats-Glue\xspace}%
+\fi
+
+\ifdefined\patternC%
+  \renewcommand{\patternC}{Filter-Learn-Glue\xspace}%
+\else%
+  \newcommand{\patternC}{Filter-Learn-Glue\xspace}%
+\fi
+
+\ifdefined\patternD%
+  \renewcommand{\patternD}{Recursive-Learn\xspace}%
+\else%
+  \newcommand{\patternD}{Recursive-Learn\xspace}%
+\fi
+
+
+
+\ifdefined\proto%
+  \renewcommand{\proto}{A2\xspace}%
+\else%
+  \newcommand{\proto}{A2\xspace}%
+\fi
+
+% \newcommand{\real}{A1\xspace}
+
+
+
+\ifdefined\slicelen%
+  \renewcommand{\slicelen}{\mycode{slicelen}\xspace}%
+\else%
+  \newcommand{\slicelen}{\mycode{slicelen}\xspace}%
+\fi
+
+\ifdefined\njobslearn%
+  \renewcommand{\njobslearn}{n_{\text{learn}}}%
+\else%
+  \newcommand{\njobslearn}{n_{\text{learn}}}%
+\fi
+
+\ifdefined\njobsmerge%
+  \renewcommand{\njobsmerge}{n_{\text{merge}}}%
+\else%
+  \newcommand{\njobsmerge}{n_{\text{merge}}}%
+\fi
+
+\ifdefined\njobstotal%
+  \renewcommand{\njobstotal}{n_{\text{jobs}}}%
+\else%
+  \newcommand{\njobstotal}{n_{\text{jobs}}}%
+\fi
+
+
+
+\ifdefined\Compmake%
+  \renewcommand{\Compmake}{{Compmake}\xspace}%
+\else%
+  \newcommand{\Compmake}{{Compmake}\xspace}%
+\fi
+
+\ifdefined\parmake%
+  \renewcommand{\parmake}{\mycode{parmake}\xspace}%
+\else%
+  \newcommand{\parmake}{\mycode{parmake}\xspace}%
+\fi
+
+\ifdefined\sgemake%
+  \renewcommand{\sgemake}{\mycode{sgemake}\xspace}%
+\else%
+  \newcommand{\sgemake}{\mycode{sgemake}\xspace}%
+\fi
 
 
 
@@ -1543,9 +1871,9 @@
 \fi
 
 \ifdefined\obsgoal%
-  \renewcommand{\obsgoal}{\obs_{\text{goal}}}%
+  \renewcommand{\obsgoal}{\obsg}%
 \else%
-  \newcommand{\obsgoal}{\obs_{\text{goal}}}%
+  \newcommand{\obsgoal}{\obsg}%
 \fi
 
 
@@ -2000,6 +2328,140 @@
 
 
 
+\ifdefined\clip%
+  \renewcommand{\clip}[1]{\mathsf{sat}_{#1}}%
+\else%
+  \newcommand{\clip}[1]{\mathsf{sat}_{#1}}%
+\fi
+%  Clip up to some boundary 
+\ifdefined\maxu%
+  \renewcommand{\maxu}{b}%
+\else%
+  \newcommand{\maxu}{b}%
+\fi
+
+\ifdefined\clipu%
+  \renewcommand{\clipu}{\clip{\maxu}}%
+\else%
+  \newcommand{\clipu}{\clip{\maxu}}%
+\fi
+
+
+
+
+
+\ifdefined\gain%
+  \renewcommand{\gain}{\kappa}%
+\else%
+  \newcommand{\gain}{\kappa}%
+\fi
+
+
+
+\ifdefined\settime%
+  \renewcommand{\settime}{\mathbb{T}}%
+\else%
+  \newcommand{\settime}{\mathbb{T}}%
+\fi
+
+
+
+\ifdefined\controllerLast%
+  \renewcommand{\controllerLast}{\text{C1}}%
+\else%
+  \newcommand{\controllerLast}{\text{C1}}%
+\fi
+%  Uses last event
+\ifdefined\controllerTI%
+  \renewcommand{\controllerTI}{\text{C2}}%
+\else%
+  \newcommand{\controllerTI}{\text{C2}}%
+\fi
+%  Time integrale
+\ifdefined\controllerTS%
+  \renewcommand{\controllerTS}{\text{C3}}%
+\else%
+  \newcommand{\controllerTS}{\text{C3}}%
+\fi
+%  time smoothed
+\ifdefined\controllerTN%
+  \renewcommand{\controllerTN}{\text{C4}}%
+\else%
+  \newcommand{\controllerTN}{\text{C4}}%
+\fi
+%  Time neural
+
+
+
+
+
+
+\ifdefined\ds%
+  \renewcommand{\ds}{\Delta_s}%
+\else%
+  \newcommand{\ds}{\Delta_s}%
+\fi
+%  Spatial sampling
+\ifdefined\dt%
+  \renewcommand{\dt}{\Delta_t}%
+\else%
+  \newcommand{\dt}{\Delta_t}%
+\fi
+%  Temporal sampling
+\ifdefined\db%
+  \renewcommand{\db}{\Delta_b}%
+\else%
+  \newcommand{\db}{\Delta_b}%
+\fi
+%  Brightness threshold
+\ifdefined\dvsth%
+  \renewcommand{\dvsth}{\db}%
+\else%
+  \newcommand{\dvsth}{\db}%
+\fi
+%  Threshold
+\ifdefined\camexp%
+  \renewcommand{\camexp}{\text{EX}}%
+\else%
+  \newcommand{\camexp}{\text{EX}}%
+\fi
+%  Exposure
+
+
+\ifdefined\mseps%
+  \renewcommand{\mseps}{\text{MSE}_{\text{ps}}}%
+\else%
+  \newcommand{\mseps}{\text{MSE}_{\text{ps}}}%
+\fi
+%  periodic sampling
+\ifdefined\mseeb%
+  \renewcommand{\mseeb}{\text{MSE}_{\text{eb}}}%
+\else%
+  \newcommand{\mseeb}{\text{MSE}_{\text{eb}}}%
+\fi
+%  MSE event based
+\ifdefined\bwps%
+  \renewcommand{\bwps}{\text{BW}_{\text{ps}}}%
+\else%
+  \newcommand{\bwps}{\text{BW}_{\text{ps}}}%
+\fi
+%  bandwidth periodic sampling
+\ifdefined\bweb%
+  \renewcommand{\bweb}{\text{BW}_{\text{eb}}}%
+\else%
+  \newcommand{\bweb}{\text{BW}_{\text{eb}}}%
+\fi
+%  bandwidth event based
+
+
+\ifdefined\ori%
+  \renewcommand{\ori}{\alpha}%
+\else%
+  \newcommand{\ori}{\alpha}%
+\fi
+
+
+
 %
 
 \ifdefined\esSt%
@@ -2392,7 +2854,334 @@
 
 
 
- 
+\ifdefined\brel%
+  \renewcommand{\brel}{\leq_{B}}%
+\else%
+  \newcommand{\brel}{\leq_{B}}%
+\fi
+%  Simulation partial order
+\ifdefined\bsim%
+  \renewcommand{\bsim}{\sim_{B}}%
+\else%
+  \newcommand{\bsim}{\sim_{B}}%
+\fi
+%  Simulation relation
+
+
+
+
+
+
+\ifdefined\veh%
+  \renewcommand{\veh}{\vehBody}%
+\else%
+  \newcommand{\veh}{\vehBody}%
+\fi
+%  A vehicle body
+\ifdefined\vehBody%
+  \renewcommand{\vehBody}{B}%
+\else%
+  \newcommand{\vehBody}{B}%
+\fi
+%  A vehicle body
+\ifdefined\vehKin%
+  \renewcommand{\vehKin}{K}%
+\else%
+  \newcommand{\vehKin}{K}%
+\fi
+%  Vehicle kinematics 
+\ifdefined\vehSensPos%
+  \renewcommand{\vehSensPos}{\boldsymbol{r}}%
+\else%
+  \newcommand{\vehSensPos}{\boldsymbol{r}}%
+\fi
+%  Sensor relative pose
+
+
+\ifdefined\vehSensFun%
+  \renewcommand{\vehSensFun}{\psi}%
+\else%
+  \newcommand{\vehSensFun}{\psi}%
+\fi
+%  Function that defines an exteroceptive sensor
+\ifdefined\env%
+  \renewcommand{\env}{e}%
+\else%
+  \newcommand{\env}{e}%
+\fi
+%  Environment
+\ifdefined\envSp%
+  \renewcommand{\envSp}{\mathcal{E}}%
+\else%
+  \newcommand{\envSp}{\mathcal{E}}%
+\fi
+%  Environment space
+
+
+% \newcommand{\envo}{\mathsf{Obs}} % Obstacles in the environment
+
+% \newcommand{\envt}{\mathsf{Ref}} % Texture (function on $\envob$)
+
+% \newcommand{\envf}{\mathsf{Fie}} % Field sensed by field sampler
+
+
+
+\ifdefined\envo%
+  \renewcommand{\envo}{\mathcal{O}}%
+\else%
+  \newcommand{\envo}{\mathcal{O}}%
+\fi
+%  Obstacles in the environment
+\ifdefined\envt%
+  \renewcommand{\envt}{\mathcal{T}}%
+\else%
+  \newcommand{\envt}{\mathcal{T}}%
+\fi
+%  Texture (function on $\envob$)
+\ifdefined\envf%
+  \renewcommand{\envf}{\mathcal{F}}%
+\else%
+  \newcommand{\envf}{\mathcal{F}}%
+\fi
+%  Field sensed by field sampler
+
+
+\ifdefined\envob%
+  \renewcommand{\envob}{\partial \envo}%
+\else%
+  \newcommand{\envob}{\partial \envo}%
+\fi
+%  Obstacles boundaries
+
+
+\ifdefined\obspsDiff%
+  \renewcommand{\obspsDiff}{\obsps^{\text{dif}}}%
+\else%
+  \newcommand{\obspsDiff}{\obsps^{\text{dif}}}%
+\fi
+
+\ifdefined\obspsNotDiff%
+  \renewcommand{\obspsNotDiff}{\obsps^{\overline{\text{dif}}}}%
+\else%
+  \newcommand{\obspsNotDiff}{\obsps^{\overline{\text{dif}}}}%
+\fi
+
+
+
+\ifdefined\sic%
+  \renewcommand{\sic}{\text{VS}}%
+\else%
+  \newcommand{\sic}{\text{VS}}%
+\fi
+%  ideal camera
+\ifdefined\sir%
+  \renewcommand{\sir}{\text{RF}}%
+\else%
+  \newcommand{\sir}{\text{RF}}%
+\fi
+%  ideal range finder
+\ifdefined\sif%
+  \renewcommand{\sif}{\text{FS}}%
+\else%
+  \newcommand{\sif}{\text{FS}}%
+\fi
+%  ideal field sampler
+\ifdefined\sicV%
+  \renewcommand{\sicV}{\sic(\obspsV)}%
+\else%
+  \newcommand{\sicV}{\sic(\obspsV)}%
+\fi
+%  ideal camera with viewport
+\ifdefined\sirV%
+  \renewcommand{\sirV}{\sir(\obspsV)}%
+\else%
+  \newcommand{\sirV}{\sir(\obspsV)}%
+\fi
+%  ideal range finder with viewport
+\ifdefined\sifV%
+  \renewcommand{\sifV}{\sif(\obspsV)}%
+\else%
+  \newcommand{\sifV}{\sif(\obspsV)}%
+\fi
+%  ideal field sampler with viewport
+
+
+\ifdefined\zoh%
+  \renewcommand{\zoh}[1]{\text{Zoh}_{#1}}%
+\else%
+  \newcommand{\zoh}[1]{\text{Zoh}_{#1}}%
+\fi
+%  Zero order hold
+
+
+
+
+\ifdefined\ygneig%
+  \renewcommand{\ygneig}{N}%
+\else%
+  \newcommand{\ygneig}{N}%
+\fi
+%  A neighborhoood of $\obsg$.
+
+
+
+
+
+
+\ifdefined\allrobots%
+  \renewcommand{\allrobots}{\mathsf{Robots}}%
+\else%
+  \newcommand{\allrobots}{\mathsf{Robots}}%
+\fi
+%  The set of all robots
+% \newcommand{\vehRob}{\mathsf{Vehicles}} % Vehicle robots
+
+% \newcommand{\vehRob}{\mathsf{\color{blue}ISV}} % Idealized Simple Vehicles
+
+\ifdefined\vehRob%
+  \renewcommand{\vehRob}{\mathsf{ISV}}%
+\else%
+  \newcommand{\vehRob}{\mathsf{ISV}}%
+\fi
+%  Idealized Simple Vehicles
+\ifdefined\vehRobNuis%
+  \renewcommand{\vehRobNuis}{{\tilde{\vehRob}}}%
+\else%
+  \newcommand{\vehRobNuis}{{\tilde{\vehRob}}}%
+\fi
+%  Vehicle robots with nuisances
+
+
+\ifdefined\robVeh%
+  \renewcommand{\robVeh}{\vehRob}%
+\else%
+  \newcommand{\robVeh}{\vehRob}%
+\fi
+
+
+
+
+
+
+
+
+
+
+
+\ifdefined\MA%
+  \renewcommand{\MA}{\M{A}}%
+\else%
+  \newcommand{\MA}{\M{A}}%
+\fi
+
+\ifdefined\MB%
+  \renewcommand{\MB}{\M{B}}%
+\else%
+  \newcommand{\MB}{\M{B}}%
+\fi
+
+\ifdefined\MC%
+  \renewcommand{\MC}{\M{C}}%
+\else%
+  \newcommand{\MC}{\M{C}}%
+\fi
+
+\ifdefined\MG%
+  \renewcommand{\MG}{\M{G}}%
+\else%
+  \newcommand{\MG}{\M{G}}%
+\fi
+
+\ifdefined\MH%
+  \renewcommand{\MH}{\M{H}}%
+\else%
+  \newcommand{\MH}{\M{H}}%
+\fi
+
+
+
+\ifdefined\ML%
+  \renewcommand{\ML}{\M{L}}%
+\else%
+  \newcommand{\ML}{\M{L}}%
+\fi
+
+\ifdefined\MQ%
+  \renewcommand{\MQ}{\M{Q}}%
+\else%
+  \newcommand{\MQ}{\M{Q}}%
+\fi
+
+\ifdefined\MP%
+  \renewcommand{\MP}{\M{P}}%
+\else%
+  \newcommand{\MP}{\M{P}}%
+\fi
+
+\ifdefined\MS%
+  \renewcommand{\MS}{\M{S}}%
+\else%
+  \newcommand{\MS}{\M{S}}%
+\fi
+
+\ifdefined\MSigma%
+  \renewcommand{\MSigma}{\M{\Sigma}}%
+\else%
+  \newcommand{\MSigma}{\M{\Sigma}}%
+\fi
+
+\ifdefined\MV%
+  \renewcommand{\MV}{\M{V}}%
+\else%
+  \newcommand{\MV}{\M{V}}%
+\fi
+
+\ifdefined\MW%
+  \renewcommand{\MW}{\M{W}}%
+\else%
+  \newcommand{\MW}{\M{W}}%
+\fi
+
+
+
+
+
+\ifdefined\SP%
+  \renewcommand{\SP}{P_{\text{s}}}%
+\else%
+  \newcommand{\SP}{P_{\text{s}}}%
+\fi
+%  Sensing power
+\ifdefined\AP%
+  \renewcommand{\AP}{P_{\text{a}}}%
+\else%
+  \newcommand{\AP}{P_{\text{a}}}%
+\fi
+%  Actuation power
+\ifdefined\SE%
+  \renewcommand{\SE}{E}%
+\else%
+  \newcommand{\SE}{E}%
+\fi
+%  Stored energy
+\ifdefined\ER%
+  \renewcommand{\ER}{r}%
+\else%
+  \newcommand{\ER}{r}%
+\fi
+%  Trajectory efficiency ratio
+\ifdefined\HP%
+  \renewcommand{\HP}{\Theta}%
+\else%
+  \newcommand{\HP}{\Theta}%
+\fi
+%  Heading precision
+\ifdefined\np%
+  \renewcommand{\np}{n}%
+\else%
+  \newcommand{\np}{n}%
+\fi
+%  Number of pixels
 
 
 \ifdefined\scene%
@@ -3604,6 +4393,20 @@
   \newcommand{\bbG}{\abb{G}}%
 \fi
 
+\ifdefined\bbH%
+  \renewcommand{\bbH}{\abb{H}}%
+\else%
+  \newcommand{\bbH}{\abb{H}}%
+\fi
+
+\ifdefined\bbL%
+  \renewcommand{\bbL}{\abb{L}}%
+\else%
+  \newcommand{\bbL}{\abb{L}}%
+\fi
+
+
+
 \ifdefined\bbSpBA%
   \renewcommand{\bbSpBA}{\bbSp(\setB;\setA)}%
 \else%
@@ -3632,10 +4435,44 @@
 %  Series of two systems
 
 
-\ifdefined\world%
-  \renewcommand{\world}{\boldsymbol{w}}%
+\ifdefined\bbSpAny%
+  \renewcommand{\bbSpAny}{\bbSp_{*}}%
 \else%
-  \newcommand{\world}{\boldsymbol{w}}%
+  \newcommand{\bbSpAny}{\bbSp_{*}}%
+\fi
+%  Any of the following
+\ifdefined\bbSpDT%
+  \renewcommand{\bbSpDT}[1]{\bbSp^{\text{d}}_{#1}}%
+\else%
+  \newcommand{\bbSpDT}[1]{\bbSp^{\text{d}}_{#1}}%
+\fi
+%  Discrete time
+\ifdefined\bbSpCT%
+  \renewcommand{\bbSpCT}{\bbSp^{\text{c}}}%
+\else%
+  \newcommand{\bbSpCT}{\bbSp^{\text{c}}}%
+\fi
+%  Continuous time
+\ifdefined\bbSpEB%
+  \renewcommand{\bbSpEB}{\bbSp^{\text{e}}}%
+\else%
+  \newcommand{\bbSpEB}{\bbSp^{\text{e}}}%
+\fi
+%  Event-based
+
+
+
+
+
+
+
+
+
+
+\ifdefined\world%
+  \renewcommand{\world}{\textsf{m}}%
+\else%
+  \newcommand{\world}{\textsf{m}}%
 \fi
 %  The "world", an element of $\bbSpYU$.
 
@@ -3763,9 +4600,9 @@
 
 
 \ifdefined\genimages%
-  \renewcommand{\genimages}{\vmath{Images}}%
+  \renewcommand{\genimages}{\vmath{Im}}%
 \else%
-  \newcommand{\genimages}{\vmath{Images}}%
+  \newcommand{\genimages}{\vmath{Im}}%
 \fi
 %  Images on physical space $\obsps$.
 
@@ -3780,36 +4617,40 @@
 
 
 
-
+\ifdefined\obsgmark%
+  \renewcommand{\obsgmark}{\circ}%
+\else%
+  \newcommand{\obsgmark}{\circ}%
+\fi
 
 \ifdefined\obsg%
-  \renewcommand{\obsg}{\check{\obs}}%
+  \renewcommand{\obsg}{\obs_{\obsgmark}}%
 \else%
-  \newcommand{\obsg}{\check{\obs}}%
+  \newcommand{\obsg}{\obs_{\obsgmark}}%
 \fi
 %  Goal observations.
 
 
 \ifdefined\obsge%
-  \renewcommand{\obsge}{\check{\obse}}%
+  \renewcommand{\obsge}{\obse_{\obsgmark}}%
 \else%
-  \newcommand{\obsge}{\check{\obse}}%
+  \newcommand{\obsge}{\obse_{\obsgmark}}%
 \fi
 %  Goal observations (element).
 
 
 \ifdefined\obsgl%
-  \renewcommand{\obsgl}{\check{\obsl}}%
+  \renewcommand{\obsgl}{\obsl_{\obsgmark}}%
 \else%
-  \newcommand{\obsgl}{\check{\obsl}}%
+  \newcommand{\obsgl}{\obsl_{\obsgmark}}%
 \fi
 %  Goal observations (element).
 
 
 \ifdefined\obsgle%
-  \renewcommand{\obsgle}{\check{\obsle}}%
+  \renewcommand{\obsgle}{\obsle_{\obsgmark}}%
 \else%
-  \newcommand{\obsgle}{\check{\obsle}}%
+  \newcommand{\obsgle}{\obsle_{\obsgmark}}%
 \fi
 %  Goal observations (element).
 
@@ -3824,6 +4665,16 @@
   \renewcommand{\bbSpYU}{\bbSp(\obsSp;\cmdSp)}%
 \else%
   \newcommand{\bbSpYU}{\bbSp(\obsSp;\cmdSp)}%
+\fi
+%  \towrite
+
+
+
+
+\ifdefined\bbSpYXU%
+  \renewcommand{\bbSpYXU}{\bbSp(\obsSp;\stateSp;\cmdSp)}%
+\else%
+  \newcommand{\bbSpYXU}{\bbSp(\obsSp;\stateSp;\cmdSp)}%
 \fi
 %  \towrite
 
@@ -3903,8 +4754,6 @@
 \else%
   \newcommand{\veVehicles}{\mathsf{Vehicles}}%
 \fi
-%  all Vehicles dynamics
-
 
 
 
@@ -4037,9 +4886,9 @@
 
 
 \ifdefined\expl%
-  \renewcommand{\expl}[1]{{ \quad (#1)}\nonumber}%
+  \renewcommand{\expl}[1]{{ \color{gray}\quad \{#1\}}\nonumber}%
 \else%
-  \newcommand{\expl}[1]{{ \quad (#1)}\nonumber}%
+  \newcommand{\expl}[1]{{ \color{gray}\quad \{#1\}}\nonumber}%
 \fi
 %  Explanation in formulas
 %\newcommand{\expl}[1]{{ \circledcirc\quad\small \color{blue} #1}} % Explanation in formulas
@@ -4138,17 +4987,9 @@
 
 
 
-\ifdefined\AC%
-  \renewcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}}%
-\else%
-  \newcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}}%
-\fi
-%  Marker for sections to write
-\ifdefined\ac%
-  \renewcommand{\ac}[1]{\AC{#1}}%
-\else%
-  \newcommand{\ac}[1]{\AC{#1}}%
-\fi
+% \newcommand{\AC}[1]{{\color[rgb]{0,0,0.5}\textbf{AC:} #1}} % Marker for sections to write
+
+% \newcommand{\ac}[1]{\AC{#1}}
 
 \ifdefined\towrite%
   \renewcommand{\towrite}{\textbf{to write}\xspace}%
@@ -4174,10 +5015,22 @@
   \newcommand{\citeboh}{{\color{red}[xxx]}\xspace}%
 \fi
 
+\ifdefined\citexxx%
+  \renewcommand{\citexxx}{\citeboh\xspace}%
+\else%
+  \newcommand{\citexxx}{\citeboh\xspace}%
+\fi
+
 \ifdefined\xxx%
   \renewcommand{\xxx}{\boh}%
 \else%
   \newcommand{\xxx}{\boh}%
+\fi
+
+\ifdefined\XXX%
+  \renewcommand{\XXX}{\xxx}%
+\else%
+  \newcommand{\XXX}{\xxx}%
 \fi
 
 \ifdefined\notsure%
@@ -4694,28 +5547,84 @@
 %  Special Euclidean algebra
 
 
-\ifdefined\sothree%
-  \renewcommand{\sothree}{\mathrm{SO(3)}}%
+\ifdefined\SOthree%
+  \renewcommand{\SOthree}{\mathrm{SO(3)}}%
 \else%
-  \newcommand{\sothree}{\mathrm{SO(3)}}%
+  \newcommand{\SOthree}{\mathrm{SO(3)}}%
 \fi
 %  Special orthogonal group (rotation matrices)
 
 
-\ifdefined\sethree%
-  \renewcommand{\sethree}{\mathrm{SE(3)}}%
+\ifdefined\SEthree%
+  \renewcommand{\SEthree}{\mathrm{SE(3)}}%
 \else%
-  \newcommand{\sethree}{\mathrm{SE(3)}}%
+  \newcommand{\SEthree}{\mathrm{SE(3)}}%
 \fi
 %  Special Euclidean group 
+
+
+\ifdefined\SEtwo%
+  \renewcommand{\SEtwo}{\mathrm{SE(2)}}%
+\else%
+  \newcommand{\SEtwo}{\mathrm{SE(2)}}%
+\fi
+%  Special Euclidean group 
+
+
+% \newcommand{\SOtwo}{\mathrm{SO(2)}}  % Special Euclidean group 
+
+
+
+\ifdefined\SEthreeAlg%
+  \renewcommand{\SEthreeAlg}{\sealgebra(3)}%
+\else%
+  \newcommand{\SEthreeAlg}{\sealgebra(3)}%
+\fi
+
+\ifdefined\SEtwoAlg%
+  \renewcommand{\SEtwoAlg}{\sealgebra(2)}%
+\else%
+  \newcommand{\SEtwoAlg}{\sealgebra(2)}%
+\fi
+
+\ifdefined\SOthreeAlg%
+  \renewcommand{\SOthreeAlg}{\sealgebra(3)}%
+\else%
+  \newcommand{\SOthreeAlg}{\sealgebra(3)}%
+\fi
+
+\ifdefined\SOtwoAlg%
+  \renewcommand{\SOtwoAlg}{\sealgebra(2)}%
+\else%
+  \newcommand{\SOtwoAlg}{\sealgebra(2)}%
+\fi
+
 
 
 \ifdefined\setwo%
-  \renewcommand{\setwo}{\mathrm{SE(2)}}%
+  \renewcommand{\setwo}{\SEtwo}%
 \else%
-  \newcommand{\setwo}{\mathrm{SE(2)}}%
+  \newcommand{\setwo}{\SEtwo}%
 \fi
-%  Special Euclidean group 
+
+\ifdefined\sethree%
+  \renewcommand{\sethree}{\SEthree}%
+\else%
+  \newcommand{\sethree}{\SEthree}%
+\fi
+
+\ifdefined\sotwo%
+  \renewcommand{\sotwo}{\SOtwo}%
+\else%
+  \newcommand{\sotwo}{\SOtwo}%
+\fi
+
+\ifdefined\sothree%
+  \renewcommand{\sothree}{\SOthree}%
+\else%
+  \newcommand{\sothree}{\SOthree}%
+\fi
+
 
 
 
@@ -4857,9 +5766,9 @@
 
 
 \ifdefined\measures%
-  \renewcommand{\measures}{\vmath{ProbMeasures}}%
+  \renewcommand{\measures}{\vmath{Measures}}%
 \else%
-  \newcommand{\measures}{\vmath{ProbMeasures}}%
+  \newcommand{\measures}{\vmath{Measures}}%
 \fi
 %  Set of probability measures on a set.
 
@@ -4910,6 +5819,12 @@
   \newcommand{\posesp}{\mathscr{Q}}%
 \fi
 %  Pose space, subgroup of $\sethree$.
+\ifdefined\posespAlg%
+  \renewcommand{\posespAlg}{\text{q}}%
+\else%
+  \newcommand{\posespAlg}{\text{q}}%
+\fi
+%  Pose space algebra.
 \ifdefined\confspace%
   \renewcommand{\confspace}{\posesp}%
 \else%
@@ -4922,12 +5837,24 @@
   \newcommand{\pos}{\boldsymbol{t}}%
 \fi
 %  Position in the world frame.
+\ifdefined\posEl%
+  \renewcommand{\posEl}{t}%
+\else%
+  \newcommand{\posEl}{t}%
+\fi
+%  Position in the world frame (element)
 \ifdefined\rotm%
   \renewcommand{\rotm}{\M{R}}%
 \else%
   \newcommand{\rotm}{\M{R}}%
 \fi
 %  Rotation matrix representing orientation in the world frame.
+\ifdefined\rotme%
+  \renewcommand{\rotme}{R}%
+\else%
+  \newcommand{\rotme}{R}%
+\fi
+%  Element of rotation matrix
 \ifdefined\lvel%
   \renewcommand{\lvel}{\boldsymbol{v}}%
 \else%
@@ -4946,6 +5873,12 @@
   \newcommand{\avel}{\boldsymbol{\omega}}%
 \fi
 %  Angular velocity (as vector)
+\ifdefined\avele%
+  \renewcommand{\avele}{\omega}%
+\else%
+  \newcommand{\avele}{\omega}%
+\fi
+%  Angular velocity (element)
 \ifdefined\avels%
   \renewcommand{\avels}{\omega}%
 \else%
@@ -4996,7 +5929,19 @@
   \newcommand{\fieldpos}{\boldsymbol{z}}%
 \fi
 %  Generic position in the world.
+\ifdefined\fieldpose%
+  \renewcommand{\fieldpose}{z}%
+\else%
+  \newcommand{\fieldpose}{z}%
+\fi
+%  Generic position in the world.
 
+
+\ifdefined\worldSp%
+  \renewcommand{\worldSp}{\mapsp}%
+\else%
+  \newcommand{\worldSp}{\mapsp}%
+\fi
 
 
 
@@ -5020,11 +5965,15 @@
   \newcommand{\worldsp}{\mapsp}%
 \fi
 
+
+
 \ifdefined\wshapesp%
   \renewcommand{\wshapesp}{\mshapesp}%
 \else%
   \newcommand{\wshapesp}{\mshapesp}%
 \fi
+
+
 
 
 

@@ -1,0 +1,11 @@
+
+\usepackage{mdwlist}
+\let\stditemize\itemize
+\let\endstditemize\enditemize
+\let\itemize\undefined
+\makecompactlist{itemize}{stditemize}
+
+\let\stdenumerate\enumerate
+\let\endstdenumerate\endenumerate
+\let\enumerate\undefined
+\makecompactlist{enumerate}{stdenumerate}

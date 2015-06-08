@@ -30,9 +30,13 @@ $\agSp$ &  \\
 \multicolumn{2}{l}{BDS report}\\ 
  \hline
 $\BDSnk$ & \\ 
+ $\BDSSk$ & \\ 
  $\bgBDSfamily$ &  Family of BDS sensors\\ 
+ $\bgCBDSfamily$ &  Family of BDS sensors\\ 
  $\bds$ &  Bilinear dynamics system\\ 
  $\BDS$ & \\ 
+ $\cbds$ &  Continuous-space bilinear dynamics system\\ 
+ $\CBDS$ & \\ 
  $\TT$ &  Learned tensor\\ 
  $\TTe$ &  ?\\ 
  $\TP$ & \\ 
@@ -75,11 +79,13 @@ $\bgds$ &  Bilinear gradient dynamics system\\
  $\bgPopCode$ &  Popoulation code\\ 
  $\bgRankCode$ &  Rank code\\ 
  $\bgRangeFamily$ &  Family of range-finders models\\ 
+ $\bgFields$ & \\ 
  $\bgCmdConstraints$ & \\ 
  $\bgPopK$ & \\ 
  \multicolumn{2}{l}{BGDS report}\\ 
  \hline
 $\state$ &  Generic underlying state.\\ 
+ $\stateSp$ &  Generic underlying state space.\\ 
  $\detecte$ &  Detector\\ 
  $\dist$ &  Distance to obstacle\\ 
  $\distn$ &  Distance to obstacle, mean normalized.\\ 
@@ -216,7 +222,52 @@ $\ddsres$ &  Resolution of the sensor in a \dds.\\
  $\cmdDist$ &  Distance between two commands.\\ 
  $\cmdADist$ &  Anti-distance between two commands.\\ 
  $\images$ & \\ 
- $\ddsfov$ &  Field of view for DDS\\ 
+ $\obspsV$ &  viewport\\ 
+ $\ddsfov$ &  viewport\\ 
+ $\obspsVunpred$ &  undpredictable part\\ 
+ $\obspsVpred$ &  predictable part \\ 
+ $\obspsVunpredt$ &  undpredictable part at time t\\ 
+ $\obspsVpredt$ &  predictable part at time t\\ 
+ $\ddsctod$ & \\ 
+ $\ddsste$ &  State of a DDS (element)\\ 
+ $\ddsst$ &  State of a DDS\\ 
+ \multicolumn{2}{l}{Learning of latent/deep dynamics}\\ 
+ \hline
+$\ldmap$ &  Map from latent state to instantaneous dynamics\\ 
+ $\hclass$ &  Hidden class\\ 
+ $\iclass$ &  Instantnaeous class\\ 
+ \multicolumn{2}{l}{Parallel learning paper}\\ 
+ \hline
+$\desplStats$ & \\ 
+ $\desplIStats$ & \\ 
+ $\desplData$ & \\ 
+ $\desplIData$ & \\ 
+ $\desplModels$ & \\ 
+ $\desplIModels$ & \\ 
+ $\despllearn$ & \\ 
+ $\desplilearn$ & \\ 
+ $\desplfilter$ & \\ 
+ $\desplfmodel$ & \\ 
+ $\desplistats$ & \\ 
+ $\desplglue$ & \\ 
+ $\desplmglue$ & \\ 
+ $\desplstats$ & \\ 
+ $\desplmerge$ & \\ 
+ $\desplInter$ &  Interval\\ 
+ $\patternA$ & \\ 
+ $\patternB$ & \\ 
+ $\patternC$ & \\ 
+ $\patternD$ & \\ 
+ $\proto$ & \\ 
+ $\slicelen$ & \\ 
+ $\njobslearn$ & \\ 
+ $\njobsmerge$ & \\ 
+ $\njobstotal$ & \\ 
+ \multicolumn{2}{l}{Compmake}\\ 
+ \hline
+$\Compmake$ & \\ 
+ $\parmake$ & \\ 
+ $\sgemake$ & \\ 
  \multicolumn{2}{l}{Technical report for diffeoplanning}\\ 
  \hline
 \multicolumn{2}{l}{spaces}\\ 
@@ -293,6 +344,28 @@ $\dDiffLone$ & \\
  $\maxdis$ &  goal threshold\\ 
  $\impred$ &  Image prediction\\ 
  $\plA$ & \\ 
+ \multicolumn{2}{l}{neuromorphic control}\\ 
+ \hline
+$\maxu$ & \\ 
+ $\clipu$ & \\ 
+ $\gain$ & \\ 
+ $\settime$ & \\ 
+ $\controllerLast$ &  Uses last event\\ 
+ $\controllerTI$ &  Time integrale\\ 
+ $\controllerTS$ &  time smoothed\\ 
+ $\controllerTN$ &  Time neural\\ 
+ \multicolumn{2}{l}{optimal sensor}\\ 
+ \hline
+$\ds$ &  Spatial sampling\\ 
+ $\dt$ &  Temporal sampling\\ 
+ $\db$ &  Brightness threshold\\ 
+ $\dvsth$ &  Threshold\\ 
+ $\camexp$ &  Exposure\\ 
+ $\mseps$ &  periodic sampling\\ 
+ $\mseeb$ &  MSE event based\\ 
+ $\bwps$ &  bandwidth periodic sampling\\ 
+ $\bweb$ &  bandwidth event based\\ 
+ $\ori$ & \\ 
  \multicolumn{2}{l}{Estimation with symmetries}\\ 
  \hline
 \multicolumn{2}{l}{State}\\ 
@@ -358,7 +431,59 @@ $\gsdContravariant$ &  Contravariance\\
  $\gsdUnstructured$ &  Unstructured result\\ 
  \multicolumn{2}{l}{Invariances}\\ 
  \hline
-\multicolumn{2}{l}{Symbols used by Soatto}\\ 
+$\brel$ &  Simulation partial order\\ 
+ $\bsim$ &  Simulation relation\\ 
+ \multicolumn{2}{l}{Symbols introduced in JBDS}\\ 
+ \hline
+$\veh$ &  A vehicle body\\ 
+ $\vehBody$ &  A vehicle body\\ 
+ $\vehKin$ &  Vehicle kinematics \\ 
+ $\vehSensPos$ &  Sensor relative pose\\ 
+ $\vehSensFun$ &  Function that defines an exteroceptive sensor\\ 
+ $\env$ &  Environment\\ 
+ $\envSp$ &  Environment space\\ 
+ $\envo$ &  Obstacles in the environment\\ 
+ $\envt$ &  Texture (function on $\envob$)\\ 
+ $\envf$ &  Field sensed by field sampler\\ 
+ $\envob$ &  Obstacles boundaries\\ 
+ $\obspsDiff$ & \\ 
+ $\obspsNotDiff$ & \\ 
+ $\sic$ &  ideal camera\\ 
+ $\sir$ &  ideal range finder\\ 
+ $\sif$ &  ideal field sampler\\ 
+ $\sicV$ &  ideal camera with viewport\\ 
+ $\sirV$ &  ideal range finder with viewport\\ 
+ $\sifV$ &  ideal field sampler with viewport\\ 
+ \multicolumn{2}{l}{Used in proofs for JBDS}\\ 
+ \hline
+$\ygneig$ &  A neighborhoood of $\obsg$.\\ 
+ \multicolumn{2}{l}{}\\ 
+ \hline
+$\allrobots$ &  The set of all robots\\ 
+ $\vehRob$ &  Idealized Simple Vehicles\\ 
+ $\vehRobNuis$ &  Vehicle robots with nuisances\\ 
+ $\robVeh$ & \\ 
+ \multicolumn{2}{l}{Optimal design of body and mind}\\ 
+ \hline
+$\MA$ & \\ 
+ $\MB$ & \\ 
+ $\MC$ & \\ 
+ $\MG$ & \\ 
+ $\MH$ & \\ 
+ $\ML$ & \\ 
+ $\MQ$ & \\ 
+ $\MP$ & \\ 
+ $\MS$ & \\ 
+ $\MSigma$ & \\ 
+ $\MV$ & \\ 
+ $\MW$ & \\ 
+ $\SP$ &  Sensing power\\ 
+ $\AP$ &  Actuation power\\ 
+ $\SE$ &  Stored energy\\ 
+ $\ER$ &  Trajectory efficiency ratio\\ 
+ $\HP$ &  Heading precision\\ 
+ $\np$ &  Number of pixels\\ 
+ \multicolumn{2}{l}{Symbols used by Soatto}\\ 
  \hline
 $\scene$ &  scene\\ 
  $\representation$ &  representation\\ 
@@ -525,12 +650,17 @@ $\bbDinv$ & \\
  $\bbE$ & \\ 
  $\bbF$ & \\ 
  $\bbG$ & \\ 
+ $\bbH$ & \\ 
+ $\bbL$ & \\ 
  $\bbSpBA$ &  \towrite\\ 
  $\bbSpAB$ &  \towrite\\ 
  \multicolumn{2}{l}{Deprecated}\\ 
  \hline
 $\bbOp$ &  Composition operation\\ 
  $\inSeries$ &  Series of two systems\\ 
+ $\bbSpAny$ &  Any of the following\\ 
+ $\bbSpCT$ &  Continuous time\\ 
+ $\bbSpEB$ &  Event-based\\ 
  \multicolumn{2}{l}{Bootstrapping symbols}\\ 
  \hline
 \multicolumn{2}{l}{Observations and commands}\\ 
@@ -556,13 +686,15 @@ $\obssp$ &  Observation physical space.\\
  $\imps$ &  Images on physical space $\obsps$.\\ 
  \multicolumn{2}{l}{Servoing}\\ 
  \hline
-$\obsg$ &  Goal observations.\\ 
+$\obsgmark$ & \\ 
+ $\obsg$ &  Goal observations.\\ 
  $\obsge$ &  Goal observations (element).\\ 
  $\obsgl$ &  Goal observations (element).\\ 
  $\obsgle$ &  Goal observations (element).\\ 
  \multicolumn{2}{l}{Abbreviations}\\ 
  \hline
 $\bbSpYU$ &  \towrite\\ 
+ $\bbSpYXU$ &  \towrite\\ 
  $\bbSpUY$ &  \towrite\\ 
  $\bbSpInvY$ &  Representation nuisances on commands\\ 
  $\bbSpInvU$ &  Representation nuisances on observations\\ 
@@ -574,8 +706,10 @@ $\bbSpYU$ &  \towrite\\
 $\veEnvironments$ &  All Vehicles environments \\ 
  $\veSensors$ &  all Vehicles sensors\\ 
  $\veDynamics$ &  all Vehicles dynamics\\ 
- $\veVehicles$ &  all Vehicles dynamics\\ 
- $\veSce$ & \\ 
+ $\veVehicles$ & \\ 
+ \multicolumn{2}{l}{todo}\\ 
+ \hline
+$\veSce$ & \\ 
  $\veVeh$ & \\ 
  $\veMov$ & \\ 
  $\veAdd$ & \\ 
@@ -611,7 +745,9 @@ $\ns$ & \\
  \hline
 $\towrite$ &  Marker for sections to write\\ 
  $\citeboh$ & \\ 
+ $\citexxx$ & \\ 
  $\xxx$ & \\ 
+ $\XXX$ & \\ 
  $\notsure$ & \\ 
  $\dontlike$ & \\ 
  $\notformal$ & \\ 
@@ -672,9 +808,17 @@ $\orthogroup$ &  Orthogonal group.\\
  $\se$ &  Special Euclidean algebra\\ 
  $\soalgebra$ & \\ 
  $\sealgebra$ &  Special Euclidean algebra\\ 
- $\sothree$ &  Special orthogonal group (rotation matrices)\\ 
- $\sethree$ &  Special Euclidean group \\ 
- $\setwo$ &  Special Euclidean group \\ 
+ $\SOthree$ &  Special orthogonal group (rotation matrices)\\ 
+ $\SEthree$ &  Special Euclidean group \\ 
+ $\SEtwo$ &  Special Euclidean group \\ 
+ $\SEthreeAlg$ & \\ 
+ $\SEtwoAlg$ & \\ 
+ $\SOthreeAlg$ & \\ 
+ $\SOtwoAlg$ & \\ 
+ $\setwo$ & \\ 
+ $\sethree$ & \\ 
+ $\sotwo$ & \\ 
+ $\sothree$ & \\ 
  \multicolumn{2}{l}{Very simple groups}\\ 
  \hline
 $\mgroup$ &  Multiplication group\\ 
@@ -706,12 +850,16 @@ $\obsip$ &  Inner product bilinear form.\\
  $\dummySensel$ & \\ 
  $\pose$ &  Robot pose $\pose = (\pos, \rotm) \in \posesp \subset \sethree$.\\ 
  $\posesp$ &  Pose space, subgroup of $\sethree$.\\ 
+ $\posespAlg$ &  Pose space algebra.\\ 
  $\confspace$ &  Robot configuration space\\ 
  $\pos$ &  Position in the world frame.\\ 
+ $\posEl$ &  Position in the world frame (element)\\ 
  $\rotm$ &  Rotation matrix representing orientation in the world frame.\\ 
+ $\rotme$ &  Element of rotation matrix\\ 
  $\lvel$ &  Linear velocity\\ 
  $\lvele$ &  Linear velocity (element)\\ 
  $\avel$ &  Angular velocity (as vector)\\ 
+ $\avele$ &  Angular velocity (element)\\ 
  $\avels$ &  Angular velocity in 2D (scalar)\\ 
  $\avelse$ &  Angular velocity (as skew-symmetric matrix)\\ 
  $\njoints$ &  Number of joints in a robot\\ 
@@ -721,6 +869,8 @@ $\obsip$ &  Inner product bilinear form.\\
  \hline
 $\field$ &  Field sampled by the field sensor.\\ 
  $\fieldpos$ &  Generic position in the world.\\ 
+ $\fieldpose$ &  Generic position in the world.\\ 
+ $\worldSp$ & \\ 
  \multicolumn{2}{l}{Deprecated}\\ 
  \hline
 $\wshape$ & \\ 

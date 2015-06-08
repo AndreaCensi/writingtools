@@ -24,3 +24,4 @@ Backup*key
 *.bak
 dropbox_screwup
 .DS_Store
+tex/summary.pdf

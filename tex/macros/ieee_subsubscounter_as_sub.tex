@@ -1,0 +1,6 @@
+% Note "thesubsubsectiondis" vs "thesubsubsection".
+% The limitation of this is that you can use either section+subsubsection
+% or sectoin + subsection, but not section+subsection+subsubsection
+% otherwise you get Section II.A.A
+\setcounter{secnumdepth}{5}
+\renewcommand{\thesubsubsectiondis}{\Alph{subsubsection})\,}

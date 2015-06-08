@@ -1,0 +1,7 @@
+% \DeclareFieldFormat[article]{pages}{#1}%
+% Don't display pages
+\AtEveryBibitem{\clearlist{pages}} 
+\DeclareFieldFormat{pages}{}
+% Don't display address
+\AtEveryBibitem{\clearlist{address}} 
+\AtEveryBibitem{\clearlist{location}} 
