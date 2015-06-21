@@ -32,6 +32,14 @@
 %  Agent's exploration phase
 
 
+\ifdefined\agLearn%
+  \renewcommand{\agLearn}{{\color{green} \mathsf{learn}}}%
+\else%
+  \newcommand{\agLearn}{{\color{green} \mathsf{learn}}}%
+\fi
+%  Agent's learning phase
+
+
 \ifdefined\agAct%
   \renewcommand{\agAct}{{\color{green} \mathsf{act}}}%
 \else%
@@ -3182,6 +3190,382 @@
   \newcommand{\np}{{\color{green} n}}%
 \fi
 %  Number of pixels
+
+
+\ifdefined\paths%
+  \renewcommand{\paths}{{\color{green} \aword{paths}}}%
+\else%
+  \newcommand{\paths}{{\color{green} \aword{paths}}}%
+\fi
+%  All paths in a graph
+
+
+\ifdefined\walks%
+  \renewcommand{\walks}{{\color{green} \aword{walks}}}%
+\else%
+  \newcommand{\walks}{{\color{green} \aword{walks}}}%
+\fi
+%  All paths in a graph
+
+
+\ifdefined\nodes%
+  \renewcommand{\nodes}{{\color{green} \aword{nodes}}}%
+\else%
+  \newcommand{\nodes}{{\color{green} \aword{nodes}}}%
+\fi
+%  nodes in a walk
+\ifdefined\edges%
+  \renewcommand{\edges}{{\color{green} \aword{edges}}}%
+\else%
+  \newcommand{\edges}{{\color{green} \aword{edges}}}%
+\fi
+%  edges in a walk
+\ifdefined\sources%
+  \renewcommand{\sources}{{\color{green} \aword{sources}}}%
+\else%
+  \newcommand{\sources}{{\color{green} \aword{sources}}}%
+\fi
+
+\ifdefined\sinks%
+  \renewcommand{\sinks}{{\color{green} \aword{sinks}}}%
+\else%
+  \newcommand{\sinks}{{\color{green} \aword{sinks}}}%
+\fi
+
+
+
+
+
+
+
+
+
+%
+
+
+
+\ifdefined\rN%
+  \renewcommand{\rN}{{\color{green} \aword{rN}}}%
+\else%
+  \newcommand{\rN}{{\color{green} \aword{rN}}}%
+\fi
+%  A resource graph's vertices
+\ifdefined\rE%
+  \renewcommand{\rE}{{\color{green} \aword{rE}}}%
+\else%
+  \newcommand{\rE}{{\color{green} \aword{rE}}}%
+\fi
+%  A resource graph's edges
+
+
+
+
+\ifdefined\rG%
+  \renewcommand{\rG}{{\color{green} \aword{rG}}}%
+\else%
+  \newcommand{\rG}{{\color{green} \aword{rG}}}%
+\fi
+%  A resource graph
+
+
+\ifdefined\rn%
+  \renewcommand{\rn}{{\color{green} \aword{rn}}}%
+\else%
+  \newcommand{\rn}{{\color{green} \aword{rn}}}%
+\fi
+%  A resource node
+\ifdefined\rnops%
+  \renewcommand{\rnops}{{\color{green} \aword{rn.capacity}}}%
+\else%
+  \newcommand{\rnops}{{\color{green} \aword{rn.capacity}}}%
+\fi
+%  A resource 
+
+
+\ifdefined\rnA%
+  \renewcommand{\rnA}{{\color{green} \aword{rn}_1}}%
+\else%
+  \newcommand{\rnA}{{\color{green} \aword{rn}_1}}%
+\fi
+
+\ifdefined\rnAops%
+  \renewcommand{\rnAops}{{\color{green} \aword{rn}_1.\aword{capacity}}}%
+\else%
+  \newcommand{\rnAops}{{\color{green} \aword{rn}_1.\aword{capacity}}}%
+\fi
+
+\ifdefined\rnB%
+  \renewcommand{\rnB}{{\color{green} \aword{rn}_2}}%
+\else%
+  \newcommand{\rnB}{{\color{green} \aword{rn}_2}}%
+\fi
+
+\ifdefined\rnBops%
+  \renewcommand{\rnBops}{{\color{green} \aword{rn}_2.\aword{capacity}}}%
+\else%
+  \newcommand{\rnBops}{{\color{green} \aword{rn}_2.\aword{capacity}}}%
+\fi
+
+
+
+\ifdefined\re%
+  \renewcommand{\re}{{\color{green} \aword{re}}}%
+\else%
+  \newcommand{\re}{{\color{green} \aword{re}}}%
+\fi
+%  A resource edge
+\ifdefined\relink%
+  \renewcommand{\relink}{{\color{green} \aword{re.link}}}%
+\else%
+  \newcommand{\relink}{{\color{green} \aword{re.link}}}%
+\fi
+%  A resource 
+\ifdefined\relatency%
+  \renewcommand{\relatency}{{\color{green} \re\aword{.latency}}}%
+\else%
+  \newcommand{\relatency}{{\color{green} \re\aword{.latency}}}%
+\fi
+
+\ifdefined\rebandwidth%
+  \renewcommand{\rebandwidth}{{\color{green} \re\aword{.bandwidth}}}%
+\else%
+  \newcommand{\rebandwidth}{{\color{green} \re\aword{.bandwidth}}}%
+\fi
+
+\ifdefined\reA%
+  \renewcommand{\reA}{{\color{green} \re_1}}%
+\else%
+  \newcommand{\reA}{{\color{green} \re_1}}%
+\fi
+
+\ifdefined\reB%
+  \renewcommand{\reB}{{\color{green} \re_2}}%
+\else%
+  \newcommand{\reB}{{\color{green} \re_2}}%
+\fi
+
+\ifdefined\reAlatency%
+  \renewcommand{\reAlatency}{{\color{green} \reA\aword{.latency}}}%
+\else%
+  \newcommand{\reAlatency}{{\color{green} \reA\aword{.latency}}}%
+\fi
+
+\ifdefined\reAbandwidth%
+  \renewcommand{\reAbandwidth}{{\color{green} \reA\aword{.bandwidth}}}%
+\else%
+  \newcommand{\reAbandwidth}{{\color{green} \reA\aword{.bandwidth}}}%
+\fi
+
+\ifdefined\reBbandwidth%
+  \renewcommand{\reBbandwidth}{{\color{green} \reB\aword{.bandwidth}}}%
+\else%
+  \newcommand{\reBbandwidth}{{\color{green} \reB\aword{.bandwidth}}}%
+\fi
+
+ 
+
+
+
+
+
+%
+
+\ifdefined\cG%
+  \renewcommand{\cG}{{\color{green} \aword{cG}}}%
+\else%
+  \newcommand{\cG}{{\color{green} \aword{cG}}}%
+\fi
+%  A computationg graph
+\ifdefined\cN%
+  \renewcommand{\cN}{{\color{green} \aword{cN}}}%
+\else%
+  \newcommand{\cN}{{\color{green} \aword{cN}}}%
+\fi
+%  A cgraph's vertices
+\ifdefined\cE%
+  \renewcommand{\cE}{{\color{green} \aword{cE}}}%
+\else%
+  \newcommand{\cE}{{\color{green} \aword{cE}}}%
+\fi
+%  A cgraph's edges
+
+
+\ifdefined\cn%
+  \renewcommand{\cn}{{\color{green} \aword{cn}}}%
+\else%
+  \newcommand{\cn}{{\color{green} \aword{cn}}}%
+\fi
+%  A computation node
+\ifdefined\cnops%
+  \renewcommand{\cnops}{{\color{green} \aword{cn.ops}}}%
+\else%
+  \newcommand{\cnops}{{\color{green} \aword{cn.ops}}}%
+\fi
+%  A computation node's ops
+
+
+\ifdefined\cnA%
+  \renewcommand{\cnA}{{\color{green} \cn_1}}%
+\else%
+  \newcommand{\cnA}{{\color{green} \cn_1}}%
+\fi
+
+\ifdefined\cnB%
+  \renewcommand{\cnB}{{\color{green} \cn_2}}%
+\else%
+  \newcommand{\cnB}{{\color{green} \cn_2}}%
+\fi
+
+\ifdefined\cnAops%
+  \renewcommand{\cnAops}{{\color{green} \cn_1\aword{.ops}}}%
+\else%
+  \newcommand{\cnAops}{{\color{green} \cn_1\aword{.ops}}}%
+\fi
+
+\ifdefined\cnBops%
+  \renewcommand{\cnBops}{{\color{green} \cn_2\aword{.ops}}}%
+\else%
+  \newcommand{\cnBops}{{\color{green} \cn_2\aword{.ops}}}%
+\fi
+
+
+
+\ifdefined\cce%
+  \renewcommand{\cce}{{\color{green} \aword{ce}}}%
+\else%
+  \newcommand{\cce}{{\color{green} \aword{ce}}}%
+\fi
+%  A computation edge
+% \newcommand{\cce}{\ce} % A computation edge
+
+\ifdefined\ceA%
+  \renewcommand{\ceA}{{\color{green} \cce_1}}%
+\else%
+  \newcommand{\ceA}{{\color{green} \cce_1}}%
+\fi
+%  A computation edge
+\ifdefined\ceB%
+  \renewcommand{\ceB}{{\color{green} \cce_2}}%
+\else%
+  \newcommand{\ceB}{{\color{green} \cce_2}}%
+\fi
+%  A computation edge
+
+
+\ifdefined\cesize%
+  \renewcommand{\cesize}{{\color{green} \aword{ce.size}}}%
+\else%
+  \newcommand{\cesize}{{\color{green} \aword{ce.size}}}%
+\fi
+%  Signal size (bytes)
+\ifdefined\ceAsize%
+  \renewcommand{\ceAsize}{{\color{green} \aword{ce}_1\aword{.size}}}%
+\else%
+  \newcommand{\ceAsize}{{\color{green} \aword{ce}_1\aword{.size}}}%
+\fi
+
+\ifdefined\ceBsize%
+  \renewcommand{\ceBsize}{{\color{green} \aword{ce}_2\aword{.size}}}%
+\else%
+  \newcommand{\ceBsize}{{\color{green} \aword{ce}_2\aword{.size}}}%
+\fi
+
+
+
+
+
+%
+
+
+
+\ifdefined\PL%
+  \renewcommand{\PL}{{\color{green} \aword{PLinks}}}%
+\else%
+  \newcommand{\PL}{{\color{green} \aword{PLinks}}}%
+\fi
+%  Physical links
+\ifdefined\pl%
+  \renewcommand{\pl}{{\color{green} \aword{pl}}}%
+\else%
+  \newcommand{\pl}{{\color{green} \aword{pl}}}%
+\fi
+%  Physical link
+
+
+\ifdefined\pplA%
+  \renewcommand{\pplA}{{\color{green} \pl_1}}%
+\else%
+  \newcommand{\pplA}{{\color{green} \pl_1}}%
+\fi
+%  plA conflicts
+\ifdefined\plAlatency%
+  \renewcommand{\plAlatency}{{\color{green} \pplA\aword{.latency}}}%
+\else%
+  \newcommand{\plAlatency}{{\color{green} \pplA\aword{.latency}}}%
+\fi
+
+\ifdefined\plAbandwidth%
+  \renewcommand{\plAbandwidth}{{\color{green} \pplA\aword{.bandwidth}}}%
+\else%
+  \newcommand{\plAbandwidth}{{\color{green} \pplA\aword{.bandwidth}}}%
+\fi
+
+
+
+\ifdefined\pllatency%
+  \renewcommand{\pllatency}{{\color{green} \aword{pl.latency}}}%
+\else%
+  \newcommand{\pllatency}{{\color{green} \aword{pl.latency}}}%
+\fi
+
+\ifdefined\plbandwidth%
+  \renewcommand{\plbandwidth}{{\color{green} \aword{pl.bandwidth}}}%
+\else%
+  \newcommand{\plbandwidth}{{\color{green} \aword{pl.bandwidth}}}%
+\fi
+
+
+
+
+
+\ifdefined\as%
+  \renewcommand{\as}{{\color{green} \aword{as}}}%
+\else%
+  \newcommand{\as}{{\color{green} \aword{as}}}%
+\fi
+%  An assignment
+
+
+\ifdefined\asm%
+  \renewcommand{\asm}{{\color{green} \aword{as.m}}}%
+\else%
+  \newcommand{\asm}{{\color{green} \aword{as.m}}}%
+\fi
+%  The momomorphism 
+\ifdefined\asmi%
+  \renewcommand{\asmi}{{\color{green} \aword{as.{m}^{-1}}}}%
+\else%
+  \newcommand{\asmi}{{\color{green} \aword{as.{m}^{-1}}}}%
+\fi
+%  The right inverse of the momomorphism 
+
+
+\ifdefined\asla%
+  \renewcommand{\asla}{{\color{green} \aword{as.\alpha}}}%
+\else%
+  \newcommand{\asla}{{\color{green} \aword{as.\alpha}}}%
+\fi
+%  The link allocation
+\ifdefined\asca%
+  \renewcommand{\asca}{{\color{green} \aword{as.\beta}}}%
+\else%
+  \newcommand{\asca}{{\color{green} \aword{as.\beta}}}%
+\fi
+%  The computation allocation
+
+
+
+
 
 
 \ifdefined\scene%
