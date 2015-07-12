@@ -1754,6 +1754,90 @@
 
 
 
+\ifdefined\patternA%
+  \renewcommand{\patternA}{Slice-Stats-Merge\xspace}%
+\else%
+  \newcommand{\patternA}{Slice-Stats-Merge\xspace}%
+\fi
+
+\ifdefined\patternB%
+  \renewcommand{\patternB}{Split-Stats-Glue\xspace}%
+\else%
+  \newcommand{\patternB}{Split-Stats-Glue\xspace}%
+\fi
+
+\ifdefined\patternC%
+  \renewcommand{\patternC}{Filter-Learn-Glue\xspace}%
+\else%
+  \newcommand{\patternC}{Filter-Learn-Glue\xspace}%
+\fi
+
+\ifdefined\patternD%
+  \renewcommand{\patternD}{Recursive-Learn\xspace}%
+\else%
+  \newcommand{\patternD}{Recursive-Learn\xspace}%
+\fi
+
+
+
+\ifdefined\proto%
+  \renewcommand{\proto}{A2\xspace}%
+\else%
+  \newcommand{\proto}{A2\xspace}%
+\fi
+
+% \newcommand{\real}{A1\xspace}
+
+
+
+\ifdefined\slicelen%
+  \renewcommand{\slicelen}{\mycode{slicelen}\xspace}%
+\else%
+  \newcommand{\slicelen}{\mycode{slicelen}\xspace}%
+\fi
+
+\ifdefined\njobslearn%
+  \renewcommand{\njobslearn}{n_{\text{learn}}}%
+\else%
+  \newcommand{\njobslearn}{n_{\text{learn}}}%
+\fi
+
+\ifdefined\njobsmerge%
+  \renewcommand{\njobsmerge}{n_{\text{merge}}}%
+\else%
+  \newcommand{\njobsmerge}{n_{\text{merge}}}%
+\fi
+
+\ifdefined\njobstotal%
+  \renewcommand{\njobstotal}{n_{\text{jobs}}}%
+\else%
+  \newcommand{\njobstotal}{n_{\text{jobs}}}%
+\fi
+
+
+
+\ifdefined\Compmake%
+  \renewcommand{\Compmake}{{Compmake}\xspace}%
+\else%
+  \newcommand{\Compmake}{{Compmake}\xspace}%
+\fi
+
+\ifdefined\parmake%
+  \renewcommand{\parmake}{\mycode{parmake}\xspace}%
+\else%
+  \newcommand{\parmake}{\mycode{parmake}\xspace}%
+\fi
+
+\ifdefined\sgemake%
+  \renewcommand{\sgemake}{\mycode{sgemake}\xspace}%
+\else%
+  \newcommand{\sgemake}{\mycode{sgemake}\xspace}%
+\fi
+
+
+
+
+
 \ifdefined\SetImages%
   \renewcommand{\SetImages}{\vmath{Im}}%
 \else%
@@ -2955,9 +3039,9 @@
 % \newcommand{\vehRob}{\mathsf{\color{blue}ISV}} % Idealized Simple Vehicles
 
 \ifdefined\vehRob%
-  \renewcommand{\vehRob}{\mathsf{\changes{ISV}}}%
+  \renewcommand{\vehRob}{\mathsf{ISV}}%
 \else%
-  \newcommand{\vehRob}{\mathsf{\changes{ISV}}}%
+  \newcommand{\vehRob}{\mathsf{ISV}}%
 \fi
 %  Idealized Simple Vehicles
 \ifdefined\vehRobNuis%
@@ -4349,6 +4433,40 @@
   \newcommand{\inSeries}{\aword{Series}}%
 \fi
 %  Series of two systems
+
+
+\ifdefined\bbSpAny%
+  \renewcommand{\bbSpAny}{\bbSp_{*}}%
+\else%
+  \newcommand{\bbSpAny}{\bbSp_{*}}%
+\fi
+%  Any of the following
+\ifdefined\bbSpDT%
+  \renewcommand{\bbSpDT}[1]{\bbSp^{\text{d}}_{#1}}%
+\else%
+  \newcommand{\bbSpDT}[1]{\bbSp^{\text{d}}_{#1}}%
+\fi
+%  Discrete time
+\ifdefined\bbSpCT%
+  \renewcommand{\bbSpCT}{\bbSp^{\text{c}}}%
+\else%
+  \newcommand{\bbSpCT}{\bbSp^{\text{c}}}%
+\fi
+%  Continuous time
+\ifdefined\bbSpEB%
+  \renewcommand{\bbSpEB}{\bbSp^{\text{e}}}%
+\else%
+  \newcommand{\bbSpEB}{\bbSp^{\text{e}}}%
+\fi
+%  Event-based
+
+
+
+
+
+
+
+
 
 
 \ifdefined\world%

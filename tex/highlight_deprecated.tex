@@ -759,6 +759,30 @@
 
 
 
+% \patternA: Skipped because no field 'deprecated'
+% \patternB: Skipped because no field 'deprecated'
+% \patternC: Skipped because no field 'deprecated'
+% \patternD: Skipped because no field 'deprecated'
+
+
+% \proto: Skipped because no field 'deprecated'
+% \newcommand{\real}{A1\xspace}
+
+
+
+% \slicelen: Skipped because no field 'deprecated'
+% \njobslearn: Skipped because no field 'deprecated'
+% \njobsmerge: Skipped because no field 'deprecated'
+% \njobstotal: Skipped because no field 'deprecated'
+
+
+% \Compmake: Skipped because no field 'deprecated'
+% \parmake: Skipped because no field 'deprecated'
+% \sgemake: Skipped because no field 'deprecated'
+
+
+
+
 % \SetImages: Skipped because no field 'deprecated'
 % \SetUImages: Skipped because no field 'deprecated'
 % \genericdist: Skipped because no field 'deprecated'
@@ -1639,6 +1663,40 @@
   \newcommand{\inSeries}{{\color{red} \aword{Series}}}%
 \fi
 %  Series of two systems
+
+
+\ifdefined\bbSpAny%
+  \renewcommand{\bbSpAny}{{\color{red} \bbSp_{*}}}%
+\else%
+  \newcommand{\bbSpAny}{{\color{red} \bbSp_{*}}}%
+\fi
+%  Any of the following
+\ifdefined\bbSpDT%
+  \renewcommand{\bbSpDT}[1]{\bbSp^{\text{d}}_{#1}}%
+\else%
+  \newcommand{\bbSpDT}[1]{\bbSp^{\text{d}}_{#1}}%
+\fi
+%  Discrete time
+\ifdefined\bbSpCT%
+  \renewcommand{\bbSpCT}{{\color{red} \bbSp^{\text{c}}}}%
+\else%
+  \newcommand{\bbSpCT}{{\color{red} \bbSp^{\text{c}}}}%
+\fi
+%  Continuous time
+\ifdefined\bbSpEB%
+  \renewcommand{\bbSpEB}{{\color{red} \bbSp^{\text{e}}}}%
+\else%
+  \newcommand{\bbSpEB}{{\color{red} \bbSp^{\text{e}}}}%
+\fi
+%  Event-based
+
+
+
+
+
+
+
+
 
 
 % \world: Skipped because no field 'deprecated'

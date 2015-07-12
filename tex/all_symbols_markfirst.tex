@@ -1970,40 +1970,109 @@
 
 
 
-
-
-
-
-% TODO: move away
-
-\newbool{usedds}\setbool{usedds}{false}
-\ifdefined\ds%
-  \renewcommand{\ds}{\markfirst{ds}{usedds}{\Delta_s}}%
+\newbool{useddesplInter}\setbool{useddesplInter}{false}
+\ifdefined\desplInter%
+  \renewcommand{\desplInter}{\markfirst{desplInter}{useddesplInter}{\atype{I}}}%
 \else%
-  \newcommand{\ds}{\markfirst{ds}{usedds}{\Delta_s}}%
+  \newcommand{\desplInter}{\markfirst{desplInter}{useddesplInter}{\atype{I}}}%
 \fi
-%  Spatial sampling
-\newbool{useddt}\setbool{useddt}{false}
-\ifdefined\dt%
-  \renewcommand{\dt}{\markfirst{dt}{useddt}{\Delta_t}}%
+%  Interval
+
+
+
+
+\newbool{usedpatternA}\setbool{usedpatternA}{false}
+\ifdefined\patternA%
+  \renewcommand{\patternA}{\markfirst{patternA}{usedpatternA}{Slice-Stats-Merge\xspace}}%
 \else%
-  \newcommand{\dt}{\markfirst{dt}{useddt}{\Delta_t}}%
+  \newcommand{\patternA}{\markfirst{patternA}{usedpatternA}{Slice-Stats-Merge\xspace}}%
 \fi
-%  Temporal sampling
-\newbool{useddb}\setbool{useddb}{false}
-\ifdefined\db%
-  \renewcommand{\db}{\markfirst{db}{useddb}{\Delta_b}}%
+
+\newbool{usedpatternB}\setbool{usedpatternB}{false}
+\ifdefined\patternB%
+  \renewcommand{\patternB}{\markfirst{patternB}{usedpatternB}{Split-Stats-Glue\xspace}}%
 \else%
-  \newcommand{\db}{\markfirst{db}{useddb}{\Delta_b}}%
+  \newcommand{\patternB}{\markfirst{patternB}{usedpatternB}{Split-Stats-Glue\xspace}}%
 \fi
-%  Brightness threshold
-\newbool{usedcamexp}\setbool{usedcamexp}{false}
-\ifdefined\camexp%
-  \renewcommand{\camexp}{\markfirst{camexp}{usedcamexp}{\text{EX}}}%
+
+\newbool{usedpatternC}\setbool{usedpatternC}{false}
+\ifdefined\patternC%
+  \renewcommand{\patternC}{\markfirst{patternC}{usedpatternC}{Filter-Learn-Glue\xspace}}%
 \else%
-  \newcommand{\camexp}{\markfirst{camexp}{usedcamexp}{\text{EX}}}%
+  \newcommand{\patternC}{\markfirst{patternC}{usedpatternC}{Filter-Learn-Glue\xspace}}%
 \fi
-%  Exposure
+
+\newbool{usedpatternD}\setbool{usedpatternD}{false}
+\ifdefined\patternD%
+  \renewcommand{\patternD}{\markfirst{patternD}{usedpatternD}{Recursive-Learn\xspace}}%
+\else%
+  \newcommand{\patternD}{\markfirst{patternD}{usedpatternD}{Recursive-Learn\xspace}}%
+\fi
+
+
+
+\newbool{usedproto}\setbool{usedproto}{false}
+\ifdefined\proto%
+  \renewcommand{\proto}{\markfirst{proto}{usedproto}{A2\xspace}}%
+\else%
+  \newcommand{\proto}{\markfirst{proto}{usedproto}{A2\xspace}}%
+\fi
+
+% \newcommand{\real}{A1\xspace}
+
+
+
+\newbool{usedslicelen}\setbool{usedslicelen}{false}
+\ifdefined\slicelen%
+  \renewcommand{\slicelen}{\markfirst{slicelen}{usedslicelen}{\mycode{slicelen}\xspace}}%
+\else%
+  \newcommand{\slicelen}{\markfirst{slicelen}{usedslicelen}{\mycode{slicelen}\xspace}}%
+\fi
+
+\newbool{usednjobslearn}\setbool{usednjobslearn}{false}
+\ifdefined\njobslearn%
+  \renewcommand{\njobslearn}{\markfirst{njobslearn}{usednjobslearn}{n_{\text{learn}}}}%
+\else%
+  \newcommand{\njobslearn}{\markfirst{njobslearn}{usednjobslearn}{n_{\text{learn}}}}%
+\fi
+
+\newbool{usednjobsmerge}\setbool{usednjobsmerge}{false}
+\ifdefined\njobsmerge%
+  \renewcommand{\njobsmerge}{\markfirst{njobsmerge}{usednjobsmerge}{n_{\text{merge}}}}%
+\else%
+  \newcommand{\njobsmerge}{\markfirst{njobsmerge}{usednjobsmerge}{n_{\text{merge}}}}%
+\fi
+
+\newbool{usednjobstotal}\setbool{usednjobstotal}{false}
+\ifdefined\njobstotal%
+  \renewcommand{\njobstotal}{\markfirst{njobstotal}{usednjobstotal}{n_{\text{jobs}}}}%
+\else%
+  \newcommand{\njobstotal}{\markfirst{njobstotal}{usednjobstotal}{n_{\text{jobs}}}}%
+\fi
+
+
+
+\newbool{usedCompmake}\setbool{usedCompmake}{false}
+\ifdefined\Compmake%
+  \renewcommand{\Compmake}{\markfirst{Compmake}{usedCompmake}{{Compmake}\xspace}}%
+\else%
+  \newcommand{\Compmake}{\markfirst{Compmake}{usedCompmake}{{Compmake}\xspace}}%
+\fi
+
+\newbool{usedparmake}\setbool{usedparmake}{false}
+\ifdefined\parmake%
+  \renewcommand{\parmake}{\markfirst{parmake}{usedparmake}{\mycode{parmake}\xspace}}%
+\else%
+  \newcommand{\parmake}{\markfirst{parmake}{usedparmake}{\mycode{parmake}\xspace}}%
+\fi
+
+\newbool{usedsgemake}\setbool{usedsgemake}{false}
+\ifdefined\sgemake%
+  \renewcommand{\sgemake}{\markfirst{sgemake}{usedsgemake}{\mycode{sgemake}\xspace}}%
+\else%
+  \newcommand{\sgemake}{\markfirst{sgemake}{usedsgemake}{\mycode{sgemake}\xspace}}%
+\fi
+
 
 
 
@@ -2565,9 +2634,9 @@
 
 
 \ifdefined\clip%
-  \renewcommand{\clip}[1]{\mathsf{clip}_{#1}}%
+  \renewcommand{\clip}[1]{\mathsf{sat}_{#1}}%
 \else%
-  \newcommand{\clip}[1]{\mathsf{clip}_{#1}}%
+  \newcommand{\clip}[1]{\mathsf{sat}_{#1}}%
 \fi
 %  Clip up to some boundary 
 \newbool{usedmaxu}\setbool{usedmaxu}{false}
@@ -2584,13 +2653,8 @@
   \newcommand{\clipu}{\markfirst{clipu}{usedclipu}{\clip{\maxu}}}%
 \fi
 
-\newbool{useddvsth}\setbool{useddvsth}{false}
-\ifdefined\dvsth%
-  \renewcommand{\dvsth}{\markfirst{dvsth}{useddvsth}{{\Delta_{b}}}}%
-\else%
-  \newcommand{\dvsth}{\markfirst{dvsth}{useddvsth}{{\Delta_{b}}}}%
-\fi
-%  Threshold
+
+
 
 
 \newbool{usedgain}\setbool{usedgain}{false}
@@ -2613,33 +2677,111 @@
 
 \newbool{usedcontrollerLast}\setbool{usedcontrollerLast}{false}
 \ifdefined\controllerLast%
-  \renewcommand{\controllerLast}{\markfirst{controllerLast}{usedcontrollerLast}{C1}}%
+  \renewcommand{\controllerLast}{\markfirst{controllerLast}{usedcontrollerLast}{\text{C1}}}%
 \else%
-  \newcommand{\controllerLast}{\markfirst{controllerLast}{usedcontrollerLast}{C1}}%
+  \newcommand{\controllerLast}{\markfirst{controllerLast}{usedcontrollerLast}{\text{C1}}}%
 \fi
 %  Uses last event
 \newbool{usedcontrollerTI}\setbool{usedcontrollerTI}{false}
 \ifdefined\controllerTI%
-  \renewcommand{\controllerTI}{\markfirst{controllerTI}{usedcontrollerTI}{C2}}%
+  \renewcommand{\controllerTI}{\markfirst{controllerTI}{usedcontrollerTI}{\text{C2}}}%
 \else%
-  \newcommand{\controllerTI}{\markfirst{controllerTI}{usedcontrollerTI}{C2}}%
+  \newcommand{\controllerTI}{\markfirst{controllerTI}{usedcontrollerTI}{\text{C2}}}%
 \fi
 %  Time integrale
 \newbool{usedcontrollerTS}\setbool{usedcontrollerTS}{false}
 \ifdefined\controllerTS%
-  \renewcommand{\controllerTS}{\markfirst{controllerTS}{usedcontrollerTS}{C3}}%
+  \renewcommand{\controllerTS}{\markfirst{controllerTS}{usedcontrollerTS}{\text{C3}}}%
 \else%
-  \newcommand{\controllerTS}{\markfirst{controllerTS}{usedcontrollerTS}{C3}}%
+  \newcommand{\controllerTS}{\markfirst{controllerTS}{usedcontrollerTS}{\text{C3}}}%
 \fi
 %  time smoothed
 \newbool{usedcontrollerTN}\setbool{usedcontrollerTN}{false}
 \ifdefined\controllerTN%
-  \renewcommand{\controllerTN}{\markfirst{controllerTN}{usedcontrollerTN}{C4}}%
+  \renewcommand{\controllerTN}{\markfirst{controllerTN}{usedcontrollerTN}{\text{C4}}}%
 \else%
-  \newcommand{\controllerTN}{\markfirst{controllerTN}{usedcontrollerTN}{C4}}%
+  \newcommand{\controllerTN}{\markfirst{controllerTN}{usedcontrollerTN}{\text{C4}}}%
 \fi
 %  Time neural
 
+
+
+
+
+
+\newbool{usedds}\setbool{usedds}{false}
+\ifdefined\ds%
+  \renewcommand{\ds}{\markfirst{ds}{usedds}{\Delta_s}}%
+\else%
+  \newcommand{\ds}{\markfirst{ds}{usedds}{\Delta_s}}%
+\fi
+%  Spatial sampling
+\newbool{useddt}\setbool{useddt}{false}
+\ifdefined\dt%
+  \renewcommand{\dt}{\markfirst{dt}{useddt}{\Delta_t}}%
+\else%
+  \newcommand{\dt}{\markfirst{dt}{useddt}{\Delta_t}}%
+\fi
+%  Temporal sampling
+\newbool{useddb}\setbool{useddb}{false}
+\ifdefined\db%
+  \renewcommand{\db}{\markfirst{db}{useddb}{\Delta_b}}%
+\else%
+  \newcommand{\db}{\markfirst{db}{useddb}{\Delta_b}}%
+\fi
+%  Brightness threshold
+\newbool{useddvsth}\setbool{useddvsth}{false}
+\ifdefined\dvsth%
+  \renewcommand{\dvsth}{\markfirst{dvsth}{useddvsth}{\db}}%
+\else%
+  \newcommand{\dvsth}{\markfirst{dvsth}{useddvsth}{\db}}%
+\fi
+%  Threshold
+\newbool{usedcamexp}\setbool{usedcamexp}{false}
+\ifdefined\camexp%
+  \renewcommand{\camexp}{\markfirst{camexp}{usedcamexp}{\text{EX}}}%
+\else%
+  \newcommand{\camexp}{\markfirst{camexp}{usedcamexp}{\text{EX}}}%
+\fi
+%  Exposure
+
+
+\newbool{usedmseps}\setbool{usedmseps}{false}
+\ifdefined\mseps%
+  \renewcommand{\mseps}{\markfirst{mseps}{usedmseps}{\text{MSE}_{\text{ps}}}}%
+\else%
+  \newcommand{\mseps}{\markfirst{mseps}{usedmseps}{\text{MSE}_{\text{ps}}}}%
+\fi
+%  periodic sampling
+\newbool{usedmseeb}\setbool{usedmseeb}{false}
+\ifdefined\mseeb%
+  \renewcommand{\mseeb}{\markfirst{mseeb}{usedmseeb}{\text{MSE}_{\text{eb}}}}%
+\else%
+  \newcommand{\mseeb}{\markfirst{mseeb}{usedmseeb}{\text{MSE}_{\text{eb}}}}%
+\fi
+%  MSE event based
+\newbool{usedbwps}\setbool{usedbwps}{false}
+\ifdefined\bwps%
+  \renewcommand{\bwps}{\markfirst{bwps}{usedbwps}{\text{BW}_{\text{ps}}}}%
+\else%
+  \newcommand{\bwps}{\markfirst{bwps}{usedbwps}{\text{BW}_{\text{ps}}}}%
+\fi
+%  bandwidth periodic sampling
+\newbool{usedbweb}\setbool{usedbweb}{false}
+\ifdefined\bweb%
+  \renewcommand{\bweb}{\markfirst{bweb}{usedbweb}{\text{BW}_{\text{eb}}}}%
+\else%
+  \newcommand{\bweb}{\markfirst{bweb}{usedbweb}{\text{BW}_{\text{eb}}}}%
+\fi
+%  bandwidth event based
+
+
+\newbool{usedori}\setbool{usedori}{false}
+\ifdefined\ori%
+  \renewcommand{\ori}{\markfirst{ori}{usedori}{\alpha}}%
+\else%
+  \newcommand{\ori}{\markfirst{ori}{usedori}{\alpha}}%
+\fi
 
 
 
@@ -3285,13 +3427,17 @@
   \newcommand{\allrobots}{\markfirst{allrobots}{usedallrobots}{\mathsf{Robots}}}%
 \fi
 %  The set of all robots
+% \newcommand{\vehRob}{\mathsf{Vehicles}} % Vehicle robots
+
+% \newcommand{\vehRob}{\mathsf{\color{blue}ISV}} % Idealized Simple Vehicles
+
 \newbool{usedvehRob}\setbool{usedvehRob}{false}
 \ifdefined\vehRob%
-  \renewcommand{\vehRob}{\markfirst{vehRob}{usedvehRob}{\mathsf{Vehicles}}}%
+  \renewcommand{\vehRob}{\markfirst{vehRob}{usedvehRob}{\mathsf{ISV}}}%
 \else%
-  \newcommand{\vehRob}{\markfirst{vehRob}{usedvehRob}{\mathsf{Vehicles}}}%
+  \newcommand{\vehRob}{\markfirst{vehRob}{usedvehRob}{\mathsf{ISV}}}%
 \fi
-%  Vehicle robots
+%  Idealized Simple Vehicles
 \newbool{usedvehRobNuis}\setbool{usedvehRobNuis}{false}
 \ifdefined\vehRobNuis%
   \renewcommand{\vehRobNuis}{\markfirst{vehRobNuis}{usedvehRobNuis}{{\tilde{\vehRob}}}}%
@@ -3353,12 +3499,7 @@
   \newcommand{\MH}{\markfirst{MH}{usedMH}{\M{H}}}%
 \fi
 
-\newbool{usedMR}\setbool{usedMR}{false}
-\ifdefined\MR%
-  \renewcommand{\MR}{\markfirst{MR}{usedMR}{\M{R}}}%
-\else%
-  \newcommand{\MR}{\markfirst{MR}{usedMR}{\M{R}}}%
-\fi
+
 
 \newbool{usedML}\setbool{usedML}{false}
 \ifdefined\ML%
@@ -4848,6 +4989,43 @@
   \newcommand{\inSeries}{\markfirst{inSeries}{usedinSeries}{\aword{Series}}}%
 \fi
 %  Series of two systems
+
+
+\newbool{usedbbSpAny}\setbool{usedbbSpAny}{false}
+\ifdefined\bbSpAny%
+  \renewcommand{\bbSpAny}{\markfirst{bbSpAny}{usedbbSpAny}{\bbSp_{*}}}%
+\else%
+  \newcommand{\bbSpAny}{\markfirst{bbSpAny}{usedbbSpAny}{\bbSp_{*}}}%
+\fi
+%  Any of the following
+\ifdefined\bbSpDT%
+  \renewcommand{\bbSpDT}[1]{\bbSp^{\text{d}}_{#1}}%
+\else%
+  \newcommand{\bbSpDT}[1]{\bbSp^{\text{d}}_{#1}}%
+\fi
+%  Discrete time
+\newbool{usedbbSpCT}\setbool{usedbbSpCT}{false}
+\ifdefined\bbSpCT%
+  \renewcommand{\bbSpCT}{\markfirst{bbSpCT}{usedbbSpCT}{\bbSp^{\text{c}}}}%
+\else%
+  \newcommand{\bbSpCT}{\markfirst{bbSpCT}{usedbbSpCT}{\bbSp^{\text{c}}}}%
+\fi
+%  Continuous time
+\newbool{usedbbSpEB}\setbool{usedbbSpEB}{false}
+\ifdefined\bbSpEB%
+  \renewcommand{\bbSpEB}{\markfirst{bbSpEB}{usedbbSpEB}{\bbSp^{\text{e}}}}%
+\else%
+  \newcommand{\bbSpEB}{\markfirst{bbSpEB}{usedbbSpEB}{\bbSp^{\text{e}}}}%
+\fi
+%  Event-based
+
+
+
+
+
+
+
+
 
 
 \newbool{usedworld}\setbool{usedworld}{false}

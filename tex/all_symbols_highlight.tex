@@ -1744,36 +1744,96 @@
 
 
 
-
-
-
-
-% TODO: move away
-
-\ifdefined\ds%
-  \renewcommand{\ds}{{\color{green} \Delta_s}}%
+\ifdefined\desplInter%
+  \renewcommand{\desplInter}{{\color{green} \atype{I}}}%
 \else%
-  \newcommand{\ds}{{\color{green} \Delta_s}}%
+  \newcommand{\desplInter}{{\color{green} \atype{I}}}%
 \fi
-%  Spatial sampling
-\ifdefined\dt%
-  \renewcommand{\dt}{{\color{green} \Delta_t}}%
+%  Interval
+
+
+
+
+\ifdefined\patternA%
+  \renewcommand{\patternA}{{\color{green} Slice-Stats-Merge\xspace}}%
 \else%
-  \newcommand{\dt}{{\color{green} \Delta_t}}%
+  \newcommand{\patternA}{{\color{green} Slice-Stats-Merge\xspace}}%
 \fi
-%  Temporal sampling
-\ifdefined\db%
-  \renewcommand{\db}{{\color{green} \Delta_b}}%
+
+\ifdefined\patternB%
+  \renewcommand{\patternB}{{\color{green} Split-Stats-Glue\xspace}}%
 \else%
-  \newcommand{\db}{{\color{green} \Delta_b}}%
+  \newcommand{\patternB}{{\color{green} Split-Stats-Glue\xspace}}%
 \fi
-%  Brightness threshold
-\ifdefined\camexp%
-  \renewcommand{\camexp}{{\color{green} \text{EX}}}%
+
+\ifdefined\patternC%
+  \renewcommand{\patternC}{{\color{green} Filter-Learn-Glue\xspace}}%
 \else%
-  \newcommand{\camexp}{{\color{green} \text{EX}}}%
+  \newcommand{\patternC}{{\color{green} Filter-Learn-Glue\xspace}}%
 \fi
-%  Exposure
+
+\ifdefined\patternD%
+  \renewcommand{\patternD}{{\color{green} Recursive-Learn\xspace}}%
+\else%
+  \newcommand{\patternD}{{\color{green} Recursive-Learn\xspace}}%
+\fi
+
+
+
+\ifdefined\proto%
+  \renewcommand{\proto}{{\color{green} A2\xspace}}%
+\else%
+  \newcommand{\proto}{{\color{green} A2\xspace}}%
+\fi
+
+% \newcommand{\real}{A1\xspace}
+
+
+
+\ifdefined\slicelen%
+  \renewcommand{\slicelen}{{\color{green} \mycode{slicelen}\xspace}}%
+\else%
+  \newcommand{\slicelen}{{\color{green} \mycode{slicelen}\xspace}}%
+\fi
+
+\ifdefined\njobslearn%
+  \renewcommand{\njobslearn}{{\color{green} n_{\text{learn}}}}%
+\else%
+  \newcommand{\njobslearn}{{\color{green} n_{\text{learn}}}}%
+\fi
+
+\ifdefined\njobsmerge%
+  \renewcommand{\njobsmerge}{{\color{green} n_{\text{merge}}}}%
+\else%
+  \newcommand{\njobsmerge}{{\color{green} n_{\text{merge}}}}%
+\fi
+
+\ifdefined\njobstotal%
+  \renewcommand{\njobstotal}{{\color{green} n_{\text{jobs}}}}%
+\else%
+  \newcommand{\njobstotal}{{\color{green} n_{\text{jobs}}}}%
+\fi
+
+
+
+\ifdefined\Compmake%
+  \renewcommand{\Compmake}{{\color{green} {Compmake}\xspace}}%
+\else%
+  \newcommand{\Compmake}{{\color{green} {Compmake}\xspace}}%
+\fi
+
+\ifdefined\parmake%
+  \renewcommand{\parmake}{{\color{green} \mycode{parmake}\xspace}}%
+\else%
+  \newcommand{\parmake}{{\color{green} \mycode{parmake}\xspace}}%
+\fi
+
+\ifdefined\sgemake%
+  \renewcommand{\sgemake}{{\color{green} \mycode{sgemake}\xspace}}%
+\else%
+  \newcommand{\sgemake}{{\color{green} \mycode{sgemake}\xspace}}%
+\fi
+
 
 
 
@@ -2269,9 +2329,9 @@
 
 
 \ifdefined\clip%
-  \renewcommand{\clip}[1]{\mathsf{clip}_{#1}}%
+  \renewcommand{\clip}[1]{\mathsf{sat}_{#1}}%
 \else%
-  \newcommand{\clip}[1]{\mathsf{clip}_{#1}}%
+  \newcommand{\clip}[1]{\mathsf{sat}_{#1}}%
 \fi
 %  Clip up to some boundary 
 \ifdefined\maxu%
@@ -2286,12 +2346,8 @@
   \newcommand{\clipu}{{\color{green} \clip{\maxu}}}%
 \fi
 
-\ifdefined\dvsth%
-  \renewcommand{\dvsth}{{\color{green} {\Delta_{b}}}}%
-\else%
-  \newcommand{\dvsth}{{\color{green} {\Delta_{b}}}}%
-\fi
-%  Threshold
+
+
 
 
 \ifdefined\gain%
@@ -2311,30 +2367,98 @@
 
 
 \ifdefined\controllerLast%
-  \renewcommand{\controllerLast}{{\color{green} C1}}%
+  \renewcommand{\controllerLast}{{\color{green} \text{C1}}}%
 \else%
-  \newcommand{\controllerLast}{{\color{green} C1}}%
+  \newcommand{\controllerLast}{{\color{green} \text{C1}}}%
 \fi
 %  Uses last event
 \ifdefined\controllerTI%
-  \renewcommand{\controllerTI}{{\color{green} C2}}%
+  \renewcommand{\controllerTI}{{\color{green} \text{C2}}}%
 \else%
-  \newcommand{\controllerTI}{{\color{green} C2}}%
+  \newcommand{\controllerTI}{{\color{green} \text{C2}}}%
 \fi
 %  Time integrale
 \ifdefined\controllerTS%
-  \renewcommand{\controllerTS}{{\color{green} C3}}%
+  \renewcommand{\controllerTS}{{\color{green} \text{C3}}}%
 \else%
-  \newcommand{\controllerTS}{{\color{green} C3}}%
+  \newcommand{\controllerTS}{{\color{green} \text{C3}}}%
 \fi
 %  time smoothed
 \ifdefined\controllerTN%
-  \renewcommand{\controllerTN}{{\color{green} C4}}%
+  \renewcommand{\controllerTN}{{\color{green} \text{C4}}}%
 \else%
-  \newcommand{\controllerTN}{{\color{green} C4}}%
+  \newcommand{\controllerTN}{{\color{green} \text{C4}}}%
 \fi
 %  Time neural
 
+
+
+
+
+
+\ifdefined\ds%
+  \renewcommand{\ds}{{\color{green} \Delta_s}}%
+\else%
+  \newcommand{\ds}{{\color{green} \Delta_s}}%
+\fi
+%  Spatial sampling
+\ifdefined\dt%
+  \renewcommand{\dt}{{\color{green} \Delta_t}}%
+\else%
+  \newcommand{\dt}{{\color{green} \Delta_t}}%
+\fi
+%  Temporal sampling
+\ifdefined\db%
+  \renewcommand{\db}{{\color{green} \Delta_b}}%
+\else%
+  \newcommand{\db}{{\color{green} \Delta_b}}%
+\fi
+%  Brightness threshold
+\ifdefined\dvsth%
+  \renewcommand{\dvsth}{{\color{green} \db}}%
+\else%
+  \newcommand{\dvsth}{{\color{green} \db}}%
+\fi
+%  Threshold
+\ifdefined\camexp%
+  \renewcommand{\camexp}{{\color{green} \text{EX}}}%
+\else%
+  \newcommand{\camexp}{{\color{green} \text{EX}}}%
+\fi
+%  Exposure
+
+
+\ifdefined\mseps%
+  \renewcommand{\mseps}{{\color{green} \text{MSE}_{\text{ps}}}}%
+\else%
+  \newcommand{\mseps}{{\color{green} \text{MSE}_{\text{ps}}}}%
+\fi
+%  periodic sampling
+\ifdefined\mseeb%
+  \renewcommand{\mseeb}{{\color{green} \text{MSE}_{\text{eb}}}}%
+\else%
+  \newcommand{\mseeb}{{\color{green} \text{MSE}_{\text{eb}}}}%
+\fi
+%  MSE event based
+\ifdefined\bwps%
+  \renewcommand{\bwps}{{\color{green} \text{BW}_{\text{ps}}}}%
+\else%
+  \newcommand{\bwps}{{\color{green} \text{BW}_{\text{ps}}}}%
+\fi
+%  bandwidth periodic sampling
+\ifdefined\bweb%
+  \renewcommand{\bweb}{{\color{green} \text{BW}_{\text{eb}}}}%
+\else%
+  \newcommand{\bweb}{{\color{green} \text{BW}_{\text{eb}}}}%
+\fi
+%  bandwidth event based
+
+
+\ifdefined\ori%
+  \renewcommand{\ori}{{\color{green} \alpha}}%
+\else%
+  \newcommand{\ori}{{\color{green} \alpha}}%
+\fi
 
 
 
@@ -2910,12 +3034,16 @@
   \newcommand{\allrobots}{{\color{green} \mathsf{Robots}}}%
 \fi
 %  The set of all robots
+% \newcommand{\vehRob}{\mathsf{Vehicles}} % Vehicle robots
+
+% \newcommand{\vehRob}{\mathsf{\color{blue}ISV}} % Idealized Simple Vehicles
+
 \ifdefined\vehRob%
-  \renewcommand{\vehRob}{{\color{green} \mathsf{Vehicles}}}%
+  \renewcommand{\vehRob}{{\color{green} \mathsf{ISV}}}%
 \else%
-  \newcommand{\vehRob}{{\color{green} \mathsf{Vehicles}}}%
+  \newcommand{\vehRob}{{\color{green} \mathsf{ISV}}}%
 \fi
-%  Vehicle robots
+%  Idealized Simple Vehicles
 \ifdefined\vehRobNuis%
   \renewcommand{\vehRobNuis}{{\color{green} {\tilde{\vehRob}}}}%
 \else%
@@ -2970,11 +3098,7 @@
   \newcommand{\MH}{{\color{green} \M{H}}}%
 \fi
 
-\ifdefined\MR%
-  \renewcommand{\MR}{{\color{green} \M{R}}}%
-\else%
-  \newcommand{\MR}{{\color{green} \M{R}}}%
-\fi
+
 
 \ifdefined\ML%
   \renewcommand{\ML}{{\color{green} \M{L}}}%
@@ -4309,6 +4433,40 @@
   \newcommand{\inSeries}{{\color{green} \aword{Series}}}%
 \fi
 %  Series of two systems
+
+
+\ifdefined\bbSpAny%
+  \renewcommand{\bbSpAny}{{\color{green} \bbSp_{*}}}%
+\else%
+  \newcommand{\bbSpAny}{{\color{green} \bbSp_{*}}}%
+\fi
+%  Any of the following
+\ifdefined\bbSpDT%
+  \renewcommand{\bbSpDT}[1]{\bbSp^{\text{d}}_{#1}}%
+\else%
+  \newcommand{\bbSpDT}[1]{\bbSp^{\text{d}}_{#1}}%
+\fi
+%  Discrete time
+\ifdefined\bbSpCT%
+  \renewcommand{\bbSpCT}{{\color{green} \bbSp^{\text{c}}}}%
+\else%
+  \newcommand{\bbSpCT}{{\color{green} \bbSp^{\text{c}}}}%
+\fi
+%  Continuous time
+\ifdefined\bbSpEB%
+  \renewcommand{\bbSpEB}{{\color{green} \bbSp^{\text{e}}}}%
+\else%
+  \newcommand{\bbSpEB}{{\color{green} \bbSp^{\text{e}}}}%
+\fi
+%  Event-based
+
+
+
+
+
+
+
+
 
 
 \ifdefined\world%
