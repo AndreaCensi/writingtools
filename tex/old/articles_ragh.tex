@@ -1,0 +1,106 @@
+%:section:graphs: Graphs
+
+\newcommand{\paths}{\aword{paths}} % All paths in a graph
+
+\newcommand{\walks}{\aword{walks}} % All paths in a graph
+\newcommand{\head}{\aword{head}}
+\newcommand{\tail}{\aword{tail}}
+\newcommand{\nodes}{\aword{nodes}} % nodes in a walk
+\newcommand{\edges}{\aword{edges}} % edges in a walk
+\newcommand{\sources}{\aword{sources}} 
+%:example: $\sources(\cG)$
+\newcommand{\sinks}{\aword{sinks}} 
+%:example: $\sinks(\cG)$
+
+\newcommand{\predecessors}{\aword{predecessors}} % predecessors of a node
+%:example: $\predecessors(\cn)$
+\newcommand{\successors}{\aword{successors}} % successors of a node
+%:example: $\predecessors(\cn)$
+
+
+%:section:articles/ragh: Resource Allocation problem
+
+%
+%:section:articles/ragh/rgraph: Resource Graph
+%
+
+\newcommand{\rN}{\aword{rN}} % A resource graph's vertices
+\newcommand{\rE}{\aword{rE}} % A resource graph's edges
+
+
+\newcommand{\rG}{\aword{rG}} % A resource graph
+
+\newcommand{\rn}{\aword{rn}} % A resource node
+\newcommand{\rnops}{\aword{rn.capacity}} % A resource 
+
+\newcommand{\rnA}{\aword{rn}_1}
+\newcommand{\rnAops}{\aword{rn}_1.\aword{capacity}} 
+\newcommand{\rnB}{\aword{rn}_2}
+\newcommand{\rnBops}{\aword{rn}_2.\aword{capacity}} 
+
+\newcommand{\re}{\aword{re}} % A resource edge
+\newcommand{\relink}{\aword{re.link}} % A resource 
+\newcommand{\relatency}{\re\aword{.latency}} 
+\newcommand{\rebandwidth}{\re\aword{.bandwidth}} 
+\newcommand{\reA}{\re_1}
+\newcommand{\reB}{\re_2}
+\newcommand{\reAlatency}{\reA\aword{.latency}}
+\newcommand{\reAbandwidth}{\reA\aword{.bandwidth}}
+\newcommand{\reBbandwidth}{\reB\aword{.bandwidth}}
+ 
+
+
+%
+%:section:articles/ragh/cgraph: Computation Graph
+%
+\newcommand{\cG}{\aword{cG}} % A computationg graph
+\newcommand{\cN}{\aword{cN}} % A cgraph's vertices
+\newcommand{\cE}{\aword{cE}} % A cgraph's edges
+
+\newcommand{\cn}{\aword{cn}} % A computation node
+\newcommand{\cnops}{\aword{cn.ops}} % A computation node's ops
+
+\newcommand{\cnA}{\cn_1}
+\newcommand{\cnB}{\cn_2}
+\newcommand{\cnAops}{\cn_1\aword{.ops}}
+\newcommand{\cnBops}{\cn_2\aword{.ops}}
+
+\newcommand{\cce}{\aword{ce}} % A computation edge
+% \newcommand{\cce}{\ce} % A computation edge
+\newcommand{\ceA}{\cce_1} % A computation edge
+\newcommand{\ceB}{\cce_2} % A computation edge
+
+\newcommand{\cesize}{\aword{ce.size}} % Signal size (bytes)
+\newcommand{\ceAsize}{\aword{ce}_1\aword{.size}}
+\newcommand{\ceBsize}{\aword{ce}_2\aword{.size}}
+
+
+%
+%:section:articles/ragh/links: Physical links
+%
+
+\newcommand{\PL}{\aword{PLinks}} % Physical links
+\newcommand{\pl}{\aword{pl}} % Physical link
+
+\newcommand{\pplA}{\pl_1}  % plA conflicts
+\newcommand{\plAlatency}{\pplA\aword{.latency}}
+\newcommand{\plAbandwidth}{\pplA\aword{.bandwidth}}
+
+\newcommand{\pllatency}{\aword{pl.latency}}
+\newcommand{\plbandwidth}{\aword{pl.bandwidth}}
+
+%:section:articles/ragh/allocations: Allocations
+
+\newcommand{\as}{\aword{as}} % An assignment
+
+\newcommand{\asm}{\aword{as.m}} % The momomorphism 
+\newcommand{\asmn}{\aword{as.m}_N} 
+\newcommand{\asme}{\aword{as.m}_E} 
+\newcommand{\asmni}{\aword{as.m}^{-1}_N} 
+\newcommand{\asmei}{\aword{as.m}^{-1}_E} 
+\newcommand{\asmi}{\aword{as.{m}^{-1}}} % The right inverse of the momomorphism 
+
+\newcommand{\asla}{\aword{as.\alpha}} % The link allocation
+\newcommand{\asca}{\aword{as.\beta}} % The computation allocation
+
+
