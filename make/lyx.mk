@@ -104,4 +104,6 @@ lyxclean:: $(foreach s, $(lyx_subdirs), lyxclean-$s)
 
 	
 lyxhide:
-	-@chflags hidden $(lyx_tmp_files) 1>/dev/null 2>/dev/null
+	@-chflags hidden $(lyx_generated_tex_indirect) 1>/dev/null 2>/dev/null
+	@-chflags hidden $(lyx_generated_tex_indirect) 1>/dev/null 2>/dev/null
+	@-chflags hidden $(lyx_tmp_files)     1>/dev/null 2>/dev/null

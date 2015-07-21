@@ -1846,6 +1846,10 @@
 
 
 
+
+
+
+
 \ifdefined\SetImages%
   \renewcommand{\SetImages}{{\color{green} \vmath{Im}}}%
 \else%
@@ -3206,7 +3210,17 @@
   \newcommand{\walks}{{\color{green} \aword{walks}}}%
 \fi
 %  All paths in a graph
+\ifdefined\head%
+  \renewcommand{\head}{{\color{green} \aword{head}}}%
+\else%
+  \newcommand{\head}{{\color{green} \aword{head}}}%
+\fi
 
+\ifdefined\tail%
+  \renewcommand{\tail}{{\color{green} \aword{tail}}}%
+\else%
+  \newcommand{\tail}{{\color{green} \aword{tail}}}%
+\fi
 
 \ifdefined\nodes%
   \renewcommand{\nodes}{{\color{green} \aword{nodes}}}%
@@ -3234,13 +3248,43 @@
 
 
 
+\ifdefined\predecessors%
+  \renewcommand{\predecessors}{{\color{green} \aword{predecessors}}}%
+\else%
+  \newcommand{\predecessors}{{\color{green} \aword{predecessors}}}%
+\fi
+%  predecessors of a node
+\ifdefined\successors%
+  \renewcommand{\successors}{{\color{green} \aword{successors}}}%
+\else%
+  \newcommand{\successors}{{\color{green} \aword{successors}}}%
+\fi
+%  successors of a node
 
 
 
+
+
+
+\ifdefined\clatency%
+  \renewcommand{\clatency}{{\color{green} \aword{latency}}}%
+\else%
+  \newcommand{\clatency}{{\color{green} \aword{latency}}}%
+\fi
+
+\ifdefined\cperiod%
+  \renewcommand{\cperiod}{{\color{green} \aword{period}}}%
+\else%
+  \newcommand{\cperiod}{{\color{green} \aword{period}}}%
+\fi
 
 
 
 %
+
+
+
+
 
 
 
@@ -3542,6 +3586,30 @@
   \newcommand{\asm}{{\color{green} \aword{as.m}}}%
 \fi
 %  The momomorphism 
+\ifdefined\asmn%
+  \renewcommand{\asmn}{{\color{green} \aword{as.m}_N}}%
+\else%
+  \newcommand{\asmn}{{\color{green} \aword{as.m}_N}}%
+\fi
+
+\ifdefined\asme%
+  \renewcommand{\asme}{{\color{green} \aword{as.m}_E}}%
+\else%
+  \newcommand{\asme}{{\color{green} \aword{as.m}_E}}%
+\fi
+
+\ifdefined\asmni%
+  \renewcommand{\asmni}{{\color{green} \aword{as.m}^{-1}_N}}%
+\else%
+  \newcommand{\asmni}{{\color{green} \aword{as.m}^{-1}_N}}%
+\fi
+
+\ifdefined\asmei%
+  \renewcommand{\asmei}{{\color{green} \aword{as.m}^{-1}_E}}%
+\else%
+  \newcommand{\asmei}{{\color{green} \aword{as.m}^{-1}_E}}%
+\fi
+
 \ifdefined\asmi%
   \renewcommand{\asmi}{{\color{green} \aword{as.{m}^{-1}}}}%
 \else%
@@ -3564,6 +3632,20 @@
 %  The computation allocation
 
 
+
+
+\ifdefined\ctdelay%
+  \renewcommand{\ctdelay}{{\color{green} \vmath{delay}}}%
+\else%
+  \newcommand{\ctdelay}{{\color{green} \vmath{delay}}}%
+\fi
+%  Continuous-time delay
+\ifdefined\ctsample%
+  \renewcommand{\ctsample}{{\color{green} \vmath{sample}}}%
+\else%
+  \newcommand{\ctsample}{{\color{green} \vmath{sample}}}%
+\fi
+%  Continuous-time sample
 
 
 

@@ -2086,6 +2086,10 @@
 
 
 
+
+
+
+
 \newbool{usedSetImages}\setbool{usedSetImages}{false}
 \ifdefined\SetImages%
   \renewcommand{\SetImages}{\markfirst{SetImages}{usedSetImages}{\vmath{Im}}}%
@@ -3623,7 +3627,19 @@
   \newcommand{\walks}{\markfirst{walks}{usedwalks}{\aword{walks}}}%
 \fi
 %  All paths in a graph
+\newbool{usedhead}\setbool{usedhead}{false}
+\ifdefined\head%
+  \renewcommand{\head}{\markfirst{head}{usedhead}{\aword{head}}}%
+\else%
+  \newcommand{\head}{\markfirst{head}{usedhead}{\aword{head}}}%
+\fi
 
+\newbool{usedtail}\setbool{usedtail}{false}
+\ifdefined\tail%
+  \renewcommand{\tail}{\markfirst{tail}{usedtail}{\aword{tail}}}%
+\else%
+  \newcommand{\tail}{\markfirst{tail}{usedtail}{\aword{tail}}}%
+\fi
 
 \newbool{usednodes}\setbool{usednodes}{false}
 \ifdefined\nodes%
@@ -3655,13 +3671,47 @@
 
 
 
+\newbool{usedpredecessors}\setbool{usedpredecessors}{false}
+\ifdefined\predecessors%
+  \renewcommand{\predecessors}{\markfirst{predecessors}{usedpredecessors}{\aword{predecessors}}}%
+\else%
+  \newcommand{\predecessors}{\markfirst{predecessors}{usedpredecessors}{\aword{predecessors}}}%
+\fi
+%  predecessors of a node
+\newbool{usedsuccessors}\setbool{usedsuccessors}{false}
+\ifdefined\successors%
+  \renewcommand{\successors}{\markfirst{successors}{usedsuccessors}{\aword{successors}}}%
+\else%
+  \newcommand{\successors}{\markfirst{successors}{usedsuccessors}{\aword{successors}}}%
+\fi
+%  successors of a node
 
 
 
+
+
+
+\newbool{usedclatency}\setbool{usedclatency}{false}
+\ifdefined\clatency%
+  \renewcommand{\clatency}{\markfirst{clatency}{usedclatency}{\aword{latency}}}%
+\else%
+  \newcommand{\clatency}{\markfirst{clatency}{usedclatency}{\aword{latency}}}%
+\fi
+
+\newbool{usedcperiod}\setbool{usedcperiod}{false}
+\ifdefined\cperiod%
+  \renewcommand{\cperiod}{\markfirst{cperiod}{usedcperiod}{\aword{period}}}%
+\else%
+  \newcommand{\cperiod}{\markfirst{cperiod}{usedcperiod}{\aword{period}}}%
+\fi
 
 
 
 %
+
+
+
+
 
 
 
@@ -4005,6 +4055,34 @@
   \newcommand{\asm}{\markfirst{asm}{usedasm}{\aword{as.m}}}%
 \fi
 %  The momomorphism 
+\newbool{usedasmn}\setbool{usedasmn}{false}
+\ifdefined\asmn%
+  \renewcommand{\asmn}{\markfirst{asmn}{usedasmn}{\aword{as.m}_N}}%
+\else%
+  \newcommand{\asmn}{\markfirst{asmn}{usedasmn}{\aword{as.m}_N}}%
+\fi
+
+\newbool{usedasme}\setbool{usedasme}{false}
+\ifdefined\asme%
+  \renewcommand{\asme}{\markfirst{asme}{usedasme}{\aword{as.m}_E}}%
+\else%
+  \newcommand{\asme}{\markfirst{asme}{usedasme}{\aword{as.m}_E}}%
+\fi
+
+\newbool{usedasmni}\setbool{usedasmni}{false}
+\ifdefined\asmni%
+  \renewcommand{\asmni}{\markfirst{asmni}{usedasmni}{\aword{as.m}^{-1}_N}}%
+\else%
+  \newcommand{\asmni}{\markfirst{asmni}{usedasmni}{\aword{as.m}^{-1}_N}}%
+\fi
+
+\newbool{usedasmei}\setbool{usedasmei}{false}
+\ifdefined\asmei%
+  \renewcommand{\asmei}{\markfirst{asmei}{usedasmei}{\aword{as.m}^{-1}_E}}%
+\else%
+  \newcommand{\asmei}{\markfirst{asmei}{usedasmei}{\aword{as.m}^{-1}_E}}%
+\fi
+
 \newbool{usedasmi}\setbool{usedasmi}{false}
 \ifdefined\asmi%
   \renewcommand{\asmi}{\markfirst{asmi}{usedasmi}{\aword{as.{m}^{-1}}}}%
@@ -4030,6 +4108,22 @@
 %  The computation allocation
 
 
+
+
+\newbool{usedctdelay}\setbool{usedctdelay}{false}
+\ifdefined\ctdelay%
+  \renewcommand{\ctdelay}{\markfirst{ctdelay}{usedctdelay}{\vmath{delay}}}%
+\else%
+  \newcommand{\ctdelay}{\markfirst{ctdelay}{usedctdelay}{\vmath{delay}}}%
+\fi
+%  Continuous-time delay
+\newbool{usedctsample}\setbool{usedctsample}{false}
+\ifdefined\ctsample%
+  \renewcommand{\ctsample}{\markfirst{ctsample}{usedctsample}{\vmath{sample}}}%
+\else%
+  \newcommand{\ctsample}{\markfirst{ctsample}{usedctsample}{\vmath{sample}}}%
+\fi
+%  Continuous-time sample
 
 
 

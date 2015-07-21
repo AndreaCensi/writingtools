@@ -1846,6 +1846,10 @@
 
 
 
+
+
+
+
 \ifdefined\SetImages%
   \renewcommand{\SetImages}{\vmath{Im}}%
 \else%
@@ -3206,7 +3210,17 @@
   \newcommand{\walks}{\aword{walks}}%
 \fi
 %  All paths in a graph
+\ifdefined\head%
+  \renewcommand{\head}{\aword{head}}%
+\else%
+  \newcommand{\head}{\aword{head}}%
+\fi
 
+\ifdefined\tail%
+  \renewcommand{\tail}{\aword{tail}}%
+\else%
+  \newcommand{\tail}{\aword{tail}}%
+\fi
 
 \ifdefined\nodes%
   \renewcommand{\nodes}{\aword{nodes}}%
@@ -3234,13 +3248,43 @@
 
 
 
+\ifdefined\predecessors%
+  \renewcommand{\predecessors}{\aword{predecessors}}%
+\else%
+  \newcommand{\predecessors}{\aword{predecessors}}%
+\fi
+%  predecessors of a node
+\ifdefined\successors%
+  \renewcommand{\successors}{\aword{successors}}%
+\else%
+  \newcommand{\successors}{\aword{successors}}%
+\fi
+%  successors of a node
 
 
 
+
+
+
+\ifdefined\clatency%
+  \renewcommand{\clatency}{\aword{latency}}%
+\else%
+  \newcommand{\clatency}{\aword{latency}}%
+\fi
+
+\ifdefined\cperiod%
+  \renewcommand{\cperiod}{\aword{period}}%
+\else%
+  \newcommand{\cperiod}{\aword{period}}%
+\fi
 
 
 
 %
+
+
+
+
 
 
 
@@ -3542,6 +3586,30 @@
   \newcommand{\asm}{\aword{as.m}}%
 \fi
 %  The momomorphism 
+\ifdefined\asmn%
+  \renewcommand{\asmn}{\aword{as.m}_N}%
+\else%
+  \newcommand{\asmn}{\aword{as.m}_N}%
+\fi
+
+\ifdefined\asme%
+  \renewcommand{\asme}{\aword{as.m}_E}%
+\else%
+  \newcommand{\asme}{\aword{as.m}_E}%
+\fi
+
+\ifdefined\asmni%
+  \renewcommand{\asmni}{\aword{as.m}^{-1}_N}%
+\else%
+  \newcommand{\asmni}{\aword{as.m}^{-1}_N}%
+\fi
+
+\ifdefined\asmei%
+  \renewcommand{\asmei}{\aword{as.m}^{-1}_E}%
+\else%
+  \newcommand{\asmei}{\aword{as.m}^{-1}_E}%
+\fi
+
 \ifdefined\asmi%
   \renewcommand{\asmi}{\aword{as.{m}^{-1}}}%
 \else%
@@ -3564,6 +3632,20 @@
 %  The computation allocation
 
 
+
+
+\ifdefined\ctdelay%
+  \renewcommand{\ctdelay}{\vmath{delay}}%
+\else%
+  \newcommand{\ctdelay}{\vmath{delay}}%
+\fi
+%  Continuous-time delay
+\ifdefined\ctsample%
+  \renewcommand{\ctsample}{\vmath{sample}}%
+\else%
+  \newcommand{\ctsample}{\vmath{sample}}%
+\fi
+%  Continuous-time sample
 
 
 
