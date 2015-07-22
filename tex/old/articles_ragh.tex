@@ -12,9 +12,9 @@
 \newcommand{\sinks}{\aword{sinks}} 
 %:example: $\sinks(\cG)$
 
-\newcommand{\predecessors}{\aword{predecessors}} % predecessors of a node
+\newcommand{\predecessors}{\aword{pred}} % predecessors of a node
 %:example: $\predecessors(\cn)$
-\newcommand{\successors}{\aword{successors}} % successors of a node
+\newcommand{\successors}{\aword{succ}} % successors of a node
 %:example: $\predecessors(\cn)$
 
 
@@ -36,7 +36,10 @@
 \newcommand{\rG}{\aword{rG}} % A resource graph
 
 \newcommand{\rn}{\aword{rn}} % A resource node
-\newcommand{\rnops}{\aword{rn.capacity}} % A resource 
+\newcommand{\rnops}{\aword{rn.capacity}} % A resource's capacity
+\newcommand{\rntype}{\aword{rn.type}} % A resource's type
+\newcommand{\rntypes}{\aword{RTypes}} % A resource's type
+
 
 \newcommand{\rnA}{\aword{rn}_1}
 \newcommand{\rnAops}{\aword{rn}_1.\aword{capacity}} 
@@ -54,6 +57,8 @@
 \newcommand{\reBbandwidth}{\reB\aword{.bandwidth}}
  
 
+\newcommand{\reiint}{\re\aword{.int1}} % Output interface (first node)
+\newcommand{\reoint}{\re\aword{.int2}} % Input interface (second node)
 
 %
 %:section:articles/ragh/cgraph: Computation Graph

@@ -47,13 +47,13 @@ pdflatex?=pdflatex -shell-escape
 
 %.pdf: %.tex
 	latexmk -pdflatex="$(pdflatex)" -pdf $*.tex
-	# $(pdflatex) $(latex_args) $*
-	# - bibtex $*
-	# $(pdflatex) $(latex_args) $*
-	# $(pdflatex) $(latex_args) $*
-	# do not delete aux,blg,bbl for cross-references
-	# Hide temporary files
-	$(MAKE) texhide
+	@# $(pdflatex) $(latex_args) $*
+	@# - bibtex $*
+	@# $(pdflatex) $(latex_args) $*
+	@# $(pdflatex) $(latex_args) $*
+	@# do not delete aux,blg,bbl for cross-references
+	@# Hide temporary files
+	@$(MAKE) texhide
 
 %.missing-ref.txt: 
 	-cat $*.log | grep 'Latex warning: Reference' > $@
@@ -81,5 +81,5 @@ texclean:: $(foreach s, $(tex_subdirs), texclean-$s)
 	@-rm -f $(tmp_files)
 	
 texhide::
-	@-chflags hidden $(tmp_files)  2>/dev/null
+	@-chflags hidden $(tmp_files)  2>/dev/null || true
 	
