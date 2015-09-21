@@ -2,18 +2,14 @@
 % file -> \biburl
 % url  -> \weburl
 % doi  -> \path
+ 
+\providecommand{\path}[1]{DOI}
 
-\ifx\path\undefined
-  \newcommand{\path}[1]{DOI}
-\else
-  \renewcommand{\path}[1]{DOI}
-\fi
-
-\ifx\biburl\undefined
-    \newcommand{\biburl}[1]{\href{#1}{(link)}}
-\else
-    \renewcommand{\biburl}[1]{\href{#1}{(link)}}
-\fi
+% \ifx\biburl\undefined
+%     \newcommand{\biburl}[1]{\href{#1}{(link)}}
+% \else
+%     \renewcommand{\biburl}[1]{\href{#1}{(link)}}
+% \fi
 
 % Useful commands:
 % Show the complete url (purl)

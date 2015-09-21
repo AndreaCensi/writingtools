@@ -27,7 +27,7 @@ all_symbols_markfirst.tex: $(sources)
 
 all_symbols_highlight.tex: $(sources)
 	rm -f $@
-	lsm_symbols --color=green $^  > $@.tmp
+	lsm_symbols --color=symbol-highlight $^  > $@.tmp
 	mv $@.tmp $@ 
 
 highlight_deprecated.tex: $(sources)

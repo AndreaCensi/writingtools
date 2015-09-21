@@ -1,3 +1,10 @@
+
+\@ifpackageloaded{refstyle}{
+	\errmessage{
+	prettyref_format.tex is not compatible with refstyle. 
+	(LyX: Maybe disable use_ref_style = 1 in your Lyx file.)}
+}{}
+
 \usepackage{prettyref}
 \newrefformat{prob}{Problem\,\ref{#1}}
 \newrefformat{sub}{Section\,\ref{#1}}

@@ -1,30 +1,13 @@
-%:section:graphs: Graphs
-
-\newcommand{\paths}{\aword{paths}} % All paths in a graph
-
-\newcommand{\walks}{\aword{walks}} % All paths in a graph
-\newcommand{\head}{\aword{head}}
-\newcommand{\tail}{\aword{tail}}
-\newcommand{\nodes}{\aword{nodes}} % nodes in a walk
-\newcommand{\edges}{\aword{edges}} % edges in a walk
-\newcommand{\sources}{\aword{sources}} 
-%:example: $\sources(\cG)$
-\newcommand{\sinks}{\aword{sinks}} 
-%:example: $\sinks(\cG)$
-
-\newcommand{\predecessors}{\aword{pred}} % predecessors of a node
-%:example: $\predecessors(\cn)$
-\newcommand{\successors}{\aword{succ}} % successors of a node
-%:example: $\predecessors(\cn)$
 
 
-%:section:articles/ragh: Resource Allocation problem
+
+%:section:articles/1508-ragh: Resource Allocation problem
 
 \newcommand{\clatency}{\aword{latency}}
 \newcommand{\cperiod}{\aword{period}}
 
 %
-%:section:articles/ragh/rgraph: Resource Graph
+%:section:articles/1508-ragh/rgraph: Resource Graph
 %
 
 
@@ -34,6 +17,7 @@
 
 
 \newcommand{\rG}{\aword{rG}} % A resource graph
+\newcommand{\rGsp}{\aword{RG}} % Space of resource graphs
 
 \newcommand{\rn}{\aword{rn}} % A resource node
 \newcommand{\rnops}{\aword{rn.capacity}} % A resource's capacity
@@ -61,32 +45,36 @@
 \newcommand{\reoint}{\re\aword{.int2}} % Input interface (second node)
 
 %
-%:section:articles/ragh/cgraph: Computation Graph
+%:section:articles/1508-ragh/cgraph: Computation Graph
 %
 \newcommand{\cG}{\aword{cG}} % A computationg graph
+
+\newcommand{\cGsp}{\aword{CG}} % Computation graph spaces
+\newcommand{\cGleq}{\leq_{\cGsp}} % Order on computation graphs
+
 \newcommand{\cN}{\aword{cN}} % A cgraph's vertices
 \newcommand{\cE}{\aword{cE}} % A cgraph's edges
 
 \newcommand{\cn}{\aword{cn}} % A computation node
-\newcommand{\cnops}{\aword{cn.ops}} % A computation node's ops
-
 \newcommand{\cnA}{\cn_1}
 \newcommand{\cnB}{\cn_2}
-\newcommand{\cnAops}{\cn_1\aword{.ops}}
-\newcommand{\cnBops}{\cn_2\aword{.ops}}
+\newcommand{\cnops}{\cn\dotops} % A computation node's ops
+\newcommand{\dotops}{\aword{.ops}}
+\newcommand{\cnAops}{\cnA\dotops}
+\newcommand{\cnBops}{\cnB\dotops}
 
 \newcommand{\cce}{\aword{ce}} % A computation edge
-% \newcommand{\cce}{\ce} % A computation edge
 \newcommand{\ceA}{\cce_1} % A computation edge
 \newcommand{\ceB}{\cce_2} % A computation edge
 
-\newcommand{\cesize}{\aword{ce.size}} % Signal size (bytes)
-\newcommand{\ceAsize}{\aword{ce}_1\aword{.size}}
-\newcommand{\ceBsize}{\aword{ce}_2\aword{.size}}
+\newcommand{\dotsize}{\aword{.size}}
+\newcommand{\cesize}{\cce\dotsize} % Signal size (bytes)
+\newcommand{\ceAsize}{\ceA\dotsize}
+\newcommand{\ceBsize}{\ceB\dotsize}
 
 
 %
-%:section:articles/ragh/links: Physical links
+%:section:articles/1508-ragh/links: Physical links
 %
 
 \newcommand{\PL}{\aword{PLinks}} % Physical links
@@ -99,7 +87,7 @@
 \newcommand{\pllatency}{\aword{pl.latency}}
 \newcommand{\plbandwidth}{\aword{pl.bandwidth}}
 
-%:section:articles/ragh/allocations: Allocations
+%:section:articles/1508-ragh/allocations: Allocations
 
 \newcommand{\as}{\aword{as}} % An assignment
 
@@ -117,3 +105,36 @@
 \newcommand{\ctdelay}{\vmath{delay}} % Continuous-time delay
 \newcommand{\ctsample}{\vmath{sample}} % Continuous-time sample
 
+ 
+
+\newcommand{\rtof}{{\varphi}} 
+\newcommand{\ftor}{{h}} 
+% \newcommand{\ftoR}{{\color{black}H}} 
+\newcommand{\Rcomp}{\overline{\mathbb{R}}^+}
+
+\newcommand{\dpvars}{\mathscr{V}}
+
+
+\newcommand{\benchmark}{\vmath{benchmark}}
+
+\newcommand{\deploy}{\vmath{deploy}}
+\newcommand{\utypes}{\mathbf{U}} % Universe of types
+
+\newcommand{\app}{\vmath{app}}
+\newcommand{\appsp}{\vmath{Apps}}
+
+\newcommand{\ghom}{h} 
+\newcommand{\ghomv}{h_V} 
+\newcommand{\ghome}{h_E} 
+\newcommand{\ghomsp}{\vmath{Hom}} % Homomorphism space of two gaphs
+%:example: $\ghomsp(\cG,\rG)$
+
+
+\usepackage[normalem]{ulem}
+\newcommand{\mydash}{\hbox{\sout{ }}} 
+
+\newcommand{\rgcmd}{\vmath{driver\mydash cmd}}
+\newcommand{\rgobs}{\vmath{driver\mydash obs}}
+
+\newcommand{\cgcmd}{\vmath{output}}
+\newcommand{\cgobs}{\vmath{input}}
