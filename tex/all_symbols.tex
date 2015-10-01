@@ -2688,18 +2688,6 @@
   \newcommand{\dprob}{\vmath{dp}}%
 \fi
 %  Design problem
-\ifdefined\cdprobsp%
-  \renewcommand{\cdprobsp}{\ensuremath{\vmath{CDP}}}%
-\else%
-  \newcommand{\cdprobsp}{\ensuremath{\vmath{CDP}}}%
-\fi
-
-\ifdefined\cdprob%
-  \renewcommand{\cdprob}{\vmath{cdp}}%
-\else%
-  \newcommand{\cdprob}{\vmath{cdp}}%
-\fi
-%  Design problem
 
 
 
@@ -2723,6 +2711,34 @@
 \fi
 
 
+
+\ifdefined\cdprobsp%
+  \renewcommand{\cdprobsp}{\ensuremath{\vmath{CDP}}}%
+\else%
+  \newcommand{\cdprobsp}{\ensuremath{\vmath{CDP}}}%
+\fi
+
+\ifdefined\cdprob%
+  \renewcommand{\cdprob}{\vmath{cdp}}%
+\else%
+  \newcommand{\cdprob}{\vmath{cdp}}%
+\fi
+%  Design problem
+\ifdefined\dpatoms%
+  \renewcommand{\dpatoms}{\vmath{atoms}}%
+\else%
+  \newcommand{\dpatoms}{\vmath{atoms}}%
+\fi
+%  Atoms of a cdp
+
+
+
+
+\ifdefined\resMin%
+  \renewcommand{\resMin}{{\Min_{\resleq}}}%
+\else%
+  \newcommand{\resMin}{{\Min_{\resleq}}}%
+\fi
 
 
 
@@ -3910,6 +3926,12 @@
   \renewcommand{\ftor}{{h}}%
 \else%
   \newcommand{\ftor}{{h}}%
+\fi
+
+\ifdefined\ftoR%
+  \renewcommand{\ftoR}{{H}}%
+\else%
+  \newcommand{\ftoR}{{H}}%
 \fi
 
 % \newcommand{\ftoR}{{\color{black}H}} 
@@ -6615,6 +6637,24 @@
   \newcommand{\affnpos}{\affgrouppos(\reals^n)}%
 \fi
 %  Affine transformations preserving orientations.
+%
+
+
+
+
+
+\ifdefined\subto%
+  \renewcommand{\subto}{\text{s.t.}}%
+\else%
+  \newcommand{\subto}{\text{s.t.}}%
+\fi
+%  Subject to in math
+\ifdefined\with%
+  \renewcommand{\with}{\text{using}}%
+\else%
+  \newcommand{\with}{\text{using}}%
+\fi
+%  "With"
 
 
 %
@@ -6627,12 +6667,106 @@
   \newcommand{\pset}{\mathscr{P}}%
 \fi
 %  Power set (latenative to powerset
-\ifdefined\subto%
-  \renewcommand{\subto}{\text{s.t.}}%
+\DeclareMathOperator*{\Min}{Min}
+
+\DeclareMathOperator*{\Inf}{Inf}
+
+\DeclareMathOperator*{\Sup}{Sup}
+
+\DeclareMathOperator*{\Max}{Max}
+
+
+
+\ifdefined\lowerbounds%
+  \renewcommand{\lowerbounds}{\vmath{lowerbounds}}%
 \else%
-  \newcommand{\subto}{\text{s.t.}}%
+  \newcommand{\lowerbounds}{\vmath{lowerbounds}}%
 \fi
-%  Subject to in math
+
+\ifdefined\upperbounds%
+  \renewcommand{\upperbounds}{\vmath{upperbounds}}%
+\else%
+  \newcommand{\upperbounds}{\vmath{upperbounds}}%
+\fi
+
+\ifdefined\posMin%
+  \renewcommand{\posMin}{\Min}%
+\else%
+  \newcommand{\posMin}{\Min}%
+\fi
+
+\ifdefined\posleq%
+  \renewcommand{\posleq}{\preceq}%
+\else%
+  \newcommand{\posleq}{\preceq}%
+\fi
+
+\ifdefined\posgeq%
+  \renewcommand{\posgeq}{\succeq}%
+\else%
+  \newcommand{\posgeq}{\succeq}%
+\fi
+
+
+
+\ifdefined\posA%
+  \renewcommand{\posA}{\mathcal{P}}%
+\else%
+  \newcommand{\posA}{\mathcal{P}}%
+\fi
+
+
+
+\ifdefined\posAleq%
+  \renewcommand{\posAleq}{\mathrel{{\posleq_\posA}}}%
+\else%
+  \newcommand{\posAleq}{\mathrel{{\posleq_\posA}}}%
+\fi
+
+
+
+\ifdefined\posAMin%
+  \renewcommand{\posAMin}{\mathop{{\posMin_{\posAleq}}}}%
+\else%
+  \newcommand{\posAMin}{\mathop{{\posMin_{\posAleq}}}}%
+\fi
+%   Minimal elements
+
+
+\ifdefined\posAmin%
+  \renewcommand{\posAmin}{\mathop{{\min_{\posAleq}}}}%
+\else%
+  \newcommand{\posAmin}{\mathop{{\min_{\posAleq}}}}%
+\fi
+%   The least element
+\ifdefined\posAmax%
+  \renewcommand{\posAmax}{\mathop{{\max_{\posAleq}}}}%
+\else%
+  \newcommand{\posAmax}{\mathop{{\max_{\posAleq}}}}%
+\fi
+%   The least element
+
+
+\ifdefined\posB%
+  \renewcommand{\posB}{\mathcal{Q}}%
+\else%
+  \newcommand{\posB}{\mathcal{Q}}%
+\fi
+%  
+\ifdefined\posBleq%
+  \renewcommand{\posBleq}{\mathrel{{\posleq_\posB}}}%
+\else%
+  \newcommand{\posBleq}{\mathrel{{\posleq_\posB}}}%
+\fi
+
+\ifdefined\posC%
+  \renewcommand{\posC}{\mathcal{R}}%
+\else%
+  \newcommand{\posC}{\mathcal{R}}%
+\fi
+%  
+
+
 
 
 \ifdefined\lfp%
@@ -6659,18 +6793,72 @@
   \newcommand{\CPO}{\textsc{CPO}\xspace}%
 \fi
 
-\ifdefined\upsets%
-  \renewcommand{\upsets}{\vmath{upsets}}%
+\ifdefined\DCPOs%
+  \renewcommand{\DCPOs}{\textsc{DCPO}s\xspace}%
 \else%
-  \newcommand{\upsets}{\vmath{upsets}}%
+  \newcommand{\DCPOs}{\textsc{DCPO}s\xspace}%
 \fi
-%  
+
+\ifdefined\DCPO%
+  \renewcommand{\DCPO}{\textsc{DCPO}\xspace}%
+\else%
+  \newcommand{\DCPO}{\textsc{DCPO}\xspace}%
+\fi
+
+
+
 \ifdefined\antichains%
-  \renewcommand{\antichains}{\vmath{antichains}}%
+  \renewcommand{\antichains}{\vmath{A}}%
 \else%
-  \newcommand{\antichains}{\vmath{antichains}}%
+  \newcommand{\antichains}{\vmath{A}}%
 \fi
 %  
+
+
+\ifdefined\upsets%
+  \renewcommand{\upsets}{\vmath{U}}%
+\else%
+  \newcommand{\upsets}{\vmath{U}}%
+\fi
+%  
+
+
+\ifdefined\upresleq%
+  \renewcommand{\upresleq}{\posleq_{\upressp}}%
+\else%
+  \newcommand{\upresleq}{\posleq_{\upressp}}%
+\fi
+
+\ifdefined\upressp%
+  \renewcommand{\upressp}{\upsets\ressp}%
+\else%
+  \newcommand{\upressp}{\upsets\ressp}%
+\fi
+
+\ifdefined\allupsets%
+  \renewcommand{\allupsets}{\vmath{Up}}%
+\else%
+  \newcommand{\allupsets}{\vmath{Up}}%
+\fi
+%  
+
+
+
+
+\ifdefined\upit%
+  \renewcommand{\upit}{{\uparrow\,}}%
+\else%
+  \newcommand{\upit}{{\uparrow\,}}%
+\fi
+%  Converts to smallest upset containing the ste
+
+
+\ifdefined\stupit%
+  \renewcommand{\stupit}{\dot{\upit}}%
+\else%
+  \newcommand{\stupit}{\dot{\upit}}%
+\fi
+%  Strict upper closure
 
 
 

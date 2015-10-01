@@ -477,11 +477,13 @@ $\esRep: \esSt \mapsto \esStAb$.\par%
  \hline
 {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash dprobsp}} & $\dprobsp$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash dprob}} & $\dprob$ &  Design problem\\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash cdprobsp}} & $\cdprobsp$ & \\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash cdprob}} & $\cdprob$ &  Design problem\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash dpseries}} & $\dpseries$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash dppar}} & $\dppar$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash dploop}} & $\dploop$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash cdprobsp}} & $\cdprobsp$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash cdprob}} & $\cdprob$ &  Design problem\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash dpatoms}} & $\dpatoms$ &  Atoms of a cdp\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash resMin}} & $\resMin$ & \\ 
   &  & \\ 
  \multicolumn{3}{l}{{\color[rgb]{0.5,0.5,0.5}\texttt{articles/groupspectral}} \emph{Group spectral properties}}\\ 
  \hline
@@ -681,6 +683,7 @@ $\esRep: \esSt \mapsto \esStAb$.\par%
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash ctsample}} & $\ctsample$ &  Continuous-time sample\\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash rtof}} & $\rtof$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash ftor}} & $\ftor$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash ftoR}} & $\ftoR$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash Rcomp}} & $\Rcomp$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash dpvars}} & $\dpvars$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash benchmark}} & $\benchmark$ & \\ 
@@ -1253,23 +1256,33 @@ The Haar measure on $\aset{X}$ is ${\haar}^{X}$.\par%
  \hline
 \hline
  &  & \\ 
- \multicolumn{3}{l}{{\color[rgb]{0.5,0.5,0.5}\texttt{basic/partialorders}} \emph{Partial orders}}\\ 
+ \multicolumn{3}{l}{{\color[rgb]{0.5,0.5,0.5}\texttt{basic/optimization}} \emph{Optimization staff}}\\ 
+ \hline
+{\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash subto}} & $\subto$ &  Subject to in math\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash with}} & $\with$ &  "With"\\ 
+  &  & \\ 
+ \multicolumn{3}{l}{{\color[rgb]{0.5,0.5,0.5}\texttt{basic/posets}} \emph{Partial orders}}\\ 
  \hline
 {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash pset}} & $\pset$ &  Power set (latenative to powerset\\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash subto}} & $\subto$ &  Subject to in math\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash lowerbounds}} & $\lowerbounds$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash upperbounds}} & $\upperbounds$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash posMin}} & $\posMin$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash posleq}} & $\posleq$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash posgeq}} & $\posgeq$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash posA}} & $\posA$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash posAleq}} & $\posAleq$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash posAMin}} & $\posAMin$ &   Minimal elements\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash posAmin}} & $\posAmin$ &   The least element\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash posAmax}} & $\posAmax$ &   The least element\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash posB}} & $\posB$ &  \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash posBleq}} & $\posBleq$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash posC}} & $\posC$ &  \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash lfp}} & $\lfp$ &  Least fixed point \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash prefixed}} & $\prefixed$ &  prefixed points \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash CPOs}} & $\CPOs$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash CPO}} & $\CPO$ & \\ 
- {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash upsets}} & $\upsets$ &  \\ 
-  &  & {\setlength\fboxsep{1pt}%
-\fbox{%
-\color[rgb]{0.5,0.5,0.5}\begin{minipage}[]{8cm}%
-The upper sets of P are $\upsets(P)$\par%
-{\small{\texttt{The upper sets of P are \$\textbackslash upsets(P)\$}}}\end{minipage}%
-}% fbox
-}% setlength
-\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash DCPOs}} & $\DCPOs$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash DCPO}} & $\DCPO$ & \\ 
  {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash antichains}} & $\antichains$ &  \\ 
   &  & {\setlength\fboxsep{1pt}%
 \fbox{%
@@ -1279,6 +1292,12 @@ The antichains sets of P are $\antichains(P)$\par%
 }% fbox
 }% setlength
 \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash upsets}} & $\upsets$ &  \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash upresleq}} & $\upresleq$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash upressp}} & $\upressp$ & \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash allupsets}} & $\allupsets$ &  \\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash upit}} & $\upit$ &  Converts to smallest upset containing the ste\\ 
+ {\color[rgb]{0.5,0.5,0.5}\texttt{\textbackslash stupit}} & $\stupit$ &  Strict upper closure\\ 
   &  & \\ 
  \multicolumn{3}{l}{{\color[rgb]{0.5,0.5,0.5}\texttt{common/probability}} \emph{Probability}}\\ 
  \hline

@@ -1023,8 +1023,6 @@
 
 % \dprobsp: Skipped because no field 'deprecated'
 % \dprob: Skipped because no field 'deprecated'
-% \cdprobsp: Skipped because no field 'deprecated'
-% \cdprob: Skipped because no field 'deprecated'
 
 
 
@@ -1034,6 +1032,14 @@
 % \dploop: Skipped because no field 'deprecated'
 
 
+% \cdprobsp: Skipped because no field 'deprecated'
+% \cdprob: Skipped because no field 'deprecated'
+% \dpatoms: Skipped because no field 'deprecated'
+
+
+
+
+% \resMin: Skipped because no field 'deprecated'
 
 
 % \gsHom: Skipped because no field 'deprecated'
@@ -1422,6 +1428,7 @@
 
 % \rtof: Skipped because no field 'deprecated'
 % \ftor: Skipped because no field 'deprecated'
+% \ftoR: Skipped because no field 'deprecated'
 % \newcommand{\ftoR}{{\color{black}H}} 
 
 % \Rcomp: Skipped because no field 'deprecated'
@@ -2465,6 +2472,14 @@
 % \affonepos: Skipped because no field 'deprecated'
 % \affn: Skipped because no field 'deprecated'
 % \affnpos: Skipped because no field 'deprecated'
+%
+
+
+
+
+
+% \subto: Skipped because no field 'deprecated'
+% \with: Skipped because no field 'deprecated'
 
 
 %
@@ -2472,15 +2487,73 @@
 
 
 % \pset: Skipped because no field 'deprecated'
-% \subto: Skipped because no field 'deprecated'
+\DeclareMathOperator*{\Min}{Min}
+
+\DeclareMathOperator*{\Inf}{Inf}
+
+\DeclareMathOperator*{\Sup}{Sup}
+
+\DeclareMathOperator*{\Max}{Max}
+
+
+
+% \lowerbounds: Skipped because no field 'deprecated'
+% \upperbounds: Skipped because no field 'deprecated'
+% \posMin: Skipped because no field 'deprecated'
+% \posleq: Skipped because no field 'deprecated'
+% \posgeq: Skipped because no field 'deprecated'
+
+
+% \posA: Skipped because no field 'deprecated'
+
+
+% \posAleq: Skipped because no field 'deprecated'
+
+
+% \posAMin: Skipped because no field 'deprecated'
+
+
+% \posAmin: Skipped because no field 'deprecated'
+% \posAmax: Skipped because no field 'deprecated'
+
+
+% \posB: Skipped because no field 'deprecated'
+% \posBleq: Skipped because no field 'deprecated'
+% \posC: Skipped because no field 'deprecated'
+
+
 
 
 % \lfp: Skipped because no field 'deprecated'
 % \prefixed: Skipped because no field 'deprecated'
 % \CPOs: Skipped because no field 'deprecated'
 % \CPO: Skipped because no field 'deprecated'
-% \upsets: Skipped because no field 'deprecated'
+% \DCPOs: Skipped because no field 'deprecated'
+% \DCPO: Skipped because no field 'deprecated'
+
+
 % \antichains: Skipped because no field 'deprecated'
+
+
+% \upsets: Skipped because no field 'deprecated'
+
+
+% \upresleq: Skipped because no field 'deprecated'
+% \upressp: Skipped because no field 'deprecated'
+\ifdefined\allupsets%
+  \renewcommand{\allupsets}{{\color{red} \vmath{Up}}}%
+\else%
+  \newcommand{\allupsets}{{\color{red} \vmath{Up}}}%
+\fi
+%  
+
+
+
+
+% \upit: Skipped because no field 'deprecated'
+
+
+% \stupit: Skipped because no field 'deprecated'
 
 
 

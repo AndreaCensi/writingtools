@@ -62,7 +62,7 @@ pdflatex?=pdflatex -shell-escape
 	-cat $*.log | grep 'Latex warning: Citation' > $@
 
 %.unused-labels.txt: 
-	-cat $*.log | grep 'RefCheck' > $@
+	-cat $*.log | grep 'refcheck' > $@
 
 %.unused-fig.txt:  %.unused-labels.txt
 	-cat $< | grep 'fig:' > $@

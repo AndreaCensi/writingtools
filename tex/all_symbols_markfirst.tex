@@ -3040,20 +3040,6 @@
   \newcommand{\dprob}{\markfirst{dprob}{useddprob}{\vmath{dp}}}%
 \fi
 %  Design problem
-\newbool{usedcdprobsp}\setbool{usedcdprobsp}{false}
-\ifdefined\cdprobsp%
-  \renewcommand{\cdprobsp}{\markfirst{cdprobsp}{usedcdprobsp}{\ensuremath{\vmath{CDP}}}}%
-\else%
-  \newcommand{\cdprobsp}{\markfirst{cdprobsp}{usedcdprobsp}{\ensuremath{\vmath{CDP}}}}%
-\fi
-
-\newbool{usedcdprob}\setbool{usedcdprob}{false}
-\ifdefined\cdprob%
-  \renewcommand{\cdprob}{\markfirst{cdprob}{usedcdprob}{\vmath{cdp}}}%
-\else%
-  \newcommand{\cdprob}{\markfirst{cdprob}{usedcdprob}{\vmath{cdp}}}%
-\fi
-%  Design problem
 
 
 
@@ -3080,6 +3066,38 @@
 \fi
 
 
+
+\newbool{usedcdprobsp}\setbool{usedcdprobsp}{false}
+\ifdefined\cdprobsp%
+  \renewcommand{\cdprobsp}{\markfirst{cdprobsp}{usedcdprobsp}{\ensuremath{\vmath{CDP}}}}%
+\else%
+  \newcommand{\cdprobsp}{\markfirst{cdprobsp}{usedcdprobsp}{\ensuremath{\vmath{CDP}}}}%
+\fi
+
+\newbool{usedcdprob}\setbool{usedcdprob}{false}
+\ifdefined\cdprob%
+  \renewcommand{\cdprob}{\markfirst{cdprob}{usedcdprob}{\vmath{cdp}}}%
+\else%
+  \newcommand{\cdprob}{\markfirst{cdprob}{usedcdprob}{\vmath{cdp}}}%
+\fi
+%  Design problem
+\newbool{useddpatoms}\setbool{useddpatoms}{false}
+\ifdefined\dpatoms%
+  \renewcommand{\dpatoms}{\markfirst{dpatoms}{useddpatoms}{\vmath{atoms}}}%
+\else%
+  \newcommand{\dpatoms}{\markfirst{dpatoms}{useddpatoms}{\vmath{atoms}}}%
+\fi
+%  Atoms of a cdp
+
+
+
+
+\newbool{usedresMin}\setbool{usedresMin}{false}
+\ifdefined\resMin%
+  \renewcommand{\resMin}{\markfirst{resMin}{usedresMin}{{\Min_{\resleq}}}}%
+\else%
+  \newcommand{\resMin}{\markfirst{resMin}{usedresMin}{{\Min_{\resleq}}}}%
+\fi
 
 
 
@@ -4425,6 +4443,13 @@
   \renewcommand{\ftor}{\markfirst{ftor}{usedftor}{{h}}}%
 \else%
   \newcommand{\ftor}{\markfirst{ftor}{usedftor}{{h}}}%
+\fi
+
+\newbool{usedftoR}\setbool{usedftoR}{false}
+\ifdefined\ftoR%
+  \renewcommand{\ftoR}{\markfirst{ftoR}{usedftoR}{{H}}}%
+\else%
+  \newcommand{\ftoR}{\markfirst{ftoR}{usedftoR}{{H}}}%
 \fi
 
 % \newcommand{\ftoR}{{\color{black}H}} 
@@ -7436,6 +7461,26 @@
   \newcommand{\affnpos}{\markfirst{affnpos}{usedaffnpos}{\affgrouppos(\reals^n)}}%
 \fi
 %  Affine transformations preserving orientations.
+%
+
+
+
+
+
+\newbool{usedsubto}\setbool{usedsubto}{false}
+\ifdefined\subto%
+  \renewcommand{\subto}{\markfirst{subto}{usedsubto}{\text{s.t.}}}%
+\else%
+  \newcommand{\subto}{\markfirst{subto}{usedsubto}{\text{s.t.}}}%
+\fi
+%  Subject to in math
+\newbool{usedwith}\setbool{usedwith}{false}
+\ifdefined\with%
+  \renewcommand{\with}{\markfirst{with}{usedwith}{\text{using}}}%
+\else%
+  \newcommand{\with}{\markfirst{with}{usedwith}{\text{using}}}%
+\fi
+%  "With"
 
 
 %
@@ -7449,13 +7494,119 @@
   \newcommand{\pset}{\markfirst{pset}{usedpset}{\mathscr{P}}}%
 \fi
 %  Power set (latenative to powerset
-\newbool{usedsubto}\setbool{usedsubto}{false}
-\ifdefined\subto%
-  \renewcommand{\subto}{\markfirst{subto}{usedsubto}{\text{s.t.}}}%
+\DeclareMathOperator*{\Min}{Min}
+
+\DeclareMathOperator*{\Inf}{Inf}
+
+\DeclareMathOperator*{\Sup}{Sup}
+
+\DeclareMathOperator*{\Max}{Max}
+
+
+
+\newbool{usedlowerbounds}\setbool{usedlowerbounds}{false}
+\ifdefined\lowerbounds%
+  \renewcommand{\lowerbounds}{\markfirst{lowerbounds}{usedlowerbounds}{\vmath{lowerbounds}}}%
 \else%
-  \newcommand{\subto}{\markfirst{subto}{usedsubto}{\text{s.t.}}}%
+  \newcommand{\lowerbounds}{\markfirst{lowerbounds}{usedlowerbounds}{\vmath{lowerbounds}}}%
 \fi
-%  Subject to in math
+
+\newbool{usedupperbounds}\setbool{usedupperbounds}{false}
+\ifdefined\upperbounds%
+  \renewcommand{\upperbounds}{\markfirst{upperbounds}{usedupperbounds}{\vmath{upperbounds}}}%
+\else%
+  \newcommand{\upperbounds}{\markfirst{upperbounds}{usedupperbounds}{\vmath{upperbounds}}}%
+\fi
+
+\newbool{usedposMin}\setbool{usedposMin}{false}
+\ifdefined\posMin%
+  \renewcommand{\posMin}{\markfirst{posMin}{usedposMin}{\Min}}%
+\else%
+  \newcommand{\posMin}{\markfirst{posMin}{usedposMin}{\Min}}%
+\fi
+
+\newbool{usedposleq}\setbool{usedposleq}{false}
+\ifdefined\posleq%
+  \renewcommand{\posleq}{\markfirst{posleq}{usedposleq}{\preceq}}%
+\else%
+  \newcommand{\posleq}{\markfirst{posleq}{usedposleq}{\preceq}}%
+\fi
+
+\newbool{usedposgeq}\setbool{usedposgeq}{false}
+\ifdefined\posgeq%
+  \renewcommand{\posgeq}{\markfirst{posgeq}{usedposgeq}{\succeq}}%
+\else%
+  \newcommand{\posgeq}{\markfirst{posgeq}{usedposgeq}{\succeq}}%
+\fi
+
+
+
+\newbool{usedposA}\setbool{usedposA}{false}
+\ifdefined\posA%
+  \renewcommand{\posA}{\markfirst{posA}{usedposA}{\mathcal{P}}}%
+\else%
+  \newcommand{\posA}{\markfirst{posA}{usedposA}{\mathcal{P}}}%
+\fi
+
+
+
+\newbool{usedposAleq}\setbool{usedposAleq}{false}
+\ifdefined\posAleq%
+  \renewcommand{\posAleq}{\markfirst{posAleq}{usedposAleq}{\mathrel{{\posleq_\posA}}}}%
+\else%
+  \newcommand{\posAleq}{\markfirst{posAleq}{usedposAleq}{\mathrel{{\posleq_\posA}}}}%
+\fi
+
+
+
+\newbool{usedposAMin}\setbool{usedposAMin}{false}
+\ifdefined\posAMin%
+  \renewcommand{\posAMin}{\markfirst{posAMin}{usedposAMin}{\mathop{{\posMin_{\posAleq}}}}}%
+\else%
+  \newcommand{\posAMin}{\markfirst{posAMin}{usedposAMin}{\mathop{{\posMin_{\posAleq}}}}}%
+\fi
+%   Minimal elements
+
+
+\newbool{usedposAmin}\setbool{usedposAmin}{false}
+\ifdefined\posAmin%
+  \renewcommand{\posAmin}{\markfirst{posAmin}{usedposAmin}{\mathop{{\min_{\posAleq}}}}}%
+\else%
+  \newcommand{\posAmin}{\markfirst{posAmin}{usedposAmin}{\mathop{{\min_{\posAleq}}}}}%
+\fi
+%   The least element
+\newbool{usedposAmax}\setbool{usedposAmax}{false}
+\ifdefined\posAmax%
+  \renewcommand{\posAmax}{\markfirst{posAmax}{usedposAmax}{\mathop{{\max_{\posAleq}}}}}%
+\else%
+  \newcommand{\posAmax}{\markfirst{posAmax}{usedposAmax}{\mathop{{\max_{\posAleq}}}}}%
+\fi
+%   The least element
+
+
+\newbool{usedposB}\setbool{usedposB}{false}
+\ifdefined\posB%
+  \renewcommand{\posB}{\markfirst{posB}{usedposB}{\mathcal{Q}}}%
+\else%
+  \newcommand{\posB}{\markfirst{posB}{usedposB}{\mathcal{Q}}}%
+\fi
+%  
+\newbool{usedposBleq}\setbool{usedposBleq}{false}
+\ifdefined\posBleq%
+  \renewcommand{\posBleq}{\markfirst{posBleq}{usedposBleq}{\mathrel{{\posleq_\posB}}}}%
+\else%
+  \newcommand{\posBleq}{\markfirst{posBleq}{usedposBleq}{\mathrel{{\posleq_\posB}}}}%
+\fi
+
+\newbool{usedposC}\setbool{usedposC}{false}
+\ifdefined\posC%
+  \renewcommand{\posC}{\markfirst{posC}{usedposC}{\mathcal{R}}}%
+\else%
+  \newcommand{\posC}{\markfirst{posC}{usedposC}{\mathcal{R}}}%
+\fi
+%  
+
+
 
 
 \newbool{usedlfp}\setbool{usedlfp}{false}
@@ -7486,20 +7637,81 @@
   \newcommand{\CPO}{\markfirst{CPO}{usedCPO}{\textsc{CPO}\xspace}}%
 \fi
 
-\newbool{usedupsets}\setbool{usedupsets}{false}
-\ifdefined\upsets%
-  \renewcommand{\upsets}{\markfirst{upsets}{usedupsets}{\vmath{upsets}}}%
+\newbool{usedDCPOs}\setbool{usedDCPOs}{false}
+\ifdefined\DCPOs%
+  \renewcommand{\DCPOs}{\markfirst{DCPOs}{usedDCPOs}{\textsc{DCPO}s\xspace}}%
 \else%
-  \newcommand{\upsets}{\markfirst{upsets}{usedupsets}{\vmath{upsets}}}%
+  \newcommand{\DCPOs}{\markfirst{DCPOs}{usedDCPOs}{\textsc{DCPO}s\xspace}}%
 \fi
-%  
+
+\newbool{usedDCPO}\setbool{usedDCPO}{false}
+\ifdefined\DCPO%
+  \renewcommand{\DCPO}{\markfirst{DCPO}{usedDCPO}{\textsc{DCPO}\xspace}}%
+\else%
+  \newcommand{\DCPO}{\markfirst{DCPO}{usedDCPO}{\textsc{DCPO}\xspace}}%
+\fi
+
+
+
 \newbool{usedantichains}\setbool{usedantichains}{false}
 \ifdefined\antichains%
-  \renewcommand{\antichains}{\markfirst{antichains}{usedantichains}{\vmath{antichains}}}%
+  \renewcommand{\antichains}{\markfirst{antichains}{usedantichains}{\vmath{A}}}%
 \else%
-  \newcommand{\antichains}{\markfirst{antichains}{usedantichains}{\vmath{antichains}}}%
+  \newcommand{\antichains}{\markfirst{antichains}{usedantichains}{\vmath{A}}}%
 \fi
 %  
+
+
+\newbool{usedupsets}\setbool{usedupsets}{false}
+\ifdefined\upsets%
+  \renewcommand{\upsets}{\markfirst{upsets}{usedupsets}{\vmath{U}}}%
+\else%
+  \newcommand{\upsets}{\markfirst{upsets}{usedupsets}{\vmath{U}}}%
+\fi
+%  
+
+
+\newbool{usedupresleq}\setbool{usedupresleq}{false}
+\ifdefined\upresleq%
+  \renewcommand{\upresleq}{\markfirst{upresleq}{usedupresleq}{\posleq_{\upressp}}}%
+\else%
+  \newcommand{\upresleq}{\markfirst{upresleq}{usedupresleq}{\posleq_{\upressp}}}%
+\fi
+
+\newbool{usedupressp}\setbool{usedupressp}{false}
+\ifdefined\upressp%
+  \renewcommand{\upressp}{\markfirst{upressp}{usedupressp}{\upsets\ressp}}%
+\else%
+  \newcommand{\upressp}{\markfirst{upressp}{usedupressp}{\upsets\ressp}}%
+\fi
+
+\newbool{usedallupsets}\setbool{usedallupsets}{false}
+\ifdefined\allupsets%
+  \renewcommand{\allupsets}{\markfirst{allupsets}{usedallupsets}{\vmath{Up}}}%
+\else%
+  \newcommand{\allupsets}{\markfirst{allupsets}{usedallupsets}{\vmath{Up}}}%
+\fi
+%  
+
+
+
+
+\newbool{usedupit}\setbool{usedupit}{false}
+\ifdefined\upit%
+  \renewcommand{\upit}{\markfirst{upit}{usedupit}{{\uparrow\,}}}%
+\else%
+  \newcommand{\upit}{\markfirst{upit}{usedupit}{{\uparrow\,}}}%
+\fi
+%  Converts to smallest upset containing the ste
+
+
+\newbool{usedstupit}\setbool{usedstupit}{false}
+\ifdefined\stupit%
+  \renewcommand{\stupit}{\markfirst{stupit}{usedstupit}{\dot{\upit}}}%
+\else%
+  \newcommand{\stupit}{\markfirst{stupit}{usedstupit}{\dot{\upit}}}%
+\fi
+%  Strict upper closure
 
 
 

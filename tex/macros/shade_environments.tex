@@ -11,18 +11,18 @@
      left = 4pt,
      top = 0pt,
      bottom = 4pt,
+     colback=white,
      right skip = 0pt,
      left skip = 0pt,
      before skip = 4pt,
      after skip = 4pt,
-     borderline west={2pt}{0pt}{lightgray!20},
-     colback=white,
+     borderline west={2pt}{0pt}{lightgray!20}
 } 
 
 \usepackage{etoolbox}
 
 \preto\example{\begin{mybox}}\appto\endexample{\end{mybox}}
-\preto\defn{\begin{mybox}}\appto\enddefn{\end{mybox}}
-\preto\problem{\begin{mybox}}\appto\endproblem{\end{mybox}}
-\preto\prop{\begin{mybox}}\appto\endprop{\end{mybox}}
-\preto\lem{\begin{mybox}}\appto\endlem{\end{mybox}}
+% \preto\defn{\begin{mybox}}\appto\enddefn{\end{mybox}}
+% \preto\problem{\begin{mybox}}\appto\endproblem{\end{mybox}}
+% \preto\prop{\mybox}\appto\endprop{\endmybox}
+% \preto\lem{\begin{mybox}}\appto\endlem{\end{mybox}}

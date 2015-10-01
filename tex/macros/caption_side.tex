@@ -1,0 +1,18 @@
+
+\usepackage{capt-of}
+
+\newcommand*{\vcenteredhbox}[1]{\begingroup
+\setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup}
+
+\newcommand{\captionsideleft}[2]{%
+    \medskip%
+    \begin{minipage}{1.8cm}{%
+        \hfill%
+        \protect\captionof{figure}{#1}}\end{minipage}%
+    \begin{minipage}{6.6cm}%
+    % \centering
+    \vcenteredhbox{{#2}}%
+    \hfill
+    \end{minipage}%
+    \medskip%
+}
