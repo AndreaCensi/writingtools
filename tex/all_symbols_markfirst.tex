@@ -7668,7 +7668,16 @@
 \else%
   \newcommand{\upsets}{\markfirst{upsets}{usedupsets}{\vmath{U}}}%
 \fi
-%  
+
+\newbool{useddownsets}\setbool{useddownsets}{false}
+\ifdefined\downsets%
+  \renewcommand{\downsets}{\markfirst{downsets}{useddownsets}{\vmath{D}}}%
+\else%
+  \newcommand{\downsets}{\markfirst{downsets}{useddownsets}{\vmath{D}}}%
+\fi
+
+
+
 
 
 \newbool{usedupresleq}\setbool{usedupresleq}{false}
