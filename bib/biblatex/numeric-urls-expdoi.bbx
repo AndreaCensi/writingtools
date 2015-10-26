@@ -1,5 +1,22 @@
 \ProvidesFile{numeric-urls.bbx}
 []
+
+\newcommand{\weburl}[1]{\href{#1}{#1}}
+\providecommand{\biburl}[1]{\href{#1}{#1}}
+\newcommand{\doiurl}[1]{%
+    % \StrSubstitute{#1}{/}{/\,}[\fooo]%
+    \StrSubstitute{#1}{/}{/}[\fooo]%
+     \href{http://dx.doi.org/#1}{\footnotesize\textsc{doi}:{\doifont\fooo}}%
+     %\href{http://dx.doi.org/\thefield{doi}}{\small\textsc{doi}: \thefield{doi}}%
+}
+
+\definecolor{urlcolor}{rgb}{0,0,0.4}
+\newcommand{\doifont}{\color{urlcolor}}
+\renewcommand\UrlFont{\color{urlcolor}\footnotesize}
+\renewcommand{\bibfont}{\color{urlcolor}\sffamily}
+
+
+
 \usepackage{xstring}
 \RequireBibliographyStyle{numeric}
 
@@ -18,9 +35,7 @@
   \iftoggle{bbx:doi}{\iffieldundef{doi}{\notpresent{doi}}{
       \hspace{1pt}%
      % \def\mysp{\hspace{0pt}|\hspace{0pt}}%
-     \StrSubstitute{\thefield{doi}}{/}{/ }[\fooo]%
-     \href{http://dx.doi.org/\thefield{doi}}{\footnotesize\textsc{doi}:\fooo}%
-     %\href{http://dx.doi.org/\thefield{doi}}{\small\textsc{doi}: \thefield{doi}}%
+     \doiurl{\thefield{doi}}
   }}{}%
   \iftoggle{bbx:file}{\iffieldundef{file}{\notpresent{file}}{%
       \hspace{1pt}%

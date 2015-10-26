@@ -1,0 +1,60 @@
+%
+%:section:basic/optimization: Optimization staff
+
+
+\newcommand{\subto}{\text{s.t.}} % Subject to in math
+\newcommand{\with}{\text{using}} % "With"
+
+%
+%:section:basic/posets: Partial orders
+%
+
+\newcommand{\pset}{\mathscr{P}} % Power set (latenative to powerset
+\DeclareMathOperator*{\Min}{Min}
+\DeclareMathOperator*{\Inf}{Inf}
+\DeclareMathOperator*{\Sup}{Sup}
+\DeclareMathOperator*{\Max}{Max}
+
+\newcommand{\lowerbounds}{\vmath{lowerbounds}}
+\newcommand{\upperbounds}{\vmath{upperbounds}}
+\newcommand{\posMin}{\Min}
+\newcommand{\posleq}{\preceq}
+\newcommand{\posgeq}{\succeq}
+
+\newcommand{\posA}{\mathcal{P}} %
+
+\newcommand{\posAleq}{\mathrel{{\posleq_\posA}}} %
+
+\newcommand{\posAMin}{\mathop{{\posMin_{\posAleq}}}} %  Minimal elements
+
+\newcommand{\posAmin}{\mathop{{\min_{\posAleq}}}} %  The least element
+\newcommand{\posAmax}{\mathop{{\max_{\posAleq}}}} %  The least element
+
+\newcommand{\posB}{\mathcal{Q}} % 
+\newcommand{\posBleq}{\mathrel{{\posleq_\posB}}} %
+\newcommand{\posC}{\mathcal{R}} % 
+
+
+\newcommand{\lfp}{\vmath{lfp}} % Least fixed point 
+\newcommand{\prefixed}{\vmath{prefixed}} % prefixed points 
+\newcommand{\CPOs}{\textsc{CPO}s\xspace}
+\newcommand{\CPO}{\textsc{CPO}\xspace}
+\newcommand{\DCPOs}{\textsc{DCPO}s\xspace}
+\newcommand{\DCPO}{\textsc{DCPO}\xspace}
+
+%:example: The upper sets of P are $\upsets(P)$
+% \newcommand{\antichains}{\vmath{antichains}} % 
+\newcommand{\antichains}{\vmath{A}} % 
+%:example: The antichains sets of P are $\antichains(P)$
+
+\newcommand{\upsets}{\vmath{U}} % 
+
+\newcommand{\upresleq}{\posleq_{\upressp}}
+\newcommand{\upressp}{\upsets\ressp}
+\newcommand{\allupsets}{\vmath{Up}} % 
+%:deprecated:
+
+
+\newcommand{\upit}{{\uparrow\,}} % Converts to smallest upset containing the ste
+
+\newcommand{\stupit}{\dot{\upit}} % Strict upper closure

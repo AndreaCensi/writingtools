@@ -24,7 +24,12 @@
     }%
 }
 
+\ifx\biburl\undefined
+	\PackageError{bib_pdf_icons}{numeric-url-doi.bbx not loaded}{}
+\fi
 
-\newcommand{\biburl}[1]{\href{#1}{\iconintext{pdf_icon}}}
-\newcommand{\weburl}[1]{\href{#1}{\iconintext{web_icon}}}
-\newcommand{\slidesurl}[1]{\href{#1}{\iconintext{slides_icon}}}
+\renewcommand{\biburl}[1]{\href{#1}{\iconintext{pdf_icon}}}
+\renewcommand{\weburl}[1]{\href{#1}{\iconintext{web_icon}}}
+
+\providecommand{\slidesurl}[1]{\href{#1}{\iconintext{slides_icon}}}
+

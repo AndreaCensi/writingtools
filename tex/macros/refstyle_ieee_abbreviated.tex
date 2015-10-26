@@ -1,0 +1,30 @@
+
+\@ifpackageloaded{prettyref}{
+	\errmessage{
+	refstyle_ieee_abbreviated.tex is not compatible with prettyref. 
+	(LyX: Maybe disable use_ref_style = 0 in your Lyx file.)}
+}{}
+
+
+\usepackage{refstyle}
+\newref{prob}{refcmd={Problem\,\ref{#1}}}
+
+\newref{sub}{refcmd={Sec.\,\ref{#1}}}
+\newref{sec}{refcmd={Sec.\,\ref{#1}}}
+
+\newref{prop}{refcmd={Prop.\,\ref{#1}}}
+\newref{pro}{refcmd={Prop.\,\ref{#1}}}
+% \newref{def}{refcmd={Definition~\ref{#1}}}
+\newref{def}{refcmd={Def.\,\ref{#1}}}
+
+\newref{app}{refcmd={Appendix\,\ref{#1}}}
+\newref{alg}{refcmd={Algorithm\,\ref{#1}}}
+\newref{cor}{refcmd={Corollary\,\ref{#1}}}
+\newref{thm}{refcmd={Theorem\,\ref{#1}}}
+\newref{tab}{refcmd={Table\,\ref{#1}}}
+\newref{fig}{refcmd={Fig.\,\ref{#1}}}
+\newref{line}{refcmd={line~\ref{#1}}}
+\newref{exa}{refcmd={Example\,\ref{#1}}}
+\newref{lem}{refcmd={Lemma\,\ref{#1}}}
+
+\newref{eq}{refcmd={(\ref{#1})}}
