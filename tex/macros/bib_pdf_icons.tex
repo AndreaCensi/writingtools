@@ -1,6 +1,22 @@
 %\graphicspath{{commons/icons/}}
 
-\newcommand{\iconintext}[1]{{\setlength\fboxsep{0pt}%
+% http://tex.stackexchange.com/questions/31819/xelatex-includegraphics-and-hyperlink
+\newsavebox{\ximagebox}
+\newlength{\ximageheight}
+\newsavebox{\xglyphbox}
+\newlength{\xglyphheight}
+\newcommand{\xbox}[1]%
+  {\savebox{\ximagebox}{#1}%
+  \settoheight{\ximageheight}{\usebox{\ximagebox}}%
+  \savebox{\xglyphbox}{\char32}%
+  \settoheight{\xglyphheight}{\usebox{\xglyphbox}}%
+  \raisebox{\ximageheight}[0pt][0pt]{\raisebox{-\xglyphheight}[0pt][0pt]{%
+    \makebox[0pt][l]{\usebox{\xglyphbox}}}}%
+    \usebox{\ximagebox}%
+    \raisebox{0pt}[0pt][0pt]{\makebox[0pt][r]{\usebox{\xglyphbox}}}}
+
+
+\newcommand{\iconintext}[1]{\xbox{\setlength\fboxsep{0pt}%
 \raisebox{-0.5ex}{%
     %\fbox{%
     \includegraphics[height=2ex]{#1}}%
@@ -14,5 +30,5 @@
 
 \renewcommand{\biburl}[1]{\href{#1}{\iconintext{pdf_icon}}}
 \renewcommand{\weburl}[1]{\href{#1}{\iconintext{web_icon}}}
+\renewcommand{\slidesurl}[1]{\href{#1}{\iconintext{slides_icon}}}
 
-\providecommand{\slidesurl}[1]{\href{#1}{\iconintext{slides_icon}}}

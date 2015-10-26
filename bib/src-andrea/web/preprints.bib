@@ -1,13 +1,57 @@
 
 
+
+
+
+@Techreport{censi15monotone,
+  Title                    = {Monotone Co-Design Problems and their Systematic Solution},
+  Author                   = {Andrea Censi},
+  Year                     = {2015},
+  pdf = {http://purl.org/censi/research/201510-monotone/1-MonotoneCodesign.pdf},
+  Month                    = Oct,
+  Desc                     = { },
+  Descicon                 = {http://purl.org/censi/web/media/paper-icons/censi15monotone.png},
+  Institution              = {Laboratory for Information and Decision Systems/MIT}
+
+}
+
+
+@Techreport{censi15same,
+  Title                    = {Generalized Monotone Co-Design Problems; or, everything is the same},
+  Author                   = {Andrea Censi},
+  Year                     = {2015},
+  pdf = {http://purl.org/censi/research/201510-monotone/2-EverythingIsTheSame.pdf},
+  Month                    = Oct,
+  Desc                     = { },
+  Descicon                 = {http://purl.org/censi/web/media/paper-icons/censi15same.png},
+
+  Institution              = {Laboratory for Information and Decision Systems/MIT}
+}
+
+
+@Techreport{censi15rara,
+  Title                    = {Synthesis of resource-aware robotic applications},
+  Author                   = {Andrea Censi},
+  Year                     = {2015},
+  pdf = {http://purl.org/censi/research/201510-monotone/3-ResourceAwareRoboticApplications.pdf},
+  Month                    = Oct,
+  Desc                     = { },
+  Descicon                 = {http://purl.org/censi/web/media/paper-icons/censi15rara.png},
+  Institution              = {Laboratory for Information and Decision Systems/MIT}
+}
+
+
+
 @Techreport{censi15compmake_sub,
-  Title                    = {{Compmake: Minimal Effort Parallelization of Python Applications}},
+  Title                    = {{Compmake: Minimal Effort Parallelization and Job Management for Python Applications}},
   Author                   = {Andrea Censi},
   Year                     = {2014},
   url                      = {http://purl.org/censi/2015/compmake},
-  Institution              = {Massachussets Institute of Technology},
+  pdf = {http://purl.org/censi/research/2015-compmake-v3.pdf},
+  Institution              = {Laboratory for Information and Decision Systems/MIT},
   Month                    = Oct,
   Desc                     = { 
+  Compmake is a non-obtrusive module that provides Makefile-like facilities (including parallel processing) for batch Python applications.
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/censi15compmake.png}
 }
@@ -15,31 +59,29 @@
 @Techreport{censi15despl_sub,
   Title                    = {{Design Patterns for Learners Parallelization, or: the joy of waking up in the morning and finding the experiments all done}},
   Author                   = {Andrea Censi},
-  Institution              = {Massachussets Institute of Technology},
+  Institution              = {Laboratory for Information and Decision Systems/MIT},
   Month                    = Oct,
   Year                     = {2014},
   url                      = {http://purl.org/censi/2015/despl},
-pdf = {http://purl.org/censi/research/2015-despl-sub.pdf},
+apdf = {http://purl.org/censi/research/2015-despl-sub.pdf},
   Desc                     = { 
     This paper describes a few different ways for parallelizing a "learner", so that the learning process
     can be subdivided in jobs that can run independently on different cpus or different hosts.
  },
- note = {(Submitted to ICRA)},
+ note = {},
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/censi15despl.png}
 }
 
 
-@Techreport{censi15neucontrol_sub,
+@inproceedings{censi15neucontrol_sub,
   Title                    = {{Efficient Neuromorphic Optomotor Heading Regulation}},
   Author                   = {Andrea Censi},
-  Institution              = {Laboratory for Information and Decision Systems},
-  Year                     = {2014},
-  Month                    = Sep,
-  url                      = {http://purl.org/censi/2015/neucontrol},
-  pdf = {http://purl.org/censi/research/2015-neucontrol-sub.pdf},
-  Owner                    = {andrea},
-  Timestamp                = {2014.09.30},
-  note = {(Submitted to ACC)},
+  aurl                      = {http://purl.org/censi/2015/neucontrol},
+  apdf = {http://purl.org/censi/research/2015-neucontrol-sub.pdf},
+  booktitle = {American Control Conference (ACC)},
+  month = Jun,
+  year = {2015},
+  address = {Chicago, IL},
   Desc                     = { 
     This paper describes a method for regulating the heading of a vehicle 
     based on the feedback from a neuromorphic event-based sensor.
@@ -47,22 +89,21 @@ pdf = {http://purl.org/censi/research/2015-despl-sub.pdf},
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/censi15neucontrol.png}
 }
 
-@Techreport{censi15powerperf_sub,
-  Title                    = {{A Power-Performance Approach to Comparing Sensor Families, with application to comparing neuromorphic to traditional vision sensor}},
-  Author                   = {Andrea Censi and Erich Mueller and Emilio Frazzoli and Stefano Soatto},
-  Institution              = {Laboratory for Information and Decision Systems},
-  Year                     = {2014},
-  Month                    = Oct,
-  url                      = {http://purl.org/censi/2015/powerperf},
+@inproceedings{censi15powerperf_sub,
+  Title                    = {{A Power-Performance Approach to Comparing Sensor Families, with application to comparing neuromorphic to traditional vision sensors}},
+  Year                     = {2015},
+  Month                    = May,
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA) },
+  aurl                      = {http://purl.org/censi/2015/powerperf},
+  author = "Censi, Andrea and Mueller, Erich and Frazzoli, Emilio and Soatto, Stefano",
   urlresolved = {http://purl.org/censi/web/powerperf},
-  pdf = {http://purl.org/censi/research/2015-powerperf-sub.pdf},
+  apdf = {http://purl.org/censi/research/2015-powerperf-sub.pdf},
   Owner                    = {andrea},
   Timestamp                = {2014.09.30},
   Desc                     = { 
     How to compare two sensors, or generally, two sensor families? Any meaningful comparison depends on the task.
     This paper shows that it also depends on the sensing power available.
  },
- note = {(Submitted to ICRA)},
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/censi15powerperf.png}
 
 }
@@ -71,15 +112,14 @@ pdf = {http://purl.org/censi/research/2015-despl-sub.pdf},
 @Techreport{censi15codesign_sub,
   Title                    = {{On the Optimal Codesign of Vehicle Sensing and Actuation}},
   Author                   = {Andrea Censi and Emilio Frazzoli and Sawyer B. Fuller},
-  Institution              = {Laboratory for Information and Decision Systems},
+  Institution              = {Laboratory for Information and Decision Systems/MIT},
   Year                     = {2014},
   Month                    = Oct,
-  url                      = {http://purl.org/censi/2015/codesign},
+  aurl                      = {http://purl.org/censi/2015/codesign},
   urlresolved = {http://purl.org/censi/web/codesign},
-  pdf = {http://purl.org/censi/research/2015-codesign-sub.pdf},
+  apdf = {http://purl.org/censi/research/2015-codesign-sub.pdf},
   Owner                    = {andrea},
   Timestamp                = {2014.09.30},
-note = {(Submitted to ICRA)},
   Desc                     = { 
   Should you choose to invest power into sensing and computation, or should you choose to save energy and use a smaller battery?
     This paper considers the problem of choosing the optimal design of the sensor for an autonomous vehicle
@@ -100,15 +140,19 @@ note = {(Submitted to ICRA)},
   slideskeynote = {http://purl.org/censi/research/2013-jbds-slides.key.zip},
   url = {http://purl.org/censi/2013/jbds}, 
   video ={https://vimeo.com/80954603},
-  year = {2014},
-  note = {(To appear)},
+  year = {2015},
+  month = jul,
+  volume = 34,
+  doi = {10.1177/0278364914557708},
+  pages = {1087--1113},
   abstract = {Learning and adaptivity will play a large role in robotics in the future, as robots transition from unstructured to unstructured environments that cannot be fully predicted or understood by the designer. Two questions that are open are how much it is possible to learn, and how much we should learn. The goal of bootstrapping is creating agents that are able to learn "everything" from scratch, including a torque-to-pixels models for its robotic body. Systems with such capabilities will be advantaged in terms of being resilient to unforeseen changes and deviations from prior assumptions. The robotics domain is a challenging one for learning, due to the presence of high-dimensional signals, various nonlinearities, and hidden states. There are no formal results, in the spirit of control theory, that could give guarantees. This paper considers the bootstrapping problem for a subset of the set of all robots. The Vehicles, inspired by Braitenberg's work, are idealization of mobile robots equipped with a set of “canonical” exteroceptive sensors (camera; range-finder; field-sampler). Their sensel-level dynamics are derived and shown to be surprising close. We define the class of BDS models, which assume an instantaneous bilinear dynamics between observations and commands, and derive streaming-based bilinear strategies for them. We show in what sense the BDS dynamics approximates the set of Vehicles to guarantee success in the task of generalized servoing: driving the observations to a given goal snapshot.  Simulations and experiments substantiate the theoretical results. This is the first instance of a bootstrapping agent that can learn the dynamics of a relatively large universe of systems, and use the models to solve well-defined tasks, with no parameter tuning or hand-designed features.},
   desc = { 
 For a bootstrapping agent connected to an unknown body, the "world" is the series of the unknown actuators, the external environment, and the unknown sensors. 
 One ability that a bootstrapping agent needs is estimating a predictive model of the observations 
 as a function of the commands.  This paper considers the sensorimotor dynamics learning problem for a subset of the "set of all robots" called the Simple Vehicles, which are the idealization of mobile robots equipped with one of the three exteroceptive sensors: field-sampler, vision sensor, and range-finder.
   },  
-  descicon = {http://purl.org/censi/web/media/paper-icons/censi13jbds.png}
+  descicon = {http://purl.org/censi/web/media/paper-icons/censi13jbds.png},
+  sortyear = {2015},
 }
 
 @techreport{censi13jbds_sub_nonote,
@@ -129,6 +173,7 @@ a subset of the set of all robots.
   },  
   descicon = {http://purl.org/censi/web/media/paper-icons/censi13jbds.png}
 }
+
 @inproceedings{censi13dvsd_sub,
   author = {Andrea Censi and Davide Scaramuzza},
   title = {Low-latency Event-Based Visual Odometry},
@@ -137,8 +182,8 @@ a subset of the set of all robots.
   year = {2014},
   month = may,
   booktitle = {IEEE International Conference on Robotics and Automation (ICRA) },
-  kind = {preprint},
   abstract = {},
+
   slides = {http://purl.org/censi/research/2013-dvsd/201405-icra15-dvsd.pdf},
   desc = {
     This paper describes an event-based visual odometry algorighm which
@@ -152,12 +197,11 @@ a subset of the set of all robots.
 
 @inproceedings{carlone14coherent_sub,
   author = {Luca Carlone and Andrea Censi and Frank Dellaert},
-  title = {Coherent Measurements Selection via $\ell_1$ Relaxation: an Approach to Robust Estimation over Graphs},
+  title = {Coherent Measurements Selection via l1 Relaxation: an Approach to Robust Estimation over Graphs},
   month = Oct,
   year = {2014},
-  note = {(To appear.)},
   abstract = {},
-  booktitle={IROS 2014},
+  booktitle= {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
   desc = {
       [Luca](http://lucacarlone.com), [Frank](http://www.cc.gatech.edu/~dellaert/)
       and I show how outliers in planar pose graph optimization 
