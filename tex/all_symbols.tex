@@ -6820,7 +6820,15 @@
 \else%
   \newcommand{\upsets}{\vmath{U}}%
 \fi
-%  
+
+\ifdefined\downsets%
+  \renewcommand{\downsets}{\vmath{D}}%
+\else%
+  \newcommand{\downsets}{\vmath{D}}%
+\fi
+
+
+
 
 
 \ifdefined\upresleq%

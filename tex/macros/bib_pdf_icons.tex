@@ -25,11 +25,9 @@
 }
 
 \ifx\biburl\undefined
-	\PackageError{bib_pdf_icons}{numeric-url-doi.bbx not loaded}{}
+	\PackageError{bib_pdf_icons}{numeric-url-doi.bbx not loaded - I am checking biburl defined}{}
 \fi
 
 \renewcommand{\biburl}[1]{\href{#1}{\iconintext{pdf_icon}}}
 \renewcommand{\weburl}[1]{\href{#1}{\iconintext{web_icon}}}
-
-\providecommand{\slidesurl}[1]{\href{#1}{\iconintext{slides_icon}}}
-
+\renewcommand{\slidesurl}[1]{\href{#1}{\iconintext{slides_icon}}}
