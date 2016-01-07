@@ -1,8 +1,8 @@
-%:section:typography:Basic typography
+%:section:0typography:Basic typography
 
 \newcommand{\myacronym}[1]{\textsc{#1}\xspace} % All acronyms; good for text as well as math mode. Use lower case.
 
-%:section:typography/tensors:Tensors and tensor elements
+%:section:0typography/tensors:Tensors and tensor elements
 \newcommand{\T}[1]{\boldsymbol{{\mathsf{#1}}}} % Tensor
 %:nomenc:\T{A},\T{B},\T{C},\dots: Symbols denoting tensors
 %:sort:---40a
@@ -15,7 +15,7 @@
 %:deprecated:
 
 
-%:section:typography/matrices:Matrices and matrix elements
+%:section:0typography/matrices:Matrices and matrix elements
 \newcommand{\M}[1]{\mathbf{#1}} %  A matrix
 %:nomenc:\M{A},\M{B},\M{C},\dots: Symbols denoting matrices
 %:sort:---30a
@@ -24,7 +24,7 @@
 %:nomenc:\Mel{A},\Mel{B},\Mel{C},\dots: Symbols denoting matrix elements
 %:sort:---30b
 
-%:section:typography/sets:Sets
+%:section:0typography/sets:Sets
 \newcommand{\aset}[1]{\mathscr{#1}} % A set
 %:nomenc:\setA,\setB,\setC,\dots,\setM,\setX,\setY,\setZ:Symbols denoting sets.
 %:sort:---10
@@ -46,9 +46,16 @@
 %:nomenc:i,j,k,s,v,\dots:Symbols usually used as indices.
 
 
-%:section:typography/misc:Everything else
+%:section:0typography/misc:Everything else
 \newcommand{\aword}[1]{\mathsf{#1}} % How words should look like in formulas.
 %:example: Consider the operator $\aword{scale}$, \dots
 
 \newcommand{\vmath}[1]{\aword{#1}} % How words should appear in math mode.
+
+\newcommand{\codefunc}[1]{\texttt{#1}\xspace} % Code functions
+%:example: The function \codefunc{select} 
+
+\newcommand{\swpackage}[1]{\textsc{#1}\xspace} % Name of software packages
+%:example: The package \swpackage{Procgraph}, \swpackage{ZMQ}, \swpackage{Unix} .
+
 

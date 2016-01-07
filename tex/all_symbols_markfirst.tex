@@ -38,6 +38,15 @@
 %  Agent's exploration phase
 
 
+\newbool{usedagLearn}\setbool{usedagLearn}{false}
+\ifdefined\agLearn%
+  \renewcommand{\agLearn}{\markfirst{agLearn}{usedagLearn}{\mathsf{learn}}}%
+\else%
+  \newcommand{\agLearn}{\markfirst{agLearn}{usedagLearn}{\mathsf{learn}}}%
+\fi
+%  Agent's learning phase
+
+
 \newbool{usedagAct}\setbool{usedagAct}{false}
 \ifdefined\agAct%
   \renewcommand{\agAct}{\markfirst{agAct}{usedagAct}{\mathsf{act}}}%
@@ -2077,6 +2086,10 @@
 
 
 
+
+
+
+
 \newbool{usedSetImages}\setbool{usedSetImages}{false}
 \ifdefined\SetImages%
   \renewcommand{\SetImages}{\markfirst{SetImages}{usedSetImages}{\vmath{Im}}}%
@@ -3013,6 +3026,81 @@
 
 
 
+\newbool{useddprobsp}\setbool{useddprobsp}{false}
+\ifdefined\dprobsp%
+  \renewcommand{\dprobsp}{\markfirst{dprobsp}{useddprobsp}{\ensuremath{\vmath{DP}}}}%
+\else%
+  \newcommand{\dprobsp}{\markfirst{dprobsp}{useddprobsp}{\ensuremath{\vmath{DP}}}}%
+\fi
+
+\newbool{useddprob}\setbool{useddprob}{false}
+\ifdefined\dprob%
+  \renewcommand{\dprob}{\markfirst{dprob}{useddprob}{\vmath{dp}}}%
+\else%
+  \newcommand{\dprob}{\markfirst{dprob}{useddprob}{\vmath{dp}}}%
+\fi
+%  Design problem
+
+
+
+
+\newbool{useddpseries}\setbool{useddpseries}{false}
+\ifdefined\dpseries%
+  \renewcommand{\dpseries}{\markfirst{dpseries}{useddpseries}{\vmath{series}}}%
+\else%
+  \newcommand{\dpseries}{\markfirst{dpseries}{useddpseries}{\vmath{series}}}%
+\fi
+
+\newbool{useddppar}\setbool{useddppar}{false}
+\ifdefined\dppar%
+  \renewcommand{\dppar}{\markfirst{dppar}{useddppar}{\vmath{par}}}%
+\else%
+  \newcommand{\dppar}{\markfirst{dppar}{useddppar}{\vmath{par}}}%
+\fi
+
+\newbool{useddploop}\setbool{useddploop}{false}
+\ifdefined\dploop%
+  \renewcommand{\dploop}{\markfirst{dploop}{useddploop}{\vmath{loop}}}%
+\else%
+  \newcommand{\dploop}{\markfirst{dploop}{useddploop}{\vmath{loop}}}%
+\fi
+
+
+
+\newbool{usedcdprobsp}\setbool{usedcdprobsp}{false}
+\ifdefined\cdprobsp%
+  \renewcommand{\cdprobsp}{\markfirst{cdprobsp}{usedcdprobsp}{\ensuremath{\vmath{CDP}}}}%
+\else%
+  \newcommand{\cdprobsp}{\markfirst{cdprobsp}{usedcdprobsp}{\ensuremath{\vmath{CDP}}}}%
+\fi
+
+\newbool{usedcdprob}\setbool{usedcdprob}{false}
+\ifdefined\cdprob%
+  \renewcommand{\cdprob}{\markfirst{cdprob}{usedcdprob}{\vmath{cdp}}}%
+\else%
+  \newcommand{\cdprob}{\markfirst{cdprob}{usedcdprob}{\vmath{cdp}}}%
+\fi
+%  Design problem
+\newbool{useddpatoms}\setbool{useddpatoms}{false}
+\ifdefined\dpatoms%
+  \renewcommand{\dpatoms}{\markfirst{dpatoms}{useddpatoms}{\vmath{atoms}}}%
+\else%
+  \newcommand{\dpatoms}{\markfirst{dpatoms}{useddpatoms}{\vmath{atoms}}}%
+\fi
+%  Atoms of a cdp
+
+
+
+
+\newbool{usedresMin}\setbool{usedresMin}{false}
+\ifdefined\resMin%
+  \renewcommand{\resMin}{\markfirst{resMin}{usedresMin}{{\Min_{\resleq}}}}%
+\else%
+  \newcommand{\resMin}{\markfirst{resMin}{usedresMin}{{\Min_{\resleq}}}}%
+\fi
+
+
+
 \newbool{usedgsHom}\setbool{usedgsHom}{false}
 \ifdefined\gsHom%
   \renewcommand{\gsHom}{\markfirst{gsHom}{usedgsHom}{\text{HomMaps}}}%
@@ -3596,6 +3684,910 @@
   \newcommand{\np}{\markfirst{np}{usednp}{n}}%
 \fi
 %  Number of pixels
+
+
+%
+
+
+
+
+
+\newbool{usedfunsp}\setbool{usedfunsp}{false}
+\ifdefined\funsp%
+  \renewcommand{\funsp}{\markfirst{funsp}{usedfunsp}{\mathscr{F}}}%
+\else%
+  \newcommand{\funsp}{\markfirst{funsp}{usedfunsp}{\mathscr{F}}}%
+\fi
+%  Function space
+\newbool{usedfunleq}\setbool{usedfunleq}{false}
+\ifdefined\funleq%
+  \renewcommand{\funleq}{\markfirst{funleq}{usedfunleq}{\leq_{\funsp}}}%
+\else%
+  \newcommand{\funleq}{\markfirst{funleq}{usedfunleq}{\leq_{\funsp}}}%
+\fi
+%  Function space
+\newbool{usedfun}\setbool{usedfun}{false}
+\ifdefined\fun%
+  \renewcommand{\fun}{\markfirst{fun}{usedfun}{\vmath{f}}}%
+\else%
+  \newcommand{\fun}{\markfirst{fun}{usedfun}{\vmath{f}}}%
+\fi
+%  Function
+
+
+\newbool{usedfuntop}\setbool{usedfuntop}{false}
+\ifdefined\funtop%
+  \renewcommand{\funtop}{\markfirst{funtop}{usedfuntop}{\top_\funsp}}%
+\else%
+  \newcommand{\funtop}{\markfirst{funtop}{usedfuntop}{\top_\funsp}}%
+\fi
+
+\newbool{usedfunbot}\setbool{usedfunbot}{false}
+\ifdefined\funbot%
+  \renewcommand{\funbot}{\markfirst{funbot}{usedfunbot}{\bot_\funsp}}%
+\else%
+  \newcommand{\funbot}{\markfirst{funbot}{usedfunbot}{\bot_\funsp}}%
+\fi
+
+
+
+\newbool{usedimp}\setbool{usedimp}{false}
+\ifdefined\imp%
+  \renewcommand{\imp}{\markfirst{imp}{usedimp}{\vmath{i}}}%
+\else%
+  \newcommand{\imp}{\markfirst{imp}{usedimp}{\vmath{i}}}%
+\fi
+%  Implementation
+\newbool{usedimpsp}\setbool{usedimpsp}{false}
+\ifdefined\impsp%
+  \renewcommand{\impsp}{\markfirst{impsp}{usedimpsp}{\mathscr{I}}}%
+\else%
+  \newcommand{\impsp}{\markfirst{impsp}{usedimpsp}{\mathscr{I}}}%
+\fi
+%  Implementation space
+
+
+\newbool{usedexc}\setbool{usedexc}{false}
+\ifdefined\exc%
+  \renewcommand{\exc}{\markfirst{exc}{usedexc}{\vmath{exec}}}%
+\else%
+  \newcommand{\exc}{\markfirst{exc}{usedexc}{\vmath{exec}}}%
+\fi
+%  Executation $\exc: \impsp \rightarrow \funsp$
+\newbool{usedeval}\setbool{usedeval}{false}
+\ifdefined\eval%
+  \renewcommand{\eval}{\markfirst{eval}{usedeval}{\vmath{eval}}}%
+\else%
+  \newcommand{\eval}{\markfirst{eval}{usedeval}{\vmath{eval}}}%
+\fi
+%  Evaluation $\eval: \impsp \rightarrow \ressp$
+
+
+% \newcommand{\param}{\vmath{p}} % Parameter
+
+\newbool{usedparamsp}\setbool{usedparamsp}{false}
+\ifdefined\paramsp%
+  \renewcommand{\paramsp}{\markfirst{paramsp}{usedparamsp}{\mathscr{P}}}%
+\else%
+  \newcommand{\paramsp}{\markfirst{paramsp}{usedparamsp}{\mathscr{P}}}%
+\fi
+%  Parameter space
+% \newcommand{\paramleq}{\leq_{\paramsp}}
+
+
+
+\newbool{usedres}\setbool{usedres}{false}
+\ifdefined\res%
+  \renewcommand{\res}{\markfirst{res}{usedres}{\vmath{r}}}%
+\else%
+  \newcommand{\res}{\markfirst{res}{usedres}{\vmath{r}}}%
+\fi
+%  Resources
+\newbool{usedresleq}\setbool{usedresleq}{false}
+\ifdefined\resleq%
+  \renewcommand{\resleq}{\markfirst{resleq}{usedresleq}{\leq_{\ressp}}}%
+\else%
+  \newcommand{\resleq}{\markfirst{resleq}{usedresleq}{\leq_{\ressp}}}%
+\fi
+
+\newbool{usedrestop}\setbool{usedrestop}{false}
+\ifdefined\restop%
+  \renewcommand{\restop}{\markfirst{restop}{usedrestop}{\top_\ressp}}%
+\else%
+  \newcommand{\restop}{\markfirst{restop}{usedrestop}{\top_\ressp}}%
+\fi
+
+\newbool{usedresbot}\setbool{usedresbot}{false}
+\ifdefined\resbot%
+  \renewcommand{\resbot}{\markfirst{resbot}{usedresbot}{\bot_\ressp}}%
+\else%
+  \newcommand{\resbot}{\markfirst{resbot}{usedresbot}{\bot_\ressp}}%
+\fi
+
+
+
+\newbool{usedressp}\setbool{usedressp}{false}
+\ifdefined\ressp%
+  \renewcommand{\ressp}{\markfirst{ressp}{usedressp}{\mathscr{R}}}%
+\else%
+  \newcommand{\ressp}{\markfirst{ressp}{usedressp}{\mathscr{R}}}%
+\fi
+%  Resources space
+\newbool{usedresspleq}\setbool{usedresspleq}{false}
+\ifdefined\resspleq%
+  \renewcommand{\resspleq}{\markfirst{resspleq}{usedresspleq}{\resleq}}%
+\else%
+  \newcommand{\resspleq}{\markfirst{resspleq}{usedresspleq}{\resleq}}%
+\fi
+
+
+
+\newbool{usedtressp}\setbool{usedtressp}{false}
+\ifdefined\tressp%
+  \renewcommand{\tressp}{\markfirst{tressp}{usedtressp}{\trof(\ressp)}}%
+\else%
+  \newcommand{\tressp}{\markfirst{tressp}{usedtressp}{\trof(\ressp)}}%
+\fi
+%  Trade-off space
+\newbool{usedtrof}\setbool{usedtrof}{false}
+\ifdefined\trof%
+  \renewcommand{\trof}{\markfirst{trof}{usedtrof}{\mathscr{T}}}%
+\else%
+  \newcommand{\trof}{\markfirst{trof}{usedtrof}{\mathscr{T}}}%
+\fi
+%  Trade-off space
+\newbool{usedtres}\setbool{usedtres}{false}
+\ifdefined\tres%
+  \renewcommand{\tres}{\markfirst{tres}{usedtres}{T}}%
+\else%
+  \newcommand{\tres}{\markfirst{tres}{usedtres}{T}}%
+\fi
+
+\newbool{usedtresleq}\setbool{usedtresleq}{false}
+\ifdefined\tresleq%
+  \renewcommand{\tresleq}{\markfirst{tresleq}{usedtresleq}{\leq_{\trof}}}%
+\else%
+  \newcommand{\tresleq}{\markfirst{tresleq}{usedtresleq}{\leq_{\trof}}}%
+\fi
+%  Trade-off space
+\newbool{usedtrleq}\setbool{usedtrleq}{false}
+\ifdefined\trleq%
+  \renewcommand{\trleq}{\markfirst{trleq}{usedtrleq}{\leq_{\trof}}}%
+\else%
+  \newcommand{\trleq}{\markfirst{trleq}{usedtrleq}{\leq_{\trof}}}%
+\fi
+%  Trade-off space
+
+
+
+
+
+
+\newbool{usedRes}\setbool{usedRes}{false}
+\ifdefined\Res%
+  \renewcommand{\Res}{\markfirst{Res}{usedRes}{S}}%
+\else%
+  \newcommand{\Res}{\markfirst{Res}{usedRes}{S}}%
+\fi
+
+\newbool{usedResa}\setbool{usedResa}{false}
+\ifdefined\Resa%
+  \renewcommand{\Resa}{\markfirst{Resa}{usedResa}{S_1}}%
+\else%
+  \newcommand{\Resa}{\markfirst{Resa}{usedResa}{S_1}}%
+\fi
+
+\newbool{usedResb}\setbool{usedResb}{false}
+\ifdefined\Resb%
+  \renewcommand{\Resb}{\markfirst{Resb}{usedResb}{S_2}}%
+\else%
+  \newcommand{\Resb}{\markfirst{Resb}{usedResb}{S_2}}%
+\fi
+
+\newbool{usedresa}\setbool{usedresa}{false}
+\ifdefined\resa%
+  \renewcommand{\resa}{\markfirst{resa}{usedresa}{\res_1}}%
+\else%
+  \newcommand{\resa}{\markfirst{resa}{usedresa}{\res_1}}%
+\fi
+
+\newbool{usedresb}\setbool{usedresb}{false}
+\ifdefined\resb%
+  \renewcommand{\resb}{\markfirst{resb}{usedresb}{\res_2}}%
+\else%
+  \newcommand{\resb}{\markfirst{resb}{usedresb}{\res_2}}%
+\fi
+
+\newbool{usedRessp}\setbool{usedRessp}{false}
+\ifdefined\Ressp%
+  \renewcommand{\Ressp}{\markfirst{Ressp}{usedRessp}{\pset(\ressp)}}%
+\else%
+  \newcommand{\Ressp}{\markfirst{Ressp}{usedRessp}{\pset(\ressp)}}%
+\fi
+
+\newbool{usedResleq}\setbool{usedResleq}{false}
+\ifdefined\Resleq%
+  \renewcommand{\Resleq}{\markfirst{Resleq}{usedResleq}{\leq_{\Ressp}}}%
+\else%
+  \newcommand{\Resleq}{\markfirst{Resleq}{usedResleq}{\leq_{\Ressp}}}%
+\fi
+
+\newbool{usedrtoapp}\setbool{usedrtoapp}{false}
+\ifdefined\rtoapp%
+  \renewcommand{\rtoapp}{\markfirst{rtoapp}{usedrtoapp}{\Psi}}%
+\else%
+  \newcommand{\rtoapp}{\markfirst{rtoapp}{usedrtoapp}{\Psi}}%
+\fi
+
+
+
+
+
+
+
+
+
+\newbool{usedclatency}\setbool{usedclatency}{false}
+\ifdefined\clatency%
+  \renewcommand{\clatency}{\markfirst{clatency}{usedclatency}{\aword{latency}}}%
+\else%
+  \newcommand{\clatency}{\markfirst{clatency}{usedclatency}{\aword{latency}}}%
+\fi
+
+\newbool{usedcperiod}\setbool{usedcperiod}{false}
+\ifdefined\cperiod%
+  \renewcommand{\cperiod}{\markfirst{cperiod}{usedcperiod}{\aword{period}}}%
+\else%
+  \newcommand{\cperiod}{\markfirst{cperiod}{usedcperiod}{\aword{period}}}%
+\fi
+
+
+
+%
+
+
+
+
+
+
+
+\newbool{usedrN}\setbool{usedrN}{false}
+\ifdefined\rN%
+  \renewcommand{\rN}{\markfirst{rN}{usedrN}{\aword{rN}}}%
+\else%
+  \newcommand{\rN}{\markfirst{rN}{usedrN}{\aword{rN}}}%
+\fi
+%  A resource graph's vertices
+\newbool{usedrE}\setbool{usedrE}{false}
+\ifdefined\rE%
+  \renewcommand{\rE}{\markfirst{rE}{usedrE}{\aword{rE}}}%
+\else%
+  \newcommand{\rE}{\markfirst{rE}{usedrE}{\aword{rE}}}%
+\fi
+%  A resource graph's edges
+
+
+
+
+\newbool{usedrG}\setbool{usedrG}{false}
+\ifdefined\rG%
+  \renewcommand{\rG}{\markfirst{rG}{usedrG}{\aword{rG}}}%
+\else%
+  \newcommand{\rG}{\markfirst{rG}{usedrG}{\aword{rG}}}%
+\fi
+%  A resource graph
+\newbool{usedrGsp}\setbool{usedrGsp}{false}
+\ifdefined\rGsp%
+  \renewcommand{\rGsp}{\markfirst{rGsp}{usedrGsp}{\aword{RG}}}%
+\else%
+  \newcommand{\rGsp}{\markfirst{rGsp}{usedrGsp}{\aword{RG}}}%
+\fi
+%  Space of resource graphs
+
+
+\newbool{usedrn}\setbool{usedrn}{false}
+\ifdefined\rn%
+  \renewcommand{\rn}{\markfirst{rn}{usedrn}{\aword{rn}}}%
+\else%
+  \newcommand{\rn}{\markfirst{rn}{usedrn}{\aword{rn}}}%
+\fi
+%  A resource node
+\newbool{usedrnops}\setbool{usedrnops}{false}
+\ifdefined\rnops%
+  \renewcommand{\rnops}{\markfirst{rnops}{usedrnops}{\aword{rn.capacity}}}%
+\else%
+  \newcommand{\rnops}{\markfirst{rnops}{usedrnops}{\aword{rn.capacity}}}%
+\fi
+%  A resource's capacity
+\newbool{usedrntype}\setbool{usedrntype}{false}
+\ifdefined\rntype%
+  \renewcommand{\rntype}{\markfirst{rntype}{usedrntype}{\aword{rn.type}}}%
+\else%
+  \newcommand{\rntype}{\markfirst{rntype}{usedrntype}{\aword{rn.type}}}%
+\fi
+%  A resource's type
+\newbool{usedrntypes}\setbool{usedrntypes}{false}
+\ifdefined\rntypes%
+  \renewcommand{\rntypes}{\markfirst{rntypes}{usedrntypes}{\aword{RTypes}}}%
+\else%
+  \newcommand{\rntypes}{\markfirst{rntypes}{usedrntypes}{\aword{RTypes}}}%
+\fi
+%  A resource's type
+
+
+
+
+\newbool{usedrnA}\setbool{usedrnA}{false}
+\ifdefined\rnA%
+  \renewcommand{\rnA}{\markfirst{rnA}{usedrnA}{\aword{rn}_1}}%
+\else%
+  \newcommand{\rnA}{\markfirst{rnA}{usedrnA}{\aword{rn}_1}}%
+\fi
+
+\newbool{usedrnAops}\setbool{usedrnAops}{false}
+\ifdefined\rnAops%
+  \renewcommand{\rnAops}{\markfirst{rnAops}{usedrnAops}{\aword{rn}_1.\aword{capacity}}}%
+\else%
+  \newcommand{\rnAops}{\markfirst{rnAops}{usedrnAops}{\aword{rn}_1.\aword{capacity}}}%
+\fi
+
+\newbool{usedrnB}\setbool{usedrnB}{false}
+\ifdefined\rnB%
+  \renewcommand{\rnB}{\markfirst{rnB}{usedrnB}{\aword{rn}_2}}%
+\else%
+  \newcommand{\rnB}{\markfirst{rnB}{usedrnB}{\aword{rn}_2}}%
+\fi
+
+\newbool{usedrnBops}\setbool{usedrnBops}{false}
+\ifdefined\rnBops%
+  \renewcommand{\rnBops}{\markfirst{rnBops}{usedrnBops}{\aword{rn}_2.\aword{capacity}}}%
+\else%
+  \newcommand{\rnBops}{\markfirst{rnBops}{usedrnBops}{\aword{rn}_2.\aword{capacity}}}%
+\fi
+
+
+
+\newbool{usedre}\setbool{usedre}{false}
+\ifdefined\re%
+  \renewcommand{\re}{\markfirst{re}{usedre}{\aword{re}}}%
+\else%
+  \newcommand{\re}{\markfirst{re}{usedre}{\aword{re}}}%
+\fi
+%  A resource edge
+\newbool{usedrelink}\setbool{usedrelink}{false}
+\ifdefined\relink%
+  \renewcommand{\relink}{\markfirst{relink}{usedrelink}{\aword{re.link}}}%
+\else%
+  \newcommand{\relink}{\markfirst{relink}{usedrelink}{\aword{re.link}}}%
+\fi
+%  A resource 
+\newbool{usedrelatency}\setbool{usedrelatency}{false}
+\ifdefined\relatency%
+  \renewcommand{\relatency}{\markfirst{relatency}{usedrelatency}{\re\aword{.latency}}}%
+\else%
+  \newcommand{\relatency}{\markfirst{relatency}{usedrelatency}{\re\aword{.latency}}}%
+\fi
+
+\newbool{usedrebandwidth}\setbool{usedrebandwidth}{false}
+\ifdefined\rebandwidth%
+  \renewcommand{\rebandwidth}{\markfirst{rebandwidth}{usedrebandwidth}{\re\aword{.bandwidth}}}%
+\else%
+  \newcommand{\rebandwidth}{\markfirst{rebandwidth}{usedrebandwidth}{\re\aword{.bandwidth}}}%
+\fi
+
+\newbool{usedreA}\setbool{usedreA}{false}
+\ifdefined\reA%
+  \renewcommand{\reA}{\markfirst{reA}{usedreA}{\re_1}}%
+\else%
+  \newcommand{\reA}{\markfirst{reA}{usedreA}{\re_1}}%
+\fi
+
+\newbool{usedreB}\setbool{usedreB}{false}
+\ifdefined\reB%
+  \renewcommand{\reB}{\markfirst{reB}{usedreB}{\re_2}}%
+\else%
+  \newcommand{\reB}{\markfirst{reB}{usedreB}{\re_2}}%
+\fi
+
+\newbool{usedreAlatency}\setbool{usedreAlatency}{false}
+\ifdefined\reAlatency%
+  \renewcommand{\reAlatency}{\markfirst{reAlatency}{usedreAlatency}{\reA\aword{.latency}}}%
+\else%
+  \newcommand{\reAlatency}{\markfirst{reAlatency}{usedreAlatency}{\reA\aword{.latency}}}%
+\fi
+
+\newbool{usedreAbandwidth}\setbool{usedreAbandwidth}{false}
+\ifdefined\reAbandwidth%
+  \renewcommand{\reAbandwidth}{\markfirst{reAbandwidth}{usedreAbandwidth}{\reA\aword{.bandwidth}}}%
+\else%
+  \newcommand{\reAbandwidth}{\markfirst{reAbandwidth}{usedreAbandwidth}{\reA\aword{.bandwidth}}}%
+\fi
+
+\newbool{usedreBbandwidth}\setbool{usedreBbandwidth}{false}
+\ifdefined\reBbandwidth%
+  \renewcommand{\reBbandwidth}{\markfirst{reBbandwidth}{usedreBbandwidth}{\reB\aword{.bandwidth}}}%
+\else%
+  \newcommand{\reBbandwidth}{\markfirst{reBbandwidth}{usedreBbandwidth}{\reB\aword{.bandwidth}}}%
+\fi
+
+ 
+
+
+
+\newbool{usedreiint}\setbool{usedreiint}{false}
+\ifdefined\reiint%
+  \renewcommand{\reiint}{\markfirst{reiint}{usedreiint}{\re\aword{.int1}}}%
+\else%
+  \newcommand{\reiint}{\markfirst{reiint}{usedreiint}{\re\aword{.int1}}}%
+\fi
+%  Output interface (first node)
+\newbool{usedreoint}\setbool{usedreoint}{false}
+\ifdefined\reoint%
+  \renewcommand{\reoint}{\markfirst{reoint}{usedreoint}{\re\aword{.int2}}}%
+\else%
+  \newcommand{\reoint}{\markfirst{reoint}{usedreoint}{\re\aword{.int2}}}%
+\fi
+%  Input interface (second node)
+
+
+%
+
+\newbool{usedcG}\setbool{usedcG}{false}
+\ifdefined\cG%
+  \renewcommand{\cG}{\markfirst{cG}{usedcG}{\aword{cG}}}%
+\else%
+  \newcommand{\cG}{\markfirst{cG}{usedcG}{\aword{cG}}}%
+\fi
+%  A computationg graph
+
+
+\newbool{usedcGsp}\setbool{usedcGsp}{false}
+\ifdefined\cGsp%
+  \renewcommand{\cGsp}{\markfirst{cGsp}{usedcGsp}{\aword{CG}}}%
+\else%
+  \newcommand{\cGsp}{\markfirst{cGsp}{usedcGsp}{\aword{CG}}}%
+\fi
+%  Computation graph spaces
+\newbool{usedcGleq}\setbool{usedcGleq}{false}
+\ifdefined\cGleq%
+  \renewcommand{\cGleq}{\markfirst{cGleq}{usedcGleq}{\leq_{\cGsp}}}%
+\else%
+  \newcommand{\cGleq}{\markfirst{cGleq}{usedcGleq}{\leq_{\cGsp}}}%
+\fi
+%  Order on computation graphs
+
+
+\newbool{usedcN}\setbool{usedcN}{false}
+\ifdefined\cN%
+  \renewcommand{\cN}{\markfirst{cN}{usedcN}{\aword{cN}}}%
+\else%
+  \newcommand{\cN}{\markfirst{cN}{usedcN}{\aword{cN}}}%
+\fi
+%  A cgraph's vertices
+\newbool{usedcE}\setbool{usedcE}{false}
+\ifdefined\cE%
+  \renewcommand{\cE}{\markfirst{cE}{usedcE}{\aword{cE}}}%
+\else%
+  \newcommand{\cE}{\markfirst{cE}{usedcE}{\aword{cE}}}%
+\fi
+%  A cgraph's edges
+
+
+\newbool{usedcn}\setbool{usedcn}{false}
+\ifdefined\cn%
+  \renewcommand{\cn}{\markfirst{cn}{usedcn}{\aword{cn}}}%
+\else%
+  \newcommand{\cn}{\markfirst{cn}{usedcn}{\aword{cn}}}%
+\fi
+%  A computation node
+\newbool{usedcnA}\setbool{usedcnA}{false}
+\ifdefined\cnA%
+  \renewcommand{\cnA}{\markfirst{cnA}{usedcnA}{\cn_1}}%
+\else%
+  \newcommand{\cnA}{\markfirst{cnA}{usedcnA}{\cn_1}}%
+\fi
+
+\newbool{usedcnB}\setbool{usedcnB}{false}
+\ifdefined\cnB%
+  \renewcommand{\cnB}{\markfirst{cnB}{usedcnB}{\cn_2}}%
+\else%
+  \newcommand{\cnB}{\markfirst{cnB}{usedcnB}{\cn_2}}%
+\fi
+
+\newbool{usedcnops}\setbool{usedcnops}{false}
+\ifdefined\cnops%
+  \renewcommand{\cnops}{\markfirst{cnops}{usedcnops}{\cn\dotops}}%
+\else%
+  \newcommand{\cnops}{\markfirst{cnops}{usedcnops}{\cn\dotops}}%
+\fi
+%  A computation node's ops
+\newbool{useddotops}\setbool{useddotops}{false}
+\ifdefined\dotops%
+  \renewcommand{\dotops}{\markfirst{dotops}{useddotops}{\aword{.ops}}}%
+\else%
+  \newcommand{\dotops}{\markfirst{dotops}{useddotops}{\aword{.ops}}}%
+\fi
+
+\newbool{usedcnAops}\setbool{usedcnAops}{false}
+\ifdefined\cnAops%
+  \renewcommand{\cnAops}{\markfirst{cnAops}{usedcnAops}{\cnA\dotops}}%
+\else%
+  \newcommand{\cnAops}{\markfirst{cnAops}{usedcnAops}{\cnA\dotops}}%
+\fi
+
+\newbool{usedcnBops}\setbool{usedcnBops}{false}
+\ifdefined\cnBops%
+  \renewcommand{\cnBops}{\markfirst{cnBops}{usedcnBops}{\cnB\dotops}}%
+\else%
+  \newcommand{\cnBops}{\markfirst{cnBops}{usedcnBops}{\cnB\dotops}}%
+\fi
+
+
+
+\newbool{usedcce}\setbool{usedcce}{false}
+\ifdefined\cce%
+  \renewcommand{\cce}{\markfirst{cce}{usedcce}{\aword{ce}}}%
+\else%
+  \newcommand{\cce}{\markfirst{cce}{usedcce}{\aword{ce}}}%
+\fi
+%  A computation edge
+\newbool{usedceA}\setbool{usedceA}{false}
+\ifdefined\ceA%
+  \renewcommand{\ceA}{\markfirst{ceA}{usedceA}{\cce_1}}%
+\else%
+  \newcommand{\ceA}{\markfirst{ceA}{usedceA}{\cce_1}}%
+\fi
+%  A computation edge
+\newbool{usedceB}\setbool{usedceB}{false}
+\ifdefined\ceB%
+  \renewcommand{\ceB}{\markfirst{ceB}{usedceB}{\cce_2}}%
+\else%
+  \newcommand{\ceB}{\markfirst{ceB}{usedceB}{\cce_2}}%
+\fi
+%  A computation edge
+
+
+\newbool{useddotsize}\setbool{useddotsize}{false}
+\ifdefined\dotsize%
+  \renewcommand{\dotsize}{\markfirst{dotsize}{useddotsize}{\aword{.size}}}%
+\else%
+  \newcommand{\dotsize}{\markfirst{dotsize}{useddotsize}{\aword{.size}}}%
+\fi
+
+\newbool{usedcesize}\setbool{usedcesize}{false}
+\ifdefined\cesize%
+  \renewcommand{\cesize}{\markfirst{cesize}{usedcesize}{\cce\dotsize}}%
+\else%
+  \newcommand{\cesize}{\markfirst{cesize}{usedcesize}{\cce\dotsize}}%
+\fi
+%  Signal size (bytes)
+\newbool{usedceAsize}\setbool{usedceAsize}{false}
+\ifdefined\ceAsize%
+  \renewcommand{\ceAsize}{\markfirst{ceAsize}{usedceAsize}{\ceA\dotsize}}%
+\else%
+  \newcommand{\ceAsize}{\markfirst{ceAsize}{usedceAsize}{\ceA\dotsize}}%
+\fi
+
+\newbool{usedceBsize}\setbool{usedceBsize}{false}
+\ifdefined\ceBsize%
+  \renewcommand{\ceBsize}{\markfirst{ceBsize}{usedceBsize}{\ceB\dotsize}}%
+\else%
+  \newcommand{\ceBsize}{\markfirst{ceBsize}{usedceBsize}{\ceB\dotsize}}%
+\fi
+
+
+
+
+
+%
+
+
+
+\newbool{usedPL}\setbool{usedPL}{false}
+\ifdefined\PL%
+  \renewcommand{\PL}{\markfirst{PL}{usedPL}{\aword{PLinks}}}%
+\else%
+  \newcommand{\PL}{\markfirst{PL}{usedPL}{\aword{PLinks}}}%
+\fi
+%  Physical links
+\newbool{usedpl}\setbool{usedpl}{false}
+\ifdefined\pl%
+  \renewcommand{\pl}{\markfirst{pl}{usedpl}{\aword{pl}}}%
+\else%
+  \newcommand{\pl}{\markfirst{pl}{usedpl}{\aword{pl}}}%
+\fi
+%  Physical link
+
+
+\newbool{usedpplA}\setbool{usedpplA}{false}
+\ifdefined\pplA%
+  \renewcommand{\pplA}{\markfirst{pplA}{usedpplA}{\pl_1}}%
+\else%
+  \newcommand{\pplA}{\markfirst{pplA}{usedpplA}{\pl_1}}%
+\fi
+%  plA conflicts
+\newbool{usedplAlatency}\setbool{usedplAlatency}{false}
+\ifdefined\plAlatency%
+  \renewcommand{\plAlatency}{\markfirst{plAlatency}{usedplAlatency}{\pplA\aword{.latency}}}%
+\else%
+  \newcommand{\plAlatency}{\markfirst{plAlatency}{usedplAlatency}{\pplA\aword{.latency}}}%
+\fi
+
+\newbool{usedplAbandwidth}\setbool{usedplAbandwidth}{false}
+\ifdefined\plAbandwidth%
+  \renewcommand{\plAbandwidth}{\markfirst{plAbandwidth}{usedplAbandwidth}{\pplA\aword{.bandwidth}}}%
+\else%
+  \newcommand{\plAbandwidth}{\markfirst{plAbandwidth}{usedplAbandwidth}{\pplA\aword{.bandwidth}}}%
+\fi
+
+
+
+\newbool{usedpllatency}\setbool{usedpllatency}{false}
+\ifdefined\pllatency%
+  \renewcommand{\pllatency}{\markfirst{pllatency}{usedpllatency}{\aword{pl.latency}}}%
+\else%
+  \newcommand{\pllatency}{\markfirst{pllatency}{usedpllatency}{\aword{pl.latency}}}%
+\fi
+
+\newbool{usedplbandwidth}\setbool{usedplbandwidth}{false}
+\ifdefined\plbandwidth%
+  \renewcommand{\plbandwidth}{\markfirst{plbandwidth}{usedplbandwidth}{\aword{pl.bandwidth}}}%
+\else%
+  \newcommand{\plbandwidth}{\markfirst{plbandwidth}{usedplbandwidth}{\aword{pl.bandwidth}}}%
+\fi
+
+
+
+
+
+\newbool{usedas}\setbool{usedas}{false}
+\ifdefined\as%
+  \renewcommand{\as}{\markfirst{as}{usedas}{\aword{as}}}%
+\else%
+  \newcommand{\as}{\markfirst{as}{usedas}{\aword{as}}}%
+\fi
+%  An assignment
+
+
+\newbool{usedasm}\setbool{usedasm}{false}
+\ifdefined\asm%
+  \renewcommand{\asm}{\markfirst{asm}{usedasm}{\aword{as.m}}}%
+\else%
+  \newcommand{\asm}{\markfirst{asm}{usedasm}{\aword{as.m}}}%
+\fi
+%  The momomorphism 
+\newbool{usedasmn}\setbool{usedasmn}{false}
+\ifdefined\asmn%
+  \renewcommand{\asmn}{\markfirst{asmn}{usedasmn}{\aword{as.m}_N}}%
+\else%
+  \newcommand{\asmn}{\markfirst{asmn}{usedasmn}{\aword{as.m}_N}}%
+\fi
+
+\newbool{usedasme}\setbool{usedasme}{false}
+\ifdefined\asme%
+  \renewcommand{\asme}{\markfirst{asme}{usedasme}{\aword{as.m}_E}}%
+\else%
+  \newcommand{\asme}{\markfirst{asme}{usedasme}{\aword{as.m}_E}}%
+\fi
+
+\newbool{usedasmni}\setbool{usedasmni}{false}
+\ifdefined\asmni%
+  \renewcommand{\asmni}{\markfirst{asmni}{usedasmni}{\aword{as.m}^{-1}_N}}%
+\else%
+  \newcommand{\asmni}{\markfirst{asmni}{usedasmni}{\aword{as.m}^{-1}_N}}%
+\fi
+
+\newbool{usedasmei}\setbool{usedasmei}{false}
+\ifdefined\asmei%
+  \renewcommand{\asmei}{\markfirst{asmei}{usedasmei}{\aword{as.m}^{-1}_E}}%
+\else%
+  \newcommand{\asmei}{\markfirst{asmei}{usedasmei}{\aword{as.m}^{-1}_E}}%
+\fi
+
+\newbool{usedasmi}\setbool{usedasmi}{false}
+\ifdefined\asmi%
+  \renewcommand{\asmi}{\markfirst{asmi}{usedasmi}{\aword{as.{m}^{-1}}}}%
+\else%
+  \newcommand{\asmi}{\markfirst{asmi}{usedasmi}{\aword{as.{m}^{-1}}}}%
+\fi
+%  The right inverse of the momomorphism 
+
+
+\newbool{usedasla}\setbool{usedasla}{false}
+\ifdefined\asla%
+  \renewcommand{\asla}{\markfirst{asla}{usedasla}{\aword{as.\alpha}}}%
+\else%
+  \newcommand{\asla}{\markfirst{asla}{usedasla}{\aword{as.\alpha}}}%
+\fi
+%  The link allocation
+\newbool{usedasca}\setbool{usedasca}{false}
+\ifdefined\asca%
+  \renewcommand{\asca}{\markfirst{asca}{usedasca}{\aword{as.\beta}}}%
+\else%
+  \newcommand{\asca}{\markfirst{asca}{usedasca}{\aword{as.\beta}}}%
+\fi
+%  The computation allocation
+
+
+
+
+\newbool{usedctdelay}\setbool{usedctdelay}{false}
+\ifdefined\ctdelay%
+  \renewcommand{\ctdelay}{\markfirst{ctdelay}{usedctdelay}{\vmath{delay}}}%
+\else%
+  \newcommand{\ctdelay}{\markfirst{ctdelay}{usedctdelay}{\vmath{delay}}}%
+\fi
+%  Continuous-time delay
+\newbool{usedctsample}\setbool{usedctsample}{false}
+\ifdefined\ctsample%
+  \renewcommand{\ctsample}{\markfirst{ctsample}{usedctsample}{\vmath{sample}}}%
+\else%
+  \newcommand{\ctsample}{\markfirst{ctsample}{usedctsample}{\vmath{sample}}}%
+\fi
+%  Continuous-time sample
+
+
+ 
+
+
+
+\newbool{usedrtof}\setbool{usedrtof}{false}
+\ifdefined\rtof%
+  \renewcommand{\rtof}{\markfirst{rtof}{usedrtof}{{\varphi}}}%
+\else%
+  \newcommand{\rtof}{\markfirst{rtof}{usedrtof}{{\varphi}}}%
+\fi
+
+\newbool{usedftor}\setbool{usedftor}{false}
+\ifdefined\ftor%
+  \renewcommand{\ftor}{\markfirst{ftor}{usedftor}{{h}}}%
+\else%
+  \newcommand{\ftor}{\markfirst{ftor}{usedftor}{{h}}}%
+\fi
+
+\newbool{usedftoR}\setbool{usedftoR}{false}
+\ifdefined\ftoR%
+  \renewcommand{\ftoR}{\markfirst{ftoR}{usedftoR}{{H}}}%
+\else%
+  \newcommand{\ftoR}{\markfirst{ftoR}{usedftoR}{{H}}}%
+\fi
+
+% \newcommand{\ftoR}{{\color{black}H}} 
+
+\newbool{usedRcomp}\setbool{usedRcomp}{false}
+\ifdefined\Rcomp%
+  \renewcommand{\Rcomp}{\markfirst{Rcomp}{usedRcomp}{\overline{\mathbb{R}}^+}}%
+\else%
+  \newcommand{\Rcomp}{\markfirst{Rcomp}{usedRcomp}{\overline{\mathbb{R}}^+}}%
+\fi
+
+
+
+\newbool{useddpvars}\setbool{useddpvars}{false}
+\ifdefined\dpvars%
+  \renewcommand{\dpvars}{\markfirst{dpvars}{useddpvars}{\mathscr{V}}}%
+\else%
+  \newcommand{\dpvars}{\markfirst{dpvars}{useddpvars}{\mathscr{V}}}%
+\fi
+
+
+
+
+
+\newbool{usedbenchmark}\setbool{usedbenchmark}{false}
+\ifdefined\benchmark%
+  \renewcommand{\benchmark}{\markfirst{benchmark}{usedbenchmark}{\vmath{benchmark}}}%
+\else%
+  \newcommand{\benchmark}{\markfirst{benchmark}{usedbenchmark}{\vmath{benchmark}}}%
+\fi
+
+
+
+\newbool{useddeploy}\setbool{useddeploy}{false}
+\ifdefined\deploy%
+  \renewcommand{\deploy}{\markfirst{deploy}{useddeploy}{\vmath{deploy}}}%
+\else%
+  \newcommand{\deploy}{\markfirst{deploy}{useddeploy}{\vmath{deploy}}}%
+\fi
+
+\newbool{usedutypes}\setbool{usedutypes}{false}
+\ifdefined\utypes%
+  \renewcommand{\utypes}{\markfirst{utypes}{usedutypes}{\mathbf{U}}}%
+\else%
+  \newcommand{\utypes}{\markfirst{utypes}{usedutypes}{\mathbf{U}}}%
+\fi
+%  Universe of types
+
+
+\newbool{usedapp}\setbool{usedapp}{false}
+\ifdefined\app%
+  \renewcommand{\app}{\markfirst{app}{usedapp}{\vmath{app}}}%
+\else%
+  \newcommand{\app}{\markfirst{app}{usedapp}{\vmath{app}}}%
+\fi
+
+\newbool{usedappsp}\setbool{usedappsp}{false}
+\ifdefined\appsp%
+  \renewcommand{\appsp}{\markfirst{appsp}{usedappsp}{\vmath{Apps}}}%
+\else%
+  \newcommand{\appsp}{\markfirst{appsp}{usedappsp}{\vmath{Apps}}}%
+\fi
+
+
+
+\newbool{usedghom}\setbool{usedghom}{false}
+\ifdefined\ghom%
+  \renewcommand{\ghom}{\markfirst{ghom}{usedghom}{h}}%
+\else%
+  \newcommand{\ghom}{\markfirst{ghom}{usedghom}{h}}%
+\fi
+
+\newbool{usedghomv}\setbool{usedghomv}{false}
+\ifdefined\ghomv%
+  \renewcommand{\ghomv}{\markfirst{ghomv}{usedghomv}{h_V}}%
+\else%
+  \newcommand{\ghomv}{\markfirst{ghomv}{usedghomv}{h_V}}%
+\fi
+
+\newbool{usedghome}\setbool{usedghome}{false}
+\ifdefined\ghome%
+  \renewcommand{\ghome}{\markfirst{ghome}{usedghome}{h_E}}%
+\else%
+  \newcommand{\ghome}{\markfirst{ghome}{usedghome}{h_E}}%
+\fi
+
+\newbool{usedghomsp}\setbool{usedghomsp}{false}
+\ifdefined\ghomsp%
+  \renewcommand{\ghomsp}{\markfirst{ghomsp}{usedghomsp}{\vmath{Hom}}}%
+\else%
+  \newcommand{\ghomsp}{\markfirst{ghomsp}{usedghomsp}{\vmath{Hom}}}%
+\fi
+%  Homomorphism space of two gaphs
+
+
+
+
+\usepackage[normalem]{ulem}
+
+\newbool{usedmydash}\setbool{usedmydash}{false}
+\ifdefined\mydash%
+  \renewcommand{\mydash}{\markfirst{mydash}{usedmydash}{\hbox{\sout{ }}}}%
+\else%
+  \newcommand{\mydash}{\markfirst{mydash}{usedmydash}{\hbox{\sout{ }}}}%
+\fi
+
+
+
+\newbool{usedrgcmd}\setbool{usedrgcmd}{false}
+\ifdefined\rgcmd%
+  \renewcommand{\rgcmd}{\markfirst{rgcmd}{usedrgcmd}{\vmath{driver\mydash cmd}}}%
+\else%
+  \newcommand{\rgcmd}{\markfirst{rgcmd}{usedrgcmd}{\vmath{driver\mydash cmd}}}%
+\fi
+
+\newbool{usedrgobs}\setbool{usedrgobs}{false}
+\ifdefined\rgobs%
+  \renewcommand{\rgobs}{\markfirst{rgobs}{usedrgobs}{\vmath{driver\mydash obs}}}%
+\else%
+  \newcommand{\rgobs}{\markfirst{rgobs}{usedrgobs}{\vmath{driver\mydash obs}}}%
+\fi
+
+
+
+\newbool{usedcgcmd}\setbool{usedcgcmd}{false}
+\ifdefined\cgcmd%
+  \renewcommand{\cgcmd}{\markfirst{cgcmd}{usedcgcmd}{\vmath{output}}}%
+\else%
+  \newcommand{\cgcmd}{\markfirst{cgcmd}{usedcgcmd}{\vmath{output}}}%
+\fi
+
+\newbool{usedcgobs}\setbool{usedcgobs}{false}
+\ifdefined\cgobs%
+  \renewcommand{\cgobs}{\markfirst{cgobs}{usedcgobs}{\vmath{input}}}%
+\else%
+  \newcommand{\cgobs}{\markfirst{cgobs}{usedcgobs}{\vmath{input}}}%
+\fi
+
 
 
 \newbool{usedscene}\setbool{usedscene}{false}
@@ -5650,6 +6642,13 @@
   \newcommand{\xxx}{\markfirst{xxx}{usedxxx}{\boh}}%
 \fi
 
+\newbool{usedXXX}\setbool{usedXXX}{false}
+\ifdefined\XXX%
+  \renewcommand{\XXX}{\markfirst{XXX}{usedXXX}{\xxx}}%
+\else%
+  \newcommand{\XXX}{\markfirst{XXX}{usedXXX}{\xxx}}%
+\fi
+
 \newbool{usednotsure}\setbool{usednotsure}{false}
 \ifdefined\notsure%
   \renewcommand{\notsure}{\markfirst{notsure}{usednotsure}{\textbf{\color{red}(Not sure...)}}}%
@@ -5860,6 +6859,82 @@
 
 
 
+
+
+\newbool{usedpaths}\setbool{usedpaths}{false}
+\ifdefined\paths%
+  \renewcommand{\paths}{\markfirst{paths}{usedpaths}{\aword{paths}}}%
+\else%
+  \newcommand{\paths}{\markfirst{paths}{usedpaths}{\aword{paths}}}%
+\fi
+%  All paths in a graph
+
+
+\newbool{usedwalks}\setbool{usedwalks}{false}
+\ifdefined\walks%
+  \renewcommand{\walks}{\markfirst{walks}{usedwalks}{\aword{walks}}}%
+\else%
+  \newcommand{\walks}{\markfirst{walks}{usedwalks}{\aword{walks}}}%
+\fi
+%  All paths in a graph
+\newbool{usedhead}\setbool{usedhead}{false}
+\ifdefined\head%
+  \renewcommand{\head}{\markfirst{head}{usedhead}{\aword{head}}}%
+\else%
+  \newcommand{\head}{\markfirst{head}{usedhead}{\aword{head}}}%
+\fi
+
+\newbool{usedtail}\setbool{usedtail}{false}
+\ifdefined\tail%
+  \renewcommand{\tail}{\markfirst{tail}{usedtail}{\aword{tail}}}%
+\else%
+  \newcommand{\tail}{\markfirst{tail}{usedtail}{\aword{tail}}}%
+\fi
+
+\newbool{usednodes}\setbool{usednodes}{false}
+\ifdefined\nodes%
+  \renewcommand{\nodes}{\markfirst{nodes}{usednodes}{\aword{nodes}}}%
+\else%
+  \newcommand{\nodes}{\markfirst{nodes}{usednodes}{\aword{nodes}}}%
+\fi
+%  nodes in a walk
+\newbool{usededges}\setbool{usededges}{false}
+\ifdefined\edges%
+  \renewcommand{\edges}{\markfirst{edges}{usededges}{\aword{edges}}}%
+\else%
+  \newcommand{\edges}{\markfirst{edges}{usededges}{\aword{edges}}}%
+\fi
+%  edges in a walk
+\newbool{usedsources}\setbool{usedsources}{false}
+\ifdefined\sources%
+  \renewcommand{\sources}{\markfirst{sources}{usedsources}{\aword{sources}}}%
+\else%
+  \newcommand{\sources}{\markfirst{sources}{usedsources}{\aword{sources}}}%
+\fi
+
+\newbool{usedsinks}\setbool{usedsinks}{false}
+\ifdefined\sinks%
+  \renewcommand{\sinks}{\markfirst{sinks}{usedsinks}{\aword{sinks}}}%
+\else%
+  \newcommand{\sinks}{\markfirst{sinks}{usedsinks}{\aword{sinks}}}%
+\fi
+
+
+
+\newbool{usedpredecessors}\setbool{usedpredecessors}{false}
+\ifdefined\predecessors%
+  \renewcommand{\predecessors}{\markfirst{predecessors}{usedpredecessors}{\aword{pred}}}%
+\else%
+  \newcommand{\predecessors}{\markfirst{predecessors}{usedpredecessors}{\aword{pred}}}%
+\fi
+%  predecessors of a node
+\newbool{usedsuccessors}\setbool{usedsuccessors}{false}
+\ifdefined\successors%
+  \renewcommand{\successors}{\markfirst{successors}{usedsuccessors}{\aword{succ}}}%
+\else%
+  \newcommand{\successors}{\markfirst{successors}{usedsuccessors}{\aword{succ}}}%
+\fi
+%  successors of a node
 
 
 % \newcommand{\action}{\vmath{action}} % Group action
@@ -6386,6 +7461,266 @@
   \newcommand{\affnpos}{\markfirst{affnpos}{usedaffnpos}{\affgrouppos(\reals^n)}}%
 \fi
 %  Affine transformations preserving orientations.
+%
+
+
+
+
+
+\newbool{usedsubto}\setbool{usedsubto}{false}
+\ifdefined\subto%
+  \renewcommand{\subto}{\markfirst{subto}{usedsubto}{\text{s.t.}}}%
+\else%
+  \newcommand{\subto}{\markfirst{subto}{usedsubto}{\text{s.t.}}}%
+\fi
+%  Subject to in math
+\newbool{usedwith}\setbool{usedwith}{false}
+\ifdefined\with%
+  \renewcommand{\with}{\markfirst{with}{usedwith}{\text{using}}}%
+\else%
+  \newcommand{\with}{\markfirst{with}{usedwith}{\text{using}}}%
+\fi
+%  "With"
+
+
+%
+
+
+
+\newbool{usedpset}\setbool{usedpset}{false}
+\ifdefined\pset%
+  \renewcommand{\pset}{\markfirst{pset}{usedpset}{\mathscr{P}}}%
+\else%
+  \newcommand{\pset}{\markfirst{pset}{usedpset}{\mathscr{P}}}%
+\fi
+%  Power set (latenative to powerset
+\DeclareMathOperator*{\Min}{Min}
+
+\DeclareMathOperator*{\Inf}{Inf}
+
+\DeclareMathOperator*{\Sup}{Sup}
+
+\DeclareMathOperator*{\Max}{Max}
+
+
+
+\newbool{usedlowerbounds}\setbool{usedlowerbounds}{false}
+\ifdefined\lowerbounds%
+  \renewcommand{\lowerbounds}{\markfirst{lowerbounds}{usedlowerbounds}{\vmath{lowerbounds}}}%
+\else%
+  \newcommand{\lowerbounds}{\markfirst{lowerbounds}{usedlowerbounds}{\vmath{lowerbounds}}}%
+\fi
+
+\newbool{usedupperbounds}\setbool{usedupperbounds}{false}
+\ifdefined\upperbounds%
+  \renewcommand{\upperbounds}{\markfirst{upperbounds}{usedupperbounds}{\vmath{upperbounds}}}%
+\else%
+  \newcommand{\upperbounds}{\markfirst{upperbounds}{usedupperbounds}{\vmath{upperbounds}}}%
+\fi
+
+\newbool{usedposMin}\setbool{usedposMin}{false}
+\ifdefined\posMin%
+  \renewcommand{\posMin}{\markfirst{posMin}{usedposMin}{\Min}}%
+\else%
+  \newcommand{\posMin}{\markfirst{posMin}{usedposMin}{\Min}}%
+\fi
+
+\newbool{usedposleq}\setbool{usedposleq}{false}
+\ifdefined\posleq%
+  \renewcommand{\posleq}{\markfirst{posleq}{usedposleq}{\preceq}}%
+\else%
+  \newcommand{\posleq}{\markfirst{posleq}{usedposleq}{\preceq}}%
+\fi
+
+\newbool{usedposgeq}\setbool{usedposgeq}{false}
+\ifdefined\posgeq%
+  \renewcommand{\posgeq}{\markfirst{posgeq}{usedposgeq}{\succeq}}%
+\else%
+  \newcommand{\posgeq}{\markfirst{posgeq}{usedposgeq}{\succeq}}%
+\fi
+
+
+
+\newbool{usedposA}\setbool{usedposA}{false}
+\ifdefined\posA%
+  \renewcommand{\posA}{\markfirst{posA}{usedposA}{\mathcal{P}}}%
+\else%
+  \newcommand{\posA}{\markfirst{posA}{usedposA}{\mathcal{P}}}%
+\fi
+
+
+
+\newbool{usedposAleq}\setbool{usedposAleq}{false}
+\ifdefined\posAleq%
+  \renewcommand{\posAleq}{\markfirst{posAleq}{usedposAleq}{\mathrel{{\posleq_\posA}}}}%
+\else%
+  \newcommand{\posAleq}{\markfirst{posAleq}{usedposAleq}{\mathrel{{\posleq_\posA}}}}%
+\fi
+
+
+
+\newbool{usedposAMin}\setbool{usedposAMin}{false}
+\ifdefined\posAMin%
+  \renewcommand{\posAMin}{\markfirst{posAMin}{usedposAMin}{\mathop{{\posMin_{\posAleq}}}}}%
+\else%
+  \newcommand{\posAMin}{\markfirst{posAMin}{usedposAMin}{\mathop{{\posMin_{\posAleq}}}}}%
+\fi
+%   Minimal elements
+
+
+\newbool{usedposAmin}\setbool{usedposAmin}{false}
+\ifdefined\posAmin%
+  \renewcommand{\posAmin}{\markfirst{posAmin}{usedposAmin}{\mathop{{\min_{\posAleq}}}}}%
+\else%
+  \newcommand{\posAmin}{\markfirst{posAmin}{usedposAmin}{\mathop{{\min_{\posAleq}}}}}%
+\fi
+%   The least element
+\newbool{usedposAmax}\setbool{usedposAmax}{false}
+\ifdefined\posAmax%
+  \renewcommand{\posAmax}{\markfirst{posAmax}{usedposAmax}{\mathop{{\max_{\posAleq}}}}}%
+\else%
+  \newcommand{\posAmax}{\markfirst{posAmax}{usedposAmax}{\mathop{{\max_{\posAleq}}}}}%
+\fi
+%   The least element
+
+
+\newbool{usedposB}\setbool{usedposB}{false}
+\ifdefined\posB%
+  \renewcommand{\posB}{\markfirst{posB}{usedposB}{\mathcal{Q}}}%
+\else%
+  \newcommand{\posB}{\markfirst{posB}{usedposB}{\mathcal{Q}}}%
+\fi
+%  
+\newbool{usedposBleq}\setbool{usedposBleq}{false}
+\ifdefined\posBleq%
+  \renewcommand{\posBleq}{\markfirst{posBleq}{usedposBleq}{\mathrel{{\posleq_\posB}}}}%
+\else%
+  \newcommand{\posBleq}{\markfirst{posBleq}{usedposBleq}{\mathrel{{\posleq_\posB}}}}%
+\fi
+
+\newbool{usedposC}\setbool{usedposC}{false}
+\ifdefined\posC%
+  \renewcommand{\posC}{\markfirst{posC}{usedposC}{\mathcal{R}}}%
+\else%
+  \newcommand{\posC}{\markfirst{posC}{usedposC}{\mathcal{R}}}%
+\fi
+%  
+
+
+
+
+\newbool{usedlfp}\setbool{usedlfp}{false}
+\ifdefined\lfp%
+  \renewcommand{\lfp}{\markfirst{lfp}{usedlfp}{\vmath{lfp}}}%
+\else%
+  \newcommand{\lfp}{\markfirst{lfp}{usedlfp}{\vmath{lfp}}}%
+\fi
+%  Least fixed point 
+\newbool{usedprefixed}\setbool{usedprefixed}{false}
+\ifdefined\prefixed%
+  \renewcommand{\prefixed}{\markfirst{prefixed}{usedprefixed}{\vmath{prefixed}}}%
+\else%
+  \newcommand{\prefixed}{\markfirst{prefixed}{usedprefixed}{\vmath{prefixed}}}%
+\fi
+%  prefixed points 
+\newbool{usedCPOs}\setbool{usedCPOs}{false}
+\ifdefined\CPOs%
+  \renewcommand{\CPOs}{\markfirst{CPOs}{usedCPOs}{\textsc{CPO}s\xspace}}%
+\else%
+  \newcommand{\CPOs}{\markfirst{CPOs}{usedCPOs}{\textsc{CPO}s\xspace}}%
+\fi
+
+\newbool{usedCPO}\setbool{usedCPO}{false}
+\ifdefined\CPO%
+  \renewcommand{\CPO}{\markfirst{CPO}{usedCPO}{\textsc{CPO}\xspace}}%
+\else%
+  \newcommand{\CPO}{\markfirst{CPO}{usedCPO}{\textsc{CPO}\xspace}}%
+\fi
+
+\newbool{usedDCPOs}\setbool{usedDCPOs}{false}
+\ifdefined\DCPOs%
+  \renewcommand{\DCPOs}{\markfirst{DCPOs}{usedDCPOs}{\textsc{DCPO}s\xspace}}%
+\else%
+  \newcommand{\DCPOs}{\markfirst{DCPOs}{usedDCPOs}{\textsc{DCPO}s\xspace}}%
+\fi
+
+\newbool{usedDCPO}\setbool{usedDCPO}{false}
+\ifdefined\DCPO%
+  \renewcommand{\DCPO}{\markfirst{DCPO}{usedDCPO}{\textsc{DCPO}\xspace}}%
+\else%
+  \newcommand{\DCPO}{\markfirst{DCPO}{usedDCPO}{\textsc{DCPO}\xspace}}%
+\fi
+
+
+
+\newbool{usedantichains}\setbool{usedantichains}{false}
+\ifdefined\antichains%
+  \renewcommand{\antichains}{\markfirst{antichains}{usedantichains}{\vmath{A}}}%
+\else%
+  \newcommand{\antichains}{\markfirst{antichains}{usedantichains}{\vmath{A}}}%
+\fi
+%  
+
+
+\newbool{usedupsets}\setbool{usedupsets}{false}
+\ifdefined\upsets%
+  \renewcommand{\upsets}{\markfirst{upsets}{usedupsets}{\vmath{U}}}%
+\else%
+  \newcommand{\upsets}{\markfirst{upsets}{usedupsets}{\vmath{U}}}%
+\fi
+
+\newbool{useddownsets}\setbool{useddownsets}{false}
+\ifdefined\downsets%
+  \renewcommand{\downsets}{\markfirst{downsets}{useddownsets}{\vmath{D}}}%
+\else%
+  \newcommand{\downsets}{\markfirst{downsets}{useddownsets}{\vmath{D}}}%
+\fi
+
+
+
+
+
+\newbool{usedupresleq}\setbool{usedupresleq}{false}
+\ifdefined\upresleq%
+  \renewcommand{\upresleq}{\markfirst{upresleq}{usedupresleq}{\posleq_{\upressp}}}%
+\else%
+  \newcommand{\upresleq}{\markfirst{upresleq}{usedupresleq}{\posleq_{\upressp}}}%
+\fi
+
+\newbool{usedupressp}\setbool{usedupressp}{false}
+\ifdefined\upressp%
+  \renewcommand{\upressp}{\markfirst{upressp}{usedupressp}{\upsets\ressp}}%
+\else%
+  \newcommand{\upressp}{\markfirst{upressp}{usedupressp}{\upsets\ressp}}%
+\fi
+
+\newbool{usedallupsets}\setbool{usedallupsets}{false}
+\ifdefined\allupsets%
+  \renewcommand{\allupsets}{\markfirst{allupsets}{usedallupsets}{\vmath{Up}}}%
+\else%
+  \newcommand{\allupsets}{\markfirst{allupsets}{usedallupsets}{\vmath{Up}}}%
+\fi
+%  
+
+
+
+
+\newbool{usedupit}\setbool{usedupit}{false}
+\ifdefined\upit%
+  \renewcommand{\upit}{\markfirst{upit}{usedupit}{{\uparrow\,}}}%
+\else%
+  \newcommand{\upit}{\markfirst{upit}{usedupit}{{\uparrow\,}}}%
+\fi
+%  Converts to smallest upset containing the ste
+
+
+\newbool{usedstupit}\setbool{usedstupit}{false}
+\ifdefined\stupit%
+  \renewcommand{\stupit}{\markfirst{stupit}{usedstupit}{\dot{\upit}}}%
+\else%
+  \newcommand{\stupit}{\markfirst{stupit}{usedstupit}{\dot{\upit}}}%
+\fi
+%  Strict upper closure
 
 
 
@@ -7227,5 +8562,23 @@
   \newcommand{\vmath}[1]{\aword{#1}}%
 \fi
 %  How words should appear in math mode.
+
+
+\ifdefined\codefunc%
+  \renewcommand{\codefunc}[1]{\texttt{#1}\xspace}%
+\else%
+  \newcommand{\codefunc}[1]{\texttt{#1}\xspace}%
+\fi
+%  Code functions
+
+
+\ifdefined\swpackage%
+  \renewcommand{\swpackage}[1]{\textsc{#1}\xspace}%
+\else%
+  \newcommand{\swpackage}[1]{\textsc{#1}\xspace}%
+\fi
+%  Name of software packages
+
+
 
 

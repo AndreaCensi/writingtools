@@ -32,6 +32,14 @@
 %  Agent's exploration phase
 
 
+\ifdefined\agLearn%
+  \renewcommand{\agLearn}{\mathsf{learn}}%
+\else%
+  \newcommand{\agLearn}{\mathsf{learn}}%
+\fi
+%  Agent's learning phase
+
+
 \ifdefined\agAct%
   \renewcommand{\agAct}{\mathsf{act}}%
 \else%
@@ -1838,6 +1846,10 @@
 
 
 
+
+
+
+
 \ifdefined\SetImages%
   \renewcommand{\SetImages}{\vmath{Im}}%
 \else%
@@ -2664,6 +2676,72 @@
 
 
 
+\ifdefined\dprobsp%
+  \renewcommand{\dprobsp}{\ensuremath{\vmath{DP}}}%
+\else%
+  \newcommand{\dprobsp}{\ensuremath{\vmath{DP}}}%
+\fi
+
+\ifdefined\dprob%
+  \renewcommand{\dprob}{\vmath{dp}}%
+\else%
+  \newcommand{\dprob}{\vmath{dp}}%
+\fi
+%  Design problem
+
+
+
+
+\ifdefined\dpseries%
+  \renewcommand{\dpseries}{\vmath{series}}%
+\else%
+  \newcommand{\dpseries}{\vmath{series}}%
+\fi
+
+\ifdefined\dppar%
+  \renewcommand{\dppar}{\vmath{par}}%
+\else%
+  \newcommand{\dppar}{\vmath{par}}%
+\fi
+
+\ifdefined\dploop%
+  \renewcommand{\dploop}{\vmath{loop}}%
+\else%
+  \newcommand{\dploop}{\vmath{loop}}%
+\fi
+
+
+
+\ifdefined\cdprobsp%
+  \renewcommand{\cdprobsp}{\ensuremath{\vmath{CDP}}}%
+\else%
+  \newcommand{\cdprobsp}{\ensuremath{\vmath{CDP}}}%
+\fi
+
+\ifdefined\cdprob%
+  \renewcommand{\cdprob}{\vmath{cdp}}%
+\else%
+  \newcommand{\cdprob}{\vmath{cdp}}%
+\fi
+%  Design problem
+\ifdefined\dpatoms%
+  \renewcommand{\dpatoms}{\vmath{atoms}}%
+\else%
+  \newcommand{\dpatoms}{\vmath{atoms}}%
+\fi
+%  Atoms of a cdp
+
+
+
+
+\ifdefined\resMin%
+  \renewcommand{\resMin}{{\Min_{\resleq}}}%
+\else%
+  \newcommand{\resMin}{{\Min_{\resleq}}}%
+\fi
+
+
+
 \ifdefined\gsHom%
   \renewcommand{\gsHom}{\text{HomMaps}}%
 \else%
@@ -3182,6 +3260,800 @@
   \newcommand{\np}{n}%
 \fi
 %  Number of pixels
+
+
+%
+
+
+
+
+
+\ifdefined\funsp%
+  \renewcommand{\funsp}{\mathscr{F}}%
+\else%
+  \newcommand{\funsp}{\mathscr{F}}%
+\fi
+%  Function space
+\ifdefined\funleq%
+  \renewcommand{\funleq}{\leq_{\funsp}}%
+\else%
+  \newcommand{\funleq}{\leq_{\funsp}}%
+\fi
+%  Function space
+\ifdefined\fun%
+  \renewcommand{\fun}{\vmath{f}}%
+\else%
+  \newcommand{\fun}{\vmath{f}}%
+\fi
+%  Function
+
+
+\ifdefined\funtop%
+  \renewcommand{\funtop}{\top_\funsp}%
+\else%
+  \newcommand{\funtop}{\top_\funsp}%
+\fi
+
+\ifdefined\funbot%
+  \renewcommand{\funbot}{\bot_\funsp}%
+\else%
+  \newcommand{\funbot}{\bot_\funsp}%
+\fi
+
+
+
+\ifdefined\imp%
+  \renewcommand{\imp}{\vmath{i}}%
+\else%
+  \newcommand{\imp}{\vmath{i}}%
+\fi
+%  Implementation
+\ifdefined\impsp%
+  \renewcommand{\impsp}{\mathscr{I}}%
+\else%
+  \newcommand{\impsp}{\mathscr{I}}%
+\fi
+%  Implementation space
+
+
+\ifdefined\exc%
+  \renewcommand{\exc}{\vmath{exec}}%
+\else%
+  \newcommand{\exc}{\vmath{exec}}%
+\fi
+%  Executation $\exc: \impsp \rightarrow \funsp$
+\ifdefined\eval%
+  \renewcommand{\eval}{\vmath{eval}}%
+\else%
+  \newcommand{\eval}{\vmath{eval}}%
+\fi
+%  Evaluation $\eval: \impsp \rightarrow \ressp$
+
+
+% \newcommand{\param}{\vmath{p}} % Parameter
+
+\ifdefined\paramsp%
+  \renewcommand{\paramsp}{\mathscr{P}}%
+\else%
+  \newcommand{\paramsp}{\mathscr{P}}%
+\fi
+%  Parameter space
+% \newcommand{\paramleq}{\leq_{\paramsp}}
+
+
+
+\ifdefined\res%
+  \renewcommand{\res}{\vmath{r}}%
+\else%
+  \newcommand{\res}{\vmath{r}}%
+\fi
+%  Resources
+\ifdefined\resleq%
+  \renewcommand{\resleq}{\leq_{\ressp}}%
+\else%
+  \newcommand{\resleq}{\leq_{\ressp}}%
+\fi
+
+\ifdefined\restop%
+  \renewcommand{\restop}{\top_\ressp}%
+\else%
+  \newcommand{\restop}{\top_\ressp}%
+\fi
+
+\ifdefined\resbot%
+  \renewcommand{\resbot}{\bot_\ressp}%
+\else%
+  \newcommand{\resbot}{\bot_\ressp}%
+\fi
+
+
+
+\ifdefined\ressp%
+  \renewcommand{\ressp}{\mathscr{R}}%
+\else%
+  \newcommand{\ressp}{\mathscr{R}}%
+\fi
+%  Resources space
+\ifdefined\resspleq%
+  \renewcommand{\resspleq}{\resleq}%
+\else%
+  \newcommand{\resspleq}{\resleq}%
+\fi
+
+
+
+\ifdefined\tressp%
+  \renewcommand{\tressp}{\trof(\ressp)}%
+\else%
+  \newcommand{\tressp}{\trof(\ressp)}%
+\fi
+%  Trade-off space
+\ifdefined\trof%
+  \renewcommand{\trof}{\mathscr{T}}%
+\else%
+  \newcommand{\trof}{\mathscr{T}}%
+\fi
+%  Trade-off space
+\ifdefined\tres%
+  \renewcommand{\tres}{T}%
+\else%
+  \newcommand{\tres}{T}%
+\fi
+
+\ifdefined\tresleq%
+  \renewcommand{\tresleq}{\leq_{\trof}}%
+\else%
+  \newcommand{\tresleq}{\leq_{\trof}}%
+\fi
+%  Trade-off space
+\ifdefined\trleq%
+  \renewcommand{\trleq}{\leq_{\trof}}%
+\else%
+  \newcommand{\trleq}{\leq_{\trof}}%
+\fi
+%  Trade-off space
+
+
+
+
+
+
+\ifdefined\Res%
+  \renewcommand{\Res}{S}%
+\else%
+  \newcommand{\Res}{S}%
+\fi
+
+\ifdefined\Resa%
+  \renewcommand{\Resa}{S_1}%
+\else%
+  \newcommand{\Resa}{S_1}%
+\fi
+
+\ifdefined\Resb%
+  \renewcommand{\Resb}{S_2}%
+\else%
+  \newcommand{\Resb}{S_2}%
+\fi
+
+\ifdefined\resa%
+  \renewcommand{\resa}{\res_1}%
+\else%
+  \newcommand{\resa}{\res_1}%
+\fi
+
+\ifdefined\resb%
+  \renewcommand{\resb}{\res_2}%
+\else%
+  \newcommand{\resb}{\res_2}%
+\fi
+
+\ifdefined\Ressp%
+  \renewcommand{\Ressp}{\pset(\ressp)}%
+\else%
+  \newcommand{\Ressp}{\pset(\ressp)}%
+\fi
+
+\ifdefined\Resleq%
+  \renewcommand{\Resleq}{\leq_{\Ressp}}%
+\else%
+  \newcommand{\Resleq}{\leq_{\Ressp}}%
+\fi
+
+\ifdefined\rtoapp%
+  \renewcommand{\rtoapp}{\Psi}%
+\else%
+  \newcommand{\rtoapp}{\Psi}%
+\fi
+
+
+
+
+
+
+
+
+
+\ifdefined\clatency%
+  \renewcommand{\clatency}{\aword{latency}}%
+\else%
+  \newcommand{\clatency}{\aword{latency}}%
+\fi
+
+\ifdefined\cperiod%
+  \renewcommand{\cperiod}{\aword{period}}%
+\else%
+  \newcommand{\cperiod}{\aword{period}}%
+\fi
+
+
+
+%
+
+
+
+
+
+
+
+\ifdefined\rN%
+  \renewcommand{\rN}{\aword{rN}}%
+\else%
+  \newcommand{\rN}{\aword{rN}}%
+\fi
+%  A resource graph's vertices
+\ifdefined\rE%
+  \renewcommand{\rE}{\aword{rE}}%
+\else%
+  \newcommand{\rE}{\aword{rE}}%
+\fi
+%  A resource graph's edges
+
+
+
+
+\ifdefined\rG%
+  \renewcommand{\rG}{\aword{rG}}%
+\else%
+  \newcommand{\rG}{\aword{rG}}%
+\fi
+%  A resource graph
+\ifdefined\rGsp%
+  \renewcommand{\rGsp}{\aword{RG}}%
+\else%
+  \newcommand{\rGsp}{\aword{RG}}%
+\fi
+%  Space of resource graphs
+
+
+\ifdefined\rn%
+  \renewcommand{\rn}{\aword{rn}}%
+\else%
+  \newcommand{\rn}{\aword{rn}}%
+\fi
+%  A resource node
+\ifdefined\rnops%
+  \renewcommand{\rnops}{\aword{rn.capacity}}%
+\else%
+  \newcommand{\rnops}{\aword{rn.capacity}}%
+\fi
+%  A resource's capacity
+\ifdefined\rntype%
+  \renewcommand{\rntype}{\aword{rn.type}}%
+\else%
+  \newcommand{\rntype}{\aword{rn.type}}%
+\fi
+%  A resource's type
+\ifdefined\rntypes%
+  \renewcommand{\rntypes}{\aword{RTypes}}%
+\else%
+  \newcommand{\rntypes}{\aword{RTypes}}%
+\fi
+%  A resource's type
+
+
+
+
+\ifdefined\rnA%
+  \renewcommand{\rnA}{\aword{rn}_1}%
+\else%
+  \newcommand{\rnA}{\aword{rn}_1}%
+\fi
+
+\ifdefined\rnAops%
+  \renewcommand{\rnAops}{\aword{rn}_1.\aword{capacity}}%
+\else%
+  \newcommand{\rnAops}{\aword{rn}_1.\aword{capacity}}%
+\fi
+
+\ifdefined\rnB%
+  \renewcommand{\rnB}{\aword{rn}_2}%
+\else%
+  \newcommand{\rnB}{\aword{rn}_2}%
+\fi
+
+\ifdefined\rnBops%
+  \renewcommand{\rnBops}{\aword{rn}_2.\aword{capacity}}%
+\else%
+  \newcommand{\rnBops}{\aword{rn}_2.\aword{capacity}}%
+\fi
+
+
+
+\ifdefined\re%
+  \renewcommand{\re}{\aword{re}}%
+\else%
+  \newcommand{\re}{\aword{re}}%
+\fi
+%  A resource edge
+\ifdefined\relink%
+  \renewcommand{\relink}{\aword{re.link}}%
+\else%
+  \newcommand{\relink}{\aword{re.link}}%
+\fi
+%  A resource 
+\ifdefined\relatency%
+  \renewcommand{\relatency}{\re\aword{.latency}}%
+\else%
+  \newcommand{\relatency}{\re\aword{.latency}}%
+\fi
+
+\ifdefined\rebandwidth%
+  \renewcommand{\rebandwidth}{\re\aword{.bandwidth}}%
+\else%
+  \newcommand{\rebandwidth}{\re\aword{.bandwidth}}%
+\fi
+
+\ifdefined\reA%
+  \renewcommand{\reA}{\re_1}%
+\else%
+  \newcommand{\reA}{\re_1}%
+\fi
+
+\ifdefined\reB%
+  \renewcommand{\reB}{\re_2}%
+\else%
+  \newcommand{\reB}{\re_2}%
+\fi
+
+\ifdefined\reAlatency%
+  \renewcommand{\reAlatency}{\reA\aword{.latency}}%
+\else%
+  \newcommand{\reAlatency}{\reA\aword{.latency}}%
+\fi
+
+\ifdefined\reAbandwidth%
+  \renewcommand{\reAbandwidth}{\reA\aword{.bandwidth}}%
+\else%
+  \newcommand{\reAbandwidth}{\reA\aword{.bandwidth}}%
+\fi
+
+\ifdefined\reBbandwidth%
+  \renewcommand{\reBbandwidth}{\reB\aword{.bandwidth}}%
+\else%
+  \newcommand{\reBbandwidth}{\reB\aword{.bandwidth}}%
+\fi
+
+ 
+
+
+
+\ifdefined\reiint%
+  \renewcommand{\reiint}{\re\aword{.int1}}%
+\else%
+  \newcommand{\reiint}{\re\aword{.int1}}%
+\fi
+%  Output interface (first node)
+\ifdefined\reoint%
+  \renewcommand{\reoint}{\re\aword{.int2}}%
+\else%
+  \newcommand{\reoint}{\re\aword{.int2}}%
+\fi
+%  Input interface (second node)
+
+
+%
+
+\ifdefined\cG%
+  \renewcommand{\cG}{\aword{cG}}%
+\else%
+  \newcommand{\cG}{\aword{cG}}%
+\fi
+%  A computationg graph
+
+
+\ifdefined\cGsp%
+  \renewcommand{\cGsp}{\aword{CG}}%
+\else%
+  \newcommand{\cGsp}{\aword{CG}}%
+\fi
+%  Computation graph spaces
+\ifdefined\cGleq%
+  \renewcommand{\cGleq}{\leq_{\cGsp}}%
+\else%
+  \newcommand{\cGleq}{\leq_{\cGsp}}%
+\fi
+%  Order on computation graphs
+
+
+\ifdefined\cN%
+  \renewcommand{\cN}{\aword{cN}}%
+\else%
+  \newcommand{\cN}{\aword{cN}}%
+\fi
+%  A cgraph's vertices
+\ifdefined\cE%
+  \renewcommand{\cE}{\aword{cE}}%
+\else%
+  \newcommand{\cE}{\aword{cE}}%
+\fi
+%  A cgraph's edges
+
+
+\ifdefined\cn%
+  \renewcommand{\cn}{\aword{cn}}%
+\else%
+  \newcommand{\cn}{\aword{cn}}%
+\fi
+%  A computation node
+\ifdefined\cnA%
+  \renewcommand{\cnA}{\cn_1}%
+\else%
+  \newcommand{\cnA}{\cn_1}%
+\fi
+
+\ifdefined\cnB%
+  \renewcommand{\cnB}{\cn_2}%
+\else%
+  \newcommand{\cnB}{\cn_2}%
+\fi
+
+\ifdefined\cnops%
+  \renewcommand{\cnops}{\cn\dotops}%
+\else%
+  \newcommand{\cnops}{\cn\dotops}%
+\fi
+%  A computation node's ops
+\ifdefined\dotops%
+  \renewcommand{\dotops}{\aword{.ops}}%
+\else%
+  \newcommand{\dotops}{\aword{.ops}}%
+\fi
+
+\ifdefined\cnAops%
+  \renewcommand{\cnAops}{\cnA\dotops}%
+\else%
+  \newcommand{\cnAops}{\cnA\dotops}%
+\fi
+
+\ifdefined\cnBops%
+  \renewcommand{\cnBops}{\cnB\dotops}%
+\else%
+  \newcommand{\cnBops}{\cnB\dotops}%
+\fi
+
+
+
+\ifdefined\cce%
+  \renewcommand{\cce}{\aword{ce}}%
+\else%
+  \newcommand{\cce}{\aword{ce}}%
+\fi
+%  A computation edge
+\ifdefined\ceA%
+  \renewcommand{\ceA}{\cce_1}%
+\else%
+  \newcommand{\ceA}{\cce_1}%
+\fi
+%  A computation edge
+\ifdefined\ceB%
+  \renewcommand{\ceB}{\cce_2}%
+\else%
+  \newcommand{\ceB}{\cce_2}%
+\fi
+%  A computation edge
+
+
+\ifdefined\dotsize%
+  \renewcommand{\dotsize}{\aword{.size}}%
+\else%
+  \newcommand{\dotsize}{\aword{.size}}%
+\fi
+
+\ifdefined\cesize%
+  \renewcommand{\cesize}{\cce\dotsize}%
+\else%
+  \newcommand{\cesize}{\cce\dotsize}%
+\fi
+%  Signal size (bytes)
+\ifdefined\ceAsize%
+  \renewcommand{\ceAsize}{\ceA\dotsize}%
+\else%
+  \newcommand{\ceAsize}{\ceA\dotsize}%
+\fi
+
+\ifdefined\ceBsize%
+  \renewcommand{\ceBsize}{\ceB\dotsize}%
+\else%
+  \newcommand{\ceBsize}{\ceB\dotsize}%
+\fi
+
+
+
+
+
+%
+
+
+
+\ifdefined\PL%
+  \renewcommand{\PL}{\aword{PLinks}}%
+\else%
+  \newcommand{\PL}{\aword{PLinks}}%
+\fi
+%  Physical links
+\ifdefined\pl%
+  \renewcommand{\pl}{\aword{pl}}%
+\else%
+  \newcommand{\pl}{\aword{pl}}%
+\fi
+%  Physical link
+
+
+\ifdefined\pplA%
+  \renewcommand{\pplA}{\pl_1}%
+\else%
+  \newcommand{\pplA}{\pl_1}%
+\fi
+%  plA conflicts
+\ifdefined\plAlatency%
+  \renewcommand{\plAlatency}{\pplA\aword{.latency}}%
+\else%
+  \newcommand{\plAlatency}{\pplA\aword{.latency}}%
+\fi
+
+\ifdefined\plAbandwidth%
+  \renewcommand{\plAbandwidth}{\pplA\aword{.bandwidth}}%
+\else%
+  \newcommand{\plAbandwidth}{\pplA\aword{.bandwidth}}%
+\fi
+
+
+
+\ifdefined\pllatency%
+  \renewcommand{\pllatency}{\aword{pl.latency}}%
+\else%
+  \newcommand{\pllatency}{\aword{pl.latency}}%
+\fi
+
+\ifdefined\plbandwidth%
+  \renewcommand{\plbandwidth}{\aword{pl.bandwidth}}%
+\else%
+  \newcommand{\plbandwidth}{\aword{pl.bandwidth}}%
+\fi
+
+
+
+
+
+\ifdefined\as%
+  \renewcommand{\as}{\aword{as}}%
+\else%
+  \newcommand{\as}{\aword{as}}%
+\fi
+%  An assignment
+
+
+\ifdefined\asm%
+  \renewcommand{\asm}{\aword{as.m}}%
+\else%
+  \newcommand{\asm}{\aword{as.m}}%
+\fi
+%  The momomorphism 
+\ifdefined\asmn%
+  \renewcommand{\asmn}{\aword{as.m}_N}%
+\else%
+  \newcommand{\asmn}{\aword{as.m}_N}%
+\fi
+
+\ifdefined\asme%
+  \renewcommand{\asme}{\aword{as.m}_E}%
+\else%
+  \newcommand{\asme}{\aword{as.m}_E}%
+\fi
+
+\ifdefined\asmni%
+  \renewcommand{\asmni}{\aword{as.m}^{-1}_N}%
+\else%
+  \newcommand{\asmni}{\aword{as.m}^{-1}_N}%
+\fi
+
+\ifdefined\asmei%
+  \renewcommand{\asmei}{\aword{as.m}^{-1}_E}%
+\else%
+  \newcommand{\asmei}{\aword{as.m}^{-1}_E}%
+\fi
+
+\ifdefined\asmi%
+  \renewcommand{\asmi}{\aword{as.{m}^{-1}}}%
+\else%
+  \newcommand{\asmi}{\aword{as.{m}^{-1}}}%
+\fi
+%  The right inverse of the momomorphism 
+
+
+\ifdefined\asla%
+  \renewcommand{\asla}{\aword{as.\alpha}}%
+\else%
+  \newcommand{\asla}{\aword{as.\alpha}}%
+\fi
+%  The link allocation
+\ifdefined\asca%
+  \renewcommand{\asca}{\aword{as.\beta}}%
+\else%
+  \newcommand{\asca}{\aword{as.\beta}}%
+\fi
+%  The computation allocation
+
+
+
+
+\ifdefined\ctdelay%
+  \renewcommand{\ctdelay}{\vmath{delay}}%
+\else%
+  \newcommand{\ctdelay}{\vmath{delay}}%
+\fi
+%  Continuous-time delay
+\ifdefined\ctsample%
+  \renewcommand{\ctsample}{\vmath{sample}}%
+\else%
+  \newcommand{\ctsample}{\vmath{sample}}%
+\fi
+%  Continuous-time sample
+
+
+ 
+
+
+
+\ifdefined\rtof%
+  \renewcommand{\rtof}{{\varphi}}%
+\else%
+  \newcommand{\rtof}{{\varphi}}%
+\fi
+
+\ifdefined\ftor%
+  \renewcommand{\ftor}{{h}}%
+\else%
+  \newcommand{\ftor}{{h}}%
+\fi
+
+\ifdefined\ftoR%
+  \renewcommand{\ftoR}{{H}}%
+\else%
+  \newcommand{\ftoR}{{H}}%
+\fi
+
+% \newcommand{\ftoR}{{\color{black}H}} 
+
+\ifdefined\Rcomp%
+  \renewcommand{\Rcomp}{\overline{\mathbb{R}}^+}%
+\else%
+  \newcommand{\Rcomp}{\overline{\mathbb{R}}^+}%
+\fi
+
+
+
+\ifdefined\dpvars%
+  \renewcommand{\dpvars}{\mathscr{V}}%
+\else%
+  \newcommand{\dpvars}{\mathscr{V}}%
+\fi
+
+
+
+
+
+\ifdefined\benchmark%
+  \renewcommand{\benchmark}{\vmath{benchmark}}%
+\else%
+  \newcommand{\benchmark}{\vmath{benchmark}}%
+\fi
+
+
+
+\ifdefined\deploy%
+  \renewcommand{\deploy}{\vmath{deploy}}%
+\else%
+  \newcommand{\deploy}{\vmath{deploy}}%
+\fi
+
+\ifdefined\utypes%
+  \renewcommand{\utypes}{\mathbf{U}}%
+\else%
+  \newcommand{\utypes}{\mathbf{U}}%
+\fi
+%  Universe of types
+
+
+\ifdefined\app%
+  \renewcommand{\app}{\vmath{app}}%
+\else%
+  \newcommand{\app}{\vmath{app}}%
+\fi
+
+\ifdefined\appsp%
+  \renewcommand{\appsp}{\vmath{Apps}}%
+\else%
+  \newcommand{\appsp}{\vmath{Apps}}%
+\fi
+
+
+
+\ifdefined\ghom%
+  \renewcommand{\ghom}{h}%
+\else%
+  \newcommand{\ghom}{h}%
+\fi
+
+\ifdefined\ghomv%
+  \renewcommand{\ghomv}{h_V}%
+\else%
+  \newcommand{\ghomv}{h_V}%
+\fi
+
+\ifdefined\ghome%
+  \renewcommand{\ghome}{h_E}%
+\else%
+  \newcommand{\ghome}{h_E}%
+\fi
+
+\ifdefined\ghomsp%
+  \renewcommand{\ghomsp}{\vmath{Hom}}%
+\else%
+  \newcommand{\ghomsp}{\vmath{Hom}}%
+\fi
+%  Homomorphism space of two gaphs
+
+
+
+
+\usepackage[normalem]{ulem}
+
+\ifdefined\mydash%
+  \renewcommand{\mydash}{\hbox{\sout{ }}}%
+\else%
+  \newcommand{\mydash}{\hbox{\sout{ }}}%
+\fi
+
+
+
+\ifdefined\rgcmd%
+  \renewcommand{\rgcmd}{\vmath{driver\mydash cmd}}%
+\else%
+  \newcommand{\rgcmd}{\vmath{driver\mydash cmd}}%
+\fi
+
+\ifdefined\rgobs%
+  \renewcommand{\rgobs}{\vmath{driver\mydash obs}}%
+\else%
+  \newcommand{\rgobs}{\vmath{driver\mydash obs}}%
+\fi
+
+
+
+\ifdefined\cgcmd%
+  \renewcommand{\cgcmd}{\vmath{output}}%
+\else%
+  \newcommand{\cgcmd}{\vmath{output}}%
+\fi
+
+\ifdefined\cgobs%
+  \renewcommand{\cgobs}{\vmath{input}}%
+\else%
+  \newcommand{\cgobs}{\vmath{input}}%
+\fi
+
 
 
 \ifdefined\scene%
@@ -5027,6 +5899,12 @@
   \newcommand{\xxx}{\boh}%
 \fi
 
+\ifdefined\XXX%
+  \renewcommand{\XXX}{\xxx}%
+\else%
+  \newcommand{\XXX}{\xxx}%
+\fi
+
 \ifdefined\notsure%
   \renewcommand{\notsure}{\textbf{\color{red}(Not sure...)}}%
 \else%
@@ -5217,6 +6095,72 @@
 
 
 
+
+
+\ifdefined\paths%
+  \renewcommand{\paths}{\aword{paths}}%
+\else%
+  \newcommand{\paths}{\aword{paths}}%
+\fi
+%  All paths in a graph
+
+
+\ifdefined\walks%
+  \renewcommand{\walks}{\aword{walks}}%
+\else%
+  \newcommand{\walks}{\aword{walks}}%
+\fi
+%  All paths in a graph
+\ifdefined\head%
+  \renewcommand{\head}{\aword{head}}%
+\else%
+  \newcommand{\head}{\aword{head}}%
+\fi
+
+\ifdefined\tail%
+  \renewcommand{\tail}{\aword{tail}}%
+\else%
+  \newcommand{\tail}{\aword{tail}}%
+\fi
+
+\ifdefined\nodes%
+  \renewcommand{\nodes}{\aword{nodes}}%
+\else%
+  \newcommand{\nodes}{\aword{nodes}}%
+\fi
+%  nodes in a walk
+\ifdefined\edges%
+  \renewcommand{\edges}{\aword{edges}}%
+\else%
+  \newcommand{\edges}{\aword{edges}}%
+\fi
+%  edges in a walk
+\ifdefined\sources%
+  \renewcommand{\sources}{\aword{sources}}%
+\else%
+  \newcommand{\sources}{\aword{sources}}%
+\fi
+
+\ifdefined\sinks%
+  \renewcommand{\sinks}{\aword{sinks}}%
+\else%
+  \newcommand{\sinks}{\aword{sinks}}%
+\fi
+
+
+
+\ifdefined\predecessors%
+  \renewcommand{\predecessors}{\aword{pred}}%
+\else%
+  \newcommand{\predecessors}{\aword{pred}}%
+\fi
+%  predecessors of a node
+\ifdefined\successors%
+  \renewcommand{\successors}{\aword{succ}}%
+\else%
+  \newcommand{\successors}{\aword{succ}}%
+\fi
+%  successors of a node
 
 
 % \newcommand{\action}{\vmath{action}} % Group action
@@ -5693,6 +6637,236 @@
   \newcommand{\affnpos}{\affgrouppos(\reals^n)}%
 \fi
 %  Affine transformations preserving orientations.
+%
+
+
+
+
+
+\ifdefined\subto%
+  \renewcommand{\subto}{\text{s.t.}}%
+\else%
+  \newcommand{\subto}{\text{s.t.}}%
+\fi
+%  Subject to in math
+\ifdefined\with%
+  \renewcommand{\with}{\text{using}}%
+\else%
+  \newcommand{\with}{\text{using}}%
+\fi
+%  "With"
+
+
+%
+
+
+
+\ifdefined\pset%
+  \renewcommand{\pset}{\mathscr{P}}%
+\else%
+  \newcommand{\pset}{\mathscr{P}}%
+\fi
+%  Power set (latenative to powerset
+\DeclareMathOperator*{\Min}{Min}
+
+\DeclareMathOperator*{\Inf}{Inf}
+
+\DeclareMathOperator*{\Sup}{Sup}
+
+\DeclareMathOperator*{\Max}{Max}
+
+
+
+\ifdefined\lowerbounds%
+  \renewcommand{\lowerbounds}{\vmath{lowerbounds}}%
+\else%
+  \newcommand{\lowerbounds}{\vmath{lowerbounds}}%
+\fi
+
+\ifdefined\upperbounds%
+  \renewcommand{\upperbounds}{\vmath{upperbounds}}%
+\else%
+  \newcommand{\upperbounds}{\vmath{upperbounds}}%
+\fi
+
+\ifdefined\posMin%
+  \renewcommand{\posMin}{\Min}%
+\else%
+  \newcommand{\posMin}{\Min}%
+\fi
+
+\ifdefined\posleq%
+  \renewcommand{\posleq}{\preceq}%
+\else%
+  \newcommand{\posleq}{\preceq}%
+\fi
+
+\ifdefined\posgeq%
+  \renewcommand{\posgeq}{\succeq}%
+\else%
+  \newcommand{\posgeq}{\succeq}%
+\fi
+
+
+
+\ifdefined\posA%
+  \renewcommand{\posA}{\mathcal{P}}%
+\else%
+  \newcommand{\posA}{\mathcal{P}}%
+\fi
+
+
+
+\ifdefined\posAleq%
+  \renewcommand{\posAleq}{\mathrel{{\posleq_\posA}}}%
+\else%
+  \newcommand{\posAleq}{\mathrel{{\posleq_\posA}}}%
+\fi
+
+
+
+\ifdefined\posAMin%
+  \renewcommand{\posAMin}{\mathop{{\posMin_{\posAleq}}}}%
+\else%
+  \newcommand{\posAMin}{\mathop{{\posMin_{\posAleq}}}}%
+\fi
+%   Minimal elements
+
+
+\ifdefined\posAmin%
+  \renewcommand{\posAmin}{\mathop{{\min_{\posAleq}}}}%
+\else%
+  \newcommand{\posAmin}{\mathop{{\min_{\posAleq}}}}%
+\fi
+%   The least element
+\ifdefined\posAmax%
+  \renewcommand{\posAmax}{\mathop{{\max_{\posAleq}}}}%
+\else%
+  \newcommand{\posAmax}{\mathop{{\max_{\posAleq}}}}%
+\fi
+%   The least element
+
+
+\ifdefined\posB%
+  \renewcommand{\posB}{\mathcal{Q}}%
+\else%
+  \newcommand{\posB}{\mathcal{Q}}%
+\fi
+%  
+\ifdefined\posBleq%
+  \renewcommand{\posBleq}{\mathrel{{\posleq_\posB}}}%
+\else%
+  \newcommand{\posBleq}{\mathrel{{\posleq_\posB}}}%
+\fi
+
+\ifdefined\posC%
+  \renewcommand{\posC}{\mathcal{R}}%
+\else%
+  \newcommand{\posC}{\mathcal{R}}%
+\fi
+%  
+
+
+
+
+\ifdefined\lfp%
+  \renewcommand{\lfp}{\vmath{lfp}}%
+\else%
+  \newcommand{\lfp}{\vmath{lfp}}%
+\fi
+%  Least fixed point 
+\ifdefined\prefixed%
+  \renewcommand{\prefixed}{\vmath{prefixed}}%
+\else%
+  \newcommand{\prefixed}{\vmath{prefixed}}%
+\fi
+%  prefixed points 
+\ifdefined\CPOs%
+  \renewcommand{\CPOs}{\textsc{CPO}s\xspace}%
+\else%
+  \newcommand{\CPOs}{\textsc{CPO}s\xspace}%
+\fi
+
+\ifdefined\CPO%
+  \renewcommand{\CPO}{\textsc{CPO}\xspace}%
+\else%
+  \newcommand{\CPO}{\textsc{CPO}\xspace}%
+\fi
+
+\ifdefined\DCPOs%
+  \renewcommand{\DCPOs}{\textsc{DCPO}s\xspace}%
+\else%
+  \newcommand{\DCPOs}{\textsc{DCPO}s\xspace}%
+\fi
+
+\ifdefined\DCPO%
+  \renewcommand{\DCPO}{\textsc{DCPO}\xspace}%
+\else%
+  \newcommand{\DCPO}{\textsc{DCPO}\xspace}%
+\fi
+
+
+
+\ifdefined\antichains%
+  \renewcommand{\antichains}{\vmath{A}}%
+\else%
+  \newcommand{\antichains}{\vmath{A}}%
+\fi
+%  
+
+
+\ifdefined\upsets%
+  \renewcommand{\upsets}{\vmath{U}}%
+\else%
+  \newcommand{\upsets}{\vmath{U}}%
+\fi
+
+\ifdefined\downsets%
+  \renewcommand{\downsets}{\vmath{D}}%
+\else%
+  \newcommand{\downsets}{\vmath{D}}%
+\fi
+
+
+
+
+
+\ifdefined\upresleq%
+  \renewcommand{\upresleq}{\posleq_{\upressp}}%
+\else%
+  \newcommand{\upresleq}{\posleq_{\upressp}}%
+\fi
+
+\ifdefined\upressp%
+  \renewcommand{\upressp}{\upsets\ressp}%
+\else%
+  \newcommand{\upressp}{\upsets\ressp}%
+\fi
+
+\ifdefined\allupsets%
+  \renewcommand{\allupsets}{\vmath{Up}}%
+\else%
+  \newcommand{\allupsets}{\vmath{Up}}%
+\fi
+%  
+
+
+
+
+\ifdefined\upit%
+  \renewcommand{\upit}{{\uparrow\,}}%
+\else%
+  \newcommand{\upit}{{\uparrow\,}}%
+\fi
+%  Converts to smallest upset containing the ste
+
+
+\ifdefined\stupit%
+  \renewcommand{\stupit}{\dot{\upit}}%
+\else%
+  \newcommand{\stupit}{\dot{\upit}}%
+\fi
+%  Strict upper closure
 
 
 
@@ -6461,5 +7635,23 @@
   \newcommand{\vmath}[1]{\aword{#1}}%
 \fi
 %  How words should appear in math mode.
+
+
+\ifdefined\codefunc%
+  \renewcommand{\codefunc}[1]{\texttt{#1}\xspace}%
+\else%
+  \newcommand{\codefunc}[1]{\texttt{#1}\xspace}%
+\fi
+%  Code functions
+
+
+\ifdefined\swpackage%
+  \renewcommand{\swpackage}[1]{\textsc{#1}\xspace}%
+\else%
+  \newcommand{\swpackage}[1]{\textsc{#1}\xspace}%
+\fi
+%  Name of software packages
+
+
 
 

@@ -33,7 +33,7 @@ clean:: lyxclean
 
 
 lyxmake: $(lyx_generated_pdf)
-	@echo Making $(lyx_generated_pdf)
+	@#echo Making $(lyx_generated_pdf)
 
 lyxtex: $(lyx_generated_tex)
 
@@ -57,10 +57,8 @@ lyxtex: $(lyx_generated_tex)
 texflavor?=pdflatex
 
 %.tex: %.lyx
-	echo Redoing $@
 	@-rm -f $@
 	$(lyx) -e $(texflavor) -f all $<
-	# $(lyx) -e xetex -f all $<
 
 # We redo the lyx, otherwise we would never be sure 
 # whether this was compiled to a standalone or child document.
@@ -104,4 +102,6 @@ lyxclean:: $(foreach s, $(lyx_subdirs), lyxclean-$s)
 
 	
 lyxhide:
-	-@chflags hidden $(lyx_tmp_files) 1>/dev/null 2>/dev/null
+	@-chflags hidden $(lyx_generated_tex_indirect) 1>/dev/null 2>/dev/null || true
+	@-chflags hidden $(lyx_generated_tex_indirect) 1>/dev/null 2>/dev/null || true
+	@-chflags hidden $(lyx_tmp_files)     1>/dev/null 2>/dev/null || true
