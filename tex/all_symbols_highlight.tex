@@ -3468,6 +3468,34 @@
 
 
 
+\ifdefined\colR%
+  \renewcommand{\colR}{{\color{symbol-highlight} \color[rgb]{0.555789,0.000000,0.000000}}}%
+\else%
+  \newcommand{\colR}{{\color{symbol-highlight} \color[rgb]{0.555789,0.000000,0.000000}}}%
+\fi
+
+\ifdefined\colF%
+  \renewcommand{\colF}{{\color{symbol-highlight} \color[rgb]{0.094869,0.500000,0.000000}}}%
+\else%
+  \newcommand{\colF}{{\color{symbol-highlight} \color[rgb]{0.094869,0.500000,0.000000}}}%
+\fi
+
+\ifdefined\colH%
+  \renewcommand{\colH}{{\color{symbol-highlight} \color[rgb]{0.000000,0.400000,1.000000}}}%
+\else%
+  \newcommand{\colH}{{\color{symbol-highlight} \color[rgb]{0.000000,0.400000,1.000000}}}%
+\fi
+
+\ifdefined\CHF%
+  \renewcommand{\CHF}{{\color{symbol-highlight} \text{CHF}}}%
+\else%
+  \newcommand{\CHF}{{\color{symbol-highlight} \text{CHF}}}%
+\fi
+
+
+
+
+
 
 
 
@@ -4272,12 +4300,8 @@
 %  Set of infinite binary strings
 
 
-\ifdefined\chineseClose%
-  \renewcommand{\chineseClose}{{\color{symbol-highlight} \raisebox{-.3em}{\includegraphics[width=1.1em]{figures/misc/chineseclose2.pdf}}}}%
-\else%
-  \newcommand{\chineseClose}{{\color{symbol-highlight} \raisebox{-.3em}{\includegraphics[width=1.1em]{figures/misc/chineseclose2.pdf}}}}%
-\fi
-%  The Chinese character corresponding to ``close'' or ``near''. 
+% \newcommand{\chineseClose}{\raisebox{-.3em}{\includegraphic__[width=1.1em]{figures/misc/chineseclose2.pdf}}} % The Chinese character corresponding to ``close'' or ``near''. 
+
 
 
 \ifdefined\twosignals%

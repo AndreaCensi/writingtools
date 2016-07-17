@@ -3921,6 +3921,38 @@
 
 
 
+\newbool{usedcolR}\setbool{usedcolR}{false}
+\ifdefined\colR%
+  \renewcommand{\colR}{\markfirst{colR}{usedcolR}{\color[rgb]{0.555789,0.000000,0.000000}}}%
+\else%
+  \newcommand{\colR}{\markfirst{colR}{usedcolR}{\color[rgb]{0.555789,0.000000,0.000000}}}%
+\fi
+
+\newbool{usedcolF}\setbool{usedcolF}{false}
+\ifdefined\colF%
+  \renewcommand{\colF}{\markfirst{colF}{usedcolF}{\color[rgb]{0.094869,0.500000,0.000000}}}%
+\else%
+  \newcommand{\colF}{\markfirst{colF}{usedcolF}{\color[rgb]{0.094869,0.500000,0.000000}}}%
+\fi
+
+\newbool{usedcolH}\setbool{usedcolH}{false}
+\ifdefined\colH%
+  \renewcommand{\colH}{\markfirst{colH}{usedcolH}{\color[rgb]{0.000000,0.400000,1.000000}}}%
+\else%
+  \newcommand{\colH}{\markfirst{colH}{usedcolH}{\color[rgb]{0.000000,0.400000,1.000000}}}%
+\fi
+
+\newbool{usedCHF}\setbool{usedCHF}{false}
+\ifdefined\CHF%
+  \renewcommand{\CHF}{\markfirst{CHF}{usedCHF}{\text{CHF}}}%
+\else%
+  \newcommand{\CHF}{\markfirst{CHF}{usedCHF}{\text{CHF}}}%
+\fi
+
+
+
+
+
 
 
 
@@ -4828,13 +4860,8 @@
 %  Set of infinite binary strings
 
 
-\newbool{usedchineseClose}\setbool{usedchineseClose}{false}
-\ifdefined\chineseClose%
-  \renewcommand{\chineseClose}{\markfirst{chineseClose}{usedchineseClose}{\raisebox{-.3em}{\includegraphics[width=1.1em]{figures/misc/chineseclose2.pdf}}}}%
-\else%
-  \newcommand{\chineseClose}{\markfirst{chineseClose}{usedchineseClose}{\raisebox{-.3em}{\includegraphics[width=1.1em]{figures/misc/chineseclose2.pdf}}}}%
-\fi
-%  The Chinese character corresponding to ``close'' or ``near''. 
+% \newcommand{\chineseClose}{\raisebox{-.3em}{\includegraphic__[width=1.1em]{figures/misc/chineseclose2.pdf}}} % The Chinese character corresponding to ``close'' or ``near''. 
+
 
 
 \newbool{usedtwosignals}\setbool{usedtwosignals}{false}
