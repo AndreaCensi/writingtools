@@ -1,4 +1,46 @@
-%:section:articles/1509-gcmdp: 
+%
+%:section:articles/1508-rafc-moved: Function, implementation, etc.
+%
+
+
+
+\newcommand{\funsp}{\mathscr{F}} % Function space
+\newcommand{\funleq}{\posleq_{\funsp}} % Function space
+\newcommand{\fun}{\vmath{f}} % Function
+
+\newcommand{\funtop}{\top_\funsp}
+\newcommand{\funbot}{\bot_\funsp}
+
+\newcommand{\imp}{\vmath{i}} % Implementation
+\newcommand{\impsp}{\mathscr{I}} % Implementation space
+
+\newcommand{\exc}{\vmath{exec}} % Executation $\exc: \impsp \rightarrow \funsp$
+\newcommand{\eval}{\vmath{eval}} % Evaluation $\eval: \impsp \rightarrow \ressp$
+
+% \newcommand{\param}{\vmath{p}} % Parameter
+\newcommand{\paramsp}{\mathscr{P}} % Parameter space
+% \newcommand{\paramleq}{\leq_{\paramsp}}
+
+\newcommand{\res}{\vmath{r}} % Resources
+\newcommand{\resleq}{\posleq_{\ressp}}
+\newcommand{\restop}{\top_\ressp}
+\newcommand{\resbot}{\bot_\ressp}
+
+\newcommand{\ressp}{\mathscr{R}} % Resources space
+\newcommand{\resspleq}{\resleq}
+
+\newcommand{\tressp}{\trof(\ressp)} % Trade-off space
+\newcommand{\trof}{\mathscr{T}} % Trade-off space
+\newcommand{\tres}{T} 
+\newcommand{\tresleq}{\leq_{\trof}} % Trade-off space
+\newcommand{\trleq}{\leq_{\trof}} % Trade-off space
+
+%:section:articles/1509-gcmdp:
+
+
+
+\newcommand{\dpisp}{\ensuremath{\vmath{DPI}}}
+\newcommand{\cdpisp}{\ensuremath{\vmath{CDPI}}}
 
 \newcommand{\dprobsp}{\ensuremath{\vmath{DP}}}
 \newcommand{\dprob}{\vmath{dp}} % Design problem
@@ -8,9 +50,104 @@
 \newcommand{\dppar}{\vmath{par}}
 \newcommand{\dploop}{\vmath{loop}}
 
+\newcommand{\dploopb}{\vmath{loopb}} % second form of dploop
+
 \newcommand{\cdprobsp}{\ensuremath{\vmath{CDP}}}
 \newcommand{\cdprob}{\vmath{cdp}} % Design problem
 \newcommand{\dpatoms}{\vmath{atoms}} % Atoms of a cdp
 
 
 \newcommand{\resMin}{{\Min_{\resleq}}}
+
+
+
+\newcommand{\unconnectedfun}{\mathsf{UF}}
+\newcommand{\unconnectedres}{\mathsf{UR}}
+
+
+
+\newcommand{\Aressp}{{\antichains\ressp}} % Antichains of resources
+\newcommand{\Afunsp}{{\antichains\funsp}} % Antichains of functions
+
+
+%:section:articles/UDP:
+
+\newcommand{\udpa}{\boldsymbol{u}_a}
+\newcommand{\udpb}{\boldsymbol{u}_b}
+\newcommand{\udpL}{\boldsymbol{\mathsf{L}}} 
+\newcommand{\udpU}{\boldsymbol{\mathsf{U}}} 
+\newcommand{\udpsp}{\vmath{UDP}}
+\newcommand{\udpleq}{\posleq_\udpsp}
+
+\newcommand{\dpsp}{\vmath{DP}}
+\newcommand{\dpleq}{\posleq_\dpsp}
+
+\newcommand{\terms}{\vmath{Terms}}
+
+\newcommand{\udpsem}{\Phi}
+
+\newcommand{\dpsem}{\varphi}
+
+\newcommand{\atoms}{\mathcal{A}}
+\newcommand{\atree}{\boldsymbol{\vmath{T}}}
+\newcommand{\val}{\boldsymbol{v}} % Valuation
+
+\newcommand{\ops}{\vmath{ops}} % Set of operations
+
+\newcommand{\ftorL}{h_L}
+\newcommand{\ftorU}{h_U}
+
+\newcommand{\acprod}{\mathbin{\boldsymbol{\times}}} % Product of antichains
+
+\newcommand{\oploop}{\dagger}
+\newcommand{\opseries}{\mathbin{\varocircle}}
+\newcommand{\oppar}{\mathbin{\varotimes}}
+\newcommand{\opcoprod}{\mathbin{\varovee}}
+
+\newcommand{\UId}{\vmath{UId}} % Uncertain identity
+\newcommand{\vdc}{\vmath{vdc}} % Van Der Corput
+
+
+\newcommand{\makedp}{\Gamma}
+
+
+
+\newcommand{\colR}{\color[rgb]{0.555789,0.000000,0.000000}}
+\newcommand{\colF}{\color[rgb]{0.094869,0.500000,0.000000}}
+\newcommand{\colH}{\color[rgb]{0.000000,0.400000,1.000000}}
+\newcommand{\colI}{\color[RGB]{214,120,5}}
+\newcommand{\colU}{\color{purple}}
+\newcommand{\colL}{\color{orange}}
+
+
+\renewcommand{\colR}{\color[rgb]{0.0,0.000000,0.000000}}
+\renewcommand{\colF}{\color[rgb]{0.0,0.000000,0.000000}}
+\renewcommand{\colH}{\color[rgb]{0.000000,0.00000,0.000000}}
+\renewcommand{\colI}{\color[RGB]{0,0,0}}
+\renewcommand{\colU}{\color[RGB]{0,0,0}}
+\renewcommand{\colL}{\color[RGB]{0,0,0}}
+
+
+
+\newcommand{\R}[1]{{\colR #1}}
+\newcommand{\F}[1]{{\colF #1}}
+\newcommand{\I}[1]{{\colI #1}}
+
+\newcommand{\One}{\mathbbm{1}} % \usepackage{bbm}
+\newcommand{\cdpiN}{\mathcal{V}} % Nodes in a CDPI
+\newcommand{\cdpin}{v} % one node in a CDPI
+\newcommand{\cdpinA}{v_1}
+\newcommand{\cdpinB}{v_2}
+\newcommand{\cdpiresind}{i}
+\newcommand{\cdpifunind}{j}
+\newcommand{\cdpiresindA}{i_1}
+\newcommand{\cdpifunindB}{j_2}
+\newcommand{\dpinumf}{\vmath{nf}}
+\newcommand{\dpinumr}{\vmath{nr}}
+\newcommand{\cdpinnumf}{\dpinumf_\cdpin} % Number of functionalities
+\newcommand{\cdpinnumr}{\dpinumr_\cdpin} % Number of resources
+\newcommand{\cdpiE}{\mathcal{E}} % Edges in a CDPI
+
+
+\newcommand{\Rcpu}[1]{\Rcomp{}^{\!\!\!\!\!\textrm{[#1]}}}
+% \newcommand{\Rcpu}[1]{\Rcomp^{\textrm{[#1]}}}

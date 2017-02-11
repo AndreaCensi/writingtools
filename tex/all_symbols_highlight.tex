@@ -2674,6 +2674,178 @@
 
 
 
+%
+
+
+
+
+
+
+
+\ifdefined\funsp%
+  \renewcommand{\funsp}{{\color{symbol-highlight} \mathscr{F}}}%
+\else%
+  \newcommand{\funsp}{{\color{symbol-highlight} \mathscr{F}}}%
+\fi
+%  Function space
+\ifdefined\funleq%
+  \renewcommand{\funleq}{{\color{symbol-highlight} \posleq_{\funsp}}}%
+\else%
+  \newcommand{\funleq}{{\color{symbol-highlight} \posleq_{\funsp}}}%
+\fi
+%  Function space
+\ifdefined\fun%
+  \renewcommand{\fun}{{\color{symbol-highlight} \vmath{f}}}%
+\else%
+  \newcommand{\fun}{{\color{symbol-highlight} \vmath{f}}}%
+\fi
+%  Function
+
+
+\ifdefined\funtop%
+  \renewcommand{\funtop}{{\color{symbol-highlight} \top_\funsp}}%
+\else%
+  \newcommand{\funtop}{{\color{symbol-highlight} \top_\funsp}}%
+\fi
+
+\ifdefined\funbot%
+  \renewcommand{\funbot}{{\color{symbol-highlight} \bot_\funsp}}%
+\else%
+  \newcommand{\funbot}{{\color{symbol-highlight} \bot_\funsp}}%
+\fi
+
+
+
+\ifdefined\imp%
+  \renewcommand{\imp}{{\color{symbol-highlight} \vmath{i}}}%
+\else%
+  \newcommand{\imp}{{\color{symbol-highlight} \vmath{i}}}%
+\fi
+%  Implementation
+\ifdefined\impsp%
+  \renewcommand{\impsp}{{\color{symbol-highlight} \mathscr{I}}}%
+\else%
+  \newcommand{\impsp}{{\color{symbol-highlight} \mathscr{I}}}%
+\fi
+%  Implementation space
+
+
+\ifdefined\exc%
+  \renewcommand{\exc}{{\color{symbol-highlight} \vmath{exec}}}%
+\else%
+  \newcommand{\exc}{{\color{symbol-highlight} \vmath{exec}}}%
+\fi
+%  Executation $\exc: \impsp \rightarrow \funsp$
+\ifdefined\eval%
+  \renewcommand{\eval}{{\color{symbol-highlight} \vmath{eval}}}%
+\else%
+  \newcommand{\eval}{{\color{symbol-highlight} \vmath{eval}}}%
+\fi
+%  Evaluation $\eval: \impsp \rightarrow \ressp$
+
+
+% \newcommand{\param}{\vmath{p}} % Parameter
+
+\ifdefined\paramsp%
+  \renewcommand{\paramsp}{{\color{symbol-highlight} \mathscr{P}}}%
+\else%
+  \newcommand{\paramsp}{{\color{symbol-highlight} \mathscr{P}}}%
+\fi
+%  Parameter space
+% \newcommand{\paramleq}{\leq_{\paramsp}}
+
+
+
+\ifdefined\res%
+  \renewcommand{\res}{{\color{symbol-highlight} \vmath{r}}}%
+\else%
+  \newcommand{\res}{{\color{symbol-highlight} \vmath{r}}}%
+\fi
+%  Resources
+\ifdefined\resleq%
+  \renewcommand{\resleq}{{\color{symbol-highlight} \posleq_{\ressp}}}%
+\else%
+  \newcommand{\resleq}{{\color{symbol-highlight} \posleq_{\ressp}}}%
+\fi
+
+\ifdefined\restop%
+  \renewcommand{\restop}{{\color{symbol-highlight} \top_\ressp}}%
+\else%
+  \newcommand{\restop}{{\color{symbol-highlight} \top_\ressp}}%
+\fi
+
+\ifdefined\resbot%
+  \renewcommand{\resbot}{{\color{symbol-highlight} \bot_\ressp}}%
+\else%
+  \newcommand{\resbot}{{\color{symbol-highlight} \bot_\ressp}}%
+\fi
+
+
+
+\ifdefined\ressp%
+  \renewcommand{\ressp}{{\color{symbol-highlight} \mathscr{R}}}%
+\else%
+  \newcommand{\ressp}{{\color{symbol-highlight} \mathscr{R}}}%
+\fi
+%  Resources space
+\ifdefined\resspleq%
+  \renewcommand{\resspleq}{{\color{symbol-highlight} \resleq}}%
+\else%
+  \newcommand{\resspleq}{{\color{symbol-highlight} \resleq}}%
+\fi
+
+
+
+\ifdefined\tressp%
+  \renewcommand{\tressp}{{\color{symbol-highlight} \trof(\ressp)}}%
+\else%
+  \newcommand{\tressp}{{\color{symbol-highlight} \trof(\ressp)}}%
+\fi
+%  Trade-off space
+\ifdefined\trof%
+  \renewcommand{\trof}{{\color{symbol-highlight} \mathscr{T}}}%
+\else%
+  \newcommand{\trof}{{\color{symbol-highlight} \mathscr{T}}}%
+\fi
+%  Trade-off space
+\ifdefined\tres%
+  \renewcommand{\tres}{{\color{symbol-highlight} T}}%
+\else%
+  \newcommand{\tres}{{\color{symbol-highlight} T}}%
+\fi
+
+\ifdefined\tresleq%
+  \renewcommand{\tresleq}{{\color{symbol-highlight} \leq_{\trof}}}%
+\else%
+  \newcommand{\tresleq}{{\color{symbol-highlight} \leq_{\trof}}}%
+\fi
+%  Trade-off space
+\ifdefined\trleq%
+  \renewcommand{\trleq}{{\color{symbol-highlight} \leq_{\trof}}}%
+\else%
+  \newcommand{\trleq}{{\color{symbol-highlight} \leq_{\trof}}}%
+\fi
+%  Trade-off space
+
+
+
+
+
+
+
+
+\ifdefined\dpisp%
+  \renewcommand{\dpisp}{{\color{symbol-highlight} \ensuremath{\vmath{DPI}}}}%
+\else%
+  \newcommand{\dpisp}{{\color{symbol-highlight} \ensuremath{\vmath{DPI}}}}%
+\fi
+
+\ifdefined\cdpisp%
+  \renewcommand{\cdpisp}{{\color{symbol-highlight} \ensuremath{\vmath{CDPI}}}}%
+\else%
+  \newcommand{\cdpisp}{{\color{symbol-highlight} \ensuremath{\vmath{CDPI}}}}%
+\fi
+
 
 
 \ifdefined\dprobsp%
@@ -2710,6 +2882,12 @@
   \newcommand{\dploop}{{\color{symbol-highlight} \vmath{loop}}}%
 \fi
 
+\ifdefined\dploopb%
+  \renewcommand{\dploopb}{{\color{symbol-highlight} \vmath{loopb}}}%
+\else%
+  \newcommand{\dploopb}{{\color{symbol-highlight} \vmath{loopb}}}%
+\fi
+%  second form of dploop
 
 
 \ifdefined\cdprobsp%
@@ -2739,6 +2917,374 @@
 \else%
   \newcommand{\resMin}{{\color{symbol-highlight} {\Min_{\resleq}}}}%
 \fi
+
+
+
+
+
+
+
+\ifdefined\unconnectedfun%
+  \renewcommand{\unconnectedfun}{{\color{symbol-highlight} \mathsf{UF}}}%
+\else%
+  \newcommand{\unconnectedfun}{{\color{symbol-highlight} \mathsf{UF}}}%
+\fi
+
+\ifdefined\unconnectedres%
+  \renewcommand{\unconnectedres}{{\color{symbol-highlight} \mathsf{UR}}}%
+\else%
+  \newcommand{\unconnectedres}{{\color{symbol-highlight} \mathsf{UR}}}%
+\fi
+
+
+
+
+
+
+
+\ifdefined\Aressp%
+  \renewcommand{\Aressp}{{\color{symbol-highlight} {\antichains\ressp}}}%
+\else%
+  \newcommand{\Aressp}{{\color{symbol-highlight} {\antichains\ressp}}}%
+\fi
+%  Antichains of resources
+\ifdefined\Afunsp%
+  \renewcommand{\Afunsp}{{\color{symbol-highlight} {\antichains\funsp}}}%
+\else%
+  \newcommand{\Afunsp}{{\color{symbol-highlight} {\antichains\funsp}}}%
+\fi
+%  Antichains of functions
+
+
+
+
+
+
+\ifdefined\udpa%
+  \renewcommand{\udpa}{{\color{symbol-highlight} \boldsymbol{u}_a}}%
+\else%
+  \newcommand{\udpa}{{\color{symbol-highlight} \boldsymbol{u}_a}}%
+\fi
+
+\ifdefined\udpb%
+  \renewcommand{\udpb}{{\color{symbol-highlight} \boldsymbol{u}_b}}%
+\else%
+  \newcommand{\udpb}{{\color{symbol-highlight} \boldsymbol{u}_b}}%
+\fi
+
+\ifdefined\udpL%
+  \renewcommand{\udpL}{{\color{symbol-highlight} \boldsymbol{\mathsf{L}}}}%
+\else%
+  \newcommand{\udpL}{{\color{symbol-highlight} \boldsymbol{\mathsf{L}}}}%
+\fi
+
+\ifdefined\udpU%
+  \renewcommand{\udpU}{{\color{symbol-highlight} \boldsymbol{\mathsf{U}}}}%
+\else%
+  \newcommand{\udpU}{{\color{symbol-highlight} \boldsymbol{\mathsf{U}}}}%
+\fi
+
+\ifdefined\udpsp%
+  \renewcommand{\udpsp}{{\color{symbol-highlight} \vmath{UDP}}}%
+\else%
+  \newcommand{\udpsp}{{\color{symbol-highlight} \vmath{UDP}}}%
+\fi
+
+\ifdefined\udpleq%
+  \renewcommand{\udpleq}{{\color{symbol-highlight} \posleq_\udpsp}}%
+\else%
+  \newcommand{\udpleq}{{\color{symbol-highlight} \posleq_\udpsp}}%
+\fi
+
+
+
+\ifdefined\dpsp%
+  \renewcommand{\dpsp}{{\color{symbol-highlight} \vmath{DP}}}%
+\else%
+  \newcommand{\dpsp}{{\color{symbol-highlight} \vmath{DP}}}%
+\fi
+
+\ifdefined\dpleq%
+  \renewcommand{\dpleq}{{\color{symbol-highlight} \posleq_\dpsp}}%
+\else%
+  \newcommand{\dpleq}{{\color{symbol-highlight} \posleq_\dpsp}}%
+\fi
+
+
+
+\ifdefined\terms%
+  \renewcommand{\terms}{{\color{symbol-highlight} \vmath{Terms}}}%
+\else%
+  \newcommand{\terms}{{\color{symbol-highlight} \vmath{Terms}}}%
+\fi
+
+
+
+\ifdefined\udpsem%
+  \renewcommand{\udpsem}{{\color{symbol-highlight} \Phi}}%
+\else%
+  \newcommand{\udpsem}{{\color{symbol-highlight} \Phi}}%
+\fi
+
+
+
+\ifdefined\dpsem%
+  \renewcommand{\dpsem}{{\color{symbol-highlight} \varphi}}%
+\else%
+  \newcommand{\dpsem}{{\color{symbol-highlight} \varphi}}%
+\fi
+
+
+
+\ifdefined\atoms%
+  \renewcommand{\atoms}{{\color{symbol-highlight} \mathcal{A}}}%
+\else%
+  \newcommand{\atoms}{{\color{symbol-highlight} \mathcal{A}}}%
+\fi
+
+\ifdefined\atree%
+  \renewcommand{\atree}{{\color{symbol-highlight} \boldsymbol{\vmath{T}}}}%
+\else%
+  \newcommand{\atree}{{\color{symbol-highlight} \boldsymbol{\vmath{T}}}}%
+\fi
+
+\ifdefined\val%
+  \renewcommand{\val}{{\color{symbol-highlight} \boldsymbol{v}}}%
+\else%
+  \newcommand{\val}{{\color{symbol-highlight} \boldsymbol{v}}}%
+\fi
+%  Valuation
+
+
+\ifdefined\ops%
+  \renewcommand{\ops}{{\color{symbol-highlight} \vmath{ops}}}%
+\else%
+  \newcommand{\ops}{{\color{symbol-highlight} \vmath{ops}}}%
+\fi
+%  Set of operations
+
+
+\ifdefined\ftorL%
+  \renewcommand{\ftorL}{{\color{symbol-highlight} h_L}}%
+\else%
+  \newcommand{\ftorL}{{\color{symbol-highlight} h_L}}%
+\fi
+
+\ifdefined\ftorU%
+  \renewcommand{\ftorU}{{\color{symbol-highlight} h_U}}%
+\else%
+  \newcommand{\ftorU}{{\color{symbol-highlight} h_U}}%
+\fi
+
+
+
+\ifdefined\acprod%
+  \renewcommand{\acprod}{{\color{symbol-highlight} \mathbin{\boldsymbol{\times}}}}%
+\else%
+  \newcommand{\acprod}{{\color{symbol-highlight} \mathbin{\boldsymbol{\times}}}}%
+\fi
+%  Product of antichains
+
+
+\ifdefined\oploop%
+  \renewcommand{\oploop}{{\color{symbol-highlight} \dagger}}%
+\else%
+  \newcommand{\oploop}{{\color{symbol-highlight} \dagger}}%
+\fi
+
+\ifdefined\opseries%
+  \renewcommand{\opseries}{{\color{symbol-highlight} \mathbin{\varocircle}}}%
+\else%
+  \newcommand{\opseries}{{\color{symbol-highlight} \mathbin{\varocircle}}}%
+\fi
+
+\ifdefined\oppar%
+  \renewcommand{\oppar}{{\color{symbol-highlight} \mathbin{\varotimes}}}%
+\else%
+  \newcommand{\oppar}{{\color{symbol-highlight} \mathbin{\varotimes}}}%
+\fi
+
+
+
+\ifdefined\UId%
+  \renewcommand{\UId}{{\color{symbol-highlight} \vmath{UId}}}%
+\else%
+  \newcommand{\UId}{{\color{symbol-highlight} \vmath{UId}}}%
+\fi
+%  Uncertain identity
+\ifdefined\vdc%
+  \renewcommand{\vdc}{{\color{symbol-highlight} \vmath{vdc}}}%
+\else%
+  \newcommand{\vdc}{{\color{symbol-highlight} \vmath{vdc}}}%
+\fi
+%  Van Der Corput
+
+
+
+
+\ifdefined\makedp%
+  \renewcommand{\makedp}{{\color{symbol-highlight} \Gamma}}%
+\else%
+  \newcommand{\makedp}{{\color{symbol-highlight} \Gamma}}%
+\fi
+
+
+
+
+
+
+
+\ifdefined\colR%
+  \renewcommand{\colR}{{\color{symbol-highlight} \color[rgb]{0.555789,0.000000,0.000000}}}%
+\else%
+  \newcommand{\colR}{{\color{symbol-highlight} \color[rgb]{0.555789,0.000000,0.000000}}}%
+\fi
+
+\ifdefined\colF%
+  \renewcommand{\colF}{{\color{symbol-highlight} \color[rgb]{0.094869,0.500000,0.000000}}}%
+\else%
+  \newcommand{\colF}{{\color{symbol-highlight} \color[rgb]{0.094869,0.500000,0.000000}}}%
+\fi
+
+\ifdefined\colH%
+  \renewcommand{\colH}{{\color{symbol-highlight} \color[rgb]{0.000000,0.400000,1.000000}}}%
+\else%
+  \newcommand{\colH}{{\color{symbol-highlight} \color[rgb]{0.000000,0.400000,1.000000}}}%
+\fi
+
+\ifdefined\colI%
+  \renewcommand{\colI}{{\color{symbol-highlight} \color[RGB]{214,120,5}}}%
+\else%
+  \newcommand{\colI}{{\color{symbol-highlight} \color[RGB]{214,120,5}}}%
+\fi
+
+
+
+\ifdefined\colU%
+  \renewcommand{\colU}{{\color{symbol-highlight} \color{purple}}}%
+\else%
+  \newcommand{\colU}{{\color{symbol-highlight} \color{purple}}}%
+\fi
+
+\ifdefined\colL%
+  \renewcommand{\colL}{{\color{symbol-highlight} \color{orange}}}%
+\else%
+  \newcommand{\colL}{{\color{symbol-highlight} \color{orange}}}%
+\fi
+
+
+
+
+
+
+
+
+
+\ifdefined\R%
+  \renewcommand{\R}[1]{{\colR #1}}%
+\else%
+  \newcommand{\R}[1]{{\colR #1}}%
+\fi
+
+\ifdefined\F%
+  \renewcommand{\F}[1]{{\colF #1}}%
+\else%
+  \newcommand{\F}[1]{{\colF #1}}%
+\fi
+
+\ifdefined\I%
+  \renewcommand{\I}[1]{{\colI #1}}%
+\else%
+  \newcommand{\I}[1]{{\colI #1}}%
+\fi
+
+
+
+\ifdefined\One%
+  \renewcommand{\One}{{\color{symbol-highlight} \mathbbm{1}} % \usepackage{bbm}}%
+\else%
+  \newcommand{\One}{{\color{symbol-highlight} \mathbbm{1}} % \usepackage{bbm}}%
+\fi
+
+\ifdefined\cdpiN%
+  \renewcommand{\cdpiN}{{\color{symbol-highlight} \mathcal{V}}}%
+\else%
+  \newcommand{\cdpiN}{{\color{symbol-highlight} \mathcal{V}}}%
+\fi
+%  Nodes in a CDPI
+\ifdefined\cdpin%
+  \renewcommand{\cdpin}{{\color{symbol-highlight} v}}%
+\else%
+  \newcommand{\cdpin}{{\color{symbol-highlight} v}}%
+\fi
+%  one node in a CDPI
+\ifdefined\cdpinA%
+  \renewcommand{\cdpinA}{{\color{symbol-highlight} v_1}}%
+\else%
+  \newcommand{\cdpinA}{{\color{symbol-highlight} v_1}}%
+\fi
+
+\ifdefined\cdpinB%
+  \renewcommand{\cdpinB}{{\color{symbol-highlight} v_2}}%
+\else%
+  \newcommand{\cdpinB}{{\color{symbol-highlight} v_2}}%
+\fi
+
+\ifdefined\cdpiresind%
+  \renewcommand{\cdpiresind}{{\color{symbol-highlight} i}}%
+\else%
+  \newcommand{\cdpiresind}{{\color{symbol-highlight} i}}%
+\fi
+
+\ifdefined\cdpifunind%
+  \renewcommand{\cdpifunind}{{\color{symbol-highlight} j}}%
+\else%
+  \newcommand{\cdpifunind}{{\color{symbol-highlight} j}}%
+\fi
+
+\ifdefined\cdpiresindA%
+  \renewcommand{\cdpiresindA}{{\color{symbol-highlight} i_1}}%
+\else%
+  \newcommand{\cdpiresindA}{{\color{symbol-highlight} i_1}}%
+\fi
+
+\ifdefined\cdpifunindB%
+  \renewcommand{\cdpifunindB}{{\color{symbol-highlight} j_2}}%
+\else%
+  \newcommand{\cdpifunindB}{{\color{symbol-highlight} j_2}}%
+\fi
+
+\ifdefined\dpinumf%
+  \renewcommand{\dpinumf}{{\color{symbol-highlight} \textrm{nf}}}%
+\else%
+  \newcommand{\dpinumf}{{\color{symbol-highlight} \textrm{nf}}}%
+\fi
+
+\ifdefined\dpinumr%
+  \renewcommand{\dpinumr}{{\color{symbol-highlight} \textrm{nr}}}%
+\else%
+  \newcommand{\dpinumr}{{\color{symbol-highlight} \textrm{nr}}}%
+\fi
+
+\ifdefined\cdpinnumf%
+  \renewcommand{\cdpinnumf}{{\color{symbol-highlight} \dpinumf_\cdpin}}%
+\else%
+  \newcommand{\cdpinnumf}{{\color{symbol-highlight} \dpinumf_\cdpin}}%
+\fi
+%  Number of functionalities
+\ifdefined\cdpinnumr%
+  \renewcommand{\cdpinnumr}{{\color{symbol-highlight} \dpinumr_\cdpin}}%
+\else%
+  \newcommand{\cdpinnumr}{{\color{symbol-highlight} \dpinumr_\cdpin}}%
+\fi
+%  Number of resources
+\ifdefined\cdpiE%
+  \renewcommand{\cdpiE}{{\color{symbol-highlight} \mathcal{E}}}%
+\else%
+  \newcommand{\cdpiE}{{\color{symbol-highlight} \mathcal{E}}}%
+\fi
+%  Edges in a CDPI
+
 
 
 
@@ -3268,156 +3814,6 @@
 
 
 
-\ifdefined\funsp%
-  \renewcommand{\funsp}{{\color{symbol-highlight} \mathscr{F}}}%
-\else%
-  \newcommand{\funsp}{{\color{symbol-highlight} \mathscr{F}}}%
-\fi
-%  Function space
-\ifdefined\funleq%
-  \renewcommand{\funleq}{{\color{symbol-highlight} \leq_{\funsp}}}%
-\else%
-  \newcommand{\funleq}{{\color{symbol-highlight} \leq_{\funsp}}}%
-\fi
-%  Function space
-\ifdefined\fun%
-  \renewcommand{\fun}{{\color{symbol-highlight} \vmath{f}}}%
-\else%
-  \newcommand{\fun}{{\color{symbol-highlight} \vmath{f}}}%
-\fi
-%  Function
-
-
-\ifdefined\funtop%
-  \renewcommand{\funtop}{{\color{symbol-highlight} \top_\funsp}}%
-\else%
-  \newcommand{\funtop}{{\color{symbol-highlight} \top_\funsp}}%
-\fi
-
-\ifdefined\funbot%
-  \renewcommand{\funbot}{{\color{symbol-highlight} \bot_\funsp}}%
-\else%
-  \newcommand{\funbot}{{\color{symbol-highlight} \bot_\funsp}}%
-\fi
-
-
-
-\ifdefined\imp%
-  \renewcommand{\imp}{{\color{symbol-highlight} \vmath{i}}}%
-\else%
-  \newcommand{\imp}{{\color{symbol-highlight} \vmath{i}}}%
-\fi
-%  Implementation
-\ifdefined\impsp%
-  \renewcommand{\impsp}{{\color{symbol-highlight} \mathscr{I}}}%
-\else%
-  \newcommand{\impsp}{{\color{symbol-highlight} \mathscr{I}}}%
-\fi
-%  Implementation space
-
-
-\ifdefined\exc%
-  \renewcommand{\exc}{{\color{symbol-highlight} \vmath{exec}}}%
-\else%
-  \newcommand{\exc}{{\color{symbol-highlight} \vmath{exec}}}%
-\fi
-%  Executation $\exc: \impsp \rightarrow \funsp$
-\ifdefined\eval%
-  \renewcommand{\eval}{{\color{symbol-highlight} \vmath{eval}}}%
-\else%
-  \newcommand{\eval}{{\color{symbol-highlight} \vmath{eval}}}%
-\fi
-%  Evaluation $\eval: \impsp \rightarrow \ressp$
-
-
-% \newcommand{\param}{\vmath{p}} % Parameter
-
-\ifdefined\paramsp%
-  \renewcommand{\paramsp}{{\color{symbol-highlight} \mathscr{P}}}%
-\else%
-  \newcommand{\paramsp}{{\color{symbol-highlight} \mathscr{P}}}%
-\fi
-%  Parameter space
-% \newcommand{\paramleq}{\leq_{\paramsp}}
-
-
-
-\ifdefined\res%
-  \renewcommand{\res}{{\color{symbol-highlight} \vmath{r}}}%
-\else%
-  \newcommand{\res}{{\color{symbol-highlight} \vmath{r}}}%
-\fi
-%  Resources
-\ifdefined\resleq%
-  \renewcommand{\resleq}{{\color{symbol-highlight} \leq_{\ressp}}}%
-\else%
-  \newcommand{\resleq}{{\color{symbol-highlight} \leq_{\ressp}}}%
-\fi
-
-\ifdefined\restop%
-  \renewcommand{\restop}{{\color{symbol-highlight} \top_\ressp}}%
-\else%
-  \newcommand{\restop}{{\color{symbol-highlight} \top_\ressp}}%
-\fi
-
-\ifdefined\resbot%
-  \renewcommand{\resbot}{{\color{symbol-highlight} \bot_\ressp}}%
-\else%
-  \newcommand{\resbot}{{\color{symbol-highlight} \bot_\ressp}}%
-\fi
-
-
-
-\ifdefined\ressp%
-  \renewcommand{\ressp}{{\color{symbol-highlight} \mathscr{R}}}%
-\else%
-  \newcommand{\ressp}{{\color{symbol-highlight} \mathscr{R}}}%
-\fi
-%  Resources space
-\ifdefined\resspleq%
-  \renewcommand{\resspleq}{{\color{symbol-highlight} \resleq}}%
-\else%
-  \newcommand{\resspleq}{{\color{symbol-highlight} \resleq}}%
-\fi
-
-
-
-\ifdefined\tressp%
-  \renewcommand{\tressp}{{\color{symbol-highlight} \trof(\ressp)}}%
-\else%
-  \newcommand{\tressp}{{\color{symbol-highlight} \trof(\ressp)}}%
-\fi
-%  Trade-off space
-\ifdefined\trof%
-  \renewcommand{\trof}{{\color{symbol-highlight} \mathscr{T}}}%
-\else%
-  \newcommand{\trof}{{\color{symbol-highlight} \mathscr{T}}}%
-\fi
-%  Trade-off space
-\ifdefined\tres%
-  \renewcommand{\tres}{{\color{symbol-highlight} T}}%
-\else%
-  \newcommand{\tres}{{\color{symbol-highlight} T}}%
-\fi
-
-\ifdefined\tresleq%
-  \renewcommand{\tresleq}{{\color{symbol-highlight} \leq_{\trof}}}%
-\else%
-  \newcommand{\tresleq}{{\color{symbol-highlight} \leq_{\trof}}}%
-\fi
-%  Trade-off space
-\ifdefined\trleq%
-  \renewcommand{\trleq}{{\color{symbol-highlight} \leq_{\trof}}}%
-\else%
-  \newcommand{\trleq}{{\color{symbol-highlight} \leq_{\trof}}}%
-\fi
-%  Trade-off space
-
-
-
-
-
-
 \ifdefined\Res%
   \renewcommand{\Res}{{\color{symbol-highlight} S}}%
 \else%
@@ -3465,34 +3861,6 @@
 \else%
   \newcommand{\rtoapp}{{\color{symbol-highlight} \Psi}}%
 \fi
-
-
-
-\ifdefined\colR%
-  \renewcommand{\colR}{{\color{symbol-highlight} \color[rgb]{0.555789,0.000000,0.000000}}}%
-\else%
-  \newcommand{\colR}{{\color{symbol-highlight} \color[rgb]{0.555789,0.000000,0.000000}}}%
-\fi
-
-\ifdefined\colF%
-  \renewcommand{\colF}{{\color{symbol-highlight} \color[rgb]{0.094869,0.500000,0.000000}}}%
-\else%
-  \newcommand{\colF}{{\color{symbol-highlight} \color[rgb]{0.094869,0.500000,0.000000}}}%
-\fi
-
-\ifdefined\colH%
-  \renewcommand{\colH}{{\color{symbol-highlight} \color[rgb]{0.000000,0.400000,1.000000}}}%
-\else%
-  \newcommand{\colH}{{\color{symbol-highlight} \color[rgb]{0.000000,0.400000,1.000000}}}%
-\fi
-
-\ifdefined\CHF%
-  \renewcommand{\CHF}{{\color{symbol-highlight} \text{CHF}}}%
-\else%
-  \newcommand{\CHF}{{\color{symbol-highlight} \text{CHF}}}%
-\fi
-
-
 
 
 
@@ -6725,6 +7093,14 @@
   \newcommand{\posleq}{{\color{symbol-highlight} \preceq}}%
 \fi
 
+% \newcommand{\poslneq}{\precneq} % usepackage{mathabx}
+
+\ifdefined\poslt%
+  \renewcommand{\poslt}{{\color{symbol-highlight} \prec}}%
+\else%
+  \newcommand{\poslt}{{\color{symbol-highlight} \prec}}%
+\fi
+
 \ifdefined\posgeq%
   \renewcommand{\posgeq}{{\color{symbol-highlight} \succeq}}%
 \else%
@@ -6891,6 +7267,20 @@
   \newcommand{\stupit}{{\color{symbol-highlight} \dot{\upit}}}%
 \fi
 %  Strict upper closure
+
+
+\ifdefined\posetwidth%
+  \renewcommand{\posetwidth}{{\color{symbol-highlight} \vmath{width}}}%
+\else%
+  \newcommand{\posetwidth}{{\color{symbol-highlight} \vmath{width}}}%
+\fi
+
+\ifdefined\posetheight%
+  \renewcommand{\posetheight}{{\color{symbol-highlight} \vmath{height}}}%
+\else%
+  \newcommand{\posetheight}{{\color{symbol-highlight} \vmath{height}}}%
+\fi
+
 
 
 

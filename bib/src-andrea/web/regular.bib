@@ -5,6 +5,38 @@
 @String { bib_postscript.icon = {my_own_ps.gif} }
 @String { use_icons           = {1} }
 
+
+
+@Inproceedings{paull17duckietown,
+  Title                    = {Duckietown: an Open and Inexpensive and Flexible Platform for Autonomy Education and Research},
+  Author                   = {
+  Liam Paull and Jacopo Tani and Heejin Ahn and Javier Alonso-Mora and Luca Carlone and Michal Cap and Yu Fan Chen and Changhyun Choi and Jeff Dusek and Daniel Hoehener and Shih-Yuan Liu and Michael Novitzky and Igor Franzoni Okuyama and Jason Pazis and Guy Rosman and Valerio Varricchio and Hsueh-Cheng Wang and Dmitry Yershov and Hang Zhao and Michael Benjamin and Christopher Carr and Maria Zuber and Sertac Karaman and Emilio Frazzoli and Domitilla Del Vecchio and Daniela Rus and Jonathan How and John Leonard and Andrea Censi},
+  Booktitle                = {IEEE International Conference on Robotics and Automation (ICRA)},
+  Year                     = {2017},
+  Month                    = may,
+  Url                      = {http://duckietown.mit.edu/},
+  Address                  = {Singapore},
+  Desc                     = { This paper describes the Duckiebot and its software.},
+  Descicon                 = {http://purl.org/censi/web/media/paper-icons/paull17duckietown.png},
+  Pdf                      = {http://people.csail.mit.edu/lpaull/publications/Paull_ICRA_2017.pdf}
+}
+
+
+
+@Inproceedings{tani16duckietown,
+  Title                    = {Duckietown:  an Innovative Way to Teach Autonomy} ,
+  Author                   = {Jacopo Tani and Liam Paull and Maria Zuber
+                    and Daniela Rus and Jonathan How and John Leonard and Andrea Censi},
+  Booktitle                = {EduRobotics 2016},
+  Year                     = {2016},
+  Month                    = dec,
+  Url                      = {http://duckietown.mit.edu/},
+  Address                  = {Athens, Greece},
+  Desc                     = { This paper describes the course design for Duckietown.},
+  Descicon                 = {http://purl.org/censi/web/media/paper-icons/paull17duckietown.png},
+  Pdf                      = {http://people.csail.mit.edu/lpaull/publications/Tani_EDU_2016.pdf}
+}
+
 @Inproceedings{censi13dvs,
   Title                    = {Low-latency localization by Active LED Markers tracking using a Dynamic Vision Sensor},
   Author                   = {Andrea Censi and Jonas Strubel and Christian Brandli and Tobi Delbruck and Davide Scaramuzza},
@@ -48,8 +80,8 @@
   Month                    = aug,
   Number                   = {97},
 
-  Desc                     = { 
- This paper describes the first sensory-controlled flight of the Robobee. 
+  Desc                     = {
+ This paper describes the first sensory-controlled flight of the Robobee.
  The Robobee is able to stabilize itself using the feedback from
  a sensor inspired by the insects' ocelli.
  },
@@ -61,9 +93,9 @@
 }
 
 @Article{censi13joint,
-  Title                    = {Simultaneous calibration of odometry 
+  Title                    = {Simultaneous calibration of odometry
  and sensor parameters for mobile robots},
-  Author                   = {Andrea Censi and Antonio Franchi 
+  Author                   = {Andrea Censi and Antonio Franchi
  and Luca Marchionni and Giuseppe Oriolo},
   Year                     = {2013},
   Doi                      = {10.1109/TRO.2012.2226380},
@@ -73,9 +105,9 @@
   Url                      = {http://purl.org/censi/2012/joint_calibration},
   Volume                   = {29},
 
-  Desc                     = { 
- Fast, practical, and extremely precise 
- simultaneous estimation of odometry and sensor configuration 
+  Desc                     = {
+ Fast, practical, and extremely precise
+ simultaneous estimation of odometry and sensor configuration
  parameters for mobile robots.
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/calibration.jpg},
@@ -85,7 +117,7 @@
 }
 
 @Article{censi12cameracalib,
-  Title                    = {Calibration by correlation using metric embedding 
+  Title                    = {Calibration by correlation using metric embedding
  from non-metric similarities},
   Author                   = {Andrea Censi and Davide Scaramuzza},
   Year                     = {2013},
@@ -96,7 +128,7 @@
   Url                      = {http://purl.org/censi/2012/camera_calibration},
   Volume                   = {35},
 
-  Desc                     = { 
+  Desc                     = {
  [Davide] and I explain how to calibrate a generic single-view-point camera
  by only waving it around.
 
@@ -119,19 +151,19 @@
   Url                      = {http://www.lucacarlone.com/index.php/resources/research/mole2d},
   Volume                   = {30},
 
-  Desc                     = { 
+  Desc                     = {
  Pose optimization is what is used in SLAM to optimize the map
- after pose-pose and pose-features correspondences have been established. 
+ after pose-pose and pose-features correspondences have been established.
  The variables in this problem are poses living
  on the nodes of a graph, and measurements are relative measurements
  along the graph edges. The
  problem is hard because orientations live on a manifold
  with nontrivial topology, which makes the problem
  nonlinear, nonconvex, and with multiple minima.
- [Luca][luca] and I try to solve the subproblem of orientation estimation. 
+ [Luca][luca] and I try to solve the subproblem of orientation estimation.
  We find a way to convert
  the problem to an unconstrained optimization problem on integers.
- This makes it possible to solve the problem globally 
+ This makes it possible to solve the problem globally
  and return all likely guesses for the orientation.
 
  [luca]: http://lucacarlone.com
@@ -145,7 +177,7 @@
 @Article{censi13saccade,
   Title                    = {Discriminating external and internal causes
 for saccade initiation in freely flying {\em Drosophila}},
-  Author                   = {Andrea Censi* and Andrew D. Straw* 
+  Author                   = {Andrea Censi* and Andrew D. Straw*
  and Rosalyn W. Sayaman and Richard M. Murray
  and Michael H. Dickinson},
   Year                     = {2013},
@@ -180,11 +212,11 @@ for saccade initiation in freely flying {\em Drosophila}},
  be generalized for use in other systems and employed as a tool for classifying
  effects into sensory, decision, and motor categories when used to analyze data
  from genetic behavioral screens.},
-  Desc                     = { 
- What goes on in a fruit fly's head while it flies? 
+  Desc                     = {
+ What goes on in a fruit fly's head while it flies?
  In this paper we try to identify the dependence of the decision processes
- on the external stimulus experienced by the fly. Remarkably, we are able to 
- say a great deal about internal sensory processing by just observing the 
+ on the external stimulus experienced by the fly. Remarkably, we are able to
+ say a great deal about internal sensory processing by just observing the
  external behavior.
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/censi12saccade_preprint.png},
@@ -208,7 +240,7 @@ for saccade initiation in freely flying {\em Drosophila}},
 
   Abstract                 = { We consider the problem of planning motions in observations space, based on learned models of the dynamics that associate to each action a diffeomorphism of the obser- vations domain. For an arbitrary set of diffeomorphisms, this problem must be formulated as a generic search problem. We adapt established algorithms of the graph search family. In this scenario, node expansion is very costly, as each node in the graph is associated to an uncertain diffeomorphism and corresponding predicted observations. We describe several improvements that ameliorate performance: the introduction of better image similarities to use as heuristics; a method to reduce the number of expanded nodes by preliminarily identifying redundant plans; and a method to pre-compute composite actions that make the search efficient in all directions.},
   Address                  = {Karlsruhe, Germany},
-  Desc                     = { 
+  Desc                     = {
  Using learned diffeomorphism models of the dynamics of cameras and range-finders,
  we formulate motion planning as a planning problem in the observations space.
  Nodes/states are (uncertain) images; actions/edges are (uncertain) diffeomorphisms.
@@ -225,9 +257,9 @@ for saccade initiation in freely flying {\em Drosophila}},
  real world applications'' (IROS), Sendai, Japan},
   Year                     = {2004},
 
-  Desc                     = { 
+  Desc                     = {
  In my first lab, we used to do rescue robotics. Those were the days
- when I was in charge of charging the robot batteries... 
+ when I was in charge of charging the robot batteries...
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/BaCa04.png},
   Kind                     = {unref},
@@ -284,9 +316,9 @@ for saccade initiation in freely flying {\em Drosophila}},
   Pages                    = {3595-3600},
 
   Address                  = {St. Louis, MO},
-  Desc                     = { 
+  Desc                     = {
  Adding color to [HSM3D].
- 
+
  [HSM3D]: http://purl.org/censi/2008/hsm3d},
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/carpin09hsm3d.png}
 }
@@ -299,7 +331,7 @@ for saccade initiation in freely flying {\em Drosophila}},
   Year                     = {2012},
   Url                      = {http://purl.org/censi/2012/phd},
 
-  Desc                     = { 
+  Desc                     = {
  Could a "brain in a vat" be able to control an unknown robotic body
  to which it is connected, and use it to achieve useful tasks, without
  any prior assumptions on the body's sensors and actuators? In this
@@ -311,7 +343,7 @@ for saccade initiation in freely flying {\em Drosophila}},
  thread regards how to properly formalize the notions of "absence
  of assumptions", as a particular form of invariance that the bootstrapping
  agent must satisfy, and proposes some invariance-based design techniques.
- 
+
  *This is version 1.3 of my dissertation -- after turning it in, I
  am still working to integrate the newer material that I had not the
  time to add. So any comments/suggestions are welcome!* },
@@ -329,7 +361,7 @@ for saccade initiation in freely flying {\em Drosophila}},
   ISSN                     = {0018-9286},
   Month                    = feb,
 
-  Desc                     = { 
+  Desc                     = {
  This paper considers the problem of linear filtering over unreliable
  channels. Previous research by Sinopoli et al. has shown that there
  is a threshold on the observations arrival probability that distinguishes
@@ -363,8 +395,8 @@ for saccade initiation in freely flying {\em Drosophila}},
  or not, even in the scalar case, is at least as hard as some open
  problems in measure and number theory. },
   Address                  = {St. Louis, Missouri},
-  Desc                     = { 
- The ultimate match: Cantor meets Kalman! 
+  Desc                     = {
+ The ultimate match: Cantor meets Kalman!
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/fractals.jpg},
   Pdf                      = {http://purl.org/censi/research/2009-acc-fractals.pdf},
@@ -394,11 +426,11 @@ for saccade initiation in freely flying {\em Drosophila}},
  is done for the particular case of pose tracking using range-finders
  (scan matching). },
   Address                  = {Kobe, Japan},
-  Desc                     = { 
+  Desc                     = {
  In principle, how precise can a scan-matching method be? This paper
  gives a very simple relation between the achievable accuracy for
  localization (when the map is known) and the accuracy for scan-matching
- (when the map is *not* known). 
+ (when the map is *not* known).
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/posetracking.jpg},
   Pdf                      = {http://purl.org/censi/research/2009-icra-posetracking.pdf},
@@ -428,11 +460,11 @@ for saccade initiation in freely flying {\em Drosophila}},
  of the correspondence search; this allows for significant speed-up
  of the computation. The source code is available for download. },
   Address                  = {Pasadena, CA},
-  Desc                     = { 
+  Desc                     = {
  An extremely fast and precise ICP variant for range-finder scan matching,
  which converges quadratically in a finite number of steps. [The implementation
  is available][imp] and included also in ROS.
- 
+
  [imp]: http://purl.org/censi/2007/plicp },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/plicp.jpg},
   Pdf                      = {http://purl.org/censi/research/2008-icra-plicp.pdf},
@@ -465,7 +497,7 @@ for saccade initiation in freely flying {\em Drosophila}},
  cases the method still provides a good estimate of the error projected
  on the observable manifold.},
   Address                  = {Rome, Italy},
-  Desc                     = { 
+  Desc                     = {
  This paper describes a *proper* way to compute the covariance of
  an ICP estimate, which is shown to be superior to the existing algernatives.
  },
@@ -505,9 +537,9 @@ for saccade initiation in freely flying {\em Drosophila}},
  is discussed the difficulty in extending these results to find a
  lower bound for accuracy in scan matching and SLAM.},
   Address                  = {Rome, Italy},
-  Desc                     = { 
+  Desc                     = {
  How precise can a localization method be? This paper derives the
- Cramer-Rao lower bound for localization with range finders. 
+ Cramer-Rao lower bound for localization with range finders.
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/accuracy.jpg},
   ISSN                     = {1050-4729},
@@ -573,9 +605,9 @@ for saccade initiation in freely flying {\em Drosophila}},
  one is a back-projection algorithm: uncertainty constraints are propagated
  backward from the goal towards the start state. },
   Address                  = {Pasadena, CA},
-  Desc                     = { 
+  Desc                     = {
  How to get to your goal without getting lost. This was my Master's
- degree final thesis. 
+ degree final thesis.
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/ppu.jpg},
   Pdf                      = {http://purl.org/censi/research/2008-icra-ppu.pdf},
@@ -602,10 +634,10 @@ for saccade initiation in freely flying {\em Drosophila}},
  input. The algorithm has beenexperimentally validated on publicly
  available data sets. },
   Address                  = {Kobe, Japan},
-  Desc                     = { 
+  Desc                     = {
  [Stefano][carpin] and I try to do [HSM][hsm] in 3D: much more difficult!
- 
- [HSM]: http://purl.org/censi/2006/hsm 
+
+ [HSM]: http://purl.org/censi/2006/hsm
  [carpin]: https://eng.ucmerced.edu/people/scarpin/StefanoCarpin
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/hsm3d.jpg},
@@ -625,13 +657,13 @@ for saccade initiation in freely flying {\em Drosophila}},
   Url                      = {http://purl.org/censi/2011/fault},
 
   Address                  = {Saint Paul, MN},
-  Desc                     = { 
+  Desc                     = {
  This paper shows how bootstrapped low-level sensorimotor models,
  such as [BDS][BDS] and [BGDS][BGDS] can be used for faults and anomaly
  detection in sensorimotor cascades. The concept of *usefulness* allows
  to do detection without having a model for the healthy system.
- 
- [BDS]: http://purl.org/censi/2010/boot 
+
+ [BDS]: http://purl.org/censi/2010/boot
  [BGDS]: http://purl.org/censi/2011/bgds
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/censi12fault.png},
@@ -649,7 +681,7 @@ for saccade initiation in freely flying {\em Drosophila}},
   Month                    = dec,
 
   Address                  = {Shanghai, China},
-  Desc                     = { 
+  Desc                     = {
  This paper describes a "bio-plausible" control strategy for stabilizing
  the attitude in SO(3) of a flying body. The [follow-up paper](http://purl.org/hanshuo/2010/pd_pose_stabilization)
  considers the SE(3) case.
@@ -670,9 +702,9 @@ for saccade initiation in freely flying {\em Drosophila}},
   Url                      = {http://purl.org/censi/2006/hsm},
 
   Address                  = {Barcelona, Spain},
-  Desc                     = { 
+  Desc                     = {
  A global, complete algorithm for scan matching based on the Hough/Radon
- transform. This was my Bachelor's thesis. 
+ transform. This was my Bachelor's thesis.
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/hsm.jpg},
   Pdf                      = {http://purl.org/censi/research/2005-icra-hsm.pdf},
@@ -701,9 +733,9 @@ for saccade initiation in freely flying {\em Drosophila}},
  range sensor readings. The maximum-likelihood calibration solution
  is found in a closed form. },
   Address                  = {Pasadena, CA},
-  Desc                     = { 
+  Desc                     = {
  Please see [the journal version][j].
- 
+
  [j]: http://purl.org/censi/2012/joint_calibration },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/calibration.jpg},
   Pdf                      = {http://purl.org/censi/research/2008-icra-calibration.pdf},
@@ -722,7 +754,7 @@ for saccade initiation in freely flying {\em Drosophila}},
   Url                      = {http://purl.org/censi/2011/diffeo},
 
   Address                  = {Saint Paul, MN},
-  Desc                     = { 
+  Desc                     = {
  We show that diffeomorphisms can represent the dynamics of both range-finders
  as well as cameras, and can be easily learned from raw sensorimotor
  data. A [follow-up paper](http://purl.org/censi/2012/dptr1) shows how to do planning in observations
@@ -744,12 +776,12 @@ for saccade initiation in freely flying {\em Drosophila}},
   Url                      = {http://purl.org/censi/2010/boot},
 
   Address                  = {Shanghai, China},
-  Desc                     = { 
+  Desc                     = {
  This paper shows that simple bilinear models capture the dynamics
  of heterogeneous sensors, such as field samplers, cameras, and range-finders.
  These models can be learned unsupervisedly and used to perform simple
  tasks.
- 
+
  This material has been greatly expanded in [the following paper](http://purl.org/censi/2013/jbds).
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/censi11bds.png},
@@ -769,15 +801,15 @@ for saccade initiation in freely flying {\em Drosophila}},
   Url                      = {http://purl.org/censi/2011/bgds},
 
   Address                  = {San Francisco, CA},
-  Desc                     = { 
+  Desc                     = {
  This paper discusses a class of models (BGDS) that capture the bilinear
  dynamics of heterogeneous sensors, such as field samplers, cameras,
  and range-finders, as well as their dependence on the gradient of
  the observations.
- 
+
  This material has been greatly expanded in [my dissertation](http://purl.org/censi/2012/phd)
  (Part 2).
- 
+
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/censi11bgds.png},
   Pdf                      = {http://purl.org/censi/research/2011-iros-bgds.pdf}
@@ -794,7 +826,7 @@ for saccade initiation in freely flying {\em Drosophila}},
   Month                    = aug,
 
   Address                  = {Frankfurt, Germany},
-  Desc                     = { 
+  Desc                     = {
  This paper tries to describe formally the idea of "uncertain semantics"
  in a bootstrapping problem by using the mathematics of group actions.
  If interested, please see Part 1 and Part 3 of [my dissertation](http://purl.org/censi/2012/phd),
@@ -828,9 +860,9 @@ for saccade initiation in freely flying {\em Drosophila}},
  involve the spectralproperties of the graph and can be proved by
  employingelementary techniques of LTI systems analysis. },
   Address                  = {St. Louis, Missouri},
-  Desc                     = { 
+  Desc                     = {
  How to reach a consensus if you and your friends are a bunch of spiking
- neurons. 
+ neurons.
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/consensus.jpg},
   Pdf                      = {http://purl.org/censi/research/2009-acc-consensus.pdf},
@@ -863,7 +895,7 @@ for saccade initiation in freely flying {\em Drosophila}},
  many meters) and it can process data in arbitrary order. The source
  code and datasets are available for download. },
   Address                  = {Pasadena, CA},
-  Desc                     = { 
+  Desc                     = {
  Global localization without the worries and anxiety of filtering.
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/ftf.jpg},
@@ -893,7 +925,7 @@ for saccade initiation in freely flying {\em Drosophila}},
  permits an efficient engineering implementation. We show results
  of the control law tested on an indoor helicopter platform.},
   Address                  = {Taipei, Taiwan},
-  Desc                     = { 
+  Desc                     = {
  Stabilizing hovering for an helicopter using a bio-plausible strategy.
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/han10pose.png},
@@ -917,8 +949,8 @@ for saccade initiation in freely flying {\em Drosophila}},
   Series                   = {Lecture Notes in Computer Science},
   Volume                   = {7463},
 
-  Desc                     = { 
- [Paloma](http://www.intelligentcontrol.es/paloma/) and I 
+  Desc                     = {
+ [Paloma](http://www.intelligentcontrol.es/paloma/) and I
  study how to integrate in the mapping problem
  "rich" information about the environment structure. We use the concept
  of *priorlets* to capture a variety of environment priors. We recover
@@ -939,14 +971,14 @@ for saccade initiation in freely flying {\em Drosophila}},
   Month                    = aug,
 
   Address                  = {Kloster Seeon, Bavaria, Germany},
-  Desc                     = { 
+  Desc                     = {
  [Paloma][paloma] and I study how to integrate in the mapping problem
  "rich" information about the environment structure. We use the concept
  of *priorlets* to capture a variety of environment priors. We recover
  the map by optimizing at the same time for continuous and discrete
  variables (measurements and topology, respectively).
- 
- [paloma]: http://www.intelligentcontrol.es/paloma/ 
+
+ [paloma]: http://www.intelligentcontrol.es/paloma/
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/delapuente12dense.png},
   Pdf                      = {http://authors.library.caltech.edu/28143/1/report.pdf},
@@ -964,9 +996,9 @@ for saccade initiation in freely flying {\em Drosophila}},
   Month                    = sep,
 
   Address                  = {San Francisco, CA},
-  Desc                     = { 
+  Desc                     = {
  Fast and precise visual odometry by exploiting the motion priors
- specific to the dynamics of a car. 
+ specific to the dynamics of a car.
  },
   Descicon                 = {http://purl.org/censi/web/media/paper-icons/scaramuzza11visodo.png},
   Pdf                      = {http://purl.org/censi/research/2011-iros-scaRansac.pdf}
@@ -1005,4 +1037,3 @@ for saccade initiation in freely flying {\em Drosophila}},
   Kind                     = {unref},
   Pdf                      = {http://dx.doi.org/10.1007/978-1-4419-0492-8_10}
 }
-

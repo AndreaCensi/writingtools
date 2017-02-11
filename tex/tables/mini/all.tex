@@ -405,17 +405,93 @@ $\esStAb$ &  Abstract state\\
  $\esRiskSym$ &  Group of symmetries of the risk function\\ 
  $\esPOSym$ &  Group of symmetries acting on the partial order\\ 
  $\esProbSym$ &  Tuple of symmetries\\ 
+ \multicolumn{2}{l}{Function, implementation, etc.}\\ 
+ \hline
+$\funsp$ &  Function space\\ 
+ $\funleq$ &  Function space\\ 
+ $\fun$ &  Function\\ 
+ $\funtop$ & \\ 
+ $\funbot$ & \\ 
+ $\imp$ &  Implementation\\ 
+ $\impsp$ &  Implementation space\\ 
+ $\exc$ &  Executation $\exc: \impsp \rightarrow \funsp$\\ 
+ $\eval$ &  Evaluation $\eval: \impsp \rightarrow \ressp$\\ 
+ $\paramsp$ &  Parameter space\\ 
+ $\res$ &  Resources\\ 
+ $\resleq$ & \\ 
+ $\restop$ & \\ 
+ $\resbot$ & \\ 
+ $\ressp$ &  Resources space\\ 
+ $\resspleq$ & \\ 
+ $\tressp$ &  Trade-off space\\ 
+ $\trof$ &  Trade-off space\\ 
+ $\tres$ & \\ 
+ $\tresleq$ &  Trade-off space\\ 
+ $\trleq$ &  Trade-off space\\ 
  \multicolumn{2}{l}{}\\ 
  \hline
-$\dprobsp$ & \\ 
+$\dpisp$ & \\ 
+ $\cdpisp$ & \\ 
+ $\dprobsp$ & \\ 
  $\dprob$ &  Design problem\\ 
  $\dpseries$ & \\ 
  $\dppar$ & \\ 
  $\dploop$ & \\ 
+ $\dploopb$ &  second form of dploop\\ 
  $\cdprobsp$ & \\ 
  $\cdprob$ &  Design problem\\ 
  $\dpatoms$ &  Atoms of a cdp\\ 
  $\resMin$ & \\ 
+ $\unconnectedfun$ & \\ 
+ $\unconnectedres$ & \\ 
+ $\Aressp$ &  Antichains of resources\\ 
+ $\Afunsp$ &  Antichains of functions\\ 
+ \multicolumn{2}{l}{}\\ 
+ \hline
+$\udpa$ & \\ 
+ $\udpb$ & \\ 
+ $\udpL$ & \\ 
+ $\udpU$ & \\ 
+ $\udpsp$ & \\ 
+ $\udpleq$ & \\ 
+ $\dpsp$ & \\ 
+ $\dpleq$ & \\ 
+ $\terms$ & \\ 
+ $\udpsem$ & \\ 
+ $\dpsem$ & \\ 
+ $\atoms$ & \\ 
+ $\atree$ & \\ 
+ $\val$ &  Valuation\\ 
+ $\ops$ &  Set of operations\\ 
+ $\ftorL$ & \\ 
+ $\ftorU$ & \\ 
+ $\acprod$ &  Product of antichains\\ 
+ $\oploop$ & \\ 
+ $\opseries$ & \\ 
+ $\oppar$ & \\ 
+ $\UId$ &  Uncertain identity\\ 
+ $\vdc$ &  Van Der Corput\\ 
+ $\makedp$ & \\ 
+ $\colR$ & \\ 
+ $\colF$ & \\ 
+ $\colH$ & \\ 
+ $\colI$ & \\ 
+ $\colU$ & \\ 
+ $\colL$ & \\ 
+ $\One$ & \\ 
+ $\cdpiN$ &  Nodes in a CDPI\\ 
+ $\cdpin$ &  one node in a CDPI\\ 
+ $\cdpinA$ & \\ 
+ $\cdpinB$ & \\ 
+ $\cdpiresind$ & \\ 
+ $\cdpifunind$ & \\ 
+ $\cdpiresindA$ & \\ 
+ $\cdpifunindB$ & \\ 
+ $\dpinumf$ & \\ 
+ $\dpinumr$ & \\ 
+ $\cdpinnumf$ &  Number of functionalities\\ 
+ $\cdpinnumr$ &  Number of resources\\ 
+ $\cdpiE$ &  Edges in a CDPI\\ 
  \multicolumn{2}{l}{Group spectral properties}\\ 
  \hline
 $\gsHom$ &  Induced homomorphisms.\\ 
@@ -497,28 +573,7 @@ $\MA$ & \\
  $\np$ &  Number of pixels\\ 
  \multicolumn{2}{l}{Function, implementation, etc.}\\ 
  \hline
-$\funsp$ &  Function space\\ 
- $\funleq$ &  Function space\\ 
- $\fun$ &  Function\\ 
- $\funtop$ & \\ 
- $\funbot$ & \\ 
- $\imp$ &  Implementation\\ 
- $\impsp$ &  Implementation space\\ 
- $\exc$ &  Executation $\exc: \impsp \rightarrow \funsp$\\ 
- $\eval$ &  Evaluation $\eval: \impsp \rightarrow \ressp$\\ 
- $\paramsp$ &  Parameter space\\ 
- $\res$ &  Resources\\ 
- $\resleq$ & \\ 
- $\restop$ & \\ 
- $\resbot$ & \\ 
- $\ressp$ &  Resources space\\ 
- $\resspleq$ & \\ 
- $\tressp$ &  Trade-off space\\ 
- $\trof$ &  Trade-off space\\ 
- $\tres$ & \\ 
- $\tresleq$ &  Trade-off space\\ 
- $\trleq$ &  Trade-off space\\ 
- $\Res$ & \\ 
+$\Res$ & \\ 
  $\Resa$ & \\ 
  $\Resb$ & \\ 
  $\resa$ & \\ 
@@ -526,10 +581,6 @@ $\funsp$ &  Function space\\
  $\Ressp$ & \\ 
  $\Resleq$ & \\ 
  $\rtoapp$ & \\ 
- $\colR$ & \\ 
- $\colF$ & \\ 
- $\colH$ & \\ 
- $\CHF$ & \\ 
  \multicolumn{2}{l}{Resource Allocation problem}\\ 
  \hline
 $\clatency$ & \\ 
@@ -996,6 +1047,7 @@ $\pset$ &  Power set (latenative to powerset\\
  $\upperbounds$ & \\ 
  $\posMin$ & \\ 
  $\posleq$ & \\ 
+ $\poslt$ & \\ 
  $\posgeq$ & \\ 
  $\posA$ & \\ 
  $\posAleq$ & \\ 
@@ -1019,6 +1071,8 @@ $\pset$ &  Power set (latenative to powerset\\
  $\allupsets$ &  \\ 
  $\upit$ &  Converts to smallest upset containing the ste\\ 
  $\stupit$ &  Strict upper closure\\ 
+ $\posetwidth$ & \\ 
+ $\posetheight$ & \\ 
  \multicolumn{2}{l}{Probability}\\ 
  \hline
 $\uniformdist$ &  Uniform distribution\\ 

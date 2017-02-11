@@ -3024,6 +3024,201 @@
 
 
 
+%
+
+
+
+
+
+
+
+\newbool{usedfunsp}\setbool{usedfunsp}{false}
+\ifdefined\funsp%
+  \renewcommand{\funsp}{\markfirst{funsp}{usedfunsp}{\mathscr{F}}}%
+\else%
+  \newcommand{\funsp}{\markfirst{funsp}{usedfunsp}{\mathscr{F}}}%
+\fi
+%  Function space
+\newbool{usedfunleq}\setbool{usedfunleq}{false}
+\ifdefined\funleq%
+  \renewcommand{\funleq}{\markfirst{funleq}{usedfunleq}{\posleq_{\funsp}}}%
+\else%
+  \newcommand{\funleq}{\markfirst{funleq}{usedfunleq}{\posleq_{\funsp}}}%
+\fi
+%  Function space
+\newbool{usedfun}\setbool{usedfun}{false}
+\ifdefined\fun%
+  \renewcommand{\fun}{\markfirst{fun}{usedfun}{\vmath{f}}}%
+\else%
+  \newcommand{\fun}{\markfirst{fun}{usedfun}{\vmath{f}}}%
+\fi
+%  Function
+
+
+\newbool{usedfuntop}\setbool{usedfuntop}{false}
+\ifdefined\funtop%
+  \renewcommand{\funtop}{\markfirst{funtop}{usedfuntop}{\top_\funsp}}%
+\else%
+  \newcommand{\funtop}{\markfirst{funtop}{usedfuntop}{\top_\funsp}}%
+\fi
+
+\newbool{usedfunbot}\setbool{usedfunbot}{false}
+\ifdefined\funbot%
+  \renewcommand{\funbot}{\markfirst{funbot}{usedfunbot}{\bot_\funsp}}%
+\else%
+  \newcommand{\funbot}{\markfirst{funbot}{usedfunbot}{\bot_\funsp}}%
+\fi
+
+
+
+\newbool{usedimp}\setbool{usedimp}{false}
+\ifdefined\imp%
+  \renewcommand{\imp}{\markfirst{imp}{usedimp}{\vmath{i}}}%
+\else%
+  \newcommand{\imp}{\markfirst{imp}{usedimp}{\vmath{i}}}%
+\fi
+%  Implementation
+\newbool{usedimpsp}\setbool{usedimpsp}{false}
+\ifdefined\impsp%
+  \renewcommand{\impsp}{\markfirst{impsp}{usedimpsp}{\mathscr{I}}}%
+\else%
+  \newcommand{\impsp}{\markfirst{impsp}{usedimpsp}{\mathscr{I}}}%
+\fi
+%  Implementation space
+
+
+\newbool{usedexc}\setbool{usedexc}{false}
+\ifdefined\exc%
+  \renewcommand{\exc}{\markfirst{exc}{usedexc}{\vmath{exec}}}%
+\else%
+  \newcommand{\exc}{\markfirst{exc}{usedexc}{\vmath{exec}}}%
+\fi
+%  Executation $\exc: \impsp \rightarrow \funsp$
+\newbool{usedeval}\setbool{usedeval}{false}
+\ifdefined\eval%
+  \renewcommand{\eval}{\markfirst{eval}{usedeval}{\vmath{eval}}}%
+\else%
+  \newcommand{\eval}{\markfirst{eval}{usedeval}{\vmath{eval}}}%
+\fi
+%  Evaluation $\eval: \impsp \rightarrow \ressp$
+
+
+% \newcommand{\param}{\vmath{p}} % Parameter
+
+\newbool{usedparamsp}\setbool{usedparamsp}{false}
+\ifdefined\paramsp%
+  \renewcommand{\paramsp}{\markfirst{paramsp}{usedparamsp}{\mathscr{P}}}%
+\else%
+  \newcommand{\paramsp}{\markfirst{paramsp}{usedparamsp}{\mathscr{P}}}%
+\fi
+%  Parameter space
+% \newcommand{\paramleq}{\leq_{\paramsp}}
+
+
+
+\newbool{usedres}\setbool{usedres}{false}
+\ifdefined\res%
+  \renewcommand{\res}{\markfirst{res}{usedres}{\vmath{r}}}%
+\else%
+  \newcommand{\res}{\markfirst{res}{usedres}{\vmath{r}}}%
+\fi
+%  Resources
+\newbool{usedresleq}\setbool{usedresleq}{false}
+\ifdefined\resleq%
+  \renewcommand{\resleq}{\markfirst{resleq}{usedresleq}{\posleq_{\ressp}}}%
+\else%
+  \newcommand{\resleq}{\markfirst{resleq}{usedresleq}{\posleq_{\ressp}}}%
+\fi
+
+\newbool{usedrestop}\setbool{usedrestop}{false}
+\ifdefined\restop%
+  \renewcommand{\restop}{\markfirst{restop}{usedrestop}{\top_\ressp}}%
+\else%
+  \newcommand{\restop}{\markfirst{restop}{usedrestop}{\top_\ressp}}%
+\fi
+
+\newbool{usedresbot}\setbool{usedresbot}{false}
+\ifdefined\resbot%
+  \renewcommand{\resbot}{\markfirst{resbot}{usedresbot}{\bot_\ressp}}%
+\else%
+  \newcommand{\resbot}{\markfirst{resbot}{usedresbot}{\bot_\ressp}}%
+\fi
+
+
+
+\newbool{usedressp}\setbool{usedressp}{false}
+\ifdefined\ressp%
+  \renewcommand{\ressp}{\markfirst{ressp}{usedressp}{\mathscr{R}}}%
+\else%
+  \newcommand{\ressp}{\markfirst{ressp}{usedressp}{\mathscr{R}}}%
+\fi
+%  Resources space
+\newbool{usedresspleq}\setbool{usedresspleq}{false}
+\ifdefined\resspleq%
+  \renewcommand{\resspleq}{\markfirst{resspleq}{usedresspleq}{\resleq}}%
+\else%
+  \newcommand{\resspleq}{\markfirst{resspleq}{usedresspleq}{\resleq}}%
+\fi
+
+
+
+\newbool{usedtressp}\setbool{usedtressp}{false}
+\ifdefined\tressp%
+  \renewcommand{\tressp}{\markfirst{tressp}{usedtressp}{\trof(\ressp)}}%
+\else%
+  \newcommand{\tressp}{\markfirst{tressp}{usedtressp}{\trof(\ressp)}}%
+\fi
+%  Trade-off space
+\newbool{usedtrof}\setbool{usedtrof}{false}
+\ifdefined\trof%
+  \renewcommand{\trof}{\markfirst{trof}{usedtrof}{\mathscr{T}}}%
+\else%
+  \newcommand{\trof}{\markfirst{trof}{usedtrof}{\mathscr{T}}}%
+\fi
+%  Trade-off space
+\newbool{usedtres}\setbool{usedtres}{false}
+\ifdefined\tres%
+  \renewcommand{\tres}{\markfirst{tres}{usedtres}{T}}%
+\else%
+  \newcommand{\tres}{\markfirst{tres}{usedtres}{T}}%
+\fi
+
+\newbool{usedtresleq}\setbool{usedtresleq}{false}
+\ifdefined\tresleq%
+  \renewcommand{\tresleq}{\markfirst{tresleq}{usedtresleq}{\leq_{\trof}}}%
+\else%
+  \newcommand{\tresleq}{\markfirst{tresleq}{usedtresleq}{\leq_{\trof}}}%
+\fi
+%  Trade-off space
+\newbool{usedtrleq}\setbool{usedtrleq}{false}
+\ifdefined\trleq%
+  \renewcommand{\trleq}{\markfirst{trleq}{usedtrleq}{\leq_{\trof}}}%
+\else%
+  \newcommand{\trleq}{\markfirst{trleq}{usedtrleq}{\leq_{\trof}}}%
+\fi
+%  Trade-off space
+
+
+
+
+
+
+
+
+\newbool{useddpisp}\setbool{useddpisp}{false}
+\ifdefined\dpisp%
+  \renewcommand{\dpisp}{\markfirst{dpisp}{useddpisp}{\ensuremath{\vmath{DPI}}}}%
+\else%
+  \newcommand{\dpisp}{\markfirst{dpisp}{useddpisp}{\ensuremath{\vmath{DPI}}}}%
+\fi
+
+\newbool{usedcdpisp}\setbool{usedcdpisp}{false}
+\ifdefined\cdpisp%
+  \renewcommand{\cdpisp}{\markfirst{cdpisp}{usedcdpisp}{\ensuremath{\vmath{CDPI}}}}%
+\else%
+  \newcommand{\cdpisp}{\markfirst{cdpisp}{usedcdpisp}{\ensuremath{\vmath{CDPI}}}}%
+\fi
+
 
 
 \newbool{useddprobsp}\setbool{useddprobsp}{false}
@@ -3065,6 +3260,13 @@
   \newcommand{\dploop}{\markfirst{dploop}{useddploop}{\vmath{loop}}}%
 \fi
 
+\newbool{useddploopb}\setbool{useddploopb}{false}
+\ifdefined\dploopb%
+  \renewcommand{\dploopb}{\markfirst{dploopb}{useddploopb}{\vmath{loopb}}}%
+\else%
+  \newcommand{\dploopb}{\markfirst{dploopb}{useddploopb}{\vmath{loopb}}}%
+\fi
+%  second form of dploop
 
 
 \newbool{usedcdprobsp}\setbool{usedcdprobsp}{false}
@@ -3098,6 +3300,422 @@
 \else%
   \newcommand{\resMin}{\markfirst{resMin}{usedresMin}{{\Min_{\resleq}}}}%
 \fi
+
+
+
+
+
+
+
+\newbool{usedunconnectedfun}\setbool{usedunconnectedfun}{false}
+\ifdefined\unconnectedfun%
+  \renewcommand{\unconnectedfun}{\markfirst{unconnectedfun}{usedunconnectedfun}{\mathsf{UF}}}%
+\else%
+  \newcommand{\unconnectedfun}{\markfirst{unconnectedfun}{usedunconnectedfun}{\mathsf{UF}}}%
+\fi
+
+\newbool{usedunconnectedres}\setbool{usedunconnectedres}{false}
+\ifdefined\unconnectedres%
+  \renewcommand{\unconnectedres}{\markfirst{unconnectedres}{usedunconnectedres}{\mathsf{UR}}}%
+\else%
+  \newcommand{\unconnectedres}{\markfirst{unconnectedres}{usedunconnectedres}{\mathsf{UR}}}%
+\fi
+
+
+
+
+
+
+
+\newbool{usedAressp}\setbool{usedAressp}{false}
+\ifdefined\Aressp%
+  \renewcommand{\Aressp}{\markfirst{Aressp}{usedAressp}{{\antichains\ressp}}}%
+\else%
+  \newcommand{\Aressp}{\markfirst{Aressp}{usedAressp}{{\antichains\ressp}}}%
+\fi
+%  Antichains of resources
+\newbool{usedAfunsp}\setbool{usedAfunsp}{false}
+\ifdefined\Afunsp%
+  \renewcommand{\Afunsp}{\markfirst{Afunsp}{usedAfunsp}{{\antichains\funsp}}}%
+\else%
+  \newcommand{\Afunsp}{\markfirst{Afunsp}{usedAfunsp}{{\antichains\funsp}}}%
+\fi
+%  Antichains of functions
+
+
+
+
+
+
+\newbool{usedudpa}\setbool{usedudpa}{false}
+\ifdefined\udpa%
+  \renewcommand{\udpa}{\markfirst{udpa}{usedudpa}{\boldsymbol{u}_a}}%
+\else%
+  \newcommand{\udpa}{\markfirst{udpa}{usedudpa}{\boldsymbol{u}_a}}%
+\fi
+
+\newbool{usedudpb}\setbool{usedudpb}{false}
+\ifdefined\udpb%
+  \renewcommand{\udpb}{\markfirst{udpb}{usedudpb}{\boldsymbol{u}_b}}%
+\else%
+  \newcommand{\udpb}{\markfirst{udpb}{usedudpb}{\boldsymbol{u}_b}}%
+\fi
+
+\newbool{usedudpL}\setbool{usedudpL}{false}
+\ifdefined\udpL%
+  \renewcommand{\udpL}{\markfirst{udpL}{usedudpL}{\boldsymbol{\mathsf{L}}}}%
+\else%
+  \newcommand{\udpL}{\markfirst{udpL}{usedudpL}{\boldsymbol{\mathsf{L}}}}%
+\fi
+
+\newbool{usedudpU}\setbool{usedudpU}{false}
+\ifdefined\udpU%
+  \renewcommand{\udpU}{\markfirst{udpU}{usedudpU}{\boldsymbol{\mathsf{U}}}}%
+\else%
+  \newcommand{\udpU}{\markfirst{udpU}{usedudpU}{\boldsymbol{\mathsf{U}}}}%
+\fi
+
+\newbool{usedudpsp}\setbool{usedudpsp}{false}
+\ifdefined\udpsp%
+  \renewcommand{\udpsp}{\markfirst{udpsp}{usedudpsp}{\vmath{UDP}}}%
+\else%
+  \newcommand{\udpsp}{\markfirst{udpsp}{usedudpsp}{\vmath{UDP}}}%
+\fi
+
+\newbool{usedudpleq}\setbool{usedudpleq}{false}
+\ifdefined\udpleq%
+  \renewcommand{\udpleq}{\markfirst{udpleq}{usedudpleq}{\posleq_\udpsp}}%
+\else%
+  \newcommand{\udpleq}{\markfirst{udpleq}{usedudpleq}{\posleq_\udpsp}}%
+\fi
+
+
+
+\newbool{useddpsp}\setbool{useddpsp}{false}
+\ifdefined\dpsp%
+  \renewcommand{\dpsp}{\markfirst{dpsp}{useddpsp}{\vmath{DP}}}%
+\else%
+  \newcommand{\dpsp}{\markfirst{dpsp}{useddpsp}{\vmath{DP}}}%
+\fi
+
+\newbool{useddpleq}\setbool{useddpleq}{false}
+\ifdefined\dpleq%
+  \renewcommand{\dpleq}{\markfirst{dpleq}{useddpleq}{\posleq_\dpsp}}%
+\else%
+  \newcommand{\dpleq}{\markfirst{dpleq}{useddpleq}{\posleq_\dpsp}}%
+\fi
+
+
+
+\newbool{usedterms}\setbool{usedterms}{false}
+\ifdefined\terms%
+  \renewcommand{\terms}{\markfirst{terms}{usedterms}{\vmath{Terms}}}%
+\else%
+  \newcommand{\terms}{\markfirst{terms}{usedterms}{\vmath{Terms}}}%
+\fi
+
+
+
+\newbool{usedudpsem}\setbool{usedudpsem}{false}
+\ifdefined\udpsem%
+  \renewcommand{\udpsem}{\markfirst{udpsem}{usedudpsem}{\Phi}}%
+\else%
+  \newcommand{\udpsem}{\markfirst{udpsem}{usedudpsem}{\Phi}}%
+\fi
+
+
+
+\newbool{useddpsem}\setbool{useddpsem}{false}
+\ifdefined\dpsem%
+  \renewcommand{\dpsem}{\markfirst{dpsem}{useddpsem}{\varphi}}%
+\else%
+  \newcommand{\dpsem}{\markfirst{dpsem}{useddpsem}{\varphi}}%
+\fi
+
+
+
+\newbool{usedatoms}\setbool{usedatoms}{false}
+\ifdefined\atoms%
+  \renewcommand{\atoms}{\markfirst{atoms}{usedatoms}{\mathcal{A}}}%
+\else%
+  \newcommand{\atoms}{\markfirst{atoms}{usedatoms}{\mathcal{A}}}%
+\fi
+
+\newbool{usedatree}\setbool{usedatree}{false}
+\ifdefined\atree%
+  \renewcommand{\atree}{\markfirst{atree}{usedatree}{\boldsymbol{\vmath{T}}}}%
+\else%
+  \newcommand{\atree}{\markfirst{atree}{usedatree}{\boldsymbol{\vmath{T}}}}%
+\fi
+
+\newbool{usedval}\setbool{usedval}{false}
+\ifdefined\val%
+  \renewcommand{\val}{\markfirst{val}{usedval}{\boldsymbol{v}}}%
+\else%
+  \newcommand{\val}{\markfirst{val}{usedval}{\boldsymbol{v}}}%
+\fi
+%  Valuation
+
+
+\newbool{usedops}\setbool{usedops}{false}
+\ifdefined\ops%
+  \renewcommand{\ops}{\markfirst{ops}{usedops}{\vmath{ops}}}%
+\else%
+  \newcommand{\ops}{\markfirst{ops}{usedops}{\vmath{ops}}}%
+\fi
+%  Set of operations
+
+
+\newbool{usedftorL}\setbool{usedftorL}{false}
+\ifdefined\ftorL%
+  \renewcommand{\ftorL}{\markfirst{ftorL}{usedftorL}{h_L}}%
+\else%
+  \newcommand{\ftorL}{\markfirst{ftorL}{usedftorL}{h_L}}%
+\fi
+
+\newbool{usedftorU}\setbool{usedftorU}{false}
+\ifdefined\ftorU%
+  \renewcommand{\ftorU}{\markfirst{ftorU}{usedftorU}{h_U}}%
+\else%
+  \newcommand{\ftorU}{\markfirst{ftorU}{usedftorU}{h_U}}%
+\fi
+
+
+
+\newbool{usedacprod}\setbool{usedacprod}{false}
+\ifdefined\acprod%
+  \renewcommand{\acprod}{\markfirst{acprod}{usedacprod}{\mathbin{\boldsymbol{\times}}}}%
+\else%
+  \newcommand{\acprod}{\markfirst{acprod}{usedacprod}{\mathbin{\boldsymbol{\times}}}}%
+\fi
+%  Product of antichains
+
+
+\newbool{usedoploop}\setbool{usedoploop}{false}
+\ifdefined\oploop%
+  \renewcommand{\oploop}{\markfirst{oploop}{usedoploop}{\dagger}}%
+\else%
+  \newcommand{\oploop}{\markfirst{oploop}{usedoploop}{\dagger}}%
+\fi
+
+\newbool{usedopseries}\setbool{usedopseries}{false}
+\ifdefined\opseries%
+  \renewcommand{\opseries}{\markfirst{opseries}{usedopseries}{\mathbin{\varocircle}}}%
+\else%
+  \newcommand{\opseries}{\markfirst{opseries}{usedopseries}{\mathbin{\varocircle}}}%
+\fi
+
+\newbool{usedoppar}\setbool{usedoppar}{false}
+\ifdefined\oppar%
+  \renewcommand{\oppar}{\markfirst{oppar}{usedoppar}{\mathbin{\varotimes}}}%
+\else%
+  \newcommand{\oppar}{\markfirst{oppar}{usedoppar}{\mathbin{\varotimes}}}%
+\fi
+
+
+
+\newbool{usedUId}\setbool{usedUId}{false}
+\ifdefined\UId%
+  \renewcommand{\UId}{\markfirst{UId}{usedUId}{\vmath{UId}}}%
+\else%
+  \newcommand{\UId}{\markfirst{UId}{usedUId}{\vmath{UId}}}%
+\fi
+%  Uncertain identity
+\newbool{usedvdc}\setbool{usedvdc}{false}
+\ifdefined\vdc%
+  \renewcommand{\vdc}{\markfirst{vdc}{usedvdc}{\vmath{vdc}}}%
+\else%
+  \newcommand{\vdc}{\markfirst{vdc}{usedvdc}{\vmath{vdc}}}%
+\fi
+%  Van Der Corput
+
+
+
+
+\newbool{usedmakedp}\setbool{usedmakedp}{false}
+\ifdefined\makedp%
+  \renewcommand{\makedp}{\markfirst{makedp}{usedmakedp}{\Gamma}}%
+\else%
+  \newcommand{\makedp}{\markfirst{makedp}{usedmakedp}{\Gamma}}%
+\fi
+
+
+
+
+
+
+
+\newbool{usedcolR}\setbool{usedcolR}{false}
+\ifdefined\colR%
+  \renewcommand{\colR}{\markfirst{colR}{usedcolR}{\color[rgb]{0.555789,0.000000,0.000000}}}%
+\else%
+  \newcommand{\colR}{\markfirst{colR}{usedcolR}{\color[rgb]{0.555789,0.000000,0.000000}}}%
+\fi
+
+\newbool{usedcolF}\setbool{usedcolF}{false}
+\ifdefined\colF%
+  \renewcommand{\colF}{\markfirst{colF}{usedcolF}{\color[rgb]{0.094869,0.500000,0.000000}}}%
+\else%
+  \newcommand{\colF}{\markfirst{colF}{usedcolF}{\color[rgb]{0.094869,0.500000,0.000000}}}%
+\fi
+
+\newbool{usedcolH}\setbool{usedcolH}{false}
+\ifdefined\colH%
+  \renewcommand{\colH}{\markfirst{colH}{usedcolH}{\color[rgb]{0.000000,0.400000,1.000000}}}%
+\else%
+  \newcommand{\colH}{\markfirst{colH}{usedcolH}{\color[rgb]{0.000000,0.400000,1.000000}}}%
+\fi
+
+\newbool{usedcolI}\setbool{usedcolI}{false}
+\ifdefined\colI%
+  \renewcommand{\colI}{\markfirst{colI}{usedcolI}{\color[RGB]{214,120,5}}}%
+\else%
+  \newcommand{\colI}{\markfirst{colI}{usedcolI}{\color[RGB]{214,120,5}}}%
+\fi
+
+
+
+\newbool{usedcolU}\setbool{usedcolU}{false}
+\ifdefined\colU%
+  \renewcommand{\colU}{\markfirst{colU}{usedcolU}{\color{purple}}}%
+\else%
+  \newcommand{\colU}{\markfirst{colU}{usedcolU}{\color{purple}}}%
+\fi
+
+\newbool{usedcolL}\setbool{usedcolL}{false}
+\ifdefined\colL%
+  \renewcommand{\colL}{\markfirst{colL}{usedcolL}{\color{orange}}}%
+\else%
+  \newcommand{\colL}{\markfirst{colL}{usedcolL}{\color{orange}}}%
+\fi
+
+
+
+
+
+
+
+
+
+\ifdefined\R%
+  \renewcommand{\R}[1]{{\colR #1}}%
+\else%
+  \newcommand{\R}[1]{{\colR #1}}%
+\fi
+
+\ifdefined\F%
+  \renewcommand{\F}[1]{{\colF #1}}%
+\else%
+  \newcommand{\F}[1]{{\colF #1}}%
+\fi
+
+\ifdefined\I%
+  \renewcommand{\I}[1]{{\colI #1}}%
+\else%
+  \newcommand{\I}[1]{{\colI #1}}%
+\fi
+
+
+
+\newbool{usedOne}\setbool{usedOne}{false}
+\ifdefined\One%
+  \renewcommand{\One}{\markfirst{One}{usedOne}{\mathbbm{1}} % \usepackage{bbm}}%
+\else%
+  \newcommand{\One}{\markfirst{One}{usedOne}{\mathbbm{1}} % \usepackage{bbm}}%
+\fi
+
+\newbool{usedcdpiN}\setbool{usedcdpiN}{false}
+\ifdefined\cdpiN%
+  \renewcommand{\cdpiN}{\markfirst{cdpiN}{usedcdpiN}{\mathcal{V}}}%
+\else%
+  \newcommand{\cdpiN}{\markfirst{cdpiN}{usedcdpiN}{\mathcal{V}}}%
+\fi
+%  Nodes in a CDPI
+\newbool{usedcdpin}\setbool{usedcdpin}{false}
+\ifdefined\cdpin%
+  \renewcommand{\cdpin}{\markfirst{cdpin}{usedcdpin}{v}}%
+\else%
+  \newcommand{\cdpin}{\markfirst{cdpin}{usedcdpin}{v}}%
+\fi
+%  one node in a CDPI
+\newbool{usedcdpinA}\setbool{usedcdpinA}{false}
+\ifdefined\cdpinA%
+  \renewcommand{\cdpinA}{\markfirst{cdpinA}{usedcdpinA}{v_1}}%
+\else%
+  \newcommand{\cdpinA}{\markfirst{cdpinA}{usedcdpinA}{v_1}}%
+\fi
+
+\newbool{usedcdpinB}\setbool{usedcdpinB}{false}
+\ifdefined\cdpinB%
+  \renewcommand{\cdpinB}{\markfirst{cdpinB}{usedcdpinB}{v_2}}%
+\else%
+  \newcommand{\cdpinB}{\markfirst{cdpinB}{usedcdpinB}{v_2}}%
+\fi
+
+\newbool{usedcdpiresind}\setbool{usedcdpiresind}{false}
+\ifdefined\cdpiresind%
+  \renewcommand{\cdpiresind}{\markfirst{cdpiresind}{usedcdpiresind}{i}}%
+\else%
+  \newcommand{\cdpiresind}{\markfirst{cdpiresind}{usedcdpiresind}{i}}%
+\fi
+
+\newbool{usedcdpifunind}\setbool{usedcdpifunind}{false}
+\ifdefined\cdpifunind%
+  \renewcommand{\cdpifunind}{\markfirst{cdpifunind}{usedcdpifunind}{j}}%
+\else%
+  \newcommand{\cdpifunind}{\markfirst{cdpifunind}{usedcdpifunind}{j}}%
+\fi
+
+\newbool{usedcdpiresindA}\setbool{usedcdpiresindA}{false}
+\ifdefined\cdpiresindA%
+  \renewcommand{\cdpiresindA}{\markfirst{cdpiresindA}{usedcdpiresindA}{i_1}}%
+\else%
+  \newcommand{\cdpiresindA}{\markfirst{cdpiresindA}{usedcdpiresindA}{i_1}}%
+\fi
+
+\newbool{usedcdpifunindB}\setbool{usedcdpifunindB}{false}
+\ifdefined\cdpifunindB%
+  \renewcommand{\cdpifunindB}{\markfirst{cdpifunindB}{usedcdpifunindB}{j_2}}%
+\else%
+  \newcommand{\cdpifunindB}{\markfirst{cdpifunindB}{usedcdpifunindB}{j_2}}%
+\fi
+
+\newbool{useddpinumf}\setbool{useddpinumf}{false}
+\ifdefined\dpinumf%
+  \renewcommand{\dpinumf}{\markfirst{dpinumf}{useddpinumf}{\textrm{nf}}}%
+\else%
+  \newcommand{\dpinumf}{\markfirst{dpinumf}{useddpinumf}{\textrm{nf}}}%
+\fi
+
+\newbool{useddpinumr}\setbool{useddpinumr}{false}
+\ifdefined\dpinumr%
+  \renewcommand{\dpinumr}{\markfirst{dpinumr}{useddpinumr}{\textrm{nr}}}%
+\else%
+  \newcommand{\dpinumr}{\markfirst{dpinumr}{useddpinumr}{\textrm{nr}}}%
+\fi
+
+\newbool{usedcdpinnumf}\setbool{usedcdpinnumf}{false}
+\ifdefined\cdpinnumf%
+  \renewcommand{\cdpinnumf}{\markfirst{cdpinnumf}{usedcdpinnumf}{\dpinumf_\cdpin}}%
+\else%
+  \newcommand{\cdpinnumf}{\markfirst{cdpinnumf}{usedcdpinnumf}{\dpinumf_\cdpin}}%
+\fi
+%  Number of functionalities
+\newbool{usedcdpinnumr}\setbool{usedcdpinnumr}{false}
+\ifdefined\cdpinnumr%
+  \renewcommand{\cdpinnumr}{\markfirst{cdpinnumr}{usedcdpinnumr}{\dpinumr_\cdpin}}%
+\else%
+  \newcommand{\cdpinnumr}{\markfirst{cdpinnumr}{usedcdpinnumr}{\dpinumr_\cdpin}}%
+\fi
+%  Number of resources
+\newbool{usedcdpiE}\setbool{usedcdpiE}{false}
+\ifdefined\cdpiE%
+  \renewcommand{\cdpiE}{\markfirst{cdpiE}{usedcdpiE}{\mathcal{E}}}%
+\else%
+  \newcommand{\cdpiE}{\markfirst{cdpiE}{usedcdpiE}{\mathcal{E}}}%
+\fi
+%  Edges in a CDPI
+
 
 
 
@@ -3692,177 +4310,6 @@
 
 
 
-\newbool{usedfunsp}\setbool{usedfunsp}{false}
-\ifdefined\funsp%
-  \renewcommand{\funsp}{\markfirst{funsp}{usedfunsp}{\mathscr{F}}}%
-\else%
-  \newcommand{\funsp}{\markfirst{funsp}{usedfunsp}{\mathscr{F}}}%
-\fi
-%  Function space
-\newbool{usedfunleq}\setbool{usedfunleq}{false}
-\ifdefined\funleq%
-  \renewcommand{\funleq}{\markfirst{funleq}{usedfunleq}{\leq_{\funsp}}}%
-\else%
-  \newcommand{\funleq}{\markfirst{funleq}{usedfunleq}{\leq_{\funsp}}}%
-\fi
-%  Function space
-\newbool{usedfun}\setbool{usedfun}{false}
-\ifdefined\fun%
-  \renewcommand{\fun}{\markfirst{fun}{usedfun}{\vmath{f}}}%
-\else%
-  \newcommand{\fun}{\markfirst{fun}{usedfun}{\vmath{f}}}%
-\fi
-%  Function
-
-
-\newbool{usedfuntop}\setbool{usedfuntop}{false}
-\ifdefined\funtop%
-  \renewcommand{\funtop}{\markfirst{funtop}{usedfuntop}{\top_\funsp}}%
-\else%
-  \newcommand{\funtop}{\markfirst{funtop}{usedfuntop}{\top_\funsp}}%
-\fi
-
-\newbool{usedfunbot}\setbool{usedfunbot}{false}
-\ifdefined\funbot%
-  \renewcommand{\funbot}{\markfirst{funbot}{usedfunbot}{\bot_\funsp}}%
-\else%
-  \newcommand{\funbot}{\markfirst{funbot}{usedfunbot}{\bot_\funsp}}%
-\fi
-
-
-
-\newbool{usedimp}\setbool{usedimp}{false}
-\ifdefined\imp%
-  \renewcommand{\imp}{\markfirst{imp}{usedimp}{\vmath{i}}}%
-\else%
-  \newcommand{\imp}{\markfirst{imp}{usedimp}{\vmath{i}}}%
-\fi
-%  Implementation
-\newbool{usedimpsp}\setbool{usedimpsp}{false}
-\ifdefined\impsp%
-  \renewcommand{\impsp}{\markfirst{impsp}{usedimpsp}{\mathscr{I}}}%
-\else%
-  \newcommand{\impsp}{\markfirst{impsp}{usedimpsp}{\mathscr{I}}}%
-\fi
-%  Implementation space
-
-
-\newbool{usedexc}\setbool{usedexc}{false}
-\ifdefined\exc%
-  \renewcommand{\exc}{\markfirst{exc}{usedexc}{\vmath{exec}}}%
-\else%
-  \newcommand{\exc}{\markfirst{exc}{usedexc}{\vmath{exec}}}%
-\fi
-%  Executation $\exc: \impsp \rightarrow \funsp$
-\newbool{usedeval}\setbool{usedeval}{false}
-\ifdefined\eval%
-  \renewcommand{\eval}{\markfirst{eval}{usedeval}{\vmath{eval}}}%
-\else%
-  \newcommand{\eval}{\markfirst{eval}{usedeval}{\vmath{eval}}}%
-\fi
-%  Evaluation $\eval: \impsp \rightarrow \ressp$
-
-
-% \newcommand{\param}{\vmath{p}} % Parameter
-
-\newbool{usedparamsp}\setbool{usedparamsp}{false}
-\ifdefined\paramsp%
-  \renewcommand{\paramsp}{\markfirst{paramsp}{usedparamsp}{\mathscr{P}}}%
-\else%
-  \newcommand{\paramsp}{\markfirst{paramsp}{usedparamsp}{\mathscr{P}}}%
-\fi
-%  Parameter space
-% \newcommand{\paramleq}{\leq_{\paramsp}}
-
-
-
-\newbool{usedres}\setbool{usedres}{false}
-\ifdefined\res%
-  \renewcommand{\res}{\markfirst{res}{usedres}{\vmath{r}}}%
-\else%
-  \newcommand{\res}{\markfirst{res}{usedres}{\vmath{r}}}%
-\fi
-%  Resources
-\newbool{usedresleq}\setbool{usedresleq}{false}
-\ifdefined\resleq%
-  \renewcommand{\resleq}{\markfirst{resleq}{usedresleq}{\leq_{\ressp}}}%
-\else%
-  \newcommand{\resleq}{\markfirst{resleq}{usedresleq}{\leq_{\ressp}}}%
-\fi
-
-\newbool{usedrestop}\setbool{usedrestop}{false}
-\ifdefined\restop%
-  \renewcommand{\restop}{\markfirst{restop}{usedrestop}{\top_\ressp}}%
-\else%
-  \newcommand{\restop}{\markfirst{restop}{usedrestop}{\top_\ressp}}%
-\fi
-
-\newbool{usedresbot}\setbool{usedresbot}{false}
-\ifdefined\resbot%
-  \renewcommand{\resbot}{\markfirst{resbot}{usedresbot}{\bot_\ressp}}%
-\else%
-  \newcommand{\resbot}{\markfirst{resbot}{usedresbot}{\bot_\ressp}}%
-\fi
-
-
-
-\newbool{usedressp}\setbool{usedressp}{false}
-\ifdefined\ressp%
-  \renewcommand{\ressp}{\markfirst{ressp}{usedressp}{\mathscr{R}}}%
-\else%
-  \newcommand{\ressp}{\markfirst{ressp}{usedressp}{\mathscr{R}}}%
-\fi
-%  Resources space
-\newbool{usedresspleq}\setbool{usedresspleq}{false}
-\ifdefined\resspleq%
-  \renewcommand{\resspleq}{\markfirst{resspleq}{usedresspleq}{\resleq}}%
-\else%
-  \newcommand{\resspleq}{\markfirst{resspleq}{usedresspleq}{\resleq}}%
-\fi
-
-
-
-\newbool{usedtressp}\setbool{usedtressp}{false}
-\ifdefined\tressp%
-  \renewcommand{\tressp}{\markfirst{tressp}{usedtressp}{\trof(\ressp)}}%
-\else%
-  \newcommand{\tressp}{\markfirst{tressp}{usedtressp}{\trof(\ressp)}}%
-\fi
-%  Trade-off space
-\newbool{usedtrof}\setbool{usedtrof}{false}
-\ifdefined\trof%
-  \renewcommand{\trof}{\markfirst{trof}{usedtrof}{\mathscr{T}}}%
-\else%
-  \newcommand{\trof}{\markfirst{trof}{usedtrof}{\mathscr{T}}}%
-\fi
-%  Trade-off space
-\newbool{usedtres}\setbool{usedtres}{false}
-\ifdefined\tres%
-  \renewcommand{\tres}{\markfirst{tres}{usedtres}{T}}%
-\else%
-  \newcommand{\tres}{\markfirst{tres}{usedtres}{T}}%
-\fi
-
-\newbool{usedtresleq}\setbool{usedtresleq}{false}
-\ifdefined\tresleq%
-  \renewcommand{\tresleq}{\markfirst{tresleq}{usedtresleq}{\leq_{\trof}}}%
-\else%
-  \newcommand{\tresleq}{\markfirst{tresleq}{usedtresleq}{\leq_{\trof}}}%
-\fi
-%  Trade-off space
-\newbool{usedtrleq}\setbool{usedtrleq}{false}
-\ifdefined\trleq%
-  \renewcommand{\trleq}{\markfirst{trleq}{usedtrleq}{\leq_{\trof}}}%
-\else%
-  \newcommand{\trleq}{\markfirst{trleq}{usedtrleq}{\leq_{\trof}}}%
-\fi
-%  Trade-off space
-
-
-
-
-
-
 \newbool{usedRes}\setbool{usedRes}{false}
 \ifdefined\Res%
   \renewcommand{\Res}{\markfirst{Res}{usedRes}{S}}%
@@ -3918,38 +4365,6 @@
 \else%
   \newcommand{\rtoapp}{\markfirst{rtoapp}{usedrtoapp}{\Psi}}%
 \fi
-
-
-
-\newbool{usedcolR}\setbool{usedcolR}{false}
-\ifdefined\colR%
-  \renewcommand{\colR}{\markfirst{colR}{usedcolR}{\color[rgb]{0.555789,0.000000,0.000000}}}%
-\else%
-  \newcommand{\colR}{\markfirst{colR}{usedcolR}{\color[rgb]{0.555789,0.000000,0.000000}}}%
-\fi
-
-\newbool{usedcolF}\setbool{usedcolF}{false}
-\ifdefined\colF%
-  \renewcommand{\colF}{\markfirst{colF}{usedcolF}{\color[rgb]{0.094869,0.500000,0.000000}}}%
-\else%
-  \newcommand{\colF}{\markfirst{colF}{usedcolF}{\color[rgb]{0.094869,0.500000,0.000000}}}%
-\fi
-
-\newbool{usedcolH}\setbool{usedcolH}{false}
-\ifdefined\colH%
-  \renewcommand{\colH}{\markfirst{colH}{usedcolH}{\color[rgb]{0.000000,0.400000,1.000000}}}%
-\else%
-  \newcommand{\colH}{\markfirst{colH}{usedcolH}{\color[rgb]{0.000000,0.400000,1.000000}}}%
-\fi
-
-\newbool{usedCHF}\setbool{usedCHF}{false}
-\ifdefined\CHF%
-  \renewcommand{\CHF}{\markfirst{CHF}{usedCHF}{\text{CHF}}}%
-\else%
-  \newcommand{\CHF}{\markfirst{CHF}{usedCHF}{\text{CHF}}}%
-\fi
-
-
 
 
 
@@ -7559,6 +7974,15 @@
   \newcommand{\posleq}{\markfirst{posleq}{usedposleq}{\preceq}}%
 \fi
 
+% \newcommand{\poslneq}{\precneq} % usepackage{mathabx}
+
+\newbool{usedposlt}\setbool{usedposlt}{false}
+\ifdefined\poslt%
+  \renewcommand{\poslt}{\markfirst{poslt}{usedposlt}{\prec}}%
+\else%
+  \newcommand{\poslt}{\markfirst{poslt}{usedposlt}{\prec}}%
+\fi
+
 \newbool{usedposgeq}\setbool{usedposgeq}{false}
 \ifdefined\posgeq%
   \renewcommand{\posgeq}{\markfirst{posgeq}{usedposgeq}{\succeq}}%
@@ -7748,6 +8172,22 @@
   \newcommand{\stupit}{\markfirst{stupit}{usedstupit}{\dot{\upit}}}%
 \fi
 %  Strict upper closure
+
+
+\newbool{usedposetwidth}\setbool{usedposetwidth}{false}
+\ifdefined\posetwidth%
+  \renewcommand{\posetwidth}{\markfirst{posetwidth}{usedposetwidth}{\vmath{width}}}%
+\else%
+  \newcommand{\posetwidth}{\markfirst{posetwidth}{usedposetwidth}{\vmath{width}}}%
+\fi
+
+\newbool{usedposetheight}\setbool{usedposetheight}{false}
+\ifdefined\posetheight%
+  \renewcommand{\posetheight}{\markfirst{posetheight}{usedposetheight}{\vmath{height}}}%
+\else%
+  \newcommand{\posetheight}{\markfirst{posetheight}{usedposetheight}{\vmath{height}}}%
+\fi
+
 
 
 
