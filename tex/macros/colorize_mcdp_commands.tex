@@ -1,0 +1,36 @@
+
+\let\oldfun\fun     \renewcommand{\fun}{{\colF\oldfun}}
+\let\oldres\res     \renewcommand{\res}{{\colR\oldres}}
+\let\oldimp\imp     \renewcommand{\imp}{{\colI\oldimp}}
+
+\let\oldexc\exc     \renewcommand{\exc}{{\colF\oldexc}}
+\let\oldeval\eval     \renewcommand{\eval}{{\colR\oldeval}}
+
+\let\oldfunsp\funsp \renewcommand{\funsp}{{\colF\oldfunsp}}
+\let\oldressp\ressp \renewcommand{\ressp}{{\colR\oldressp}}
+\let\oldimpsp\impsp \renewcommand{\impsp}{{\colI\oldimpsp}}
+
+\let\oldftor\ftor \renewcommand{\ftor}{{\colH\oldftor}}
+\let\oldrtof\rtof \renewcommand{\rtof}{{\colH\oldrtof}}
+
+% TODO: move away
+
+\renewcommand{\Aressp}{{\colR\antichains\ressp}} % Antichains of resources
+\renewcommand{\Afunsp}{{\colF\antichains\funsp}} % Antichains of resources
+
+\newcommand{\batterymass}{{\colR m}}
+\newcommand{\batterycapacity}{{\colF C}}
+\newcommand{\batterycost}{{\colR c}}
+\newcommand{\specificenergy}{{\colR \rho}}
+\newcommand{\specificcost}{{\colR \alpha}}
+
+\let\oldudpL\udpL \renewcommand{\udpL}{{\colL\oldudpL}}
+\let\oldudpU\udpU \renewcommand{\udpU}{{\colU\oldudpU}}
+
+\let\oldftorL\ftorL \renewcommand{\ftorL}{{\colL\oldftorL}}
+\let\oldftorU\ftorU \renewcommand{\ftorU}{{\colU\oldftorU}}
+
+
+
+\newcommand{\ufloor}{{\colL\vmath{floor}}}
+\newcommand{\uceil}{{\colU\vmath{ceil}}}
