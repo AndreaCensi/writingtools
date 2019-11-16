@@ -1,38 +1,29 @@
 
 
-@Techreport{censi16uncertainty,
-  Title                    = {Handling Uncertainty in Monotone Co-Design Problems},
-  Author                   = {Andrea Censi},
-  Year                     = {2016},
-  Month                    = Oct,
-  url = {https://arxiv.org/abs/1609.03103},
-  pdf = {https://arxiv.org/pdf/1609.03103v1},
-  Desc                     = {This paper concerns the introduction of uncertainty in the MCDP framework. Uncertainty has two roles: first, it allows to deal with limited knowledge in the models; second, it also can be used to generate consistent relaxations of a problem, as the computation requirements can be lowered should the user accept some uncertainty in the answer. },
-  Descicon                 = {http://purl.org/censi/web/media/paper-icons/censi16uncertainty.png},
-  Institution = {Laboratory for Information and Decision Systems, MIT}
-}
 
-@Techreport{censi16codesign,
+@Techreport{censi16codesign_old,
   Title                    = {A Mathematical Theory of Co-Design},
   Author                   = {Andrea Censi},
   Year                     = {2016},
-  pdf = {http://tiny.cc/co-design},
+  pdf = {https://arxiv.org/pdf/1512.08055},
   Month                    = Sep,
   url = {https://arxiv.org/abs/1512.08055},
   Desc                     = {This paper introduces a theory of co-design that describes "design problems", defined as tuples of "functionality space", "implementation space", and "resources space", together with a feasibility relation that relates the three spaces. Design problems can be interconnected together to create "co-design problems", which describe possibly recursive co-design constraints among subsystems. },
-  Descicon                 = {http://purl.org/censi/web/media/paper-icons/censi16codesign.png},
+  Descicon                 = {https://censi.science/media/paper-icons/censi16codesign.png},
   Institution = {Laboratory for Information and Decision Systems, MIT}
 }
 
-@article{censi17uncertainty,
+
+@article{censi16codesign,
   author    = {Andrea Censi},
-  title     = {Handling uncertainty in co-design problems},
-  journal   = {Robotics and Automation Letters},
-  year      = {2017},
-  notes = {to appear},
-  pdf = {https://arxiv.org/pdf/1512.08055v4},
-  url = {http://mcdp.mit.edu/},
-  Descicon               = {http://purl.org/censi/web/media/paper-icons/censi17uncertainty.png},
+  title     = {A Mathematical Theory of Co-Design},
+  journal   = {CoRR},
+  volume    = {abs/1512.08055},
+  year      = {2015},
+  url       = {http://arxiv.org/abs/1512.08055},
+  pdf       = {http://arxiv.org/pdf/1512.08055}, 
+  Desc                     = {This paper introduces a theory of co-design that describes "design problems", defined as tuples of "functionality space", "implementation space", and "resources space", together with a feasibility relation that relates the three spaces. Design problems can be interconnected together to create "co-design problems", which describe possibly recursive co-design constraints among subsystems. },
+  Descicon                 = {https://censi.science/media/paper-icons/censi16codesign.png},
 }
 
 @article{censi16codesign_sep16,
@@ -43,8 +34,21 @@
   year      = {2015},
   url       = {http://arxiv.org/abs/1512.08055},
   pdf = {https://arxiv.org/pdf/1512.08055v4},
-  nourl = {http://mcdp.mit.edu/},
-  Descicon               = {http://purl.org/censi/web/media/paper-icons/censi16codesign_sep16.png},
+  nourl = {https://co-design.science/},
+  Descicon               = {https://censi.science/media/paper-icons/censi16codesign_sep16.png},
+}
+
+
+@article{censi17uncertainty,
+  Title                    = {Uncertainty in Monotone Co-Design Problems},
+  Author                   = {Andrea Censi},
+  journal   = {IEEE Robotics and Automation Letters},
+  year      = {2017},
+  month = {February},
+  url = {https://arxiv.org/abs/1609.03103},
+  pdf = {https://arxiv.org/pdf/1609.03103},
+  Desc                     = {This paper concerns the introduction of uncertainty in the MCDP framework. Uncertainty has two roles: first, it allows to deal with limited knowledge in the models; second, it also can be used to generate consistent relaxations of a problem, as the computation requirements can be lowered should the user accept some uncertainty in the answer. },
+  Descicon                 = {https://censi.science/media/paper-icons/censi17uncertainty.png},
 }
 
 @misc{mcdp_icra_uncertainty_extended,
@@ -54,7 +58,6 @@ title     = {Handling Uncertainty in Monotone Co-Design Problems},
   note = {Extended version on Arxiv with supplementary materials},
   url       = {http://tiny.cc/mcdp_uncertainty_extended},
 }
-
 
 
 @article{mcdp_icra_uncertainty_arxiv,
@@ -70,30 +73,38 @@ title     = {Handling Uncertainty in Monotone Co-Design Problems},
 % url       = {http://arxiv.org/abs/1512.08055},
 
 @Article{censi15monotone,
-  Title                    = {A Class of Co-Design Problems with Cyclic Constraints and Their
-Solution},
+
   Author                   = {Andrea Censi},
   Year                     = {2016},
-  nourl = {http://mcdp.mit.edu/},
-  ignorepdf = {http://purl.org/censi/research/201510-monotone/1-MonotoneCodesign.pdf},
-  Month                    = Feb,
-  journal = {ICRA 2016},
-  Desc                     = { },
-  Descicon                 = {http://purl.org/censi/web/media/paper-icons/censi15monotone.png},
+  nourl = {https://co-design.science/},
+  ignorepdf = {https://purl.org/censi/research/201510-monotone/1-MonotoneCodesign.pdf},
+  note = {Superseded by preprint ``A Mathematical Theory of Co-Design''.},
+  Desc                     = {Superseded by preprint ``A Mathematical Theory of Co-Design''. },
+  Descicon                 = {https://censi.science/media/paper-icons/censi15monotone.png},
+  journal={IEEE Robotics and Automation Letters},
+  title={A Class of Co-Design Problems With Cyclic Constraints and Their Solution},
+  volume={2},
+  number={1},
+  pages={96-103},
+  keywords={Batteries;Extraterrestrial measurements;Payloads;Robot sensing systems;Foundations of Automation;Optimization and Optimal Control},
+  doi={10.1109/LRA.2016.2535127},
+  ISSN={2377-3766},
+  month={Jan}
 }
 
 
 @inproceedings{censi15same,
   Title                    = {Monotone Co-Design Problems; or, everything is the same},
+  note = {Superseded by preprint ``A Mathematical Theory of Co-Design''.},
   Author                   = {Andrea Censi},
   Year                     = {2016},
-  nourl = {http://mcdp.mit.edu/},
-  ignorepdf = {http://purl.org/censi/research/201510-monotone/2-EverythingIsTheSame.pdf},
-  Desc                     = { },
-  Descicon                 = {http://purl.org/censi/web/media/paper-icons/censi15same.png},
-  booktitle = ACC,
+  doi = {10.1109/ACC.2016.7525085},
+  nourl = {https://co-design.science/},
+  ignorepdf = {https://purl.org/censi/research/201510-monotone/2-EverythingIsTheSame.pdf},
+  Desc                     = {Superseded by preprint ``A Mathematical Theory of Co-Design''. },
+  Descicon                 = {https://censi.science/media/paper-icons/censi15same.png},
+  Booktitle                = {Proceedings of the American Control Conference (ACC)}
 }
-
 
 @Techreport{censi15rara,
   Title                    = {Synthesis of resource-aware robotic applications},
@@ -276,4 +287,98 @@ a subset of the set of all robots.
       that planar pose graph optimization can be decoupled in linear problems (with a few tricks).
   },
   descicon = {http://purl.org/censi/web/media/paper-icons/carlone14coherent.png}
+
+}
+
+
+
+@article{zardini2019codesign,
+  author    = {Gioele Zardini and
+               Nicolas Lanzetti and
+               Mauro Salazar and
+               Andrea Censi and
+               Emilio Frazzoli and
+               Marco Pavone},
+  title     = {Towards a Co-Design Framework for Future Mobility Systems},
+  journal   = {CoRR},
+  volume    = {abs/1910.07714},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1910.07714},
+  pdf       = {http://arxiv.org/pdf/1910.07714},
+
+  timestamp = {Tue, 22 Oct 2019 18:17:16 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1910-07714},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{censi2019today,
+  author    = {Andrea Censi and
+               Saverio Bolognani and
+               Julian G. Zilly and
+               Shima Sadat Mousavi and
+               Emilio Frazzoli},
+  title     = {Today Me, Tomorrow Thee: Efficient Resource Allocation in Competitive
+               Settings using Karma Games},
+  journal   = {CoRR},
+  volume    = {abs/1907.09198},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1907.09198},
+  pdf       = {http://arxiv.org/pdf/1907.09198},
+  archivePrefix = {arXiv},
+  timestamp = {Tue, 30 Jul 2019 12:52:26 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1907-09198},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{gallego2019eventbased,
+  author    = {Guillermo Gallego and
+               Tobi Delbr{\"{u}}ck and
+               Garrick Orchard and
+               Chiara Bartolozzi and
+               Brian Taba and
+               Andrea Censi and
+               Stefan Leutenegger and
+               Andrew J. Davison and
+               J{\"{o}}rg Conradt and
+               Kostas Daniilidis and
+               Davide Scaramuzza},
+  title     = {Event-based Vision: {A} Survey},
+  journal   = {CoRR},
+  volume    = {abs/1904.08405},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1904.08405},
+  pdf       = {http://arxiv.org/pdf/1904.08405},
+  archivePrefix = {arXiv},
+  timestamp = {Fri, 26 Apr 2019 13:18:53 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1904-08405},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{zilly2019ai,
+  author    = {Julian G. Zilly and
+               Jacopo Tani and
+               Breandan Considine and
+               Bhairav Mehta and
+               Andrea F. Daniele and
+               Manfred Diaz and
+               Gianmarco Bernasconi and
+               Claudio Ruch and
+               Jan Hakenberg and
+               Florian Golemo and
+               A. Kirsten Bowser and
+               Matthew R. Walter and
+               Ruslan Hristov and
+               Sunil Mallya and
+               Emilio Frazzoli and
+               Andrea Censi and
+               Liam Paull},
+  title     = {The {AI} Driving Olympics at NeurIPS 2018},
+  journal   = {CoRR},
+  volume    = {abs/1903.02503},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1903.02503},
+  pdf       = {http://arxiv.org/pdf/1903.02503},
+  archivePrefix = {arXiv},
+
+  timestamp = {Sun, 31 Mar 2019 19:01:24 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1903-02503},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
