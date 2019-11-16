@@ -1,0 +1,39 @@
+% This file was created with JabRef 2.10.
+% Encoding: ISO8859_1
+
+
+@Techreport{censi14canonization_sub,
+  Title                    = {Canonization paper},
+  Author                   = {Andrea Censi and Stefano Soatto},
+  Institution              = {Massachussets Institute of Technology},
+  Year                     = {2014},
+  Url                      = {http://purl.org/censi/2014/canonization},
+
+  Desc                     = {
+ },
+  Descicon                 = {https://censi.science/media/paper-icons/censi14canonization.jpg}
+}
+
+@Techreport{censi14bootinvariance_sub,
+  Title                    = {Necessary invariance properties of learning agents in the interactive bootstrapping setting},
+  Author                   = {Andrea Censi},
+  Institution              = {Massachussets Institute of Technology},
+  Year                     = {2014},
+  Url                      = {http://purl.org/censi/2014/bootinvariance},
+
+  Desc                     = {
+ },
+  Descicon                 = {https://censi.science/media/paper-icons/censi14bootinvariance.jpg}
+}
+
+@Techreport{censi14reclearning_sub,
+  Title                    = {The XXX pattern for recursive learning from interactive setting},
+  Author                   = {Andrea Censi},
+  Institution              = {Massachussets Institute of Technology},
+  Year                     = {2014},
+  Url                      = {http://purl.org/censi/2014/reclearning},
+
+  Desc                     = {
+ },
+  Descicon                 = {https://censi.science/media/paper-icons/censi14reclearning.jpg}
+}
